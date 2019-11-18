@@ -1,0 +1,34 @@
+{
+  "version-0.55.2-user-guide": {
+    "User Guide": [
+      "version-0.55.2-user-guide-introduction",
+      "version-0.55.2-user-guide-getting-started",
+      "version-0.55.2-user-guide-installation",
+      "version-0.55.2-user-guide-tour",
+      "version-0.55.2-user-guide-processing-elements",
+      "version-0.55.2-user-guide-software-components"
+    ]
+  },
+  "version-0.55.2-pipeline-elements": {
+    "Pipeline Elements": [
+      "version-0.55.2-pipeline-elements"
+    ]
+  },
+  "version-0.55.2-developer-guide": {
+    "Developer Guide": [
+      "version-0.55.2-dev-guide-introduction",
+      "version-0.55.2-dev-guide-architecture",
+      "version-0.55.2-dev-guide-development-environment",
+      "version-0.55.2-dev-guide-tutorial-sources",
+      "version-0.55.2-dev-guide-tutorial-processors",
+      "version-0.55.2-dev-guide-sdk-guide-sources",
+      "version-0.55.2-dev-guide-sdk-guide-processors",
+      "version-0.55.2-dev-guide-sdk-guide-sinks"
+    ]
+  },
+  "version-0.55.2-faq": {
+    "FAQ": [
+      "version-0.55.2-faq-common-problems"
+    ]
+  }
+}

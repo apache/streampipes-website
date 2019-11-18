@@ -1,0 +1,35 @@
+{
+  "name": "StreamPipesHomepage",
+  "version": "0.2.5",
+  "description": "The homepage for StreamPipes",
+  "engines": {
+    "node": "5.9.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon -r dotenv/config index.js",
+    "start": "node index.js",
+    "build-website": "harp compile website build",
+    "start-website": "harp server website"
+  },
+  "dependencies": {
+    "ejs": "2.4.1",
+    "express": "4.13.3",
+    "body-parser": "1.14.2",
+    "emailjs": "1.0.4",
+    "forever": "0.15.1",
+    "i18n": "0.8.3",
+    "sitemap": "1.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "1.9.2",
+    "dotenv": "^6.0.0",
+    "harp": "^0.31.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "license": "MIT"
+}

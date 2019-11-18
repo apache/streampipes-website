@@ -1,0 +1,25 @@
+
+.team-thumbnail {
+    width: 189px;
+    height: 189px;
+    border-radius: 50%;
+    margin: 0 auto 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.team-thumbnail > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.team-thumbnail-no-image {
+    color:darkgray;
+}
+
+.team-member-name {
+    margin-bottom: 50px;
+}
+
+

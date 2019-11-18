@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- partial("partials/_meta.ejs", { title: "Home" }) %>
+</head>
+
+<body>
+
+<%- partial("partials/_nav.ejs", { title: "Use Cases" }) %>
+
+<%- partial("partials/_breadcumb.ejs", { title: "Use Cases"}) %>
+
+<section class="elements-area section-padding-50">
+    <div class="container">
+        <div class="row">
+            <!-- ========== Buttons ========== -->
+            <div class="col-12">
+                <h2 class="page-section-title">Industrial IoT</h2>
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <h5 class="feature-item-margin">
+                            <i class="fas fa-check sp-color-green"></i> Integrated adapters such as OPC UA and MQTT and data processors tailored at analyzing high-frequency sensor data make StreamPipes a great choice to <span
+                                    class="feature-highlights-bg">quickly analyze machine data.</span>
+                        </h5>
+                        <h5 class="feature-item-margin">
+                            <i class="fas fa-check sp-color-green"></i> The ability to create geographically distributed pipelines make StreamPipes suitable for <span
+                                    class="feature-highlights-bg">edge computing</span> use cases.
+                        </h5>
+                        <h5 class="feature-item-margin">
+                            <i class="fas fa-check sp-color-green"></i> Data sinks for popular databases such as Elasticsearch and the ability to integrate Machine Learning models into data processors enable use cases such as<span
+                                    class="feature-highlights-bg">predictive analytics</span> and <span class="feature-highlights-bg">anomaly detection.</span>
+                        </h5>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <img src="/img/usecases/production-line.png">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="elements-area section-padding-50 feature-section-gray">
+    <div class="container">
+        <div class="row">
+
+            <!-- ========== Buttons ========== -->
+            <div class="col-12">
+                <h2 class="page-section-title">Applications</h2>
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <div style="margin-left:auto;"><h5><span
+                                        class="feature-highlights-bg">Incident Detection</span></h5>
+                            <div class="usecases-applications-item">
+                                <span>StreamPipes allows to immediately detect incidents you'd like to avoid. We support algorithms ranging from simple threshold-based tracking of sensor measurements over trend analysis over time periods up to the integration of custom-tailored predictive maintenance algorithms.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div style="margin-left:auto;"><h5><span
+                                        class="feature-highlights-bg">Data Harmonization</span></h5>
+                            <div class="usecases-applications-item">
+                                <span>StreamPipes helps to create a clean data lake based on sensor measurements from machines and other assets. Various data harmonization algorithms (e.g., filters, aggregations and unit converters) allow to easily clean and enrich data in a continuous fashion.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div style="margin-left:auto;"><h5><span
+                                        class="feature-highlights-bg">Monitoring</span></h5>
+                            <div class="usecases-applications-item">
+                                <span>See what's happening right now: Use StreamPipes as your real-time window into your current production performance. A live dashboard and a wide range of available notification channels allow you to monitor KPI's in a flexible and customizable manner.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- partial("partials/_footer.ejs") %>
+</body>
+
+</html>

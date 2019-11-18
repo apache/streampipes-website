@@ -1,0 +1,48 @@
+{
+  "version-0.61.0-user-guide": {
+    "User Guide": [
+      "version-0.61.0-user-guide-introduction",
+      "version-0.61.0-user-guide-getting-started",
+      "version-0.61.0-user-guide-installation",
+      "version-0.61.0-user-guide-tour",
+      "version-0.61.0-user-guide-processing-elements",
+      "version-0.61.0-user-guide-software-components"
+    ]
+  },
+  "version-0.61.0-pipeline-elements": {
+    "Pipeline Elements": [
+      "version-0.61.0-pipeline-elements"
+    ]
+  },
+  "version-0.61.0-developer-guide": {
+    "Basics": [
+      "version-0.61.0-dev-guide-introduction",
+      "version-0.61.0-dev-guide-migration",
+      "version-0.61.0-dev-guide-architecture",
+      "version-0.61.0-dev-guide-development-environment",
+      "version-0.61.0-dev-guide-archetype"
+    ],
+    "Tutorials": [
+      "version-0.61.0-dev-guide-tutorial-sources",
+      "version-0.61.0-dev-guide-tutorial-processors"
+    ],
+    "SDK Reference": [
+      "version-0.61.0-dev-guide-sdk-guide-sources",
+      "version-0.61.0-dev-guide-sdk-guide-processors",
+      "version-0.61.0-dev-guide-sdk-guide-sinks",
+      "version-0.61.0-dev-guide-stream-requirements",
+      "version-0.61.0-dev-guide-static-properties",
+      "version-0.61.0-dev-guide-output-strategies",
+      "version-0.61.0-dev-guide-event-model"
+    ],
+    "Configuration": [
+      "version-0.61.0-dev-guide-ssl",
+      "version-0.61.0-dev-guide-configuration"
+    ]
+  },
+  "version-0.61.0-faq": {
+    "FAQ": [
+      "version-0.61.0-faq-common-problems"
+    ]
+  }
+}

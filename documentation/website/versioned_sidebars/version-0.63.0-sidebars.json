@@ -1,0 +1,95 @@
+{
+  "version-0.63.0-user-guide": {
+    "User Guide": [
+      "version-0.63.0-user-guide-introduction",
+      "version-0.63.0-user-guide-tour",
+      "version-0.63.0-user-guide-installation",
+      "version-0.63.0-user-guide-first-steps"
+    ]
+  },
+  "version-0.63.0-pipeline-elements": {
+    "Pipeline Elements": [
+      "version-0.63.0-pipeline-elements",
+      "version-0.63.0-org.streampipes.processors.aggregation.flink.aggregation/org.streampipes.processors.aggregation.flink.aggregation",
+      "version-0.63.0-org.streampipes.processors.transformation.flink.processor.boilerplate/org.streampipes.processors.transformation.flink.processor.boilerplate",
+      "version-0.63.0-org.streampipes.processors.transformation.jvm.duration-value/org.streampipes.processors.transformation.jvm.duration-value",
+      "version-0.63.0-org.streampipes.processors.filters.jvm.compose/org.streampipes.processors.filters.jvm.compose",
+      "version-0.63.0-org.streampipes.sinks.databases.jvm.couchdb/org.streampipes.sinks.databases.jvm.couchdb",
+      "version-0.63.0-org.streampipes.processors.transformation.jvm.count-array/org.streampipes.processors.transformation.jvm.count-array",
+      "version-0.63.0-org.streampipes.sinks.internal.jvm.dashboard/org.streampipes.sinks.internal.jvm.dashboard",
+      "version-0.63.0-org.streampipes.sinks.databases.flink.elasticsearch/org.streampipes.sinks.databases.flink.elasticsearch",
+      "version-0.63.0-org.streampipes.sinks.notifications.jvm.email/org.streampipes.sinks.notifications.jvm.email",
+      "version-0.63.0-org.streampipes.processors.aggregation.flink.rate/org.streampipes.processors.aggregation.flink.rate",
+      "version-0.63.0-org.streampipes.processors.transformation.flink.field-converter/org.streampipes.processors.transformation.flink.field-converter",
+      "version-0.63.0-org.streampipes.processors.transformation.flink.fieldhasher/org.streampipes.processors.transformation.flink.fieldhasher",
+      "version-0.63.0-org.streampipes.processors.transformation.flink.field-mapper/org.streampipes.processors.transformation.flink.field-mapper",
+      "version-0.63.0-org.streampipes.processors.transformation.flink.field-renamer/org.streampipes.processors.transformation.flink.field-renamer",
+      "version-0.63.0-org.streampipes.processors.siddhi.frequency/org.streampipes.processors.siddhi.frequency",
+      "version-0.63.0-org.streampipes.processors.siddhi.frequencychange/org.streampipes.processors.siddhi.frequencychange",
+      "version-0.63.0-org.streampipes.processor.imageclassification.jvm.generic-image-classification/org.streampipes.processor.imageclassification.jvm.generic-image-classification",
+      "version-0.63.0-org.streampipes.processor.imageclassification.jvm.image-enricher/org.streampipes.processor.imageclassification.jvm.image-enricher",
+      "version-0.63.0-org.streampipes.sinks.databases.jvm.influxdb/org.streampipes.sinks.databases.jvm.influxdb",
+      "version-0.63.0-org.streampipes.sinks.brokers.jvm.jms/org.streampipes.sinks.brokers.jvm.jms",
+      "version-0.63.0-org.streampipes.sinks.brokers.jvm.kafka/org.streampipes.sinks.brokers.jvm.kafka",
+      "version-0.63.0-org.streampipes.processors.textmining.flink.languagedetection/org.streampipes.processors.textmining.flink.languagedetection",
+      "version-0.63.0-org.streampipes.processors.enricher.flink.processor.math.mathop/org.streampipes.processors.enricher.flink.processor.math.mathop",
+      "version-0.63.0-org.streampipes.processors.transformation.flink.measurement-unit-converter/org.streampipes.processors.transformation.flink.measurement-unit-converter",
+      "version-0.63.0-org.streampipes.sinks.internal.jvm.notification/org.streampipes.sinks.internal.jvm.notification",
+      "version-0.63.0-org.streampipes.processors.filters.jvm.numericalfilter/org.streampipes.processors.filters.jvm.numericalfilter",
+      "version-0.63.0-org.streampipes.processors.siddhi.numericalfilter/org.streampipes.processors.siddhi.numericalfilter",
+      "version-0.63.0-org.streampipes.sinks.notifications.jvm.onesignal/org.streampipes.sinks.notifications.jvm.onesignal",
+      "version-0.63.0-org.streampipes.processors.pattern-detection.flink.peak-detection/org.streampipes.processors.pattern-detection.flink.peak-detection",
+      "version-0.63.0-org.streampipes.sinks.databases.jvm.postgresql/org.streampipes.sinks.databases.jvm.postgresql",
+      "version-0.63.0-org.streampipes.processors.filters.jvm.project/org.streampipes.processors.filters.jvm.project",
+      "version-0.63.0-org.streampipes.processor.imageclassification.qrcode/org.streampipes.processor.imageclassification.qrcode",
+      "version-0.63.0-org.streampipes.sinks.brokers.jvm.rest/org.streampipes.sinks.brokers.jvm.rest",
+      "version-0.63.0-org.streampipes.sinks.brokers.jvm.rabbitmq/org.streampipes.sinks.brokers.jvm.rabbitmq",
+      "version-0.63.0-org.streampipes.processors.siddhi.sequence/org.streampipes.processors.siddhi.sequence",
+      "version-0.63.0-org.streampipes.sinks.notifications.jvm.slack/org.streampipes.sinks.notifications.jvm.slack",
+      "version-0.63.0-org.streampipes.processor.geo.flink/org.streampipes.processor.geo.flink",
+      "version-0.63.0-org.streampipes.processors.transformation.jvm.split-array/org.streampipes.processors.transformation.jvm.split-array",
+      "version-0.63.0-org.streampipes.processors.enricher.flink.processor.math.staticmathop/org.streampipes.processors.enricher.flink.processor.math.staticmathop",
+      "version-0.63.0-org.streampipes.processors.siddhi.stop/org.streampipes.processors.siddhi.stop",
+      "version-0.63.0-org.streampipes.processors.filters.jvm.textfilter/org.streampipes.processors.filters.jvm.textfilter",
+      "version-0.63.0-org.streampipes.processors.enricher.flink.timestamp/org.streampipes.processors.enricher.flink.timestamp",
+      "version-0.63.0-org.streampipes.processors.transformation.jvm.processor.timestampextractor/org.streampipes.processors.transformation.jvm.processor.timestampextractor",
+      "version-0.63.0-org.streampipes.processors.siddhi.increase/org.streampipes.processors.siddhi.increase",
+      "version-0.63.0-org.streampipes.processors.enricher.flink.processor.trigonometry/org.streampipes.processors.enricher.flink.processor.trigonometry",
+      "version-0.63.0-org.streampipes.processors.enricher.flink.processor.urldereferencing/org.streampipes.processors.enricher.flink.processor.urldereferencing",
+      "version-0.63.0-org.streampipes.processors.transformation.jvm.changed-value/org.streampipes.processors.transformation.jvm.changed-value",
+      "version-0.63.0-org.streampipes.processors.textmining.flink.wordcount/org.streampipes.processors.textmining.flink.wordcount"
+    ]
+  },
+  "version-0.63.0-developer-guide": {
+    "Basics": [
+      "version-0.63.0-dev-guide-introduction",
+      "version-0.63.0-dev-guide-architecture",
+      "version-0.63.0-dev-guide-development-environment",
+      "version-0.63.0-dev-guide-archetype",
+      "version-0.63.0-dev-guide-migration"
+    ],
+    "Tutorials": [
+      "version-0.63.0-dev-guide-tutorial-sources",
+      "version-0.63.0-dev-guide-tutorial-processors",
+      "version-0.63.0-dev-guide-tutorial-sinks"
+    ],
+    "SDK Reference": [
+      "version-0.63.0-dev-guide-sdk-guide-sources",
+      "version-0.63.0-dev-guide-sdk-guide-processors",
+      "version-0.63.0-dev-guide-sdk-guide-sinks",
+      "version-0.63.0-dev-guide-stream-requirements",
+      "version-0.63.0-dev-guide-static-properties",
+      "version-0.63.0-dev-guide-output-strategies",
+      "version-0.63.0-dev-guide-event-model"
+    ],
+    "Configuration": [
+      "version-0.63.0-dev-guide-ssl",
+      "version-0.63.0-dev-guide-configuration"
+    ]
+  },
+  "version-0.63.0-faq": {
+    "FAQ": [
+      "version-0.63.0-faq-common-problems"
+    ]
+  }
+}

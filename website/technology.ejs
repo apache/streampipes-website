@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- partial("partials/_meta.ejs", { title: "Technology" }) %>
+</head>
+
+<body>
+
+<%- partial("partials/_nav.ejs", { title: "Technology" }) %>
+
+<%- partial("partials/_breadcumb.ejs", { title: "Technology"}) %>
+
+<section class="elements-area section-padding-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="page-section-title">High-Level Architecture</h2>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <img src="/img/technology/streampipes-high-level-architecture.png">
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="elements-area section-padding-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="page-section-title">Technology Stack</h2>
+                <div class="row">
+                    <div class="col-12">
+                        At its core, StreamPipes employs runtime wrappers to execute pipelines modeled in the graphical user interface. Pipeline elements are encapsulated in form of individual microservices, where every pipeline element provides its own semantics-bsaed self-description. These descriptions are used by the pipeline manager to guide users while creating pipelines and to avoid errors.
+                    </div>
+                </div>
+                <div class="row" style="margin-top:30px;">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <img src="/img/technology/streampipes-tech-stack.png">
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- partial("partials/_footer.ejs") %>
+</body>
+
+</html>

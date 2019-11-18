@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- partial("partials/_meta.ejs", { title: "About" }) %>
+</head>
+
+<body>
+
+<%- partial("partials/_nav.ejs", { title: "Team" }) %>
+
+<%- partial("partials/_breadcumb.ejs", { title: "Team"}) %>
+
+<section class="section-padding-50">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h2 class="page-section-title">StreamPipes Committers</h2>
+                <h5 class="section-subtitle">Current committers, sorted by last name:</h5>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 col-12">
+                <div class="single-team-slide text-center">
+                    <div class="team-thumbnail">
+                        <img src="/img/about/dutz.jpg" alt="">
+                    </div>
+                    <div class="team-member-name">
+                        <h4>Christofer Dutz</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="single-team-slide text-center">
+                    <div class="team-thumbnail">
+                        <img src="/img/about/riemer.png" alt="">
+                    </div>
+                    <div class="team-member-name">
+                        <h4>Dominik Riemer</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="single-team-slide text-center">
+                    <div class="team-thumbnail">
+                        <img src="/img/about/tex.png" alt="">
+                    </div>
+                    <div class="team-member-name">
+                        <h4>Johannes Tex</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-12">
+                <div class="single-team-slide text-center">
+                    <div class="team-thumbnail">
+                        <img src="/img/about/wiener.png" alt="">
+                    </div>
+                    <div class="team-member-name">
+                        <h4>Patrick Wiener</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="single-team-slide text-center">
+                    <div class="team-thumbnail">
+                        <img src="/img/about/zehnder.png" alt="">
+                    </div>
+                    <div class="team-member-name">
+                        <h4>Philipp Zehnder</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<%- partial("partials/_footer.ejs") %>
+</body>
+
+</html>

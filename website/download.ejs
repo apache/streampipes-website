@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- partial("partials/_meta.ejs", { title: "Getting Started" }) %>
+</head>
+
+<body>
+
+<%- partial("partials/_nav.ejs", { title: "Getting Started" }) %>
+
+<%- partial("partials/_breadcumb.ejs", { title: "Getting Started"}) %>
+
+<section class="elements-area section-padding-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="page-section-title"Install StreamPipes</h2>
+                <h5 style="text-align:center;margin-bottom:15px;">The easiest way to get started is our Docker-based installation.</h5>
+                <div class="installation-manual-part">
+                    <h5 class="feature-item-margin"><span class="feature-highlights-bg">Prerequisites</span></h5>
+                    <h6></h6>
+                    <ul>
+                        <li><i class="fas fa-check sp-color-green"></i>The Docker-based installation works with Linux, MacOS and Windows 10.
+                        </li>
+                        <li><i class="fas fa-check sp-color-green"></i> Install <a
+                                    href="https://docs.docker.com/install/" target="_blank">Docker</a> and <a
+                                    href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose</a>
+                        </li>
+                        <li><i class="fas fa-check sp-color-green"></i> StreamPipes comes with two versions, a <b>lite version</b> with few pipeline elements for testing purposes and a <b>full version</b> with distributed wrappers and the full set of pipeline elements. 8 GB memory are recommended for the lite version, the full version requires at least 16 GB memory.
+                        </li>
+                    </ul>
+                </div>
+                <div class="installation-manual-part">
+                    <h5 class="feature-item-margin"><span class="feature-highlights-bg">Installation</span></h5>
+                    <h6></h6>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="linux-tab" data-toggle="tab" href="#linux" role="tab"
+                               aria-controls="home" aria-selected="true">Linux</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="osx-tab" data-toggle="tab" href="#linux" role="tab"
+                               aria-controls="profile" aria-selected="false">Mac OS X</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="windows10-tab" data-toggle="tab" href="#windows10" role="tab"
+                               aria-controls="contact" aria-selected="false">Windows 10</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="linux" role="tabpanel" aria-labelledby="linux-tab">
+                            <ul>
+                                <li class="installation-step">
+                                    <div class="row" style="align-items: center;justify-content: center;">
+                                        <div class="col-md-1 col-3">
+                                            <span class="fa-stack fa-2x">
+                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+                                                 <strong class="fa-stack-1x" style="color:white;">1</strong>
+                                            </span>
+                                        </div>
+                                        <div class="col-md-11 col-9">
+                                            <a href="https://github.com/streampipes/streampipes-installer/archive/master.zip">Download</a>
+                                            the latest StreamPipes release from Github and extract the zip file to a directory of your choice.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="installation-step">
+                                    <div class="row" style="align-items: center;justify-content: center;">
+                                        <div class="col-md-1 col-3">
+                                            <span class="fa-stack fa-2x">
+                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+                                                 <strong class="fa-stack-1x" style="color:white;">2</strong>
+                                            </span>
+                                        </div>
+                                        <div class="col-md-11 col-9">
+                                            In a command prompt, open the folder <code>osx_linux</code> and run <code>./streampipes
+                                                start</code>.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="installation-step">
+                                    <div class="row" style="align-items: center;justify-content: center;">
+                                        <div class="col-md-1 col-3">
+                                            <span class="fa-stack fa-2x">
+                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+                                                 <strong class="fa-stack-1x" style="color:white;">3</strong>
+                                            </span>
+                                        </div>
+                                        <div class="col-md-11 col-9">
+                                            When asked, select the version you would like to run (lite or full) and enter the IP address or hostname of your server (called SERVER_IP in the next step).
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="installation-step">
+                                    <div class="row" style="align-items: center;justify-content: center;">
+                                        <div class="col-md-1 col-3">
+                                            <span class="fa-stack fa-2x">
+                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+                                                 <strong class="fa-stack-1x" style="color:white;">4</strong>
+                                            </span>
+                                        </div>
+                                        <div class="col-md-11 col-9">
+                                            Open your browser, navigate to http://SERVER_IP:80 and finish the setup according to the instructions.
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="windows10" role="tabpanel"
+                             aria-labelledby="windows10-tab-tab">
+                            <ul>
+                                <li class="installation-step">
+                                    <div class="row" style="align-items: center;justify-content: center;">
+                                        <div class="col-md-1 col-3">
+                                            <span class="fa-stack fa-2x">
+                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+                                                 <strong class="fa-stack-1x" style="color:white;">1</strong>
+                                            </span>
+                                        </div>
+                                        <div class="col-md-11 col-9">
+                                            <a href="https://github.com/streampipes/streampipes-installer/archive/master.zip">Download</a>
+                                            the latest StreamPipes release from Github and extract the zip file to a directory of your choice.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="installation-step">
+                                    <div class="row" style="align-items: center;justify-content: center;">
+                                        <div class="col-md-1 col-3">
+                                            <span class="fa-stack fa-2x">
+                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+                                                 <strong class="fa-stack-1x" style="color:white;">2</strong>
+                                            </span>
+                                        </div>
+                                        <div class="col-md-11 col-9">
+                                            In a command prompt, open the folder <code>windows10</code> and run <code>streampipes.bat
+                                                start</code>.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="installation-step">
+                                    <div class="row" style="align-items: center;justify-content: center;">
+                                        <div class="col-md-1 col-3">
+                                            <span class="fa-stack fa-2x">
+                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+                                                 <strong class="fa-stack-1x" style="color:white;">3</strong>
+                                            </span>
+                                        </div>
+                                        <div class="col-md-11 col-9">
+                                            When asked, select the version you would like to run (lite or full).
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="installation-step">
+                                    <div class="row" style="align-items: center;justify-content: center;">
+                                        <div class="col-md-1 col-3">
+                                            <span class="fa-stack fa-2x">
+                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+                                                 <strong class="fa-stack-1x" style="color:white;">4</strong>
+                                            </span>
+                                        </div>
+                                        <div class="col-md-11 col-9">
+                                            Open your browser, navigate to http://SERVER_IP:80 and finish the setup according to the instructions.
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="elements-area section-padding-50 feature-section-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="page-section-title">Getting Started</h2>
+                <div class="installation-manual-part">
+                    <h5 class="feature-item-margin"><span class="feature-highlights-bg">How to start</span></h5>
+                    <h6></h6>
+                    <ul>
+                        <li class="installation-step">
+                            <div class="row" style="align-items: center;justify-content: center;">
+                                <div class="col-md-1 col-3">
+                                                    <span class="fa-stack fa-2x">
+                                                         <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+                                                         <i class="fas fa-check fa-stack-1x" style="color:white;"></i>
+                                                    </span>
+                                </div>
+                                <div class="col-md-11 col-9">
+                                    Check the <a href="https://docs.streampipes.org/docs/user-guide-getting-started" target="_blank"> user guide</a> and learn how to create your first pipeline!
+                                </div>
+                            </div>
+                        </li>
+                        <li class="installation-step">
+                            <div class="row" style="align-items: center;justify-content: center;">
+                                <div class="col-md-1 col-3">
+                                                    <span class="fa-stack fa-2x">
+                                                         <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+                                                         <i class="fas fa-check fa-stack-1x" style="color:white;"></i>
+                                                    </span>
+                                </div>
+                                <div class="col-md-11 col-9">
+                                    When using the big data version, open the pipeline editor and start the <b>interactive tutorial</b>.
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="installation-manual-part">
+                    <h5 class="feature-item-margin"><span class="feature-highlights-bg">Get help</span></h5>
+                    <h6></h6>
+                    <ul>
+                        <li class="installation-step">
+                            <div class="row" style="align-items: center;justify-content: center;">
+                                <div class="col-md-1 col-3">
+                                                    <span class="fa-stack fa-2x">
+                                                         <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+                                                         <i class="fas fa-check fa-stack-1x" style="color:white;"></i>
+                                                    </span>
+                                </div>
+                                <div class="col-md-11 col-9">
+                                    Subscribe to our <a href="https://slack.streampipes.org">Slack channel</a> and ask us if you have any questions.
+                                </div>
+                            </div>
+                        </li>
+                        <li class="installation-step">
+                            <div class="row" style="align-items: center;justify-content: center;">
+                                <div class="col-md-1 col-3">
+                                                    <span class="fa-stack fa-2x">
+                                                         <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+                                                         <i class="fas fa-check fa-stack-1x" style="color:white;"></i>
+                                                    </span>
+                                </div>
+                                <div class="col-md-11 col-9">
+                                    Ask your question on  <a href="https://stackoverflow.com/questions/tagged/streampipes">Stack Overflow</a>.
+                                </div>
+                            </div>
+                        </li>
+                        <li class="installation-step">
+                            <div class="row" style="align-items: center;justify-content: center;">
+                                <div class="col-md-1 col-3">
+                                                    <span class="fa-stack fa-2x">
+                                                         <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+                                                         <i class="fas fa-check fa-stack-1x" style="color:white;"></i>
+                                                    </span>
+                                </div>
+                                <div class="col-md-11 col-9">
+                                    Send us an <a href="mailto:feedback@streampipes.org">email</a> and we\'ll be glad top help!'
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- partial("partials/_footer.ejs") %>
+</body>
+
+</html>

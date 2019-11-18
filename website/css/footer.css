@@ -1,0 +1,22 @@
+.footer-area {
+    position: relative;
+    z-index: 1;
+    background-color: #1b1464;
+}
+
+.copyright-text > p {
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+.footer-section {
+    background-color: #1b1464;
+    height: 150px;
+    padding: 20px 40px;
+}
+
+.footer-content-part {
+    color:#c1c1c1;
+    font-size:14px;
+    margin-bottom:10px;
+}
