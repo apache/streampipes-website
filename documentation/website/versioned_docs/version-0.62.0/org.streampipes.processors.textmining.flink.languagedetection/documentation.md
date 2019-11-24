@@ -8,7 +8,7 @@ original_id: org.streampipes.processors.textmining.flink.languagedetection
 
 
 <p align="center"> 
-    <img src="/img/pipeline-elements/org.streampipes.processors.textmining.flink.languagedetection/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/docs/img/pipeline-elements/org.streampipes.processors.textmining.flink.languagedetection/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

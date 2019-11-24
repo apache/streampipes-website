@@ -7,7 +7,7 @@ sidebar_label: Slack Notification
 
 
 <p align="center"> 
-    <img src="/img/pipeline-elements/org.streampipes.sinks.notifications.jvm.slack/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/docs/img/pipeline-elements/org.streampipes.sinks.notifications.jvm.slack/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

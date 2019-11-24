@@ -7,7 +7,7 @@ sidebar_label: Static Math
 
 
 <p align="center"> 
-    <img src="/img/pipeline-elements/org.streampipes.processors.enricher.flink.processor.math.staticmathop/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/docs/img/pipeline-elements/org.streampipes.processors.enricher.flink.processor.math.staticmathop/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

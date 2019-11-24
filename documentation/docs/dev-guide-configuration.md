@@ -9,7 +9,7 @@ StreamPipes allows the individual services (pipeline element containers and thir
 This has the advantage that individual services do not need to store any configurations on the local file system, enabling us to run containers anywhere.
 As a key-value store we use [Consul](https://www.consul.io/), which is an essential service for all our services.
 
-<img src="/img/configuration/consul.png" width="50%" alt="Semantic description of data processor">
+<img src="/docs/img/configuration/consul.png" width="50%" alt="Semantic description of data processor">
 
 
 ## Edit Configurations
@@ -19,7 +19,7 @@ Once a new  pipeline element container is started, it is registered in Consul an
 To store changes in Consul, the update button must be clicked.
 
 <div class="my-carousel">
-    <img src="/img/configuration/configuration_1.png" alt="Configuration View">
+    <img src="/docs/img/configuration/configuration_1.png" alt="Configuration View">
 </div>
 
 ## Configuration for Developers
@@ -33,7 +33,7 @@ A configuration entry needs a unique config key. For this key, a value can be sp
 For each configuration, a description explaining the parameter can be provided, further the data type must be specified and whether it is a password or not.
 Below, the schema of a configuration item is shown on the left and an example of a port configuration on the right.
 
-<img src="/img/configuration/config_key.png" width="80%" alt="Semantic description of data processor">
+<img src="/docs/img/configuration/config_key.png" width="80%" alt="Semantic description of data processor">
 
 As a developer, you can add as many new configurations to services as you wish, but there are some that are required for all processing element containers.
 Those are **the host**, **the port**, and **the name** of the service.

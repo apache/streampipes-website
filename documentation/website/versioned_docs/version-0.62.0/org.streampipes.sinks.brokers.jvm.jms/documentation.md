@@ -8,7 +8,7 @@ original_id: org.streampipes.sinks.brokers.jvm.jms
 
 
 <p align="center"> 
-    <img src="/img/pipeline-elements/org.streampipes.sinks.brokers.jvm.jms/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/docs/img/pipeline-elements/org.streampipes.sinks.brokers.jvm.jms/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

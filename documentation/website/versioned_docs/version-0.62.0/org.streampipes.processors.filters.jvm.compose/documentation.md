@@ -8,7 +8,7 @@ original_id: org.streampipes.processors.filters.jvm.compose
 
 
 <p align="center"> 
-    <img src="/img/pipeline-elements/org.streampipes.processors.filters.jvm.compose/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/docs/img/pipeline-elements/org.streampipes.processors.filters.jvm.compose/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

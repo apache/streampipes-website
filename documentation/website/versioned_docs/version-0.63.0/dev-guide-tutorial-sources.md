@@ -43,7 +43,7 @@ For this tutorial, use ``Vehicle`` as ``classNamePrefix``.
 
 Your project will look as follows:
 
-<img src="/img/tutorial-sources/project-structure.PNG" alt="Project Structure">
+<img src="/docs/img/tutorial-sources/project-structure.PNG" alt="Project Structure">
 
 That's it, go to the next section to learn how to create your first data stream!
 
@@ -267,11 +267,11 @@ Execute the main method in the class `Main` we've just created, open a web brows
 
 You should see something as follows:
 
-<img src="/img/tutorial-sources/pe-overview.PNG" alt="Pipeline Element Container Overview">
+<img src="/docs/img/tutorial-sources/pe-overview.PNG" alt="Pipeline Element Container Overview">
 
 Click on the link of the data source to see the RDF description of the pipeline element.
 
-<img src="/img/tutorial-sources/pe-rdf.PNG" alt="Pipeline Element RDF description">
+<img src="/docs/img/tutorial-sources/pe-rdf.PNG" alt="Pipeline Element RDF description">
 
 The container automatically registers itself in the Consul installation of StreamPipes.
 To install the just created element, open the StreamPipes UI and follow the manual provided in the [user guide](user-guide-introduction).

@@ -8,7 +8,7 @@ original_id: org.streampipes.processors.transformation.flink.field-renamer
 
 
 <p align="center"> 
-    <img src="/img/pipeline-elements/org.streampipes.processors.transformation.flink.field-renamer/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/docs/img/pipeline-elements/org.streampipes.processors.transformation.flink.field-renamer/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

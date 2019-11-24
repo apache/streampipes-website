@@ -7,7 +7,7 @@ sidebar_label: Timestamp Extractor
 
 
 <p align="center"> 
-    <img src="/img/pipeline-elements/org.streampipes.processors.transformation.jvm.processor.timestampextractor/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/docs/img/pipeline-elements/org.streampipes.processors.transformation.jvm.processor.timestampextractor/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***
