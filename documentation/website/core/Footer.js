@@ -44,12 +44,6 @@ class Footer extends React.Component {
                             <a href={this.props.config.baseUrl + 'docs/faq-common-problems'}> 
                                 Frequently Asked Questions
                             </a>
-                            <a href={this.props.config.baseUrl + 'docs/privacy'}> 
-                                Privacy Notice
-                            </a>
-                            <a href="https://www.fzi.de/footer/impressum/">
-                                Imprint
-                            </a>
                         </div>
                         <div>
                             <h5>Community</h5>
@@ -66,7 +60,7 @@ class Footer extends React.Component {
                                 Twitter
                             </a>
                             <a
-                                href="https://github.com/streampipes"
+                                href="https://github.com/apache/incubator-streampipes"
                                 target="_blank"
                                 rel="noreferrer noopener">
                                 Github
@@ -81,7 +75,7 @@ class Footer extends React.Component {
                         <div>
                             <h5>More</h5>
                             <a href={this.props.config.baseUrl + 'blog'}>Blog</a>
-                            <a href="https://www.streampipes.org">Website</a>
+                            <a href="https://streampipes.apache.org.org">Website</a>
                             <a
                                 className="github-button"
                                 href={this.props.config.repoUrl}
