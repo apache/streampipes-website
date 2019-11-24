@@ -91,11 +91,11 @@ class SpDocsLinks extends React.Component {
         ];
 
         return (
-            <div className="container" style={{"margin-bottom": '50px'}}>
+            <div className="container" style={{"margin": '50px'}}>
                 <div className="wrapper">
                     <div className="gridBlock">
-                        {elements.map((value) => {
-                            return <SpDocsLink settings={value}/>
+                        {elements.map((value, index) => {
+                            return <SpDocsLink key={index} settings={value}/>
                         })}
                     </div>
                 </div>
