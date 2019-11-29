@@ -20,10 +20,11 @@ jobs:
           npm run build-website
       - name: Build Docs
         run: |
+          mkdir build/docs
           cd documentation/website
           npm install
           npm run build
-          cp -r streampipes-docs/ ../../build
+          cp -r build/streampipes-docs/ ../../build/docs
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v2.4.0
         env:
