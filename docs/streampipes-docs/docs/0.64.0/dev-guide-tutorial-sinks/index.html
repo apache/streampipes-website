@@ -1,0 +1,281 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Tutorial: Data Sinks · StreamPipes</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;In this tutorial, we will add a new data sink using the standalone wrapper.&lt;/p&gt;
+"/><meta name="docsearch:version" content="0.64.0"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Tutorial: Data Sinks · StreamPipes"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.streampipes.org/docs/"/><meta property="og:description" content="&lt;p&gt;In this tutorial, we will add a new data sink using the standalone wrapper.&lt;/p&gt;
+"/><meta property="og:image" content="https://docs.streampipes.org/docs/img/favicon.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.streampipes.org/docs/img/docusaurus.png"/><link rel="shortcut icon" href="/docs/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://docs.streampipes.org/docs/blog/atom.xml" title="StreamPipes Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://docs.streampipes.org/docs/blog/feed.xml" title="StreamPipes Blog RSS Feed"/><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/><link rel="stylesheet" href="/docs/css/admonition.css"/><link rel="stylesheet" href="/docs/css/custom.css"/><link rel="stylesheet" href="/docs/css/code-block-buttons.css"/><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script><script type="text/javascript" src="/docs/js/custom.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><link rel="stylesheet" href="/docs/css/prism.css"/><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/sp-logo-color-docs.png" alt="StreamPipes"/></a><a href="/docs/versions"><h3>0.64.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/docs/0.64.0/user-guide-introduction" target="_self">User Guide</a></li><li class="siteNavGroupActive"><a href="/docs/docs/0.64.0/dev-guide-introduction" target="_self">Developer Guide</a></li><li class=""><a href="/docs/docs/0.64.0/pipeline-elements" target="_self">Pipeline Elements</a></li><li class=""><a href="/docs/docs/0.64.0/faq-common-problems" target="_self">FAQ</a></li><li class=""><a href="/docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Tutorials</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Basics</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/0.64.0/dev-guide-introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.64.0/dev-guide-architecture">Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.64.0/dev-guide-development-environment">Development Environment</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.64.0/dev-guide-archetype">Start Developing</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.64.0/dev-guide-migration">Migration Guide</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/0.64.0/dev-guide-tutorial-sources">Tutorial: Data Sources</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.64.0/dev-guide-tutorial-processors">Tutorial: Data Processors</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/docs/0.64.0/dev-guide-tutorial-sinks">Tutorial: Data Sinks</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">SDK Reference</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/0.64.0/dev-guide-sdk-guide-sources">SDK Guide Sources</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.64.0/dev-guide-sdk-guide-processors">SDK Guide: Data Processors</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.64.0/dev-guide-sdk-guide-sinks">SDK Guide: Data Sinks</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.64.0/dev-guide-stream-requirements">Stream Requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.64.0/dev-guide-static-properties">Static Properties</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.64.0/dev-guide-output-strategies">Output Strategies</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.64.0/dev-guide-event-model">Event Model</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Configuration</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/0.64.0/dev-guide-ssl">Use SSL</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.64.0/dev-guide-configuration">Configuration</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Tutorial: Data Sinks</h1></header><article><div><span><p>In this tutorial, we will add a new data sink using the standalone wrapper.</p>
+<p>From an architectural point of view, we will create a self-contained service that includes the description of the data sink and a corresponding implementation.</p>
+<h2><a class="anchor" aria-hidden="true" id="objective"></a><a href="#objective" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objective</h2>
+<p>We are going to create a new data sink that calls an external HTTP endpoint to forward data to an external service.</p>
+<p>For each incoming event, an external service is invoked using an HTTP POST request. In this example, we'll call an endpoint provided by <a href="https://requestbin.com/">RequestBin</a>.
+To setup your own endpoint, go to <a href="https://requestbin.com/">https://requestbin.com/</a> and click &quot;Create a request bin&quot;. Copy the URL of the newly created endpoint.</p>
+<h2><a class="anchor" aria-hidden="true" id="project-setup"></a><a href="#project-setup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Project setup</h2>
+<p>We'll create a new project using the provided sinks-standalone-jvm Maven archetype.
+Enter the following command to create a new project based on the StreamPipes <code>Sinks-JVM</code> archetype:</p>
+<pre><code class="hljs">mvn archetype:generate <span class="hljs-attribute">-DarchetypeGroupId</span>=org.streampipes \
+<span class="hljs-attribute">-DarchetypeArtifactId</span>=streampipes-archetype-pe-sinks-jvm <span class="hljs-attribute">-DarchetypeVersion</span>=0.64.0 \
+<span class="hljs-attribute">-DgroupId</span>=org.streampipes.tutorial <span class="hljs-attribute">-DartifactId</span>=sink-tutorial <span class="hljs-attribute">-DclassNamePrefix</span>=Rest <span class="hljs-attribute">-DpackageName</span>=geofencing
+</code></pre>
+<p>Once you've imported the generated project, the project structure should look as follows:</p>
+<p><img src="/docs/img/tutorial-sinks/project-structure-sinks.png" alt="Project Structure Data Sink"></p>
+<p>Due to a dependency conflict in the 0.64.0 release, open your pom.xml and add the following lines to the <code>dependencies</code> section:</p>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>javax.validation<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>validation-api<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.0.1.Final<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+
+</code></pre>
+<div class="admonition tip">
+<div class="admonition-title">Tip</div>
+<p>Besides the basic project skeleton, the sample project also includes an example Dockerfile you can use to package your application into a Docker container.</p>
+</div>
+<p>Now you're ready to create your first data sink for StreamPipes!</p>
+<h2><a class="anchor" aria-hidden="true" id="adding-data-sink-requirements"></a><a href="#adding-data-sink-requirements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding data sink requirements</h2>
+<p>First, we will add a new stream requirement.
+Open the class <code>RestController</code> which should look as follows:</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">package</span> org.streampipes.tutorial.pe.sink.rest;
+
+<span class="hljs-keyword">import</span> org.streampipes.model.DataSinkType;
+<span class="hljs-keyword">import</span> org.streampipes.model.graph.DataSinkDescription;
+<span class="hljs-keyword">import</span> org.streampipes.model.graph.DataSinkInvocation;
+<span class="hljs-keyword">import</span> org.streampipes.sdk.builder.DataSinkBuilder;
+<span class="hljs-keyword">import</span> org.streampipes.sdk.builder.StreamRequirementsBuilder;
+<span class="hljs-keyword">import</span> org.streampipes.sdk.extractor.DataSinkParameterExtractor;
+<span class="hljs-keyword">import</span> org.streampipes.sdk.helpers.EpRequirements;
+<span class="hljs-keyword">import</span> org.streampipes.sdk.helpers.Labels;
+<span class="hljs-keyword">import</span> org.streampipes.sdk.helpers.SupportedFormats;
+<span class="hljs-keyword">import</span> org.streampipes.sdk.helpers.SupportedProtocols;
+<span class="hljs-keyword">import</span> org.streampipes.wrapper.standalone.ConfiguredEventSink;
+<span class="hljs-keyword">import</span> org.streampipes.wrapper.standalone.declarer.StandaloneEventSinkDeclarer;
+<span class="hljs-keyword">import</span> org.streampipes.sdk.helpers.*;
+<span class="hljs-keyword">import</span> org.streampipes.sdk.utils.Assets;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RestController</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">StandaloneEventSinkDeclarer</span>&lt;<span class="hljs-title">RestParameters</span>&gt; </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String EXAMPLE_KEY = <span class="hljs-string">"example-key"</span>;
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> DataSinkDescription <span class="hljs-title">declareModel</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> DataSinkBuilder.create(<span class="hljs-string">"org.streampipes.tutorial.pe.sink.rest"</span>)
+                        .category(DataSinkType.NOTIFICATION)
+                        .withAssets(Assets.DOCUMENTATION, Assets.ICON)
+                        .withLocales(Locales.EN)
+                        .requiredStream(StreamRequirementsBuilder
+                                            .create()
+                                            .requiredPropertyWithNaryMapping(EpRequirements.anyProperty(), Labels.withId(
+                                                    <span class="hljs-string">"fields-to-send"</span>), PropertyScope.NONE)
+                                            .build())
+                        .build();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ConfiguredEventSink&lt;RestParameters&gt; <span class="hljs-title">onInvocation</span><span class="hljs-params">(DataSinkInvocation graph, DataSinkParameterExtractor extractor)</span> </span>{
+
+         List&lt;String&gt; fieldsToSend = extractor.mappingPropertyValues(<span class="hljs-string">"fields-to-send"</span>);
+        
+         RestParameters params = <span class="hljs-keyword">new</span> RestParameters(graph, fieldsToSend);
+
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ConfiguredEventSink&lt;&gt;(params, Rest::<span class="hljs-keyword">new</span>);
+    }
+
+}
+
+</code></pre>
+<p>In this class, we need to implement two methods: The <code>declareModel</code> method is used to define abstract stream requirements such as event properties that must be present in any input stream that is later connected to the element using the StreamPipes UI.
+The second method, <code>onInvocation</code> is used to create and deploy program once a pipeline using this sink is started.</p>
+<p>The <code>declareModel</code> method describes the properties of our data sink:</p>
+<ul>
+<li><code>category</code> defines a category for this sink.</li>
+<li><code>withAssets</code> denotes that we will provide an external documentation file and an icon, which can be found in the <code>resources</code> folder</li>
+<li><code>withLocales</code> defines that we will provide an external language file, also available in the <code>resources</code> folder</li>
+<li><code>requiredStream</code> defines requirements any input stream connected to this sink must provide. In this case, we do not have any specific requirements, we just forward all incoming events to the REST sink. However, we want to let the user display a list of available fields from the connected input event, where users can select a subset. This is defined by defining a Mapping from the empty requirement. This will later on render a selection dialog in the pipeline editor.</li>
+</ul>
+<p>The <code>onInvocation</code> method is called when a pipeline containing the sink is started. Once a pipeline is started, we would like to extract user-defined parameters.
+In this example, we simply extract the fields selected by users that should be forwarded to the REST sink. Finally, we return a new configured event sink containing the parameters.</p>
+<h2><a class="anchor" aria-hidden="true" id="pipeline-element-invocation"></a><a href="#pipeline-element-invocation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pipeline element invocation</h2>
+<p>Once users start a pipeline that uses our geofencing component, the <em>getRuntime</em> method in our class is called. The class <code>DataSinkInovcation</code> includes a graph that contains information on the configuration parameters a users has selected in the pipeline editor and information on the acutal streams that are connected to the pipeline element.</p>
+<p>Before we explain in more detail how to extract these values from the processor invocation, we need to adapt a little helper class.
+Open the file <code>RestParameters</code> and modify it as follows:</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RestParameters</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">EventSinkBindingParams</span> </span>{
+
+  <span class="hljs-keyword">private</span> List&lt;String&gt; fieldsToSend;
+
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">RestParameters</span><span class="hljs-params">(DataSinkInvocation graph, List&lt;String&gt; fieldsToSend)</span> </span>{
+    <span class="hljs-keyword">super</span>(graph);
+    <span class="hljs-keyword">this</span>.fieldsToSend = fieldsToSend;
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;String&gt; <span class="hljs-title">getFieldsToSend</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> fieldsToSend;
+  }
+}
+</code></pre>
+<p>This file will later provide information on the configured pipeline element.</p>
+<h2><a class="anchor" aria-hidden="true" id="adding-an-implementation"></a><a href="#adding-an-implementation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding an implementation</h2>
+<p>Now open the class <code>Rest</code> to add the proper implementation (i.e., the Rest call executed for every incoming event).</p>
+<p>Our final class should look as follows:</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger LOG = LoggerFactory.getLogger(Rest<span class="hljs-class">.<span class="hljs-keyword">class</span>.<span class="hljs-title">getCanonicalName</span>())</span>;
+
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String REST_ENDPOINT_URI = YOUR_REQUEST_BIN_URL;
+  <span class="hljs-keyword">private</span> List&lt;String&gt; fieldsToSend;
+  <span class="hljs-keyword">private</span> SpDataFormatDefinition dataFormatDefinition;
+
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Rest</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">this</span>.dataFormatDefinition = <span class="hljs-keyword">new</span> JsonDataFormatDefinition();
+  }
+
+  <span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onInvocation</span><span class="hljs-params">(RestParameters parameters, EventSinkRuntimeContext runtimeContext)</span> </span>{
+    <span class="hljs-keyword">this</span>.fieldsToSend = parameters.getFieldsToSend();
+  }
+
+  <span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onEvent</span><span class="hljs-params">(Event event)</span> </span>{
+    Map&lt;String, Object&gt; outEventMap = event.getSubset(fieldsToSend).getRaw();
+    <span class="hljs-keyword">try</span> {
+      String json = <span class="hljs-keyword">new</span> String(dataFormatDefinition.fromMap(outEventMap));
+      Request.Post(REST_ENDPOINT_URI).body(<span class="hljs-keyword">new</span> StringEntity(json, Charsets.UTF_8)).execute();
+    } <span class="hljs-keyword">catch</span> (SpRuntimeException e) {
+      LOG.error(<span class="hljs-string">"Could not parse incoming event"</span>);
+    } <span class="hljs-keyword">catch</span> (IOException e) {
+      LOG.error(<span class="hljs-string">"Could not reach endpoint at {}"</span>, REST_ENDPOINT_URI);
+    }
+  }
+
+  <span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDetach</span><span class="hljs-params">()</span> </span>{
+
+  }
+</code></pre>
+<p>The only class variable you need to change right now is the REST_ENDPOINT_URL. Change this url to the URL provided by your request bin.
+We'll ignore the other class variables and the constructor for now. Important are three methods, <code>onInvocation</code>, <code>onEvent</code> and <code>onDetach</code>.</p>
+<p>The <code>onInvocation</code> method is called once a pipeline containing our REST data sink is started. The <code>onEvent</code> method is called for each incoming event. Finally, <code>onDetach</code> is called when a pipeline is stopped.</p>
+<p>In the <code>onInvocation</code> method, we can extract the selected fields to be forwarded to the REST endpoint.
+In the <code>ònEvent</code> method, we use a helper method to get a subset of the incoming event.
+Finally, we convert the resulting <code>Map</code> to a JSON string and call the endpoint.</p>
+<h2><a class="anchor" aria-hidden="true" id="preparing-the-container"></a><a href="#preparing-the-container" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Preparing the container</h2>
+<p>The final step is to define the deployment type of our new data source. In this tutorial, we will create a so-called <code>StandaloneModelSubmitter</code>.
+This client will start an embedded web server that provides the description of our data source and automatically starts the program in an embedded container.</p>
+<p>Go to the class <code>Init</code> that extends <code>StandaloneModelSubmitter</code> and should look as follows:</p>
+<pre><code class="hljs css language-java">
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+    DeclarersSingleton.getInstance()
+            .add(<span class="hljs-keyword">new</span> RestController());
+
+    DeclarersSingleton.getInstance().setPort(Config.INSTANCE.getPort());
+    DeclarersSingleton.getInstance().setHostName(Config.INSTANCE.getHost());
+
+    DeclarersSingleton.getInstance().registerDataFormats(<span class="hljs-keyword">new</span> JsonDataFormatFactory(),
+            <span class="hljs-keyword">new</span> CborDataFormatFactory(),
+            <span class="hljs-keyword">new</span> SmileDataFormatFactory(),
+            <span class="hljs-keyword">new</span> FstDataFormatFactory());
+
+    DeclarersSingleton.getInstance().registerProtocols(<span class="hljs-keyword">new</span> SpKafkaProtocolFactory(),
+            <span class="hljs-keyword">new</span> SpJmsProtocolFactory());
+
+    <span class="hljs-keyword">new</span> Init().init(Config.INSTANCE);
+</code></pre>
+<div class="admonition info">
+<div class="admonition-title">Info</div>
+<p>In the example above, we make use of a class `Config`.
+       This class contains both mandatory and additional configuration parameters required by a pipeline element container.
+       These values are stored in the Consul-based key-value store of your StreamPipes installation.
+       The SDK guide contains a detailed manual on managing container configurations.
+</p>
+</div>
+<h2><a class="anchor" aria-hidden="true" id="starting-the-container"></a><a href="#starting-the-container" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Starting the container</h2>
+<div class="admonition tip">
+<div class="admonition-title">Tip</div>
+<p>By default, the container registers itself using the hostname later used by the Docker container, leading to a 404 error when you try to access an RDF description.
+       For local development, we provide an environment file in the ``development`` folder. You can add your hostname here, which will override settings from the Config class.
+       For instance, use the IntelliJ ``EnvFile`` plugin to automatically provide the environment variables upon start.
+</p>
+</div>
+<div class="admonition tip">
+<div class="admonition-title">Tip</div>
+<p> The default port of all pipeline element containers as defined in the `Config` file is port 8090.
+       If you'd like to run mutliple containers at the same time on your development machine, change the port in the environment file.
+</p>
+</div>
+<p>Now we are ready to start our container!</p>
+<p>Execute the main method in the class <code>Main</code> we've just created.</p>
+<p>The container automatically registers itself in the Consul installation of StreamPipes.
+To install the just created element, open the StreamPipes UI and follow the manual provided in the <a href="user-guide-installation">user guide</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="read-more"></a><a href="#read-more" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Read more</h2>
+<p>Congratulations! You've just created your first data sink for StreamPipes.
+There are many more things to explore and data sinks can be defined in much more detail using multiple wrappers.
+Follow our <a href="dev-guide-sdk-guide-sinks">SDK guide</a> to see what's possible!</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/docs/0.64.0/dev-guide-tutorial-processors"><span class="arrow-prev">← </span><span>Tutorial: Data Processors</span></a><a class="docs-next button" href="/docs/docs/0.64.0/dev-guide-sdk-guide-sources"><span>SDK Guide: Data Sources</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#objective">Objective</a></li><li><a href="#project-setup">Project setup</a></li><li><a href="#adding-data-sink-requirements">Adding data sink requirements</a></li><li><a href="#pipeline-element-invocation">Pipeline element invocation</a></li><li><a href="#adding-an-implementation">Adding an implementation</a></li><li><a href="#preparing-the-container">Preparing the container</a></li><li><a href="#starting-the-container">Starting the container</a></li><li><a href="#read-more">Read more</a></li></ul></nav></div><div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/sp-logo-color.png" alt="StreamPipes" width="66"/></a><div><h5>Docs</h5><a href="/docs/docs/user-guide-introduction">User Guide</a><a href="/docs/docs/dev-guide-introduction">Developer Guide</a><a href="/docs/docs/faq-common-problems">Frequently Asked Questions</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/streampipes" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/streampipes" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://github.com/apache/incubator-streampipes" target="_blank" rel="noreferrer noopener">Github</a><a href="https://hub.docker.com/u/streampipes" target="_blank" rel="noreferrer noopener">Docker Hub</a></div><div><h5>More</h5><a href="/docs/blog">Blog</a><a href="https://streampipes.apache.org.org">Website</a><a class="github-button" href="https://github.com/apache/incubator-streampipes" data-icon="octicon-star" data-count-href="/streampipes/streampipes/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 The Apache Software Foundation</section></footer></div></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '0fedc89dddf2810657708b178e56ef02',
+                indexName: 'streampipes',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

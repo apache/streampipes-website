@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>SDK Guide: Event Model · StreamPipes</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;introduction&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#introduction&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Introduction&lt;/h2&gt;
+"/><meta name="docsearch:version" content="0.63.0"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="SDK Guide: Event Model · StreamPipes"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.streampipes.org/docs/"/><meta property="og:description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;introduction&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#introduction&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Introduction&lt;/h2&gt;
+"/><meta property="og:image" content="https://docs.streampipes.org/docs/img/favicon.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.streampipes.org/docs/img/docusaurus.png"/><link rel="shortcut icon" href="/docs/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://docs.streampipes.org/docs/blog/atom.xml" title="StreamPipes Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://docs.streampipes.org/docs/blog/feed.xml" title="StreamPipes Blog RSS Feed"/><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/><link rel="stylesheet" href="/docs/css/admonition.css"/><link rel="stylesheet" href="/docs/css/custom.css"/><link rel="stylesheet" href="/docs/css/code-block-buttons.css"/><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script><script type="text/javascript" src="/docs/js/custom.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><link rel="stylesheet" href="/docs/css/prism.css"/><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/sp-logo-color-docs.png" alt="StreamPipes"/></a><a href="/docs/versions"><h3>0.63.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/docs/0.63.0/user-guide-introduction" target="_self">User Guide</a></li><li class="siteNavGroupActive"><a href="/docs/docs/0.63.0/dev-guide-introduction" target="_self">Developer Guide</a></li><li class=""><a href="/docs/docs/0.63.0/pipeline-elements" target="_self">Pipeline Elements</a></li><li class=""><a href="/docs/docs/0.63.0/faq-common-problems" target="_self">FAQ</a></li><li class=""><a href="/docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>SDK Reference</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Basics</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/0.63.0/dev-guide-introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.63.0/dev-guide-architecture">Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.63.0/dev-guide-development-environment">Development Environment</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.63.0/dev-guide-archetype">Start Developing</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.63.0/dev-guide-migration">Migration Guide</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/0.63.0/dev-guide-tutorial-sources">Tutorial: Data Sources</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.63.0/dev-guide-tutorial-processors">Tutorial: Data Processors</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.63.0/dev-guide-tutorial-sinks">Tutorial: Data Sinks</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">SDK Reference</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/0.63.0/dev-guide-sdk-guide-sources">SDK Guide Sources</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.63.0/dev-guide-sdk-guide-processors">SDK Guide: Data Processors</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.63.0/dev-guide-sdk-guide-sinks">SDK Guide: Data Sinks</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.63.0/dev-guide-stream-requirements">Stream Requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.63.0/dev-guide-static-properties">Static Properties</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.63.0/dev-guide-output-strategies">Output Strategies</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/docs/0.63.0/dev-guide-event-model">Event Model</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Configuration</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/0.63.0/dev-guide-ssl">Use SSL</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.63.0/dev-guide-configuration">Configuration</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">SDK Guide: Event Model</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
+<p>The 0.61.0 release of StreamPipes introduces a new event model that replaces the <code>Map</code> representation of events at runtime. This guide explains the usage of the new event model to manipulate runtime events for data processors and data sink.</p>
+<h2><a class="anchor" aria-hidden="true" id="reference"></a><a href="#reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reference</h2>
+<p>This guide assumes that you are already familiar with the basic setup of <a href="/docs/docs/0.63.0/dev-guide-sdk-guide-processors">data processors</a> and <a href="/docs/docs/0.63.0/dev-guide-sdk-guide-sinks">data sinks</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="property-selectors"></a><a href="#property-selectors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Property Selectors</h3>
+<p>In most cases, fields that are subject to be transformed by pipeline elements are provided by the assigned <code>MappingProperty</code> (see the guide on <a href="/docs/docs/0.63.0/dev-guide-static-properties">static properties</a>.</p>
+<p>Mapping properties return a <code>PropertySelector</code> that identifies a field based on (i) the <strong>streamIndex</strong> and (ii) the runtime name of the field.
+Let's assume we have an event with the following structure:</p>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"timestamp"</span> : <span class="hljs-number">1234556</span>,
+    <span class="hljs-attr">"temperature"</span> : <span class="hljs-number">37.0</span>,
+    <span class="hljs-attr">"deviceId"</span> : <span class="hljs-string">"sensor1"</span>,
+    <span class="hljs-attr">"running"</span> : <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"location"</span> : {<span class="hljs-attr">"latitude"</span> : <span class="hljs-number">34.4</span>, <span class="hljs-attr">"longitude"</span> : <span class="hljs-number">-47</span>},
+    <span class="hljs-attr">"lastValues"</span> : [<span class="hljs-number">45</span>, <span class="hljs-number">22</span>, <span class="hljs-number">21</span>]
+}
+</code></pre>
+<p>In addition, we assume that a data processor exists (with one input node) that converts the temperature value (measured in degrees celsius) to a degree fahrenheit value.
+In this case, a mapping property (selected by the pipeline developer in the StreamPipes UI) would link to the <code>temperature</code> field of the event.</p>
+<p>The mapping property value will be the <code>PropertySelector</code> of the temperature value, which looks as follows:</p>
+<pre><code class="hljs">s0::temperature
+</code></pre>
+<p><code>s0</code> identifies the stream (in this case, only one input streams exist, but as data processors might require more than one input stream, a stream identifier is required), while the appendix identifies the runtime name.</p>
+<p>Note: If you add a new field to an input event, you don't need to provide the selector, you can just assign the runtime name as defined by the <a href="/docs/docs/0.63.0/dev-guide-output-strategies">output strategy</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="reading-fields"></a><a href="#reading-fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reading Fields</h3>
+<p>You can get a field from an event by providing the corresponding selector:</p>
+<pre><code class="hljs css language-java">
+<span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onEvent</span><span class="hljs-params">(Event event, SpOutputCollector out)</span> </span>{
+
+  PrimitiveField temperatureField = event.getFieldBySelector(PROPERTY_SELECTOR).getAsPrimitive();
+  }
+
+</code></pre>
+<p>Similarly, if your mapping property links to a nested property, use</p>
+<pre><code class="hljs css language-java">
+<span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onEvent</span><span class="hljs-params">(Event event, SpOutputCollector out)</span> </span>{
+
+  NestedField nestedField = event.getFieldBySelector(PROPERTY_SELECTOR).getAsNested();
+  }
+
+</code></pre>
+<p>and for a list-based field:</p>
+<pre><code class="hljs css language-java">
+<span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onEvent</span><span class="hljs-params">(Event event, SpOutputCollector out)</span> </span>{
+
+  ListField listField = event.getFieldBySelector(PROPERTY_SELECTOR).getAsList();
+  }
+
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="parsing-fields"></a><a href="#parsing-fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parsing Fields</h3>
+<h4><a class="anchor" aria-hidden="true" id="primitive-fields"></a><a href="#primitive-fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Primitive Fields</h4>
+<p>A <code>PrimitiveField</code> contains convenience methods to directly cast a field to the target datatype:</p>
+<pre><code class="hljs css language-java">
+<span class="hljs-comment">// parse the value as a float datatype</span>
+Float temperatureValue = event.getFieldBySelector(temperatureSelector).getAsPrimitive().getAsFloat();
+
+<span class="hljs-comment">// or do the same with a double datatype</span>
+Double temperatureValue = event.getFieldBySelector(temperatureSelector).getAsPrimitive().getAsDouble();
+
+<span class="hljs-comment">// extracting a string</span>
+String deviceId = event.getFieldBySelector(deviceIdSelector).getAsPrimitive().getAsString();
+
+<span class="hljs-comment">// this also works for extracting fields from nested fields:</span>
+Double latitude = event.getFieldBySelector(latitudeSelector).getAsPrimitive().getAsDouble();
+
+<span class="hljs-comment">// extracting boolean values</span>
+Boolean running = event.getFieldBySelector(runningSelector).getAsPrimitive().getAsBoolean();
+</code></pre>
+<p>In rare cases, you might want to receive a field directly based on the runtime name as follows:</p>
+<pre><code class="hljs css language-java">Double temperature = event.getFieldByRuntimeName(<span class="hljs-string">"temperature"</span>).getAsPrimitive().getAsDouble();
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="list-fields"></a><a href="#list-fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List Fields</h4>
+<p>Lists can also be retrieved by providing the corresponding selector and can automatically be parsed to a list of primitive datatypes:</p>
+<pre><code class="hljs css language-java">
+List&lt;Integer&gt; lastValues = event.getFieldBySelector(lastValueSelector).getAsList().parseAsSimpleType(Integer<span class="hljs-class">.<span class="hljs-keyword">class</span>)</span>;
+
+</code></pre>
+<p>(coming soon: parsing complex lists)</p>
+<h3><a class="anchor" aria-hidden="true" id="adding-updating-fields"></a><a href="#adding-updating-fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding/Updating Fields</h3>
+<p>Primitive fields can easily be added to an event by providing the runtime name and the object:</p>
+<pre><code class="hljs css language-java">
+    <span class="hljs-comment">// add a primitive field with runtime name "city" and value "Karlsruhe"</span>
+    event.addField(<span class="hljs-string">"city"</span>, <span class="hljs-string">"Karlsruhe"</span>);
+
+    <span class="hljs-comment">// remove the field "temperature" from the event</span>
+    event.removeFieldBySelector(temperatureSelector);
+
+    <span class="hljs-comment">// add a new field </span>
+    event.addField(<span class="hljs-string">"fahrenheit"</span>, <span class="hljs-number">48</span>);
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/docs/0.63.0/dev-guide-output-strategies"><span class="arrow-prev">← </span><span>Output Strategies</span></a><a class="docs-next button" href="/docs/docs/0.63.0/dev-guide-ssl"><span>Use SSL</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#reference">Reference</a><ul class="toc-headings"><li><a href="#property-selectors">Property Selectors</a></li><li><a href="#reading-fields">Reading Fields</a></li><li><a href="#parsing-fields">Parsing Fields</a></li><li><a href="#adding-updating-fields">Adding/Updating Fields</a></li></ul></li></ul></nav></div><div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/sp-logo-color.png" alt="StreamPipes" width="66"/></a><div><h5>Docs</h5><a href="/docs/docs/user-guide-introduction">User Guide</a><a href="/docs/docs/dev-guide-introduction">Developer Guide</a><a href="/docs/docs/faq-common-problems">Frequently Asked Questions</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/streampipes" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/streampipes" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://github.com/apache/incubator-streampipes" target="_blank" rel="noreferrer noopener">Github</a><a href="https://hub.docker.com/u/streampipes" target="_blank" rel="noreferrer noopener">Docker Hub</a></div><div><h5>More</h5><a href="/docs/blog">Blog</a><a href="https://streampipes.apache.org.org">Website</a><a class="github-button" href="https://github.com/apache/incubator-streampipes" data-icon="octicon-star" data-count-href="/streampipes/streampipes/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 The Apache Software Foundation</section></footer></div></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '0fedc89dddf2810657708b178e56ef02',
+                indexName: 'streampipes',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

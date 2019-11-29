@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>SDK Guide: Static Properties · StreamPipes</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;introduction&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#introduction&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Introduction&lt;/h2&gt;
+"/><meta name="docsearch:version" content="0.61.0"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="SDK Guide: Static Properties · StreamPipes"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.streampipes.org/docs/"/><meta property="og:description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;introduction&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#introduction&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Introduction&lt;/h2&gt;
+"/><meta property="og:image" content="https://docs.streampipes.org/docs/img/favicon.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.streampipes.org/docs/img/docusaurus.png"/><link rel="shortcut icon" href="/docs/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://docs.streampipes.org/docs/blog/atom.xml" title="StreamPipes Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://docs.streampipes.org/docs/blog/feed.xml" title="StreamPipes Blog RSS Feed"/><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/><link rel="stylesheet" href="/docs/css/admonition.css"/><link rel="stylesheet" href="/docs/css/custom.css"/><link rel="stylesheet" href="/docs/css/code-block-buttons.css"/><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script><script type="text/javascript" src="/docs/js/custom.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><link rel="stylesheet" href="/docs/css/prism.css"/><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/sp-logo-color-docs.png" alt="StreamPipes"/></a><a href="/docs/versions"><h3>0.61.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/docs/0.61.0/user-guide-introduction" target="_self">User Guide</a></li><li class="siteNavGroupActive"><a href="/docs/docs/0.61.0/dev-guide-introduction" target="_self">Developer Guide</a></li><li class=""><a href="/docs/docs/0.61.0/pipeline-elements" target="_self">Pipeline Elements</a></li><li class=""><a href="/docs/docs/0.61.0/faq-common-problems" target="_self">FAQ</a></li><li class=""><a href="/docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>SDK Reference</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Basics</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/0.61.0/dev-guide-introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.61.0/dev-guide-migration">Migration Guide</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.61.0/dev-guide-architecture">Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.61.0/dev-guide-development-environment">Development Environment</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.61.0/dev-guide-archetype">Start Developing</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/0.61.0/dev-guide-tutorial-sources">Tutorial: Data Sources</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.61.0/dev-guide-tutorial-processors">Tutorial: Data Processors</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">SDK Reference</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/0.61.0/dev-guide-sdk-guide-sources">SDK Guide Sources</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.61.0/dev-guide-sdk-guide-processors">SDK Guide: Data Processors</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.61.0/dev-guide-sdk-guide-sinks">SDK Guide: Data Sinks</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.61.0/dev-guide-stream-requirements">Stream Requirements</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/docs/0.61.0/dev-guide-static-properties">Static Properties</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.61.0/dev-guide-output-strategies">Output Strategies</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.61.0/dev-guide-event-model">Event Model</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Configuration</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/0.61.0/dev-guide-ssl">Use SSL</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.61.0/dev-guide-configuration">Configuration</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">SDK Guide: Static Properties</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
+<p>Static properties represent user-faced parameters that are provided by pipeline developers.
+Processing elements can specify required static properties, which will render different UI views in the pipeline editor.</p>
+<p>The following reference describes how static properties can be defined using the SDK.</p>
+<div class="admonition tip">
+<div class="admonition-title">Code on Github</div>
+<p>For all examples, the code can be found on <a href="https://github.com/streampipes/streampipes-pipeline-elements-examples/tree/dev/streampipes-pipeline-elements-examples-processors-jvm/src/main/java/org/streampipes/pe/examples/jvm/staticproperty">Github</a>.</p>
+</div>
+<h2><a class="anchor" aria-hidden="true" id="reference"></a><a href="#reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reference</h2>
+<p>The methods described below to create static properties are available in the <code>ProcessingElementBuilder</code> and <code>DataSinkBuilder</code> classes and are usually used in the <code>declareModel</code> method of the controller class.</p>
+<h3><a class="anchor" aria-hidden="true" id="mapping-property"></a><a href="#mapping-property" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mapping property</h3>
+<p>In StreamPipes, processing elements usually operate on fields of an event stream. For instance, a filter processor operates on a specific field from an input stream (e.g., a field measuring the temperature).
+Typically, pipeline developers should select the exact field where the operations is applied upon by themselves.
+As this field is not yet known at pipeline element development time (as it is defined by the pipeline developer in the pipeline editor), mapping properties serve to map a stream requirement to a specific field from the actual input event stream.</p>
+<h3><a class="anchor" aria-hidden="true" id="unary-mapping-property"></a><a href="#unary-mapping-property" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Unary mapping property</h3>
+<p>A unary mapping property maps a stream requirement to an actual field of an event stream. Therefore, the <code>StreamRequirementsBuilder</code> provides the opportunity to directly add a mapping property based along with a property requirement:</p>
+<pre><code class="hljs css language-java">.requiredStream(StreamRequirementsBuilder.
+    create()
+    .requiredPropertyWithUnaryMapping(EpRequirements.numberReq(),
+            Labels.from(<span class="hljs-string">"mp-key"</span>, <span class="hljs-string">"My Mapping"</span>, <span class="hljs-string">""</span>),
+            PropertyScope.NONE)
+    .build())
+</code></pre>
+<p>This leads to a selection dialog in the pipeline element customization which provides the user with a selection of all event properties (fields) from the input stream that match the specified property requirement:</p>
+<p><img src="/docs/img/dev-guide-static-properties/sp-mapping-unary.png" width="80%" alt="Text"></p>
+<p>At invocation time, the value can be extracted in the <code>onInvocation</code> method as follows:</p>
+<pre><code class="hljs css language-java"><span class="hljs-comment">// Extract the mapping property value</span>
+String mappingPropertySelector = extractor.mappingPropertyValue(<span class="hljs-string">"mp-key"</span>);
+</code></pre>
+<p>Note that this method returns a <code>PropertySelector</code>, which can be used by the event model to extract the actual value of this field.</p>
+<h3><a class="anchor" aria-hidden="true" id="n-ary-mapping-property"></a><a href="#n-ary-mapping-property" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>N-ary mapping property</h3>
+<p>N-ary mapping properties work similar to unary mapping properties, but allow the mapping of one requirement to multiple event properties matching the requirement:</p>
+<pre><code class="hljs css language-java">.requiredStream(StreamRequirementsBuilder.
+    create()
+    .requiredPropertyWithNaryMapping(EpRequirements.numberReq(),
+            Labels.from(<span class="hljs-string">"mp-key"</span>, <span class="hljs-string">"My Mapping"</span>, <span class="hljs-string">""</span>),
+            PropertyScope.NONE)
+    .build())
+</code></pre>
+<p>This renders the following selection, where users can select more than one matching event property:</p>
+<p><img src="/docs/img/dev-guide-static-properties/sp-mapping-nary.png" width="80%" alt="Text"></p>
+<p>The following snippet returns a list containing the property selectors of all event properties that have been selected:</p>
+<pre><code class="hljs css language-java"><span class="hljs-comment">// Extract the mapping property value</span>
+List&lt;String&gt; mappingPropertySelectors = extractor.mappingPropertyValues(<span class="hljs-string">"mp-key"</span>);
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="free-text-parameters"></a><a href="#free-text-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Free-Text Parameters</h3>
+<p>A free-text parameter requires the pipeline developer to enter a single value - which can be a string or another primitive data type.
+The input of free-text parameters can be restricted to specific value ranges or can be linked to the value set of a connected input data stream.</p>
+<h4><a class="anchor" aria-hidden="true" id="text-parameters"></a><a href="#text-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Text Parameters</h4>
+<p>A text parameter lets the user enter a string value. The following code line in the controller class</p>
+<pre><code class="hljs css language-java">.requiredTextParameter(Labels.from(SP_KEY, <span class="hljs-string">"Example Name"</span>, <span class="hljs-string">"Example Description"</span>))
+</code></pre>
+<p>leads to the following input dialog in the pipeline editor:</p>
+<p><img src="/docs/img/dev-guide-static-properties/sp-text-parameter.png" width="80%" alt="Text"></p>
+<p>Users can enter any value that will be converted to a string datatype. To receive the entered value in the <code>onInvocation</code> method, use the following method from the <code>ParameterExtractor</code></p>
+<pre><code class="hljs css language-java">String textParameter = extractor.singleValueParameter(SP_KEY, String<span class="hljs-class">.<span class="hljs-keyword">class</span>)</span>;
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="number-parameters"></a><a href="#number-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Number parameters</h4>
+<p>A number parameter lets the user enter a number value, either a floating-point number or an integer:</p>
+<pre><code class="hljs css language-java"><span class="hljs-comment">// create an integer parameter</span>
+.requiredIntegerParameter(Labels.from(SP_KEY, <span class="hljs-string">"Integer Parameter"</span>, <span class="hljs-string">"Example Description"</span>))
+
+<span class="hljs-comment">// create a float parameter</span>
+.requiredFloatParameter(Labels.from(<span class="hljs-string">"float-key"</span>, <span class="hljs-string">"Float Parameter"</span>, <span class="hljs-string">"Example Description"</span>))
+
+</code></pre>
+<p>leads to the following input dialog in the pipeline editor only accepting integer values:</p>
+<p><img src="/docs/img/dev-guide-static-properties/sp-number-parameter.png" width="80%" alt="Number Parameter"></p>
+<p>The pipeline editor performs type validation and ensures that only numbers can be added by the user. To receive the entered value in the <code>onInvocation</code> method, use the following method from the <code>ParameterExtractor</code></p>
+<pre><code class="hljs css language-java"><span class="hljs-comment">// Extract the integer parameter value</span>
+Integer integerParameter = extractor.singleValueParameter(SP_KEY, Integer<span class="hljs-class">.<span class="hljs-keyword">class</span>)</span>;
+
+<span class="hljs-comment">// Extract the float parameter value</span>
+Float floatParameter = extractor.singleValueParameter(<span class="hljs-string">"float-key"</span>, Float<span class="hljs-class">.<span class="hljs-keyword">class</span>)</span>;
+
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="numbers-with-value-specification"></a><a href="#numbers-with-value-specification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Numbers with value specification</h4>
+<p>You can also specify the value range of a number-based free text parameter:</p>
+<pre><code class="hljs css language-java"><span class="hljs-comment">// create an integer parameter with value range</span>
+.requiredIntegerParameter(Labels.from(SP_KEY, <span class="hljs-string">"Integer Parameter"</span>, <span class="hljs-string">"Example Description"</span>), <span class="hljs-number">0</span>, <span class="hljs-number">100</span>, <span class="hljs-number">1</span>)
+
+</code></pre>
+<p>which renders the following input field:</p>
+<p><img src="/docs/img/dev-guide-static-properties/sp-number-parameter-with-range.png" width="80%" alt="Number Parameter"></p>
+<p>Receive the entered value in the same way as a standard number parameter.</p>
+<h4><a class="anchor" aria-hidden="true" id="free-text-parameters-linked-to-an-event-property"></a><a href="#free-text-parameters-linked-to-an-event-property" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Free-text parameters linked to an event property</h4>
+<h3><a class="anchor" aria-hidden="true" id="single-value-selections"></a><a href="#single-value-selections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Single-Value Selections</h3>
+<p>Single-value selections let the user select from a pre-defined list of options.
+A single-value selection requires to select exactly one option.</p>
+<pre><code class="hljs css language-java">.requiredSingleValueSelection(Labels.from(<span class="hljs-string">"id"</span>, <span class="hljs-string">"Example Name"</span>, <span class="hljs-string">"Example Description"</span>),
+    Options.from(<span class="hljs-string">"Option A"</span>, <span class="hljs-string">"Option B"</span>, <span class="hljs-string">"Option C"</span>))
+
+</code></pre>
+<p>Single-value selections will be rendered as a set of radio buttons in the pipeline editor:</p>
+<p><img src="/docs/img/dev-guide-static-properties/sp-single-selection.png" width="80%" alt="Number Parameter"></p>
+<p>To extract the selected value, use the following method from the parameter extractor:</p>
+<pre><code class="hljs css language-java"><span class="hljs-comment">// Extract the selected value</span>
+String selectedSingleValue = extractor.selectedSingleValue(<span class="hljs-string">"id"</span>, String<span class="hljs-class">.<span class="hljs-keyword">class</span>)</span>;
+</code></pre>
+<div class="admonition tip">
+<div class="admonition-title">Declaring options</div>
+<p>Sometimes, you may want to use an internal name that differs from the display name of an option.
+For that, you can use the method Options.from(Tuple2<String, String>) and the extractor method selectedSingleValueInternalName.</p>
+</div>
+<h3><a class="anchor" aria-hidden="true" id="multi-value-selections"></a><a href="#multi-value-selections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multi-Value Selections</h3>
+<p>Multi-value selections let the user select from a pre-defined list of options, where multiple or no option might be selected.</p>
+<pre><code class="hljs css language-java">.requiredMultiValueSelection(Labels.from(<span class="hljs-string">"id"</span>, <span class="hljs-string">"Example Name"</span>, <span class="hljs-string">"Example Description"</span>),
+    Options.from(<span class="hljs-string">"Option A"</span>, <span class="hljs-string">"Option B"</span>, <span class="hljs-string">"Option C"</span>))
+
+</code></pre>
+<p>Multi-value selections will be rendered as a set of checkboxes in the pipeline editor:</p>
+<p><img src="/docs/img/dev-guide-static-properties/sp-multi-selection.png" width="80%" alt="Number Parameter"></p>
+<p>To extract the selected value, use the following method from the parameter extractor:</p>
+<pre><code class="hljs css language-java"><span class="hljs-comment">// Extract the selected value</span>
+List&lt;String&gt; selectedMultiValue = extractor.selectedMultiValues(<span class="hljs-string">"id"</span>, String<span class="hljs-class">.<span class="hljs-keyword">class</span>)</span>;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="domain-concepts"></a><a href="#domain-concepts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Domain Concepts</h3>
+<p>(coming soon...)</p>
+<h3><a class="anchor" aria-hidden="true" id="collections"></a><a href="#collections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Collections</h3>
+<p>You can also define collections based on other static properties.</p>
+<pre><code class="hljs css language-java"><span class="hljs-comment">// create a collection parameter</span>
+.requiredParameterAsCollection(Labels.from(<span class="hljs-string">"collection"</span>, <span class="hljs-string">"Example Name"</span>, <span class="hljs-string">"Example "</span> +
+        <span class="hljs-string">"Description"</span>), StaticProperties.stringFreeTextProperty(Labels
+        .from(<span class="hljs-string">"text-property"</span>,<span class="hljs-string">"Text"</span>,<span class="hljs-string">""</span>)))
+</code></pre>
+<p>While the items of the collection can be provided in the same way as the underlying static property, the UI provides buttons to add and remove items to the collections.</p>
+<p><img src="/docs/img/dev-guide-static-properties/sp-collection.png" width="80%" alt="Number Parameter"></p>
+<p>To extract the selected values from the collection, use the following method from the parameter extractor:</p>
+<pre><code class="hljs css language-java"><span class="hljs-comment">// Extract the text parameter value</span>
+List&lt;String&gt; textParameters = extractor.singleValueParameterFromCollection(<span class="hljs-string">"collection"</span>, String<span class="hljs-class">.<span class="hljs-keyword">class</span>)</span>;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="runtime-resolvable-selections"></a><a href="#runtime-resolvable-selections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Runtime-resolvable selections</h3>
+<p>In some cases, the options of selection parameters are not static, but depend on other values or might change at runtime. In this case, you can use runtime-resolvable selections.</p>
+<p>First, let your controller class implement <code>ResolvesContainerProvidedOptions</code>:</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RuntimeResolvableSingleValue</span> <span class="hljs-keyword">extends</span>
+     <span class="hljs-title">StandaloneEventProcessingDeclarer</span>&lt;<span class="hljs-title">DummyParameters</span>&gt; <span class="hljs-keyword">implements</span> <span class="hljs-title">ResolvesContainerProvidedOptions</span> </span>{ ... }
+</code></pre>
+<p>Next, define the parameter in the <code>declareModel</code> method:</p>
+<pre><code class="hljs css language-java"><span class="hljs-comment">// create a single value selection parameter that is resolved at runtime</span>
+    .requiredSingleValueSelectionFromContainer(Labels.from(<span class="hljs-string">"id"</span>, <span class="hljs-string">"Example Name"</span>, <span class="hljs-string">"Example "</span> +
+            <span class="hljs-string">"Description"</span>))
+</code></pre>
+<p>Finally, implement the method <code>resolveOptions</code>, which will be called at runtime once the processor is used:</p>
+<pre><code class="hljs css language-java">  <span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;RuntimeOptions&gt; <span class="hljs-title">resolveOptions</span><span class="hljs-params">(String requestId, EventProperty linkedEventProperty)</span> </span>{
+    <span class="hljs-keyword">return</span> Arrays.asList(<span class="hljs-keyword">new</span> RuntimeOptions(<span class="hljs-string">"I was defined at runtime"</span>, <span class="hljs-string">""</span>));
+  }
+</code></pre>
+<p>The UI will render a single-value parameter based on the options provided at runtime:</p>
+<p><img src="/docs/img/dev-guide-static-properties/sp-single-selection-remote.png" width="80%" alt="Number Parameter"></p>
+<p>The parameter extraction does not differ from the extraction of static single-value parameters.</p>
+<div class="admonition info">
+<div class="admonition-title">Multi-value selections</div>
+<p>Although this example shows the usage of runtime-resolvable selections using single value selections, the same also works for multi-value selections!</p>
+</div>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/docs/0.61.0/dev-guide-stream-requirements"><span class="arrow-prev">← </span><span>Stream Requirements</span></a><a class="docs-next button" href="/docs/docs/0.61.0/dev-guide-output-strategies"><span>Output Strategies</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#reference">Reference</a><ul class="toc-headings"><li><a href="#mapping-property">Mapping property</a></li><li><a href="#unary-mapping-property">Unary mapping property</a></li><li><a href="#n-ary-mapping-property">N-ary mapping property</a></li><li><a href="#free-text-parameters">Free-Text Parameters</a></li><li><a href="#single-value-selections">Single-Value Selections</a></li><li><a href="#multi-value-selections">Multi-Value Selections</a></li><li><a href="#domain-concepts">Domain Concepts</a></li><li><a href="#collections">Collections</a></li><li><a href="#runtime-resolvable-selections">Runtime-resolvable selections</a></li></ul></li></ul></nav></div><div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/sp-logo-color.png" alt="StreamPipes" width="66"/></a><div><h5>Docs</h5><a href="/docs/docs/user-guide-introduction">User Guide</a><a href="/docs/docs/dev-guide-introduction">Developer Guide</a><a href="/docs/docs/faq-common-problems">Frequently Asked Questions</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/streampipes" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/streampipes" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://github.com/apache/incubator-streampipes" target="_blank" rel="noreferrer noopener">Github</a><a href="https://hub.docker.com/u/streampipes" target="_blank" rel="noreferrer noopener">Docker Hub</a></div><div><h5>More</h5><a href="/docs/blog">Blog</a><a href="https://streampipes.apache.org.org">Website</a><a class="github-button" href="https://github.com/apache/incubator-streampipes" data-icon="octicon-star" data-count-href="/streampipes/streampipes/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 The Apache Software Foundation</section></footer></div></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '0fedc89dddf2810657708b178e56ef02',
+                indexName: 'streampipes',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

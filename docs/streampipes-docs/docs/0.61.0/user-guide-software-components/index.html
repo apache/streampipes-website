@@ -1,0 +1,352 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Software Components · StreamPipes</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;This page contains all the software components that can be used within the StreamPipes framework.&lt;/p&gt;
+"/><meta name="docsearch:version" content="0.61.0"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Software Components · StreamPipes"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.streampipes.org/docs/"/><meta property="og:description" content="&lt;p&gt;This page contains all the software components that can be used within the StreamPipes framework.&lt;/p&gt;
+"/><meta property="og:image" content="https://docs.streampipes.org/docs/img/favicon.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.streampipes.org/docs/img/docusaurus.png"/><link rel="shortcut icon" href="/docs/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://docs.streampipes.org/docs/blog/atom.xml" title="StreamPipes Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://docs.streampipes.org/docs/blog/feed.xml" title="StreamPipes Blog RSS Feed"/><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/><link rel="stylesheet" href="/docs/css/admonition.css"/><link rel="stylesheet" href="/docs/css/custom.css"/><link rel="stylesheet" href="/docs/css/code-block-buttons.css"/><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script><script type="text/javascript" src="/docs/js/custom.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><link rel="stylesheet" href="/docs/css/prism.css"/><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/sp-logo-color-docs.png" alt="StreamPipes"/></a><a href="/docs/versions"><h3>0.61.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/docs/0.61.0/user-guide-introduction" target="_self">User Guide</a></li><li class=""><a href="/docs/docs/0.61.0/dev-guide-introduction" target="_self">Developer Guide</a></li><li class=""><a href="/docs/docs/0.61.0/pipeline-elements" target="_self">Pipeline Elements</a></li><li class=""><a href="/docs/docs/0.61.0/faq-common-problems" target="_self">FAQ</a></li><li class=""><a href="/docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>User Guide</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">User Guide</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/0.61.0/user-guide-introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.61.0/user-guide-getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.61.0/user-guide-installation">Installation</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.61.0/user-guide-tour">Tour</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/0.61.0/user-guide-processing-elements">Processing Elements</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/docs/0.61.0/user-guide-software-components">Software Components</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Software Components</h1></header><article><div><span><p>This page contains all the software components that can be used within the StreamPipes framework.
+Some of them are mandatory but others are just necessary for a special capabilities.
+In the <a href="/docs/docs/0.61.0/user-guide-installation#installation_1">Installation Guide</a> we  already provide a docker-compose.yml file with all the necessary components
+for a minimal setup.
+Extend this configuration files with further containers described on this page and configure StreamPipes
+according to your needs.</p>
+<h2><a class="anchor" aria-hidden="true" id="streampipes-framework"></a><a href="#streampipes-framework" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>StreamPipes Framework</h2>
+<p><details class="tip">
+<summary>StreamPipes Backend</summary></p>
+<h4><a class="anchor" aria-hidden="true" id="description"></a><a href="#description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The StreamPipes Backend is the main component of the StreamPipes Framework. It contains the application logic to create and execute pipelines.
+Furthermore, it provides a REST-API that is used by other components for communication.</p>
+<h4><a class="anchor" aria-hidden="true" id="docker-compose"></a><a href="#docker-compose" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docker Compose</h4>
+<pre><code class="hljs css language-yaml"><span class="hljs-attr">backend:</span>
+  <span class="hljs-attr">image:</span> <span class="hljs-string">streampipes/backend</span>
+  <span class="hljs-attr">depends_on:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">"consul"</span>
+  <span class="hljs-attr">ports:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">"8030:8030"</span>
+  <span class="hljs-attr">volumes:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">./config:/root/.streampipes</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">./config/aduna:/root/.aduna</span>
+  <span class="hljs-attr">networks:</span>
+    <span class="hljs-attr">spnet:</span>
+</code></pre>
+<p></details></p>
+<p><details class="tip">
+<summary>StreamPipes UI</summary></p>
+<h4><a class="anchor" aria-hidden="true" id="description-1"></a><a href="#description-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>This service uses nginx and contains the UI of StreamPipes.
+The UI can, for example, be used to import new pipeline elements, create new pipelines and manage the pipeline
+execution. The UI communicates with the backend via the REST interface.</p>
+<h4><a class="anchor" aria-hidden="true" id="docker-compose-1"></a><a href="#docker-compose-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docker Compose</h4>
+<pre><code class="hljs css language-yaml"><span class="hljs-attr">nginx:</span>
+  <span class="hljs-attr">image:</span> <span class="hljs-string">streampipes/ui</span>
+  <span class="hljs-attr">ports:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">"80:80"</span>
+  <span class="hljs-attr">depends_on:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">backend</span>
+  <span class="hljs-attr">networks:</span>
+    <span class="hljs-attr">spnet:</span>
+</code></pre>
+<p></details></p>
+<h2><a class="anchor" aria-hidden="true" id="streampipes-services"></a><a href="#streampipes-services" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>StreamPipes Services</h2>
+<p><details class="tip">
+<summary>Consul</summary></p>
+<h4><a class="anchor" aria-hidden="true" id="description-2"></a><a href="#description-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>Consul is used to store configuration parameters of the backend service and processing elements.
+It is further used for service discovery. Once a processing element container is started in the network, it is
+automatically discovered via the service discovery feature of Consul.</p>
+<h4><a class="anchor" aria-hidden="true" id="docker-compose-2"></a><a href="#docker-compose-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docker Compose</h4>
+<pre><code class="hljs css language-yaml"><span class="hljs-attr">consul:</span>
+    <span class="hljs-attr">image:</span> <span class="hljs-string">consul</span>
+    <span class="hljs-attr">environment:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">"CONSUL_LOCAL_CONFIG={\"disable_update_check\": true}"</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">"CONSUL_BIND_INTERFACE=eth0"</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">"CONSUL_HTTP_ADDR=0.0.0.0"</span>
+    <span class="hljs-attr">entrypoint:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">consul</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">agent</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">-server</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">-bootstrap-expect=1</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">-data-dir=/consul/data</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">-node=consul-one</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">-bind={{</span> <span class="hljs-string">GetInterfaceIP</span> <span class="hljs-string">"eth0"</span> <span class="hljs-string">}}</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">-client=0.0.0.0</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">-enable-script-checks=true</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">-ui</span>
+    <span class="hljs-attr">volumes:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">./config/consul:/consul/data</span>
+    <span class="hljs-attr">ports:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">"8500:8500"</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">"8600:8600"</span>
+    <span class="hljs-attr">networks:</span>
+      <span class="hljs-attr">spnet:</span>
+        <span class="hljs-attr">ipv4_address:</span> <span class="hljs-number">172.30</span><span class="hljs-number">.0</span><span class="hljs-number">.9</span>
+</code></pre>
+<p></details></p>
+<p><details class="tip">
+<summary>Zookeeper</summary></p>
+<h4><a class="anchor" aria-hidden="true" id="description-3"></a><a href="#description-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>Apache Kafka and Apache Flink require zookeeper to manage their clusters.</p>
+<h4><a class="anchor" aria-hidden="true" id="docker-compose-3"></a><a href="#docker-compose-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docker Compose</h4>
+<pre><code class="hljs css language-yaml"><span class="hljs-attr">zookeeper:</span>
+    <span class="hljs-attr">image:</span> <span class="hljs-string">wurstmeister/zookeeper</span>
+    <span class="hljs-attr">ports:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">"2181:2181"</span>
+    <span class="hljs-attr">networks:</span>
+      <span class="hljs-attr">spnet:</span>
+</code></pre>
+<p></details></p>
+<p><details class="tip">
+<summary>Kafka</summary></p>
+<h4><a class="anchor" aria-hidden="true" id="description-4"></a><a href="#description-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>Kafka is used as the primary message broker. It is possible to use other brokers or even multiple message brokers in a single pipeline, but Kafka is the
+default. The communication between the processing elements in a pipeline is mostly done via Kafka.</p>
+<h4><a class="anchor" aria-hidden="true" id="docker-compose-4"></a><a href="#docker-compose-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docker Compose</h4>
+<pre><code class="hljs css language-yaml">  <span class="hljs-attr">kafka:</span>
+    <span class="hljs-attr">image:</span> <span class="hljs-string">wurstmeister/kafka:0.10.0.1</span>
+    <span class="hljs-attr">ports:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">"9092:9092"</span>
+    <span class="hljs-attr">environment:</span>
+      <span class="hljs-attr">KAFKA_ADVERTISED_HOST_NAME:</span> <span class="hljs-comment">###TODO ADD HOSTNAME HERE ###</span>
+      <span class="hljs-attr">KAFKA_ZOOKEEPER_CONNECT:</span> <span class="hljs-string">zookeeper:2181</span>
+    <span class="hljs-attr">volumes:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">/var/run/docker.sock:/var/run/docker.sock</span>
+    <span class="hljs-attr">networks:</span>
+      <span class="hljs-attr">spnet:</span>
+</code></pre>
+<p></details></p>
+<p><details class="tip">
+<summary>ActiveMQ</summary></p>
+<h4><a class="anchor" aria-hidden="true" id="description-5"></a><a href="#description-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>ActiveMQ is another message broker which can be used in addition to Kafka. Currently, the main purpose is to provide
+an endpoint for the websocket connections required by the real-time dashboard of the StreamPipes UI.</p>
+<h4><a class="anchor" aria-hidden="true" id="docker-compose-5"></a><a href="#docker-compose-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docker Compose</h4>
+<pre><code class="hljs css language-yaml"><span class="hljs-attr">activemq:</span>
+  <span class="hljs-attr">image:</span> <span class="hljs-string">streampipes/activemq</span>
+  <span class="hljs-attr">ports:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">"61616:61616"</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">"61614:61614"</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">"8161:8161"</span>
+  <span class="hljs-attr">networks:</span>
+    <span class="hljs-attr">spnet:</span>
+
+    <span class="hljs-string">```</span>
+<span class="hljs-string">&lt;/details&gt;</span>
+
+<span class="hljs-string">&lt;details</span> <span class="hljs-string">class="tip"&gt;</span>
+<span class="hljs-string">&lt;summary&gt;CouchDB&lt;/summary&gt;</span>
+
+<span class="hljs-comment">#### Description</span>
+<span class="hljs-string">CouchDB</span> <span class="hljs-string">is</span> <span class="hljs-string">the</span> <span class="hljs-string">main</span> <span class="hljs-string">database</span> <span class="hljs-string">for</span> <span class="hljs-string">StreamPipes</span> <span class="hljs-string">data</span> <span class="hljs-string">that</span> <span class="hljs-string">needs</span> <span class="hljs-string">to</span> <span class="hljs-string">be</span> <span class="hljs-string">persisted</span> <span class="hljs-string">such</span> <span class="hljs-string">as</span> <span class="hljs-string">pipelines,</span> <span class="hljs-string">users</span> <span class="hljs-string">and</span> <span class="hljs-string">visualizations</span> <span class="hljs-string">created</span> <span class="hljs-string">in</span> <span class="hljs-string">the</span> <span class="hljs-string">dashboard.</span>
+
+<span class="hljs-comment">#### Docker Compose</span>
+<span class="hljs-string">```yaml</span>
+<span class="hljs-attr">couchdb:</span>
+  <span class="hljs-attr">image:</span> <span class="hljs-string">couchdb</span>
+  <span class="hljs-attr">ports:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">"5984:5984"</span>
+  <span class="hljs-attr">volumes:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">./config/couchdb/data:/usr/local/var/lib/couchdb</span>
+  <span class="hljs-attr">networks:</span>
+    <span class="hljs-attr">spnet:</span>
+</code></pre>
+<p></details></p>
+<p><details class="tip">
+<summary>Flink</summary></p>
+<h4><a class="anchor" aria-hidden="true" id="description-6"></a><a href="#description-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>This service sets up a sample flink cluster with one jobmanager and one taskmanager. Although this cluster can be used for testing, it is not recommended for production use.</p>
+<h4><a class="anchor" aria-hidden="true" id="docker-compose-6"></a><a href="#docker-compose-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docker Compose</h4>
+<pre><code class="hljs css language-yaml"><span class="hljs-attr">jobmanager:</span>
+  <span class="hljs-attr">image:</span> <span class="hljs-string">streampipes/flink</span>
+  <span class="hljs-attr">ports:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">"8081:8099"</span>
+  <span class="hljs-attr">command:</span> <span class="hljs-string">jobmanager</span>
+  <span class="hljs-attr">networks:</span>
+    <span class="hljs-attr">spnet:</span>
+
+
+<span class="hljs-attr">taskmanager:</span>
+  <span class="hljs-attr">image:</span> <span class="hljs-string">ipe-wim-gitlab.fzi.de:5000/streampipes/services/flink</span>
+  <span class="hljs-attr">command:</span> <span class="hljs-string">taskmanager</span>
+  <span class="hljs-attr">environment:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">FLINK_NUM_SLOTS=20</span>
+  <span class="hljs-attr">networks:</span>
+    <span class="hljs-attr">spnet:</span>
+</code></pre>
+<p></details></p>
+<h2><a class="anchor" aria-hidden="true" id="processing-elements"></a><a href="#processing-elements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Processing Elements</h2>
+<p><details class="tip">
+<summary>PE Examples Sources</summary></p>
+<h4><a class="anchor" aria-hidden="true" id="description-7"></a><a href="#description-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>This Processing Element Container contains several sample data sources that can be used to work with StreamPipes.
+It consists of sources descriptions and data simulators that constantly produce data.</p>
+<h4><a class="anchor" aria-hidden="true" id="docker-compose-7"></a><a href="#docker-compose-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docker Compose</h4>
+<pre><code class="hljs css language-yaml">    <span class="hljs-attr">pe-examples-sources:</span>
+      <span class="hljs-attr">image: streampipes/pe-examples-sources:</span>
+      <span class="hljs-attr">depends_on:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">"consul"</span>
+      <span class="hljs-attr">ports:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">"8098:8090"</span>
+      <span class="hljs-attr">networks:</span>
+        <span class="hljs-attr">spnet:</span>
+</code></pre>
+<p></details></p>
+<p><details class="tip">
+<summary>PE Examples JVM</summary></p>
+<h4><a class="anchor" aria-hidden="true" id="description-8"></a><a href="#description-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>This Processing Element Container contains some sink example implementations, like for example the real-time
+dashboard. This can be used to visualize data within StreamPipes.</p>
+<h4><a class="anchor" aria-hidden="true" id="docker-compose-8"></a><a href="#docker-compose-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docker Compose</h4>
+<pre><code class="hljs css language-yaml">      <span class="hljs-attr">pe-exanmples-jvm:</span>
+        <span class="hljs-attr">image:</span> <span class="hljs-string">streampipes/pe-examples-jvm</span>
+        <span class="hljs-attr">depends_on:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-string">"consul"</span>
+        <span class="hljs-attr">environment:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-string">STREAMPIPES_HOST=###TODO</span> <span class="hljs-string">ADD</span> <span class="hljs-string">HOSTNAME</span> <span class="hljs-string">HERE</span> <span class="hljs-comment">###</span>
+        <span class="hljs-attr">ports:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-string">"8096:8090"</span>
+        <span class="hljs-attr">networks:</span>
+          <span class="hljs-attr">spnet:</span>
+</code></pre>
+<p></details></p>
+<p><details class="tip">
+<summary>PE Examples Flink</summary></p>
+<h4><a class="anchor" aria-hidden="true" id="description-9"></a><a href="#description-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The Flink Samples Processing Element Container contains some example algorithms that can be used within processing
+pipelines in the pipeline editor. Those algorithms are deployed to a Flink cluster once the pipeline is started.</p>
+<h4><a class="anchor" aria-hidden="true" id="docker-compose-9"></a><a href="#docker-compose-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docker Compose</h4>
+<pre><code class="hljs css language-yaml">  <span class="hljs-attr">pe-flink-samples:</span>
+    <span class="hljs-attr">image:</span> <span class="hljs-string">streampipes/pe-examples-flink</span>
+    <span class="hljs-attr">depends_on:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">"consul"</span>
+    <span class="hljs-attr">ports:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">"8094:8090"</span>
+    <span class="hljs-attr">volumes:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">./config:/root/.streampipes</span>
+    <span class="hljs-attr">networks:</span>
+      <span class="hljs-attr">spnet:</span>
+</code></pre>
+<p></details></p>
+<h3><a class="anchor" aria-hidden="true" id="third-party-services"></a><a href="#third-party-services" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Third Party Services</h3>
+<p><details class="tip">
+<summary>Elasticsearch</summary></p>
+<h4><a class="anchor" aria-hidden="true" id="description-10"></a><a href="#description-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>This service can be used to run Elasticsearch. Data can be written into Elasticsearch with the Elasticsearch
+sink of the PE Flink samples conatiner.</p>
+<h4><a class="anchor" aria-hidden="true" id="docker-compose-10"></a><a href="#docker-compose-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docker Compose</h4>
+<pre><code class="hljs css language-yaml"><span class="hljs-attr">elasticsearch:</span>
+  <span class="hljs-attr">image:</span> <span class="hljs-string">ipe-wim-gitlab.fzi.de:5000/streampipes/services/elasticsearch</span>
+  <span class="hljs-attr">ports:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">"9200:9200"</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">"9300:9300"</span>
+  <span class="hljs-attr">volumes:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">./config/elasticsearch/data:/usr/share/elasticsearch/data</span>
+  <span class="hljs-attr">networks:</span>
+    <span class="hljs-attr">spnet:</span>
+</code></pre>
+<p></details></p>
+<p><details class="tip">
+<summary>Kibana</summary></p>
+<h4><a class="anchor" aria-hidden="true" id="description-11"></a><a href="#description-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>Kibana is used to visualize data that is written into Elasticsearch. It can be used in addition to our live dashboard
+to analyse and visualize historic data.</p>
+<h4><a class="anchor" aria-hidden="true" id="docker-compose-11"></a><a href="#docker-compose-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docker Compose</h4>
+<pre><code class="hljs css language-yaml"><span class="hljs-attr">kibana:</span>
+  <span class="hljs-attr">image:</span> <span class="hljs-string">kibana:5.2.2</span>
+  <span class="hljs-attr">ports:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">"5601:5601"</span>
+  <span class="hljs-attr">volumes:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">./config/kibana/kibana.yml:/opt/kibana/config/kibana.yml</span>
+  <span class="hljs-attr">environment:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">ELASTICSEARCH_URL=http://elasticsearch:9200</span>
+  <span class="hljs-attr">networks:</span>
+    <span class="hljs-attr">spnet:</span>
+</code></pre>
+<p></details></p>
+<p><details class="tip">
+<summary>Kafka Web Console</summary></p>
+<h4><a class="anchor" aria-hidden="true" id="description-12"></a><a href="#description-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>The kafka web console can be used to monitor the kafka cluster. This is a good tool for debugging your newly
+developed pipeline elements.</p>
+<h4><a class="anchor" aria-hidden="true" id="docker-compose-12"></a><a href="#docker-compose-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docker Compose</h4>
+<pre><code class="hljs css language-yaml"><span class="hljs-attr">kafka-web-console:</span>
+  <span class="hljs-attr">image:</span> <span class="hljs-string">hwestphal/kafka-web-console</span>
+  <span class="hljs-attr">ports:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">"9000:9000"</span>
+  <span class="hljs-attr">volumes:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">./config:/data</span>
+  <span class="hljs-attr">networks:</span>
+    <span class="hljs-attr">spnet:</span>
+</code></pre>
+<p></details></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/docs/0.61.0/user-guide-processing-elements"><span class="arrow-prev">← </span><span>Previous</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#streampipes-framework">StreamPipes Framework</a></li><li><a href="#streampipes-services">StreamPipes Services</a></li><li><a href="#processing-elements">Processing Elements</a><ul class="toc-headings"><li><a href="#third-party-services">Third Party Services</a></li></ul></li></ul></nav></div><div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/sp-logo-color.png" alt="StreamPipes" width="66"/></a><div><h5>Docs</h5><a href="/docs/docs/user-guide-introduction">User Guide</a><a href="/docs/docs/dev-guide-introduction">Developer Guide</a><a href="/docs/docs/faq-common-problems">Frequently Asked Questions</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/streampipes" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/streampipes" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://github.com/apache/incubator-streampipes" target="_blank" rel="noreferrer noopener">Github</a><a href="https://hub.docker.com/u/streampipes" target="_blank" rel="noreferrer noopener">Docker Hub</a></div><div><h5>More</h5><a href="/docs/blog">Blog</a><a href="https://streampipes.apache.org.org">Website</a><a class="github-button" href="https://github.com/apache/incubator-streampipes" data-icon="octicon-star" data-count-href="/streampipes/streampipes/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 The Apache Software Foundation</section></footer></div></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '0fedc89dddf2810657708b178e56ef02',
+                indexName: 'streampipes',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

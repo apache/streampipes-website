@@ -1,0 +1,161 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>How to understand your machine data? · StreamPipes</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="**&lt;div style=&quot;float: left; padding-right: 40px;&quot;&gt;8 minutes to read&lt;/div&gt;**"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="How to understand your machine data? · StreamPipes"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.streampipes.org/docs/blog/2018/06/18/how-to-understand-your-machine-data"/><meta property="og:description" content="**&lt;div style=&quot;float: left; padding-right: 40px;&quot;&gt;8 minutes to read&lt;/div&gt;**"/><meta property="og:image" content="https://docs.streampipes.org/docs/img/favicon.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.streampipes.org/docs/img/docusaurus.png"/><link rel="shortcut icon" href="/docs/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://docs.streampipes.org/docs/blog/atom.xml" title="StreamPipes Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://docs.streampipes.org/docs/blog/feed.xml" title="StreamPipes Blog RSS Feed"/><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/><link rel="stylesheet" href="/docs/css/admonition.css"/><link rel="stylesheet" href="/docs/css/custom.css"/><link rel="stylesheet" href="/docs/css/code-block-buttons.css"/><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script><script type="text/javascript" src="/docs/js/custom.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><link rel="stylesheet" href="/docs/css/prism.css"/><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/sp-logo-color-docs.png" alt="StreamPipes"/></a><a href="/docs/versions"><h3>0.65.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/docs/user-guide-introduction" target="_self">User Guide</a></li><li class=""><a href="/docs/docs/dev-guide-introduction" target="_self">Developer Guide</a></li><li class=""><a href="/docs/docs/pipeline-elements" target="_self">Pipeline Elements</a></li><li class=""><a href="/docs/docs/faq-common-problems" target="_self">FAQ</a></li><li class="siteNavGroupActive"><a href="/docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Recent Posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Recent Posts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/blog/2019/11/23/release-0650">StreamPipes release 0.65.0</a></li><li class="navListItem"><a class="navItem" href="/docs/blog/2019/09/19/release-0640">StreamPipes release 0.64.0</a></li><li class="navListItem"><a class="navItem" href="/docs/blog/2019/09/05/release-0630">StreamPipes release 0.63.0</a></li><li class="navListItem"><a class="navItem" href="/docs/blog/2019/05/23/release-0620">StreamPipes release 0.62.0</a></li><li class="navListItem"><a class="navItem" href="/docs/blog/2019/04/04/release-0610">StreamPipes release 0.61.0</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/docs/blog/2018/06/18/how-to-understand-your-machine-data">How to understand your machine data?</a></h1><p class="post-meta">June 18, 2018</p><div class="authorBlock"><p class="post-authorName"><a href="http://twitter.com/philipp10der" target="_blank" rel="noreferrer noopener">Philipp Zehnder</a></p><div class="authorPhoto"><a href="http://twitter.com/philipp10der" target="_blank" rel="noreferrer noopener"><img src="/img/zehnder.png" alt="Philipp Zehnder"/></a></div></div></header><div><span><p><strong><div style="float: left; padding-right: 40px;">8 minutes to read</div></strong>
+<br></p>
+<p>Data is the new oil. Probably everybody of you has heard or read this sentence before.
+It is often stated how important data and data understanding is for companies today.
+But what does this actually mean?  How does the data look like that is produced by your machines and systems?
+And how can we solve the big challenge to turn this raw data into insights that can be understood by humans?</p>
+<!--truncate-->
+<p>When it comes to data analytics people often talk about the big players like Google, Facebook, or Netflix which collect a lot of data about their users and their usage behavior.
+The core of their business model is to use data and turn it into profit. Nowadays all companies have the requirement to analyze their data.
+But since this was not originally part of their business model it is very challenging for them to catch up.
+To gain insights from data, it is often referred to advanced analytics and machine learning. Before such techniques can be used some work must be done.
+A first, basic part of that is to understand your data. We do that in four steps, as can be seen in figure below.
+First data sources must be accessed, then they can be integrated and for example be stored in a data lake.
+After that, we employ rule-based analytics to find patterns and situations.
+In the end, machine learning and advanced analytics algorithms can be used to get more out of the data.
+The idea behind those steps is to generate value as early as possible by collecting the low-hanging fruits first.
+We develop methodologies and tools for the individual steps to also allow domain experts to perform them to bridge the gap between the big tech companies and more traditional industries.</p>
+<p><img class="blog-image" style="max-width:50%;" src="/blog/assets/2018-06-18/01_motivation.png" alt="Motivation Graphic"></p>
+<p>The questions we try to answer in these blog posts are:</p>
+<ul>
+<li><strong>How does data produced by machines look like?</strong></li>
+<li><strong>How can machines and other data sources be accessed?</strong></li>
+<li><strong>How is it possible to process the continuously produced flow of data?</strong></li>
+</ul>
+<p>We illustrate our ideas with an example which we also use during the whole blog series.
+The example is a water circle of a cooling system. You can see such a system in the next image.
+It contains multiple water tanks and pipes that connect those tanks.
+Within the tanks and the pipes are multiple sensors, which measure for example the water level in the tank, the flow rate in the water pipe, or the temperature of the water.
+All those sensors are very simple, they make iterative observations and send the sensed measurements to a computer system.</p>
+<p><img class="blog-image" style="max-width:70%;" src="/blog/assets/2018-06-18/02_anlage.png" alt="Water Circle Image"></p>
+<p>Before we go into detail, we want to explain the term streaming data, because we focus on machine and sensor data which is continually produced in a streaming fashion.
+The opposite of streaming data are fixed sized data sets, called batch data.
+Since always new data is produced by sensors, it is not possible to wait till all data is completely produced and then process it.
+Different to that is batch data.
+The advantage of batch data is, when the processing starts no new data is added anymore.
+Streaming data can also be processed with batch processing systems.
+Therefore, a data stream must be separated into fixed chunks which are then processed in a batch fashion.
+This is possible but the more natural fit is to use streaming systems since they were designed to process streaming data.</p>
+<p>In an environment where we process machine data we have different components.
+The individual components exchange information in the form of <strong>events</strong>.
+All assets continually producing data are called <strong>data sources</strong> (i.e. a sensor, machine or a software system).
+To access these data sources, <strong>adapters</strong> are needed.
+Adapters are software components (which can run anywhere, for example directly on the machine or separately on a edge device near the machine) that are able to connect to the data source, extract the sensor information and emit events to the <strong>middleware</strong>.
+The middleware is a central component which is an intermediate between the individual components.
+Even if the middleware is a central component, it is not a bottleneck and also not a single point of failure since it is often realized in form of a distributed system.
+<strong>Processing systems</strong> can access data from the middleware, transform it and apply algorithms.
+This is the component where the data is analyzed and higher-level information is generated.
+In the end, results can be stored in <strong>data bases</strong>.
+From there, other applications like for example dashboards can access the calculated results.
+This is the high-level architecture of processing data streams.</p>
+<p><img class="blog-image" src="/blog/assets/2018-06-18/03_architecture.png" alt="Overall architecture"></p>
+<p>Once the events are integrated into a middleware, it must be processed to detect situations and generate higher-level events.
+This can be done in an <strong>Event Processing Network (EPN)</strong>.
+An EPN consists of one or multiple <strong>data sources, event processors</strong> transforming and detecting patterns in the data and finally <strong>data sinks</strong>, which can be data bases, alarms or other systems.
+Below such a pipeline is shown where we have two sensors as data sources: A flow rate sensor measuring the flow rate in a water pipe and a water level sensor in a water tank.
+It further contains three processing elements, each with a different functionality.
+The first one detects increases in the water tank, the second one filters out values under a defined threshold.
+The last of the processing elements detects when both situations occur within a defined time window.
+In the end, we employ a data sink, which triggers a notification for a service technician once the modeled situation occurs.
+We call such instances of EPNs processing <strong>pipelines</strong>.</p>
+<p><img class="blog-image" src="/blog/assets/2018-06-18/04_pipeline.png" alt="Example Pipeline"></p>
+<p>The pipeline in the image before contains three different processing elements.
+Those elements contain the actual algorithms.
+Such algorithms can be as easy as simple filters on a sensor value or can also be more complex, such as patterns that occur over a period of time.
+But they can also contain machine learning and advanced analytics algorithms (e.g. neural networks) that perform predictions on data streams.
+Event processors are just an abstraction that take a data stream as an input and expose a “new” data stream.
+Furthermore, they contain configuration parameters which can be defined by a user.
+With this concept, we can create reusable components that can be used in many different pipelines.</p>
+<p>The goal of StreamPipes is to enable domain experts to do their data analysis themselves by providing tooling, where such processing pipelines can be modeled in a graphical user interface and then executed automatically without the need of an IT expert.
+Processing engines which are used as the basis of the processing elements in our solution often require a higher technological understanding.
+If this understanding is available, they can also be used on their own.
+We use such systems, like Apache Flink, Apache Spark or the brand-new KSQL by Confluent, for the processing but provide an abstraction over them to enable domain experts to model pipelines themselves.
+This has also the advantages that individual runtime solutions can be exchanged over time.
+Furthermore, we provide a semantic layer for all elements, including data sources, processing elements, and data sinks.
+With that layer, our system is capable of understanding the meaning and further support the user to ensure that just semantically correct pipelines are created.</p>
+<p>In this first blog post of our series, we gave a first introduction how data produced by machines and systems can be analyzed and value can be generated out of it.
+In the following blog posts we explain the individual parts in more detail to provide you with enough knowledge to start analyzing your own data.</p>
+<ul>
+<li><strong><a href="/blog/2018/06/18/how-to-understand-your-machine-data">Part 1: Overview</a></strong></li>
+<li>Part 2: Data Sources</li>
+<li>Part 3: Data Processing Elements</li>
+<li>Part 4: Data Sinks</li>
+<li>Part 5: Putting it all together (Example Pipeline)</li>
+<li>Part 6: Practical Tips</li>
+</ul>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/docs/blog">Recent Posts</a></div></div></div><nav class="onPageNav"></nav></div><div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/sp-logo-color.png" alt="StreamPipes" width="66"/></a><div><h5>Docs</h5><a href="/docs/docs/user-guide-introduction">User Guide</a><a href="/docs/docs/dev-guide-introduction">Developer Guide</a><a href="/docs/docs/faq-common-problems">Frequently Asked Questions</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/streampipes" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/streampipes" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://github.com/apache/incubator-streampipes" target="_blank" rel="noreferrer noopener">Github</a><a href="https://hub.docker.com/u/streampipes" target="_blank" rel="noreferrer noopener">Docker Hub</a></div><div><h5>More</h5><a href="/docs/blog">Blog</a><a href="https://streampipes.apache.org.org">Website</a><a class="github-button" href="https://github.com/apache/incubator-streampipes" data-icon="octicon-star" data-count-href="/streampipes/streampipes/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 The Apache Software Foundation</section></footer></div></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '0fedc89dddf2810657708b178e56ef02',
+                indexName: 'streampipes',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

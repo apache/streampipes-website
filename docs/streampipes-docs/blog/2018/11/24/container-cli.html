@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>ContainerCLI: A CLI tool for your Docker Application · StreamPipes</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="**&lt;div style=&quot;float: left; padding-right: 40px;&quot;&gt;6 minutes to read&lt;/div&gt;**"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="ContainerCLI: A CLI tool for your Docker Application · StreamPipes"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.streampipes.org/docs/blog/2018/11/24/container-cli"/><meta property="og:description" content="**&lt;div style=&quot;float: left; padding-right: 40px;&quot;&gt;6 minutes to read&lt;/div&gt;**"/><meta property="og:image" content="https://docs.streampipes.org/docs/img/favicon.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.streampipes.org/docs/img/docusaurus.png"/><link rel="shortcut icon" href="/docs/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://docs.streampipes.org/docs/blog/atom.xml" title="StreamPipes Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://docs.streampipes.org/docs/blog/feed.xml" title="StreamPipes Blog RSS Feed"/><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/><link rel="stylesheet" href="/docs/css/admonition.css"/><link rel="stylesheet" href="/docs/css/custom.css"/><link rel="stylesheet" href="/docs/css/code-block-buttons.css"/><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script><script type="text/javascript" src="/docs/js/custom.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><link rel="stylesheet" href="/docs/css/prism.css"/><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/sp-logo-color-docs.png" alt="StreamPipes"/></a><a href="/docs/versions"><h3>0.65.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/docs/user-guide-introduction" target="_self">User Guide</a></li><li class=""><a href="/docs/docs/dev-guide-introduction" target="_self">Developer Guide</a></li><li class=""><a href="/docs/docs/pipeline-elements" target="_self">Pipeline Elements</a></li><li class=""><a href="/docs/docs/faq-common-problems" target="_self">FAQ</a></li><li class="siteNavGroupActive"><a href="/docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Recent Posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Recent Posts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/blog/2019/11/23/release-0650">StreamPipes release 0.65.0</a></li><li class="navListItem"><a class="navItem" href="/docs/blog/2019/09/19/release-0640">StreamPipes release 0.64.0</a></li><li class="navListItem"><a class="navItem" href="/docs/blog/2019/09/05/release-0630">StreamPipes release 0.63.0</a></li><li class="navListItem"><a class="navItem" href="/docs/blog/2019/05/23/release-0620">StreamPipes release 0.62.0</a></li><li class="navListItem"><a class="navItem" href="/docs/blog/2019/04/04/release-0610">StreamPipes release 0.61.0</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/docs/blog/2018/11/24/container-cli">ContainerCLI: A CLI tool for your Docker Application</a></h1><p class="post-meta">November 24, 2018</p><div class="authorBlock"><p class="post-authorName"><a href="http://twitter.com/philipp10der" target="_blank" rel="noreferrer noopener">Philipp Zehnder</a></p><div class="authorPhoto"><a href="http://twitter.com/philipp10der" target="_blank" rel="noreferrer noopener"><img src="/img/zehnder.png" alt="Philipp Zehnder"/></a></div></div></header><div><span><p><strong><div style="float: left; padding-right: 40px;">6 minutes to read</div></strong>
+<br></p>
+<p>In this blog post, we show how we developed a CLI tool to install and manage StreamPipes.
+In addition, we present a template project that enables you to easily create a CLI tool for your own docker application.
+All you need is a working docker-compose.yml file.</p>
+<!--truncate-->
+<p>StreamPipes has a Microservice architecture and we use Docker and Docker Compose for all of our development, testing, and deployment processes.
+In the beginning, we developed the CLI only to ease the installation process (e.g. managing multiple versions), but over time we realized that the tool is much more powerful.
+For example, StreamPipes has multiple developer roles: Some developers are working on the frontend, others on the backend, and some are developing new algorithms and data sinks for StreamPipes.
+In the figure below, you can see different configurations that are used by different developers.
+All services are running in docker, except for the ones the developer is currently working on.
+As a result, we had many different docker-compose.yml files and when we made changes, we had to synchronize them all.</p>
+<p><img class="blog-image" style="max-width:60%;" src="/blog/assets/2018-11-24/roles.png" alt="Three different developer roles"></p>
+<p>Therefore, our goal was to speed up the setup of a development environment, so that developers can focus on their specific programming task.
+That’s why we developed a command line tool that automates the setup of different environments.
+All what is needed is a docker-compose.yml file that describes all services of the application and the template CLI project from <a href="https://github.com/streampipes/container-cli">GitHub</a>.
+Afterwards, you need to split up your compose file and create an individual file for each service. Put those files in individual folders in the services folder.
+Each folder should have the same name as the service name in the docker-compose file. That’s it!
+Now you can use the CLI.
+With the default commands you are able to start, stop, and configure the application. But how is this better than just using docker itself?
+The advantage is the flexibility and extensibility of the tool.
+You can extend the script with tasks you have to perform regularly, like cleaning up volumes, or setting up testing environments.</p>
+<p>In the following we will describe the tool in more detail.
+You can see all files and folders of the CLI Tool in the next listing.
+The first file “container-cli.m4” contains the script.
+We use <a href="https://argbash.io/">Argbash</a>, which eases the use of bash script parameters and flags.
+In this file you can easily add new custom commands, flags or other functionalities.
+The next file is the actual bash script. It is generated by argbash.
+Since this file is generated automatically, you should not change anything.
+The docker-compose.yml file is the main file.
+This should contain all services, networks, or volume information that is relevant for all the other services of your application.
+All your other services are located in the services folder.
+For each service, create a folder with the name of the service and place a docker-compose.yml in the folder configuring the service.
+Therefore, you can copy and paste the configuration from your current docker-compose.yml.
+The script checks the services folder dynamically, this means you can add services at a later point in time without changing anything else.
+In our example, we have four services: Backend, UI, database, and a test database containing data for the end2end tests.
+Which services should be started when running the command <strong>&quot;container-cli start&quot;</strong> is defined in the active-service file.
+This file contains the names of all services, each in one line, that should be started.
+Often it is required to have multiple configurations of your app. You can save them in the templates folder.
+By running <strong>“container-cli set-template ui_developer”</strong>, you can select the template ui_developer.
+With this command, all services defined in the template are written to the active-services file. (e.g. the ui_developer template contains just the database and backend and the e2e-test template contains the backend, ui, and test-database).</p>
+<p><img class="blog-image" style="max-width:30%;" src="/blog/assets/2018-11-24/files.png" alt="Structure of the containter cli project"></p>
+<p>The last file is the tmpl_env file.
+It contains configuration variables for the individual services.
+Those variables can also be changed by the bash script dynamically, because the tmpl_env file is moved to the .env file in the same folder.
+We use the configuration for example to dynamically set the IP Address of the host system or set the application version.
+To use a variable in a docker-compose file just write it in braces, as shown below.</p>
+<p><img class="blog-image" style="max-width:90%;" src="/blog/assets/2018-11-24/variables.png" alt="How to use Environment Variables"></p>
+<p>We hope this tool is helpful for your use case.
+When you have any problems, feedback, or ideas for improvements, contact us or open an issue on <a href="https://github.com/streampipes/container-cli">GitHub</a>.</p>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/docs/blog">Recent Posts</a></div></div></div><nav class="onPageNav"></nav></div><div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/sp-logo-color.png" alt="StreamPipes" width="66"/></a><div><h5>Docs</h5><a href="/docs/docs/user-guide-introduction">User Guide</a><a href="/docs/docs/dev-guide-introduction">Developer Guide</a><a href="/docs/docs/faq-common-problems">Frequently Asked Questions</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/streampipes" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/streampipes" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://github.com/apache/incubator-streampipes" target="_blank" rel="noreferrer noopener">Github</a><a href="https://hub.docker.com/u/streampipes" target="_blank" rel="noreferrer noopener">Docker Hub</a></div><div><h5>More</h5><a href="/docs/blog">Blog</a><a href="https://streampipes.apache.org.org">Website</a><a class="github-button" href="https://github.com/apache/incubator-streampipes" data-icon="octicon-star" data-count-href="/streampipes/streampipes/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 The Apache Software Foundation</section></footer></div></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '0fedc89dddf2810657708b178e56ef02',
+                indexName: 'streampipes',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

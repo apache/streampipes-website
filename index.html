@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="StreamPipes is your self-service IoT platform which allows to integrate, process and analyse big data streams with less programming effort">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+<!-- Favicon -->
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png?v=2"/>
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png?v=2"/>
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png?v=2"/>
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png?v=2"/>
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png?v=2"/>
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png?v=2"/>
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png?v=2"/>
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png?v=2"/>
+<link rel="icon" type="image/png" href="/img/favicon/favicon-196x196.png?v=2" sizes="196x196"/>
+<link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png?v=2" sizes="96x96"/>
+<link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png?v=2" sizes="32x32"/>
+<link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png?v=2" sizes="16x16"/>
+<link rel="icon" type="image/png" href="/img/favicon/favicon-128.png?v=2" sizes="128x128"/>
+
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/css?family=Heebo|Open+Sans|Raleway" rel="stylesheet">
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="/css/footer.css">
+<link rel="stylesheet" href="/css/page-banner.css">
+<link rel="stylesheet" href="/css/nav.css">
+<link rel="stylesheet" href="/css/buttons.css">
+<link rel="stylesheet" href="/css/team.css">
+<link href="/css/responsive.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+<title>Apache StreamPipes (incubating) - Home</title>
+
+    </head>
+
+    <body>
+        <div class="header-banner">
+    <div class="header-banner-news">
+        <b><a class="banner-link" href="/media">Videos & slides</a> from our talks at ApacheCon North America and Flink
+            Forward Europe are now available!</b>
+    </div>
+    <div style="display: flex; align-items: center;justify-content: flex-end;padding-right:20px;height:40px;">
+        <span flex></span>
+        <div class="header-social-buttons" style="color:white;">
+            <a href="https://www.twitter.com/streampipes" style="color:rgb(27, 20, 100);">
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.github.com/apache/incubator-streampipes" style="color:rgb(27, 20, 100);;">
+                <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<header class="header-area clearfix">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-12 h-100">
+                <div class="menu-area h-100">
+                    <nav class="navbar h-100 navbar-expand-lg align-items-center">
+                        <a class="navbar-brand" href="/"><img src="/img/sp-logo-color.png" style="height:40px"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sp-navbar"
+                                aria-controls="sp-navbar" aria-expanded="false" aria-label="Toggle navigation"><span
+                                    class="navbar-toggler-icon"></span></button>
+
+                        <div class="collapse navbar-collapse justify-content-end" id="sp-navbar">
+                            <ul class="navbar-nav animated" id="nav">
+                                <li class="nav-item active"><a class="nav-link"
+                                                                                               href="/">Home</a></li>
+                                <ul class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                       aria-haspopup="true" aria-expanded="false">Why StreamPipes?</a>
+                                    <div class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link" href="/features.html">Features</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="/usecases.html">Use Cases</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="/technology.html">Technology</a>
+                                        </li>
+                                    </div>
+                                </ul>
+                                <li class="nav-item "><a class="nav-link"
+                                                                                                   href="/download">Getting
+                                        Started</a></li>
+                                <ul class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                       aria-haspopup="true" aria-expanded="false">Resources</a>
+                                    <div class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link"
+                                                                href="/docs/index.html">Documentation</a></li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                                href="https://issues.apache.org/jira/projects/STREAMPIPES/">Issue Tracker</a></li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                                href="http://cwiki.apache.org/confluence/display/STREAMPIPES">Wiki</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="/media.html">Slides & Videos</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="/docs/blog">Blog</a></li>
+                                    </div>
+                                </ul>
+                                <ul class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                       aria-haspopup="true" aria-expanded="false">Community</a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <li class="nav-item "><a
+                                                    class="nav-link" href="/mailinglists.html">Mailing Lists</a></li>
+                                        <li class="nav-item "><a class="nav-link"
+                                                                                                        href="/team.html">Team</a></li>
+                                        <li class="nav-item "><a
+                                                    class="nav-link" href="/getinvolved.html">Get involved</a></li>
+                                        <li class="nav-item "><a
+                                                    class="nav-link" href="/meetus.html">Talks & Events</a></li>
+                                    </div>
+                                </ul>
+                                <ul class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                       aria-haspopup="true" aria-expanded="false">Apache</a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <li class="nav-item"><a class="nav-link" href="https://www.apache.org/">Apache Software Foundation</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="https://www.apache.org/foundation/how-it-works.html">How Apache Works</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="https://www.apache.org/licenses">License</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="https://www.apache.org/foundation/sponsorship.html">Sponsoring Apache</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
+                                    </div>
+                                </ul>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <section class="elements-area section-padding-50">
+    <div style="height:100px;"></div>
+    <div class="container-header" style="background-image:url('/img/bg-img/bg-index.jpg');background-size:cover;">
+        <div class="row" style="align-items:center;">
+            <div class="col-12 col-lg-5"></div>
+            <div class="col-12 col-lg-7" style="display:flex;justify-content: center">
+                <div style="background:rgba(255, 255, 255, 0.95);margin-top:50px;margin-bottom:50px;padding:35px;border-radius:15px;display:inline-block;max-width:750px;">
+                    <div class="row" style="margin-left:0px;margin-right:0px;">
+                        <h1 class="header-apache-text">Apache <span class="sp-green">S</span><span
+                                    class="sp-blue">tream</span><span class="sp-green">P</span><span class="sp-blue">ipes</span> (incubating)
+                        </h1>
+                        <div class="apache-teaser">A self-service (Industrial) IoT toolbox to enable non-technical users to connect, analyze and explore IoT data streams.</div>
+                    </div>
+                    <div class="row" style="margin-left:0px;margin-right:0px;">
+                        <div class="feature-highlights-section">
+                            <div class="feature-highlights">
+                            <span class="feature-highlights-icon">
+                                <i class="fas fa-tools"></i>
+                            </span>
+                                <span class="feature-highlights-text">The Open Source <span
+                                            class="feature-highlights-bg">toolbox for the Industrial IoT.</span>
+                            </span>
+                            </div>
+                            <div class="feature-highlights">
+                            <span class="feature-highlights-icon">
+                                <i class="fab fa-cloudscale"></i>
+                            </span>
+                                <span class="feature-highlights-text"><span class="feature-highlights-bg">Easy to use</span> and extensible.
+                            </span>
+                            </div>
+                            <div class="feature-highlights">
+                            <span class="feature-highlights-icon">
+                                <i class="fas fa-home"></i>
+                            </span>
+                                <span class="feature-highlights-text">Runs <span class="feature-highlights-bg">on-premise</span>
+                                in your own infrastructure.
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="/download.html" class="sp-button sp-button-large sp-button-blue sp-button-margin"><i
+                                        class="fas fa-rocket"></i> Get started
+                            </a>
+                            <a href="/docs/index.html" class="sp-button sp-button-large sp-button-gray sp-button-margin"><i class="fas fa-book"></i> Docs
+                            </a>
+                            <a href="https://www.github.com/apache/incubator-streampipes" class="sp-button sp-button-large sp-button-gray sp-button-margin"><i class="fab fa-github"></i> Github
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+        <section class="elements-area section-padding-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-12">
+                <!-- Single Service Area -->
+                <div class="single-service-area">
+                    <h2>01.</h2>
+                    <h4>Connect</h4>
+                    <p>Integrate data sets and data streams using the built-in StreamPipes Connect library with support for generic protocols such as HTTP, Kafka, MQTT, OPC-UA, Files or specific adapters for open data sources.</p>
+                    <hr/>
+                    <p><b>Some included adapters and integrations:</b></p>
+                    <p>
+                        <a href="https://kafka.apache.org">Apache Kafka</a>,
+                        <a href="https://pulsar.apache.org">Apache Pulsar</a>,
+                        <a href="https://plc4x.apache.org">Apache PLC4X</a>,
+                        <a href="https://www.ros.org">Robot Operating System (ROS)</a>,
+                        Mysql, OPC-UA, MQTT and more.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <img class="d-block w-100" src="/img/screenshots/connect-marketplace.png" alt="StreamPipes Connect">
+            </div>
+        </div>
+        <hr style="margin-top:20px;margin-bottom:20px;"/>
+        <div class="row">
+            <div class="col-md-4 col-12">
+                <!-- Single Service Area -->
+                <div class="single-service-area">
+                    <h2>02.</h2>
+                    <h4>Analyze</h4>
+                    <p>Harmonize and analyze data by using the real-time algorithm toolbox ranging from simple filters up to pre-trained neural networks - or build your own algorithm with the provided SDK.</p>
+                    <hr/>
+                    <p><b>Some included data processors:</b></p>
+                    <p>
+                        Trend Detection, Peak Detection, Numerical Filter, Sequence, Boilerplate Removal, Event Rate, Field Converter, Frequency Calculation,
+                        Generic image Classification, Measurement Unit Converter, Projection, Timestamp Enricher, Trigonometry Functions and many more.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <img class="d-block w-100" src="/img/screenshots/pipeline-editor-2.png" alt="Pipeline Editor">
+            </div>
+        </div>
+        <hr style="margin-top:20px;margin-bottom:20px;"/>
+        <div class="row">
+            <div class="col-md-4 col-12">
+                <!-- Single Service Area -->
+                <div class="single-service-area">
+                    <h2>03.</h2>
+                    <h4>Exploit</h4>
+                    <p>Trigger notifications, configure your real-time dashboard or send data to third-party systems such as databases (e.g., Kafka or Elasticsearch), external services (e.g., Slack) or IoT actuators.</p>
+                    <hr/>
+                    <p><b>Some included data sinks:</b></p>
+                    <p>
+                        <a href="https://kafka.apache.org">Apache Kafka</a>,
+                        <a href="https://pulsar.apache.org">Apache Pulsar</a>,
+                        <a href="https://couchdb.apache.org">Apache CouchDB</a>,
+                        <a href="https://iotdb.apache.org">Apache IoTDB</a>,
+                        OPC-UA, RabbitMQ, Email, Slack, Internal Notification, PostgreSQL and more.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <img class="d-block w-100" src="/img/screenshots/live-dashboard.png" alt="Live Dashboard">
+            </div>
+        </div>
+        <!-- Discover More btn -->
+        <div class="col-12 text-center margin-top-50">
+            <a href="/features.html" class="btn sp-button sp-button-blue">Explore the features</a>
+        </div>
+    </div>
+    </div>
+</section>
+
+        <section class="main-section-area section-padding-50 clearfix" style="margin-top:20px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <img src="/img/technology/streampipes-high-level-architecture-blue.png" alt="">
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="section-heading">
+                    <p style="color:white;">StreamPipes</p>
+                    <h2>Self-Service IoT Data Analytics</h2>
+                </div>
+                <div class="features-content">
+                    <p style="color:white;">
+                        StreamPipes is the first solution that makes real-time big data accessible to everyone: Our graphical modeler allows business analysts to define processing pipelines in an ad-hoc manner, without the need for big data experts or data scientists.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+        <section class="d-sm-flex clearfix">
+    <div class="support-links-area">
+        <div class="more-service-content text-center" data-wow-delay=".1s">
+            <a href="https://www.github.com/apache/incubator-streampipes">
+                <img src="/img/open_source/icon-github.png" alt="">
+                <h4>Github</h4>
+            </a>
+        </div>
+    </div>
+    <div class="support-links-area">
+        <div class="text-center" data-wow-delay=".4s">
+            <a href="https://docs.streampipes.org">
+                <img src="/img/open_source/icon-docs.png" alt="">
+                <h4>Documentation</h4>
+            </a>
+        </div>
+    </div>
+    <div class="support-links-area">
+        <div class="text-center" data-wow-delay=".7s">
+            <a href="https://hub.docker.com/u/streampipes">
+                <img src="/img/open_source/icon-docker.png" alt="">
+                <h4>Docker Hub</h4>
+            </a>
+        </div>
+    </div>
+    <div class="support-links-area">
+        <div class="text-center" data-wow-delay="1s">
+            <a href="https://slack.streampipes.org">
+                <img src="/img/open_source/icon-slack.png" alt="">
+                <h4>Slack</h4>
+            </a>
+        </div>
+    </div>
+    <div class="support-links-area">
+        <div class="text-center" data-wow-delay="1s">
+            <a href="https://stackoverflow.com/questions/tagged/streampipes">
+                <img src="/img/open_source/icon-stackoverflow.png" alt="">
+                <h4>Stack Overflow</h4>
+            </a>
+        </div>
+    </div>
+    <div class="support-links-area">
+        <div class="text-center wow fadeInUp" data-wow-delay="1s">
+            <a href="/mailinglists.html">
+                <img src="/img/open_source/icon-mail.png" alt="">
+                <h4>Mailing Lists</h4>
+            </a>
+        </div>
+    </div>
+</section>
+
+        <footer class="footer-area clearfix">
+    <div class="footer-section">
+        <div class="footer-content-part">Disclaimer: Apache StreamPipes (incubating) is an effort undergoing incubation
+            at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all
+            newly accepted projects until a further review indicates that the infrastructure, communications, and
+            decision making process have stabilized in a manner consistent with other successful ASF projects. While
+            incubation status is not necessarily a reflection of the completeness or stability of the code, it does
+            indicate that the project has yet to be fully endorsed by the ASF.
+        </div>
+        <p class="footer-content-part">Copyright © 2019 The Apache Software Foundation. Apache and the Apache feather
+            logo are trademarks of The Apache Software Foundation
+            <br/>Home screen image taken from <a
+                    href="https://www.flickr.com/photos/56682936@N03/15572646535">Flickr</a>, licensed under <a
+                    href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, some logos removed.
+        </p>
+
+    </div>
+</footer>
+
+<script src="/js/jquery-2.2.4.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/scripts.js"></script>
+
+
+    </body>
+
+</html>

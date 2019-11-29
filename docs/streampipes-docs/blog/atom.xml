@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://docs.streampipes.org/docs/blog</id>
+    <title>StreamPipes Blog</title>
+    <updated>2019-11-23T06:00:00Z</updated>
+    <generator>Feed for Node.js</generator>
+    <link rel="alternate" href="https://docs.streampipes.org/docs/blog"/>
+    <subtitle>The best place to stay up-to-date with the latest StreamPipes news and events.</subtitle>
+    <logo>https://docs.streampipes.org/docs/img/sp-logo-color-docs.png</logo>
+    <rights>Copyright © 2019 The Apache Software Foundation</rights>
+    <entry>
+        <title type="html"><![CDATA[StreamPipes release 0.65.0]]></title>
+        <id>https://docs.streampipes.org/docs/blog/2019/11/23/release-0650.html</id>
+        <link href="https://docs.streampipes.org/docs/blog/2019/11/23/release-0650.html">
+        </link>
+        <updated>2019-11-23T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">5 minutes to read</div></strong>
+<br></p>
+<p>We are happy to announce StreamPipes version 0.65.0! This release brings performance improvements related to the installation process and further reduces the minimum hardware requirements to run StreamPipes.</p>
+]]></summary>
+        <author>
+            <name>Dominik Riemer</name>
+            <uri>https://twitter.com/dominikjriemer</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[StreamPipes release 0.64.0]]></title>
+        <id>https://docs.streampipes.org/docs/blog/2019/09/19/release-0640.html</id>
+        <link href="https://docs.streampipes.org/docs/blog/2019/09/19/release-0640.html">
+        </link>
+        <updated>2019-09-19T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">5 minutes to read</div></strong>
+<br></p>
+<p>Usually, we try to publish a new StreamPipes release every three months. But after attending a very exciting <a href="https://www.apachecon.com/acna19/">ApacheCon</a> last week, where we worked with some Apache communities on a few really cool new features, we decided to release these features as soon as possible.
+So here's StreamPipes 0.64.0!</p>
+]]></summary>
+        <author>
+            <name>Dominik Riemer</name>
+            <uri>https://twitter.com/dominikjriemer</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[StreamPipes release 0.63.0]]></title>
+        <id>https://docs.streampipes.org/docs/blog/2019/09/05/release-0630.html</id>
+        <link href="https://docs.streampipes.org/docs/blog/2019/09/05/release-0630.html">
+        </link>
+        <updated>2019-09-05T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">5 minutes to read</div></strong>
+<br></p>
+<p>StreamPipes version 0.63.0 has been released! Following our release plan to alternate between user-faced and backend-oriented releases, this release contains many (more than 70) features and improvements, mainly on the backend side.
+The new version is available on Docker Hub and can be downloaded using our <a href="https://github.com/streampipes/streampipes-installer">installer</a>.</p>
+]]></summary>
+        <author>
+            <name>Dominik Riemer</name>
+            <uri>https://twitter.com/dominikjriemer</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[StreamPipes release 0.62.0]]></title>
+        <id>https://docs.streampipes.org/docs/blog/2019/05/23/release-0620.html</id>
+        <link href="https://docs.streampipes.org/docs/blog/2019/05/23/release-0620.html">
+        </link>
+        <updated>2019-05-23T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">6 minutes to read</div></strong>
+<br></p>
+<p>StreamPipes version 0.62.0 has been released! While the last version brought many features under the hood, this new version totally focuses on features and improvements visible to end users.
+The new version is available on Docker Hub and can be downloaded using our <a href="https://github.com/streampipes/streampipes-installer">installer</a>.</p>
+]]></summary>
+        <author>
+            <name>Dominik Riemer</name>
+            <uri>http://twitter.com/dominikjriemer</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[StreamPipes release 0.61.0]]></title>
+        <id>https://docs.streampipes.org/docs/blog/2019/04/04/release-0610.html</id>
+        <link href="https://docs.streampipes.org/docs/blog/2019/04/04/release-0610.html">
+        </link>
+        <updated>2019-04-04T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">5 minutes to read</div></strong>
+<br></p>
+<p>We are proud to release StreamPipes version 0.61.0, which brings many improvements and some exciting new features that simplify pipeline development!
+The new version, which is already available on Docker Hub and can be downloaded using our <a href="https://github.com/streampipes/streampipes-installer">installer</a> brings over 20 improvements. Under the hood, a reworked event model simplifies the development of new pipeline elements using the built-in SDK.</p>
+]]></summary>
+        <author>
+            <name>Dominik Riemer</name>
+            <uri>http://twitter.com/dominikjriemer</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ContainerCLI: A CLI tool for your Docker Application]]></title>
+        <id>https://docs.streampipes.org/docs/blog/2018/11/24/container-cli.html</id>
+        <link href="https://docs.streampipes.org/docs/blog/2018/11/24/container-cli.html">
+        </link>
+        <updated>2018-11-24T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">6 minutes to read</div></strong>
+<br></p>
+<p>In this blog post, we show how we developed a CLI tool to install and manage StreamPipes.
+In addition, we present a template project that enables you to easily create a CLI tool for your own docker application.
+All you need is a working docker-compose.yml file.</p>
+]]></summary>
+        <author>
+            <name>Philipp Zehnder</name>
+            <uri>http://twitter.com/philipp10der</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Preview: StreamPipes release 0.60.0]]></title>
+        <id>https://docs.streampipes.org/docs/blog/2018/09/17/preview-060.html</id>
+        <link href="https://docs.streampipes.org/docs/blog/2018/09/17/preview-060.html">
+        </link>
+        <updated>2018-09-17T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">5 minutes to read</div></strong>
+<br></p>
+<p>It's been a while since our last blog post. However, in the background we are working hard to release the next version of StreamPipes which is currently in the final phase.
+In this post, we'd like to give you a preview of the upcoming StreamPipes version 0.60.0, which brings many new features and improvements.</p>
+]]></summary>
+        <author>
+            <name>Dominik Riemer</name>
+            <uri>http://twitter.com/dominikjriemer</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to understand your machine data?]]></title>
+        <id>https://docs.streampipes.org/docs/blog/2018/06/18/how-to-understand-your-machine-data.html</id>
+        <link href="https://docs.streampipes.org/docs/blog/2018/06/18/how-to-understand-your-machine-data.html">
+        </link>
+        <updated>2018-06-18T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">8 minutes to read</div></strong>
+<br></p>
+<p>Data is the new oil. Probably everybody of you has heard or read this sentence before.
+It is often stated how important data and data understanding is for companies today.
+But what does this actually mean?  How does the data look like that is produced by your machines and systems?
+And how can we solve the big challenge to turn this raw data into insights that can be understood by humans?</p>
+]]></summary>
+        <author>
+            <name>Philipp Zehnder</name>
+            <uri>http://twitter.com/philipp10der</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Welcome to StreamPipes!]]></title>
+        <id>https://docs.streampipes.org/docs/blog/2018/06/14/welcome.html</id>
+        <link href="https://docs.streampipes.org/docs/blog/2018/06/14/welcome.html">
+        </link>
+        <updated>2018-06-14T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>Welcome to our new blog. StreamPipes is the new, easy-to-use self-service data analytics toolbox for the Industrial IoT. In the coming weeks, we'll publish a series of blog posts that explain some ideas of StreamPipes. You'll read about use cases, be...</p>]]></summary>
+        <author>
+            <name>Dominik Riemer</name>
+            <uri>http://twitter.com/dominikjriemer</uri>
+        </author>
+    </entry>
+</feed>
