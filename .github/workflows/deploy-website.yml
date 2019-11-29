@@ -18,13 +18,16 @@ jobs:
         run: |
           npm install
           npm run build-website
+      - name: Copy asf yaml
+        run: |
+          cp .asf.yaml build/
       - name: Build Docs
         run: |
           mkdir build/docs
           cd documentation/website
           npm install
           npm run build
-          cp -r build/streampipes-docs/ ../../build/docs
+          cp -r build/streampipes-docs/* ../../build/docs
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v2.4.0
         env:
