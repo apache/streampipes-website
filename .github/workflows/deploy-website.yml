@@ -1,0 +1,32 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - dev
+jobs:
+  build-and-push-to-asf-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 8.16.2
+      - name: Build Website
+        run: |
+          npm install
+          npm run build-website
+      - name: Build Docs
+        run: |
+          cd documentation
+          npm install
+          npm run build
+          cp -r streampipes-docs/ ../build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v2.4.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: asf-site
+          PUBLISH_DIR: ./build
