@@ -300,419 +300,419 @@
         "title": "Tour",
         "sidebar_label": "Tour"
       },
-      "version-0.55.2/version-0.55.2-dev-guide-architecture": {
+      "version-0.55.2-pre-asf/version-0.55.2-pre-asf-dev-guide-architecture": {
         "title": "Architecture",
         "sidebar_label": "Architecture"
       },
-      "version-0.55.2/version-0.55.2-dev-guide-development-environment": {
+      "version-0.55.2-pre-asf/version-0.55.2-pre-asf-dev-guide-development-environment": {
         "title": "Development Environment",
         "sidebar_label": "Development Environment"
       },
-      "version-0.55.2/version-0.55.2-dev-guide-introduction": {
+      "version-0.55.2-pre-asf/version-0.55.2-pre-asf-dev-guide-introduction": {
         "title": "Introduction",
         "sidebar_label": "Introduction"
       },
-      "version-0.55.2/version-0.55.2-dev-guide-sdk-guide-processors": {
+      "version-0.55.2-pre-asf/version-0.55.2-pre-asf-dev-guide-sdk-guide-processors": {
         "title": "SDK Guide Processors",
         "sidebar_label": "SDK Guide Processors"
       },
-      "version-0.55.2/version-0.55.2-dev-guide-sdk-guide-sinks": {
+      "version-0.55.2-pre-asf/version-0.55.2-pre-asf-dev-guide-sdk-guide-sinks": {
         "title": "SDK Guide Sinks",
         "sidebar_label": "SDK Guide Sinks"
       },
-      "version-0.55.2/version-0.55.2-dev-guide-sdk-guide-sources": {
+      "version-0.55.2-pre-asf/version-0.55.2-pre-asf-dev-guide-sdk-guide-sources": {
         "title": "SDK Guide Sources",
         "sidebar_label": "SDK Guide Sources"
       },
-      "version-0.55.2/version-0.55.2-dev-guide-tutorial-processors": {
+      "version-0.55.2-pre-asf/version-0.55.2-pre-asf-dev-guide-tutorial-processors": {
         "title": "Tutorial: Data Processors",
         "sidebar_label": "Tutorial: Data Processors"
       },
-      "version-0.55.2/version-0.55.2-dev-guide-tutorial-sources": {
+      "version-0.55.2-pre-asf/version-0.55.2-pre-asf-dev-guide-tutorial-sources": {
         "title": "Tutorial: Data Sources",
         "sidebar_label": "Tutorial: Data Sources"
       },
-      "version-0.55.2/version-0.55.2-faq-common-problems": {
+      "version-0.55.2-pre-asf/version-0.55.2-pre-asf-faq-common-problems": {
         "title": "Common Problems",
         "sidebar_label": "Common Problems"
       },
-      "version-0.55.2/version-0.55.2-pipeline-elements": {
+      "version-0.55.2-pre-asf/version-0.55.2-pre-asf-pipeline-elements": {
         "title": "Pipeline Elements",
         "sidebar_label": "Pipeline Elements"
       },
-      "version-0.55.2/version-0.55.2-privacy": {
+      "version-0.55.2-pre-asf/version-0.55.2-pre-asf-privacy": {
         "title": "Datenschutzerklärung",
         "sidebar_label": "Privacy Notice"
       },
-      "version-0.55.2/version-0.55.2-user-guide-getting-started": {
+      "version-0.55.2-pre-asf/version-0.55.2-pre-asf-user-guide-getting-started": {
         "title": "Getting Started",
         "sidebar_label": "Getting Started"
       },
-      "version-0.55.2/version-0.55.2-user-guide-installation": {
+      "version-0.55.2-pre-asf/version-0.55.2-pre-asf-user-guide-installation": {
         "title": "Installation",
         "sidebar_label": "Installation"
       },
-      "version-0.55.2/version-0.55.2-user-guide-introduction": {
+      "version-0.55.2-pre-asf/version-0.55.2-pre-asf-user-guide-introduction": {
         "title": "Introduction",
         "sidebar_label": "Introduction"
       },
-      "version-0.55.2/version-0.55.2-user-guide-processing-elements": {
+      "version-0.55.2-pre-asf/version-0.55.2-pre-asf-user-guide-processing-elements": {
         "title": "Processing Elements",
         "sidebar_label": "Processing Elements"
       },
-      "version-0.55.2/version-0.55.2-user-guide-software-components": {
+      "version-0.55.2-pre-asf/version-0.55.2-pre-asf-user-guide-software-components": {
         "title": "Software Components",
         "sidebar_label": "Software Components"
       },
-      "version-0.55.2/version-0.55.2-user-guide-tour": {
+      "version-0.55.2-pre-asf/version-0.55.2-pre-asf-user-guide-tour": {
         "title": "Tour",
         "sidebar_label": "Tour"
       },
-      "version-0.61.0/version-0.61.0-dev-guide-archetype": {
+      "version-0.61.0-pre-asf/version-0.61.0-pre-asf-dev-guide-archetype": {
         "title": "Start Developing",
         "sidebar_label": "Start Developing"
       },
-      "version-0.61.0/version-0.61.0-dev-guide-architecture": {
+      "version-0.61.0-pre-asf/version-0.61.0-pre-asf-dev-guide-architecture": {
         "title": "Architecture",
         "sidebar_label": "Architecture"
       },
-      "version-0.61.0/version-0.61.0-dev-guide-configuration": {
+      "version-0.61.0-pre-asf/version-0.61.0-pre-asf-dev-guide-configuration": {
         "title": "Configuration",
         "sidebar_label": "Configuration"
       },
-      "version-0.61.0/version-0.61.0-dev-guide-development-environment": {
+      "version-0.61.0-pre-asf/version-0.61.0-pre-asf-dev-guide-development-environment": {
         "title": "Development Environment",
         "sidebar_label": "Development Environment"
       },
-      "version-0.61.0/version-0.61.0-dev-guide-event-model": {
+      "version-0.61.0-pre-asf/version-0.61.0-pre-asf-dev-guide-event-model": {
         "title": "SDK Guide: Event Model",
         "sidebar_label": "Event Model"
       },
-      "version-0.61.0/version-0.61.0-dev-guide-migration": {
+      "version-0.61.0-pre-asf/version-0.61.0-pre-asf-dev-guide-migration": {
         "title": "Migration Guide v0.61",
         "sidebar_label": "Migration Guide"
       },
-      "version-0.61.0/version-0.61.0-dev-guide-output-strategies": {
+      "version-0.61.0-pre-asf/version-0.61.0-pre-asf-dev-guide-output-strategies": {
         "title": "SDK Guide: Output Strategies",
         "sidebar_label": "Output Strategies"
       },
-      "version-0.61.0/version-0.61.0-dev-guide-sdk-guide-processors": {
+      "version-0.61.0-pre-asf/version-0.61.0-pre-asf-dev-guide-sdk-guide-processors": {
         "title": "SDK Guide: Data Processors",
         "sidebar_label": "SDK Guide: Data Processors"
       },
-      "version-0.61.0/version-0.61.0-dev-guide-sdk-guide-sinks": {
+      "version-0.61.0-pre-asf/version-0.61.0-pre-asf-dev-guide-sdk-guide-sinks": {
         "title": "SDK Guide: Data Sinks",
         "sidebar_label": "SDK Guide: Data Sinks"
       },
-      "version-0.61.0/version-0.61.0-dev-guide-ssl": {
+      "version-0.61.0-pre-asf/version-0.61.0-pre-asf-dev-guide-ssl": {
         "title": "Use SSL",
         "sidebar_label": "Use SSL"
       },
-      "version-0.61.0/version-0.61.0-dev-guide-static-properties": {
+      "version-0.61.0-pre-asf/version-0.61.0-pre-asf-dev-guide-static-properties": {
         "title": "SDK Guide: Static Properties",
         "sidebar_label": "Static Properties"
       },
-      "version-0.61.0/version-0.61.0-dev-guide-stream-requirements": {
+      "version-0.61.0-pre-asf/version-0.61.0-pre-asf-dev-guide-stream-requirements": {
         "title": "SDK Guide: Stream Requirements",
         "sidebar_label": "Stream Requirements"
       },
-      "version-0.61.0/version-0.61.0-dev-guide-tutorial-processors": {
+      "version-0.61.0-pre-asf/version-0.61.0-pre-asf-dev-guide-tutorial-processors": {
         "title": "Tutorial: Data Processors",
         "sidebar_label": "Tutorial: Data Processors"
       },
-      "version-0.61.0/version-0.61.0-dev-guide-tutorial-sources": {
+      "version-0.61.0-pre-asf/version-0.61.0-pre-asf-dev-guide-tutorial-sources": {
         "title": "Tutorial: Data Sources",
         "sidebar_label": "Tutorial: Data Sources"
       },
-      "version-0.61.0/version-0.61.0-faq-common-problems": {
+      "version-0.61.0-pre-asf/version-0.61.0-pre-asf-faq-common-problems": {
         "title": "Common Problems",
         "sidebar_label": "Common Problems"
       },
-      "version-0.61.0/version-0.61.0-pipeline-elements": {
+      "version-0.61.0-pre-asf/version-0.61.0-pre-asf-pipeline-elements": {
         "title": "Pipeline Elements",
         "sidebar_label": "Pipeline Elements"
       },
-      "version-0.61.0/version-0.61.0-user-guide-installation": {
+      "version-0.61.0-pre-asf/version-0.61.0-pre-asf-user-guide-installation": {
         "title": "Installation",
         "sidebar_label": "Installation"
       },
-      "version-0.61.0/version-0.61.0-user-guide-processing-elements": {
+      "version-0.61.0-pre-asf/version-0.61.0-pre-asf-user-guide-processing-elements": {
         "title": "Processing Elements",
         "sidebar_label": "Processing Elements"
       },
-      "version-0.61.0/version-0.61.0-user-guide-software-components": {
+      "version-0.61.0-pre-asf/version-0.61.0-pre-asf-user-guide-software-components": {
         "title": "Software Components",
         "sidebar_label": "Software Components"
       },
-      "version-0.62.0/org.streampipes.processor.geo.flink/version-0.62.0-org.streampipes.processor.geo.flink": {
+      "version-0.62.0-pre-asf/org.streampipes.processor.geo.flink/version-0.62.0-org.streampipes.processor.geo.flink": {
         "title": "Spatial Grid Enrichment",
         "sidebar_label": "Spatial Grid Enrichment"
       },
-      "version-0.62.0/org.streampipes.processor.imageclassification.jvm.generic-image-classification/version-0.62.0-org.streampipes.processor.imageclassification.jvm.generic-image-classification": {
+      "version-0.62.0-pre-asf/org.streampipes.processor.imageclassification.jvm.generic-image-classification/version-0.62.0-org.streampipes.processor.imageclassification.jvm.generic-image-classification": {
         "title": "Generic Image Classification",
         "sidebar_label": "Generic Image Classification"
       },
-      "version-0.62.0/org.streampipes.processor.imageclassification.jvm.image-enricher/version-0.62.0-org.streampipes.processor.imageclassification.jvm.image-enricher": {
+      "version-0.62.0-pre-asf/org.streampipes.processor.imageclassification.jvm.image-enricher/version-0.62.0-org.streampipes.processor.imageclassification.jvm.image-enricher": {
         "title": "Image Enricher",
         "sidebar_label": "Image Enricher"
       },
-      "version-0.62.0/org.streampipes.processor.imageclassification.qrcode/version-0.62.0-org.streampipes.processor.imageclassification.qrcode": {
+      "version-0.62.0-pre-asf/org.streampipes.processor.imageclassification.qrcode/version-0.62.0-org.streampipes.processor.imageclassification.qrcode": {
         "title": "QR Code Reader",
         "sidebar_label": "QR Code Reader"
       },
-      "version-0.62.0/org.streampipes.processors.aggregation.flink.aggregation/version-0.62.0-org.streampipes.processors.aggregation.flink.aggregation": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.aggregation.flink.aggregation/version-0.62.0-org.streampipes.processors.aggregation.flink.aggregation": {
         "title": "Aggregation",
         "sidebar_label": "Aggregation"
       },
-      "version-0.62.0/org.streampipes.processors.aggregation.flink.rate/version-0.62.0-org.streampipes.processors.aggregation.flink.rate": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.aggregation.flink.rate/version-0.62.0-org.streampipes.processors.aggregation.flink.rate": {
         "title": "Event Rate",
         "sidebar_label": "Event Rate"
       },
-      "version-0.62.0/org.streampipes.processors.enricher.flink.processor.math.mathop/version-0.62.0-org.streampipes.processors.enricher.flink.processor.math.mathop": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.enricher.flink.processor.math.mathop/version-0.62.0-org.streampipes.processors.enricher.flink.processor.math.mathop": {
         "title": "Math",
         "sidebar_label": "Math"
       },
-      "version-0.62.0/org.streampipes.processors.enricher.flink.processor.math.staticmathop/version-0.62.0-org.streampipes.processors.enricher.flink.processor.math.staticmathop": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.enricher.flink.processor.math.staticmathop/version-0.62.0-org.streampipes.processors.enricher.flink.processor.math.staticmathop": {
         "title": "Static Math",
         "sidebar_label": "Static Math"
       },
-      "version-0.62.0/org.streampipes.processors.enricher.flink.processor.trigonometry/version-0.62.0-org.streampipes.processors.enricher.flink.processor.trigonometry": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.enricher.flink.processor.trigonometry/version-0.62.0-org.streampipes.processors.enricher.flink.processor.trigonometry": {
         "title": "Trigonometry Functions",
         "sidebar_label": "Trigonometry Functions"
       },
-      "version-0.62.0/org.streampipes.processors.enricher.flink.processor.urldereferencing/version-0.62.0-org.streampipes.processors.enricher.flink.processor.urldereferencing": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.enricher.flink.processor.urldereferencing/version-0.62.0-org.streampipes.processors.enricher.flink.processor.urldereferencing": {
         "title": "URL Dereferencing",
         "sidebar_label": "URL Dereferencing"
       },
-      "version-0.62.0/org.streampipes.processors.enricher.flink.timestamp/version-0.62.0-org.streampipes.processors.enricher.flink.timestamp": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.enricher.flink.timestamp/version-0.62.0-org.streampipes.processors.enricher.flink.timestamp": {
         "title": "Timestamp Enricher",
         "sidebar_label": "Timestamp Enricher"
       },
-      "version-0.62.0/org.streampipes.processors.filters.jvm.compose/version-0.62.0-org.streampipes.processors.filters.jvm.compose": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.filters.jvm.compose/version-0.62.0-org.streampipes.processors.filters.jvm.compose": {
         "title": "Compose",
         "sidebar_label": "Compose"
       },
-      "version-0.62.0/org.streampipes.processors.filters.jvm.numericalfilter/version-0.62.0-org.streampipes.processors.filters.jvm.numericalfilter": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.filters.jvm.numericalfilter/version-0.62.0-org.streampipes.processors.filters.jvm.numericalfilter": {
         "title": "Numerical Filter",
         "sidebar_label": "Numerical Filter"
       },
-      "version-0.62.0/org.streampipes.processors.filters.jvm.project/version-0.62.0-org.streampipes.processors.filters.jvm.project": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.filters.jvm.project/version-0.62.0-org.streampipes.processors.filters.jvm.project": {
         "title": "Projection",
         "sidebar_label": "Projection"
       },
-      "version-0.62.0/org.streampipes.processors.filters.jvm.textfilter/version-0.62.0-org.streampipes.processors.filters.jvm.textfilter": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.filters.jvm.textfilter/version-0.62.0-org.streampipes.processors.filters.jvm.textfilter": {
         "title": "Text Filter",
         "sidebar_label": "Text Filter"
       },
-      "version-0.62.0/org.streampipes.processors.pattern-detection.flink.peak-detection/version-0.62.0-org.streampipes.processors.pattern-detection.flink.peak-detection": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.pattern-detection.flink.peak-detection/version-0.62.0-org.streampipes.processors.pattern-detection.flink.peak-detection": {
         "title": "Peak Detection",
         "sidebar_label": "Peak Detection"
       },
-      "version-0.62.0/org.streampipes.processors.siddhi.frequency/version-0.62.0-org.streampipes.processors.siddhi.frequency": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.siddhi.frequency/version-0.62.0-org.streampipes.processors.siddhi.frequency": {
         "title": "Frequency Calculation",
         "sidebar_label": "Frequency Calculation"
       },
-      "version-0.62.0/org.streampipes.processors.siddhi.frequencychange/version-0.62.0-org.streampipes.processors.siddhi.frequencychange": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.siddhi.frequencychange/version-0.62.0-org.streampipes.processors.siddhi.frequencychange": {
         "title": "Frequency Change",
         "sidebar_label": "Frequency Change"
       },
-      "version-0.62.0/org.streampipes.processors.siddhi.increase/version-0.62.0-org.streampipes.processors.siddhi.increase": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.siddhi.increase/version-0.62.0-org.streampipes.processors.siddhi.increase": {
         "title": "Trend",
         "sidebar_label": "Trend"
       },
-      "version-0.62.0/org.streampipes.processors.siddhi.numericalfilter/version-0.62.0-org.streampipes.processors.siddhi.numericalfilter": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.siddhi.numericalfilter/version-0.62.0-org.streampipes.processors.siddhi.numericalfilter": {
         "title": "Numerical Filter (Siddhi)",
         "sidebar_label": "Numerical Filter (Siddhi)"
       },
-      "version-0.62.0/org.streampipes.processors.siddhi.sequence/version-0.62.0-org.streampipes.processors.siddhi.sequence": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.siddhi.sequence/version-0.62.0-org.streampipes.processors.siddhi.sequence": {
         "title": "Sequence Detection",
         "sidebar_label": "Sequence Detection"
       },
-      "version-0.62.0/org.streampipes.processors.siddhi.stop/version-0.62.0-org.streampipes.processors.siddhi.stop": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.siddhi.stop/version-0.62.0-org.streampipes.processors.siddhi.stop": {
         "title": "Stream Stop Detection",
         "sidebar_label": "Stream Stop Detection"
       },
-      "version-0.62.0/org.streampipes.processors.textmining.flink.languagedetection/version-0.62.0-org.streampipes.processors.textmining.flink.languagedetection": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.textmining.flink.languagedetection/version-0.62.0-org.streampipes.processors.textmining.flink.languagedetection": {
         "title": "Language Detection",
         "sidebar_label": "Language Detection"
       },
-      "version-0.62.0/org.streampipes.processors.textmining.flink.wordcount/version-0.62.0-org.streampipes.processors.textmining.flink.wordcount": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.textmining.flink.wordcount/version-0.62.0-org.streampipes.processors.textmining.flink.wordcount": {
         "title": "Word Count",
         "sidebar_label": "Word Count"
       },
-      "version-0.62.0/org.streampipes.processors.transformation.flink.field-converter/version-0.62.0-org.streampipes.processors.transformation.flink.field-converter": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.transformation.flink.field-converter/version-0.62.0-org.streampipes.processors.transformation.flink.field-converter": {
         "title": "Field Converter",
         "sidebar_label": "Field Converter"
       },
-      "version-0.62.0/org.streampipes.processors.transformation.flink.field-mapper/version-0.62.0-org.streampipes.processors.transformation.flink.field-mapper": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.transformation.flink.field-mapper/version-0.62.0-org.streampipes.processors.transformation.flink.field-mapper": {
         "title": "Field Mapper",
         "sidebar_label": "Field Mapper"
       },
-      "version-0.62.0/org.streampipes.processors.transformation.flink.field-renamer/version-0.62.0-org.streampipes.processors.transformation.flink.field-renamer": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.transformation.flink.field-renamer/version-0.62.0-org.streampipes.processors.transformation.flink.field-renamer": {
         "title": "Field Renamer",
         "sidebar_label": "Field Renamer"
       },
-      "version-0.62.0/org.streampipes.processors.transformation.flink.fieldhasher/version-0.62.0-org.streampipes.processors.transformation.flink.fieldhasher": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.transformation.flink.fieldhasher/version-0.62.0-org.streampipes.processors.transformation.flink.fieldhasher": {
         "title": "Field Hasher",
         "sidebar_label": "Field Hasher"
       },
-      "version-0.62.0/org.streampipes.processors.transformation.flink.measurement-unit-converter/version-0.62.0-org.streampipes.processors.transformation.flink.measurement-unit-converter": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.transformation.flink.measurement-unit-converter/version-0.62.0-org.streampipes.processors.transformation.flink.measurement-unit-converter": {
         "title": "Measurement Unit Converter",
         "sidebar_label": "Measurement Unit Converter"
       },
-      "version-0.62.0/org.streampipes.processors.transformation.flink.processor.boilerplate/version-0.62.0-org.streampipes.processors.transformation.flink.processor.boilerplate": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.transformation.flink.processor.boilerplate/version-0.62.0-org.streampipes.processors.transformation.flink.processor.boilerplate": {
         "title": "Boilerplate Removal",
         "sidebar_label": "Boilerplate Removal"
       },
-      "version-0.62.0/org.streampipes.processors.transformation.jvm.changed-value/version-0.62.0-org.streampipes.processors.transformation.jvm.changed-value": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.transformation.jvm.changed-value/version-0.62.0-org.streampipes.processors.transformation.jvm.changed-value": {
         "title": "Value Changed",
         "sidebar_label": "Value Changed"
       },
-      "version-0.62.0/org.streampipes.processors.transformation.jvm.count-array/version-0.62.0-org.streampipes.processors.transformation.jvm.count-array": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.transformation.jvm.count-array/version-0.62.0-org.streampipes.processors.transformation.jvm.count-array": {
         "title": "Count Array",
         "sidebar_label": "Count Array"
       },
-      "version-0.62.0/org.streampipes.processors.transformation.jvm.duration-value/version-0.62.0-org.streampipes.processors.transformation.jvm.duration-value": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.transformation.jvm.duration-value/version-0.62.0-org.streampipes.processors.transformation.jvm.duration-value": {
         "title": "Calculate Duration",
         "sidebar_label": "Calculate Duration"
       },
-      "version-0.62.0/org.streampipes.processors.transformation.jvm.processor.timestampextractor/version-0.62.0-org.streampipes.processors.transformation.jvm.processor.timestampextractor": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.transformation.jvm.processor.timestampextractor/version-0.62.0-org.streampipes.processors.transformation.jvm.processor.timestampextractor": {
         "title": "Timestamp Extractor",
         "sidebar_label": "Timestamp Extractor"
       },
-      "version-0.62.0/org.streampipes.processors.transformation.jvm.split-array/version-0.62.0-org.streampipes.processors.transformation.jvm.split-array": {
+      "version-0.62.0-pre-asf/org.streampipes.processors.transformation.jvm.split-array/version-0.62.0-org.streampipes.processors.transformation.jvm.split-array": {
         "title": "Split Array",
         "sidebar_label": "Split Array"
       },
-      "version-0.62.0/org.streampipes.sinks.brokers.jvm.jms/version-0.62.0-org.streampipes.sinks.brokers.jvm.jms": {
+      "version-0.62.0-pre-asf/org.streampipes.sinks.brokers.jvm.jms/version-0.62.0-org.streampipes.sinks.brokers.jvm.jms": {
         "title": "JMS Publisher",
         "sidebar_label": "JMS Publisher"
       },
-      "version-0.62.0/org.streampipes.sinks.brokers.jvm.kafka/version-0.62.0-org.streampipes.sinks.brokers.jvm.kafka": {
+      "version-0.62.0-pre-asf/org.streampipes.sinks.brokers.jvm.kafka/version-0.62.0-org.streampipes.sinks.brokers.jvm.kafka": {
         "title": "Kafka Publisher",
         "sidebar_label": "Kafka Publisher"
       },
-      "version-0.62.0/org.streampipes.sinks.brokers.jvm.rabbitmq/version-0.62.0-org.streampipes.sinks.brokers.jvm.rabbitmq": {
+      "version-0.62.0-pre-asf/org.streampipes.sinks.brokers.jvm.rabbitmq/version-0.62.0-org.streampipes.sinks.brokers.jvm.rabbitmq": {
         "title": "RabbitMQ Publisher",
         "sidebar_label": "RabbitMQ Publisher"
       },
-      "version-0.62.0/org.streampipes.sinks.brokers.jvm.rest/version-0.62.0-org.streampipes.sinks.brokers.jvm.rest": {
+      "version-0.62.0-pre-asf/org.streampipes.sinks.brokers.jvm.rest/version-0.62.0-org.streampipes.sinks.brokers.jvm.rest": {
         "title": "REST Publisher",
         "sidebar_label": "REST Publisher"
       },
-      "version-0.62.0/org.streampipes.sinks.databases.flink.elasticsearch/version-0.62.0-org.streampipes.sinks.databases.flink.elasticsearch": {
+      "version-0.62.0-pre-asf/org.streampipes.sinks.databases.flink.elasticsearch/version-0.62.0-org.streampipes.sinks.databases.flink.elasticsearch": {
         "title": "Elasticsearch",
         "sidebar_label": "Elasticsearch"
       },
-      "version-0.62.0/org.streampipes.sinks.databases.jvm.couchdb/version-0.62.0-org.streampipes.sinks.databases.jvm.couchdb": {
+      "version-0.62.0-pre-asf/org.streampipes.sinks.databases.jvm.couchdb/version-0.62.0-org.streampipes.sinks.databases.jvm.couchdb": {
         "title": "CouchDB",
         "sidebar_label": "CouchDB"
       },
-      "version-0.62.0/org.streampipes.sinks.databases.jvm.influxdb/version-0.62.0-org.streampipes.sinks.databases.jvm.influxdb": {
+      "version-0.62.0-pre-asf/org.streampipes.sinks.databases.jvm.influxdb/version-0.62.0-org.streampipes.sinks.databases.jvm.influxdb": {
         "title": "InfluxDB",
         "sidebar_label": "InfluxDB"
       },
-      "version-0.62.0/org.streampipes.sinks.databases.jvm.postgresql/version-0.62.0-org.streampipes.sinks.databases.jvm.postgresql": {
+      "version-0.62.0-pre-asf/org.streampipes.sinks.databases.jvm.postgresql/version-0.62.0-org.streampipes.sinks.databases.jvm.postgresql": {
         "title": "PostgreSQL",
         "sidebar_label": "PostgreSQL"
       },
-      "version-0.62.0/org.streampipes.sinks.internal.jvm.dashboard/version-0.62.0-org.streampipes.sinks.internal.jvm.dashboard": {
+      "version-0.62.0-pre-asf/org.streampipes.sinks.internal.jvm.dashboard/version-0.62.0-org.streampipes.sinks.internal.jvm.dashboard": {
         "title": "Dashboard Sink",
         "sidebar_label": "Dashboard Sink"
       },
-      "version-0.62.0/org.streampipes.sinks.internal.jvm.notification/version-0.62.0-org.streampipes.sinks.internal.jvm.notification": {
+      "version-0.62.0-pre-asf/org.streampipes.sinks.internal.jvm.notification/version-0.62.0-org.streampipes.sinks.internal.jvm.notification": {
         "title": "Notification",
         "sidebar_label": "Notification"
       },
-      "version-0.62.0/org.streampipes.sinks.notifications.jvm.email/version-0.62.0-org.streampipes.sinks.notifications.jvm.email": {
+      "version-0.62.0-pre-asf/org.streampipes.sinks.notifications.jvm.email/version-0.62.0-org.streampipes.sinks.notifications.jvm.email": {
         "title": "Email Notification",
         "sidebar_label": "Email Notification"
       },
-      "version-0.62.0/org.streampipes.sinks.notifications.jvm.onesignal/version-0.62.0-org.streampipes.sinks.notifications.jvm.onesignal": {
+      "version-0.62.0-pre-asf/org.streampipes.sinks.notifications.jvm.onesignal/version-0.62.0-org.streampipes.sinks.notifications.jvm.onesignal": {
         "title": "OneSignal",
         "sidebar_label": "OneSignal"
       },
-      "version-0.62.0/org.streampipes.sinks.notifications.jvm.slack/version-0.62.0-org.streampipes.sinks.notifications.jvm.slack": {
+      "version-0.62.0-pre-asf/org.streampipes.sinks.notifications.jvm.slack/version-0.62.0-org.streampipes.sinks.notifications.jvm.slack": {
         "title": "Slack Notification",
         "sidebar_label": "Slack Notification"
       },
-      "version-0.62.0/version-0.62.0-pipeline-elements": {
+      "version-0.62.0-pre-asf/version-0.62.0-pre-asf-pipeline-elements": {
         "title": "Overview",
         "sidebar_label": "Overview"
       },
-      "version-0.62.0/version-0.62.0-user-guide-tour": {
+      "version-0.62.0-pre-asf/version-0.62.0-pre-asf-user-guide-tour": {
         "title": "Tour",
         "sidebar_label": "Tour"
       },
-      "version-0.63.0/version-0.63.0-dev-guide-archetype": {
+      "version-0.63.0-pre-asf/version-0.63.0-pre-asf-dev-guide-archetype": {
         "title": "Start Developing",
         "sidebar_label": "Start Developing"
       },
-      "version-0.63.0/version-0.63.0-dev-guide-configuration": {
+      "version-0.63.0-pre-asf/version-0.63.0-pre-asf-dev-guide-configuration": {
         "title": "Configuration",
         "sidebar_label": "Configuration"
       },
-      "version-0.63.0/version-0.63.0-dev-guide-development-environment": {
+      "version-0.63.0-pre-asf/version-0.63.0-pre-asf-dev-guide-development-environment": {
         "title": "Development Environment",
         "sidebar_label": "Development Environment"
       },
-      "version-0.63.0/version-0.63.0-dev-guide-tutorial-processors": {
+      "version-0.63.0-pre-asf/version-0.63.0-pre-asf-dev-guide-tutorial-processors": {
         "title": "Tutorial: Data Processors",
         "sidebar_label": "Tutorial: Data Processors"
       },
-      "version-0.63.0/version-0.63.0-dev-guide-tutorial-sinks": {
+      "version-0.63.0-pre-asf/version-0.63.0-pre-asf-dev-guide-tutorial-sinks": {
         "title": "Tutorial: Data Sinks",
         "sidebar_label": "Tutorial: Data Sinks"
       },
-      "version-0.63.0/version-0.63.0-dev-guide-tutorial-sources": {
+      "version-0.63.0-pre-asf/version-0.63.0-pre-asf-dev-guide-tutorial-sources": {
         "title": "Tutorial: Data Sources",
         "sidebar_label": "Tutorial: Data Sources"
       },
-      "version-0.63.0/version-0.63.0-user-guide-first-steps": {
+      "version-0.63.0-pre-asf/version-0.63.0-pre-asf-user-guide-first-steps": {
         "title": "First steps",
         "sidebar_label": "First steps"
       },
-      "version-0.63.0/version-0.63.0-user-guide-installation": {
+      "version-0.63.0-pre-asf/version-0.63.0-pre-asf-user-guide-installation": {
         "title": "Installation",
         "sidebar_label": "Installation"
       },
-      "version-0.64.0/version-0.64.0-dev-guide-archetype": {
+      "version-0.64.0-pre-asf/version-0.64.0-pre-asf-dev-guide-archetype": {
         "title": "Start Developing",
         "sidebar_label": "Start Developing"
       },
-      "version-0.64.0/version-0.64.0-dev-guide-development-environment": {
+      "version-0.64.0-pre-asf/version-0.64.0-pre-asf-dev-guide-development-environment": {
         "title": "Development Environment",
         "sidebar_label": "Development Environment"
       },
-      "version-0.64.0/version-0.64.0-dev-guide-tutorial-processors": {
+      "version-0.64.0-pre-asf/version-0.64.0-pre-asf-dev-guide-tutorial-processors": {
         "title": "Tutorial: Data Processors",
         "sidebar_label": "Tutorial: Data Processors"
       },
-      "version-0.64.0/version-0.64.0-dev-guide-tutorial-sinks": {
+      "version-0.64.0-pre-asf/version-0.64.0-pre-asf-dev-guide-tutorial-sinks": {
         "title": "Tutorial: Data Sinks",
         "sidebar_label": "Tutorial: Data Sinks"
       },
-      "version-0.64.0/version-0.64.0-dev-guide-tutorial-sources": {
+      "version-0.64.0-pre-asf/version-0.64.0-pre-asf-dev-guide-tutorial-sources": {
         "title": "Tutorial: Data Sources",
         "sidebar_label": "Tutorial: Data Sources"
       },
-      "version-0.65.0/version-0.65.0-dev-guide-archetype": {
+      "version-0.65.0-pre-asf/version-0.65.0-pre-asf-dev-guide-archetype": {
         "title": "Start Developing",
         "sidebar_label": "Start Developing"
       },
-      "version-0.65.0/version-0.65.0-dev-guide-tutorial-processors": {
+      "version-0.65.0-pre-asf/version-0.65.0-pre-asf-dev-guide-tutorial-processors": {
         "title": "Tutorial: Data Processors",
         "sidebar_label": "Tutorial: Data Processors"
       },
-      "version-0.65.0/version-0.65.0-dev-guide-tutorial-sinks": {
+      "version-0.65.0-pre-asf/version-0.65.0-pre-asf-dev-guide-tutorial-sinks": {
         "title": "Tutorial: Data Sinks",
         "sidebar_label": "Tutorial: Data Sinks"
       },
-      "version-0.65.0/version-0.65.0-user-guide-installation": {
+      "version-0.65.0-pre-asf/version-0.65.0-pre-asf-user-guide-installation": {
         "title": "Installation",
         "sidebar_label": "Installation"
       },
-      "version-0.65.0/version-0.65.0-user-guide-tour": {
+      "version-0.65.0-pre-asf/version-0.65.0-pre-asf-user-guide-tour": {
         "title": "Tour",
         "sidebar_label": "Tour"
       }
