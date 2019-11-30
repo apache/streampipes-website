@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - dev
+      - master
 jobs:
   build-and-push-to-asf-branch:
     runs-on: ubuntu-latest
