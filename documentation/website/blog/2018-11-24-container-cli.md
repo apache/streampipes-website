@@ -2,7 +2,7 @@
 title: ContainerCLI: A CLI tool for your Docker Application
 author: Philipp Zehnder
 authorURL: http://twitter.com/philipp10der
-authorImageURL: /img/zehnder.png
+authorImageURL: /docs/img/zehnder.png
 ---
 **<div style="float: left; padding-right: 40px;">6 minutes to read</div>**
 <br>
