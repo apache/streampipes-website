@@ -24,7 +24,7 @@ To store changes in Consul, the update button must be clicked.
 
 ## Configuration for Developers
 We provide a Configurations API for the use of configuration parameters in your services.
-Each processing element project has a “config” package [[Example]](https://github.com/streampipes/streampipes-pipeline-elements/tree/dev/streampipes-sinks-internal-jvm/src/main/java/org/streampipes/sinks/internal/jvm/config).
+Each processing element project has a “config” package [[Example]](https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-sinks-internal-jvm/src/main/java/org/streampipes/sinks/internal/jvm/config).
 This package usually contains two classes.
 One containing unique keys for the configuration values and one containing the getter and setter methods to access these values.
 For the naming of configuration keys, we recommend to use “SP” as a prefix.

@@ -14,7 +14,7 @@ The only requirements in terms of development tools are that you have Java 8 and
 In order to quickly test developed pipeline elements without needing to install all services required by StreamPipes, we provide a CLI tool that allows you to selectively start StreamPipes components.
 The CLI tool allows to switch to several templates (based on docker-compose) depending on the role. For instance, if you are developing a pipeline element, use the template ``pe-developer``. This will start backend and ui components in a Docker container, while you can easily test your pipeline element in your IDE.
 
-For now, we refer to the Github Readme for instructions on how to use the CLI tool: [https://github.com/streampipes/streampipes-cli](https://github.com/streampipes/streampipes-cli)
+For now, we refer to the Github Readme for instructions on how to use the CLI tool: [https://github.com/apache/incubator-streampipes-installer](https://github.com/apache/incubator-streampipes-installer)
 
 ## Starter projects
 

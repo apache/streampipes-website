@@ -54,7 +54,7 @@ You need to have Docker installed on your system before you continue with the in
                         </span>
                     </div>
                     <div class="wrapper-instruction">
-                        <a href="https://github.com/streampipes/streampipes-installer/archive/master.zip">Download</a>
+                        <a href="https://github.com/apache/incubator-streampipes-installer/archive/master.zip">Download</a>
                         the latest StreamPipes release from Github and extract the zip file to a directory of your choice.
                     </div>
                 </div>

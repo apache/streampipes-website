@@ -12,7 +12,7 @@ The following reference describes how static properties can be defined using the
 
 <div class="admonition tip">
 <div class="admonition-title">Code on Github</div>
-<p>For all examples, the code can be found on <a href="https://github.com/streampipes/streampipes-pipeline-elements-examples/tree/dev/streampipes-pipeline-elements-examples-processors-jvm/src/main/java/org/streampipes/pe/examples/jvm/staticproperty">Github</a>.</p>
+<p>For all examples, the code can be found on <a href="https://github.com/apache/incubator-streampipes-examples/tree/dev/streampipes-pipeline-elements-examples-processors-jvm/src/main/java/org/streampipes/pe/examples/jvm/staticproperty">Github</a>.</p>
 </div>
 
 ## Reference
