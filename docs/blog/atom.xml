@@ -2,12 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.streampipes.org/docs/blog</id>
     <title>StreamPipes Blog</title>
-    <updated>2019-11-23T06:00:00Z</updated>
+    <updated>2019-11-25T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://docs.streampipes.org/docs/blog"/>
     <subtitle>The best place to stay up-to-date with the latest StreamPipes news and events.</subtitle>
     <logo>https://docs.streampipes.org/docs/img/sp-logo-color-docs.png</logo>
     <rights>Copyright © 2019 The Apache Software Foundation</rights>
+    <entry>
+        <title type="html"><![CDATA[Moving to the Apache Incubator]]></title>
+        <id>https://docs.streampipes.org/docs/blog/2019/11/25/moving-to-the-apache-incubator.html</id>
+        <link href="https://docs.streampipes.org/docs/blog/2019/11/25/moving-to-the-apache-incubator.html">
+        </link>
+        <updated>2019-11-25T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">8 minutes to read</div></strong>
+<br>
+Great news: StreamPipes is moving to the Apache Incubator!</p>
+]]></summary>
+        <author>
+            <name>Dominik Riemer</name>
+            <uri>https://twitter.com/dominikjriemer</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[StreamPipes release 0.65.0]]></title>
         <id>https://docs.streampipes.org/docs/blog/2019/11/23/release-0650.html</id>
@@ -48,7 +63,7 @@ So here's StreamPipes 0.64.0!</p>
         <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">5 minutes to read</div></strong>
 <br></p>
 <p>StreamPipes version 0.63.0 has been released! Following our release plan to alternate between user-faced and backend-oriented releases, this release contains many (more than 70) features and improvements, mainly on the backend side.
-The new version is available on Docker Hub and can be downloaded using our <a href="https://github.com/streampipes/streampipes-installer">installer</a>.</p>
+The new version is available on Docker Hub and can be downloaded using our <a href="https://github.com/apache/incubator-streampipes-installer">installer</a>.</p>
 ]]></summary>
         <author>
             <name>Dominik Riemer</name>
