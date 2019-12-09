@@ -40,6 +40,8 @@ const siteConfig = {
         indexName: 'streampipes',
         algoliaOptions: {} // Optional, if provided by Algolia
     },
+    gaTrackingId: 'UA-154181944-1',
+    gaGtag: true,
 
     disableHeaderTitle: true,
 

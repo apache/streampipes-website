@@ -88,6 +88,7 @@ class Footer extends React.Component {
                             <h5>More</h5>
                             <a href={this.props.config.baseUrl + 'blog'}>Blog</a>
                             <a href="https://streampipes.apache.org.org">Website</a>
+                            <a href="https://www.apache.org/foundation/policies/privacy.html">Privacy</a>
                             <a
                                 className="github-button"
                                 href={this.props.config.repoUrl}
@@ -101,7 +102,7 @@ class Footer extends React.Component {
                         </div>
                     </section>
 
-                    <section className="copyright">{this.props.config.copyright}</section>
+                    <section className="copyright">{this.props.config.copyright}<p style={{marginBottom:'0px', marginLeft:'20px', marginRight:'20px'}}>Disclaimer: Apache StreamPipes (incubating) is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.</p></section>
                 </footer>
             </div>
 
