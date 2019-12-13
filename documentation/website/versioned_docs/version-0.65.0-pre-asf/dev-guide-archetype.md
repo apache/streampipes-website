@@ -39,7 +39,7 @@ mvn archetype:generate                              	 	     \
 mvn archetype:generate                              	 	     \
   -DarchetypeGroupId=org.streampipes          			         \
   -DarchetypeArtifactId=streampipes-archetype-pe-processors-jvm  \
-  -DarchetypeVersion=0.64.0
+  -DarchetypeVersion=0.65.0
 ```
 
 ## Processors Flink
@@ -47,7 +47,7 @@ mvn archetype:generate                              	 	     \
 mvn archetype:generate                              	 	     \
   -DarchetypeGroupId=org.streampipes          			         \
   -DarchetypeArtifactId=streampipes-archetype-pe-processors-flink  \
-  -DarchetypeVersion=0.64.0
+  -DarchetypeVersion=0.65.0
 ```
 
 ## Sinks JVM
@@ -55,7 +55,7 @@ mvn archetype:generate                              	 	     \
 mvn archetype:generate                              	 	     \
   -DarchetypeGroupId=org.streampipes          			         \
   -DarchetypeArtifactId=streampipes-archetype-pe-sinks-jvm  \
-  -DarchetypeVersion=0.64.0
+  -DarchetypeVersion=0.65.0
 ```
 
 ## Sinks Flink
@@ -63,7 +63,7 @@ mvn archetype:generate                              	 	     \
 mvn archetype:generate                              	 	     \
   -DarchetypeGroupId=org.streampipes          			         \
   -DarchetypeArtifactId=streampipes-archetype-pe-sinks-flink  \
-  -DarchetypeVersion=0.64.0
+  -DarchetypeVersion=0.65.0
 ```
 </details>
 
@@ -83,10 +83,10 @@ Open the class *Example* and edit the ``onEvent`` method to print the incoming e
 @Override
 public void onEvent(Event event, SpOutputCollector collector) {
     // Print the incoming event on the console
-    System.out.println(in);
+    System.out.println(event);
 
     // Hand the incoming event to the output collector without changing it.
-    collector.onEvent(in);
+    collector.collect(event);
 }
 ```
 
@@ -112,7 +112,7 @@ Now you can start the processor.
     <img src="/docs/img/archetype/run_env_configuration.png" alt="Environment Configuration View">
 </div>
 
-To check if the service is up and running, open the browser on *'localhost:6666'*. The machine-readable escription of the processor should be visible as shown below.
+To check if the service is up and running, open the browser on *'localhost:6666'*. The machine-readable description of the processor should be visible as shown below.
 
 <img src="/docs/img/archetype/endpoint.png" width="90%" alt="Project Structure">
 
@@ -137,7 +137,7 @@ In case you opened the StreamPipes installation for the first time, it should ha
 <img src="/docs/img/archetype/example_pipeline.png" width="80%" alt="Project Structure">
 
 Start this pipeline.
-Now you should see logging messages in your console and, once you've created a visualisation, you can also see the resulting events of your component in StreamPipes.
+Now you should see logging messages in your console and, once you've created a visualization, you can also see the resulting events of your component in StreamPipes.
 
 Congratulations, you have just created your first processor!
 From here on you can start experimenting and implement your own algorithms.
