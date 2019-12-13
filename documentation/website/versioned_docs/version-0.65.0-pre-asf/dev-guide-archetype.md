@@ -29,7 +29,7 @@ Now, a new folder with the name ``ExampleProcessor`` is generated.
 mvn archetype:generate                              	 	     \
   -DarchetypeGroupId=org.streampipes          			         \
   -DarchetypeArtifactId=streampipes-archetype-pe-processors-jvm  \
-  -DarchetypeVersion={sp.version}
+  -DarchetypeVersion=0.65.0
 ```
 <details class="info">
     <summary>Select: [Processors / Sinks] [JVM / Flink]</summary>
