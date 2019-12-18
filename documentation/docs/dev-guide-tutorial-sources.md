@@ -32,7 +32,7 @@ Enter the following command in a command line of your choice (Apache Maven needs
 ```
 mvn archetype:generate \
 -DarchetypeGroupId=org.streampipes -DarchetypeArtifactId=streampipes-archetype-pe-sources \
--DarchetypeVersion=0.64.0 -DgroupId=my.groupId \
+-DarchetypeVersion=0.65.0 -DgroupId=my.groupId \
 -DartifactId=my-source -DclassNamePrefix=MySource -DpackageName=mypackagename
 ```
 
@@ -94,7 +94,7 @@ public class MySourceStream extends AbstractAdapterIncludedStream {
 This class extends the class ``AbstractAdapterIncludedStream``, which indicates that this source continuously produces data (configured in the ``executeStream()`` method.
 In contrast, the class `AbstractAlreadyExistingStream` indicates that we only want to describe an already existing stream (e.g., a stream that already sends data to an existing Kafka broker).
 
-No we will add the definition of the data stream. Add the following code inside of the `declareModel` method:
+Next, we will add the definition of the data stream. Add the following code inside of the `declareModel` method:
 ```java
 return DataStreamBuilder.create("org.streampipes.tutorial.vehicle.position", "Vehicle Position", "An event stream " +
           "that produces current vehicle positions")
