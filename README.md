@@ -1,4 +1,4 @@
-![](https://github.com/apache/incubator-streampipes-website/workflows/Build%20and%20Deploy/badge.svg)
+[![Github Actions](https://img.shields.io/github/workflow/status/apache/incubator-streampipes-website/Build%20and%20Deploy)](https://github.com/apache/incubator-streampipes-website/actions/)
 # Apache StreamPipes (incubating) Website + Docs
 
 ## Intro
