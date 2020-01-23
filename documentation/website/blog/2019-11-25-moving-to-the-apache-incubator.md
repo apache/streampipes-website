@@ -15,8 +15,8 @@ After some very early prototypes (see an early screenshot below :-)) demonstrati
 Since then, we presented and showcased StreamPipes at various events: fairs, meetups, conference talks and so on. For instance, in 2019 we attended over 20 events where we gave demos or talked about StreamPipes.
 It is great to see that the solution is now steadily getting increased traction in the Industrial IoT space.
 
-<img class="blog-image" style="max-width:90%;margin-bottom:20px;" src="/blog/assets/2019-11-25/2019-11_StreamPipes-v0.png" alt="1st prototype of the StreamPipes UI">
-<img class="blog-image" style="max-width:90%;" src="/blog/assets/2019-11-25/2019-11_StreamPipes-now.png" alt="1st prototype of the StreamPipes UI">
+<img class="blog-image" style="max-width:90%;margin-bottom:20px;" src="/docs/blog/assets/2019-11-25/2019-11_StreamPipes-v0.png" alt="1st prototype of the StreamPipes UI">
+<img class="blog-image" style="max-width:90%;" src="/docs/blog/assets/2019-11-25/2019-11_StreamPipes-now.png" alt="1st prototype of the StreamPipes UI">
 
 ## Moving to the Apache Incubator
 Earlier this year, we discussed how to continue the development of StreamPipes. For the core team at FZI, our main goal was to widen the developer base, attract external developers and to make StreamPipes a real community-driven open source project.
@@ -33,7 +33,7 @@ With the great help from our mentors, we already performed some initial steps re
 * We will move our code repositories over to the ASF on Github. Before that, we'll merge some repos to make future releases easier: The **backend and user interface** will be merged to the repository [https://www.github.com/apache/incubator-streampipes]([https://www.github.com/apache/incubator-streampipes). Pipeline elements and StreamPipes Connect adapters will also be merged to a new repo called **streampipes-extensions**, soon available at [https://www.github.com/apache/incubator-streampipes-extensions](https://www.github.com/apache/incubator-streampipes-extensions). Both **website and documentation** will be available at [https://www.github.com/apache/incubator-streampipes-website](https://www.github.com/apache/incubator-streampipes-website). Finally, the project **streampipes-installer** at [https://www.github.com/apache/incubator-streampipes-installer](https://www.github.com/apache/incubator-streampipes-installer) will contain the installer for Windows and OSX/Linux, the developer-oriented CLI tool and helm charts to install StreamPipes in Kubernetes.
 * Apache project communication mainly relies on mailing lists. Subscribe to the [user list](mailto:users-subscribe@streampipes.apache.org) and [dev list](mailto:dev-subscribe@streampipes.apache.org) and help us to improve StreamPipes!
 * Issues can be created in the new [Jira](https://issues.apache.org/jira/projects/STREAMPIPES).
-* All previous releases will be marked as non-ASF-releases to clearly indicate that previous releases do not follow the Apache release policy. Yesterday, we released the final pre-Apache version [0.65.0](/blog/2019/11/23/release-0650), the next release will be our first Apache release.  
+* All previous releases will be marked as non-ASF-releases to clearly indicate that previous releases do not follow the Apache release policy. Yesterday, we released the final pre-Apache version [0.65.0](/docs/blog/2019/11/23/release-0650), the next release will be our first Apache release.  
 
 ## Thanks
 We would like to thank Chris Dutz for his great support in doing the first steps in the Apache Incubator.

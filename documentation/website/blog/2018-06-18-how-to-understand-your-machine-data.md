@@ -26,7 +26,7 @@ In the end, machine learning and advanced analytics algorithms can be used to ge
 The idea behind those steps is to generate value as early as possible by collecting the low-hanging fruits first.
 We develop methodologies and tools for the individual steps to also allow domain experts to perform them to bridge the gap between the big tech companies and more traditional industries.
 
-<img class="blog-image" style="max-width:50%;" src="/blog/assets/2018-06-18/01_motivation.png" alt="Motivation Graphic">
+<img class="blog-image" style="max-width:50%;" src="/docs/blog/assets/2018-06-18/01_motivation.png" alt="Motivation Graphic">
 
 The questions we try to answer in these blog posts are:
 
@@ -40,7 +40,7 @@ It contains multiple water tanks and pipes that connect those tanks.
 Within the tanks and the pipes are multiple sensors, which measure for example the water level in the tank, the flow rate in the water pipe, or the temperature of the water.
 All those sensors are very simple, they make iterative observations and send the sensed measurements to a computer system.
 
-<img class="blog-image" style="max-width:70%;" src="/blog/assets/2018-06-18/02_anlage.png" alt="Water Circle Image">
+<img class="blog-image" style="max-width:70%;" src="/docs/blog/assets/2018-06-18/02_anlage.png" alt="Water Circle Image">
 
 Before we go into detail, we want to explain the term streaming data, because we focus on machine and sensor data which is continually produced in a streaming fashion.
 The opposite of streaming data are fixed sized data sets, called batch data.
@@ -64,7 +64,7 @@ In the end, results can be stored in **data bases**.
 From there, other applications like for example dashboards can access the calculated results.
 This is the high-level architecture of processing data streams.
 
-<img class="blog-image" src="/blog/assets/2018-06-18/03_architecture.png" alt="Overall architecture">
+<img class="blog-image" src="/docs/blog/assets/2018-06-18/03_architecture.png" alt="Overall architecture">
 
 Once the events are integrated into a middleware, it must be processed to detect situations and generate higher-level events.
 This can be done in an **Event Processing Network (EPN)**.
@@ -76,7 +76,7 @@ The last of the processing elements detects when both situations occur within a 
 In the end, we employ a data sink, which triggers a notification for a service technician once the modeled situation occurs.
 We call such instances of EPNs processing **pipelines**.
 
-<img class="blog-image" src="/blog/assets/2018-06-18/04_pipeline.png" alt="Example Pipeline">
+<img class="blog-image" src="/docs/blog/assets/2018-06-18/04_pipeline.png" alt="Example Pipeline">
 
 The pipeline in the image before contains three different processing elements.
 Those elements contain the actual algorithms.
@@ -97,7 +97,7 @@ With that layer, our system is capable of understanding the meaning and further 
 In this first blog post of our series, we gave a first introduction how data produced by machines and systems can be analyzed and value can be generated out of it.
 In the following blog posts we explain the individual parts in more detail to provide you with enough knowledge to start analyzing your own data.
 
-* **[Part 1: Overview](/blog/2018/06/18/how-to-understand-your-machine-data)**
+* **[Part 1: Overview](/docs/blog/2018/06/18/how-to-understand-your-machine-data)**
 * Part 2: Data Sources
 * Part 3: Data Processing Elements
 * Part 4: Data Sinks
