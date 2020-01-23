@@ -17,5 +17,4 @@ website/i18n/*
 build/
 documentation/website/build/
 
-package-lock.json
-
+**/package-lock.json
