@@ -1,3 +1,4 @@
+![](https://github.com/apache/incubator-streampipes-website/workflows/Build%20and%20Deploy/badge.svg)
 # Apache StreamPipes (incubating) Website + Docs
 
 ## Intro
