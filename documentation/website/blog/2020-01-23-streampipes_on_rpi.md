@@ -15,7 +15,7 @@ This is the start of a two part series on how we want to bring StreamPipes close
 
 <TL;DR>
 
-With new advancements that came in the last StreamPipes release, we managed to reduce the required resources (mainly memory) drastically. To this extent, we cross-compiled StreamPipes Docker images for ARM support and deployed our lite version on a Raspberry Pi (Model 4). We showcase, that it is feasible to run analytical pipelines with ease and operate StreamPipes at moderate load.
+_With new advancements that came in the last StreamPipes release, we managed to reduce the required resources (mainly memory) drastically. To this extent, we cross-compiled StreamPipes Docker images for ARM support and deployed our lite version on a Raspberry Pi (Model 4). We showcase, that it is feasible to run analytical pipelines with ease and operate StreamPipes at moderate load._
 
 Apache StreamPipes (incubating) is a self-service (Industrial) IoT toolbox to enable non-technical users to easily connect, analyze and explore IoT data streams. Users can leverage algorithms from an extensible toolbox to model their analytical pipelines. By building on a microservice architecture, StreamPipes components can be distributed in a cluster (e.g. Kubernetes)  as well as run on a single node for prototypical and development purposes using Docker. With the latest release of StreamPipes (0.65.0), we managed to reduce the memory consumption drastically to use less than 2Gig‘s of RAM for the lite version. Since we had a Raspberry Pi Model 4 laying around, we thought: hey why not just deploy StreamPipes on a Pi - and that’s what we did. Along the way, we learned quite some interesting things, that we want to share in this blog post.
 
@@ -27,12 +27,12 @@ StreamPipes Docker images were only built for x86 based architectures. However, 
 
 <img class="blog-image" style="max-width:100%;" src="/docs/blog/assets/2020-01-23/01_start.png" alt="StreamPipes CLI starting StreamPipes lite version on Raspberry Pi 4">
 
-The figure shows StreamPipes CLI starting our internal `0.65.1-SNAPSHOT` version, where we tested the multiarch build of our images. As depicted, all StreamPipes lite services are started. Due to the fact, that we created a manifest for all our Docker images, we did not have to change our a single image description specified in the various `docker-compose.yml` files in the service repository. This is pretty cool! The Docker daemon automatically pulls the correct image for our architecture - in our case ARM32v7 since we operate on a Raspberry Pi. Taking a quick look at `htop` indicates that we operate on a constant level of consumed memory at around ~1.7GB.
+The figure shows StreamPipes CLI starting our internal `0.65.1-SNAPSHOT` version, where we tested the multiarch build of our images. As depicted, all StreamPipes lite services are started. Due to the fact, that we created a manifest for all our Docker images, we did not have to change a single image description specified in the various `docker-compose.yml` files in the service repository. This is pretty cool! The Docker daemon automatically pulls the correct image for the corresponding architecture - in our case ARM32v7. Taking a quick look at `htop` indicates that we operate on a constant level of consumed memory at around ~1.7GB.
 
 <img class="blog-image" style="max-width:100%;" src="/docs/blog/assets/2020-01-23/02_htop.png" alt="htop showing around 1.7GB memory consumption">
 
 ### Demo: Temperature Monitoring Pipeline
-To test our setup, we deployed a simple temperature monitoring pipeline, that throws a notification whenever the temperature value exceeds a certain threshold (in this case: 65°C) and visualizes the results in a basic dashboard (see figure). Therefore, we use existing pipeline elements of our algorithm toolbox. StreamPipes lite already provides you with sample data sources - in this case a flow rate sensor producing temperature, as well as mass flow measurements. So our temperature monitoring pipeline consists of the following pipeline elements:
+To test our setup, we deployed a simple temperature monitoring pipeline, that throws a notification whenever the temperature value exceeds a certain threshold (in this case: 65°C) and visualizes the results in a basic dashboard (see figure). Therefore, we use existing pipeline elements of the algorithm toolbox provided within the lite version. Thereby, StreamPipes lite already hooks you up with sample data sources - in this case a flow rate sensor - producing temperature, as well as mass flow measurements. So our temperature monitoring pipeline consists of the following pipeline elements:
 
 - **Data source:** Flow rate sensor (mock data generating `<timestamp;sensorid;massflow;temperature>` each second)
 - **Data processor:** Numerical filter (specified temperature threshold: > 65°C)
@@ -42,11 +42,11 @@ To test our setup, we deployed a simple temperature monitoring pipeline, that th
 
 After saving and starting the pipeline, we built our dashboard based on the results of the pipeline, only showing values above 65°C. Additionally, we receive a notification for every event, that exceeds this temperature threshold.
 
-<img class="blog-image" style="max-width:100%;" src="/docs/blog/assets/2020-01-23/04_dashboard.png" alt="Dasboard">
+<img class="blog-image" style="max-width:100%;" src="/docs/blog/assets/2020-01-23/04_dashboard.png" alt="Dashboard">
 
 
 ### So, what's next?
-Starting out as a simple hack session on a late afternoon, trying to test where we could potentially run StreamPipes on and push it to it's limits, we gained valueable insights on how to build and run it on various architectures. Even though we do not recommend deploying StreamPipes in it's full glory on single low-resourced devices such as Raspberry Pi's, we aim to bring certain algorithm closer to where data is generated - on the edge. Consequently - apart from x86 images - we plan on providing our StreamPipes Docker images for ARM based architectures in the future. As a sneak peak - we also plan on deploying StreamPipes over a k3s [[3](https://k3s.io/)] cluster, a lightweight Kubernetes distro especially suited for IoT and edge scenarios.
+Starting out as a simple hack session on a late afternoon, trying to test where we could potentially run StreamPipes on and push it to it's limits, we gained valueable insights on how to build and run it on various architectures. Even though we do not recommend deploying StreamPipes in it's full glory on single low-resourced devices such as Raspberry Pi's, we aim to bring certain algorithms closer to where data is generated - on the edge. Consequently - apart from x86 images - we plan on providing our StreamPipes Docker images for ARM based architectures in the future. As a sneak peak - we also plan on deploying StreamPipes over a k3s [[3](https://k3s.io/)] cluster, a lightweight Kubernetes distro especially suited for IoT and edge scenarios.
 
 - **[Part 1: StreamPi(pes) - Running StreamPipes on Raspberry Pi](/docs/blog/2020/01/23/streampipes_on_rpi)**
 - Part 2: StreamPipes goes edge - Running StreamPipes on k3s
