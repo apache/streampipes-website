@@ -80,195 +80,311 @@
       "license": {
         "title": "license"
       },
-      "org.streampipes.processor.geo.flink/org.streampipes.processor.geo.flink": {
+      "org.apache.streampipes.processor.geo.flink/org.apache.streampipes.processor.geo.flink": {
         "title": "Spatial Grid Enrichment",
         "sidebar_label": "Spatial Grid Enrichment"
       },
-      "org.streampipes.processor.imageclassification.jvm.generic-image-classification/org.streampipes.processor.imageclassification.jvm.generic-image-classification": {
+      "org.apache.streampipes.processor.geo.jvm.geocoding/org.apache.streampipes.processor.geo.jvm.geocoding": {
+        "title": "Google Maps Geocoder",
+        "sidebar_label": "Google Maps Geocoder"
+      },
+      "org.apache.streampipes.processor.geo.jvm.reversegeocoding/org.apache.streampipes.processor.geo.jvm.reversegeocoding": {
+        "title": "Reverse Geocoder",
+        "sidebar_label": "Reverse Geocoder"
+      },
+      "org.apache.streampipes.processor.geo.jvm.staticgeocoding/org.apache.streampipes.processor.geo.jvm.staticgeocoding": {
+        "title": "Static Google Maps Geocoder",
+        "sidebar_label": "Static Google Maps Geocoder"
+      },
+      "org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification": {
         "title": "Generic Image Classification",
         "sidebar_label": "Generic Image Classification"
       },
-      "org.streampipes.processor.imageclassification.jvm.image-enricher/org.streampipes.processor.imageclassification.jvm.image-enricher": {
+      "org.apache.streampipes.processor.imageclassification.jvm.image-enricher/org.apache.streampipes.processor.imageclassification.jvm.image-enricher": {
         "title": "Image Enricher",
         "sidebar_label": "Image Enricher"
       },
-      "org.streampipes.processor.imageclassification.qrcode/org.streampipes.processor.imageclassification.qrcode": {
+      "org.apache.streampipes.processor.imageclassification.qrcode/org.apache.streampipes.processor.imageclassification.qrcode": {
         "title": "QR Code Reader",
         "sidebar_label": "QR Code Reader"
       },
-      "org.streampipes.processors.aggregation.flink.aggregation/org.streampipes.processors.aggregation.flink.aggregation": {
+      "org.apache.streampipes.processors.aggregation.flink.aggregation/org.apache.streampipes.processors.aggregation.flink.aggregation": {
         "title": "Aggregation",
         "sidebar_label": "Aggregation"
       },
-      "org.streampipes.processors.aggregation.flink.rate/org.streampipes.processors.aggregation.flink.rate": {
+      "org.apache.streampipes.processors.aggregation.flink.eventcount/org.apache.streampipes.processors.aggregation.flink.eventcount": {
+        "title": "Event Counter",
+        "sidebar_label": "Event Counter"
+      },
+      "org.apache.streampipes.processors.aggregation.flink.rate/org.apache.streampipes.processors.aggregation.flink.rate": {
         "title": "Event Rate",
         "sidebar_label": "Event Rate"
       },
-      "org.streampipes.processors.enricher.flink.processor.math.mathop/org.streampipes.processors.enricher.flink.processor.math.mathop": {
+      "org.apache.streampipes.processors.enricher.flink.processor.math.mathop/org.apache.streampipes.processors.enricher.flink.processor.math.mathop": {
         "title": "Math",
         "sidebar_label": "Math"
       },
-      "org.streampipes.processors.enricher.flink.processor.math.staticmathop/org.streampipes.processors.enricher.flink.processor.math.staticmathop": {
+      "org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop": {
         "title": "Static Math",
         "sidebar_label": "Static Math"
       },
-      "org.streampipes.processors.enricher.flink.processor.trigonometry/org.streampipes.processors.enricher.flink.processor.trigonometry": {
+      "org.apache.streampipes.processors.enricher.flink.processor.trigonometry/org.apache.streampipes.processors.enricher.flink.processor.trigonometry": {
         "title": "Trigonometry Functions",
         "sidebar_label": "Trigonometry Functions"
       },
-      "org.streampipes.processors.enricher.flink.processor.urldereferencing/org.streampipes.processors.enricher.flink.processor.urldereferencing": {
+      "org.apache.streampipes.processors.enricher.flink.processor.urldereferencing/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing": {
         "title": "URL Dereferencing",
         "sidebar_label": "URL Dereferencing"
       },
-      "org.streampipes.processors.enricher.flink.timestamp/org.streampipes.processors.enricher.flink.timestamp": {
+      "org.apache.streampipes.processors.enricher.flink.timestamp/org.apache.streampipes.processors.enricher.flink.timestamp": {
         "title": "Timestamp Enricher",
         "sidebar_label": "Timestamp Enricher"
       },
-      "org.streampipes.processors.filters.jvm.compose/org.streampipes.processors.filters.jvm.compose": {
+      "org.apache.streampipes.processors.enricher.jvm.sizemeasure/org.apache.streampipes.processors.enricher.jvm.sizemeasure": {
+        "title": "Size Measure",
+        "sidebar_label": "Size Measure"
+      },
+      "org.apache.streampipes.processors.filters.jvm.compose/org.apache.streampipes.processors.filters.jvm.compose": {
         "title": "Compose",
         "sidebar_label": "Compose"
       },
-      "org.streampipes.processors.filters.jvm.numericalfilter/org.streampipes.processors.filters.jvm.numericalfilter": {
+      "org.apache.streampipes.processors.filters.jvm.enrich/org.apache.streampipes.processors.filters.jvm.enrich": {
+        "title": "Merge By Enrich",
+        "sidebar_label": "Merge By Enrich"
+      },
+      "org.apache.streampipes.processors.filters.jvm.merge/org.apache.streampipes.processors.filters.jvm.merge": {
+        "title": "Merge By Time",
+        "sidebar_label": "Merge By Time"
+      },
+      "org.apache.streampipes.processors.filters.jvm.numericalfilter/org.apache.streampipes.processors.filters.jvm.numericalfilter": {
         "title": "Numerical Filter",
         "sidebar_label": "Numerical Filter"
       },
-      "org.streampipes.processors.filters.jvm.project/org.streampipes.processors.filters.jvm.project": {
+      "org.apache.streampipes.processors.filters.jvm.numericaltextfilter/org.apache.streampipes.processors.filters.jvm.numericaltextfilter": {
+        "title": "Numerical Text Filter",
+        "sidebar_label": "Numerical Text Filter"
+      },
+      "org.apache.streampipes.processors.filters.jvm.project/org.apache.streampipes.processors.filters.jvm.project": {
         "title": "Projection",
         "sidebar_label": "Projection"
       },
-      "org.streampipes.processors.filters.jvm.textfilter/org.streampipes.processors.filters.jvm.textfilter": {
+      "org.apache.streampipes.processors.filters.jvm.textfilter/org.apache.streampipes.processors.filters.jvm.textfilter": {
         "title": "Text Filter",
         "sidebar_label": "Text Filter"
       },
-      "org.streampipes.processors.pattern-detection.flink.peak-detection/org.streampipes.processors.pattern-detection.flink.peak-detection": {
+      "org.apache.streampipes.processors.filters.jvm.threshold/org.apache.streampipes.processors.filters.jvm.threshold": {
+        "title": "Threshold Detector",
+        "sidebar_label": "Threshold Detector"
+      },
+      "org.apache.streampipes.processors.geo.jvm.processor.distancecalculator/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator": {
+        "title": "Distance Calculator",
+        "sidebar_label": "Distance Calculator"
+      },
+      "org.apache.streampipes.processors.pattern-detection.flink.peak-detection/org.apache.streampipes.processors.pattern-detection.flink.peak-detection": {
         "title": "Peak Detection",
         "sidebar_label": "Peak Detection"
       },
-      "org.streampipes.processors.siddhi.frequency/org.streampipes.processors.siddhi.frequency": {
+      "org.apache.streampipes.processors.siddhi.frequency/org.apache.streampipes.processors.siddhi.frequency": {
         "title": "Frequency Calculation",
         "sidebar_label": "Frequency Calculation"
       },
-      "org.streampipes.processors.siddhi.frequencychange/org.streampipes.processors.siddhi.frequencychange": {
+      "org.apache.streampipes.processors.siddhi.frequencychange/org.apache.streampipes.processors.siddhi.frequencychange": {
         "title": "Frequency Change",
         "sidebar_label": "Frequency Change"
       },
-      "org.streampipes.processors.siddhi.increase/org.streampipes.processors.siddhi.increase": {
+      "org.apache.streampipes.processors.siddhi.increase/org.apache.streampipes.processors.siddhi.increase": {
         "title": "Trend",
         "sidebar_label": "Trend"
       },
-      "org.streampipes.processors.siddhi.numericalfilter/org.streampipes.processors.siddhi.numericalfilter": {
+      "org.apache.streampipes.processors.siddhi.numericalfilter/org.apache.streampipes.processors.siddhi.numericalfilter": {
         "title": "Numerical Filter (Siddhi)",
         "sidebar_label": "Numerical Filter (Siddhi)"
       },
-      "org.streampipes.processors.siddhi.sequence/org.streampipes.processors.siddhi.sequence": {
+      "org.apache.streampipes.processors.siddhi.sequence/org.apache.streampipes.processors.siddhi.sequence": {
         "title": "Sequence Detection",
         "sidebar_label": "Sequence Detection"
       },
-      "org.streampipes.processors.siddhi.stop/org.streampipes.processors.siddhi.stop": {
+      "org.apache.streampipes.processors.siddhi.stop/org.apache.streampipes.processors.siddhi.stop": {
         "title": "Stream Stop Detection",
         "sidebar_label": "Stream Stop Detection"
       },
-      "org.streampipes.processors.textmining.flink.languagedetection/org.streampipes.processors.textmining.flink.languagedetection": {
+      "org.apache.streampipes.processors.textmining.flink.languagedetection/org.apache.streampipes.processors.textmining.flink.languagedetection": {
         "title": "Language Detection",
         "sidebar_label": "Language Detection"
       },
-      "org.streampipes.processors.textmining.flink.wordcount/org.streampipes.processors.textmining.flink.wordcount": {
+      "org.apache.streampipes.processors.textmining.flink.wordcount/org.apache.streampipes.processors.textmining.flink.wordcount": {
         "title": "Word Count",
         "sidebar_label": "Word Count"
       },
-      "org.streampipes.processors.transformation.flink.field-converter/org.streampipes.processors.transformation.flink.field-converter": {
+      "org.apache.streampipes.processors.textmining.jvm.chunker/org.apache.streampipes.processors.textmining.jvm.chunker": {
+        "title": "Chunker (English)",
+        "sidebar_label": "Chunker (English)"
+      },
+      "org.apache.streampipes.processors.textmining.jvm.languagedetection/org.apache.streampipes.processors.textmining.jvm.languagedetection": {
+        "title": "Language Detection",
+        "sidebar_label": "Language Detection"
+      },
+      "org.apache.streampipes.processors.textmining.jvm.namefinder/org.apache.streampipes.processors.textmining.jvm.namefinder": {
+        "title": "Name Finder",
+        "sidebar_label": "Name Finder"
+      },
+      "org.apache.streampipes.processors.textmining.jvm.partofspeech/org.apache.streampipes.processors.textmining.jvm.partofspeech": {
+        "title": "Part of Speech (English)",
+        "sidebar_label": "Part of Speech (English)"
+      },
+      "org.apache.streampipes.processors.textmining.jvm.sentencedetection/org.apache.streampipes.processors.textmining.jvm.sentencedetection": {
+        "title": "Sentence Detection (English)",
+        "sidebar_label": "Sentence Detection (English)"
+      },
+      "org.apache.streampipes.processors.textmining.jvm.tokenizer/org.apache.streampipes.processors.textmining.jvm.tokenizer": {
+        "title": "Tokenizer (English)",
+        "sidebar_label": "Tokenizer (English)"
+      },
+      "org.apache.streampipes.processors.transformation.flink.field-converter/org.apache.streampipes.processors.transformation.flink.field-converter": {
         "title": "Field Converter",
         "sidebar_label": "Field Converter"
       },
-      "org.streampipes.processors.transformation.flink.field-mapper/org.streampipes.processors.transformation.flink.field-mapper": {
+      "org.apache.streampipes.processors.transformation.flink.field-mapper/org.apache.streampipes.processors.transformation.flink.field-mapper": {
         "title": "Field Mapper",
         "sidebar_label": "Field Mapper"
       },
-      "org.streampipes.processors.transformation.flink.field-renamer/org.streampipes.processors.transformation.flink.field-renamer": {
+      "org.apache.streampipes.processors.transformation.flink.field-renamer/org.apache.streampipes.processors.transformation.flink.field-renamer": {
         "title": "Field Renamer",
         "sidebar_label": "Field Renamer"
       },
-      "org.streampipes.processors.transformation.flink.fieldhasher/org.streampipes.processors.transformation.flink.fieldhasher": {
+      "org.apache.streampipes.processors.transformation.flink.fieldhasher/org.apache.streampipes.processors.transformation.flink.fieldhasher": {
         "title": "Field Hasher",
         "sidebar_label": "Field Hasher"
       },
-      "org.streampipes.processors.transformation.flink.measurement-unit-converter/org.streampipes.processors.transformation.flink.measurement-unit-converter": {
+      "org.apache.streampipes.processors.transformation.flink.measurement-unit-converter/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter": {
         "title": "Measurement Unit Converter",
         "sidebar_label": "Measurement Unit Converter"
       },
-      "org.streampipes.processors.transformation.flink.processor.boilerplate/org.streampipes.processors.transformation.flink.processor.boilerplate": {
+      "org.apache.streampipes.processors.transformation.flink.processor.boilerplate/org.apache.streampipes.processors.transformation.flink.processor.boilerplate": {
         "title": "Boilerplate Removal",
         "sidebar_label": "Boilerplate Removal"
       },
-      "org.streampipes.processors.transformation.jvm.changed-value/org.streampipes.processors.transformation.jvm.changed-value": {
+      "org.apache.streampipes.processors.transformation.jvm.booloperator.counter/org.apache.streampipes.processors.transformation.jvm.booloperator.counter": {
+        "title": "Boolean Counter",
+        "sidebar_label": "Boolean Counter"
+      },
+      "org.apache.streampipes.processors.transformation.jvm.booloperator.inverter/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter": {
+        "title": "Boolean Inverter",
+        "sidebar_label": "Boolean Inverter"
+      },
+      "org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping": {
+        "title": "Measure Time Between Two Sensors",
+        "sidebar_label": "Measure Time Between Two Sensors"
+      },
+      "org.apache.streampipes.processors.transformation.jvm.booloperator.timer/org.apache.streampipes.processors.transformation.jvm.booloperator.timer": {
+        "title": "Boolean Timer",
+        "sidebar_label": "Boolean Timer"
+      },
+      "org.apache.streampipes.processors.transformation.jvm.changed-value/org.apache.streampipes.processors.transformation.jvm.changed-value": {
         "title": "Value Changed",
         "sidebar_label": "Value Changed"
       },
-      "org.streampipes.processors.transformation.jvm.count-array/org.streampipes.processors.transformation.jvm.count-array": {
+      "org.apache.streampipes.processors.transformation.jvm.count-array/org.apache.streampipes.processors.transformation.jvm.count-array": {
         "title": "Count Array",
         "sidebar_label": "Count Array"
       },
-      "org.streampipes.processors.transformation.jvm.duration-value/org.streampipes.processors.transformation.jvm.duration-value": {
+      "org.apache.streampipes.processors.transformation.jvm.csvmetadata/org.apache.streampipes.processors.transformation.jvm.csvmetadata": {
+        "title": "CSV Metadata Enricher",
+        "sidebar_label": "CSV Metadata Enricher"
+      },
+      "org.apache.streampipes.processors.transformation.jvm.duration-value/org.apache.streampipes.processors.transformation.jvm.duration-value": {
         "title": "Calculate Duration",
         "sidebar_label": "Calculate Duration"
       },
-      "org.streampipes.processors.transformation.jvm.processor.timestampextractor/org.streampipes.processors.transformation.jvm.processor.timestampextractor": {
+      "org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor": {
         "title": "Timestamp Extractor",
         "sidebar_label": "Timestamp Extractor"
       },
-      "org.streampipes.processors.transformation.jvm.split-array/org.streampipes.processors.transformation.jvm.split-array": {
+      "org.apache.streampipes.processors.transformation.jvm.split-array/org.apache.streampipes.processors.transformation.jvm.split-array": {
         "title": "Split Array",
         "sidebar_label": "Split Array"
       },
-      "org.streampipes.sinks.brokers.jvm.jms/org.streampipes.sinks.brokers.jvm.jms": {
+      "org.apache.streampipes.processors.transformation.jvm.taskduration/org.apache.streampipes.processors.transformation.jvm.taskduration": {
+        "title": "Task Duration",
+        "sidebar_label": "Task Duration"
+      },
+      "org.apache.streampipes.processors.transformation.jvm.transform-to-boolean/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean": {
+        "title": "Transform to boolean",
+        "sidebar_label": "Transform to boolean"
+      },
+      "org.apache.streampipes.sinks.brokers.jvm.bufferrest/org.apache.streampipes.sinks.brokers.jvm.bufferrest": {
+        "title": "Buffered REST Publisher",
+        "sidebar_label": "Buffered REST Publisher"
+      },
+      "org.apache.streampipes.sinks.brokers.jvm.jms/org.apache.streampipes.sinks.brokers.jvm.jms": {
         "title": "JMS Publisher",
         "sidebar_label": "JMS Publisher"
       },
-      "org.streampipes.sinks.brokers.jvm.kafka/org.streampipes.sinks.brokers.jvm.kafka": {
+      "org.apache.streampipes.sinks.brokers.jvm.kafka/org.apache.streampipes.sinks.brokers.jvm.kafka": {
         "title": "Kafka Publisher",
         "sidebar_label": "Kafka Publisher"
       },
-      "org.streampipes.sinks.brokers.jvm.rabbitmq/org.streampipes.sinks.brokers.jvm.rabbitmq": {
+      "org.apache.streampipes.sinks.brokers.jvm.pulsar/org.apache.streampipes.sinks.brokers.jvm.pulsar": {
+        "title": "Pulsar Publisher",
+        "sidebar_label": "Pulsar Publisher"
+      },
+      "org.apache.streampipes.sinks.brokers.jvm.rabbitmq/org.apache.streampipes.sinks.brokers.jvm.rabbitmq": {
         "title": "RabbitMQ Publisher",
         "sidebar_label": "RabbitMQ Publisher"
       },
-      "org.streampipes.sinks.brokers.jvm.rest/org.streampipes.sinks.brokers.jvm.rest": {
+      "org.apache.streampipes.sinks.brokers.jvm.rest/org.apache.streampipes.sinks.brokers.jvm.rest": {
         "title": "REST Publisher",
         "sidebar_label": "REST Publisher"
       },
-      "org.streampipes.sinks.databases.flink.elasticsearch/org.streampipes.sinks.databases.flink.elasticsearch": {
+      "org.apache.streampipes.sinks.databases.ditto/org.apache.streampipes.sinks.databases.ditto": {
+        "title": "Eclipse Ditto",
+        "sidebar_label": "Eclipse Ditto"
+      },
+      "org.apache.streampipes.sinks.databases.flink.elasticsearch/org.apache.streampipes.sinks.databases.flink.elasticsearch": {
         "title": "Elasticsearch",
         "sidebar_label": "Elasticsearch"
       },
-      "org.streampipes.sinks.databases.jvm.couchdb/org.streampipes.sinks.databases.jvm.couchdb": {
+      "org.apache.streampipes.sinks.databases.jvm.couchdb/org.apache.streampipes.sinks.databases.jvm.couchdb": {
         "title": "CouchDB",
         "sidebar_label": "CouchDB"
       },
-      "org.streampipes.sinks.databases.jvm.influxdb/org.streampipes.sinks.databases.jvm.influxdb": {
+      "org.apache.streampipes.sinks.databases.jvm.influxdb/org.apache.streampipes.sinks.databases.jvm.influxdb": {
         "title": "InfluxDB",
         "sidebar_label": "InfluxDB"
       },
-      "org.streampipes.sinks.databases.jvm.postgresql/org.streampipes.sinks.databases.jvm.postgresql": {
+      "org.apache.streampipes.sinks.databases.jvm.iotdb/org.apache.streampipes.sinks.databases.jvm.iotdb": {
+        "title": "IoTDB",
+        "sidebar_label": "IoTDB"
+      },
+      "org.apache.streampipes.sinks.databases.jvm.opcua/org.apache.streampipes.sinks.databases.jvm.opcua": {
+        "title": "OPC-UA",
+        "sidebar_label": "OPC-UA"
+      },
+      "org.apache.streampipes.sinks.databases.jvm.postgresql/org.apache.streampipes.sinks.databases.jvm.postgresql": {
         "title": "PostgreSQL",
         "sidebar_label": "PostgreSQL"
       },
-      "org.streampipes.sinks.internal.jvm.dashboard/org.streampipes.sinks.internal.jvm.dashboard": {
+      "org.apache.streampipes.sinks.internal.jvm.dashboard/org.apache.streampipes.sinks.internal.jvm.dashboard": {
         "title": "Dashboard Sink",
         "sidebar_label": "Dashboard Sink"
       },
-      "org.streampipes.sinks.internal.jvm.notification/org.streampipes.sinks.internal.jvm.notification": {
+      "org.apache.streampipes.sinks.internal.jvm.datalake/org.apache.streampipes.sinks.internal.jvm.datalake": {
+        "title": "Data Lake",
+        "sidebar_label": "Data Lake"
+      },
+      "org.apache.streampipes.sinks.internal.jvm.notification/org.apache.streampipes.sinks.internal.jvm.notification": {
         "title": "Notification",
         "sidebar_label": "Notification"
       },
-      "org.streampipes.sinks.notifications.jvm.email/org.streampipes.sinks.notifications.jvm.email": {
+      "org.apache.streampipes.sinks.notifications.jvm.email/org.apache.streampipes.sinks.notifications.jvm.email": {
         "title": "Email Notification",
         "sidebar_label": "Email Notification"
       },
-      "org.streampipes.sinks.notifications.jvm.onesignal/org.streampipes.sinks.notifications.jvm.onesignal": {
+      "org.apache.streampipes.sinks.notifications.jvm.onesignal/org.apache.streampipes.sinks.notifications.jvm.onesignal": {
         "title": "OneSignal",
         "sidebar_label": "OneSignal"
       },
-      "org.streampipes.sinks.notifications.jvm.slack/org.streampipes.sinks.notifications.jvm.slack": {
+      "org.apache.streampipes.sinks.notifications.jvm.slack/org.apache.streampipes.sinks.notifications.jvm.slack": {
         "title": "Slack Notification",
         "sidebar_label": "Slack Notification"
       },
@@ -707,6 +823,318 @@
       "version-0.65.0-pre-asf/version-0.65.0-pre-asf-dev-guide-tutorial-sinks": {
         "title": "Tutorial: Data Sinks",
         "sidebar_label": "Tutorial: Data Sinks"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processor.geo.flink/version-0.65.0-pre-asf-org.apache.streampipes.processor.geo.flink": {
+        "title": "Spatial Grid Enrichment",
+        "sidebar_label": "Spatial Grid Enrichment"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processor.geo.jvm.geocoding/version-0.65.0-pre-asf-org.apache.streampipes.processor.geo.jvm.geocoding": {
+        "title": "Google Maps Geocoder",
+        "sidebar_label": "Google Maps Geocoder"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processor.geo.jvm.reversegeocoding/version-0.65.0-pre-asf-org.apache.streampipes.processor.geo.jvm.reversegeocoding": {
+        "title": "Reverse Geocoder",
+        "sidebar_label": "Reverse Geocoder"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processor.geo.jvm.staticgeocoding/version-0.65.0-pre-asf-org.apache.streampipes.processor.geo.jvm.staticgeocoding": {
+        "title": "Static Google Maps Geocoder",
+        "sidebar_label": "Static Google Maps Geocoder"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification/version-0.65.0-pre-asf-org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification": {
+        "title": "Generic Image Classification",
+        "sidebar_label": "Generic Image Classification"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processor.imageclassification.jvm.image-enricher/version-0.65.0-pre-asf-org.apache.streampipes.processor.imageclassification.jvm.image-enricher": {
+        "title": "Image Enricher",
+        "sidebar_label": "Image Enricher"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processor.imageclassification.qrcode/version-0.65.0-pre-asf-org.apache.streampipes.processor.imageclassification.qrcode": {
+        "title": "QR Code Reader",
+        "sidebar_label": "QR Code Reader"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.aggregation/version-0.65.0-pre-asf-org.apache.streampipes.processors.aggregation.flink.aggregation": {
+        "title": "Aggregation",
+        "sidebar_label": "Aggregation"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.eventcount/version-0.65.0-pre-asf-org.apache.streampipes.processors.aggregation.flink.eventcount": {
+        "title": "Event Counter",
+        "sidebar_label": "Event Counter"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.rate/version-0.65.0-pre-asf-org.apache.streampipes.processors.aggregation.flink.rate": {
+        "title": "Event Rate",
+        "sidebar_label": "Event Rate"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.math.mathop/version-0.65.0-pre-asf-org.apache.streampipes.processors.enricher.flink.processor.math.mathop": {
+        "title": "Math",
+        "sidebar_label": "Math"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop/version-0.65.0-pre-asf-org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop": {
+        "title": "Static Math",
+        "sidebar_label": "Static Math"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.trigonometry/version-0.65.0-pre-asf-org.apache.streampipes.processors.enricher.flink.processor.trigonometry": {
+        "title": "Trigonometry Functions",
+        "sidebar_label": "Trigonometry Functions"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing/version-0.65.0-pre-asf-org.apache.streampipes.processors.enricher.flink.processor.urldereferencing": {
+        "title": "URL Dereferencing",
+        "sidebar_label": "URL Dereferencing"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.enricher.flink.timestamp/version-0.65.0-pre-asf-org.apache.streampipes.processors.enricher.flink.timestamp": {
+        "title": "Timestamp Enricher",
+        "sidebar_label": "Timestamp Enricher"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.enricher.jvm.sizemeasure/version-0.65.0-pre-asf-org.apache.streampipes.processors.enricher.jvm.sizemeasure": {
+        "title": "Size Measure",
+        "sidebar_label": "Size Measure"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.compose/version-0.65.0-pre-asf-org.apache.streampipes.processors.filters.jvm.compose": {
+        "title": "Compose",
+        "sidebar_label": "Compose"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.enrich/version-0.65.0-pre-asf-org.apache.streampipes.processors.filters.jvm.enrich": {
+        "title": "Merge By Enrich",
+        "sidebar_label": "Merge By Enrich"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.merge/version-0.65.0-pre-asf-org.apache.streampipes.processors.filters.jvm.merge": {
+        "title": "Merge By Time",
+        "sidebar_label": "Merge By Time"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.numericalfilter/version-0.65.0-pre-asf-org.apache.streampipes.processors.filters.jvm.numericalfilter": {
+        "title": "Numerical Filter",
+        "sidebar_label": "Numerical Filter"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.numericaltextfilter/version-0.65.0-pre-asf-org.apache.streampipes.processors.filters.jvm.numericaltextfilter": {
+        "title": "Numerical Text Filter",
+        "sidebar_label": "Numerical Text Filter"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.project/version-0.65.0-pre-asf-org.apache.streampipes.processors.filters.jvm.project": {
+        "title": "Projection",
+        "sidebar_label": "Projection"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.textfilter/version-0.65.0-pre-asf-org.apache.streampipes.processors.filters.jvm.textfilter": {
+        "title": "Text Filter",
+        "sidebar_label": "Text Filter"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.threshold/version-0.65.0-pre-asf-org.apache.streampipes.processors.filters.jvm.threshold": {
+        "title": "Threshold Detector",
+        "sidebar_label": "Threshold Detector"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator/version-0.65.0-pre-asf-org.apache.streampipes.processors.geo.jvm.processor.distancecalculator": {
+        "title": "Distance Calculator",
+        "sidebar_label": "Distance Calculator"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.pattern-detection.flink.peak-detection/version-0.65.0-pre-asf-org.apache.streampipes.processors.pattern-detection.flink.peak-detection": {
+        "title": "Peak Detection",
+        "sidebar_label": "Peak Detection"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.siddhi.frequency/version-0.65.0-pre-asf-org.apache.streampipes.processors.siddhi.frequency": {
+        "title": "Frequency Calculation",
+        "sidebar_label": "Frequency Calculation"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.siddhi.frequencychange/version-0.65.0-pre-asf-org.apache.streampipes.processors.siddhi.frequencychange": {
+        "title": "Frequency Change",
+        "sidebar_label": "Frequency Change"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.siddhi.increase/version-0.65.0-pre-asf-org.apache.streampipes.processors.siddhi.increase": {
+        "title": "Trend",
+        "sidebar_label": "Trend"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.siddhi.numericalfilter/version-0.65.0-pre-asf-org.apache.streampipes.processors.siddhi.numericalfilter": {
+        "title": "Numerical Filter (Siddhi)",
+        "sidebar_label": "Numerical Filter (Siddhi)"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.siddhi.sequence/version-0.65.0-pre-asf-org.apache.streampipes.processors.siddhi.sequence": {
+        "title": "Sequence Detection",
+        "sidebar_label": "Sequence Detection"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.siddhi.stop/version-0.65.0-pre-asf-org.apache.streampipes.processors.siddhi.stop": {
+        "title": "Stream Stop Detection",
+        "sidebar_label": "Stream Stop Detection"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.textmining.flink.languagedetection/version-0.65.0-pre-asf-org.apache.streampipes.processors.textmining.flink.languagedetection": {
+        "title": "Language Detection",
+        "sidebar_label": "Language Detection"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.textmining.flink.wordcount/version-0.65.0-pre-asf-org.apache.streampipes.processors.textmining.flink.wordcount": {
+        "title": "Word Count",
+        "sidebar_label": "Word Count"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.chunker/version-0.65.0-pre-asf-org.apache.streampipes.processors.textmining.jvm.chunker": {
+        "title": "Chunker (English)",
+        "sidebar_label": "Chunker (English)"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.languagedetection/version-0.65.0-pre-asf-org.apache.streampipes.processors.textmining.jvm.languagedetection": {
+        "title": "Language Detection",
+        "sidebar_label": "Language Detection"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.namefinder/version-0.65.0-pre-asf-org.apache.streampipes.processors.textmining.jvm.namefinder": {
+        "title": "Name Finder",
+        "sidebar_label": "Name Finder"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.partofspeech/version-0.65.0-pre-asf-org.apache.streampipes.processors.textmining.jvm.partofspeech": {
+        "title": "Part of Speech (English)",
+        "sidebar_label": "Part of Speech (English)"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.sentencedetection/version-0.65.0-pre-asf-org.apache.streampipes.processors.textmining.jvm.sentencedetection": {
+        "title": "Sentence Detection (English)",
+        "sidebar_label": "Sentence Detection (English)"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.tokenizer/version-0.65.0-pre-asf-org.apache.streampipes.processors.textmining.jvm.tokenizer": {
+        "title": "Tokenizer (English)",
+        "sidebar_label": "Tokenizer (English)"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.transformation.flink.field-converter/version-0.65.0-pre-asf-org.apache.streampipes.processors.transformation.flink.field-converter": {
+        "title": "Field Converter",
+        "sidebar_label": "Field Converter"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.transformation.flink.field-mapper/version-0.65.0-pre-asf-org.apache.streampipes.processors.transformation.flink.field-mapper": {
+        "title": "Field Mapper",
+        "sidebar_label": "Field Mapper"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.transformation.flink.field-renamer/version-0.65.0-pre-asf-org.apache.streampipes.processors.transformation.flink.field-renamer": {
+        "title": "Field Renamer",
+        "sidebar_label": "Field Renamer"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.transformation.flink.fieldhasher/version-0.65.0-pre-asf-org.apache.streampipes.processors.transformation.flink.fieldhasher": {
+        "title": "Field Hasher",
+        "sidebar_label": "Field Hasher"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter/version-0.65.0-pre-asf-org.apache.streampipes.processors.transformation.flink.measurement-unit-converter": {
+        "title": "Measurement Unit Converter",
+        "sidebar_label": "Measurement Unit Converter"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.transformation.flink.processor.boilerplate/version-0.65.0-pre-asf-org.apache.streampipes.processors.transformation.flink.processor.boilerplate": {
+        "title": "Boilerplate Removal",
+        "sidebar_label": "Boilerplate Removal"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.counter/version-0.65.0-pre-asf-org.apache.streampipes.processors.transformation.jvm.booloperator.counter": {
+        "title": "Boolean Counter",
+        "sidebar_label": "Boolean Counter"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter/version-0.65.0-pre-asf-org.apache.streampipes.processors.transformation.jvm.booloperator.inverter": {
+        "title": "Boolean Inverter",
+        "sidebar_label": "Boolean Inverter"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping/version-0.65.0-pre-asf-org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping": {
+        "title": "Measure Time Between Two Sensors",
+        "sidebar_label": "Measure Time Between Two Sensors"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.timer/version-0.65.0-pre-asf-org.apache.streampipes.processors.transformation.jvm.booloperator.timer": {
+        "title": "Boolean Timer",
+        "sidebar_label": "Boolean Timer"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.changed-value/version-0.65.0-pre-asf-org.apache.streampipes.processors.transformation.jvm.changed-value": {
+        "title": "Value Changed",
+        "sidebar_label": "Value Changed"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.count-array/version-0.65.0-pre-asf-org.apache.streampipes.processors.transformation.jvm.count-array": {
+        "title": "Count Array",
+        "sidebar_label": "Count Array"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.csvmetadata/version-0.65.0-pre-asf-org.apache.streampipes.processors.transformation.jvm.csvmetadata": {
+        "title": "CSV Metadata Enricher",
+        "sidebar_label": "CSV Metadata Enricher"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.duration-value/version-0.65.0-pre-asf-org.apache.streampipes.processors.transformation.jvm.duration-value": {
+        "title": "Calculate Duration",
+        "sidebar_label": "Calculate Duration"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor/version-0.65.0-pre-asf-org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor": {
+        "title": "Timestamp Extractor",
+        "sidebar_label": "Timestamp Extractor"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.split-array/version-0.65.0-pre-asf-org.apache.streampipes.processors.transformation.jvm.split-array": {
+        "title": "Split Array",
+        "sidebar_label": "Split Array"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.taskduration/version-0.65.0-pre-asf-org.apache.streampipes.processors.transformation.jvm.taskduration": {
+        "title": "Task Duration",
+        "sidebar_label": "Task Duration"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean/version-0.65.0-pre-asf-org.apache.streampipes.processors.transformation.jvm.transform-to-boolean": {
+        "title": "Transform to boolean",
+        "sidebar_label": "Transform to boolean"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.bufferrest/version-0.65.0-pre-asf-org.apache.streampipes.sinks.brokers.jvm.bufferrest": {
+        "title": "Buffered REST Publisher",
+        "sidebar_label": "Buffered REST Publisher"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.jms/version-0.65.0-pre-asf-org.apache.streampipes.sinks.brokers.jvm.jms": {
+        "title": "JMS Publisher",
+        "sidebar_label": "JMS Publisher"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.kafka/version-0.65.0-pre-asf-org.apache.streampipes.sinks.brokers.jvm.kafka": {
+        "title": "Kafka Publisher",
+        "sidebar_label": "Kafka Publisher"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.pulsar/version-0.65.0-pre-asf-org.apache.streampipes.sinks.brokers.jvm.pulsar": {
+        "title": "Pulsar Publisher",
+        "sidebar_label": "Pulsar Publisher"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.rabbitmq/version-0.65.0-pre-asf-org.apache.streampipes.sinks.brokers.jvm.rabbitmq": {
+        "title": "RabbitMQ Publisher",
+        "sidebar_label": "RabbitMQ Publisher"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.rest/version-0.65.0-pre-asf-org.apache.streampipes.sinks.brokers.jvm.rest": {
+        "title": "REST Publisher",
+        "sidebar_label": "REST Publisher"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.sinks.databases.ditto/version-0.65.0-pre-asf-org.apache.streampipes.sinks.databases.ditto": {
+        "title": "Eclipse Ditto",
+        "sidebar_label": "Eclipse Ditto"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.sinks.databases.flink.elasticsearch/version-0.65.0-pre-asf-org.apache.streampipes.sinks.databases.flink.elasticsearch": {
+        "title": "Elasticsearch",
+        "sidebar_label": "Elasticsearch"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.couchdb/version-0.65.0-pre-asf-org.apache.streampipes.sinks.databases.jvm.couchdb": {
+        "title": "CouchDB",
+        "sidebar_label": "CouchDB"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.influxdb/version-0.65.0-pre-asf-org.apache.streampipes.sinks.databases.jvm.influxdb": {
+        "title": "InfluxDB",
+        "sidebar_label": "InfluxDB"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.iotdb/version-0.65.0-pre-asf-org.apache.streampipes.sinks.databases.jvm.iotdb": {
+        "title": "IoTDB",
+        "sidebar_label": "IoTDB"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.opcua/version-0.65.0-pre-asf-org.apache.streampipes.sinks.databases.jvm.opcua": {
+        "title": "OPC-UA",
+        "sidebar_label": "OPC-UA"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.postgresql/version-0.65.0-pre-asf-org.apache.streampipes.sinks.databases.jvm.postgresql": {
+        "title": "PostgreSQL",
+        "sidebar_label": "PostgreSQL"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.sinks.internal.jvm.dashboard/version-0.65.0-pre-asf-org.apache.streampipes.sinks.internal.jvm.dashboard": {
+        "title": "Dashboard Sink",
+        "sidebar_label": "Dashboard Sink"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.sinks.internal.jvm.datalake/version-0.65.0-pre-asf-org.apache.streampipes.sinks.internal.jvm.datalake": {
+        "title": "Data Lake",
+        "sidebar_label": "Data Lake"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.sinks.internal.jvm.notification/version-0.65.0-pre-asf-org.apache.streampipes.sinks.internal.jvm.notification": {
+        "title": "Notification",
+        "sidebar_label": "Notification"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.sinks.notifications.jvm.email/version-0.65.0-pre-asf-org.apache.streampipes.sinks.notifications.jvm.email": {
+        "title": "Email Notification",
+        "sidebar_label": "Email Notification"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.sinks.notifications.jvm.onesignal/version-0.65.0-pre-asf-org.apache.streampipes.sinks.notifications.jvm.onesignal": {
+        "title": "OneSignal",
+        "sidebar_label": "OneSignal"
+      },
+      "version-0.65.0-pre-asf/org.apache.streampipes.sinks.notifications.jvm.slack/version-0.65.0-pre-asf-org.apache.streampipes.sinks.notifications.jvm.slack": {
+        "title": "Slack Notification",
+        "sidebar_label": "Slack Notification"
+      },
+      "version-0.65.0-pre-asf/version-0.65.0-pre-asf-pipeline-elements": {
+        "title": "Overview",
+        "sidebar_label": "Overview"
       },
       "version-0.65.0-pre-asf/version-0.65.0-pre-asf-user-guide-installation": {
         "title": "Installation",
