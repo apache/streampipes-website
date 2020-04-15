@@ -77,7 +77,7 @@ public class VehiclePositionStream extends AbstractAlreadyExistingStream {
 This class extends the class `AbstractAlreadyExistingStream`. This class indicates that we only want to describe an already existing stream (e.g., a stream that already sends data to an existing Kafka broker).
 In contrast, if you'd plan to define a stream that produces data (e.g., simulates vehicle positions directly from this module), you could extend the class `AbstractAdapterIncludedStream`.
 
-No we will add the definition of the data stream. Add the following code inside of the `declareModel` method:
+Now we will add the definition of the data stream. Add the following code inside of the `declareModel` method:
 ```java
 return DataStreamBuilder.create("vehicle-position", "Vehicle Position", "An event stream " +
           "that produces current vehicle positions")

@@ -23,7 +23,7 @@ Instead of starting from scratch, we recommend using our provided maven archetyp
 
 ### Maven archetypes
 
-Create the Maven archetype as described in the [Getting Started](dev-guide-archetype) guide.
+Create the Maven archetype as described in the [Getting Started](/docs/dev-guide-archetype) guide.
 
 ### Starting from scratch
 

@@ -95,7 +95,7 @@ public class MySourceStream extends AbstractAdapterIncludedStream {
 This class extends the class ``AbstractAdapterIncludedStream``, which indicates that this source continuously produces data (configured in the ``executeStream()`` method.
 In contrast, the class `AbstractAlreadyExistingStream` indicates that we only want to describe an already existing stream (e.g., a stream that already sends data to an existing Kafka broker).
 
-No we will add the definition of the data stream. Add the following code inside of the `declareModel` method:
+Now we will add the definition of the data stream. Add the following code inside of the `declareModel` method:
 ```java
 return DataStreamBuilder.create("org.streampipes.tutorial.vehicle.position", "Vehicle Position", "An event stream " +
           "that produces current vehicle positions")

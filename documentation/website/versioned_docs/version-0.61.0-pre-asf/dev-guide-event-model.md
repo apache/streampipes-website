@@ -15,7 +15,7 @@ This guide assumes that you are already familiar with the basic setup of [data p
 
 ### Property Selectors
 
-In most cases, fields that are subject to be transformed by pipeline elements are provided by the assigned ``MappingProperty`` (see the guide on [static properties](dev-guide-static-properties.md).
+In most cases, fields that are subject to be transformed by pipeline elements are provided by the assigned ``MappingProperty`` (see the guide on [static properties](dev-guide-static-properties.md)).
 
 Mapping properties return a ``PropertySelector`` that identifies a field based on (i) the **streamIndex** and (ii) the runtime name of the field.
 Let's assume we have an event with the following structure:
@@ -137,6 +137,6 @@ Primitive fields can easily be added to an event by providing the runtime name a
     // remove the field "temperature" from the event
     event.removeFieldBySelector(temperatureSelector);
 
-    // add a new field 
+    // add a new field
     event.addField("fahrenheit", 48);
 ```

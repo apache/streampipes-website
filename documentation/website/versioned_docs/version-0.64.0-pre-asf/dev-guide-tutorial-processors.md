@@ -265,7 +265,7 @@ This simple Pojo class will later serve to store user-defined parameters in a si
 
 Now we go back to the controller class and extract these values from the invocation object.
 
-The ``ProessingElementParameterExtractor``  provides convenience methods to extract the relevant information from the `DataProcessorInvocation` object.
+The ``ProcessingElementParameterExtractor``  provides convenience methods to extract the relevant information from the `DataProcessorInvocation` object.
 
 Next, we are interested in the fields of the input event stream that contains the latitude and longitude value we would like to compute against the geofence center location as follows:
 
