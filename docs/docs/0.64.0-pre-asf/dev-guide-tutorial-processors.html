@@ -262,7 +262,7 @@ Open the file <code>GeofencingParameters</code> and modify it as follows:</p>
 </code></pre>
 <p>This simple Pojo class will later serve to store user-defined parameters in a single object.</p>
 <p>Now we go back to the controller class and extract these values from the invocation object.</p>
-<p>The <code>ProessingElementParameterExtractor</code>  provides convenience methods to extract the relevant information from the <code>DataProcessorInvocation</code> object.</p>
+<p>The <code>ProcessingElementParameterExtractor</code>  provides convenience methods to extract the relevant information from the <code>DataProcessorInvocation</code> object.</p>
 <p>Next, we are interested in the fields of the input event stream that contains the latitude and longitude value we would like to compute against the geofence center location as follows:</p>
 <pre><code class="hljs css language-java">String latitudeFieldName = extractor.mappingPropertyValue(<span class="hljs-string">"latitude-field"</span>);
 String longitudeFieldName = extractor.mappingPropertyValue(<span class="hljs-string">"longitude-field"</span>);

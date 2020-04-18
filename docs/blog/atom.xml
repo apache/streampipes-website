@@ -2,12 +2,28 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.streampipes.org/docs/blog</id>
     <title>StreamPipes Blog</title>
-    <updated>2020-01-23T06:00:00Z</updated>
+    <updated>2020-04-14T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://docs.streampipes.org/docs/blog"/>
     <subtitle>The best place to stay up-to-date with the latest StreamPipes news and events.</subtitle>
     <logo>https://docs.streampipes.org/docs/img/sp-logo-color-docs.png</logo>
     <rights>Copyright © 2020 The Apache Software Foundation</rights>
+    <entry>
+        <title type="html"><![CDATA[Running StreamPipes the Kubernetes-Way using k3s]]></title>
+        <id>https://docs.streampipes.org/docs/blog/2020/04/14/streampipes_on_k3s.html</id>
+        <link href="https://docs.streampipes.org/docs/blog/2020/04/14/streampipes_on_k3s.html">
+        </link>
+        <updated>2020-04-14T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p><img class="blog-image" style="max-width:100%;" src="/docs/blog/assets/2020-04-14/streampipes_k3s.png" alt="StreamPipes on k3s">
+<strong><div style="float: left; padding-right: 40px;">15 minutes to read</div></strong>
+<br></p>
+<p>This blog post is the second part of a series on how we want to bring StreamPipes closer to the edge. The <a href="/docs/blog/2020/01/23/streampipes_on_rpi">first part</a> describes how we managed to build and deploy StreamPipes on one Raspberry Pi (Model 4), while the <a href="/docs/blog/2020/04/14/streampipes_on_k3s">second part</a> further covers how to deploy StreamPipes over a Kubernetes cluster of two Raspberry Pi's via k3s using our StreamPipes helm chart.</p>
+]]></summary>
+        <author>
+            <name>Patrick Wiener</name>
+            <uri>https://twitter.com/patrickwiener</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[StreamPi(pes) - Running StreamPipes on Raspberry Pi]]></title>
         <id>https://docs.streampipes.org/docs/blog/2020/01/23/streampipes_on_rpi.html</id>
@@ -17,7 +33,7 @@
         <summary type="html"><![CDATA[<p><img class="blog-image" style="max-width:100%;" src="/docs/blog/assets/2020-01-23/streampipes_raspberrypi.png" alt="StreamPipes on Raspberry Pi">
 <strong><div style="float: left; padding-right: 40px;">5 minutes to read</div></strong>
 <br></p>
-<p>This is the start of a two part series on how we want to bring StreamPipes closer to the edge. The first part describes how we managed to build and deploy StreamPipes on one Raspberry Pi (Model 4), while the the second part further covers how to deploy StreamPipes over a two-node Raspberry Pi cluster managed via k3s using our StreamPipes helm chart.</p>
+<p>This is the start of a two part series on how we want to bring StreamPipes closer to the edge. The <a href="/docs/blog/2020/01/23/streampipes_on_rpi">first part</a> describes how we managed to build and deploy StreamPipes on one Raspberry Pi (Model 4), while the <a href="/docs/blog/2020/04/14/streampipes_on_k3s">second part</a> further covers how to deploy StreamPipes over a Kubernetes cluster of two Raspberry Pi's via K3s using our StreamPipes helm chart.</p>
 ]]></summary>
         <author>
             <name>Patrick Wiener</name>
