@@ -79,7 +79,7 @@ When the user tries to connect two elements that are not compatible, the system 
 The example illustrated below shows such a case. The user tried to connect a text filter to a light sensor.
 This is not possible since the text filter processing element requires at least one event property of type string, which is not provided by the light sensor.
 
-![Connection Error](/img/features_0_62_0/editor/10_connection_error.png) 
+![Connection Error](/docs/img/features_0_62_0/editor/10_connection_error.png) 
 
 To further improve the usability, multiple ways are available to connect new elements besides the drag and drop option.
 Each processing element has multiple short-cut buttons to connect it with another element.
