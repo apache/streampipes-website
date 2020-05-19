@@ -2,12 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.streampipes.org/docs/blog</id>
     <title>StreamPipes Blog</title>
-    <updated>2020-01-23T06:00:00Z</updated>
+    <updated>2020-05-19T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://docs.streampipes.org/docs/blog"/>
     <subtitle>The best place to stay up-to-date with the latest StreamPipes news and events.</subtitle>
     <logo>https://docs.streampipes.org/docs/img/sp-logo-color-docs.png</logo>
     <rights>Copyright © 2020 The Apache Software Foundation</rights>
+    <entry>
+        <title type="html"><![CDATA[Apache StreamPipes release 0.66.0]]></title>
+        <id>https://docs.streampipes.org/docs/blog/2020/05/19/release-0660.html</id>
+        <link href="https://docs.streampipes.org/docs/blog/2020/05/19/release-0660.html">
+        </link>
+        <updated>2020-05-19T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">6 minutes to read</div></strong>
+<br></p>
+<p>The Apache StreamPipes (incubating) community is proud to announce Apache StreamPipes version 0.66.0! This release is our first official Apache release and brings some very cool features and improvements the community has worked on over the past months.</p>
+]]></summary>
+        <author>
+            <name>Dominik Riemer</name>
+            <uri>https://twitter.com/dominikjriemer</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[StreamPi(pes) - Running StreamPipes on Raspberry Pi]]></title>
         <id>https://docs.streampipes.org/docs/blog/2020/01/23/streampipes_on_rpi.html</id>
