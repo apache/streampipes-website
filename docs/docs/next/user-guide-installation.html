@@ -64,7 +64,6 @@
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Installation</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="prerequisites"></a><a href="#prerequisites" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Prerequisites</h2>
 <h3><a class="anchor" aria-hidden="true" id="hardware"></a><a href="#hardware" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hardware</h3>
 <ul>
-<li>The <strong>lite version</strong> (if you simply want to run StreamPipes on a laptop for testing purposes) requires at least 4GB RAM, the <strong>full version</strong> requires at least 10 GB RAM.</li>
 <li>Docker (latest version, see instructions below)</li>
 <li>Docker Compose (latest version., see instructions below)</li>
 </ul>
@@ -91,7 +90,7 @@
 <p>By default, Docker uses only a limited number of CPU cores and memory.
        If you run StreamPipes on Windows or on a Mac you need to adjust the default settings.
        To do that, click on the Docker icon in your tab bar and open the preferences.
-       Go to the advanced preferences and set the **number of CPUs to 6** (recommended) and the **Memory to 8GB**.
+       Go to the advanced preferences and set the **number of CPUs to 6** (recommended) and the **Memory to 4GB**.
        After changing the settings, Docker needs to be restarted.</p></div>
 <h2><a class="anchor" aria-hidden="true" id="install-streampipes"></a><a href="#install-streampipes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install StreamPipes</h2>
 <div class="tab-content" id="myTabContent">
@@ -106,8 +105,8 @@
                         </span>
                     </div>
                     <div class="wrapper-instruction">
-                        <a href="https://github.com/apache/incubator-streampipes-installer/archive/master.zip">Download</a>
-                        the latest StreamPipes release from Github and extract the zip file to a directory of your choice.
+                        <a href="https://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=incubator/streampipes/installer/0.66.0/apache-streampipes-installer-0.66.0-incubating-source-release.zip">Download</a>
+                        the latest Apache StreamPipes release and extract the zip file to a directory of your choice.
                     </div>
                 </div>
             </li>
@@ -120,11 +119,11 @@
                         </span>
                     </div>
                     <div class="wrapper-instruction">
-                       <div style="margin-bottom:5px;"><b>Linux/Mac:</b> In a command prompt, open the folder <code>osx_linux</code> and run <code>./streampipes
+                       <div style="margin-bottom:5px;"><b>Linux/Mac:</b> In a command prompt, open the folder <code>installer/osx_linux</code> and run <code>./streampipes
                             start</code>.<br/>
                         </div>
                         <div style="margin-top:5px;">
-                        <b>Windows 10:</b> In a command prompt, open the folder <code>windows10</code> and run <code>streampipes.bat
+                        <b>Windows 10:</b> In a command prompt, open the folder <code>installer/windows10</code> and run <code>streampipes.bat
                                                     start</code>.<br/>
                         </div>
                     </div>
@@ -139,7 +138,7 @@
                         </span>
                     </div>
                     <div class="wrapper-instruction">
-                       When asked, enter the version (full or lite) and the IP address or hostname of your server (called SERVER_IP in the next step).
+                       When asked, enter the version (full or lite).
                     </div>
                 </div>
             </li>
@@ -152,7 +151,7 @@
                         </span>
                     </div>
                     <div class="wrapper-instruction">
-                        Open your browser, navigate to http://SERVER_IP:80 and finish the setup according to the instructions below.
+                        Open your browser, navigate to http://localhost:80 (or the domain name of your server) and finish the setup according to the instructions below.
                     </div>
                 </div>
             </li>
@@ -174,7 +173,7 @@ The installation might take some time, continue by clicking on &quot;Go to login
 </div>
 <div class="admonition error">
 <div class="admonition-title">Errors during the installation process</div>
-<p>In most cases, errors during the installation are due to a wrongly configured IP address or an under-powered system.<br/>
+<p>In most cases, errors during the installation are due to an under-powered system.<br/>
 If there is a problem with any of the components, please restart the whole system and delete the "config" directory on the server.
    This directory is in the same folder as the docker-compose.yml file.<br/>
    Please also make sure that your system meets the hardware requirements as mentioned in the first section of the installation guide.</p>
