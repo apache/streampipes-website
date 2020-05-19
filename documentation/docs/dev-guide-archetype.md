@@ -23,10 +23,11 @@ We use ``groupId``: ``org.example`` and ``artifactId``: ``ExampleProcessor``.
 You can keep the default values for the other settings, confirm them by hitting enter.
 Now, a new folder with the name ``ExampleProcessor`` is generated.
 
+The current {sp.version} is 0.66.0
 
 ```bash
 mvn archetype:generate                              	 	     \
-  -DarchetypeGroupId=org.streampipes          			         \
+  -DarchetypeGroupId=org.apache.streampipes          			         \
   -DarchetypeArtifactId=streampipes-archetype-pe-processors-jvm  \
   -DarchetypeVersion={sp.version}
 ```
@@ -36,7 +37,7 @@ mvn archetype:generate                              	 	     \
 ## Processors JVM
 ```bash
 mvn archetype:generate                              	 	     \
-  -DarchetypeGroupId=org.streampipes          			         \
+  -DarchetypeGroupId=org.apache.streampipes          			         \
   -DarchetypeArtifactId=streampipes-archetype-pe-processors-jvm  \
   -DarchetypeVersion={sp.version}
 ```
@@ -44,7 +45,7 @@ mvn archetype:generate                              	 	     \
 ## Processors Flink
 ```bash
 mvn archetype:generate                              	 	     \
-  -DarchetypeGroupId=org.streampipes          			         \
+  -DarchetypeGroupId=org.apache.streampipes          			         \
   -DarchetypeArtifactId=streampipes-archetype-pe-processors-flink  \
   -DarchetypeVersion={sp.version}
 ```
@@ -52,7 +53,7 @@ mvn archetype:generate                              	 	     \
 ## Sinks JVM
 ```bash
 mvn archetype:generate                              	 	     \
-  -DarchetypeGroupId=org.streampipes          			         \
+  -DarchetypeGroupId=org.apache.streampipes          			         \
   -DarchetypeArtifactId=streampipes-archetype-pe-sinks-jvm  \
   -DarchetypeVersion={sp.version}
 ```
@@ -60,7 +61,7 @@ mvn archetype:generate                              	 	     \
 ## Sinks Flink
 ```bash
 mvn archetype:generate                              	 	     \
-  -DarchetypeGroupId=org.streampipes          			         \
+  -DarchetypeGroupId=org.apache.streampipes          			         \
   -DarchetypeArtifactId=streampipes-archetype-pe-sinks-flink  \
   -DarchetypeVersion={sp.version}
 ```
