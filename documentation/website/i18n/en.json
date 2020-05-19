@@ -1143,6 +1143,42 @@
       "version-0.65.0-pre-asf/version-0.65.0-pre-asf-user-guide-tour": {
         "title": "Tour",
         "sidebar_label": "Tour"
+      },
+      "version-0.66.0/version-0.66.0-dev-guide-archetype": {
+        "title": "Start Developing",
+        "sidebar_label": "Start Developing"
+      },
+      "version-0.66.0/version-0.66.0-dev-guide-configuration": {
+        "title": "Configuration",
+        "sidebar_label": "Configuration"
+      },
+      "version-0.66.0/version-0.66.0-dev-guide-development-environment": {
+        "title": "Development Environment",
+        "sidebar_label": "Development Environment"
+      },
+      "version-0.66.0/version-0.66.0-dev-guide-output-strategies": {
+        "title": "SDK Guide: Output Strategies",
+        "sidebar_label": "Output Strategies"
+      },
+      "version-0.66.0/version-0.66.0-dev-guide-static-properties": {
+        "title": "SDK Guide: Static Properties",
+        "sidebar_label": "Static Properties"
+      },
+      "version-0.66.0/version-0.66.0-dev-guide-stream-requirements": {
+        "title": "SDK Guide: Stream Requirements",
+        "sidebar_label": "Stream Requirements"
+      },
+      "version-0.66.0/version-0.66.0-dev-guide-tutorial-sources": {
+        "title": "Tutorial: Data Sources",
+        "sidebar_label": "Tutorial: Data Sources"
+      },
+      "version-0.66.0/version-0.66.0-pipeline-elements": {
+        "title": "Overview",
+        "sidebar_label": "Overview"
+      },
+      "version-0.66.0/version-0.66.0-user-guide-installation": {
+        "title": "Installation",
+        "sidebar_label": "Installation"
       }
     },
     "links": {
