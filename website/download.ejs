@@ -51,119 +51,23 @@
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="linux" role="tabpanel" aria-labelledby="linux-tab">
                             <ul>
-                                <li class="installation-step">
-                                    <div class="row" style="align-items: center;justify-content: center;">
-                                        <div class="col-md-1 col-3">
-                                            <span class="fa-stack fa-2x">
-                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                 <strong class="fa-stack-1x" style="color:white;">1</strong>
-                                            </span>
-                                        </div>
-                                        <div class="col-md-11 col-9">
-                                            <a href="https://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=incubator/streampipes/installer/0.66.0/apache-streampipes-installer-0.66.0-incubating-source-release.zip">Download</a>
-                                            (<a href="https://downloads.apache.org/incubator/streampipes/installer/0.66.0/apache-streampipes-installer-0.66.0-incubating-source-release.zip.sha512">SHA</a>, <a href="https://downloads.apache.org/incubator/streampipes/installer/0.66.0/apache-streampipes-installer-0.66.0-incubating-source-release.zip.asc">PGP</a>) the latest Apache StreamPipes release and extract the zip file to a directory of your choice.
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="installation-step">
-                                    <div class="row" style="align-items: center;justify-content: center;">
-                                        <div class="col-md-1 col-3">
-                                            <span class="fa-stack fa-2x">
-                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                 <strong class="fa-stack-1x" style="color:white;">2</strong>
-                                            </span>
-                                        </div>
-                                        <div class="col-md-11 col-9">
-                                            In a command prompt, open the folder <code>installer/osx_linux</code> and run <code>./streampipes
-                                                start</code>.
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="installation-step">
-                                    <div class="row" style="align-items: center;justify-content: center;">
-                                        <div class="col-md-1 col-3">
-                                            <span class="fa-stack fa-2x">
-                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                 <strong class="fa-stack-1x" style="color:white;">3</strong>
-                                            </span>
-                                        </div>
-                                        <div class="col-md-11 col-9">
-                                            When asked, select the version you would like to run (lite or full).
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="installation-step">
-                                    <div class="row" style="align-items: center;justify-content: center;">
-                                        <div class="col-md-1 col-3">
-                                            <span class="fa-stack fa-2x">
-                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                 <strong class="fa-stack-1x" style="color:white;">4</strong>
-                                            </span>
-                                        </div>
-                                        <div class="col-md-11 col-9">
-                                            Open your browser, navigate to http://localhost:80 (or use the domain name of your server) and finish the setup according to the instructions.
-                                        </div>
-                                    </div>
-                                </li>
+                                <%- partial("partials/_download_box.ejs") %>
+                                <hr/>
+                                <%- partial("partials/_download_folder_linux.ejs") %>
+                                <hr/>
+                                <%- partial("partials/_download_select_version.ejs") %>
+                                <hr/>
+                                <%- partial("partials/_download_open_browser.ejs") %>
+                                <hr/>
                             </ul>
                         </div>
                         <div class="tab-pane fade" id="windows10" role="tabpanel"
                              aria-labelledby="windows10-tab-tab">
                             <ul>
-                                <li class="installation-step">
-                                    <div class="row" style="align-items: center;justify-content: center;">
-                                        <div class="col-md-1 col-3">
-                                            <span class="fa-stack fa-2x">
-                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                 <strong class="fa-stack-1x" style="color:white;">1</strong>
-                                            </span>
-                                        </div>
-                                        <div class="col-md-11 col-9">
-                                            <a href="https://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=incubator/streampipes/installer/0.66.0/apache-streampipes-installer-0.66.0-incubating-source-release.zip">Download</a>
-                                            (<a href="https://downloads.apache.org/incubator/streampipes/installer/0.66.0/apache-streampipes-installer-0.66.0-incubating-source-release.zip.sha512">SHA</a>, <a href="https://downloads.apache.org/incubator/streampipes/installer/0.66.0/apache-streampipes-installer-0.66.0-incubating-source-release.zip.asc">PGP</a>) the latest Apache StreamPipes release extract the zip file to a directory of your choice.
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="installation-step">
-                                    <div class="row" style="align-items: center;justify-content: center;">
-                                        <div class="col-md-1 col-3">
-                                            <span class="fa-stack fa-2x">
-                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                 <strong class="fa-stack-1x" style="color:white;">2</strong>
-                                            </span>
-                                        </div>
-                                        <div class="col-md-11 col-9">
-                                            In a command prompt, open the folder <code>installer/windows10</code> and run <code>streampipes.bat
-                                                start</code>.
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="installation-step">
-                                    <div class="row" style="align-items: center;justify-content: center;">
-                                        <div class="col-md-1 col-3">
-                                            <span class="fa-stack fa-2x">
-                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                 <strong class="fa-stack-1x" style="color:white;">3</strong>
-                                            </span>
-                                        </div>
-                                        <div class="col-md-11 col-9">
-                                            When asked, select the version you would like to run (lite or full).
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="installation-step">
-                                    <div class="row" style="align-items: center;justify-content: center;">
-                                        <div class="col-md-1 col-3">
-                                            <span class="fa-stack fa-2x">
-                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                 <strong class="fa-stack-1x" style="color:white;">4</strong>
-                                            </span>
-                                        </div>
-                                        <div class="col-md-11 col-9">
-                                            Open your browser, navigate to http://localhost:80 (or use the domain name of your server) and finish the setup according to the instructions.
-                                        </div>
-                                    </div>
-                                </li>
+                                <%- partial("partials/_download_box.ejs") %>
+                                <%- partial("partials/_download_folder_win.ejs") %>
+                                <%- partial("partials/_download_select_version.ejs") %>
+                                <%- partial("partials/_download_open_browser.ejs") %>
                             </ul>
                         </div>
                     </div>
