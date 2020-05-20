@@ -46,7 +46,7 @@
 
 <div class="header-banner">
     <div class="header-banner-news">
-        <b>The Apache StreamPipes (incubating) community is happy to announce our first Apache release! Download the latest version <a class="banner-link" href="/download.html">here</a>!</b>
+        <b>The Apache StreamPipes (incubating) community is pleased to announce our first Apache release! Download the latest version <a class="banner-link" href="/download.html">here</a>!</b>
     </div>
     <div style="display: flex; align-items: center;justify-content: flex-end;padding-right:20px;height:40px;">
         <span flex></span>
@@ -192,119 +192,177 @@
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="linux" role="tabpanel" aria-labelledby="linux-tab">
                             <ul>
+                                <li class="installation-step" style="margin-top:20px;">
+    <div class="row">
+        <div class="col-md-1 col-3">
+            <span class="fa-stack fa-2x">
+                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+                 <strong class="fa-stack-1x" style="color:white;">1</strong>
+            </span>
+        </div>
+        <div class="col-md-11 col-9">
+            Download the latest Apache StreamPipes release and extract the zip file to a directory of your choice.
+            <div class="row">
+                <table class="table" style="margin-top:30px;margin-left:20px;margin-right:20px;border:1px solid rgb(27, 20, 100);">
+                    <thead>
+                    <tr style="background:rgb(27, 20, 100);color:white;">
+                        <th scope="col" style="border-bottom:0px;border-top:0px;">File</th>
+                        <th scope="col" style="border-bottom:0px;border-top:0px;">Version</th>
+                        <th scope="col" style="border-bottom:0px;border-top:0px;">Release Date</th>
+                        <th scope="col" style="border-bottom:0px;border-top:0px;">Signatures</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="https://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=incubator/streampipes/installer/0.66.0/apache-streampipes-installer-0.66.0-incubating-source-release.zip">apache-streampipes-installer-0.66.0-source-release.zip</a></td>
+                        <td>0.66.0</td>
+                        <td>2020-05-19</td>
+                        <td>
+                            <a href="https://downloads.apache.org/incubator/streampipes/installer/0.66.0/apache-streampipes-installer-0.66.0-incubating-source-release.zip.sha512">SHA</a>
+                            <a href="https://downloads.apache.org/incubator/streampipes/installer/0.66.0/apache-streampipes-installer-0.66.0-incubating-source-release.zip.asc">PGP</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="alert alert-info" role="alert" style="margin-left:20px;margin-right:20px;">
+                  The above release file should be verified using the PGP signatures and the <a href="https://downloads.apache.org/incubator/streampipes/KEYS">project release KEYS</a>. See the official ASF <a target="asf" href="https://www.apache.org/dyn/closer.cgi#verify">verification instructions</a> for a description of using the PGP and KEYS files for verification. A SHA512 checksum is also provided as an additional verification method.
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+                                <hr/>
                                 <li class="installation-step">
-                                    <div class="row" style="align-items: center;justify-content: center;">
-                                        <div class="col-md-1 col-3">
-                                            <span class="fa-stack fa-2x">
-                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                 <strong class="fa-stack-1x" style="color:white;">1</strong>
-                                            </span>
-                                        </div>
-                                        <div class="col-md-11 col-9">
-                                            <a href="https://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=incubator/streampipes/installer/0.66.0/apache-streampipes-installer-0.66.0-incubating-source-release.zip">Download</a>
-                                            (<a href="https://downloads.apache.org/incubator/streampipes/installer/0.66.0/apache-streampipes-installer-0.66.0-incubating-source-release.zip.sha512">SHA</a>, <a href="https://downloads.apache.org/incubator/streampipes/installer/0.66.0/apache-streampipes-installer-0.66.0-incubating-source-release.zip.asc">PGP</a>) the latest Apache StreamPipes release and extract the zip file to a directory of your choice.
-                                        </div>
-                                    </div>
-                                </li>
+    <div class="row" style="align-items: center;justify-content: center;">
+        <div class="col-md-1 col-3">
+            <span class="fa-stack fa-2x">
+                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+                 <strong class="fa-stack-1x" style="color:white;">2</strong>
+            </span>
+        </div>
+        <div class="col-md-11 col-9">
+            In a command prompt, open the folder <code>installer/osx_linux</code> and run <code>./streampipes
+                start</code>.
+        </div>
+    </div>
+</li>
+                                <hr/>
                                 <li class="installation-step">
-                                    <div class="row" style="align-items: center;justify-content: center;">
-                                        <div class="col-md-1 col-3">
-                                            <span class="fa-stack fa-2x">
-                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                 <strong class="fa-stack-1x" style="color:white;">2</strong>
-                                            </span>
-                                        </div>
-                                        <div class="col-md-11 col-9">
-                                            In a command prompt, open the folder <code>installer/osx_linux</code> and run <code>./streampipes
-                                                start</code>.
-                                        </div>
-                                    </div>
-                                </li>
+    <div class="row" style="align-items: center;justify-content: center;">
+        <div class="col-md-1 col-3">
+            <span class="fa-stack fa-2x">
+                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+                 <strong class="fa-stack-1x" style="color:white;">3</strong>
+            </span>
+        </div>
+        <div class="col-md-11 col-9">
+            When asked, select the version you would like to run (lite or full).
+        </div>
+    </div>
+</li>
+                                <hr/>
                                 <li class="installation-step">
-                                    <div class="row" style="align-items: center;justify-content: center;">
-                                        <div class="col-md-1 col-3">
-                                            <span class="fa-stack fa-2x">
-                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                 <strong class="fa-stack-1x" style="color:white;">3</strong>
-                                            </span>
-                                        </div>
-                                        <div class="col-md-11 col-9">
-                                            When asked, select the version you would like to run (lite or full).
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="installation-step">
-                                    <div class="row" style="align-items: center;justify-content: center;">
-                                        <div class="col-md-1 col-3">
-                                            <span class="fa-stack fa-2x">
-                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                 <strong class="fa-stack-1x" style="color:white;">4</strong>
-                                            </span>
-                                        </div>
-                                        <div class="col-md-11 col-9">
-                                            Open your browser, navigate to http://localhost:80 (or use the domain name of your server) and finish the setup according to the instructions.
-                                        </div>
-                                    </div>
-                                </li>
+    <div class="row" style="align-items: center;justify-content: center;">
+        <div class="col-md-1 col-3">
+            <span class="fa-stack fa-2x">
+                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+                 <strong class="fa-stack-1x" style="color:white;">4</strong>
+            </span>
+        </div>
+        <div class="col-md-11 col-9">
+            Open your browser, navigate to http://localhost:80 (or use the domain name of your server) and finish the setup according to the instructions.
+        </div>
+    </div>
+</li>
+                                <hr/>
                             </ul>
                         </div>
                         <div class="tab-pane fade" id="windows10" role="tabpanel"
                              aria-labelledby="windows10-tab-tab">
                             <ul>
+                                <li class="installation-step" style="margin-top:20px;">
+    <div class="row">
+        <div class="col-md-1 col-3">
+            <span class="fa-stack fa-2x">
+                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+                 <strong class="fa-stack-1x" style="color:white;">1</strong>
+            </span>
+        </div>
+        <div class="col-md-11 col-9">
+            Download the latest Apache StreamPipes release and extract the zip file to a directory of your choice.
+            <div class="row">
+                <table class="table" style="margin-top:30px;margin-left:20px;margin-right:20px;border:1px solid rgb(27, 20, 100);">
+                    <thead>
+                    <tr style="background:rgb(27, 20, 100);color:white;">
+                        <th scope="col" style="border-bottom:0px;border-top:0px;">File</th>
+                        <th scope="col" style="border-bottom:0px;border-top:0px;">Version</th>
+                        <th scope="col" style="border-bottom:0px;border-top:0px;">Release Date</th>
+                        <th scope="col" style="border-bottom:0px;border-top:0px;">Signatures</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="https://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=incubator/streampipes/installer/0.66.0/apache-streampipes-installer-0.66.0-incubating-source-release.zip">apache-streampipes-installer-0.66.0-source-release.zip</a></td>
+                        <td>0.66.0</td>
+                        <td>2020-05-19</td>
+                        <td>
+                            <a href="https://downloads.apache.org/incubator/streampipes/installer/0.66.0/apache-streampipes-installer-0.66.0-incubating-source-release.zip.sha512">SHA</a>
+                            <a href="https://downloads.apache.org/incubator/streampipes/installer/0.66.0/apache-streampipes-installer-0.66.0-incubating-source-release.zip.asc">PGP</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="alert alert-info" role="alert" style="margin-left:20px;margin-right:20px;">
+                  The above release file should be verified using the PGP signatures and the <a href="https://downloads.apache.org/incubator/streampipes/KEYS">project release KEYS</a>. See the official ASF <a target="asf" href="https://www.apache.org/dyn/closer.cgi#verify">verification instructions</a> for a description of using the PGP and KEYS files for verification. A SHA512 checksum is also provided as an additional verification method.
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
                                 <li class="installation-step">
-                                    <div class="row" style="align-items: center;justify-content: center;">
-                                        <div class="col-md-1 col-3">
-                                            <span class="fa-stack fa-2x">
-                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                 <strong class="fa-stack-1x" style="color:white;">1</strong>
-                                            </span>
-                                        </div>
-                                        <div class="col-md-11 col-9">
-                                            <a href="https://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=incubator/streampipes/installer/0.66.0/apache-streampipes-installer-0.66.0-incubating-source-release.zip">Download</a>
-                                            (<a href="https://downloads.apache.org/incubator/streampipes/installer/0.66.0/apache-streampipes-installer-0.66.0-incubating-source-release.zip.sha512">SHA</a>, <a href="https://downloads.apache.org/incubator/streampipes/installer/0.66.0/apache-streampipes-installer-0.66.0-incubating-source-release.zip.asc">PGP</a>) the latest Apache StreamPipes release extract the zip file to a directory of your choice.
-                                        </div>
-                                    </div>
-                                </li>
+    <div class="row" style="align-items: center;justify-content: center;">
+        <div class="col-md-1 col-3">
+            <span class="fa-stack fa-2x">
+                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+                 <strong class="fa-stack-1x" style="color:white;">2</strong>
+            </span>
+        </div>
+        <div class="col-md-11 col-9">
+            In a command prompt, open the folder <code>installer/windows10</code> and run <code>streampipes.bat
+                start</code>.
+        </div>
+    </div>
+</li>
                                 <li class="installation-step">
-                                    <div class="row" style="align-items: center;justify-content: center;">
-                                        <div class="col-md-1 col-3">
-                                            <span class="fa-stack fa-2x">
-                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                 <strong class="fa-stack-1x" style="color:white;">2</strong>
-                                            </span>
-                                        </div>
-                                        <div class="col-md-11 col-9">
-                                            In a command prompt, open the folder <code>installer/windows10</code> and run <code>streampipes.bat
-                                                start</code>.
-                                        </div>
-                                    </div>
-                                </li>
+    <div class="row" style="align-items: center;justify-content: center;">
+        <div class="col-md-1 col-3">
+            <span class="fa-stack fa-2x">
+                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+                 <strong class="fa-stack-1x" style="color:white;">3</strong>
+            </span>
+        </div>
+        <div class="col-md-11 col-9">
+            When asked, select the version you would like to run (lite or full).
+        </div>
+    </div>
+</li>
                                 <li class="installation-step">
-                                    <div class="row" style="align-items: center;justify-content: center;">
-                                        <div class="col-md-1 col-3">
-                                            <span class="fa-stack fa-2x">
-                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                 <strong class="fa-stack-1x" style="color:white;">3</strong>
-                                            </span>
-                                        </div>
-                                        <div class="col-md-11 col-9">
-                                            When asked, select the version you would like to run (lite or full).
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="installation-step">
-                                    <div class="row" style="align-items: center;justify-content: center;">
-                                        <div class="col-md-1 col-3">
-                                            <span class="fa-stack fa-2x">
-                                                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                 <strong class="fa-stack-1x" style="color:white;">4</strong>
-                                            </span>
-                                        </div>
-                                        <div class="col-md-11 col-9">
-                                            Open your browser, navigate to http://localhost:80 (or use the domain name of your server) and finish the setup according to the instructions.
-                                        </div>
-                                    </div>
-                                </li>
+    <div class="row" style="align-items: center;justify-content: center;">
+        <div class="col-md-1 col-3">
+            <span class="fa-stack fa-2x">
+                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+                 <strong class="fa-stack-1x" style="color:white;">4</strong>
+            </span>
+        </div>
+        <div class="col-md-11 col-9">
+            Open your browser, navigate to http://localhost:80 (or use the domain name of your server) and finish the setup according to the instructions.
+        </div>
+    </div>
+</li>
                             </ul>
                         </div>
                     </div>
