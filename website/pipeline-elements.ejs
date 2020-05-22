@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- partial("partials/_meta.ejs", { title: "Pipeline Elements" }) %>
+</head>
+
+<body>
+
+<%- partial("partials/_nav.ejs", { title: "Pipeline Elements" }) %>
+
+<%- partial("partials/_breadcumb.ejs", { title: "Pipeline Elements"}) %>
+
+<section class="elements-area section-padding-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="pe-grid-container">
+                <% for(var i=0; i < public._data.pipelineElements.length; i++) { %>
+                <% var type;
+                   if (public._data.pipelineElements[i].type === "Data Processor") {
+                       type = "processor";
+                   } else if (public._data.pipelineElements[i].type === "Data Sink") {
+                       type = "sink";
+                   } else {
+                       type = "adapter"
+                   }
+                %>
+                    <div class="pe-container-item pe-container-item-<%- type %>">
+                        <div class="pe-container-item-header">
+                            <div class="pe-container-item-icon pe-icon-<%- type %>">
+                                <img class="pe-icon" src="/img/pipeline-elements/<%= public._data.pipelineElements[i].appId %>/icon.png">
+                            </div>
+                            <div class="pe-container-item-header-pe">
+                                <div class="pe-container-item-label pe-container-item-label-<%- type %>">
+                                    <%= public._data.pipelineElements[i].type %>
+                                </div>
+                                <div class="pe-container-item-label-name">
+                                    <%= public._data.pipelineElements[i].name %>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pe-container-item-body"><%= public._data.pipelineElements[i].description %></div>
+                        <div class="pe-container-item-footer">
+                            <div>
+                                <i class="fas fa-file"></i>
+                                <a href="pe/<%= public._data.pipelineElements[i].appId %>/documentation.html">Documentation</a>
+                            </div>
+                            <div>
+                                <i class="fab fa-docker"></i>
+                                <a href="<%= public._data.pipelineElements[i].dockerHubLink %>">Docker Container</a>
+                            </div>
+                            <div>
+                                <i class="fab fa-github"></i>
+                                <a href="<%= public._data.pipelineElements[i].githubLink %>">Code on Github</a>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<%- partial("partials/_footer.ejs") %>
+</body>
+
+</html>

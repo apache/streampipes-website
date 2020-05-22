@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- partial("../partials/_meta.ejs", { title: "Pipeline Elements" }) %>
+</head>
+
+<body>
+
+<%- partial("../partials/_nav.ejs", { title: "Pipeline Elements" }) %>
+
+<%- partial("../partials/_breadcumb.ejs", { title: "Pipeline Elements"}) %>
+
+<section class="elements-area section-padding-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+              <%- yield %>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<%- partial("../partials/_footer.ejs") %>
+</body>
+
+</html>
