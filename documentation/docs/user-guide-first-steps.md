@@ -181,11 +181,6 @@ Now lets start!
     * Description: **Complex monitorung rule**
     * Start pipeline immediately: **CHECK**
 * Click **Save and go to pipeline view**
- 
-<div class="my-carousel">
-    <img src="/docs/img/quickstart/examples_master/24_example2_save.png" alt="Save Pipeline">
-</div>
-
 * All pipeline elements should be started successfully 
 * It can be seen that the elements run on different technologies, in flink and a java container
     * http://pe-flink-examples:8090
