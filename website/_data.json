@@ -1,12 +1,44 @@
 {
   "pipelineElements": [
     {
+      "appId": "org.apache.streampipes.processors.pattern-detection.flink.absence",
+      "type": "Data Processor",
+      "name": "Absence",
+      "description": "Detects whether an event does not arrive within a specified time after the occurrence of another event.",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-pattern-detection-flink",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-pattern-detection-flink"
+    },
+    {
       "appId": "org.apache.streampipes.processors.aggregation.flink.aggregation",
       "type": "Data Processor",
       "name": "Aggregation",
       "description": "Performs different aggregation functions",
       "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-aggregation-flink",
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-aggregation-flink"
+    },
+    {
+      "appId": "org.apache.streampipes.processors.pattern-detection.flink.and",
+      "type": "Data Processor",
+      "name": "And",
+      "description": "Detects whether an event co-occurs with another event within a given time.",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-pattern-detection-flink",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-pattern-detection-flink"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.protocol.stream.kafka",
+      "type": "Adapter",
+      "name": "Apache Kafka",
+      "description": "Consumes messages from an Apache Kafka broker",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.protocol.stream.pulsar",
+      "type": "Adapter",
+      "name": "Apache Pulsar",
+      "description": "Consumes messages from an Apache Pulsar broker",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
     },
     {
       "appId": "org.apache.streampipes.processors.transformation.flink.processor.boilerplate",
@@ -73,6 +105,14 @@
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-text-mining-jvm"
     },
     {
+      "appId": "org.apache.streampipes.connect.adapters.coindesk",
+      "type": "Adapter",
+      "name": "Coindesk Bitcoin Price",
+      "description": "The current bitcoin price from the Coindesk API.",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
       "appId": "org.apache.streampipes.processors.filters.jvm.compose",
       "type": "Data Processor",
       "name": "Compose",
@@ -87,6 +127,14 @@
       "description": "Stores events in an Apache CouchDB database.",
       "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/sinks-databases-jvm",
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-sinks-databases-jvm"
+    },
+    {
+      "appId": "org.apache.streampipes.processors.aggregation.flink.count",
+      "type": "Data Processor",
+      "name": "Count Aggregation",
+      "description": "Performs an aggregation based on a given event property and outputs the number of occurrences.",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-aggregation-flink",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-aggregation-flink"
     },
     {
       "appId": "org.apache.streampipes.processors.transformation.jvm.count-array",
@@ -209,6 +257,22 @@
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-transformation-flink"
     },
     {
+      "appId": "org.apache.streampipes.protocol.set.file",
+      "type": "Adapter",
+      "name": "File Set",
+      "description": "Reads the content from a local file.",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.protocol.stream.file",
+      "type": "Adapter",
+      "name": "File Stream",
+      "description": null,
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
       "appId": "org.apache.streampipes.processors.siddhi.frequency",
       "type": "Data Processor",
       "name": "Frequency Calculation",
@@ -223,6 +287,14 @@
       "description": "Detects when the frequency of the event stream changes",
       "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-filters-siddhi",
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-filters-siddhi"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.adapters.gdelt",
+      "type": "Adapter",
+      "name": "GDELT",
+      "description": "Global Database of Society",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
     },
     {
       "appId": "org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification",
@@ -241,6 +313,54 @@
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-geo-jvm"
     },
     {
+      "appId": "org.apache.streampipes.protocol.set.http",
+      "type": "Adapter",
+      "name": "HTTP Set",
+      "description": "Regularly poll an HTTP endpoint",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.protocol.stream.http",
+      "type": "Adapter",
+      "name": "HTTP Stream",
+      "description": "Continuously fetched events from an HTTP REST endpoint.",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.adapters.iex.news",
+      "type": "Adapter",
+      "name": "IEX Cloud News",
+      "description": "Fetches news for a given company (10 news / minutes maximum)",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.adapters.iex.stocks",
+      "type": "Adapter",
+      "name": "IEX Cloud Stock Quotes",
+      "description": "Live stock data provided by the IEXCloud API",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.adapters.iss",
+      "type": "Adapter",
+      "name": "ISS Location",
+      "description": "Current Location of the International Space Station (ISS)",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
+      "appId": "org.apache.streampipes.processor.imageclassification.jvm.image-cropper",
+      "type": "Data Processor",
+      "name": "Image Cropper",
+      "description": "Crops an image based on given bounding box coordinates",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-image-processing-jvm",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-image-processing-jvm"
+    },
+    {
       "appId": "org.apache.streampipes.processor.imageclassification.jvm.image-enricher",
       "type": "Data Processor",
       "name": "Image Enricher",
@@ -249,12 +369,44 @@
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-image-processing-jvm"
     },
     {
+      "appId": "org.apache.streampipes.connect.adapters.image.set",
+      "type": "Adapter",
+      "name": "Image Upload (Set)",
+      "description": "",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.adapters.image.stream",
+      "type": "Adapter",
+      "name": "Image Upload (Stream)",
+      "description": "",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
       "appId": "org.apache.streampipes.sinks.databases.jvm.influxdb",
       "type": "Data Sink",
       "name": "InfluxDB",
       "description": "Stores events in an InfluxDB.",
       "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/sinks-databases-jvm",
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-sinks-databases-jvm"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.adapters.influxdb.set",
+      "type": "Adapter",
+      "name": "InfluxDB Set Adapter",
+      "description": "Creates a data set for an InfluxDB measurement",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.adapters.influxdb.stream",
+      "type": "Adapter",
+      "name": "InfluxDB Stream Adapter",
+      "description": "Creates a data stream for an InfluxDB measurement",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
     },
     {
       "appId": "org.apache.streampipes.sinks.databases.jvm.iotdb",
@@ -295,6 +447,14 @@
       "description": "Detects the language of a given text",
       "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-text-mining-jvm",
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-text-mining-jvm"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.protocol.stream.mqtt",
+      "type": "Adapter",
+      "name": "MQTT",
+      "description": null,
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
     },
     {
       "appId": "org.apache.streampipes.sinks.brokers.jvm.mqtt",
@@ -345,6 +505,46 @@
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-filters-jvm"
     },
     {
+      "appId": "org.apache.streampipes.connect.adapters.mysql.set",
+      "type": "Adapter",
+      "name": "MySQL Set Adapter",
+      "description": "Creates a data set from an SQL table",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.adapters.mysql.stream",
+      "type": "Adapter",
+      "name": "MySql Stream Adapter",
+      "description": "Creates a data stream for a SQL table",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.adapters.netio.mqtt",
+      "type": "Adapter",
+      "name": "NETIO MQTT M2M",
+      "description": "Connect a NETIO power plugs over MQTT",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.adapters.netio.rest",
+      "type": "Adapter",
+      "name": "NETIO http JSON",
+      "description": "Connect a NETIO REST power plug",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera",
+      "type": "Adapter",
+      "name": "NSW Traffic Cameras",
+      "description": "Traffic camera images produced by NSW Australia",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
       "appId": "org.apache.streampipes.processors.textmining.jvm.namefinder",
       "type": "Data Processor",
       "name": "Name Finder",
@@ -385,6 +585,14 @@
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-filters-jvm"
     },
     {
+      "appId": "org.apache.streampipes.connect.adapters.opcua",
+      "type": "Adapter",
+      "name": "OPC UA",
+      "description": "Reads values from an OPC-UA server",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
       "appId": "org.apache.streampipes.sinks.databases.jvm.opcua",
       "type": "Data Sink",
       "name": "OPC-UA",
@@ -399,6 +607,14 @@
       "description": "Send Push Message to OneSignal-Application",
       "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/sinks-notifications-jvm",
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-sinks-notifications-jvm"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.adapters.plc4x.s7",
+      "type": "Adapter",
+      "name": "PLC4X S7",
+      "description": "Connect directly to your PLC",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
     },
     {
       "appId": "org.apache.streampipes.processors.textmining.jvm.partofspeech",
@@ -457,6 +673,14 @@
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-sinks-brokers-jvm"
     },
     {
+      "appId": "org.apache.streampipes.connect.adapters.ros",
+      "type": "Adapter",
+      "name": "ROS Bridge",
+      "description": "Connect Robots running on ROS.",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
       "appId": "org.apache.streampipes.sinks.brokers.jvm.rabbitmq",
       "type": "Data Sink",
       "name": "RabbitMQ Publisher",
@@ -465,12 +689,20 @@
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-sinks-brokers-jvm"
     },
     {
-      "appId": "org.apache.streampipes.sinks.databases.jvm.redis",
-      "type": "Data Sink",
-      "name": "Redis",
-      "description": "Stores events in a Redis key-value store.",
-      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/sinks-databases-jvm",
-      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-sinks-databases-jvm"
+      "appId": "org.apache.streampipes.connect.adapters.simulator.randomdataset",
+      "type": "Adapter",
+      "name": "Random Data Simulator (Set)",
+      "description": "Publishes a bounded stream of random events",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.adapters.simulator.randomdatastream",
+      "type": "Adapter",
+      "name": "Random Data Simulator (Stream)",
+      "description": "Publishes a continuous stream of random events",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
     },
     {
       "appId": "org.apache.streampipes.processor.geo.jvm.reversegeocoding",
@@ -487,6 +719,14 @@
       "description": "Splits a text up in sentences",
       "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-text-mining-jvm",
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-text-mining-jvm"
+    },
+    {
+      "appId": "org.apache.streampipes.processors.pattern-detection.flink.sequence",
+      "type": "Data Processor",
+      "name": "Sequence",
+      "description": "Detects a sequence of events.",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-pattern-detection-flink",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-pattern-detection-flink"
     },
     {
       "appId": "org.apache.streampipes.processors.siddhi.sequence",
@@ -511,6 +751,14 @@
       "description": "Measures the size of an event in Bytes, KB or MB",
       "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-enricher-jvm",
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-enricher-jvm"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.adapters.slack",
+      "type": "Adapter",
+      "name": "Slack",
+      "description": "Subscribes to a Slack channel",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
     },
     {
       "appId": "org.apache.streampipes.sinks.notifications.jvm.slack",
@@ -569,6 +817,14 @@
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-enricher-flink"
     },
     {
+      "appId": "org.apache.streampipes.processors.statistics.flink.statistics-summary",
+      "type": "Data Processor",
+      "name": "Statistics Summary",
+      "description": "Calculate simple descriptive summary statistics",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-statistics-flink",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-statistics-flink"
+    },
+    {
       "appId": "org.apache.streampipes.processors.siddhi.stop",
       "type": "Data Processor",
       "name": "Stream Stop Detection",
@@ -591,6 +847,14 @@
       "description": "Measures how long a string value does not change",
       "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-transformation-jvm",
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-transformation-jvm"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.adapters.ti",
+      "type": "Adapter",
+      "name": "TI Sensor Tag",
+      "description": null,
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
     },
     {
       "appId": "org.apache.streampipes.processors.transformation.jvm.taskduration",
@@ -679,6 +943,22 @@
       "description": "Outpus an event every time a specific field changes.",
       "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-transformation-jvm",
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-transformation-jvm"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.adapters.wikipedia.edit",
+      "type": "Adapter",
+      "name": "Wikipedia Edits",
+      "description": "Continuously publishes recent Wikipedia edits",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.adapters.wikipedia.new",
+      "type": "Adapter",
+      "name": "Wikipedia New Articles",
+      "description": "Continuously publishes articles created on Wikipedia",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
     },
     {
       "appId": "org.apache.streampipes.processors.textmining.flink.wordcount",

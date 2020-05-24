@@ -28,7 +28,7 @@
                 %>
                     <div class="pe-container-item pe-container-item-<%- type %>">
                         <div class="pe-container-item-header">
-                            <div class="pe-container-item-icon pe-icon-<%- type %>">
+                            <div class="pe-container-item-icon pe-container-item-icon-<%- type %> pe-icon-<%- type %>">
                                 <img class="pe-icon" src="/img/pipeline-elements/<%= public._data.pipelineElements[i].appId %>/icon.png">
                             </div>
                             <div class="pe-container-item-header-pe">
@@ -44,7 +44,7 @@
                         <div class="pe-container-item-footer">
                             <div>
                                 <i class="fas fa-file"></i>
-                                <a href="pe/<%= public._data.pipelineElements[i].appId %>/documentation.html">Documentation</a>
+                                <a href="https://streampipes.apache.org/docs/docs/<%= public._data.pipelineElements[i].appId %>/<%= public._data.pipelineElements[i].appId %>/">Documentation</a>
                             </div>
                             <div>
                                 <i class="fab fa-docker"></i>
