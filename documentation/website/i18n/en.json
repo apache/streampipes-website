@@ -1348,9 +1348,497 @@
         "title": "Tutorial: Data Sources",
         "sidebar_label": "Tutorial: Data Sources"
       },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.coindesk": {
+        "title": "Coindesk Bitcoin Price",
+        "sidebar_label": "Coindesk Bitcoin Price"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.gdelt": {
+        "title": "GDELT",
+        "sidebar_label": "GDELT"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.iex.news": {
+        "title": "IEX Cloud News",
+        "sidebar_label": "IEX Cloud News"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.iex.stocks": {
+        "title": "IEX Cloud Stock Quotes",
+        "sidebar_label": "IEX Cloud Stock Quotes"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.image.set": {
+        "title": "Image Upload (Set)",
+        "sidebar_label": "Image Upload (Set)"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.image.stream": {
+        "title": "Image Upload (Stream)",
+        "sidebar_label": "Image Upload (Stream)"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.influxdb.set": {
+        "title": "InfluxDB Set Adapter",
+        "sidebar_label": "InfluxDB Set Adapter"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.influxdb.stream": {
+        "title": "InfluxDB Stream Adapter",
+        "sidebar_label": "InfluxDB Stream Adapter"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.iss": {
+        "title": "ISS Location",
+        "sidebar_label": "ISS Location"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.mysql.set": {
+        "title": "MySQL Set Adapter",
+        "sidebar_label": "MySQL Set Adapter"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.mysql.stream": {
+        "title": "MySql Stream Adapter",
+        "sidebar_label": "MySql Stream Adapter"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.netio.mqtt": {
+        "title": "NETIO MQTT M2M",
+        "sidebar_label": "NETIO MQTT M2M"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.netio.rest": {
+        "title": "NETIO http JSON",
+        "sidebar_label": "NETIO http JSON"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera": {
+        "title": "NSW Traffic Cameras",
+        "sidebar_label": "NSW Traffic Cameras"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.opcua": {
+        "title": "OPC UA",
+        "sidebar_label": "OPC UA"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.plc4x.s7": {
+        "title": "PLC4X S7",
+        "sidebar_label": "PLC4X S7"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.ros": {
+        "title": "ROS Bridge",
+        "sidebar_label": "ROS Bridge"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.simulator.randomdataset": {
+        "title": "Random Data Simulator (Set)",
+        "sidebar_label": "Random Data Simulator (Set)"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.simulator.randomdatastream": {
+        "title": "Random Data Simulator (Stream)",
+        "sidebar_label": "Random Data Simulator (Stream)"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.slack": {
+        "title": "Slack",
+        "sidebar_label": "Slack"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.ti": {
+        "title": "TI Sensor Tag",
+        "sidebar_label": "TI Sensor Tag"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.wikipedia.edit": {
+        "title": "Wikipedia Edits",
+        "sidebar_label": "Wikipedia Edits"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.adapters.wikipedia.new": {
+        "title": "Wikipedia New Articles",
+        "sidebar_label": "Wikipedia New Articles"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.protocol.stream.file": {
+        "title": "File Stream",
+        "sidebar_label": "File Stream"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.protocol.stream.http": {
+        "title": "HTTP Stream",
+        "sidebar_label": "HTTP Stream"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.protocol.stream.kafka": {
+        "title": "Apache Kafka",
+        "sidebar_label": "Apache Kafka"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.protocol.stream.mqtt": {
+        "title": "MQTT",
+        "sidebar_label": "MQTT"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.connect.protocol.stream.pulsar": {
+        "title": "Apache Pulsar",
+        "sidebar_label": "Apache Pulsar"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processor.geo.flink": {
+        "title": "Spatial Grid Enrichment",
+        "sidebar_label": "Spatial Grid Enrichment"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processor.geo.jvm.geocoding": {
+        "title": "Google Maps Geocoder",
+        "sidebar_label": "Google Maps Geocoder"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processor.geo.jvm.reversegeocoding": {
+        "title": "Reverse Geocoder",
+        "sidebar_label": "Reverse Geocoder"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processor.geo.jvm.staticgeocoding": {
+        "title": "Static Google Maps Geocoder",
+        "sidebar_label": "Static Google Maps Geocoder"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification": {
+        "title": "Generic Image Classification",
+        "sidebar_label": "Generic Image Classification"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processor.imageclassification.jvm.image-cropper": {
+        "title": "Image Cropper",
+        "sidebar_label": "Image Cropper"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processor.imageclassification.jvm.image-enricher": {
+        "title": "Image Enricher",
+        "sidebar_label": "Image Enricher"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processor.imageclassification.qrcode": {
+        "title": "QR Code Reader",
+        "sidebar_label": "QR Code Reader"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.aggregation.flink.aggregation": {
+        "title": "Aggregation",
+        "sidebar_label": "Aggregation"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.aggregation.flink.count": {
+        "title": "Count Aggregation",
+        "sidebar_label": "Count Aggregation"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.aggregation.flink.eventcount": {
+        "title": "Event Counter",
+        "sidebar_label": "Event Counter"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.aggregation.flink.rate": {
+        "title": "Event Rate",
+        "sidebar_label": "Event Rate"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.enricher.flink.processor.math.mathop": {
+        "title": "Math",
+        "sidebar_label": "Math"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop": {
+        "title": "Static Math",
+        "sidebar_label": "Static Math"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.enricher.flink.processor.trigonometry": {
+        "title": "Trigonometry Functions",
+        "sidebar_label": "Trigonometry Functions"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.enricher.flink.processor.urldereferencing": {
+        "title": "URL Dereferencing",
+        "sidebar_label": "URL Dereferencing"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.enricher.flink.timestamp": {
+        "title": "Timestamp Enricher",
+        "sidebar_label": "Timestamp Enricher"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.enricher.jvm.sizemeasure": {
+        "title": "Size Measure",
+        "sidebar_label": "Size Measure"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.filters.jvm.compose": {
+        "title": "Compose",
+        "sidebar_label": "Compose"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.filters.jvm.enrich": {
+        "title": "Merge By Enrich",
+        "sidebar_label": "Merge By Enrich"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.filters.jvm.merge": {
+        "title": "Merge By Time",
+        "sidebar_label": "Merge By Time"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.filters.jvm.numericalfilter": {
+        "title": "Numerical Filter",
+        "sidebar_label": "Numerical Filter"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.filters.jvm.numericaltextfilter": {
+        "title": "Numerical Text Filter",
+        "sidebar_label": "Numerical Text Filter"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.filters.jvm.project": {
+        "title": "Projection",
+        "sidebar_label": "Projection"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.filters.jvm.textfilter": {
+        "title": "Text Filter",
+        "sidebar_label": "Text Filter"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.filters.jvm.threshold": {
+        "title": "Threshold Detector",
+        "sidebar_label": "Threshold Detector"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo": {
+        "title": "Creates JTS Point",
+        "sidebar_label": "Creates JTS Point"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG": {
+        "title": "EPSG Code",
+        "sidebar_label": "EPSG Code"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory": {
+        "title": "Single Trajectory Creator",
+        "sidebar_label": "Single Trajectory Creator"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.geo.jvm.processor.distancecalculator": {
+        "title": "Distance Calculator",
+        "sidebar_label": "Distance Calculator"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.geo.jvm.processor.speed": {
+        "title": "Speed Calculator",
+        "sidebar_label": "Speed Calculator"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator": {
+        "title": "Static Distance Calculator",
+        "sidebar_label": "Static Distance Calculator"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.pattern-detection.flink.absence": {
+        "title": "Absence",
+        "sidebar_label": "Absence"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.pattern-detection.flink.and": {
+        "title": "And",
+        "sidebar_label": "And"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.pattern-detection.flink.peak-detection": {
+        "title": "Peak Detection",
+        "sidebar_label": "Peak Detection"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.pattern-detection.flink.sequence": {
+        "title": "Sequence",
+        "sidebar_label": "Sequence"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.siddhi.frequency": {
+        "title": "Frequency Calculation",
+        "sidebar_label": "Frequency Calculation"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.siddhi.frequencychange": {
+        "title": "Frequency Change",
+        "sidebar_label": "Frequency Change"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.siddhi.increase": {
+        "title": "Trend",
+        "sidebar_label": "Trend"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.siddhi.numericalfilter": {
+        "title": "Numerical Filter (Siddhi)",
+        "sidebar_label": "Numerical Filter (Siddhi)"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.siddhi.sequence": {
+        "title": "Sequence Detection",
+        "sidebar_label": "Sequence Detection"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.siddhi.stop": {
+        "title": "Stream Stop Detection",
+        "sidebar_label": "Stream Stop Detection"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.statistics.flink.statistics-summary": {
+        "title": "Statistics Summary",
+        "sidebar_label": "Statistics Summary"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.textmining.flink.languagedetection": {
+        "title": "Language Detection",
+        "sidebar_label": "Language Detection"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.textmining.flink.wordcount": {
+        "title": "Word Count",
+        "sidebar_label": "Word Count"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.textmining.jvm.chunker": {
+        "title": "Chunker (English)",
+        "sidebar_label": "Chunker (English)"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.textmining.jvm.languagedetection": {
+        "title": "Language Detection",
+        "sidebar_label": "Language Detection"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.textmining.jvm.namefinder": {
+        "title": "Name Finder",
+        "sidebar_label": "Name Finder"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.textmining.jvm.partofspeech": {
+        "title": "Part of Speech (English)",
+        "sidebar_label": "Part of Speech (English)"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.textmining.jvm.sentencedetection": {
+        "title": "Sentence Detection (English)",
+        "sidebar_label": "Sentence Detection (English)"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.textmining.jvm.tokenizer": {
+        "title": "Tokenizer (English)",
+        "sidebar_label": "Tokenizer (English)"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.transformation.flink.field-converter": {
+        "title": "Field Converter",
+        "sidebar_label": "Field Converter"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.transformation.flink.field-mapper": {
+        "title": "Field Mapper",
+        "sidebar_label": "Field Mapper"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.transformation.flink.field-renamer": {
+        "title": "Field Renamer",
+        "sidebar_label": "Field Renamer"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.transformation.flink.fieldhasher": {
+        "title": "Field Hasher",
+        "sidebar_label": "Field Hasher"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.transformation.flink.measurement-unit-converter": {
+        "title": "Measurement Unit Converter",
+        "sidebar_label": "Measurement Unit Converter"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.transformation.flink.processor.boilerplate": {
+        "title": "Boilerplate Removal",
+        "sidebar_label": "Boilerplate Removal"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.transformation.jvm.booloperator.counter": {
+        "title": "Boolean Counter",
+        "sidebar_label": "Boolean Counter"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.transformation.jvm.booloperator.inverter": {
+        "title": "Boolean Inverter",
+        "sidebar_label": "Boolean Inverter"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping": {
+        "title": "Measure Time Between Two Sensors",
+        "sidebar_label": "Measure Time Between Two Sensors"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.transformation.jvm.booloperator.timer": {
+        "title": "Boolean Timer",
+        "sidebar_label": "Boolean Timer"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.transformation.jvm.changed-value": {
+        "title": "Value Changed",
+        "sidebar_label": "Value Changed"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.transformation.jvm.count-array": {
+        "title": "Count Array",
+        "sidebar_label": "Count Array"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.transformation.jvm.csvmetadata": {
+        "title": "CSV Metadata Enricher",
+        "sidebar_label": "CSV Metadata Enricher"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.transformation.jvm.duration-value": {
+        "title": "Calculate Duration",
+        "sidebar_label": "Calculate Duration"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor": {
+        "title": "Timestamp Extractor",
+        "sidebar_label": "Timestamp Extractor"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.transformation.jvm.split-array": {
+        "title": "Split Array",
+        "sidebar_label": "Split Array"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.transformation.jvm.stringoperator.counter": {
+        "title": "String Counter",
+        "sidebar_label": "String Counter"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.transformation.jvm.stringoperator.timer": {
+        "title": "String Timer",
+        "sidebar_label": "String Timer"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.transformation.jvm.taskduration": {
+        "title": "Task Duration",
+        "sidebar_label": "Task Duration"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.processors.transformation.jvm.transform-to-boolean": {
+        "title": "Transform to boolean",
+        "sidebar_label": "Transform to boolean"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.protocol.set.file": {
+        "title": "File Set",
+        "sidebar_label": "File Set"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.protocol.set.http": {
+        "title": "HTTP Set",
+        "sidebar_label": "HTTP Set"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.sinks.brokers.jvm.bufferrest": {
+        "title": "Buffered REST Publisher",
+        "sidebar_label": "Buffered REST Publisher"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.sinks.brokers.jvm.jms": {
+        "title": "JMS Publisher",
+        "sidebar_label": "JMS Publisher"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.sinks.brokers.jvm.kafka": {
+        "title": "Kafka Publisher",
+        "sidebar_label": "Kafka Publisher"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.sinks.brokers.jvm.mqtt": {
+        "title": "MQTT Publisher",
+        "sidebar_label": "MQTT Publisher"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.sinks.brokers.jvm.pulsar": {
+        "title": "Pulsar Publisher",
+        "sidebar_label": "Pulsar Publisher"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.sinks.brokers.jvm.rabbitmq": {
+        "title": "RabbitMQ Publisher",
+        "sidebar_label": "RabbitMQ Publisher"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.sinks.brokers.jvm.rest": {
+        "title": "REST Publisher",
+        "sidebar_label": "REST Publisher"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.sinks.databases.ditto": {
+        "title": "Eclipse Ditto",
+        "sidebar_label": "Eclipse Ditto"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.sinks.databases.flink.elasticsearch": {
+        "title": "Elasticsearch",
+        "sidebar_label": "Elasticsearch"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.sinks.databases.jvm.couchdb": {
+        "title": "CouchDB",
+        "sidebar_label": "CouchDB"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.sinks.databases.jvm.influxdb": {
+        "title": "InfluxDB",
+        "sidebar_label": "InfluxDB"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.sinks.databases.jvm.iotdb": {
+        "title": "IoTDB",
+        "sidebar_label": "IoTDB"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.sinks.databases.jvm.opcua": {
+        "title": "OPC-UA",
+        "sidebar_label": "OPC-UA"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.sinks.databases.jvm.postgresql": {
+        "title": "PostgreSQL",
+        "sidebar_label": "PostgreSQL"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.sinks.internal.jvm.dashboard": {
+        "title": "Dashboard Sink",
+        "sidebar_label": "Dashboard Sink"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.sinks.internal.jvm.datalake": {
+        "title": "Data Lake",
+        "sidebar_label": "Data Lake"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.sinks.internal.jvm.notification": {
+        "title": "Notification",
+        "sidebar_label": "Notification"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.sinks.notifications.jvm.email": {
+        "title": "Email Notification",
+        "sidebar_label": "Email Notification"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.sinks.notifications.jvm.onesignal": {
+        "title": "OneSignal",
+        "sidebar_label": "OneSignal"
+      },
+      "version-0.66.0/pe/version-0.66.0-org.apache.streampipes.sinks.notifications.jvm.slack": {
+        "title": "Slack Notification",
+        "sidebar_label": "Slack Notification"
+      },
       "version-0.66.0/version-0.66.0-pipeline-elements": {
         "title": "Overview",
         "sidebar_label": "Overview"
+      },
+      "version-0.66.0/version-0.66.0-user-guide-first-steps": {
+        "title": "First steps",
+        "sidebar_label": "First steps"
       },
       "version-0.66.0/version-0.66.0-user-guide-installation": {
         "title": "Installation",
