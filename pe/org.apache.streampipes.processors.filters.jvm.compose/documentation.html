@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Apache StreamPipes is a self-service (Industrial) IoT toolbox to enable non-technical users to connect, analyze and explore IIoT data streams">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+<!-- Favicon -->
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png?v=2"/>
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png?v=2"/>
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png?v=2"/>
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png?v=2"/>
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png?v=2"/>
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png?v=2"/>
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png?v=2"/>
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png?v=2"/>
+<link rel="icon" type="image/png" href="/img/favicon/favicon-196x196.png?v=2" sizes="196x196"/>
+<link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png?v=2" sizes="96x96"/>
+<link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png?v=2" sizes="32x32"/>
+<link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png?v=2" sizes="16x16"/>
+<link rel="icon" type="image/png" href="/img/favicon/favicon-128.png?v=2" sizes="128x128"/>
+
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/css?family=Heebo|Open+Sans|Raleway" rel="stylesheet">
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="/css/pe.css">
+<link rel="stylesheet" href="/css/footer.css">
+<link rel="stylesheet" href="/css/page-banner.css">
+<link rel="stylesheet" href="/css/nav.css">
+<link rel="stylesheet" href="/css/buttons.css">
+<link rel="stylesheet" href="/css/team.css">
+<link href="/css/responsive.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+<title>Apache StreamPipes (incubating) - Pipeline Elements</title>
+
+</head>
+
+<body>
+
+<div class="header-banner">
+    <div class="header-banner-news">
+        <b>The Apache StreamPipes (incubating) community is pleased to announce our first Apache release! Download the latest version <a class="banner-link" href="/download.html">here</a>!</b>
+    </div>
+    <div style="display: flex; align-items: center;justify-content: flex-end;padding-right:20px;height:40px;">
+        <span flex></span>
+        <div class="header-social-buttons" style="color:white;">
+            <a href="https://www.twitter.com/streampipes" style="color:rgb(27, 20, 100);">
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.github.com/apache/incubator-streampipes" style="color:rgb(27, 20, 100);;">
+                <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<header class="header-area clearfix">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-12 h-100">
+                <div class="menu-area h-100">
+                    <nav class="navbar h-100 navbar-expand-lg align-items-center">
+                        <a class="navbar-brand" href="/"><img src="/img/sp-logo-color.png" style="height:40px"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sp-navbar"
+                                aria-controls="sp-navbar" aria-expanded="false" aria-label="Toggle navigation"><span
+                                    class="navbar-toggler-icon"></span></button>
+
+                        <div class="collapse navbar-collapse justify-content-end" id="sp-navbar">
+                            <ul class="navbar-nav animated" id="nav">
+                                <li class="nav-item "><a class="nav-link"
+                                                                                               href="/">Home</a></li>
+                                <ul class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                       aria-haspopup="true" aria-expanded="false">Why StreamPipes?</a>
+                                    <div class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link" href="/feature-overview.html">Feature Overview</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="/pipeline-elements.html">Pipeline Elements</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="/usecases.html">Use Cases</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="/technology.html">Technology</a>
+                                        </li>
+                                    </div>
+                                </ul>
+                                <li class="nav-item "><a class="nav-link"
+                                                                                                   href="/download">Getting
+                                        Started</a></li>
+                                <ul class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                       aria-haspopup="true" aria-expanded="false">Resources</a>
+                                    <div class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link"
+                                                                href="/docs/index.html">Documentation</a></li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                                href="https://issues.apache.org/jira/projects/STREAMPIPES/">Issue Tracker</a></li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                                href="http://cwiki.apache.org/confluence/display/STREAMPIPES">Wiki</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="/media.html">Slides & Videos</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="/docs/blog">Blog</a></li>
+                                    </div>
+                                </ul>
+                                <ul class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                       aria-haspopup="true" aria-expanded="false">Community</a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <li class="nav-item "><a
+                                                    class="nav-link" href="/mailinglists.html">Mailing Lists</a></li>
+                                        <li class="nav-item "><a class="nav-link"
+                                                                                                        href="/team.html">Team</a></li>
+                                        <li class="nav-item "><a
+                                                    class="nav-link" href="/getinvolved.html">Get involved</a></li>
+                                        <li class="nav-item "><a
+                                                    class="nav-link" href="/meetus.html">Talks & Events</a></li>
+                                    </div>
+                                </ul>
+                                <ul class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                       aria-haspopup="true" aria-expanded="false">Apache</a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <li class="nav-item"><a class="nav-link" href="https://www.apache.org/">Apache Software Foundation</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="https://www.apache.org/foundation/how-it-works.html">How Apache Works</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="https://www.apache.org/licenses">License</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="https://www.apache.org/security">Security</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="https://www.apache.org/foundation/sponsorship.html">Sponsoring Apache</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
+                                    </div>
+                                </ul>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="page-banner-area">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <div class="page-banner-content">
+                    <h2>Pipeline Elements</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="elements-area section-padding-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+              <!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one or more
+  ~ contributor license agreements.  See the NOTICE file distributed with
+  ~ this work for additional information regarding copyright ownership.
+  ~ The ASF licenses this file to You under the Apache License, Version 2.0
+  ~ (the "License"); you may not use this file except in compliance with
+  ~ the License.  You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  -->
+
+<h2>Compose</h2><p align="center"> 
+    <img src="/img/pipeline-elements/org.apache.streampipes.processors.filters.jvm.compose/icon.png" width="150px;" class="pe-image-documentation">
+</p>
+
+<hr>
+<h2>Description</h2><p>Merges two event streams. Any time, a new input event arrives, it is merged with the last input event from the other 
+event stream and forwarded.</p>
+<hr>
+<h2>Required input</h2><p>The Compose processor does not have any specific input requirements.</p>
+<hr>
+<h2>Configuration</h2><p>(no further configuration required)</p>
+<h2>Output</h2><p>The compose processor has a configurable output that can be selected by the user at pipeline modeling time.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer-area clearfix">
+    <div class="footer-section">
+        <div class="footer-content-part">Disclaimer: Apache StreamPipes (incubating) is an effort undergoing incubation
+            at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all
+            newly accepted projects until a further review indicates that the infrastructure, communications, and
+            decision making process have stabilized in a manner consistent with other successful ASF projects. While
+            incubation status is not necessarily a reflection of the completeness or stability of the code, it does
+            indicate that the project has yet to be fully endorsed by the ASF.
+        </div>
+        <div class="footer-content-part"><a href="https://www.apache.org/foundation/policies/privacy.html">Privacy</a></div>
+        <p class="footer-content-part">Copyright © 2019 The Apache Software Foundation. Apache and the Apache feather
+            logo are trademarks of The Apache Software Foundation
+            <br/>Home screen image taken from <a
+                    href="https://www.flickr.com/photos/56682936@N03/15572646535">Flickr</a>, licensed under <a
+                    href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, some logos removed.
+        </p>
+
+    </div>
+</footer>
+
+<script src="/js/jquery-2.2.4.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/scripts.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154181944-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-154181944-1');
+</script>
+
+
+</body>
+
+</html>

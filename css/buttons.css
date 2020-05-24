@@ -39,6 +39,12 @@
     padding: 1em 1.0em;
 }
 
+.sp-button-medium {
+    font-size: 1.0em;
+    padding: 0.75em 0.75em;
+}
+
+
 .sp-button.sp-button-blue:hover {
     background: rgb(59, 92, 149);
     -webkit-transition: all 0.75s ease;
