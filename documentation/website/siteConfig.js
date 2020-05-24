@@ -30,7 +30,6 @@ const siteConfig = {
     headerLinks: [
         {doc: 'user-guide-introduction', label: 'User Guide'},
         {doc: 'dev-guide-introduction', label: 'Developer Guide'},
-        {doc: 'pipeline-elements', label: 'Pipeline Elements'},
         {doc: 'faq-common-problems', label: 'FAQ'},
         {blog: true, label: 'Blog'},
         {search: true},
@@ -44,6 +43,7 @@ const siteConfig = {
     gaGtag: true,
 
     disableHeaderTitle: true,
+    docsSideNavCollapsible: true,
 
     headerIcon: 'img/sp-logo-color-docs.png',
     footerIcon: 'img/sp-logo-color.png',
