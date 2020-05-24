@@ -121,6 +121,32 @@ If there is an error during the execution, a notification containing a (hopefull
     <img src="/docs/img/features_0_62_0/editor/16_pipeline_sucessfully_started.png" alt="Pipeline sucessfully started">
 </div>
 
+## Connect new Data Sources
+With StreamPipes Connect it is possible to connect new data sources in StreamPipes with just a few clicks.
+Therefore, we provide a marketplace with a lot of different adapters that can be configured and executed to create new __Data Streams__ in the __Pipeline Editor__.
+With StreamPipes Connect it is possible to connect specific data sources - e.g. an adapter streaming the current location of the ISS (International Space Station).
+It is also possible to connect generic sources like message brokers or databases.
+If the event schema of the data source is unknown, the system tries to infer the schema by extracting some sample data and analysing it.
+
+<div class="my-carousel">
+    <img src="/docs/img/features_0_62_0/connect/new/01_connect.png" alt="Market Place">
+    <img src="/docs/img/features_0_62_0/connect/new/02_mqtt_adapter.png" alt="MQTT adapter">
+    <img src="/docs/img/features_0_62_0/connect/new/03_configure_mqtt.png" alt="Configure MQTT adpater">
+    <img src="/docs/img/features_0_62_0/connect/new/04_configure_format.png" alt="Guess event schema">
+    <img src="/docs/img/features_0_62_0/connect/new/05_guess_schema.png" alt="Guess event schema">
+    <img src="/docs/img/features_0_62_0/connect/new/06_edit_adapter.png" alt="Edit adapter">
+    <img src="/docs/img/features_0_62_0/connect/new/07_start_adapter.png" alt="Start adapter">
+    <img src="/docs/img/features_0_62_0/connect/new/08_data_stream_in_editor.png" alt="New data stram in pipeline editor">
+</div>
+
+Additionally to connecting new sources, data can be cleaned, transformed, and enriched with meta-information.
+Therefore, the event schema can be changed or enriched in step 3 (Define Event Schema).
+
+<div class="my-carousel">
+    <img src="/docs/img/features_0_62_0/connect/edit/01_edit_timestamp.png" alt="Edit a property to timestamp">
+    <img src="/docs/img/features_0_62_0/connect/edit/02_change_unit.png" alt="Change Unit of property">
+    <img src="/docs/img/features_0_62_0/connect/edit/03_change_unit.png" alt="Change Unit of property">
+</div>
 
 ## Manage Pipelines
 The _Manage Pipelines_ view provides an overview of all existing pipelines.
