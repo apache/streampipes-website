@@ -157,11 +157,44 @@
 <section class="elements-area section-padding-50">
     <div class="container">
         <div class="row">
+                <div class="col-12">
+                    <p>The following adapters, data processors and data sinks are currently part of Apache StreamPipes.<br/>
+                    You are missing a pipeline element? Let us know by writing to our <a href="/mailinglists.html">mailing lists</a>!</p>
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-4">
+                     <div class="custom-control custom-checkbox d-flex justify-content-center">
+                       <input type="checkbox" checked class="custom-control-input" id="adapter-checkbox">
+                       <label class="custom-control-label" for="adapter-checkbox">Adapters</label>
+                     </div>
+                </div>
+                <div class="col-4">
+                     <div class="custom-control custom-checkbox d-flex justify-content-center">
+                       <input type="checkbox" checked class="custom-control-input" id="processor-checkbox">
+                       <label class="custom-control-label" for="processor-checkbox">Data Processors</label>
+                     </div>
+                </div>
+                <div class="col-4">
+                     <div class="custom-control custom-checkbox d-flex justify-content-center">
+                       <input type="checkbox" checked class="custom-control-input" id="sink-checkbox">
+                       <label class="custom-control-label" for="sink-checkbox">Data Sinks</label>
+                     </div>
+                </div>
+        </div>
+        <div class="row d-flex flex-row-reverse" style="margin-top:20px;">
+            <div class="col-6">
+                 <div class="form-group position-relative">
+                      <input type="text" class="form-control" id="find-element" placeholder="Find Element">
+                 </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-12">
-                <div class="pe-grid-container">
+                <div class="pe-grid-container" id="pe-overview">
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.pattern-detection.flink.absence" data-pe="pe" data-type="processor" data-name="Absence" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.pattern-detection.flink.absence/icon.png">
@@ -193,7 +226,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.aggregation.flink.aggregation" data-pe="pe" data-type="processor" data-name="Aggregation" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.aggregation.flink.aggregation/icon.png">
@@ -225,7 +258,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.pattern-detection.flink.and" data-pe="pe" data-type="processor" data-name="And" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.pattern-detection.flink.and/icon.png">
@@ -257,7 +290,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.protocol.stream.kafka" data-pe="pe" data-type="adapter" data-name="Apache Kafka" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.protocol.stream.kafka/icon.png">
@@ -289,7 +322,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.protocol.stream.pulsar" data-pe="pe" data-type="adapter" data-name="Apache Pulsar" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.protocol.stream.pulsar/icon.png">
@@ -321,7 +354,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.transformation.flink.processor.boilerplate" data-pe="pe" data-type="processor" data-name="Boilerplate Removal" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.flink.processor.boilerplate/icon.png">
@@ -353,7 +386,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.transformation.jvm.booloperator.counter" data-pe="pe" data-type="processor" data-name="Boolean Counter" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.booloperator.counter/icon.png">
@@ -385,7 +418,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.transformation.jvm.booloperator.inverter" data-pe="pe" data-type="processor" data-name="Boolean Inverter" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter/icon.png">
@@ -417,7 +450,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.transformation.jvm.booloperator.timer" data-pe="pe" data-type="processor" data-name="Boolean Timer" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.booloperator.timer/icon.png">
@@ -449,7 +482,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-sink">
+                    <div id="org.apache.streampipes.sinks.brokers.jvm.bufferrest" data-pe="pe" data-type="sink" data-name="Buffered REST Publisher" class="pe-container-item pe-container-item-sink">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-sink pe-icon-sink">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.sinks.brokers.jvm.bufferrest/icon.png">
@@ -481,7 +514,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.transformation.jvm.csvmetadata" data-pe="pe" data-type="processor" data-name="CSV Metadata Enricher" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.csvmetadata/icon.png">
@@ -513,7 +546,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.transformation.jvm.duration-value" data-pe="pe" data-type="processor" data-name="Calculate Duration" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.duration-value/icon.png">
@@ -545,7 +578,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.textmining.jvm.chunker" data-pe="pe" data-type="processor" data-name="Chunker (English)" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.textmining.jvm.chunker/icon.png">
@@ -577,7 +610,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.coindesk" data-pe="pe" data-type="adapter" data-name="Coindesk Bitcoin Price" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.coindesk/icon.png">
@@ -609,7 +642,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.filters.jvm.compose" data-pe="pe" data-type="processor" data-name="Compose" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.filters.jvm.compose/icon.png">
@@ -641,7 +674,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-sink">
+                    <div id="org.apache.streampipes.sinks.databases.jvm.couchdb" data-pe="pe" data-type="sink" data-name="CouchDB" class="pe-container-item pe-container-item-sink">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-sink pe-icon-sink">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.sinks.databases.jvm.couchdb/icon.png">
@@ -673,7 +706,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.aggregation.flink.count" data-pe="pe" data-type="processor" data-name="Count Aggregation" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.aggregation.flink.count/icon.png">
@@ -705,7 +738,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.transformation.jvm.count-array" data-pe="pe" data-type="processor" data-name="Count Array" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.count-array/icon.png">
@@ -737,7 +770,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo" data-pe="pe" data-type="processor" data-name="Creates JTS Point" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo/icon.png">
@@ -769,7 +802,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-sink">
+                    <div id="org.apache.streampipes.sinks.internal.jvm.dashboard" data-pe="pe" data-type="sink" data-name="Dashboard Sink" class="pe-container-item pe-container-item-sink">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-sink pe-icon-sink">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.sinks.internal.jvm.dashboard/icon.png">
@@ -801,7 +834,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-sink">
+                    <div id="org.apache.streampipes.sinks.internal.jvm.datalake" data-pe="pe" data-type="sink" data-name="Data Lake" class="pe-container-item pe-container-item-sink">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-sink pe-icon-sink">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.sinks.internal.jvm.datalake/icon.png">
@@ -833,7 +866,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.geo.jvm.processor.distancecalculator" data-pe="pe" data-type="processor" data-name="Distance Calculator" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator/icon.png">
@@ -865,7 +898,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG" data-pe="pe" data-type="processor" data-name="EPSG Code" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG/icon.png">
@@ -897,7 +930,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-sink">
+                    <div id="org.apache.streampipes.sinks.databases.ditto" data-pe="pe" data-type="sink" data-name="Eclipse Ditto" class="pe-container-item pe-container-item-sink">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-sink pe-icon-sink">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.sinks.databases.ditto/icon.png">
@@ -929,7 +962,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-sink">
+                    <div id="org.apache.streampipes.sinks.databases.flink.elasticsearch" data-pe="pe" data-type="sink" data-name="Elasticsearch" class="pe-container-item pe-container-item-sink">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-sink pe-icon-sink">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.sinks.databases.flink.elasticsearch/icon.png">
@@ -961,7 +994,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-sink">
+                    <div id="org.apache.streampipes.sinks.notifications.jvm.email" data-pe="pe" data-type="sink" data-name="Email Notification" class="pe-container-item pe-container-item-sink">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-sink pe-icon-sink">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.sinks.notifications.jvm.email/icon.png">
@@ -993,7 +1026,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.aggregation.flink.eventcount" data-pe="pe" data-type="processor" data-name="Event Counter" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.aggregation.flink.eventcount/icon.png">
@@ -1025,7 +1058,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.aggregation.flink.rate" data-pe="pe" data-type="processor" data-name="Event Rate" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.aggregation.flink.rate/icon.png">
@@ -1057,7 +1090,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.transformation.flink.field-converter" data-pe="pe" data-type="processor" data-name="Field Converter" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.flink.field-converter/icon.png">
@@ -1089,7 +1122,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.transformation.flink.fieldhasher" data-pe="pe" data-type="processor" data-name="Field Hasher" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.flink.fieldhasher/icon.png">
@@ -1121,7 +1154,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.transformation.flink.field-mapper" data-pe="pe" data-type="processor" data-name="Field Mapper" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.flink.field-mapper/icon.png">
@@ -1153,7 +1186,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.transformation.flink.field-renamer" data-pe="pe" data-type="processor" data-name="Field Renamer" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.flink.field-renamer/icon.png">
@@ -1185,7 +1218,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.protocol.set.file" data-pe="pe" data-type="adapter" data-name="File Set" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.protocol.set.file/icon.png">
@@ -1217,7 +1250,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.protocol.stream.file" data-pe="pe" data-type="adapter" data-name="File Stream" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.protocol.stream.file/icon.png">
@@ -1249,7 +1282,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.siddhi.frequency" data-pe="pe" data-type="processor" data-name="Frequency Calculation" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.siddhi.frequency/icon.png">
@@ -1281,7 +1314,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.siddhi.frequencychange" data-pe="pe" data-type="processor" data-name="Frequency Change" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.siddhi.frequencychange/icon.png">
@@ -1313,7 +1346,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.gdelt" data-pe="pe" data-type="adapter" data-name="GDELT" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.gdelt/icon.png">
@@ -1345,7 +1378,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification" data-pe="pe" data-type="processor" data-name="Generic Image Classification" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification/icon.png">
@@ -1377,7 +1410,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processor.geo.jvm.geocoding" data-pe="pe" data-type="processor" data-name="Google Maps Geocoder" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processor.geo.jvm.geocoding/icon.png">
@@ -1409,7 +1442,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.protocol.set.http" data-pe="pe" data-type="adapter" data-name="HTTP Set" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.protocol.set.http/icon.png">
@@ -1441,7 +1474,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.protocol.stream.http" data-pe="pe" data-type="adapter" data-name="HTTP Stream" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.protocol.stream.http/icon.png">
@@ -1473,7 +1506,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.iex.news" data-pe="pe" data-type="adapter" data-name="IEX Cloud News" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.iex.news/icon.png">
@@ -1505,7 +1538,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.iex.stocks" data-pe="pe" data-type="adapter" data-name="IEX Cloud Stock Quotes" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.iex.stocks/icon.png">
@@ -1537,7 +1570,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.iss" data-pe="pe" data-type="adapter" data-name="ISS Location" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.iss/icon.png">
@@ -1569,7 +1602,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processor.imageclassification.jvm.image-cropper" data-pe="pe" data-type="processor" data-name="Image Cropper" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processor.imageclassification.jvm.image-cropper/icon.png">
@@ -1601,7 +1634,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processor.imageclassification.jvm.image-enricher" data-pe="pe" data-type="processor" data-name="Image Enricher" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processor.imageclassification.jvm.image-enricher/icon.png">
@@ -1633,7 +1666,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.image.set" data-pe="pe" data-type="adapter" data-name="Image Upload (Set)" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.image.set/icon.png">
@@ -1665,7 +1698,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.image.stream" data-pe="pe" data-type="adapter" data-name="Image Upload (Stream)" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.image.stream/icon.png">
@@ -1697,7 +1730,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-sink">
+                    <div id="org.apache.streampipes.sinks.databases.jvm.influxdb" data-pe="pe" data-type="sink" data-name="InfluxDB" class="pe-container-item pe-container-item-sink">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-sink pe-icon-sink">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.sinks.databases.jvm.influxdb/icon.png">
@@ -1729,7 +1762,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.influxdb.set" data-pe="pe" data-type="adapter" data-name="InfluxDB Set Adapter" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.influxdb.set/icon.png">
@@ -1761,7 +1794,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.influxdb.stream" data-pe="pe" data-type="adapter" data-name="InfluxDB Stream Adapter" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.influxdb.stream/icon.png">
@@ -1793,7 +1826,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-sink">
+                    <div id="org.apache.streampipes.sinks.databases.jvm.iotdb" data-pe="pe" data-type="sink" data-name="IoTDB" class="pe-container-item pe-container-item-sink">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-sink pe-icon-sink">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.sinks.databases.jvm.iotdb/icon.png">
@@ -1825,7 +1858,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-sink">
+                    <div id="org.apache.streampipes.sinks.brokers.jvm.jms" data-pe="pe" data-type="sink" data-name="JMS Publisher" class="pe-container-item pe-container-item-sink">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-sink pe-icon-sink">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.sinks.brokers.jvm.jms/icon.png">
@@ -1857,7 +1890,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-sink">
+                    <div id="org.apache.streampipes.sinks.brokers.jvm.kafka" data-pe="pe" data-type="sink" data-name="Kafka Publisher" class="pe-container-item pe-container-item-sink">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-sink pe-icon-sink">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.sinks.brokers.jvm.kafka/icon.png">
@@ -1889,7 +1922,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.textmining.flink.languagedetection" data-pe="pe" data-type="processor" data-name="Language Detection" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.textmining.flink.languagedetection/icon.png">
@@ -1921,7 +1954,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.textmining.jvm.languagedetection" data-pe="pe" data-type="processor" data-name="Language Detection" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.textmining.jvm.languagedetection/icon.png">
@@ -1953,7 +1986,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.protocol.stream.mqtt" data-pe="pe" data-type="adapter" data-name="MQTT" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.protocol.stream.mqtt/icon.png">
@@ -1985,7 +2018,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-sink">
+                    <div id="org.apache.streampipes.sinks.brokers.jvm.mqtt" data-pe="pe" data-type="sink" data-name="MQTT Publisher" class="pe-container-item pe-container-item-sink">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-sink pe-icon-sink">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.sinks.brokers.jvm.mqtt/icon.png">
@@ -2017,7 +2050,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.enricher.flink.processor.math.mathop" data-pe="pe" data-type="processor" data-name="Math" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.enricher.flink.processor.math.mathop/icon.png">
@@ -2049,7 +2082,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping" data-pe="pe" data-type="processor" data-name="Measure Time Between Two Sensors" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping/icon.png">
@@ -2081,7 +2114,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.transformation.flink.measurement-unit-converter" data-pe="pe" data-type="processor" data-name="Measurement Unit Converter" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter/icon.png">
@@ -2113,7 +2146,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.filters.jvm.enrich" data-pe="pe" data-type="processor" data-name="Merge By Enrich" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.filters.jvm.enrich/icon.png">
@@ -2145,7 +2178,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.filters.jvm.merge" data-pe="pe" data-type="processor" data-name="Merge By Time" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.filters.jvm.merge/icon.png">
@@ -2177,7 +2210,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.mysql.set" data-pe="pe" data-type="adapter" data-name="MySQL Set Adapter" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.mysql.set/icon.png">
@@ -2209,7 +2242,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.mysql.stream" data-pe="pe" data-type="adapter" data-name="MySql Stream Adapter" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.mysql.stream/icon.png">
@@ -2241,7 +2274,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.netio.mqtt" data-pe="pe" data-type="adapter" data-name="NETIO MQTT M2M" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.netio.mqtt/icon.png">
@@ -2273,7 +2306,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.netio.rest" data-pe="pe" data-type="adapter" data-name="NETIO http JSON" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.netio.rest/icon.png">
@@ -2305,7 +2338,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera" data-pe="pe" data-type="adapter" data-name="NSW Traffic Cameras" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera/icon.png">
@@ -2337,7 +2370,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.textmining.jvm.namefinder" data-pe="pe" data-type="processor" data-name="Name Finder" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.textmining.jvm.namefinder/icon.png">
@@ -2369,7 +2402,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-sink">
+                    <div id="org.apache.streampipes.sinks.internal.jvm.notification" data-pe="pe" data-type="sink" data-name="Notification" class="pe-container-item pe-container-item-sink">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-sink pe-icon-sink">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.sinks.internal.jvm.notification/icon.png">
@@ -2401,7 +2434,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.filters.jvm.numericalfilter" data-pe="pe" data-type="processor" data-name="Numerical Filter" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.filters.jvm.numericalfilter/icon.png">
@@ -2433,7 +2466,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.siddhi.numericalfilter" data-pe="pe" data-type="processor" data-name="Numerical Filter (Siddhi)" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.siddhi.numericalfilter/icon.png">
@@ -2465,7 +2498,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.filters.jvm.numericaltextfilter" data-pe="pe" data-type="processor" data-name="Numerical Text Filter" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.filters.jvm.numericaltextfilter/icon.png">
@@ -2497,7 +2530,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.opcua" data-pe="pe" data-type="adapter" data-name="OPC UA" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.opcua/icon.png">
@@ -2529,7 +2562,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-sink">
+                    <div id="org.apache.streampipes.sinks.databases.jvm.opcua" data-pe="pe" data-type="sink" data-name="OPC-UA" class="pe-container-item pe-container-item-sink">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-sink pe-icon-sink">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.sinks.databases.jvm.opcua/icon.png">
@@ -2561,7 +2594,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-sink">
+                    <div id="org.apache.streampipes.sinks.notifications.jvm.onesignal" data-pe="pe" data-type="sink" data-name="OneSignal" class="pe-container-item pe-container-item-sink">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-sink pe-icon-sink">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.sinks.notifications.jvm.onesignal/icon.png">
@@ -2593,7 +2626,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.plc4x.s7" data-pe="pe" data-type="adapter" data-name="PLC4X S7" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.plc4x.s7/icon.png">
@@ -2625,7 +2658,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.textmining.jvm.partofspeech" data-pe="pe" data-type="processor" data-name="Part of Speech (English)" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.textmining.jvm.partofspeech/icon.png">
@@ -2657,7 +2690,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.pattern-detection.flink.peak-detection" data-pe="pe" data-type="processor" data-name="Peak Detection" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.pattern-detection.flink.peak-detection/icon.png">
@@ -2689,7 +2722,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-sink">
+                    <div id="org.apache.streampipes.sinks.databases.jvm.postgresql" data-pe="pe" data-type="sink" data-name="PostgreSQL" class="pe-container-item pe-container-item-sink">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-sink pe-icon-sink">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.sinks.databases.jvm.postgresql/icon.png">
@@ -2721,7 +2754,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.filters.jvm.project" data-pe="pe" data-type="processor" data-name="Projection" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.filters.jvm.project/icon.png">
@@ -2753,7 +2786,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-sink">
+                    <div id="org.apache.streampipes.sinks.brokers.jvm.pulsar" data-pe="pe" data-type="sink" data-name="Pulsar Publisher" class="pe-container-item pe-container-item-sink">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-sink pe-icon-sink">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.sinks.brokers.jvm.pulsar/icon.png">
@@ -2785,7 +2818,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processor.imageclassification.qrcode" data-pe="pe" data-type="processor" data-name="QR Code Reader" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processor.imageclassification.qrcode/icon.png">
@@ -2817,7 +2850,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-sink">
+                    <div id="org.apache.streampipes.sinks.brokers.jvm.rest" data-pe="pe" data-type="sink" data-name="REST Publisher" class="pe-container-item pe-container-item-sink">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-sink pe-icon-sink">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.sinks.brokers.jvm.rest/icon.png">
@@ -2849,7 +2882,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.ros" data-pe="pe" data-type="adapter" data-name="ROS Bridge" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.ros/icon.png">
@@ -2881,7 +2914,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-sink">
+                    <div id="org.apache.streampipes.sinks.brokers.jvm.rabbitmq" data-pe="pe" data-type="sink" data-name="RabbitMQ Publisher" class="pe-container-item pe-container-item-sink">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-sink pe-icon-sink">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.sinks.brokers.jvm.rabbitmq/icon.png">
@@ -2913,7 +2946,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.simulator.randomdataset" data-pe="pe" data-type="adapter" data-name="Random Data Simulator (Set)" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.simulator.randomdataset/icon.png">
@@ -2945,7 +2978,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.simulator.randomdatastream" data-pe="pe" data-type="adapter" data-name="Random Data Simulator (Stream)" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.simulator.randomdatastream/icon.png">
@@ -2977,7 +3010,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processor.geo.jvm.reversegeocoding" data-pe="pe" data-type="processor" data-name="Reverse Geocoder" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processor.geo.jvm.reversegeocoding/icon.png">
@@ -3009,7 +3042,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.textmining.jvm.sentencedetection" data-pe="pe" data-type="processor" data-name="Sentence Detection (English)" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.textmining.jvm.sentencedetection/icon.png">
@@ -3041,7 +3074,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.pattern-detection.flink.sequence" data-pe="pe" data-type="processor" data-name="Sequence" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.pattern-detection.flink.sequence/icon.png">
@@ -3073,7 +3106,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.siddhi.sequence" data-pe="pe" data-type="processor" data-name="Sequence Detection" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.siddhi.sequence/icon.png">
@@ -3105,7 +3138,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory" data-pe="pe" data-type="processor" data-name="Single Trajectory Creator" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory/icon.png">
@@ -3137,7 +3170,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.enricher.jvm.sizemeasure" data-pe="pe" data-type="processor" data-name="Size Measure" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.enricher.jvm.sizemeasure/icon.png">
@@ -3169,7 +3202,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.slack" data-pe="pe" data-type="adapter" data-name="Slack" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.slack/icon.png">
@@ -3201,7 +3234,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-sink">
+                    <div id="org.apache.streampipes.sinks.notifications.jvm.slack" data-pe="pe" data-type="sink" data-name="Slack Notification" class="pe-container-item pe-container-item-sink">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-sink pe-icon-sink">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.sinks.notifications.jvm.slack/icon.png">
@@ -3233,7 +3266,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processor.geo.flink" data-pe="pe" data-type="processor" data-name="Spatial Grid Enrichment" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processor.geo.flink/icon.png">
@@ -3265,7 +3298,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.geo.jvm.processor.speed" data-pe="pe" data-type="processor" data-name="Speed Calculator" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.geo.jvm.processor.speed/icon.png">
@@ -3297,7 +3330,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.transformation.jvm.split-array" data-pe="pe" data-type="processor" data-name="Split Array" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.split-array/icon.png">
@@ -3329,7 +3362,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator" data-pe="pe" data-type="processor" data-name="Static Distance Calculator" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator/icon.png">
@@ -3361,7 +3394,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processor.geo.jvm.staticgeocoding" data-pe="pe" data-type="processor" data-name="Static Google Maps Geocoder" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processor.geo.jvm.staticgeocoding/icon.png">
@@ -3393,7 +3426,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop" data-pe="pe" data-type="processor" data-name="Static Math" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop/icon.png">
@@ -3425,7 +3458,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.statistics.flink.statistics-summary" data-pe="pe" data-type="processor" data-name="Statistics Summary" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.statistics.flink.statistics-summary/icon.png">
@@ -3457,7 +3490,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.siddhi.stop" data-pe="pe" data-type="processor" data-name="Stream Stop Detection" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.siddhi.stop/icon.png">
@@ -3489,7 +3522,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.transformation.jvm.stringoperator.counter" data-pe="pe" data-type="processor" data-name="String Counter" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter/icon.png">
@@ -3521,7 +3554,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.transformation.jvm.stringoperator.timer" data-pe="pe" data-type="processor" data-name="String Timer" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer/icon.png">
@@ -3553,7 +3586,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.ti" data-pe="pe" data-type="adapter" data-name="TI Sensor Tag" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.ti/icon.png">
@@ -3585,7 +3618,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.transformation.jvm.taskduration" data-pe="pe" data-type="processor" data-name="Task Duration" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.taskduration/icon.png">
@@ -3617,7 +3650,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.filters.jvm.textfilter" data-pe="pe" data-type="processor" data-name="Text Filter" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.filters.jvm.textfilter/icon.png">
@@ -3649,7 +3682,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.filters.jvm.threshold" data-pe="pe" data-type="processor" data-name="Threshold Detector" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.filters.jvm.threshold/icon.png">
@@ -3681,7 +3714,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.enricher.flink.timestamp" data-pe="pe" data-type="processor" data-name="Timestamp Enricher" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.enricher.flink.timestamp/icon.png">
@@ -3713,7 +3746,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor" data-pe="pe" data-type="processor" data-name="Timestamp Extractor" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor/icon.png">
@@ -3745,7 +3778,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.textmining.jvm.tokenizer" data-pe="pe" data-type="processor" data-name="Tokenizer (English)" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.textmining.jvm.tokenizer/icon.png">
@@ -3777,7 +3810,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.transformation.jvm.transform-to-boolean" data-pe="pe" data-type="processor" data-name="Transform to boolean" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean/icon.png">
@@ -3809,7 +3842,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.siddhi.increase" data-pe="pe" data-type="processor" data-name="Trend" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.siddhi.increase/icon.png">
@@ -3841,7 +3874,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.enricher.flink.processor.trigonometry" data-pe="pe" data-type="processor" data-name="Trigonometry Functions" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.enricher.flink.processor.trigonometry/icon.png">
@@ -3873,7 +3906,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.enricher.flink.processor.urldereferencing" data-pe="pe" data-type="processor" data-name="URL Dereferencing" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing/icon.png">
@@ -3905,7 +3938,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.transformation.jvm.changed-value" data-pe="pe" data-type="processor" data-name="Value Changed" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.changed-value/icon.png">
@@ -3937,7 +3970,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.wikipedia.edit" data-pe="pe" data-type="adapter" data-name="Wikipedia Edits" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.wikipedia.edit/icon.png">
@@ -3969,7 +4002,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-adapter">
+                    <div id="org.apache.streampipes.connect.adapters.wikipedia.new" data-pe="pe" data-type="adapter" data-name="Wikipedia New Articles" class="pe-container-item pe-container-item-adapter">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-adapter pe-icon-adapter">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.wikipedia.new/icon.png">
@@ -4001,7 +4034,7 @@
                     </div>
                 
                 
-                    <div class="pe-container-item pe-container-item-processor">
+                    <div id="org.apache.streampipes.processors.textmining.flink.wordcount" data-pe="pe" data-type="processor" data-name="Word Count" class="pe-container-item pe-container-item-processor">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-processor pe-icon-processor">
                                 <img class="pe-icon" src="/img/pipeline-elements/org.apache.streampipes.processors.textmining.flink.wordcount/icon.png">
@@ -4073,6 +4106,50 @@
 </script>
 
 
+<script type="text/javascript">
+
+    var adapters = $('[data-type="adapter"]');
+    var processors = $('[data-type="processor"]');
+    var sinks = $('[data-type="sink"]');
+
+    $('#adapter-checkbox').click(function() {
+      applyFilter();
+    });
+
+    $('#processor-checkbox').click(function() {
+      applyFilter();
+    });
+
+    $('#sink-checkbox').click(function() {
+      applyFilter();
+    });
+
+    $('#find-element').on("input", function() {
+      applyFilter();
+    });
+
+    function applyFilter() {
+        var searchText = ($('#find-element').val());
+        updateProcessorSelection($('#processor-checkbox').prop('checked'));
+        updateSinkSelection($('#sink-checkbox').prop('checked'));
+        updateAdapterSelection($('#adapter-checkbox').prop('checked'));
+        if (searchText != "") {
+            $('[data-pe]').not('[data-name*=' +searchText +']').hide();
+        }
+    }
+
+    function updateProcessorSelection(visible) {
+        visible ? processors.show() : processors.hide();
+    }
+
+    function updateSinkSelection(visible) {
+        visible ? sinks.show() : sinks.hide();
+    }
+
+    function updateAdapterSelection(visible) {
+       visible ? adapters.show() : adapters.hide();
+    }
+</script>
 </body>
 
 </html>
