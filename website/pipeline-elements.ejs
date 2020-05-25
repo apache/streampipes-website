@@ -14,8 +14,41 @@
 <section class="elements-area section-padding-50">
     <div class="container">
         <div class="row">
+                <div class="col-12">
+                    <p>The following adapters, data processors and data sinks are currently part of Apache StreamPipes.<br/>
+                    You are missing a pipeline element? Let us know by writing to our <a href="/mailinglists.html">mailing lists</a>!</p>
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-4">
+                     <div class="custom-control custom-checkbox d-flex justify-content-center">
+                       <input type="checkbox" checked class="custom-control-input" id="adapter-checkbox">
+                       <label class="custom-control-label" for="adapter-checkbox">Adapters</label>
+                     </div>
+                </div>
+                <div class="col-4">
+                     <div class="custom-control custom-checkbox d-flex justify-content-center">
+                       <input type="checkbox" checked class="custom-control-input" id="processor-checkbox">
+                       <label class="custom-control-label" for="processor-checkbox">Data Processors</label>
+                     </div>
+                </div>
+                <div class="col-4">
+                     <div class="custom-control custom-checkbox d-flex justify-content-center">
+                       <input type="checkbox" checked class="custom-control-input" id="sink-checkbox">
+                       <label class="custom-control-label" for="sink-checkbox">Data Sinks</label>
+                     </div>
+                </div>
+        </div>
+        <div class="row d-flex flex-row-reverse" style="margin-top:20px;">
+            <div class="col-6">
+                 <div class="form-group position-relative">
+                      <input type="text" class="form-control" id="find-element" placeholder="Find Element">
+                 </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-12">
-                <div class="pe-grid-container">
+                <div class="pe-grid-container" id="pe-overview">
                 <% for(var i=0; i < public._data.pipelineElements.length; i++) { %>
                 <% var type;
                    if (public._data.pipelineElements[i].type === "Data Processor") {
@@ -26,7 +59,7 @@
                        type = "adapter"
                    }
                 %>
-                    <div class="pe-container-item pe-container-item-<%- type %>">
+                    <div id="<%= public._data.pipelineElements[i].appId %>" data-pe="pe" data-type="<%= type %>" data-name="<%= public._data.pipelineElements[i].name %>" class="pe-container-item pe-container-item-<%- type %>">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-<%- type %> pe-icon-<%- type %>">
                                 <img class="pe-icon" src="/img/pipeline-elements/<%= public._data.pipelineElements[i].appId %>/icon.png">
@@ -65,6 +98,50 @@
 
 
 <%- partial("partials/_footer.ejs") %>
+<script type="text/javascript">
+
+    var adapters = $('[data-type="adapter"]');
+    var processors = $('[data-type="processor"]');
+    var sinks = $('[data-type="sink"]');
+
+    $('#adapter-checkbox').click(function() {
+      applyFilter();
+    });
+
+    $('#processor-checkbox').click(function() {
+      applyFilter();
+    });
+
+    $('#sink-checkbox').click(function() {
+      applyFilter();
+    });
+
+    $('#find-element').on("input", function() {
+      applyFilter();
+    });
+
+    function applyFilter() {
+        var searchText = ($('#find-element').val());
+        updateProcessorSelection($('#processor-checkbox').prop('checked'));
+        updateSinkSelection($('#sink-checkbox').prop('checked'));
+        updateAdapterSelection($('#adapter-checkbox').prop('checked'));
+        if (searchText != "") {
+            $('[data-pe]').not('[data-name*=' +searchText +']').hide();
+        }
+    }
+
+    function updateProcessorSelection(visible) {
+        visible ? processors.show() : processors.hide();
+    }
+
+    function updateSinkSelection(visible) {
+        visible ? sinks.show() : sinks.hide();
+    }
+
+    function updateAdapterSelection(visible) {
+       visible ? adapters.show() : adapters.hide();
+    }
+</script>
 </body>
 
 </html>

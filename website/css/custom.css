@@ -341,6 +341,34 @@ img {
 	content: '\201D';
 }
 
+.form-group.position-relative input {
+	padding-right: 32px;
+}
+
+.form-clear {
+	align-items: center;
+	background: #cecece;
+	border-radius: 50%;
+	bottom: 8px;
+	color: rgba(0, 0, 0, .54);
+	cursor: pointer;
+	display: flex;
+	height: 24px;
+	justify-content: center;
+	position: absolute;
+	right: 0;
+	width: 24px;
+	z-index: 10;
+}
+
+.form-text+.form-clear {
+	bottom: calc(1rem + 18px);
+}
+
+.form-clear .material-icons {
+	font-size: 16px;
+	font-weight: 500;
+}
 
 
 
