@@ -28,8 +28,7 @@ const siteConfig = {
     organizationName: 'apache',
 
     headerLinks: [
-        {doc: 'user-guide-introduction', label: 'User Guide'},
-        {doc: 'dev-guide-introduction', label: 'Developer Guide'},
+        {doc: 'user-guide-introduction', label: 'Documentation'},
         {doc: 'faq-common-problems', label: 'FAQ'},
         {blog: true, label: 'Blog'},
         {search: true},
