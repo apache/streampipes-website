@@ -5,6 +5,98 @@
     "previous": "Previous",
     "tagline": "Self-Service Data Analytics",
     "docs": {
+      "try-installation": {
+        "title": "Installation",
+        "sidebar_label": "Installation"
+      },
+      "try-tutorial": {
+        "title": "Interactive Tutorial",
+        "sidebar_label": "Interactive Tutorial"
+      },
+      "concepts-adapter": {
+        "title": "Data Adapters",
+        "sidebar_label": "Data Adapters"
+      },
+      "concepts-data-streams": {
+        "title": "Data Streams",
+        "sidebar_label": "Data Streams"
+      },
+      "concepts-glossary": {
+        "title": "Glossary",
+        "sidebar_label": "Glossary"
+      },
+      "concepts-pipelines": {
+        "title": "Pipelines",
+        "sidebar_label": "Pipelines"
+      },
+      "use-configurations": {
+        "title": "Configurations",
+        "sidebar_label": "Configurations"
+      },
+      "use-connect": {
+        "title": "StreamPipes Connect",
+        "sidebar_label": "StreamPipes Connect"
+      },
+      "use-dashboard": {
+        "title": "Live Dashboard",
+        "sidebar_label": "Live Dashboard"
+      },
+      "use-data-explorer": {
+        "title": "Data Explorer",
+        "sidebar_label": "Data Explorer"
+      },
+      "use-notifications": {
+        "title": "Notifications",
+        "sidebar_label": "Notifications"
+      },
+      "use-pipeline-editor": {
+        "title": "Pipeline Editor",
+        "sidebar_label": "Pipeline Editor"
+      },
+      "deploy-docker": {
+        "title": "Docker Deployment",
+        "sidebar_label": "Docker Deployment"
+      },
+      "deploy-kubernetes": {
+        "title": "Kubernetes Deployment",
+        "sidebar_label": "Kubernetes Deployment"
+      },
+      "extend-archetypes": {
+        "title": "Maven Archetypes",
+        "sidebar_label": "Maven Archetypes"
+      },
+      "extend-setup": {
+        "title": "Development Setup",
+        "sidebar_label": "Development Setup"
+      },
+      "technicals-architecture": {
+        "title": "Architecture",
+        "sidebar_label": "Architecture"
+      },
+      "technicals-messaging": {
+        "title": "Messaging",
+        "sidebar_label": "Messaging"
+      },
+      "technicals-runtime-wrappers": {
+        "title": "Runtime Wrappers",
+        "sidebar_label": "Runtime Wrappers"
+      },
+      "technicals-user-guidance": {
+        "title": "User Guidance",
+        "sidebar_label": "User Guidance"
+      },
+      "debugging-debugging": {
+        "title": "Debugging",
+        "sidebar_label": "Debugging"
+      },
+      "debugging-monitoring": {
+        "title": "Monitoring",
+        "sidebar_label": "Monitoring"
+      },
+      "contribute": {
+        "title": "Contribute",
+        "sidebar_label": "Contribute"
+      },
       "dev-guide-archetype": {
         "title": "Start Developing",
         "sidebar_label": "Start Developing"
@@ -1846,19 +1938,26 @@
       }
     },
     "links": {
-      "User Guide": "User Guide",
-      "Developer Guide": "Developer Guide",
+      "Documentation": "Documentation",
       "FAQ": "FAQ",
       "Blog": "Blog"
     },
     "categories": {
-      "Getting Started": "Getting Started",
+      "Try StreamPipes": "Try StreamPipes",
+      "Concepts": "Concepts",
+      "Use StreamPipes": "Use StreamPipes",
       "Pipeline Elements": "Pipeline Elements",
+      "Deploy StreamPipes": "Deploy StreamPipes",
+      "Extend StreamPipes": "Extend StreamPipes",
+      "Technicals": "Technicals",
+      "Monitoring/Debugging": "Monitoring/Debugging",
+      "Contribute": "Contribute",
       "Basics": "Basics",
       "Tutorials": "Tutorials",
       "SDK Reference": "SDK Reference",
       "Configuration": "Configuration",
       "FAQ": "FAQ",
+      "Getting Started": "Getting Started",
       "User Guide": "User Guide",
       "Developer Guide": "Developer Guide"
     }
