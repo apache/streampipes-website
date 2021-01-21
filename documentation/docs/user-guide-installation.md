@@ -68,11 +68,11 @@ You need to have Docker installed on your system before you continue with the in
                     </div>
                     <div class="wrapper-instruction">
                        <div style="margin-bottom:5px;"><b>Linux/Mac:</b> In a command prompt, open the folder <code>installer/osx_linux</code> and run <code>./streampipes
-                            start</code>.<br/>
+                            up</code>.<br/>
                         </div>
                         <div style="margin-top:5px;">
                         <b>Windows 10:</b> In a command prompt, open the folder <code>installer/windows10</code> and run <code>streampipes.bat
-                                                    start</code>.<br/>
+                                                    up</code>.<br/>
                         </div>
                     </div>
                 </div>
