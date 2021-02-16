@@ -12,7 +12,7 @@
             <url>https://docs.streampipes.org/docs/img/sp-logo-color-docs.png</url>
             <link>https://docs.streampipes.org/docs/blog</link>
         </image>
-        <copyright>Copyright © 2020 The Apache Software Foundation</copyright>
+        <copyright>Copyright © 2021 The Apache Software Foundation</copyright>
         <item>
             <title><![CDATA[Running StreamPipes the Kubernetes-Way using k3s]]></title>
             <link>https://docs.streampipes.org/docs/blog/2020/05/27/streampipes_on_k3s.html</link>

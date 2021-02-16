@@ -7,7 +7,7 @@
     <link rel="alternate" href="https://docs.streampipes.org/docs/blog"/>
     <subtitle>The best place to stay up-to-date with the latest StreamPipes news and events.</subtitle>
     <logo>https://docs.streampipes.org/docs/img/sp-logo-color-docs.png</logo>
-    <rights>Copyright © 2020 The Apache Software Foundation</rights>
+    <rights>Copyright © 2021 The Apache Software Foundation</rights>
     <entry>
         <title type="html"><![CDATA[Running StreamPipes the Kubernetes-Way using k3s]]></title>
         <id>https://docs.streampipes.org/docs/blog/2020/05/27/streampipes_on_k3s.html</id>
