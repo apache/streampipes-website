@@ -67,13 +67,8 @@ You need to have Docker installed on your system before you continue with the in
                         </span>
                     </div>
                     <div class="wrapper-instruction">
-                       <div style="margin-bottom:5px;"><b>Linux/Mac:</b> In a command prompt, open the folder <code>installer/osx_linux</code> and run <code>./streampipes
-                            up</code>.<br/>
-                        </div>
-                        <div style="margin-top:5px;">
-                        <b>Windows 10:</b> In a command prompt, open the folder <code>installer/windows10</code> and run <code>streampipes.bat
-                                                    up</code>.<br/>
-                        </div>
+                       In a command prompt, open the folder <code>/compose</code> and run <code
+                       >docker-compose up -d</code>.
                     </div>
                 </div>
             </li>
@@ -83,19 +78,6 @@ You need to have Docker installed on your system before you continue with the in
                         <span class="fa-stack fa-2x">
                              <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
                              <strong class="fa-stack-1x" style="color:white;">3</strong>
-                        </span>
-                    </div>
-                    <div class="wrapper-instruction">
-                       When asked, enter the version (full or lite).
-                    </div>
-                </div>
-            </li>
-            <li class="installation-step">
-                <div class="wrapper-container" style="align-items: center;justify-content: center;">
-                    <div class="wrapper-step">
-                        <span class="fa-stack fa-2x">
-                             <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                             <strong class="fa-stack-1x" style="color:white;">4</strong>
                         </span>
                     </div>
                     <div class="wrapper-instruction">
