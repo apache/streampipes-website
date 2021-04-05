@@ -67,8 +67,7 @@ You need to have Docker installed on your system before you continue with the in
                         </span>
                     </div>
                     <div class="wrapper-instruction">
-                       In a command prompt, open the folder <code>/compose</code> and run <code
-                       >docker-compose up -d</code>.
+                       In a command prompt, open the folder <code>/compose</code> and run <code>docker-compose up -d</code>.
                     </div>
                 </div>
             </li>
