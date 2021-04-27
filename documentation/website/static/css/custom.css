@@ -110,12 +110,12 @@ li.installation-step {
 }
 
 .wrapper-step {
-    grid-column: span 3;
+    grid-column: span 2;
     margin-right: 10px;
 }
 
 .wrapper-instruction {
-    grid-column: spn 9;
+    grid-column: spn 10;
 }
 
 body {
@@ -371,4 +371,18 @@ p {
 
 .sp-green {
     color: rgb(57,181,74);
+}
+
+.alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
 }
