@@ -13,10 +13,6 @@
         "title": "Interactive Tutorial",
         "sidebar_label": "Interactive Tutorial"
       },
-      "concepts-overview": {
-        "title": "StreamPipes Concepts",
-        "sidebar_label": "Overview"
-      },
       "concepts-adapter": {
         "title": "Data Adapters",
         "sidebar_label": "Data Adapters"
@@ -28,6 +24,10 @@
       "concepts-glossary": {
         "title": "Glossary",
         "sidebar_label": "Glossary"
+      },
+      "concepts-overview": {
+        "title": "StreamPipes Concepts",
+        "sidebar_label": "Overview"
       },
       "concepts-pipelines": {
         "title": "Pipelines",

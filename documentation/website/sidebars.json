@@ -5,11 +5,7 @@
       "try-tutorial"
     ],
     "\uD83D\uDCA1 Concepts": [
-      "concepts-overview",
-      "concepts-adapter",
-      "concepts-data-streams",
-      "concepts-pipeline",
-      "concepts-glossary"
+      "concepts-overview"
     ],
     "\uD83C\uDF93 Use StreamPipes": [
       "use-connect",
