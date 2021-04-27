@@ -38,7 +38,7 @@
         "sidebar_label": "Configurations"
       },
       "use-connect": {
-        "title": "Connecting Data",
+        "title": "StreamPipes Connect",
         "sidebar_label": "StreamPipes Connect"
       },
       "use-dashboard": {
@@ -65,17 +65,53 @@
         "title": "Kubernetes Deployment",
         "sidebar_label": "Kubernetes Deployment"
       },
+      "deploy-use-ssl": {
+        "title": "Use SSL",
+        "sidebar_label": "Use SSL"
+      },
       "extend-archetypes": {
         "title": "Maven Archetypes",
         "sidebar_label": "Maven Archetypes"
+      },
+      "extend-sdk-event-model": {
+        "title": "SDK Guide: Event Model",
+        "sidebar_label": "SDK: Event Model"
+      },
+      "extend-sdk-output-strategies": {
+        "title": "SDK Guide: Output Strategies",
+        "sidebar_label": "SDK: Output Strategies"
+      },
+      "extend-sdk-static-properties": {
+        "title": "SDK Guide: Static Properties",
+        "sidebar_label": "SDK: Static Properties"
+      },
+      "extend-sdk-stream-requirements": {
+        "title": "SDK Guide: Stream Requirements",
+        "sidebar_label": "SDK: Stream Requirements"
       },
       "extend-setup": {
         "title": "Development Setup",
         "sidebar_label": "Development Setup"
       },
+      "extend-tutorial-data-processors": {
+        "title": "Tutorial: Data Processors",
+        "sidebar_label": "Tutorial: Data Processors"
+      },
+      "extend-tutorial-data-sinks": {
+        "title": "Tutorial: Data Sinks",
+        "sidebar_label": "Tutorial: Data Sinks"
+      },
+      "extend-tutorial-data-sources": {
+        "title": "Tutorial: Data Sources",
+        "sidebar_label": "Tutorial: Data Sources"
+      },
       "technicals-architecture": {
         "title": "Architecture",
         "sidebar_label": "Architecture"
+      },
+      "technicals-configuration": {
+        "title": "Configuration",
+        "sidebar_label": "Configuration"
       },
       "technicals-messaging": {
         "title": "Messaging",
@@ -106,20 +142,16 @@
         "sidebar_label": "Start Developing"
       },
       "dev-guide-architecture": {
-        "title": "Architecture",
-        "sidebar_label": "Architecture"
+        "title": "dev-guide-architecture"
       },
       "dev-guide-configuration": {
-        "title": "Configuration",
-        "sidebar_label": "Configuration"
+        "title": "dev-guide-configuration"
       },
-      "dev-guide-development-environment": {
-        "title": "Development Environment",
-        "sidebar_label": "Development Environment"
+      "dev-guide-environment": {
+        "title": "dev-guide-environment"
       },
       "dev-guide-event-model": {
-        "title": "SDK Guide: Event Model",
-        "sidebar_label": "Event Model"
+        "title": "dev-guide-event-model"
       },
       "dev-guide-introduction": {
         "title": "Introduction",
@@ -130,8 +162,7 @@
         "sidebar_label": "Migration Guide"
       },
       "dev-guide-output-strategies": {
-        "title": "SDK Guide: Output Strategies",
-        "sidebar_label": "Output Strategies"
+        "title": "dev-guide-output-strategies"
       },
       "dev-guide-sdk-guide-processors": {
         "title": "SDK Guide: Data Processors",
@@ -146,28 +177,22 @@
         "sidebar_label": "SDK Guide: Data Sources"
       },
       "dev-guide-ssl": {
-        "title": "Use SSL",
-        "sidebar_label": "Use SSL"
+        "title": "dev-guide-ssl"
       },
       "dev-guide-static-properties": {
-        "title": "SDK Guide: Static Properties",
-        "sidebar_label": "Static Properties"
+        "title": "dev-guide-static-properties"
       },
       "dev-guide-stream-requirements": {
-        "title": "SDK Guide: Stream Requirements",
-        "sidebar_label": "Stream Requirements"
+        "title": "dev-guide-stream-requirements"
       },
       "dev-guide-tutorial-processors": {
-        "title": "Tutorial: Data Processors",
-        "sidebar_label": "Tutorial: Data Processors"
+        "title": "dev-guide-tutorial-processors"
       },
       "dev-guide-tutorial-sinks": {
-        "title": "Tutorial: Data Sinks",
-        "sidebar_label": "Tutorial: Data Sinks"
+        "title": "dev-guide-tutorial-sinks"
       },
       "dev-guide-tutorial-sources": {
-        "title": "Tutorial: Data Sources",
-        "sidebar_label": "Tutorial: Data Sources"
+        "title": "dev-guide-tutorial-sources"
       },
       "faq-common-problems": {
         "title": "Common Problems",

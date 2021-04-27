@@ -157,17 +157,26 @@
     ],
     "⚡ Deploy StreamPipes": [
       "deploy-docker",
-      "deploy-kubernetes"
+      "deploy-kubernetes",
+      "deploy-use-ssl"
     ],
     "\uD83D\uDCBB Extend StreamPipes": [
       "extend-setup",
-      "extend-archetypes"
+      "extend-archetypes",
+      "extend-tutorial-data-sources",
+      "extend-tutorial-data-processors",
+      "extend-tutorial-data-sinks",
+      "extend-sdk-event-model",
+      "extend-sdk-stream-requirements",
+      "extend-sdk-static-properties",
+      "extend-sdk-output-strategies"
     ],
     "\uD83D\uDD27 Technicals": [
       "technicals-architecture",
       "technicals-user-guidance",
       "technicals-runtime-wrappers",
-      "technicals-messaging"
+      "technicals-messaging",
+      "technical-configuration"
     ],
     "\uD83D\uDEA6 Monitoring/Debugging": [
       "debugging-monitoring",
