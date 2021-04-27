@@ -128,17 +128,15 @@
       "version-0.66.0-pe/org.apache.streampipes.connect.adapters.wikipedia.edit",
       "version-0.66.0-pe/org.apache.streampipes.connect.adapters.wikipedia.new",
       "version-0.66.0-pe/org.apache.streampipes.processors.textmining.flink.wordcount"
-    ]
-  },
-  "version-0.66.0-developer-guide": {
-    "Basics": [
+    ],
+    "Extending StreamPipes": [
       "version-0.66.0-dev-guide-introduction",
       "version-0.66.0-dev-guide-architecture",
       "version-0.66.0-dev-guide-development-environment",
       "version-0.66.0-dev-guide-archetype",
       "version-0.66.0-dev-guide-migration"
     ],
-    "Tutorials": [
+    "Developer Tutorials": [
       "version-0.66.0-dev-guide-tutorial-sources",
       "version-0.66.0-dev-guide-tutorial-processors",
       "version-0.66.0-dev-guide-tutorial-sinks"
@@ -156,6 +154,9 @@
       "version-0.66.0-dev-guide-ssl",
       "version-0.66.0-dev-guide-configuration"
     ]
+  },
+  "version-0.66.0-developer-guide": {
+
   },
   "version-0.66.0-faq": {
     "FAQ": [

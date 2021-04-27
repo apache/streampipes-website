@@ -1,24 +1,23 @@
 {
   "documentation": {
-    "Try StreamPipes": [
+    "\uD83D\uDE80 Try StreamPipes": [
       "user-guide-introduction",
-      "try-installation",
       "try-tutorial"
     ],
-    "Concepts": [
+    "\uD83D\uDCA1 Concepts": [
       "concepts-adapter",
       "concepts-data-streams",
       "concepts-pipeline",
       "concepts-glossary"
     ],
-    "Use StreamPipes": [
+    "\uD83C\uDF93 Use StreamPipes": [
       "use-connect",
       "use-pipeline-editor",
       "use-dashboard",
       "use-data-explorer",
       "use-notifications"
     ],
-    "Pipeline Elements": [
+    "\uD83D\uDCDA Pipeline Elements": [
       {
         "type": "subcategory",
         "label": "Adapters",
@@ -159,25 +158,25 @@
         ]
       }
     ],
-    "Deploy StreamPipes": [
+    "⚡ Deploy StreamPipes": [
       "deploy-docker",
       "deploy-kubernetes"
     ],
-    "Extend StreamPipes": [
+    "\uD83D\uDCBB Extend StreamPipes": [
       "extend-setup",
       "extend-archetypes"
     ],
-    "Technicals": [
+    "\uD83D\uDD27 Technicals": [
       "technicals-architecture",
       "technicals-user-guidance",
       "technicals-runtime-wrappers",
       "technicals-messaging"
     ],
-    "Monitoring/Debugging": [
+    "\uD83D\uDEA6 Monitoring/Debugging": [
       "debugging-monitoring",
       "debugging-debugging"
     ],
-    "Contribute": [
+    "✅ Contribute": [
       "contribute"
     ]
   },

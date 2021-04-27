@@ -5,7 +5,7 @@
     "previous": "Previous",
     "tagline": "Self-Service Data Analytics",
     "docs": {
-      "try-installation": {
+      "user-guide-introduction": {
         "title": "Installation",
         "sidebar_label": "Installation"
       },
@@ -672,7 +672,7 @@
         "title": "Installation",
         "sidebar_label": "Installation"
       },
-      "user-guide-introduction": {
+      "user-guide-introduction-old": {
         "title": "Introduction",
         "sidebar_label": "Introduction"
       },
@@ -1943,21 +1943,24 @@
       "Blog": "Blog"
     },
     "categories": {
-      "Try StreamPipes": "Try StreamPipes",
-      "Concepts": "Concepts",
-      "Use StreamPipes": "Use StreamPipes",
-      "Pipeline Elements": "Pipeline Elements",
-      "Deploy StreamPipes": "Deploy StreamPipes",
-      "Extend StreamPipes": "Extend StreamPipes",
-      "Technicals": "Technicals",
-      "Monitoring/Debugging": "Monitoring/Debugging",
-      "Contribute": "Contribute",
+      "🚀 Try StreamPipes": "🚀 Try StreamPipes",
+      "💡 Concepts": "💡 Concepts",
+      "🎓 Use StreamPipes": "🎓 Use StreamPipes",
+      "📚 Pipeline Elements": "📚 Pipeline Elements",
+      "⚡ Deploy StreamPipes": "⚡ Deploy StreamPipes",
+      "💻 Extend StreamPipes": "💻 Extend StreamPipes",
+      "🔧 Technicals": "🔧 Technicals",
+      "🚦 Monitoring/Debugging": "🚦 Monitoring/Debugging",
+      "✅ Contribute": "✅ Contribute",
       "Basics": "Basics",
       "Tutorials": "Tutorials",
       "SDK Reference": "SDK Reference",
       "Configuration": "Configuration",
       "FAQ": "FAQ",
       "Getting Started": "Getting Started",
+      "Pipeline Elements": "Pipeline Elements",
+      "Extending StreamPipes": "Extending StreamPipes",
+      "Developer Tutorials": "Developer Tutorials",
       "User Guide": "User Guide",
       "Developer Guide": "Developer Guide"
     }
