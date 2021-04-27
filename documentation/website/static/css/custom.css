@@ -22,6 +22,8 @@
 }
 
 @media only screen and (min-width: 1024px) {
+    .separateOnPageNav .wrapper, .separateOnPageNav .headerWrapper.wrapper {
+        max-width: 1600px;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -42,7 +44,7 @@
 }
 
 .slick-next {
-    right: -40px;
+    right: -45px;
 }
 
 .slick-next:before, .slick-prev:before {
@@ -55,7 +57,7 @@
 }
 
 .slick-prev {
-    left: -40px;
+    left: -45px;
 }
 
 .slick-next:before, .slick-prev:before {
@@ -72,12 +74,12 @@
 }
 
 .slick-dots {
-    bottom: 20px;
+    bottom: -25px;
 }
 
 .slick-dots li button:before {
     font-size: 20px;
-    color: rgb(27, 20, 100);
+    color:rgb(57, 181, 74);
     border-radius: 50%;
     border: 3px solid white;
     line-height: 22px;
@@ -87,7 +89,7 @@
 }
 
 .slick-dots li.slick-active button:before {
-    color: rgb(27, 20, 100);
+    color: rgb(57, 181, 74);
     opacity: 0.9;
 }
 
@@ -318,7 +320,7 @@ p {
 }
 
 .slick-prev:before, .slick-next:before {
-    color: rgb(27, 20, 100);
+    color: #39b54a;
 }
 
 .blockElement {
@@ -385,4 +387,25 @@ p {
     margin-bottom: 1rem;
     border: 1px solid transparent;
     border-radius: .25rem;
+}
+
+.docs-image {
+    max-width: 80%;
+    border: 2px solid rgb(57,181,74);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.docs-carousel {
+    max-width: 85%;
+    border: 2px solid rgb(57,181,74);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 40px;
 }

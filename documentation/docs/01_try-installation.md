@@ -1,5 +1,7 @@
 ---
-id: user-guide-introduction title: Installation sidebar_label: Installation
+id: user-guide-introduction 
+title: Installation 
+sidebar_label: Installation
 ---
 
 The easiest way to install StreamPipes is our Docker-based installation. For production-grade deployments, we also
@@ -87,7 +89,7 @@ best experience), Firefox or Edge.
           <div class="wrapper-instruction">
              <div style="margin-bottom:5px;">In a command prompt, open the folder <code>compose</code> and run <code>docker-compose up -d</code>.
                 <div class="row" style="margin-top:10px;">              
-                    <div class="alert alert-info" role="alert">The folder contains two docker-compose files: The standard file contains the so-called _lite_ installation, which includes less pipeline elements, but also requires for less performant hardware. The _full_ version includes also the Apache Flink wrapper and more pipeline elements, but requires for more memory. See the Github <a href="https://github.com/apache/incubator-streampipes-installer/tree/master/compose">README</a> for complete usage instructions.</div>
+                    <div class="alert alert-info" role="alert">The folder contains two docker-compose files: The standard file contains the so-called <i>lite</i> installation, which includes less pipeline elements, but also requires for less performant hardware. The <i>full</i> version includes also the Apache Flink wrapper and more pipeline elements, but requires for more memory. See the Github <a href="https://github.com/apache/incubator-streampipes-installer/tree/master/compose">README</a> for complete usage instructions.</div>
             </div>
             </div>
         </div>
@@ -118,7 +120,7 @@ On the login page, enter your credentials, then you should be forwarded to the h
 
 Congratulations! You've successfully managed to install StreamPipes. Now we're ready to build our first pipeline!
 
-<div class="my-carousel">
+<div class="my-carousel docs-carousel">
     <img src="/docs/img/01_try-installation/01_register_user.png" alt="Set Up User">
     <img src="/docs/img/01_try-installation/02_user_set_up.png" alt="SetUp StreamPipes Components">
     <img src="/docs/img/01_try-installation/03_login.png" alt="Go to login page">

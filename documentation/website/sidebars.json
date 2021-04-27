@@ -5,6 +5,7 @@
       "try-tutorial"
     ],
     "\uD83D\uDCA1 Concepts": [
+      "concepts-overview",
       "concepts-adapter",
       "concepts-data-streams",
       "concepts-pipeline",
