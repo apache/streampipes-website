@@ -49,6 +49,10 @@
         "title": "Data Explorer",
         "sidebar_label": "Data Explorer"
       },
+      "use-managing-pipelines": {
+        "title": "Managing Pipelines",
+        "sidebar_label": "Managing Pipelines"
+      },
       "use-notifications": {
         "title": "Notifications",
         "sidebar_label": "Notifications"

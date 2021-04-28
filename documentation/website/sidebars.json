@@ -10,6 +10,7 @@
     "\uD83C\uDF93 Use StreamPipes": [
       "use-connect",
       "use-pipeline-editor",
+      "use-managing-pipelines",
       "use-dashboard",
       "use-data-explorer",
       "use-notifications"
