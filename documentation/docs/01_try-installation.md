@@ -1,5 +1,5 @@
 ---
-id: user-guide-introduction 
+id: try-installation 
 title: Installation 
 sidebar_label: Installation
 ---

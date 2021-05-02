@@ -2,6 +2,7 @@
   "documentation": {
     "\uD83D\uDE80 Try StreamPipes": [
       "user-guide-introduction",
+      "try-installation",
       "try-tutorial"
     ],
     "\uD83D\uDCA1 Concepts": [
@@ -180,12 +181,9 @@
       "technicals-messaging",
       "technical-configuration"
     ],
-    "\uD83D\uDEA6 Monitoring/Debugging": [
-      "debugging-monitoring",
-      "debugging-debugging"
-    ],
-    "✅ Contribute": [
-      "contribute"
+    "\uD83D\uDC6A Community": [
+      "community-get-help",
+      "community-contribute"
     ]
   },
   "developer-guide": {

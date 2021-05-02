@@ -5,9 +5,13 @@
     "previous": "Previous",
     "tagline": "Self-Service Data Analytics",
     "docs": {
-      "user-guide-introduction": {
+      "try-installation": {
         "title": "Installation",
         "sidebar_label": "Installation"
+      },
+      "user-guide-introduction": {
+        "title": "Apache StreamPipes Documentation",
+        "sidebar_label": "Overview"
       },
       "try-tutorial": {
         "title": "Interactive Tutorial",
@@ -141,9 +145,13 @@
         "title": "Monitoring",
         "sidebar_label": "Monitoring"
       },
-      "contribute": {
+      "community-contribute": {
         "title": "Contribute",
         "sidebar_label": "Contribute"
+      },
+      "community-get-help": {
+        "title": "Get Help",
+        "sidebar_label": "Get Help"
       },
       "dev-guide-archetype": {
         "title": "Start Developing",
@@ -1987,8 +1995,7 @@
       "⚡ Deploy StreamPipes": "⚡ Deploy StreamPipes",
       "💻 Extend StreamPipes": "💻 Extend StreamPipes",
       "🔧 Technicals": "🔧 Technicals",
-      "🚦 Monitoring/Debugging": "🚦 Monitoring/Debugging",
-      "✅ Contribute": "✅ Contribute",
+      "👪 Community": "👪 Community",
       "Basics": "Basics",
       "Tutorials": "Tutorials",
       "SDK Reference": "SDK Reference",
