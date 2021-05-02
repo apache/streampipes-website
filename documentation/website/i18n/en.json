@@ -77,6 +77,10 @@
         "title": "Maven Archetypes",
         "sidebar_label": "Maven Archetypes"
       },
+      "extend-cli": {
+        "title": "StreamPipes CLI",
+        "sidebar_label": "StreamPipes CLI"
+      },
       "extend-sdk-event-model": {
         "title": "SDK Guide: Event Model",
         "sidebar_label": "SDK: Event Model"

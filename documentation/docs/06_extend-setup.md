@@ -4,18 +4,19 @@ title: Development Setup
 sidebar_label: Development Setup
 ---
 
+Pipeline elements in StreamPipes are provided as standalone microservices. New pipeline elements can be easily developed using the provided Maven archetypes and can be installed in StreamPipes at runtime.
+
 In this section, we describe our recommended minimum setup for locally setting up a development instance of StreamPipes needed to develop, run and test new pipeline elements.
 
 ## IDE & required dev tools
 StreamPipes does not have specific requirements on the IDE - so feel free to choose the IDE of your choice.
 The only requirements in terms of development tools are that you have Java 8 and Maven installed.
 
-## Docker-based local StreamPipes instance
+## StreamPipes CLI: Docker-based local StreamPipes instance
 In order to quickly test developed pipeline elements without needing to install all services required by StreamPipes, we provide a CLI tool that allows you to selectively start StreamPipes components.
-The CLI tool allows to switch to several templates (based on docker-compose) depending on the role. For instance, if you are developing a pipeline element, use the template ``pe-developer``. This will start backend and ui components in a Docker container, while you can easily test your pipeline element in your IDE.
+The CLI tool allows to switch to several templates (based on docker-compose) depending on the role. 
 
-For now, we refer to the Github Readme for instructions on how to use the CLI tool: [https://github.com/apache/incubator-streampipes-installer](https://github.com/apache/incubator-streampipes-installer)
-
+The documentation on the usage of the CLI tool is available [here](extend-cli).
 ## Starter projects
 
 Now, once you've started the development instance, you are ready to develop your very first pipeline element.
@@ -23,90 +24,8 @@ Instead of starting from scratch, we recommend using our provided maven archetyp
 
 ### Maven archetypes
 
-Create the Maven archetype as described in the [Getting Started](/docs/dev-guide-archetype) guide.
+Create the Maven archetype as described in the [Getting Started](extend-archetypes) guide.
 
-### Starting from scratch
+### Examples
 
-In order to develop a new pipeline element from scratch, you need to create a new Maven project and import the following dependencies:
-
-<details class="info">
-<summary>pom.xml</summary>
-```
-<dependency>
-    <groupId>org.streampipes</groupId>
-    <artifactId>streampipes-container-standalone</artifactId>
-    <version>0.64.0</version>
-</dependency>
-
-<dependency>
-    <groupId>org.streampipes</groupId>
-    <artifactId>streampipes-sdk</artifactId>
-    <version>0.64.0</version>
-</dependency>
-
-<dependency>
-    <groupId>org.streampipes</groupId>
-    <artifactId>streampipes-vocabulary</artifactId>
-    <version>0.64.0</version>
-</dependency>
-
-<!-- This dependency needs to be imported if you plan to develop a new data processor or data sink using the Apache Flink wrapper -->
-<dependency>
-    <groupId>org.streampipes</groupId>
-    <artifactId>streampipes-wrapper-flink</artifactId>
-    <version>0.64.0</version>
-</dependency>
-
-<!-- This dependency needs to be imported if you plan to develop a new data processor or data sink which is running directly on the JVM -->
-<dependency>
-    <groupId>org.streampipes</groupId>
-    <artifactId>streampipes-wrapper-standalone</artifactId>
-    <version>0.64.0</version>
-</dependency>
-
-<dependency>
-    <groupId>org.streampipes</groupId>
-    <artifactId>streampipes-dataformat-json</artifactId>
-    <version>0.64.0</version>
-</dependency>
-<dependency>
-    <groupId>org.streampipes</groupId>
-    <artifactId>streampipes-dataformat-smile</artifactId>
-     <version>0.64.0</version>
-</dependency>
-<dependency>
-    <groupId>org.streampipes</groupId>
-    <artifactId>streampipes-dataformat-cbor</artifactId>
-     <version>0.64.0</version>
-</dependency>
-<dependency>
-    <groupId>org.streampipes</groupId>
-    <artifactId>streampipes-dataformat-fst</artifactId>
-     <version>0.64.0</version>
-</dependency>
-<dependency>
-    <groupId>org.streampipes</groupId>
-    <artifactId>streampipes-messaging-jms</artifactId>
-     <version>0.64.0</version>
-</dependency>
-<dependency>
-    <groupId>org.streampipes</groupId>
-    <artifactId>streampipes-messaging-kafka</artifactId>
-     <version>0.64.0</version>
-</dependency>
-```
-</details>
-
-The following three dependencies are mandatory:
-
-* `streampipes-container-standalone`, defines that we are going to create a new pipeline element where the description will be accessible through an embedded web server.
-* `streampipes-sdk` imports the SDK which provides many convencience functions to create new pipeline elements.
-* `streampipes-vocabulary` imports various RDF vocabularies which are used by the SDK to auto-generate the semantic description of pipeline elements.
-
-The following three dependencies might be optional depending on the pipeline element type you plan to create:
-
-*  `streampipes-wrapper-flink` should be used in case you plan to connect a new data processor or data sink that uses Apache Flink for processing events at runtime.
-*  `streampipes-wrapper-standalone` should be used in case you plan to connect a new data processor or data sink that does not use an external processing engine. Events are directly processed in a single-host fashion.
-
-
-Finally, this dependency will provide abstract classes to define data sources and streams.
+We provide several examples that explain the usage of some concepts in this [Github repo](https://github.com/apache/incubator-streampipes-examples). 

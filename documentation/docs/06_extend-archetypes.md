@@ -23,7 +23,7 @@ We use ``groupId``: ``org.example`` and ``artifactId``: ``ExampleProcessor``.
 You can keep the default values for the other settings, confirm them by hitting enter.
 Now, a new folder with the name ``ExampleProcessor`` is generated.
 
-The current {sp.version} is 0.66.0
+The current {sp.version} is 0.67.0
 
 ```bash
 mvn archetype:generate                              	 	     \

@@ -163,6 +163,7 @@
     ],
     "\uD83D\uDCBB Extend StreamPipes": [
       "extend-setup",
+      "extend-cli",
       "extend-archetypes",
       "extend-tutorial-data-sources",
       "extend-tutorial-data-processors",
