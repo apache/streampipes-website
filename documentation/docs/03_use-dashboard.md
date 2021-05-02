@@ -9,6 +9,11 @@ The entry page of the live dashboard lists all created dashboards as in the scre
 
 <img class="docs-image" src="/docs/img/03_use-dashboard/01_dashboard-overview.png" alt="StreamPipes Dashboard Overview">
 
+## Visualizing Data Streams
+
+To visualize data streams in the live dashboard, a pipeline must be created that makes use of the so-called **Dashboard Sink**.
+Any data stream or data processor can serve as an input of the dashboard sink. Switch to the pipeline editor, create a pipeline and configure the dashboard sink. The visualization name is used to identify the sink in case multiple dashboard sinks are used within a single pipeline.
+
 ## Managing Dashboards
 Multiple dashboards can be created, e.g., to organize different assets in a single dashboard view.
 

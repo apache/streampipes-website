@@ -12,3 +12,7 @@ It provides a canvas where various visualizations from multiple pipelines can be
 
 The data explorer is currently available as an early beta version and features are still subject to change. A more detailed documentation will be available once the data explorer is available in a stable version.
 
+## Using the data explorer
+
+In the data explorer, any pipeline that uses the so-called **Data Lake** sink can be explored in the data explorer. Switch to the pipeline editor and add the data lake sink to a data processor or stream.
+The sink requires an index name as a configuration parameter, which is used as an identifier in the data explorer.
