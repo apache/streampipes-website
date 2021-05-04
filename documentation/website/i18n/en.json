@@ -1980,6 +1980,166 @@
       "version-0.66.0/version-0.66.0-user-guide-installation": {
         "title": "Installation",
         "sidebar_label": "Installation"
+      },
+      "version-0.67.0/version-0.67.0-try-installation": {
+        "title": "Installation",
+        "sidebar_label": "Installation"
+      },
+      "version-0.67.0/version-0.67.0-user-guide-introduction": {
+        "title": "Apache StreamPipes Documentation",
+        "sidebar_label": "Overview"
+      },
+      "version-0.67.0/version-0.67.0-try-tutorial": {
+        "title": "Interactive Tutorial",
+        "sidebar_label": "Interactive Tutorial"
+      },
+      "version-0.67.0/version-0.67.0-concepts-adapter": {
+        "title": "Data Adapters",
+        "sidebar_label": "Data Adapters"
+      },
+      "version-0.67.0/version-0.67.0-concepts-data-streams": {
+        "title": "Data Streams",
+        "sidebar_label": "Data Streams"
+      },
+      "version-0.67.0/version-0.67.0-concepts-glossary": {
+        "title": "Glossary",
+        "sidebar_label": "Glossary"
+      },
+      "version-0.67.0/version-0.67.0-concepts-overview": {
+        "title": "StreamPipes Concepts",
+        "sidebar_label": "Overview"
+      },
+      "version-0.67.0/version-0.67.0-concepts-pipelines": {
+        "title": "Pipelines",
+        "sidebar_label": "Pipelines"
+      },
+      "version-0.67.0/version-0.67.0-use-configurations": {
+        "title": "Configurations",
+        "sidebar_label": "Configurations"
+      },
+      "version-0.67.0/version-0.67.0-use-connect": {
+        "title": "StreamPipes Connect",
+        "sidebar_label": "StreamPipes Connect"
+      },
+      "version-0.67.0/version-0.67.0-use-dashboard": {
+        "title": "Live Dashboard",
+        "sidebar_label": "Live Dashboard"
+      },
+      "version-0.67.0/version-0.67.0-use-data-explorer": {
+        "title": "Data Explorer",
+        "sidebar_label": "Data Explorer"
+      },
+      "version-0.67.0/version-0.67.0-use-managing-pipelines": {
+        "title": "Managing Pipelines",
+        "sidebar_label": "Managing Pipelines"
+      },
+      "version-0.67.0/version-0.67.0-use-notifications": {
+        "title": "Notifications",
+        "sidebar_label": "Notifications"
+      },
+      "version-0.67.0/version-0.67.0-use-pipeline-editor": {
+        "title": "Pipeline Editor",
+        "sidebar_label": "Pipeline Editor"
+      },
+      "version-0.67.0/version-0.67.0-deploy-docker": {
+        "title": "Docker Deployment",
+        "sidebar_label": "Docker Deployment"
+      },
+      "version-0.67.0/version-0.67.0-deploy-kubernetes": {
+        "title": "Kubernetes Deployment",
+        "sidebar_label": "Kubernetes Deployment"
+      },
+      "version-0.67.0/version-0.67.0-deploy-use-ssl": {
+        "title": "Use SSL",
+        "sidebar_label": "Use SSL"
+      },
+      "version-0.67.0/version-0.67.0-extend-archetypes": {
+        "title": "Maven Archetypes",
+        "sidebar_label": "Maven Archetypes"
+      },
+      "version-0.67.0/version-0.67.0-extend-cli": {
+        "title": "StreamPipes CLI",
+        "sidebar_label": "StreamPipes CLI"
+      },
+      "version-0.67.0/version-0.67.0-extend-sdk-event-model": {
+        "title": "SDK Guide: Event Model",
+        "sidebar_label": "SDK: Event Model"
+      },
+      "version-0.67.0/version-0.67.0-extend-sdk-output-strategies": {
+        "title": "SDK Guide: Output Strategies",
+        "sidebar_label": "SDK: Output Strategies"
+      },
+      "version-0.67.0/version-0.67.0-extend-sdk-static-properties": {
+        "title": "SDK Guide: Static Properties",
+        "sidebar_label": "SDK: Static Properties"
+      },
+      "version-0.67.0/version-0.67.0-extend-sdk-stream-requirements": {
+        "title": "SDK Guide: Stream Requirements",
+        "sidebar_label": "SDK: Stream Requirements"
+      },
+      "version-0.67.0/version-0.67.0-extend-setup": {
+        "title": "Development Setup",
+        "sidebar_label": "Development Setup"
+      },
+      "version-0.67.0/version-0.67.0-extend-tutorial-data-processors": {
+        "title": "Tutorial: Data Processors",
+        "sidebar_label": "Tutorial: Data Processors"
+      },
+      "version-0.67.0/version-0.67.0-extend-tutorial-data-sinks": {
+        "title": "Tutorial: Data Sinks",
+        "sidebar_label": "Tutorial: Data Sinks"
+      },
+      "version-0.67.0/version-0.67.0-extend-tutorial-data-sources": {
+        "title": "Tutorial: Data Sources",
+        "sidebar_label": "Tutorial: Data Sources"
+      },
+      "version-0.67.0/version-0.67.0-technicals-architecture": {
+        "title": "Architecture",
+        "sidebar_label": "Architecture"
+      },
+      "version-0.67.0/version-0.67.0-technicals-configuration": {
+        "title": "Configuration",
+        "sidebar_label": "Configuration"
+      },
+      "version-0.67.0/version-0.67.0-technicals-messaging": {
+        "title": "Messaging",
+        "sidebar_label": "Messaging"
+      },
+      "version-0.67.0/version-0.67.0-technicals-runtime-wrappers": {
+        "title": "Runtime Wrappers",
+        "sidebar_label": "Runtime Wrappers"
+      },
+      "version-0.67.0/version-0.67.0-technicals-user-guidance": {
+        "title": "User Guidance",
+        "sidebar_label": "User Guidance"
+      },
+      "version-0.67.0/version-0.67.0-debugging-debugging": {
+        "title": "Debugging",
+        "sidebar_label": "Debugging"
+      },
+      "version-0.67.0/version-0.67.0-debugging-monitoring": {
+        "title": "Monitoring",
+        "sidebar_label": "Monitoring"
+      },
+      "version-0.67.0/version-0.67.0-community-contribute": {
+        "title": "Contribute",
+        "sidebar_label": "Contribute"
+      },
+      "version-0.67.0/version-0.67.0-community-get-help": {
+        "title": "Get Help",
+        "sidebar_label": "Get Help"
+      },
+      "version-0.67.0/version-0.67.0-dev-guide-archetype": {
+        "title": "Start Developing",
+        "sidebar_label": "Start Developing"
+      },
+      "version-0.67.0/version-0.67.0-user-guide-installation": {
+        "title": "Installation",
+        "sidebar_label": "Installation"
+      },
+      "version-0.67.0/version-0.67.0-user-guide-introduction-old": {
+        "title": "Introduction",
+        "sidebar_label": "Introduction"
       }
     },
     "links": {
