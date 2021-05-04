@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>JMS Publisher · StreamPipes</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;!--"/><meta name="docsearch:version" content="0.66.0"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="JMS Publisher · StreamPipes"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.streampipes.org/docs/"/><meta property="og:description" content="&lt;!--"/><meta property="og:image" content="https://docs.streampipes.org/docs/img/favicon.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.streampipes.org/docs/img/docusaurus.png"/><link rel="shortcut icon" href="/docs/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://docs.streampipes.org/docs/blog/atom.xml" title="StreamPipes Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://docs.streampipes.org/docs/blog/feed.xml" title="StreamPipes Blog RSS Feed"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-154181944-1"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments); }
+              gtag('js', new Date());
+              gtag('config', 'UA-154181944-1');
+            </script><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/><link rel="stylesheet" href="/docs/css/admonition.css"/><link rel="stylesheet" href="/docs/css/custom.css"/><link rel="stylesheet" href="/docs/css/code-block-buttons.css"/><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script><script type="text/javascript" src="/docs/js/custom.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><link rel="stylesheet" href="/docs/css/prism.css"/><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/sp-logo-color-docs.png" alt="StreamPipes"/></a><a href="/docs/versions"><h3>0.66.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/docs/0.66.0/user-guide-introduction" target="_self">Documentation</a></li><li class=""><a href="/docs/docs/0.66.0/faq-common-problems" target="_self">FAQ</a></li><li class=""><a href="/docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">JMS Publisher</h1></header><article><div><span><!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one or more
+  ~ contributor license agreements.  See the NOTICE file distributed with
+  ~ this work for additional information regarding copyright ownership.
+  ~ The ASF licenses this file to You under the Apache License, Version 2.0
+  ~ (the "License"); you may not use this file except in compliance with
+  ~ the License.  You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  -->
+<p align="center"> 
+    <img src="/docs/img/pipeline-elements/org.apache.streampipes.sinks.brokers.jvm.jms/icon.png" width="150px;" class="pe-image-documentation"/>
+</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="description"></a><a href="#description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h2>
+<p>Publishes events to a message broker (e.g., ActiveMQ) using the Java Message Service (JMS) protocol.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="required-input"></a><a href="#required-input" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Required input</h2>
+<p>This sink does not have any requirements and works with any incoming event type.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="configuration"></a><a href="#configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration</h2>
+<h3><a class="anchor" aria-hidden="true" id="jms-broker-settings"></a><a href="#jms-broker-settings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JMS Broker Settings</h3>
+<p>The basic settings to connect to the broker.
+The JMS broker URL indicates the URL of the broker (e.g., <a href="tcp://localhost">tcp://localhost</a>), the port indicates the port of the broker
+(e.g., 61616)</p>
+<h3><a class="anchor" aria-hidden="true" id="jms-topic"></a><a href="#jms-topic" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JMS Topic</h3>
+<p>The topic where events should be sent to.</p>
+<h2><a class="anchor" aria-hidden="true" id="output"></a><a href="#output" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Output</h2>
+<p>(not applicable for data sinks)</p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#description">Description</a></li><li><a href="#required-input">Required input</a></li><li><a href="#configuration">Configuration</a><ul class="toc-headings"><li><a href="#jms-broker-settings">JMS Broker Settings</a></li><li><a href="#jms-topic">JMS Topic</a></li></ul></li><li><a href="#output">Output</a></li></ul></nav></div><div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/sp-logo-color.png" alt="StreamPipes" width="66"/></a><div><h5>Docs</h5><a href="/docs/docs/user-guide-introduction">User Guide</a><a href="/docs/docs/dev-guide-introduction">Developer Guide</a><a href="/docs/docs/faq-common-problems">Frequently Asked Questions</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/streampipes" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/streampipes" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://github.com/apache/incubator-streampipes" target="_blank" rel="noreferrer noopener">Github</a><a href="https://hub.docker.com/u/streampipes" target="_blank" rel="noreferrer noopener">Docker Hub</a></div><div><h5>More</h5><a href="/docs/blog">Blog</a><a href="https://streampipes.apache.org">Website</a><a href="https://www.apache.org/foundation/policies/privacy.html">Privacy</a><a class="github-button" href="https://github.com/apache/incubator-streampipes" data-icon="octicon-star" data-count-href="/streampipes/streampipes/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2021 The Apache Software Foundation<p style="margin-bottom:0px;margin-left:20px;margin-right:20px">Disclaimer: Apache StreamPipes (incubating) is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.</p></section></footer></div></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '0fedc89dddf2810657708b178e56ef02',
+                indexName: 'streampipes',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
