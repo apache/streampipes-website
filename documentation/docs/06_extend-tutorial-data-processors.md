@@ -28,11 +28,11 @@ The algorithm outputs every location event once the position has entered the geo
 ## Project setup
 
 To create new projects from scratch, several Maven archetypes exist to start developing.
-Enter the following command to create a new project based on the StreamPipes ``Processors-Flink`` archetype:
+Enter the following command to create a new project based ongit st the StreamPipes ``Processors-Flink`` archetype:
 
 ```
 mvn archetype:generate -DarchetypeGroupId=org.streampipes \
--DarchetypeArtifactId=streampipes-archetype-pe-processors-flink -DarchetypeVersion=0.64.0 \
+-DarchetypeArtifactId=streampipes-archetype-pe-processors-flink -DarchetypeVersion=0.67.0 \
 -DgroupId=org.streampipes.tutorial -DartifactId=geofence-tutorial -DclassNamePrefix=Geofencing -DpackageName=geofencing
 ```
 

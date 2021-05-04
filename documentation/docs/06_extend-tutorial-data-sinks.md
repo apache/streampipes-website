@@ -23,7 +23,7 @@ Enter the following command to create a new project based on the StreamPipes ``S
 
 ```
 mvn archetype:generate -DarchetypeGroupId=org.streampipes \
--DarchetypeArtifactId=streampipes-archetype-pe-sinks-jvm -DarchetypeVersion=0.64.0 \
+-DarchetypeArtifactId=streampipes-archetype-pe-sinks-jvm -DarchetypeVersion=0.67.0 \
 -DgroupId=org.streampipes.tutorial -DartifactId=sink-tutorial -DclassNamePrefix=Rest -DpackageName=geofencing
 ```
 
