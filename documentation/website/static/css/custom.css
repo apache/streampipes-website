@@ -399,9 +399,15 @@ p {
     margin-right: auto;
 }
 
+.docs-image-small {
+    max-width: 70%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .docs-carousel {
     max-width: 85%;
-    border: 2px solid rgb(57,181,74);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -410,4 +416,48 @@ p {
 
 .slick-dotted.slick-slider {
     margin-bottom: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-auto-flow: column;
+}
+.grid .toc-box {
+    height: 100%;
+}
+.grid.col-3 {
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: unset;
+}
+.grid.col-3 .toc-box {
+    margin: 0;
+}
+
+
+@media screen and (max-width: 600px) {
+    .col-3 {
+        width: 100%;
+    }
+}
+
+.toc-section-header {
+    margin-bottom: 10px;
+}
+
+.toc-header {
+    background: rgb(219, 219, 219);
+    color: #2d2d2d;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 14pt;
+}
+
+.toc-content {
+    padding: 10px;
+}
+
+.toc-box {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 10px;
 }
