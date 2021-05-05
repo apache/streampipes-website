@@ -15,7 +15,7 @@ To subscribe to the user list, send an email to [users-subscribe@streampipes.apa
 
 We also maintain a Slack channel which might be a good way for problems that require interaction:
 
-[Slack Channel](http://slack.streampipes.org)
+[Slack Channel Invite Link](https://join.slack.com/t/streampipes-community/shared_invite/zt-pvivlspi-RLLqpx7eujbHVb5t1SDXHg)
 
 ## Bugs and Feature Requests
 
