@@ -237,10 +237,10 @@ Now we are ready to start our container!
 Execute the main method in the class `Main` we've just created.
 
 The container automatically registers itself in the Consul installation of StreamPipes.
-To install the just created element, open the StreamPipes UI and follow the manual provided in the [user guide](user-guide-installation).
+To install the just created element, open the StreamPipes UI and follow the manual provided in the [user guide](../user-guide-installation).
 
 ## Read more
 
 Congratulations! You've just created your first data sink for StreamPipes.
 There are many more things to explore and data sinks can be defined in much more detail using multiple wrappers.
-Follow our [SDK guide](dev-guide-sdk-guide-sinks) to see what's possible!
+Follow our [SDK guide](../dev-guide-sdk-guide-sinks) to see what's possible!
