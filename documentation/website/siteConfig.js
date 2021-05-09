@@ -23,6 +23,7 @@ const siteConfig = {
     tagline: 'Self-Service Data Analytics',
     url: 'https://streampipes.apache.org' /* your website url */,
     baseUrl: '/docs/' /* base url for your project */,
+    cleanUrl: false,
 
     projectName: 'streampipes-docs',
     organizationName: 'apache',
@@ -79,7 +80,6 @@ const siteConfig = {
         'https://use.fontawesome.com/releases/v5.7.2/css/all.css'],
 
     onPageNav: 'separate',
-    cleanUrl: true,
     scrollToTop: true,
     scrollToTopOptions: {
         zIndex: 100,
