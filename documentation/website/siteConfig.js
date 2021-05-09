@@ -21,7 +21,7 @@
 const siteConfig = {
     title: 'StreamPipes' /* title for your website */,
     tagline: 'Self-Service Data Analytics',
-    url: 'https://docs.streampipes.org' /* your website url */,
+    url: 'https://streampipes.apache.org' /* your website url */,
     baseUrl: '/docs/' /* base url for your project */,
 
     projectName: 'streampipes-docs',
