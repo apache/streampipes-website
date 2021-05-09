@@ -15,7 +15,7 @@ This guide covers the creation of stream requirements. Before reading this secti
 
 <div class="admonition tip">
 <div class="admonition-title">Code on Github</div>
-<p>For all examples, the code can be found on <a href="https://www.github.com/apache/incubator-streampipes-examples/tree/dev/streampipes-pipeline-elements-examples-processors-jvm/src/main/java/org/streampipes/pe/examples/jvm/requirements/">Github</a>.</p>
+<p>For all examples, the code can be found on <a href="https://www.github.com/apache/incubator-streampipes-examples/tree/dev/streampipes-pipeline-elements-examples-processors-jvm/src/main/java/org/apache/streampipes/pe/examples/jvm/requirements/">Github</a>.</p>
 </div>
 
 ## The StreamRequirementsBuilder

@@ -238,8 +238,7 @@ Execute the main method in the class `Main` we've just created.
 
 The container automatically registers itself in the Consul installation of StreamPipes.
 
-To install the just created element, open the StreamPipes UI and follow the manual provided in the [user guide](../user
--guide-installation).
+To install the just created element, open the StreamPipes UI and follow the manual provided in the [user guide](03_use-install-pipeline-elements.md).
 
 ## Read more
 

@@ -14,7 +14,8 @@
       "version-0.67.0-use-managing-pipelines",
       "version-0.67.0-use-dashboard",
       "version-0.67.0-use-data-explorer",
-      "version-0.67.0-use-notifications"
+      "version-0.67.0-use-notifications",
+      "version-0.67.0-use-install-pipeline-elements"
     ],
     "📚 Pipeline Elements": [
       {

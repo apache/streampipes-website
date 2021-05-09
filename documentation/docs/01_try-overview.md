@@ -40,9 +40,9 @@ This is the documentation of Apache StreamPipes.
             <div class="toc-content">
                 <div class="toc-section-header"><b>Learn how to use the various modules of StreamPipes.</b></div>
                 <a href="../use-connect">StreamPipes Connect</a>, <a href="../use-pipeline-editor">Pipeline Editor</a>, 
-                f="../use-managing-pipelines">Managing Pipelines</a>, 
+                <a href="../use-managing-pipelines">Managing Pipelines</a>, 
                 <a href="../use-live-dashboard">Live Dashboard</a>, <a href="../use-data-explorer">Data Explorer</a>, 
-                f="../use-notifications">Notifications</a>
+                <a href="../use-notifications">Notifications</a>
             </div>
         </div>
     </div>

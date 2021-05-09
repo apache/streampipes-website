@@ -16,7 +16,7 @@ The only requirements in terms of development tools are that you have Java 8 and
 In order to quickly test developed pipeline elements without needing to install all services required by StreamPipes, we provide a CLI tool that allows you to selectively start StreamPipes components.
 The CLI tool allows to switch to several templates (based on docker-compose) depending on the role. 
 
-The documentation on the usage of the CLI tool is available [here](../extend-cli).
+The documentation on the usage of the CLI tool is available [here](06_extend-cli.md).
 ## Starter projects
 
 Now, once you've started the development instance, you are ready to develop your very first pipeline element.
@@ -24,7 +24,7 @@ Instead of starting from scratch, we recommend using our provided maven archetyp
 
 ### Maven archetypes
 
-Create the Maven archetype as described in the [Getting Started](../extend-archetypes) guide.
+Create the Maven archetype as described in the [Getting Started](06_extend-archetypes.md) guide.
 
 ### Examples
 

@@ -157,7 +157,7 @@ Our example supports a radius value between 0 and 1000 with a granularity of 1.
 In the StreamPipes UI, a required text parameter is rendered as a text input field, in case we provide an optional value specification, a slider input is automatically generated.
 
 Such user-defined parameters are called _static properties_. There are many different types of static properties (see
- the [Processor SDK](../dev-guide-sdk-guide-processors#docsNav) for an overview).
+ the [Processor SDK](06_extend-sdk-static-properties.md) for an overview).
 
 One example are _DomainProperties_ we use for defining the center of the geofence.
 Our data processor requires a lat/lng pair that marks the center of the geofence.
@@ -491,11 +491,10 @@ Click on the link of the data source to see the RDF description of the pipeline 
 <img src="/docs/img/tutorial-processors/pe-rdf-geofencing.PNG" alt="Geofencing RDF description">
 
 The container automatically registers itself in the Consul installation of StreamPipes.
-To install the just created element, open the StreamPipes UI and follow the manual provided in the [user guide](../user
--guide-installation).
+To install the just created element, open the StreamPipes UI and follow the manual provided in the [user guide](03_use-install-pipeline-elements.md).
 
 ## Read more
 
 Congratulations! You've just created your first data processor for StreamPipes.
 There are many more things to explore and data processors can be defined in much more detail using multiple wrappers.
-Follow our [SDK guide](../dev-guide-sdk-guide-processors) to see what's possible!
+Follow our [SDK guide](06_extend-sdk-static-properties.md) to see what's possible!

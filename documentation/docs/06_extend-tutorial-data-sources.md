@@ -281,4 +281,3 @@ To install the just created element, open the StreamPipes UI and follow the manu
 
 Congratulations! You've just created your first pipeline element for StreamPipes.
 There are many more things to explore and data sources can be defined in much more detail.
-Follow our [SDK guide](../dev-guide-source-sdk) to see what's possible!

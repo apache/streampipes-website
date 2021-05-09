@@ -14,7 +14,8 @@
       "use-managing-pipelines",
       "use-dashboard",
       "use-data-explorer",
-      "use-notifications"
+      "use-notifications",
+      "use-install-pipeline-elements"
     ],
     "\uD83D\uDCDA Pipeline Elements": [
       {

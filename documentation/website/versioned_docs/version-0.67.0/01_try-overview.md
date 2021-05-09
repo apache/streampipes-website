@@ -18,7 +18,7 @@ This is the documentation of Apache StreamPipes.
             </div>
             <div class="toc-content">
                 <div class="toc-section-header"><b>Your first steps with Apache StreamPipes.</b></div>
-               <a href="try-installation">Install StreamPipes</a>, <a href="try-tutorial">Interactive Tutorial</a>
+               <a href="../try-installation">Install StreamPipes</a>, <a href="../try-tutorial">Interactive Tutorial</a>
             </div>
         </div>
     </div>
@@ -29,7 +29,7 @@ This is the documentation of Apache StreamPipes.
             </div>
             <div class="toc-content">
                 <div class="toc-section-header"><b>Learn about some general concepts of StreamPipes.</b></div>
-                <a href="concepts-overview">Overview</a>
+                <a href="../concepts-overview">Overview</a>
             </div>
         </div>
     </div>
@@ -40,8 +40,8 @@ This is the documentation of Apache StreamPipes.
             </div>
             <div class="toc-content">
                 <div class="toc-section-header"><b>Learn how to use the various modules of StreamPipes.</b></div>
-                <a href="use-connect">StreamPipes Connect</a>, <a href="use-pipeline-editor">Pipeline Editor</a>, <a href="use-managing-pipelines">Managing Pipelines</a>, 
-                <a href="use-live-dashboard">Live Dashboard</a>, <a href="use-data-explorer">Data Explorer</a>, <a href="use-notifications">Notifications</a>
+                <a href="../use-connect">StreamPipes Connect</a>, <a href="../use-pipeline-editor">Pipeline Editor</a>, <a href="../use-managing-pipelines">Managing Pipelines</a>, 
+                <a href="../use-live-dashboard">Live Dashboard</a>, <a href="../use-data-explorer">Data Explorer</a>, <a href="../use-notifications">Notifications</a>
             </div>
         </div>
     </div>
@@ -65,7 +65,7 @@ This is the documentation of Apache StreamPipes.
             </div>
             <div class="toc-content">
                 <div class="toc-section-header"><b>How to set up StreamPipes in test and production environments.</b></div>
-                <a href="deploy-docker">Docker</a>, <a href="deploy-kubernetes">Kubernetes</a>, <a href="deploy-use-ssl">Use SSL</a>
+                <a href="../deploy-docker">Docker</a>, <a href="../deploy-kubernetes">Kubernetes</a>, <a href="../deploy-use-ssl">Use SSL</a>
             </div>
         </div>
     </div>
@@ -76,10 +76,10 @@ This is the documentation of Apache StreamPipes.
             </div>
             <div class="toc-content">
                 <div class="toc-section-header"><b>Write your own pipeline elements for StreamPipes.</b></div>
-                <a href="extend-setup">Development Setup</a>, <a href="extend-cli">CLI</a>, <a href="extend-archetypes">Maven Archetypes</a>,
-                <a href="extend-tutorial-data-sources">Tutorial Data Sources</a>, <a href="extend-tutorial-data-processors">Tutorial Data Processors</a>, <a href="extend-tutorial-data-sinks">Tutorial Data Sinks</a>,
-                <a href="extend-sdk-event-model">Event Model</a>, <a href="extend-sdk-stream-requirements">Stream Requirements</a>, <a href="extend-sdk-static-properties">Static Properties</a>,
-                <a href="extend-output-strategies">Output Strategies</a>
+                <a href="../extend-setup">Development Setup</a>, <a href="../extend-cli">CLI</a>, <a href="../extend-archetypes">Maven Archetypes</a>,
+                <a href="../extend-tutorial-data-sources">Tutorial Data Sources</a>, <a href="../extend-tutorial-data-processors">Tutorial Data Processors</a>, <a href="../extend-tutorial-data-sinks">Tutorial Data Sinks</a>,
+                <a href="../extend-sdk-event-model">Event Model</a>, <a href="../extend-sdk-stream-requirements">Stream Requirements</a>, <a href="../extend-sdk-static-properties">Static Properties</a>,
+                <a href="../extend-output-strategies">Output Strategies</a>
             </div>
         </div>
     </div>
@@ -90,8 +90,8 @@ This is the documentation of Apache StreamPipes.
             </div>
             <div class="toc-content">
                 <div class="toc-section-header"><b>Learn about technical concepts behind the curtain.</b></div>
-                <a href="technicals-architecture">Architecture</a>, <a href="technicals-user-guidance">User Guidance</a>, <a href="technicals-runtime-wrappers">Runtime Wrappers</a>,
-                <a href="technicals-messaging">Messaging</a>, <a href="technicals-configuration">Configuration</a>
+                <a href="../technicals-architecture">Architecture</a>, <a href="../technicals-user-guidance">User Guidance</a>, <a href="../technicals-runtime-wrappers">Runtime Wrappers</a>,
+                <a href="../technicals-messaging">Messaging</a>, <a href="../technicals-configuration">Configuration</a>
             </div>
         </div>
     </div>
