@@ -136,4 +136,4 @@ If there is a problem with any of the components, please restart the whole syste
 
 ## Next Steps
 
-That's it! To ease your first steps with StreamPipes, we've created an [interactive tutorial](try-tutorial).
+That's it! To ease your first steps with StreamPipes, we've created an [interactive tutorial](../try-tutorial).
