@@ -273,7 +273,9 @@ Click on the link of the data source to see the RDF description of the pipeline 
 <img src="/docs/img/tutorial-sources/pe-rdf.PNG" alt="Pipeline Element RDF description">
 
 The container automatically registers itself in the Consul installation of StreamPipes.
-To install the just created element, open the StreamPipes UI and follow the manual provided in the [user guide](../user-guide-introduction).
+
+To install the just created element, open the StreamPipes UI and follow the manual provided in the [user guide](../user
+-guide-introduction).
 
 ## Read more
 

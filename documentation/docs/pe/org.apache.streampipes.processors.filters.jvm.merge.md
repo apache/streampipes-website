@@ -33,13 +33,8 @@ sidebar_label: Merge By Time
 ## Description
 
 Merges two event streams by their timestamp.
-Two events of the different streams are merged when they occure to the same time
+Two events of the different streams are merged when they occur at the same time.
 
-The following figure shows how the events of the two data streams will be mergrged:
-
-<p align="center"> 
-    <img width="300px;" src="/docs/img/pipeline-elements/org.apache.streampipes.processors.filters.jvm.merge/merge_description.png" class="pe-image-documentation"/>
-</p>
 ***
 
 ## Required input
@@ -48,8 +43,8 @@ Each of the data streams needs a timestamp.
 
 ## Configuration
 
-* For each stream a the timestamp property on which the merger is performed has to be selected
+* For each stream the timestamp property on which the merger performed has to be selected
 * The Time Interval describes the maximum value between two events to decide whether they are a match. To be a valid match the following function must be true: | timestamp_stream_1 - timestamp_stream_2 | < interval
 
 ## Output
-The compose processor has a configurable output that can be selected by the user at pipeline modeling time.
+The merge processor has a configurable output that can be selected by the user at pipeline modeling time.
