@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://docs.streampipes.org/docs/blog</id>
+    <id>https://streampipes.apache.org/docs/blog</id>
     <title>StreamPipes Blog</title>
     <updated>2020-05-27T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
-    <link rel="alternate" href="https://docs.streampipes.org/docs/blog"/>
+    <link rel="alternate" href="https://streampipes.apache.org/docs/blog"/>
     <subtitle>The best place to stay up-to-date with the latest StreamPipes news and events.</subtitle>
-    <logo>https://docs.streampipes.org/docs/img/sp-logo-color-docs.png</logo>
+    <logo>https://streampipes.apache.org/docs/img/sp-logo-color-docs.png</logo>
     <rights>Copyright © 2021 The Apache Software Foundation</rights>
     <entry>
         <title type="html"><![CDATA[Running StreamPipes the Kubernetes-Way using k3s]]></title>
-        <id>https://docs.streampipes.org/docs/blog/2020/05/27/streampipes_on_k3s.html</id>
-        <link href="https://docs.streampipes.org/docs/blog/2020/05/27/streampipes_on_k3s.html">
+        <id>https://streampipes.apache.org/docs/blog/2020/05/27/streampipes_on_k3s.html</id>
+        <link href="https://streampipes.apache.org/docs/blog/2020/05/27/streampipes_on_k3s.html">
         </link>
         <updated>2020-05-27T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p><img class="blog-image" style="max-width:100%;" src="/docs/blog/assets/2020-05-27/streampipes_k3s.png" alt="StreamPipes on k3s">
@@ -26,8 +26,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Apache StreamPipes release 0.66.0]]></title>
-        <id>https://docs.streampipes.org/docs/blog/2020/05/19/release-0660.html</id>
-        <link href="https://docs.streampipes.org/docs/blog/2020/05/19/release-0660.html">
+        <id>https://streampipes.apache.org/docs/blog/2020/05/19/release-0660.html</id>
+        <link href="https://streampipes.apache.org/docs/blog/2020/05/19/release-0660.html">
         </link>
         <updated>2020-05-19T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">6 minutes to read</div></strong>
@@ -41,8 +41,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[StreamPi(pes) - Running StreamPipes on Raspberry Pi]]></title>
-        <id>https://docs.streampipes.org/docs/blog/2020/01/23/streampipes_on_rpi.html</id>
-        <link href="https://docs.streampipes.org/docs/blog/2020/01/23/streampipes_on_rpi.html">
+        <id>https://streampipes.apache.org/docs/blog/2020/01/23/streampipes_on_rpi.html</id>
+        <link href="https://streampipes.apache.org/docs/blog/2020/01/23/streampipes_on_rpi.html">
         </link>
         <updated>2020-01-23T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p><img class="blog-image" style="max-width:100%;" src="/docs/blog/assets/2020-01-23/streampipes_raspberrypi.png" alt="StreamPipes on Raspberry Pi">
@@ -57,8 +57,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Moving to the Apache Incubator]]></title>
-        <id>https://docs.streampipes.org/docs/blog/2019/11/25/moving-to-the-apache-incubator.html</id>
-        <link href="https://docs.streampipes.org/docs/blog/2019/11/25/moving-to-the-apache-incubator.html">
+        <id>https://streampipes.apache.org/docs/blog/2019/11/25/moving-to-the-apache-incubator.html</id>
+        <link href="https://streampipes.apache.org/docs/blog/2019/11/25/moving-to-the-apache-incubator.html">
         </link>
         <updated>2019-11-25T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">8 minutes to read</div></strong>
@@ -72,8 +72,8 @@ Great news: StreamPipes is moving to the Apache Incubator!</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[StreamPipes release 0.65.0]]></title>
-        <id>https://docs.streampipes.org/docs/blog/2019/11/23/release-0650.html</id>
-        <link href="https://docs.streampipes.org/docs/blog/2019/11/23/release-0650.html">
+        <id>https://streampipes.apache.org/docs/blog/2019/11/23/release-0650.html</id>
+        <link href="https://streampipes.apache.org/docs/blog/2019/11/23/release-0650.html">
         </link>
         <updated>2019-11-23T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">5 minutes to read</div></strong>
@@ -87,8 +87,8 @@ Great news: StreamPipes is moving to the Apache Incubator!</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[StreamPipes release 0.64.0]]></title>
-        <id>https://docs.streampipes.org/docs/blog/2019/09/19/release-0640.html</id>
-        <link href="https://docs.streampipes.org/docs/blog/2019/09/19/release-0640.html">
+        <id>https://streampipes.apache.org/docs/blog/2019/09/19/release-0640.html</id>
+        <link href="https://streampipes.apache.org/docs/blog/2019/09/19/release-0640.html">
         </link>
         <updated>2019-09-19T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">5 minutes to read</div></strong>
@@ -103,8 +103,8 @@ So here's StreamPipes 0.64.0!</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[StreamPipes release 0.63.0]]></title>
-        <id>https://docs.streampipes.org/docs/blog/2019/09/05/release-0630.html</id>
-        <link href="https://docs.streampipes.org/docs/blog/2019/09/05/release-0630.html">
+        <id>https://streampipes.apache.org/docs/blog/2019/09/05/release-0630.html</id>
+        <link href="https://streampipes.apache.org/docs/blog/2019/09/05/release-0630.html">
         </link>
         <updated>2019-09-05T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">5 minutes to read</div></strong>
@@ -119,8 +119,8 @@ The new version is available on Docker Hub and can be downloaded using our <a hr
     </entry>
     <entry>
         <title type="html"><![CDATA[StreamPipes release 0.62.0]]></title>
-        <id>https://docs.streampipes.org/docs/blog/2019/05/23/release-0620.html</id>
-        <link href="https://docs.streampipes.org/docs/blog/2019/05/23/release-0620.html">
+        <id>https://streampipes.apache.org/docs/blog/2019/05/23/release-0620.html</id>
+        <link href="https://streampipes.apache.org/docs/blog/2019/05/23/release-0620.html">
         </link>
         <updated>2019-05-23T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">6 minutes to read</div></strong>
@@ -135,8 +135,8 @@ The new version is available on Docker Hub and can be downloaded using our <a hr
     </entry>
     <entry>
         <title type="html"><![CDATA[StreamPipes release 0.61.0]]></title>
-        <id>https://docs.streampipes.org/docs/blog/2019/04/04/release-0610.html</id>
-        <link href="https://docs.streampipes.org/docs/blog/2019/04/04/release-0610.html">
+        <id>https://streampipes.apache.org/docs/blog/2019/04/04/release-0610.html</id>
+        <link href="https://streampipes.apache.org/docs/blog/2019/04/04/release-0610.html">
         </link>
         <updated>2019-04-04T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">5 minutes to read</div></strong>
@@ -151,8 +151,8 @@ The new version, which is already available on Docker Hub and can be downloaded 
     </entry>
     <entry>
         <title type="html"><![CDATA[ContainerCLI: A CLI tool for your Docker Application]]></title>
-        <id>https://docs.streampipes.org/docs/blog/2018/11/24/container-cli.html</id>
-        <link href="https://docs.streampipes.org/docs/blog/2018/11/24/container-cli.html">
+        <id>https://streampipes.apache.org/docs/blog/2018/11/24/container-cli.html</id>
+        <link href="https://streampipes.apache.org/docs/blog/2018/11/24/container-cli.html">
         </link>
         <updated>2018-11-24T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">6 minutes to read</div></strong>
@@ -168,8 +168,8 @@ All you need is a working docker-compose.yml file.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[Preview: StreamPipes release 0.60.0]]></title>
-        <id>https://docs.streampipes.org/docs/blog/2018/09/17/preview-060.html</id>
-        <link href="https://docs.streampipes.org/docs/blog/2018/09/17/preview-060.html">
+        <id>https://streampipes.apache.org/docs/blog/2018/09/17/preview-060.html</id>
+        <link href="https://streampipes.apache.org/docs/blog/2018/09/17/preview-060.html">
         </link>
         <updated>2018-09-17T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">5 minutes to read</div></strong>
@@ -184,8 +184,8 @@ In this post, we'd like to give you a preview of the upcoming StreamPipes versio
     </entry>
     <entry>
         <title type="html"><![CDATA[How to understand your machine data?]]></title>
-        <id>https://docs.streampipes.org/docs/blog/2018/06/18/how-to-understand-your-machine-data.html</id>
-        <link href="https://docs.streampipes.org/docs/blog/2018/06/18/how-to-understand-your-machine-data.html">
+        <id>https://streampipes.apache.org/docs/blog/2018/06/18/how-to-understand-your-machine-data.html</id>
+        <link href="https://streampipes.apache.org/docs/blog/2018/06/18/how-to-understand-your-machine-data.html">
         </link>
         <updated>2018-06-18T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">8 minutes to read</div></strong>
@@ -202,8 +202,8 @@ And how can we solve the big challenge to turn this raw data into insights that 
     </entry>
     <entry>
         <title type="html"><![CDATA[Welcome to StreamPipes!]]></title>
-        <id>https://docs.streampipes.org/docs/blog/2018/06/14/welcome.html</id>
-        <link href="https://docs.streampipes.org/docs/blog/2018/06/14/welcome.html">
+        <id>https://streampipes.apache.org/docs/blog/2018/06/14/welcome.html</id>
+        <link href="https://streampipes.apache.org/docs/blog/2018/06/14/welcome.html">
         </link>
         <updated>2018-06-14T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p>Welcome to our new blog. StreamPipes is the new, easy-to-use self-service data analytics toolbox for the Industrial IoT. In the coming weeks, we'll publish a series of blog posts that explain some ideas of StreamPipes. You'll read about use cases, be...</p>]]></summary>
