@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Apache StreamPipes is a self-service (Industrial) IoT toolbox to enable non-technical users to connect, analyze and explore IIoT data streams">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-
 <!-- Favicon -->
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png?v=2"/>
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png?v=2"/>
@@ -22,9 +19,7 @@
 <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png?v=2" sizes="32x32"/>
 <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png?v=2" sizes="16x16"/>
 <link rel="icon" type="image/png" href="/img/favicon/favicon-128.png?v=2" sizes="128x128"/>
-
 <link href="/css/bootstrap.min.css" rel="stylesheet">
-
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link href="https://fonts.googleapis.com/css?family=Heebo|Open+Sans|Raleway" rel="stylesheet">
@@ -37,464 +32,445 @@
 <link rel="stylesheet" href="/css/team.css">
 <link href="/css/responsive.css" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-
 <title>Apache StreamPipes (incubating) - Getting Started</title>
-
 </head>
-
 <body>
-
 <div class="header-banner">
-    <div class="header-banner-news">
-        <b>The Apache StreamPipes (incubating) community is pleased to announce our new Apache release! Download the latest version (0.67.0) <a class="banner-link" href="/download.html">here</a>!</b>
-    </div>
-    <div style="display: flex; align-items: center;justify-content: flex-end;padding-right:20px;height:40px;">
-        <span flex></span>
-        <div class="header-social-buttons" style="color:white;">
-            <a href="https://www.twitter.com/streampipes" style="color:rgb(27, 20, 100);">
-                <i class="fab fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="https://www.github.com/apache/incubator-streampipes" style="color:rgb(27, 20, 100);;">
-                <i class="fab fa-github" aria-hidden="true"></i>
-            </a>
-        </div>
-    </div>
+<div class="header-banner-news">
+<b>The Apache StreamPipes (incubating) community is pleased to announce our new Apache release! Download the latest version (0.67.0) <a class="banner-link" href="/download.html">here</a>!</b>
 </div>
-
+<div style="display: flex; align-items: center;justify-content: flex-end;padding-right:20px;height:40px;">
+<span flex></span>
+<div class="header-social-buttons" style="color:white;">
+<a href="https://www.twitter.com/streampipes" style="color:rgb(27, 20, 100);">
+<i class="fab fa-twitter" aria-hidden="true"></i>
+</a>
+<a href="https://www.github.com/apache/incubator-streampipes" style="color:rgb(27, 20, 100);;">
+<i class="fab fa-github" aria-hidden="true"></i>
+</a>
+</div>
+</div>
+</div>
 <header class="header-area clearfix">
-    <div class="container-fluid h-100">
-        <div class="row h-100">
-            <div class="col-12 h-100">
-                <div class="menu-area h-100">
-                    <nav class="navbar h-100 navbar-expand-lg align-items-center">
-                        <a class="navbar-brand" href="/"><img src="/img/sp-logo-color.png" style="height:40px"></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sp-navbar"
-                                aria-controls="sp-navbar" aria-expanded="false" aria-label="Toggle navigation"><span
-                                    class="navbar-toggler-icon"></span></button>
-
-                        <div class="collapse navbar-collapse justify-content-end" id="sp-navbar">
-                            <ul class="navbar-nav animated" id="nav">
-                                <li class="nav-item "><a class="nav-link"
-                                                                                               href="/">Home</a></li>
-                                <ul class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                                       aria-haspopup="true" aria-expanded="false">Why StreamPipes?</a>
-                                    <div class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link" href="/feature-overview.html">Feature Overview</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="/pipeline-elements.html">Pipeline Elements</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="/usecases.html">Use Cases</a>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" href="/technology.html">Technology</a>
-                                        </li>
-                                    </div>
-                                </ul>
-                                <li class="nav-item "><a class="nav-link"
-                                                                                                   href="/download">Getting
-                                        Started</a></li>
-                                <ul class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                                       aria-haspopup="true" aria-expanded="false">Resources</a>
-                                    <div class="dropdown-menu">
-                                        <li class="nav-item"><a class="nav-link"
-                                                                href="/docs/index.html">Documentation</a></li>
-                                        <li class="nav-item"><a class="nav-link"
-                                                                href="https://issues.apache.org/jira/projects/STREAMPIPES/">Issue Tracker</a></li>
-                                        <li class="nav-item"><a class="nav-link"
-                                                                href="http://cwiki.apache.org/confluence/display/STREAMPIPES">Wiki</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="/media.html">Slides & Videos</a>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" href="/docs/blog">Blog</a></li>
-                                    </div>
-                                </ul>
-                                <ul class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                                       aria-haspopup="true" aria-expanded="false">Community</a>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <li class="nav-item "><a
-                                                    class="nav-link" href="/mailinglists.html">Mailing Lists</a></li>
-                                        <li class="nav-item "><a class="nav-link"
-                                                                                                        href="/team.html">Team</a></li>
-                                        <li class="nav-item "><a
-                                                    class="nav-link" href="/getinvolved.html">Get involved</a></li>
-                                        <li class="nav-item "><a
-                                                    class="nav-link" href="/meetus.html">Talks & Events</a></li>
-                                    </div>
-                                </ul>
-                                <ul class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                                       aria-haspopup="true" aria-expanded="false">Apache</a>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <li class="nav-item"><a class="nav-link" href="https://www.apache.org/">Apache Software Foundation</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="https://www.apache.org/foundation/how-it-works.html">How Apache Works</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="https://www.apache.org/licenses">License</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="https://www.apache.org/security">Security</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="https://www.apache.org/foundation/sponsorship.html">Sponsoring Apache</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
-                                    </div>
-                                </ul>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<div class="page-banner-area">
-    <div class="container h-100">
-        <div class="row h-100 align-items-center">
-            <div class="col-12">
-                <div class="page-banner-content">
-                    <h2>Getting Started</h2>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="container-fluid h-100">
+<div class="row h-100">
+<div class="col-12 h-100">
+<div class="menu-area h-100">
+<nav class="navbar h-100 navbar-expand-lg align-items-center">
+<a class="navbar-brand" href="/"><img src="/img/sp-logo-color.png" style="height:40px"></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sp-navbar"
+aria-controls="sp-navbar" aria-expanded="false" aria-label="Toggle navigation"><span
+class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse justify-content-end" id="sp-navbar">
+<ul class="navbar-nav animated" id="nav">
+<li class="nav-item "><a class="nav-link"
+href="/">Home</a></li>
+<ul class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+aria-haspopup="true" aria-expanded="false">Why StreamPipes?</a>
+<div class="dropdown-menu">
+<li class="nav-item"><a class="nav-link" href="/feature-overview.html">Feature Overview</a></li>
+<li class="nav-item"><a class="nav-link" href="/pipeline-elements.html">Pipeline Elements</a></li>
+<li class="nav-item"><a class="nav-link" href="/usecases.html">Use Cases</a>
+</li>
+<li class="nav-item"><a class="nav-link" href="/technology.html">Technology</a>
+</li>
 </div>
-
+</ul>
+<li class="nav-item "><a class="nav-link"
+href="/download">Getting
+Started</a></li>
+<ul class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+aria-haspopup="true" aria-expanded="false">Resources</a>
+<div class="dropdown-menu">
+<li class="nav-item"><a class="nav-link"
+href="/docs/index.html">Documentation</a></li>
+<li class="nav-item"><a class="nav-link"
+href="https://issues.apache.org/jira/projects/STREAMPIPES/">Issue Tracker</a></li>
+<li class="nav-item"><a class="nav-link"
+href="http://cwiki.apache.org/confluence/display/STREAMPIPES">Wiki</a></li>
+<li class="nav-item"><a class="nav-link" href="/media.html">Slides & Videos</a>
+</li>
+<li class="nav-item"><a class="nav-link" href="/docs/blog">Blog</a></li>
+</div>
+</ul>
+<ul class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+aria-haspopup="true" aria-expanded="false">Community</a>
+<div class="dropdown-menu dropdown-menu-right">
+<li class="nav-item "><a
+class="nav-link" href="/mailinglists.html">Mailing Lists</a></li>
+<li class="nav-item "><a class="nav-link"
+href="/team.html">Team</a></li>
+<li class="nav-item "><a
+class="nav-link" href="/getinvolved.html">Get involved</a></li>
+<li class="nav-item "><a
+class="nav-link" href="/meetus.html">Talks & Events</a></li>
+</div>
+</ul>
+<ul class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+aria-haspopup="true" aria-expanded="false">Apache</a>
+<div class="dropdown-menu dropdown-menu-right">
+<li class="nav-item"><a class="nav-link" href="https://www.apache.org/">Apache Software Foundation</a></li>
+<li class="nav-item"><a class="nav-link" href="https://www.apache.org/foundation/how-it-works.html">How Apache Works</a></li>
+<li class="nav-item"><a class="nav-link" href="https://www.apache.org/licenses">License</a></li>
+<li class="nav-item"><a class="nav-link" href="https://www.apache.org/security">Security</a></li>
+<li class="nav-item"><a class="nav-link" href="https://www.apache.org/foundation/sponsorship.html">Sponsoring Apache</a></li>
+<li class="nav-item"><a class="nav-link" href="https://www.apache.org/foundation/thanks.html">Thanks</a></li>
+</div>
+</ul>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="page-banner-area">
+<div class="container h-100">
+<div class="row h-100 align-items-center">
+<div class="col-12">
+<div class="page-banner-content">
+<h2>Getting Started</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
 <section class="elements-area section-padding-50">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="page-section-title"Install StreamPipes</h2>
-                <h5 style="text-align:center;margin-bottom:15px;">The easiest way to get started is our Docker-based installation.</h5>
-                <div class="installation-manual-part">
-                    <h5 class="feature-item-margin"><span class="feature-highlights-bg">Prerequisites</span></h5>
-                    <h6></h6>
-                    <ul>
-                        <li><i class="fas fa-check sp-color-green"></i>The Docker-based installation works with Linux, MacOS and Windows 10.
-                        </li>
-                        <li><i class="fas fa-check sp-color-green"></i> Install <a
-                                    href="https://docs.docker.com/install/" target="_blank">Docker</a> and <a
-                                    href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose</a>
-                        </li>
-                        <li><i class="fas fa-check sp-color-green"></i> StreamPipes comes with two versions, a <b>lite version</b> with few pipeline elements for testing purposes and a <b>full version</b> with distributed wrappers and the full set of pipeline elements. The full version requires at least 6 GB memory, make sure this is available to Docker.
-                        </li>
-                    </ul>
-                </div>
-                <div class="installation-manual-part">
-                    <h5 class="feature-item-margin"><span class="feature-highlights-bg">Installation</span></h5>
-                    <h6></h6>
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="linux-tab" data-toggle="tab" href="#linux" role="tab"
-                               aria-controls="home" aria-selected="true">Linux</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="osx-tab" data-toggle="tab" href="#linux" role="tab"
-                               aria-controls="profile" aria-selected="false">Mac OS X</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="windows10-tab" data-toggle="tab" href="#windows10" role="tab"
-                               aria-controls="contact" aria-selected="false">Windows 10</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="linux" role="tabpanel" aria-labelledby="linux-tab">
-                            <ul>
-                                <li class="installation-step" style="margin-top:20px;">
-    <div class="row">
-        <div class="col-md-1 col-3">
-            <span class="fa-stack fa-2x">
-                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                 <strong class="fa-stack-1x" style="color:white;">1</strong>
-            </span>
-        </div>
-        <div class="col-md-11 col-9">
-            Download the latest Apache StreamPipes release and extract the zip file to a directory of your choice.
-            <div class="row">
-                <table class="table" style="margin-top:30px;margin-left:20px;margin-right:20px;border:1px solid rgb(27, 20, 100);">
-                    <thead>
-                    <tr style="background:rgb(27, 20, 100);color:white;">
-                        <th scope="col" style="border-bottom:0px;border-top:0px;">File</th>
-                        <th scope="col" style="border-bottom:0px;border-top:0px;">Version</th>
-                        <th scope="col" style="border-bottom:0px;border-top:0px;">Release Date</th>
-                        <th scope="col" style="border-bottom:0px;border-top:0px;">Signatures</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td><a href="https://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=incubator/streampipes/installer/0.67.0/apache-streampipes-installer-0.67.0-incubating-source-release.zip">apache-streampipes-installer-0.67.0-incubating-source-release.zip</a></td>
-                        <td>0.67.0</td>
-                        <td>2020-10-27</td>
-                        <td>
-                            <a href="https://downloads.apache.org/incubator/streampipes/installer/0.67.0/apache-streampipes-installer-0.67.0-incubating-source-release.zip.sha512">SHA</a>
-                            <a href="https://downloads.apache.org/incubator/streampipes/installer/0.67.0/apache-streampipes-installer-0.67.0-incubating-source-release.zip.asc">PGP</a>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="row">
-                <div class="alert alert-info" role="alert" style="margin-left:20px;margin-right:20px;">
-                  The above release file should be verified using the PGP signatures and the <a href="https://downloads.apache.org/incubator/streampipes/KEYS">project release KEYS</a>. See the official ASF <a target="asf" href="https://www.apache.org/dyn/closer.cgi#verify">verification instructions</a> for a description of using the PGP and KEYS files for verification. A SHA512 checksum is also provided as an additional verification method.
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2 class="page-section-title"Install StreamPipes</h2>
+<h5 style="text-align:center;margin-bottom:15px;">The easiest way to get started is our Docker-based installation.</h5>
+<div class="installation-manual-part">
+<h5 class="feature-item-margin"><span class="feature-highlights-bg">Prerequisites</span></h5>
+<h6></h6>
+<ul>
+<li><i class="fas fa-check sp-color-green"></i>The Docker-based installation works with Linux, MacOS and Windows 10.
 </li>
-                                <hr/>
-                                <li class="installation-step">
-    <div class="row" style="align-items: center;justify-content: center;">
-        <div class="col-md-1 col-3">
-            <span class="fa-stack fa-2x">
-                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                 <strong class="fa-stack-1x" style="color:white;">2</strong>
-            </span>
-        </div>
-        <div class="col-md-11 col-9">
-            In a command prompt, open the folder <code>compose/</code> and run <code>docker-compose up -d</code>
-        </div>
-    </div>
+<li><i class="fas fa-check sp-color-green"></i> Install <a
+href="https://docs.docker.com/install/" target="_blank">Docker</a> and <a
+href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose</a>
 </li>
-                                <hr/>
-                                <li class="installation-step">
-    <div class="row" style="align-items: center;justify-content: center;">
-        <div class="col-md-1 col-3">
-            <span class="fa-stack fa-2x">
-                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                 <strong class="fa-stack-1x" style="color:white;">3</strong>
-            </span>
-        </div>
-        <div class="col-md-11 col-9">
-            Open your browser, navigate to http://localhost:80 (or use the domain name of your server) and finish the setup according to the instructions.
-        </div>
-    </div>
+<li><i class="fas fa-check sp-color-green"></i> StreamPipes comes with two versions, a <b>lite version</b> with few pipeline elements for testing purposes and a <b>full version</b> with distributed wrappers and the full set of pipeline elements. The full version requires at least 6 GB memory, make sure this is available to Docker.
 </li>
-                                <hr/>
-                                <li class="installation-step">
-    <div class="row" style="align-items: center;justify-content: center;">
-        <div class="col-md-1 col-3">
-            <span class="fa-stack fa-2x">
-                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                 <strong class="fa-stack-1x" style="color:white;">4</strong>
-            </span>
-        </div>
-        <div class="col-md-11 col-9">
-            For a detailed description of the installer go to the <a href="https://github.com/apache/incubator-streampipes-installer">GitHub repository</a>
-        </div>
-    </div>
+</ul>
+</div>
+<div class="installation-manual-part">
+<h5 class="feature-item-margin"><span class="feature-highlights-bg">Installation</span></h5>
+<h6></h6>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" id="linux-tab" data-toggle="tab" href="#linux" role="tab"
+aria-controls="home" aria-selected="true">Linux</a>
 </li>
-                                <hr/>
-                            </ul>
-                        </div>
-                        <div class="tab-pane fade" id="windows10" role="tabpanel"
-                             aria-labelledby="windows10-tab-tab">
-                            <ul>
-                                <li class="installation-step" style="margin-top:20px;">
-    <div class="row">
-        <div class="col-md-1 col-3">
-            <span class="fa-stack fa-2x">
-                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                 <strong class="fa-stack-1x" style="color:white;">1</strong>
-            </span>
-        </div>
-        <div class="col-md-11 col-9">
-            Download the latest Apache StreamPipes release and extract the zip file to a directory of your choice.
-            <div class="row">
-                <table class="table" style="margin-top:30px;margin-left:20px;margin-right:20px;border:1px solid rgb(27, 20, 100);">
-                    <thead>
-                    <tr style="background:rgb(27, 20, 100);color:white;">
-                        <th scope="col" style="border-bottom:0px;border-top:0px;">File</th>
-                        <th scope="col" style="border-bottom:0px;border-top:0px;">Version</th>
-                        <th scope="col" style="border-bottom:0px;border-top:0px;">Release Date</th>
-                        <th scope="col" style="border-bottom:0px;border-top:0px;">Signatures</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td><a href="https://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=incubator/streampipes/installer/0.67.0/apache-streampipes-installer-0.67.0-incubating-source-release.zip">apache-streampipes-installer-0.67.0-incubating-source-release.zip</a></td>
-                        <td>0.67.0</td>
-                        <td>2020-10-27</td>
-                        <td>
-                            <a href="https://downloads.apache.org/incubator/streampipes/installer/0.67.0/apache-streampipes-installer-0.67.0-incubating-source-release.zip.sha512">SHA</a>
-                            <a href="https://downloads.apache.org/incubator/streampipes/installer/0.67.0/apache-streampipes-installer-0.67.0-incubating-source-release.zip.asc">PGP</a>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="row">
-                <div class="alert alert-info" role="alert" style="margin-left:20px;margin-right:20px;">
-                  The above release file should be verified using the PGP signatures and the <a href="https://downloads.apache.org/incubator/streampipes/KEYS">project release KEYS</a>. See the official ASF <a target="asf" href="https://www.apache.org/dyn/closer.cgi#verify">verification instructions</a> for a description of using the PGP and KEYS files for verification. A SHA512 checksum is also provided as an additional verification method.
-                </div>
-            </div>
-        </div>
-    </div>
+<li class="nav-item">
+<a class="nav-link" id="osx-tab" data-toggle="tab" href="#linux" role="tab"
+aria-controls="profile" aria-selected="false">Mac OS X</a>
 </li>
-                                <li class="installation-step">
-    <div class="row" style="align-items: center;justify-content: center;">
-        <div class="col-md-1 col-3">
-            <span class="fa-stack fa-2x">
-                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                 <strong class="fa-stack-1x" style="color:white;">2</strong>
-            </span>
-        </div>
-        <div class="col-md-11 col-9">
-            In a command prompt, open the folder <code>compose/</code> and run <code>docker-compose up -d</code>
-        </div>
-    </div>
+<li class="nav-item">
+<a class="nav-link" id="windows10-tab" data-toggle="tab" href="#windows10" role="tab"
+aria-controls="contact" aria-selected="false">Windows 10</a>
 </li>
-                                <li class="installation-step">
-    <div class="row" style="align-items: center;justify-content: center;">
-        <div class="col-md-1 col-3">
-            <span class="fa-stack fa-2x">
-                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                 <strong class="fa-stack-1x" style="color:white;">3</strong>
-            </span>
-        </div>
-        <div class="col-md-11 col-9">
-            Open your browser, navigate to http://localhost:80 (or use the domain name of your server) and finish the setup according to the instructions.
-        </div>
-    </div>
+</ul>
+<div class="tab-content" id="myTabContent">
+<div class="tab-pane fade show active" id="linux" role="tabpanel" aria-labelledby="linux-tab">
+<ul>
+<li class="installation-step" style="margin-top:20px;">
+<div class="row">
+<div class="col-md-1 col-3">
+<span class="fa-stack fa-2x">
+<i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+<strong class="fa-stack-1x" style="color:white;">1</strong>
+</span>
+</div>
+<div class="col-md-11 col-9">
+Download the latest Apache StreamPipes release and extract the zip file to a directory of your choice.
+<div class="row">
+<table class="table" style="margin-top:30px;margin-left:20px;margin-right:20px;border:1px solid rgb(27, 20, 100);">
+<thead>
+<tr style="background:rgb(27, 20, 100);color:white;">
+<th scope="col" style="border-bottom:0px;border-top:0px;">File</th>
+<th scope="col" style="border-bottom:0px;border-top:0px;">Version</th>
+<th scope="col" style="border-bottom:0px;border-top:0px;">Release Date</th>
+<th scope="col" style="border-bottom:0px;border-top:0px;">Signatures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=incubator/streampipes/installer/0.67.0/apache-streampipes-installer-0.67.0-incubating-source-release.zip">apache-streampipes-installer-0.67.0-incubating-source-release.zip</a></td>
+<td>0.67.0</td>
+<td>2020-10-27</td>
+<td>
+<a href="https://downloads.apache.org/incubator/streampipes/installer/0.67.0/apache-streampipes-installer-0.67.0-incubating-source-release.zip.sha512">SHA</a>
+<a href="https://downloads.apache.org/incubator/streampipes/installer/0.67.0/apache-streampipes-installer-0.67.0-incubating-source-release.zip.asc">PGP</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="row">
+<div class="alert alert-info" role="alert" style="margin-left:20px;margin-right:20px;">
+The above release file should be verified using the PGP signatures and the <a href="https://downloads.apache.org/incubator/streampipes/KEYS">project release KEYS</a>. See the official ASF <a target="asf" href="https://www.apache.org/dyn/closer.cgi#verify">verification instructions</a> for a description of using the PGP and KEYS files for verification. A SHA512 checksum is also provided as an additional verification method.
+</div>
+</div>
+</div>
+</div>
 </li>
-                                <li class="installation-step">
-    <div class="row" style="align-items: center;justify-content: center;">
-        <div class="col-md-1 col-3">
-            <span class="fa-stack fa-2x">
-                 <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                 <strong class="fa-stack-1x" style="color:white;">4</strong>
-            </span>
-        </div>
-        <div class="col-md-11 col-9">
-            For a detailed description of the installer go to the <a href="https://github.com/apache/incubator-streampipes-installer">GitHub repository</a>
-        </div>
-    </div>
+<hr/>
+<li class="installation-step">
+<div class="row" style="align-items: center;justify-content: center;">
+<div class="col-md-1 col-3">
+<span class="fa-stack fa-2x">
+<i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+<strong class="fa-stack-1x" style="color:white;">2</strong>
+</span>
+</div>
+<div class="col-md-11 col-9">
+In a command prompt, open the folder <code>compose/</code> and run <code>docker-compose up -d</code>
+</div>
+</div>
 </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-
-
-            </div>
-        </div>
-    </div>
+<hr/>
+<li class="installation-step">
+<div class="row" style="align-items: center;justify-content: center;">
+<div class="col-md-1 col-3">
+<span class="fa-stack fa-2x">
+<i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+<strong class="fa-stack-1x" style="color:white;">3</strong>
+</span>
+</div>
+<div class="col-md-11 col-9">
+Open your browser, navigate to http://localhost:80 (or use the domain name of your server) and finish the setup according to the instructions.
+</div>
+</div>
+</li>
+<hr/>
+<li class="installation-step">
+<div class="row" style="align-items: center;justify-content: center;">
+<div class="col-md-1 col-3">
+<span class="fa-stack fa-2x">
+<i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+<strong class="fa-stack-1x" style="color:white;">4</strong>
+</span>
+</div>
+<div class="col-md-11 col-9">
+For a detailed description of the installer go to the <a href="https://github.com/apache/incubator-streampipes-installer">GitHub repository</a>
+</div>
+</div>
+</li>
+<hr/>
+</ul>
+</div>
+<div class="tab-pane fade" id="windows10" role="tabpanel"
+aria-labelledby="windows10-tab-tab">
+<ul>
+<li class="installation-step" style="margin-top:20px;">
+<div class="row">
+<div class="col-md-1 col-3">
+<span class="fa-stack fa-2x">
+<i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+<strong class="fa-stack-1x" style="color:white;">1</strong>
+</span>
+</div>
+<div class="col-md-11 col-9">
+Download the latest Apache StreamPipes release and extract the zip file to a directory of your choice.
+<div class="row">
+<table class="table" style="margin-top:30px;margin-left:20px;margin-right:20px;border:1px solid rgb(27, 20, 100);">
+<thead>
+<tr style="background:rgb(27, 20, 100);color:white;">
+<th scope="col" style="border-bottom:0px;border-top:0px;">File</th>
+<th scope="col" style="border-bottom:0px;border-top:0px;">Version</th>
+<th scope="col" style="border-bottom:0px;border-top:0px;">Release Date</th>
+<th scope="col" style="border-bottom:0px;border-top:0px;">Signatures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=incubator/streampipes/installer/0.67.0/apache-streampipes-installer-0.67.0-incubating-source-release.zip">apache-streampipes-installer-0.67.0-incubating-source-release.zip</a></td>
+<td>0.67.0</td>
+<td>2020-10-27</td>
+<td>
+<a href="https://downloads.apache.org/incubator/streampipes/installer/0.67.0/apache-streampipes-installer-0.67.0-incubating-source-release.zip.sha512">SHA</a>
+<a href="https://downloads.apache.org/incubator/streampipes/installer/0.67.0/apache-streampipes-installer-0.67.0-incubating-source-release.zip.asc">PGP</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="row">
+<div class="alert alert-info" role="alert" style="margin-left:20px;margin-right:20px;">
+The above release file should be verified using the PGP signatures and the <a href="https://downloads.apache.org/incubator/streampipes/KEYS">project release KEYS</a>. See the official ASF <a target="asf" href="https://www.apache.org/dyn/closer.cgi#verify">verification instructions</a> for a description of using the PGP and KEYS files for verification. A SHA512 checksum is also provided as an additional verification method.
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="installation-step">
+<div class="row" style="align-items: center;justify-content: center;">
+<div class="col-md-1 col-3">
+<span class="fa-stack fa-2x">
+<i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+<strong class="fa-stack-1x" style="color:white;">2</strong>
+</span>
+</div>
+<div class="col-md-11 col-9">
+In a command prompt, open the folder <code>compose/</code> and run <code>docker-compose up -d</code>
+</div>
+</div>
+</li>
+<li class="installation-step">
+<div class="row" style="align-items: center;justify-content: center;">
+<div class="col-md-1 col-3">
+<span class="fa-stack fa-2x">
+<i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+<strong class="fa-stack-1x" style="color:white;">3</strong>
+</span>
+</div>
+<div class="col-md-11 col-9">
+Open your browser, navigate to http://localhost:80 (or use the domain name of your server) and finish the setup according to the instructions.
+</div>
+</div>
+</li>
+<li class="installation-step">
+<div class="row" style="align-items: center;justify-content: center;">
+<div class="col-md-1 col-3">
+<span class="fa-stack fa-2x">
+<i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+<strong class="fa-stack-1x" style="color:white;">4</strong>
+</span>
+</div>
+<div class="col-md-11 col-9">
+For a detailed description of the installer go to the <a href="https://github.com/apache/incubator-streampipes-installer">GitHub repository</a>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section class="elements-area section-padding-50 feature-section-gray">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="page-section-title">Getting Started</h2>
-                <div class="installation-manual-part">
-                    <h5 class="feature-item-margin"><span class="feature-highlights-bg">How to start</span></h5>
-                    <h6></h6>
-                    <ul>
-                        <li class="installation-step">
-                            <div class="row" style="align-items: center;justify-content: center;">
-                                <div class="col-md-1 col-3">
-                                                    <span class="fa-stack fa-2x">
-                                                         <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                         <i class="fas fa-check fa-stack-1x" style="color:white;"></i>
-                                                    </span>
-                                </div>
-                                <div class="col-md-11 col-9">
-                                    Check the <a href="https://streampipes.apache.org/docs/docs/user-guide-first-steps/"> user guide</a> and learn how to create your first pipeline!
-                                </div>
-                            </div>
-                        </li>
-                        <li class="installation-step">
-                            <div class="row" style="align-items: center;justify-content: center;">
-                                <div class="col-md-1 col-3">
-                                                    <span class="fa-stack fa-2x">
-                                                         <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                         <i class="fas fa-check fa-stack-1x" style="color:white;"></i>
-                                                    </span>
-                                </div>
-                                <div class="col-md-11 col-9">
-                                    Open the pipeline editor and start the <b>interactive tutorial</b>.
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="installation-manual-part">
-                    <h5 class="feature-item-margin"><span class="feature-highlights-bg">Get help</span></h5>
-                    <h6></h6>
-                    <ul>
-                        <li class="installation-step">
-                            <div class="row" style="align-items: center;justify-content: center;">
-                                <div class="col-md-1 col-3">
-                                                    <span class="fa-stack fa-2x">
-                                                         <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                         <i class="fas fa-check fa-stack-1x" style="color:white;"></i>
-                                                    </span>
-                                </div>
-                                <div class="col-md-11 col-9">
-                                    Subscribe to our <a href="https://join.slack.com/t/streampipes-community/shared_invite/zt-pvivlspi-RLLqpx7eujbHVb5t1SDXHg">Slack channel</a> and ask us if you have any questions.
-                                </div>
-                            </div>
-                        </li>
-                        <li class="installation-step">
-                            <div class="row" style="align-items: center;justify-content: center;">
-                                <div class="col-md-1 col-3">
-                                                    <span class="fa-stack fa-2x">
-                                                         <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                         <i class="fas fa-check fa-stack-1x" style="color:white;"></i>
-                                                    </span>
-                                </div>
-                                <div class="col-md-11 col-9">
-                                    Ask your question on  <a href="https://stackoverflow.com/questions/tagged/streampipes">Stack Overflow</a>.
-                                </div>
-                            </div>
-                        </li>
-                        <li class="installation-step">
-                            <div class="row" style="align-items: center;justify-content: center;">
-                                <div class="col-md-1 col-3">
-                                                    <span class="fa-stack fa-2x">
-                                                         <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                         <i class="fas fa-check fa-stack-1x" style="color:white;"></i>
-                                                    </span>
-                                </div>
-                                <div class="col-md-11 col-9">
-                                    Send us an <a href="mailto:users@streampipes.apache.org">email</a> and we'll be glad to help!
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2 class="page-section-title">Getting Started</h2>
+<div class="installation-manual-part">
+<h5 class="feature-item-margin"><span class="feature-highlights-bg">How to start</span></h5>
+<h6></h6>
+<ul>
+<li class="installation-step">
+<div class="row" style="align-items: center;justify-content: center;">
+<div class="col-md-1 col-3">
+<span class="fa-stack fa-2x">
+<i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+<i class="fas fa-check fa-stack-1x" style="color:white;"></i>
+</span>
+</div>
+<div class="col-md-11 col-9">
+Check the <a href="https://streampipes.apache.org/docs/docs/user-guide-first-steps/"> user guide</a> and learn how to create your first pipeline!
+</div>
+</div>
+</li>
+<li class="installation-step">
+<div class="row" style="align-items: center;justify-content: center;">
+<div class="col-md-1 col-3">
+<span class="fa-stack fa-2x">
+<i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+<i class="fas fa-check fa-stack-1x" style="color:white;"></i>
+</span>
+</div>
+<div class="col-md-11 col-9">
+Open the pipeline editor and start the <b>interactive tutorial</b>.
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="installation-manual-part">
+<h5 class="feature-item-margin"><span class="feature-highlights-bg">Get help</span></h5>
+<h6></h6>
+<ul>
+<li class="installation-step">
+<div class="row" style="align-items: center;justify-content: center;">
+<div class="col-md-1 col-3">
+<span class="fa-stack fa-2x">
+<i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+<i class="fas fa-check fa-stack-1x" style="color:white;"></i>
+</span>
+</div>
+<div class="col-md-11 col-9">
+Subscribe to our <a href="https://join.slack.com/t/streampipes-community/shared_invite/zt-pvivlspi-RLLqpx7eujbHVb5t1SDXHg">Slack channel</a> and ask us if you have any questions.
+</div>
+</div>
+</li>
+<li class="installation-step">
+<div class="row" style="align-items: center;justify-content: center;">
+<div class="col-md-1 col-3">
+<span class="fa-stack fa-2x">
+<i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+<i class="fas fa-check fa-stack-1x" style="color:white;"></i>
+</span>
+</div>
+<div class="col-md-11 col-9">
+Ask your question on  <a href="https://stackoverflow.com/questions/tagged/streampipes">Stack Overflow</a>.
+</div>
+</div>
+</li>
+<li class="installation-step">
+<div class="row" style="align-items: center;justify-content: center;">
+<div class="col-md-1 col-3">
+<span class="fa-stack fa-2x">
+<i class="fas fa-circle fa-stack-2x sp-color-green"></i>
+<i class="fas fa-check fa-stack-1x" style="color:white;"></i>
+</span>
+</div>
+<div class="col-md-11 col-9">
+Send us an <a href="mailto:users@streampipes.apache.org">email</a> and we'll be glad to help!
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <footer class="footer-area clearfix">
-    <div class="footer-section">
-        <div class="footer-content-part">Disclaimer: Apache StreamPipes (incubating) is an effort undergoing incubation
-            at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all
-            newly accepted projects until a further review indicates that the infrastructure, communications, and
-            decision making process have stabilized in a manner consistent with other successful ASF projects. While
-            incubation status is not necessarily a reflection of the completeness or stability of the code, it does
-            indicate that the project has yet to be fully endorsed by the ASF.
-        </div>
-        <div class="footer-content-part"><a href="https://www.apache.org/foundation/policies/privacy.html">Privacy</a></div>
-        <p class="footer-content-part">Copyright © 2019 The Apache Software Foundation. Apache and the Apache feather
-            logo are trademarks of The Apache Software Foundation
-            <br/>Home screen image taken from <a
-                    href="https://www.flickr.com/photos/56682936@N03/15572646535">Flickr</a>, licensed under <a
-                    href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, some logos removed.
-        </p>
-
-    </div>
+<div class="footer-section">
+<div class="footer-content-part">Disclaimer: Apache StreamPipes (incubating) is an effort undergoing incubation
+at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all
+newly accepted projects until a further review indicates that the infrastructure, communications, and
+decision making process have stabilized in a manner consistent with other successful ASF projects. While
+incubation status is not necessarily a reflection of the completeness or stability of the code, it does
+indicate that the project has yet to be fully endorsed by the ASF.
+</div>
+<div class="footer-content-part"><a href="https://www.apache.org/foundation/policies/privacy.html">Privacy</a></div>
+<p class="footer-content-part">Copyright © 2019 The Apache Software Foundation. Apache and the Apache feather
+logo are trademarks of The Apache Software Foundation
+<br/>Home screen image taken from <a
+href="https://www.flickr.com/photos/56682936@N03/15572646535">Flickr</a>, licensed under <a
+href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, some logos removed.
+</p>
+</div>
 </footer>
-
 <script src="/js/jquery-2.2.4.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/scripts.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154181944-1"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-154181944-1');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-154181944-1');
 </script>
-
-
 </body>
-
 </html>
