@@ -2204,6 +2204,246 @@
       "version-0.67.0/version-0.67.0-user-guide-introduction-old": {
         "title": "Introduction",
         "sidebar_label": "Introduction"
+      },
+      "version-0.68.0/version-0.68.0-try-installation": {
+        "title": "Installation",
+        "sidebar_label": "Installation"
+      },
+      "version-0.68.0/version-0.68.0-try-tutorial": {
+        "title": "Interactive Tutorial",
+        "sidebar_label": "Interactive Tutorial"
+      },
+      "version-0.68.0/version-0.68.0-deploy-docker": {
+        "title": "Docker Deployment",
+        "sidebar_label": "Docker Deployment"
+      },
+      "version-0.68.0/version-0.68.0-extend-tutorial-data-processors": {
+        "title": "Tutorial: Data Processors",
+        "sidebar_label": "Tutorial: Data Processors"
+      },
+      "version-0.68.0/version-0.68.0-extend-tutorial-data-sinks": {
+        "title": "Tutorial: Data Sinks",
+        "sidebar_label": "Tutorial: Data Sinks"
+      },
+      "version-0.68.0/version-0.68.0-extend-tutorial-data-sources": {
+        "title": "Tutorial: Data Sources",
+        "sidebar_label": "Tutorial: Data Sources"
+      },
+      "version-0.68.0/version-0.68.0-community-get-help": {
+        "title": "Get Help",
+        "sidebar_label": "Get Help"
+      },
+      "version-0.68.0/version-0.68.0-dev-guide-sdk-guide-processors": {
+        "title": "SDK Guide: Data Processors",
+        "sidebar_label": "SDK Guide: Data Processors"
+      },
+      "version-0.68.0/version-0.68.0-dev-guide-sdk-guide-sinks": {
+        "title": "SDK Guide: Data Sinks",
+        "sidebar_label": "SDK Guide: Data Sinks"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.connect.adapters.flic.mqtt": {
+        "title": "Flic MQTT",
+        "sidebar_label": "Flic MQTT"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.connect.adapters.opcua": {
+        "title": "OPC UA",
+        "sidebar_label": "OPC UA"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.connect.adapters.plc4x.modbus": {
+        "title": "PLC4X MODBUS",
+        "sidebar_label": "PLC4X MODBUS"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.connect.adapters.simulator.machine": {
+        "title": "Machine Data Simulator",
+        "sidebar_label": "Machine Data Simulator"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.connect.protocol.stream.httpserver": {
+        "title": "HTTP Server",
+        "sidebar_label": "HTTP Server"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processor.geo.jvm.geocoding": {
+        "title": "Google Maps Geocoder",
+        "sidebar_label": "Google Maps Geocoder"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processor.geo.jvm.reversegeocoding": {
+        "title": "Reverse Geocoder",
+        "sidebar_label": "Reverse Geocoder"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processor.geo.jvm.staticgeocoding": {
+        "title": "Static Google Maps Geocoder",
+        "sidebar_label": "Static Google Maps Geocoder"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification": {
+        "title": "Generic Image Classification",
+        "sidebar_label": "Generic Image Classification"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processor.imageclassification.jvm.image-enricher": {
+        "title": "Image Enricher",
+        "sidebar_label": "Image Enricher"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processor.imageclassification.qrcode": {
+        "title": "QR Code Reader",
+        "sidebar_label": "QR Code Reader"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.aggregation.flink.aggregation": {
+        "title": "Aggregation",
+        "sidebar_label": "Aggregation"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.aggregation.flink.count": {
+        "title": "Count Aggregation",
+        "sidebar_label": "Count Aggregation"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.aggregation.flink.eventcount": {
+        "title": "Event Counter",
+        "sidebar_label": "Event Counter"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.aggregation.flink.rate": {
+        "title": "Event Rate",
+        "sidebar_label": "Event Rate"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.changedetection.jvm.cusum": {
+        "title": "Cusum",
+        "sidebar_label": "Cusum"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.filters.jvm.limit": {
+        "title": "Rate Limit",
+        "sidebar_label": "Rate Limit"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.filters.jvm.merge": {
+        "title": "Synchronize Two Streams",
+        "sidebar_label": "Synchronize Two Streams"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.geo.jvm.processor.distancecalculator": {
+        "title": "Distance Calculator",
+        "sidebar_label": "Distance Calculator"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator": {
+        "title": "Static Distance Calculator",
+        "sidebar_label": "Static Distance Calculator"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.pattern-detection.flink.absence": {
+        "title": "Absence",
+        "sidebar_label": "Absence"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.pattern-detection.flink.and": {
+        "title": "And",
+        "sidebar_label": "And"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.pattern-detection.flink.peak-detection": {
+        "title": "Peak Detection",
+        "sidebar_label": "Peak Detection"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.pattern-detection.flink.sequence": {
+        "title": "Sequence",
+        "sidebar_label": "Sequence"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.siddhi.frequency": {
+        "title": "Frequency Calculation",
+        "sidebar_label": "Frequency Calculation"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.siddhi.frequencychange": {
+        "title": "Frequency Change",
+        "sidebar_label": "Frequency Change"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.siddhi.increase": {
+        "title": "Trend",
+        "sidebar_label": "Trend"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.siddhi.numericalfilter": {
+        "title": "Numerical Filter (Siddhi)",
+        "sidebar_label": "Numerical Filter (Siddhi)"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.siddhi.stop": {
+        "title": "Stream Stop Detection",
+        "sidebar_label": "Stream Stop Detection"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.textmining.flink.languagedetection": {
+        "title": "Language Detection",
+        "sidebar_label": "Language Detection"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.textmining.flink.wordcount": {
+        "title": "Word Count",
+        "sidebar_label": "Word Count"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.flink.field-converter": {
+        "title": "Field Converter",
+        "sidebar_label": "Field Converter"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.flink.field-renamer": {
+        "title": "Field Renamer",
+        "sidebar_label": "Field Renamer"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.flink.fieldhasher": {
+        "title": "Field Hasher",
+        "sidebar_label": "Field Hasher"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.flink.measurement-unit-converter": {
+        "title": "Measurement Unit Converter",
+        "sidebar_label": "Measurement Unit Converter"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.booloperator.counter": {
+        "title": "Boolean Counter",
+        "sidebar_label": "Boolean Counter"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge": {
+        "title": "Signal Edge Filter",
+        "sidebar_label": "Signal Edge Filter"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state": {
+        "title": "Boolean To State",
+        "sidebar_label": "Boolean To State"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.buffer": {
+        "title": "State Buffer",
+        "sidebar_label": "State Buffer"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer": {
+        "title": "State Buffer Labeler",
+        "sidebar_label": "State Buffer Labeler"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number": {
+        "title": "Number Labeler",
+        "sidebar_label": "Number Labeler"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state": {
+        "title": "String To State",
+        "sidebar_label": "String To State"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.split-array": {
+        "title": "Split Array",
+        "sidebar_label": "Split Array"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.stringoperator.timer": {
+        "title": "String Timer",
+        "sidebar_label": "String Timer"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.sinks.brokers.jvm.nats": {
+        "title": "NATS Publisher",
+        "sidebar_label": "NATS Publisher"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.sinks.brokers.jvm.rabbitmq": {
+        "title": "RabbitMQ Publisher",
+        "sidebar_label": "RabbitMQ Publisher"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.sinks.databases.ditto": {
+        "title": "Eclipse Ditto",
+        "sidebar_label": "Eclipse Ditto"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.sinks.databases.jvm.mysql": {
+        "title": "MySQL Database",
+        "sidebar_label": "MySQL Database"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.sinks.internal.jvm.notification": {
+        "title": "Notification",
+        "sidebar_label": "Notification"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.sinks.notifications.jvm.slack": {
+        "title": "Slack Notification",
+        "sidebar_label": "Slack Notification"
+      },
+      "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.sinks.notifications.jvm.telegram": {
+        "title": "Telegram Publisher",
+        "sidebar_label": "Telegram Publisher"
       }
     },
     "links": {

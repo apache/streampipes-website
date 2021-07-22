@@ -1,0 +1,236 @@
+{
+  "version-0.68.0-documentation": {
+    "🚀 Try StreamPipes": [
+      "version-0.68.0-user-guide-introduction",
+      "version-0.68.0-try-installation",
+      "version-0.68.0-try-tutorial"
+    ],
+    "💡 Concepts": [
+      "version-0.68.0-concepts-overview"
+    ],
+    "🎓 Use StreamPipes": [
+      "version-0.68.0-use-connect",
+      "version-0.68.0-use-pipeline-editor",
+      "version-0.68.0-use-managing-pipelines",
+      "version-0.68.0-use-dashboard",
+      "version-0.68.0-use-data-explorer",
+      "version-0.68.0-use-notifications",
+      "version-0.68.0-use-install-pipeline-elements"
+    ],
+    "📚 Pipeline Elements": [
+      {
+        "type": "subcategory",
+        "label": "Adapters",
+        "ids": [
+          "version-0.68.0-pe/org.apache.streampipes.connect.protocol.stream.kafka",
+          "version-0.68.0-pe/org.apache.streampipes.connect.protocol.stream.pulsar",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.coindesk",
+          "version-0.68.0-pe/org.apache.streampipes.connect.protocol.stream.file",
+          "version-0.68.0-pe/org.apache.streampipes.protocol.set.file",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.flic.mqtt",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.gdelt",
+          "version-0.68.0-pe/org.apache.streampipes.connect.protocol.stream.httpserver",
+          "version-0.68.0-pe/org.apache.streampipes.protocol.set.http",
+          "version-0.68.0-pe/org.apache.streampipes.connect.protocol.stream.http",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.iex.news",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.iex.stocks",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.iss",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.image.set",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.image.stream",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.influxdb.set",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.influxdb.stream",
+          "version-0.68.0-pe/org.apache.streampipes.connect.protocol.stream.mqtt",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.simulator.machine",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.mysql.set",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.mysql.stream",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.netio.mqtt",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.netio.rest",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.opcua",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.plc4x.modbus",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.plc4x.s7",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.ros",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.simulator.randomdataset",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.simulator.randomdatastream",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.slack",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.ti",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.wikipedia.edit",
+          "version-0.68.0-pe/org.apache.streampipes.connect.adapters.wikipedia.new"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Data Processors",
+        "ids": [
+          "version-0.68.0-pe/org.apache.streampipes.processors.pattern-detection.flink.absence",
+          "version-0.68.0-pe/org.apache.streampipes.processors.aggregation.flink.aggregation",
+          "version-0.68.0-pe/org.apache.streampipes.processors.pattern-detection.flink.and",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.flink.processor.boilerplate",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timer",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.jvm.duration-value",
+          "version-0.68.0-pe/org.apache.streampipes.processors.textmining.jvm.chunker",
+          "version-0.68.0-pe/org.apache.streampipes.processors.filters.jvm.compose",
+          "version-0.68.0-pe/org.apache.streampipes.processors.aggregation.flink.count",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.jvm.count-array",
+          "version-0.68.0-pe/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo",
+          "version-0.68.0-pe/org.apache.streampipes.processors.changedetection.jvm.cusum",
+          "version-0.68.0-pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator",
+          "version-0.68.0-pe/org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG",
+          "version-0.68.0-pe/org.apache.streampipes.processors.aggregation.flink.eventcount",
+          "version-0.68.0-pe/org.apache.streampipes.processors.aggregation.flink.rate",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.flink.field-converter",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.flink.fieldhasher",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.flink.field-mapper",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.flink.field-renamer",
+          "version-0.68.0-pe/org.apache.streampipes.processors.siddhi.frequency",
+          "version-0.68.0-pe/org.apache.streampipes.processors.siddhi.frequencychange",
+          "version-0.68.0-pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification",
+          "version-0.68.0-pe/org.apache.streampipes.processor.geo.jvm.geocoding",
+          "version-0.68.0-pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper",
+          "version-0.68.0-pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher",
+          "version-0.68.0-pe/org.apache.streampipes.processors.textmining.flink.languagedetection",
+          "version-0.68.0-pe/org.apache.streampipes.processors.textmining.jvm.languagedetection",
+          "version-0.68.0-pe/org.apache.streampipes.processors.enricher.flink.processor.math.mathop",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter",
+          "version-0.68.0-pe/org.apache.streampipes.processors.filters.jvm.enrich",
+          "version-0.68.0-pe/org.apache.streampipes.processors.textmining.jvm.namefinder",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number",
+          "version-0.68.0-pe/org.apache.streampipes.processors.filters.jvm.numericalfilter",
+          "version-0.68.0-pe/org.apache.streampipes.processors.siddhi.numericalfilter",
+          "version-0.68.0-pe/org.apache.streampipes.processors.filters.jvm.numericaltextfilter",
+          "version-0.68.0-pe/org.apache.streampipes.processors.textmining.jvm.partofspeech",
+          "version-0.68.0-pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection",
+          "version-0.68.0-pe/org.apache.streampipes.processors.filters.jvm.project",
+          "version-0.68.0-pe/org.apache.streampipes.processor.imageclassification.qrcode",
+          "version-0.68.0-pe/org.apache.streampipes.processors.filters.jvm.limit",
+          "version-0.68.0-pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding",
+          "version-0.68.0-pe/org.apache.streampipes.processors.textmining.jvm.sentencedetection",
+          "version-0.68.0-pe/org.apache.streampipes.processors.pattern-detection.flink.sequence",
+          "version-0.68.0-pe/org.apache.streampipes.processors.siddhi.sequence",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge",
+          "version-0.68.0-pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory",
+          "version-0.68.0-pe/org.apache.streampipes.processors.enricher.jvm.sizemeasure",
+          "version-0.68.0-pe/org.apache.streampipes.processor.geo.flink",
+          "version-0.68.0-pe/org.apache.streampipes.processors.geo.jvm.processor.speed",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.jvm.split-array",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.jvm.processor.state.buffer",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer",
+          "version-0.68.0-pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator",
+          "version-0.68.0-pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding",
+          "version-0.68.0-pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop",
+          "version-0.68.0-pe/org.apache.streampipes.processors.statistics.flink.statistics-summary",
+          "version-0.68.0-pe/org.apache.streampipes.processors.siddhi.stop",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state",
+          "version-0.68.0-pe/org.apache.streampipes.processors.filters.jvm.merge",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.jvm.taskduration",
+          "version-0.68.0-pe/org.apache.streampipes.processors.filters.jvm.textfilter",
+          "version-0.68.0-pe/org.apache.streampipes.processors.filters.jvm.threshold",
+          "version-0.68.0-pe/org.apache.streampipes.processors.enricher.flink.timestamp",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor",
+          "version-0.68.0-pe/org.apache.streampipes.processors.textmining.jvm.tokenizer",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean",
+          "version-0.68.0-pe/org.apache.streampipes.processors.siddhi.increase",
+          "version-0.68.0-pe/org.apache.streampipes.processors.enricher.flink.processor.trigonometry",
+          "version-0.68.0-pe/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing",
+          "version-0.68.0-pe/org.apache.streampipes.processors.transformation.jvm.changed-value",
+          "version-0.68.0-pe/org.apache.streampipes.processors.textmining.flink.wordcount"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Data Sinks",
+        "ids": [
+          "version-0.68.0-pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest",
+          "version-0.68.0-pe/org.apache.streampipes.sinks.databases.jvm.couchdb",
+          "version-0.68.0-pe/org.apache.streampipes.sinks.internal.jvm.dashboard",
+          "version-0.68.0-pe/org.apache.streampipes.sinks.internal.jvm.datalake",
+          "version-0.68.0-pe/org.apache.streampipes.sinks.databases.ditto",
+          "version-0.68.0-pe/org.apache.streampipes.sinks.databases.flink.elasticsearch",
+          "version-0.68.0-pe/org.apache.streampipes.sinks.notifications.jvm.email",
+          "version-0.68.0-pe/org.apache.streampipes.sinks.databases.jvm.influxdb",
+          "version-0.68.0-pe/org.apache.streampipes.sinks.databases.jvm.iotdb",
+          "version-0.68.0-pe/org.apache.streampipes.sinks.brokers.jvm.jms",
+          "version-0.68.0-pe/org.apache.streampipes.sinks.brokers.jvm.kafka",
+          "version-0.68.0-pe/org.apache.streampipes.sinks.databases.jvm.mysql",
+          "version-0.68.0-pe/org.apache.streampipes.sinks.brokers.jvm.nats",
+          "version-0.68.0-pe/org.apache.streampipes.sinks.internal.jvm.notification",
+          "version-0.68.0-pe/org.apache.streampipes.sinks.databases.jvm.opcua",
+          "version-0.68.0-pe/org.apache.streampipes.sinks.notifications.jvm.onesignal",
+          "version-0.68.0-pe/org.apache.streampipes.sinks.databases.jvm.postgresql",
+          "version-0.68.0-pe/org.apache.streampipes.sinks.brokers.jvm.pulsar",
+          "version-0.68.0-pe/org.apache.streampipes.sinks.brokers.jvm.rest",
+          "version-0.68.0-pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq",
+          "version-0.68.0-pe/org.apache.streampipes.sinks.notifications.jvm.slack",
+          "version-0.68.0-pe/org.apache.streampipes.sinks.notifications.jvm.telegram"
+        ]
+      }
+    ],
+    "⚡ Deploy StreamPipes": [
+      "version-0.68.0-deploy-docker",
+      "version-0.68.0-deploy-kubernetes",
+      "version-0.68.0-deploy-use-ssl"
+    ],
+    "💻 Extend StreamPipes": [
+      "version-0.68.0-extend-setup",
+      "version-0.68.0-extend-cli",
+      "version-0.68.0-extend-archetypes",
+      "version-0.68.0-extend-tutorial-data-sources",
+      "version-0.68.0-extend-tutorial-data-processors",
+      "version-0.68.0-extend-tutorial-data-sinks",
+      "version-0.68.0-extend-sdk-event-model",
+      "version-0.68.0-extend-sdk-stream-requirements",
+      "version-0.68.0-extend-sdk-static-properties",
+      "version-0.68.0-extend-sdk-output-strategies"
+    ],
+    "🔧 Technicals": [
+      "version-0.68.0-technicals-architecture",
+      "version-0.68.0-technicals-user-guidance",
+      "version-0.68.0-technicals-runtime-wrappers",
+      "version-0.68.0-technicals-messaging",
+      "version-0.68.0-technical-configuration"
+    ],
+    "👪 Community": [
+      "version-0.68.0-community-get-help",
+      "version-0.68.0-community-contribute"
+    ]
+  },
+  "version-0.68.0-developer-guide": {
+    "Basics": [
+      "version-0.68.0-dev-guide-introduction",
+      "version-0.68.0-dev-guide-architecture",
+      "version-0.68.0-dev-guide-development-environment",
+      "version-0.68.0-dev-guide-archetype",
+      "version-0.68.0-dev-guide-migration"
+    ],
+    "Tutorials": [
+      "version-0.68.0-dev-guide-tutorial-sources",
+      "version-0.68.0-dev-guide-tutorial-processors",
+      "version-0.68.0-dev-guide-tutorial-sinks"
+    ],
+    "SDK Reference": [
+      "version-0.68.0-dev-guide-sdk-guide-sources",
+      "version-0.68.0-dev-guide-sdk-guide-processors",
+      "version-0.68.0-dev-guide-sdk-guide-sinks",
+      "version-0.68.0-dev-guide-stream-requirements",
+      "version-0.68.0-dev-guide-static-properties",
+      "version-0.68.0-dev-guide-output-strategies",
+      "version-0.68.0-dev-guide-event-model"
+    ],
+    "Configuration": [
+      "version-0.68.0-dev-guide-ssl",
+      "version-0.68.0-dev-guide-configuration"
+    ]
+  },
+  "version-0.68.0-faq": {
+    "FAQ": [
+      "version-0.68.0-faq-common-problems"
+    ]
+  }
+}
