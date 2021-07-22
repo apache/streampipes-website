@@ -1,0 +1,138 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Processing Elements · Apache StreamPipes</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="This page explains some processing elements (not including the full list) that are available in the StreamPipes Starter Kit."/><meta name="docsearch:version" content="0.67.0"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Processing Elements · Apache StreamPipes"/><meta property="og:type" content="website"/><meta property="og:url" content="https://streampipes.apache.org/docs/index.html"/><meta property="og:description" content="This page explains some processing elements (not including the full list) that are available in the StreamPipes Starter Kit."/><meta property="og:image" content="https://streampipes.apache.org/docs/img/favicon.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://streampipes.apache.org/docs/img/docusaurus.png"/><link rel="shortcut icon" href="/docs/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://streampipes.apache.org/docs/blog/atom.xml" title="Apache StreamPipes Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://streampipes.apache.org/docs/blog/feed.xml" title="Apache StreamPipes Blog RSS Feed"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-154181944-1"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments); }
+              gtag('js', new Date());
+              gtag('config', 'UA-154181944-1');
+            </script><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/><link rel="stylesheet" href="/docs/css/admonition.css"/><link rel="stylesheet" href="/docs/css/custom.css"/><link rel="stylesheet" href="/docs/css/code-block-buttons.css"/><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script><script type="text/javascript" src="/docs/js/custom.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/prism.css"/><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/sp-logo-color-docs.png" alt="Apache StreamPipes"/></a><a href="/docs/versions.html"><h3>0.67.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/docs/0.67.0/user-guide-introduction.html" target="_self">Documentation</a></li><li class=""><a href="/docs/docs/0.67.0/faq-common-problems.html" target="_self">FAQ</a></li><li class=""><a href="/docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Processing Elements</h1></header><article><div><span><p>This page explains some processing elements (not including the full list) that are available in the StreamPipes Starter Kit.
+New Processing Elements can also be included during runtime.
+The once presented on this page come with StreamPipes and cen be used immediately.
+Check the <a href="dev-guide-tutorial-processors">developer guide</a> to learn how new Processing Elements can be implemented and integrated into StreamPipes.</p>
+<h2><a class="anchor" aria-hidden="true" id="data-streams"></a><a href="#data-streams" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data Streams</h2>
+<p><details class="info">
+<summary>Water Level</summary></p>
+<pre><code class="hljs">    Example Event
+      {
+            &quot;underflow&quot;: false,
+            &quot;overflow&quot;: false,
+            &quot;level&quot;: 74.2184,
+            &quot;timestamp&quot;: 1515450274503,
+            &quot;sensorId&quot;: &quot;level01&quot;
+        }
+</code></pre>
+<p></details></p>
+<p><details class="info">
+<summary>Flow Rate</summary></p>
+<pre><code class="hljs">    Example Event:
+        {
+            &quot;mass_flow&quot;:5.344,
+            &quot;temperature&quot;:45.8665,
+            &quot;timestamp&quot;:1515450053387,
+            &quot;sensorId&quot;:&quot;flowrate01&quot;
+        }
+</code></pre>
+<p></details></p>
+<p><details class="info">
+<summary>Pressure Tank</summary></p>
+<pre><code class="hljs">Example Event:
+    {
+        &quot;pressure&quot;: 57.1648,
+        &quot;timestamp&quot;: 1515450424800,
+        &quot;sensorId&quot;: &quot;pressure01&quot;
+    }
+</code></pre>
+<p></details></p>
+<p><details class="info">
+<summary>Vehicle Position</summary>
+Example Event:
+{
+&quot;latitude&quot;: 40.7551,
+&quot;plateNumber&quot;: &quot;level02&quot;,
+&quot;timestamp&quot;: 1515450606449,
+&quot;longitude&quot;: -73.953
+}
+</details></p>
+<h2><a class="anchor" aria-hidden="true" id="processing-elements"></a><a href="#processing-elements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Processing Elements</h2>
+<div class="admonition info">
+<div class="admonition-title">Numerical Filter</div>
+<p>Filters numerical values based on a given threshold</p>
+</div>
+<div class="admonition info">
+<div class="admonition-title">Projection</div>
+<p>Outputs a subset of an incoming event, e.g., if the input event contains both temperature and machineId, only the temperature can be send to the next component</p>
+</div>
+<div class="admonition info">
+<div class="admonition-title">Text Filter</div>
+<p>Filters text-based fields based on a filter condition</p>
+</div>
+<div class="admonition info">
+<div class="admonition-title">Aggregation</div>
+<p> Can be used to aggregate measurements, e.g., to calculate the average temperature during the last 10 minutes</p>
+</div>
+<div class="admonition info">
+<div class="admonition-title">Peak Detection</div>
+<p>This component detects peaks in time series data</p>
+</div>
+<div class="admonition info">
+<div class="admonition-title">Timestamp Enrichment</div>
+<p>Appends the current time to any incoming event</p>
+</div>
+<div class="admonition info">
+<div class="admonition-title">Increase</div>
+<p>Detects the increase of a value over time, e.g., a 10-percent-increase of the temperature within 5 minutes</p>
+</div>
+<div class="admonition info">
+<div class="admonition-title">Co-Occurrence</div>
+<p>Can be used to detect the co-occurrence of two events, e.g., a high temperature occurs together with high dust particle level within 10 minutes
+</p>
+</div>
+<p>...and many more!</p>
+<h2><a class="anchor" aria-hidden="true" id="data-sinks"></a><a href="#data-sinks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data Sinks</h2>
+<div class="admonition info">
+<div class="admonition-title">Notification</div>
+<p>Creates a notification in the ProaSense UI.</p>
+</div>
+<div class="admonition info">
+<div class="admonition-title">Dashboard</div>
+<p>Forwards events to the visualization component</p>
+</div>
+<div class="admonition info">
+<div class="admonition-title">CouchDB</div>
+<p>Stores data in a CouchDB database</p>
+</div>
+<div class="admonition info">
+<div class="admonition-title">Kafka Publisher</div>
+<p>Forwards data to a Kafka cluster</p>
+</div>
+<div class="admonition info">
+<div class="admonition-title">Elasticsearch</div>
+<p>Stores data in an Elasticsearch cluster</p>
+</div>
+<p>...and many more!</p>
+<h2><a class="anchor" aria-hidden="true" id="further-resources"></a><a href="#further-resources" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Further resources</h2>
+<p>Also check the github project <a href="https://www.github.com/streampipes/streampipes-pipeline-elements">https://www.github.com/streampipes/streampipes-pipeline-elements</a> to get an up-to-date list of available pipeline elements.</p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#data-streams">Data Streams</a></li><li><a href="#processing-elements">Processing Elements</a></li><li><a href="#data-sinks">Data Sinks</a></li><li><a href="#further-resources">Further resources</a></li></ul></nav></div><div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/sp-logo-color.png" alt="Apache StreamPipes" width="66"/></a><div><h5>Docs</h5><a href="/docs/docs/user-guide-introduction">User Guide</a><a href="/docs/docs/dev-guide-introduction">Developer Guide</a><a href="/docs/docs/faq-common-problems">Frequently Asked Questions</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/streampipes" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/streampipes" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://github.com/apache/incubator-streampipes" target="_blank" rel="noreferrer noopener">Github</a><a href="https://hub.docker.com/u/streampipes" target="_blank" rel="noreferrer noopener">Docker Hub</a></div><div><h5>More</h5><a href="/docs/blog">Blog</a><a href="https://streampipes.apache.org">Website</a><a href="https://www.apache.org/foundation/policies/privacy.html">Privacy</a><a class="github-button" href="https://github.com/apache/incubator-streampipes" data-icon="octicon-star" data-count-href="/streampipes/streampipes/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2021 The Apache Software Foundation<p style="margin-bottom:0px;margin-left:20px;margin-right:20px">Disclaimer: Apache StreamPipes (incubating) is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.</p></section></footer></div></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '0fedc89dddf2810657708b178e56ef02',
+                indexName: 'streampipes',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
