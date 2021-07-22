@@ -33,7 +33,6 @@ sidebar_label: RabbitMQ Publisher
 ## Description
 
 Forwards events to a RabbitMQ broker
-Add a detailed description here
 
 ***
 

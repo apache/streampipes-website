@@ -1,7 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.enrich
-title: Merge By Enrich
-sidebar_label: Merge By Enrich
+title: Merge Two Streams
+sidebar_label: Merge Two Streams
 ---
 
 <!--

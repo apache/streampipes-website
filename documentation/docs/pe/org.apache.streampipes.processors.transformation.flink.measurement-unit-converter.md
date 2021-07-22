@@ -32,8 +32,7 @@ sidebar_label: Measurement Unit Converter
 
 ## Description
 
-Converts a unit of measurement to another one
-Add a detailed description here
+Converts a unit of measurement to another one.
 
 ***
 

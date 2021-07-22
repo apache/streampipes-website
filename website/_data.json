@@ -73,6 +73,14 @@
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-transformation-jvm"
     },
     {
+      "appId": "org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state",
+      "type": "Data Processor",
+      "name": "Boolean To State",
+      "description": "Transforms boolean properties into a string state property",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-transformation-jvm",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-transformation-jvm"
+    },
+    {
       "appId": "org.apache.streampipes.sinks.brokers.jvm.bufferrest",
       "type": "Data Sink",
       "name": "Buffered REST Publisher",
@@ -151,6 +159,14 @@
       "description": "Creates a JTS Point from Latitude and Longitude values",
       "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-geo-jvm",
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-geo-jvm"
+    },
+    {
+      "appId": "org.apache.streampipes.processors.changedetection.jvm.cusum",
+      "type": "Data Processor",
+      "name": "Cusum",
+      "description": "",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-change-detection-jvm",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-change-detection-jvm"
     },
     {
       "appId": "org.apache.streampipes.sinks.internal.jvm.dashboard",
@@ -273,6 +289,14 @@
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
     },
     {
+      "appId": "org.apache.streampipes.connect.adapters.flic.mqtt",
+      "type": "Adapter",
+      "name": "Flic MQTT",
+      "description": "Connect a Flic Smart Button over MQTT",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
       "appId": "org.apache.streampipes.processors.siddhi.frequency",
       "type": "Data Processor",
       "name": "Frequency Calculation",
@@ -311,6 +335,14 @@
       "description": "Geocodes a placename to a latitude/longitude combination",
       "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-geo-jvm",
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-geo-jvm"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.protocol.stream.httpserver",
+      "type": "Adapter",
+      "name": "HTTP Server",
+      "description": "Receives events from an external application and forwards them to StreamPipes.",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
     },
     {
       "appId": "org.apache.streampipes.protocol.set.http",
@@ -457,12 +489,12 @@
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
     },
     {
-      "appId": "org.apache.streampipes.sinks.brokers.jvm.mqtt",
-      "type": "Data Sink",
-      "name": "MQTT Publisher",
-      "description": "Publishes events to a MQTT topic",
-      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/sinks-brokers-jvm",
-      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-sinks-brokers-jvm"
+      "appId": "org.apache.streampipes.connect.adapters.simulator.machine",
+      "type": "Adapter",
+      "name": "Machine Data Simulator",
+      "description": "Publishes various simulated machine sensor data",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
     },
     {
       "appId": "org.apache.streampipes.processors.enricher.flink.processor.math.mathop",
@@ -491,18 +523,18 @@
     {
       "appId": "org.apache.streampipes.processors.filters.jvm.enrich",
       "type": "Data Processor",
-      "name": "Merge By Enrich",
-      "description": "Merges two event streams by adding properties of one stream to the other",
+      "name": "Merge Two Streams",
+      "description": "One data stream is enriched by the values of the other",
       "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-filters-jvm",
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-filters-jvm"
     },
     {
-      "appId": "org.apache.streampipes.processors.filters.jvm.merge",
-      "type": "Data Processor",
-      "name": "Merge By Time",
-      "description": "Merges two event streams by timestamp",
-      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-filters-jvm",
-      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-filters-jvm"
+      "appId": "org.apache.streampipes.sinks.databases.jvm.mysql",
+      "type": "Data Sink",
+      "name": "MySQL Database",
+      "description": "Stores events in a MySQL database.",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/sinks-databases-jvm",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-sinks-databases-jvm"
     },
     {
       "appId": "org.apache.streampipes.connect.adapters.mysql.set",
@@ -519,6 +551,14 @@
       "description": "Creates a data stream for a SQL table",
       "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
+    },
+    {
+      "appId": "org.apache.streampipes.sinks.brokers.jvm.nats",
+      "type": "Data Sink",
+      "name": "NATS Publisher",
+      "description": "Publish events to NATS broker",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/sinks-brokers-jvm",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-sinks-brokers-jvm"
     },
     {
       "appId": "org.apache.streampipes.connect.adapters.netio.mqtt",
@@ -561,6 +601,14 @@
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-sinks-internal-jvm"
     },
     {
+      "appId": "org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number",
+      "type": "Data Processor",
+      "name": "Number Labeler",
+      "description": "Adds a label based on a  user defined rule to a sensor time-series",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-transformation-jvm",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-transformation-jvm"
+    },
+    {
       "appId": "org.apache.streampipes.processors.filters.jvm.numericalfilter",
       "type": "Data Processor",
       "name": "Numerical Filter",
@@ -572,7 +620,7 @@
       "appId": "org.apache.streampipes.processors.siddhi.numericalfilter",
       "type": "Data Processor",
       "name": "Numerical Filter (Siddhi)",
-      "description": "",
+      "description": "Numerical Filter based on CEP engine Siddhi",
       "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-filters-siddhi",
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-filters-siddhi"
     },
@@ -607,6 +655,14 @@
       "description": "Send Push Message to OneSignal-Application",
       "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/sinks-notifications-jvm",
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-sinks-notifications-jvm"
+    },
+    {
+      "appId": "org.apache.streampipes.connect.adapters.plc4x.modbus",
+      "type": "Adapter",
+      "name": "PLC4X MODBUS",
+      "description": "Connect directly to your MODBUS PLC",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/connect-worker",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
     },
     {
       "appId": "org.apache.streampipes.connect.adapters.plc4x.s7",
@@ -705,6 +761,14 @@
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-connect-adapters"
     },
     {
+      "appId": "org.apache.streampipes.processors.filters.jvm.limit",
+      "type": "Data Processor",
+      "name": "Rate Limit",
+      "description": "This limits the number of events emitted based on a specified criterion such as time or number of events.",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-filters-jvm",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-filters-jvm"
+    },
+    {
       "appId": "org.apache.streampipes.processor.geo.jvm.reversegeocoding",
       "type": "Data Processor",
       "name": "Reverse Geocoder",
@@ -735,6 +799,14 @@
       "description": "Merges events from two event streams, when the top event arrives first and then the bottom event",
       "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-filters-siddhi",
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-filters-siddhi"
+    },
+    {
+      "appId": "org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge",
+      "type": "Data Processor",
+      "name": "Signal Edge Filter",
+      "description": "Forwards the event when a signal edge is detected",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-transformation-jvm",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-transformation-jvm"
     },
     {
       "appId": "org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory",
@@ -789,6 +861,22 @@
       "type": "Data Processor",
       "name": "Split Array",
       "description": "Outputs an event for each entry of a list.",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-transformation-jvm",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-transformation-jvm"
+    },
+    {
+      "appId": "org.apache.streampipes.processors.transformation.jvm.processor.state.buffer",
+      "type": "Data Processor",
+      "name": "State Buffer",
+      "description": "Buffers a sensor values during a state",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-transformation-jvm",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-transformation-jvm"
+    },
+    {
+      "appId": "org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer",
+      "type": "Data Processor",
+      "name": "State Buffer Labeler",
+      "description": "Adds a label based on a  user defined rule to a sensor time-series",
       "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-transformation-jvm",
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-transformation-jvm"
     },
@@ -849,6 +937,22 @@
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-transformation-jvm"
     },
     {
+      "appId": "org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state",
+      "type": "Data Processor",
+      "name": "String To State",
+      "description": "Transforms string properties into a string state property",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-transformation-jvm",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-transformation-jvm"
+    },
+    {
+      "appId": "org.apache.streampipes.processors.filters.jvm.merge",
+      "type": "Data Processor",
+      "name": "Synchronize Two Streams",
+      "description": "Event streams are merged when events occur at the same time",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-filters-jvm",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-filters-jvm"
+    },
+    {
       "appId": "org.apache.streampipes.connect.adapters.ti",
       "type": "Adapter",
       "name": "TI Sensor Tag",
@@ -863,6 +967,14 @@
       "description": "Computes the time difference between two events",
       "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/processors-transformation-jvm",
       "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-processors-transformation-jvm"
+    },
+    {
+      "appId": "org.apache.streampipes.sinks.notifications.jvm.telegram",
+      "type": "Data Sink",
+      "name": "Telegram Publisher",
+      "description": "Publisher to send notifications to a Telegram channel.",
+      "dockerHubLink": "https://hub.docker.com/r/apachestreampipes/sinks-notifications-jvm",
+      "githubLink": "https://github.com/apache/incubator-streampipes-extensions/tree/dev/streampipes-sinks-notifications-jvm"
     },
     {
       "appId": "org.apache.streampipes.processors.filters.jvm.textfilter",

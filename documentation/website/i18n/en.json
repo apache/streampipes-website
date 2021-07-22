@@ -225,6 +225,10 @@
         "title": "Coindesk Bitcoin Price",
         "sidebar_label": "Coindesk Bitcoin Price"
       },
+      "pe/org.apache.streampipes.connect.adapters.flic.mqtt": {
+        "title": "Flic MQTT",
+        "sidebar_label": "Flic MQTT"
+      },
       "pe/org.apache.streampipes.connect.adapters.gdelt": {
         "title": "GDELT",
         "sidebar_label": "GDELT"
@@ -281,6 +285,10 @@
         "title": "OPC UA",
         "sidebar_label": "OPC UA"
       },
+      "pe/org.apache.streampipes.connect.adapters.plc4x.modbus": {
+        "title": "PLC4X MODBUS",
+        "sidebar_label": "PLC4X MODBUS"
+      },
       "pe/org.apache.streampipes.connect.adapters.plc4x.s7": {
         "title": "PLC4X S7",
         "sidebar_label": "PLC4X S7"
@@ -288,6 +296,10 @@
       "pe/org.apache.streampipes.connect.adapters.ros": {
         "title": "ROS Bridge",
         "sidebar_label": "ROS Bridge"
+      },
+      "pe/org.apache.streampipes.connect.adapters.simulator.machine": {
+        "title": "Machine Data Simulator",
+        "sidebar_label": "Machine Data Simulator"
       },
       "pe/org.apache.streampipes.connect.adapters.simulator.randomdataset": {
         "title": "Random Data Simulator (Set)",
@@ -320,6 +332,10 @@
       "pe/org.apache.streampipes.connect.protocol.stream.http": {
         "title": "HTTP Stream",
         "sidebar_label": "HTTP Stream"
+      },
+      "pe/org.apache.streampipes.connect.protocol.stream.httpserver": {
+        "title": "HTTP Server",
+        "sidebar_label": "HTTP Server"
       },
       "pe/org.apache.streampipes.connect.protocol.stream.kafka": {
         "title": "Apache Kafka",
@@ -381,6 +397,10 @@
         "title": "Event Rate",
         "sidebar_label": "Event Rate"
       },
+      "pe/org.apache.streampipes.processors.changedetection.jvm.cusum": {
+        "title": "Cusum",
+        "sidebar_label": "Cusum"
+      },
       "pe/org.apache.streampipes.processors.enricher.flink.processor.math.mathop": {
         "title": "Math",
         "sidebar_label": "Math"
@@ -410,12 +430,16 @@
         "sidebar_label": "Compose"
       },
       "pe/org.apache.streampipes.processors.filters.jvm.enrich": {
-        "title": "Merge By Enrich",
-        "sidebar_label": "Merge By Enrich"
+        "title": "Merge Two Streams",
+        "sidebar_label": "Merge Two Streams"
+      },
+      "pe/org.apache.streampipes.processors.filters.jvm.limit": {
+        "title": "Rate Limit",
+        "sidebar_label": "Rate Limit"
       },
       "pe/org.apache.streampipes.processors.filters.jvm.merge": {
-        "title": "Merge By Time",
-        "sidebar_label": "Merge By Time"
+        "title": "Synchronize Two Streams",
+        "sidebar_label": "Synchronize Two Streams"
       },
       "pe/org.apache.streampipes.processors.filters.jvm.numericalfilter": {
         "title": "Numerical Filter",
@@ -593,6 +617,30 @@
         "title": "Calculate Duration",
         "sidebar_label": "Calculate Duration"
       },
+      "pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge": {
+        "title": "Signal Edge Filter",
+        "sidebar_label": "Signal Edge Filter"
+      },
+      "pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state": {
+        "title": "Boolean To State",
+        "sidebar_label": "Boolean To State"
+      },
+      "pe/org.apache.streampipes.processors.transformation.jvm.processor.state.buffer": {
+        "title": "State Buffer",
+        "sidebar_label": "State Buffer"
+      },
+      "pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer": {
+        "title": "State Buffer Labeler",
+        "sidebar_label": "State Buffer Labeler"
+      },
+      "pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number": {
+        "title": "Number Labeler",
+        "sidebar_label": "Number Labeler"
+      },
+      "pe/org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state": {
+        "title": "String To State",
+        "sidebar_label": "String To State"
+      },
       "pe/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor": {
         "title": "Timestamp Extractor",
         "sidebar_label": "Timestamp Extractor"
@@ -637,9 +685,9 @@
         "title": "Kafka Publisher",
         "sidebar_label": "Kafka Publisher"
       },
-      "pe/org.apache.streampipes.sinks.brokers.jvm.mqtt": {
-        "title": "MQTT Publisher",
-        "sidebar_label": "MQTT Publisher"
+      "pe/org.apache.streampipes.sinks.brokers.jvm.nats": {
+        "title": "NATS Publisher",
+        "sidebar_label": "NATS Publisher"
       },
       "pe/org.apache.streampipes.sinks.brokers.jvm.pulsar": {
         "title": "Pulsar Publisher",
@@ -673,6 +721,10 @@
         "title": "IoTDB",
         "sidebar_label": "IoTDB"
       },
+      "pe/org.apache.streampipes.sinks.databases.jvm.mysql": {
+        "title": "MySQL Database",
+        "sidebar_label": "MySQL Database"
+      },
       "pe/org.apache.streampipes.sinks.databases.jvm.opcua": {
         "title": "OPC-UA",
         "sidebar_label": "OPC-UA"
@@ -704,6 +756,10 @@
       "pe/org.apache.streampipes.sinks.notifications.jvm.slack": {
         "title": "Slack Notification",
         "sidebar_label": "Slack Notification"
+      },
+      "pe/org.apache.streampipes.sinks.notifications.jvm.telegram": {
+        "title": "Telegram Publisher",
+        "sidebar_label": "Telegram Publisher"
       },
       "pipeline-elements": {
         "title": "Overview",

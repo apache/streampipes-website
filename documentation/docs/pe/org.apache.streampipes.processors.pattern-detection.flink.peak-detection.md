@@ -32,8 +32,7 @@ sidebar_label: Peak Detection
 
 ## Description
 
-Detect peaks in time series data
-Add a detailed description here
+Detect peaks in time series data.
 
 ***
 

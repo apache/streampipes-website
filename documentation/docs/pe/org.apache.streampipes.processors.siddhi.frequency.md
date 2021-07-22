@@ -24,9 +24,7 @@ sidebar_label: Frequency Calculation
 
 
 
-<p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.apache.streampipes.processors.siddhi.frequency/icon.png" width="150px;" class="pe-image-documentation"/>
-</p>
+Frequency calculation with Siddhi CEP engine.
 
 ***
 
@@ -38,14 +36,20 @@ Calculates the frequency of the event stream.
 
 ## Required input
 
+Does not have any specific input requirements.
 
 ***
 
 ## Configuration
 
-### 1st parameter
+### Time Unit
 
+The time unit of the window. e.g, hrs, min and sec
 
-### 2nd parameter
+### Time window length 
+
+The time duration of the window in seconds.
 
 ## Output
+
+Outputs the events according to the frequency specified.

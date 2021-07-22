@@ -1,7 +1,7 @@
 ---
-id: org.apache.streampipes.sinks.brokers.jvm.mqtt
-title: MQTT Publisher
-sidebar_label: MQTT Publisher
+id: org.apache.streampipes.processors.transformation.jvm.processor.state.buffer
+title: State Buffer
+sidebar_label: State Buffer
 ---
 
 <!--
@@ -25,37 +25,30 @@ sidebar_label: MQTT Publisher
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.apache.streampipes.sinks.brokers.jvm.mqtt/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/docs/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.processor.state.buffer/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***
 
 ## Description
 
-Publishes events to MQTT.
+Buffers values of a sensor, while state does not change.
+Select a state field in the event. Events are buffered as long as state field does not change. When it changes result event is emitted.
 
 ***
 
 ## Required input
 
-This sink does not have any requirements and works with any incoming event type.
+Define the state and sensor value field
 
-***
+### Timestamp
+A mapping  property for a timestamp field
 
-## Configuration
+### State
+Select the field representing the state 
 
-### MQTT Broker Settings
-
-The basic settings to connect to the broker. 
-The MQTT broker URL indicates the URL of the broker (e.g., localhost), the port indicates the port of the broker
-(e.g., 9092)
-
-
-### MQTT Topic
-
-The topic where events should be sent to.
-
+### Sensor value to cache
+Select the field with the numerical values to buffer
 
 ## Output
-
-(not applicable for data sinks)
+Emits a new event on state change, with the fields `timestamp`, `state`, and a list containing all `sensor values`.

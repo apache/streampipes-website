@@ -59,7 +59,7 @@
                        type = "adapter"
                    }
                 %>
-                    <div id="<%= public._data.pipelineElements[i].appId %>" data-pe="pe" data-type="<%= type %>" data-name="<%= public._data.pipelineElements[i].name %>" class="pe-container-item pe-container-item-<%- type %>">
+                    <div id="<%= public._data.pipelineElements[i].appId %>" data-pe="pe" data-type="<%= type %>" data-name="<%= public._data.pipelineElements[i].name.toLowerCase() %>" class="pe-container-item pe-container-item-<%- type %>">
                         <div class="pe-container-item-header">
                             <div class="pe-container-item-icon pe-container-item-icon-<%- type %> pe-icon-<%- type %>">
                                 <img class="pe-icon" src="/img/pipeline-elements/<%= public._data.pipelineElements[i].appId %>/icon.png">
@@ -126,7 +126,7 @@
         updateSinkSelection($('#sink-checkbox').prop('checked'));
         updateAdapterSelection($('#adapter-checkbox').prop('checked'));
         if (searchText != "") {
-            $('[data-pe]').not('[data-name*=' +searchText +']').hide();
+            $('[data-pe]').not('[data-name*=' +searchText.toLowerCase() +']').hide();
         }
     }
 
