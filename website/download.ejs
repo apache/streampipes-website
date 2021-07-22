@@ -33,23 +33,6 @@
                 </div>
                 <div class="installation-manual-part">
                     <h5 class="feature-item-margin"><span class="feature-highlights-bg">Installation</span></h5>
-                    <h6></h6>
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="linux-tab" data-toggle="tab" href="#linux" role="tab"
-                               aria-controls="home" aria-selected="true">Linux</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="osx-tab" data-toggle="tab" href="#linux" role="tab"
-                               aria-controls="profile" aria-selected="false">Mac OS X</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="windows10-tab" data-toggle="tab" href="#windows10" role="tab"
-                               aria-controls="contact" aria-selected="false">Windows 10</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="linux" role="tabpanel" aria-labelledby="linux-tab">
                             <ul>
                                 <%- partial("partials/_download_box.ejs") %>
                                 <hr/>
@@ -60,18 +43,7 @@
                                 <%- partial("partials/_download_link_to_github.ejs") %>
                                 <hr/>
                             </ul>
-                        </div>
-                        <div class="tab-pane fade" id="windows10" role="tabpanel"
-                             aria-labelledby="windows10-tab-tab">
-                            <ul>
-                                <%- partial("partials/_download_box.ejs") %>
-                                <%- partial("partials/_download_folder_win.ejs") %>
-                                <%- partial("partials/_download_open_browser.ejs") %>
-                                <%- partial("partials/_download_link_to_github.ejs") %>
-                            </ul>
-                        </div>
                     </div>
-
                 </div>
 
 
@@ -97,20 +69,7 @@
                                                     </span>
                                 </div>
                                 <div class="col-md-11 col-9">
-                                    Check the <a href="https://streampipes.apache.org/docs/docs/user-guide-first-steps/"> user guide</a> and learn how to create your first pipeline!
-                                </div>
-                            </div>
-                        </li>
-                        <li class="installation-step">
-                            <div class="row" style="align-items: center;justify-content: center;">
-                                <div class="col-md-1 col-3">
-                                                    <span class="fa-stack fa-2x">
-                                                         <i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-                                                         <i class="fas fa-check fa-stack-1x" style="color:white;"></i>
-                                                    </span>
-                                </div>
-                                <div class="col-md-11 col-9">
-                                    Open the pipeline editor and start the <b>interactive tutorial</b>.
+                                    Check the <a href="https://streampipes.apache.org/docs/docs/try-tutorial.html"> interactive tutorial</a> and learn how to create your first pipeline!
                                 </div>
                             </div>
                         </li>
