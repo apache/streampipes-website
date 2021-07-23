@@ -2,12 +2,28 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://streampipes.apache.org/docs/blog</id>
     <title>Apache StreamPipes Blog</title>
-    <updated>2020-05-27T06:00:00.000Z</updated>
+    <updated>1970-01-01T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://streampipes.apache.org/docs/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Apache StreamPipes news and events.</subtitle>
     <logo>https://streampipes.apache.org/docs/img/sp-logo-color-docs.png</logo>
     <rights>Copyright © 2021 The Apache Software Foundation</rights>
+    <entry>
+        <title type="html"><![CDATA[Apache StreamPipes release 0.68.0]]></title>
+        <id>https://streampipes.apache.org/docs/blog/2021/07/22_release/0680.html</id>
+        <link href="https://streampipes.apache.org/docs/blog/2021/07/22_release/0680.html"/>
+        <updated>1970-01-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">8 minutes to read</div></strong>
+<br></p>
+<p>The Apache StreamPipes (incubating) community is pleased to announce Apache StreamPipes version 0.68.0!
+The latest release brings many improvements related to health management of pipelines and pipeline monitoring, improved user guidance such as a live preview in the pipeline editor and better handling of pipeline updates as well as several new data processors and sinks such as support for NATS.
+In addition, the release contains several bug fixes related to K8s deployment, PLC adapters and pipeline management.</p>
+]]></summary>
+        <author>
+            <name>Dominik Riemer</name>
+            <uri>https://twitter.com/dominikjriemer</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Running StreamPipes the Kubernetes-Way using k3s]]></title>
         <id>https://streampipes.apache.org/docs/blog/2020/05/27/streampipes_on_k3s.html</id>

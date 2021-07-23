@@ -4,7 +4,7 @@
         <title>Apache StreamPipes Blog</title>
         <link>https://streampipes.apache.org/docs/blog</link>
         <description>The best place to stay up-to-date with the latest Apache StreamPipes news and events.</description>
-        <lastBuildDate>Wed, 27 May 2020 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 01 Jan 1970 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
@@ -13,6 +13,18 @@
             <link>https://streampipes.apache.org/docs/blog</link>
         </image>
         <copyright>Copyright © 2021 The Apache Software Foundation</copyright>
+        <item>
+            <title><![CDATA[Apache StreamPipes release 0.68.0]]></title>
+            <link>https://streampipes.apache.org/docs/blog/2021/07/22_release/0680.html</link>
+            <guid>https://streampipes.apache.org/docs/blog/2021/07/22_release/0680.html</guid>
+            <pubDate>Thu, 01 Jan 1970 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">8 minutes to read</div></strong>
+<br></p>
+<p>The Apache StreamPipes (incubating) community is pleased to announce Apache StreamPipes version 0.68.0!
+The latest release brings many improvements related to health management of pipelines and pipeline monitoring, improved user guidance such as a live preview in the pipeline editor and better handling of pipeline updates as well as several new data processors and sinks such as support for NATS.
+In addition, the release contains several bug fixes related to K8s deployment, PLC adapters and pipeline management.</p>
+]]></description>
+        </item>
         <item>
             <title><![CDATA[Running StreamPipes the Kubernetes-Way using k3s]]></title>
             <link>https://streampipes.apache.org/docs/blog/2020/05/27/streampipes_on_k3s.html</link>
