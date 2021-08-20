@@ -22,8 +22,8 @@ We'll create a new project using the provided sinks-standalone-jvm Maven archety
 Enter the following command to create a new project based on the StreamPipes ``Sinks-JVM`` archetype:
 
 ```
-mvn archetype:generate -DarchetypeGroupId=org.streampipes \
--DarchetypeArtifactId=streampipes-archetype-pe-sinks-jvm -DarchetypeVersion=0.67.0 \
+mvn archetype:generate -DarchetypeGroupId=org.apache.streampipes \
+-DarchetypeArtifactId=streampipes-archetype-pe-sinks-jvm -DarchetypeVersion=0.68.0 \
 -DgroupId=org.streampipes.tutorial -DartifactId=sink-tutorial -DclassNamePrefix=Rest -DpackageName=geofencing
 ```
 

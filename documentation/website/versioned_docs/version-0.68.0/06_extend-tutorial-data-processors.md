@@ -32,8 +32,8 @@ To create new projects from scratch, several Maven archetypes exist to start dev
 Enter the following command to create a new project based ongit st the StreamPipes ``Processors-Flink`` archetype:
 
 ```
-mvn archetype:generate -DarchetypeGroupId=org.streampipes \
--DarchetypeArtifactId=streampipes-archetype-pe-processors-flink -DarchetypeVersion=0.67.0 \
+mvn archetype:generate -DarchetypeGroupId=org.apache.streampipes \
+-DarchetypeArtifactId=streampipes-archetype-pe-processors-flink -DarchetypeVersion=0.68.0 \
 -DgroupId=org.streampipes.tutorial -DartifactId=geofence-tutorial -DclassNamePrefix=Geofencing -DpackageName=geofencing
 ```
 

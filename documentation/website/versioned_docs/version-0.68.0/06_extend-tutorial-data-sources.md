@@ -32,8 +32,8 @@ Enter the following command in a command line of your choice (Apache Maven needs
 
 ```
 mvn archetype:generate \
--DarchetypeGroupId=org.streampipes -DarchetypeArtifactId=streampipes-archetype-pe-sources \
--DarchetypeVersion=0.67.0 -DgroupId=my.groupId \
+-DarchetypeGroupId=org.apache.streampipes -DarchetypeArtifactId=streampipes-archetype-pe-sources \
+-DarchetypeVersion=0.68.0 -DgroupId=my.groupId \
 -DartifactId=my-source -DclassNamePrefix=MySource -DpackageName=mypackagename
 ```
 
