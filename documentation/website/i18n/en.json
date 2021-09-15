@@ -93,6 +93,10 @@
         "title": "SDK Guide: Event Model",
         "sidebar_label": "SDK: Event Model"
       },
+      "extend-sdk-migration-service-discovery": {
+        "title": "Migration Guide: New Service Discovery in 0.69.0",
+        "sidebar_label": "Migration Guide: 0.69.0"
+      },
       "extend-sdk-output-strategies": {
         "title": "SDK Guide: Output Strategies",
         "sidebar_label": "SDK: Output Strategies"

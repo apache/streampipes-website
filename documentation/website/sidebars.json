@@ -187,7 +187,8 @@
       "extend-sdk-event-model",
       "extend-sdk-stream-requirements",
       "extend-sdk-static-properties",
-      "extend-sdk-output-strategies"
+      "extend-sdk-output-strategies",
+      "extend-sdk-migration-service-discovery"
     ],
     "\uD83D\uDD27 Technicals": [
       "technicals-architecture",
