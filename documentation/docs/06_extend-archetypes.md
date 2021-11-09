@@ -23,7 +23,7 @@ We use ``groupId``: ``org.example`` and ``artifactId``: ``ExampleProcessor``.
 You can keep the default values for the other settings, confirm them by hitting enter.
 Now, a new folder with the name ``ExampleProcessor`` is generated.
 
-The current {sp.version} is 0.67.0
+The current {sp.version} is 0.69.0 (for a pre-release version, use the SNAPSHOT appendix, e.g. 0.69.0-SNAPSHOT)
 
 ```bash
 mvn archetype:generate                              	 	     \
@@ -91,28 +91,13 @@ public void onEvent(Event event, SpOutputCollector collector) {
 ```
 
 ## Start Processor
-Before the processor can be started, you need to edit the *env* file in the *development* folder.
-Replace all local hosts in this file with the IP address or DNS name of your computer.
-This is relevant to make the mapping between the services running in Docker and your component running in the local IDE.
-After all updates are updated, this file is used by the envfile plugin to provide configuration parameters to the pipeline element.
-Alternatively, environment variables can also be set on your host or IDE.
-Now start the project by clicking on **(Run -> Edit Configuration)**.
-Add a new configuration in the Configuration menu by clicking on the + sign and select **Application**.
-Name the configuration *ExampleProcessor* and select the *Init* class as the 'Main class'.
-Then set *ExampleProcessor* in 'Use classpath of module'.
+Starting from StreamPipes 0.69.0, the IP address of an extensions service (processor, adapter or sink) will be auto-discovered upon start.
+The auto-discovery is done by the StreamPipes service discovery mechanism and should work for most setups.
+Once you start an extensions service, you will see the chosen IP in printed in the console. Make sure that this IP does not point to localhost (127.0.0.1).
+If you see such an IP or the extensions service complains that it cannot resolve the IP, you can manually set the IP address of the extensions service. You can do so by providing an <code>SP_HOST</code> environment variable.
 
 
-As the last step, switch to the tab *EnvFile* and load the env file.
-Click on 'Enable EnvFile' to activate it and add the just edited env file by clicking on the + sign.
-Save all the changes by clicking *Apply*.
-Now you can start the processor.
-
-<div class="my-carousel">
-    <img src="/docs/img/archetype/run_configuration.png" alt="Configuration View">
-    <img src="/docs/img/archetype/run_env_configuration.png" alt="Environment Configuration View">
-</div>
-
-To check if the service is up and running, open the browser on *'localhost:6666'*. The machine-readable description of the processor should be visible as shown below.
+To check if the service is up and running, open the browser on *'localhost:6666'* (or the port defined in the service definition). The machine-readable description of the processor should be visible as shown below.
 
 <img src="/docs/img/archetype/endpoint.png" width="90%" alt="Project Structure">
 

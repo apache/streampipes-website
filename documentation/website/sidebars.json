@@ -15,7 +15,8 @@
       "use-dashboard",
       "use-data-explorer",
       "use-notifications",
-      "use-install-pipeline-elements"
+      "use-install-pipeline-elements",
+      "use-configurations"
     ],
     "\uD83D\uDCDA Pipeline Elements": [
       {
@@ -175,7 +176,8 @@
     "⚡ Deploy StreamPipes": [
       "deploy-docker",
       "deploy-kubernetes",
-      "deploy-use-ssl"
+      "deploy-use-ssl",
+      "deploy-security"
     ],
     "\uD83D\uDCBB Extend StreamPipes": [
       "extend-setup",

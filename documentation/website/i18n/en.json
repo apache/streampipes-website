@@ -77,6 +77,10 @@
         "title": "Kubernetes Deployment",
         "sidebar_label": "Kubernetes Deployment"
       },
+      "deploy-security": {
+        "title": "Security",
+        "sidebar_label": "Security"
+      },
       "deploy-use-ssl": {
         "title": "Use SSL",
         "sidebar_label": "Use SSL"

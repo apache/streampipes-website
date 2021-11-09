@@ -104,7 +104,7 @@ best experience), Firefox or Edge.
                 </span>
             </div>
             <div class="wrapper-instruction">
-                Open your browser, navigate to http://localhost:80 (or the domain name of your server) and finish the setup according to the instructions below.
+                Open your browser, navigate to http://localhost:80 (or the domain name of your server) and log in using the default email <code>admin@streampipes.apache.org</code> and default password <code>admin</code>.
             </div>
         </div>
     </li>
@@ -112,8 +112,8 @@ best experience), Firefox or Edge.
 
 ## Setup StreamPipes
 
-Once you've opened the browser at the URL given above, you should see StreamPipes application as shown below. To set up
-the system, enter an email address and a password and click on install. After the installation has finished, continue by clicking on "Go to login
+Once you've opened the browser at the URL given above, you should see the StreamPipes application as shown below. At initial startup, StreamPipes automatically performs an installation process.
+After the installation has finished, continue by clicking on "Go to login
 page", once all components are successfully configured.
 
 On the login page, enter your credentials, then you should be forwarded to the home page.
@@ -121,8 +121,6 @@ On the login page, enter your credentials, then you should be forwarded to the h
 Congratulations! You've successfully managed to install StreamPipes. Now we're ready to build our first pipeline!
 
 <div class="my-carousel docs-carousel">
-    <img src="/docs/img/01_try-installation/01_register_user.png" alt="Set Up User">
-    <img src="/docs/img/01_try-installation/02_user_set_up.png" alt="SetUp StreamPipes Components">
     <img src="/docs/img/01_try-installation/03_login.png" alt="Go to login page">
     <img src="/docs/img/01_try-installation/04_home.png" alt="Home page">
 </div>
