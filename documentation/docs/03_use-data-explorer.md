@@ -55,7 +55,11 @@ The time series widget allows you to do exploration and analysis for your numeri
 
 #### Image
 
+The image widget enables to integrate and visualize your image data.
+
 #### Indicator
+
+The indiator widget lets you visualize a single numerical value as well as (optionally) the delta to another indicator. You only need to configure the respective properties.
 
 #### 2D Correlation
 
@@ -67,3 +71,4 @@ In the distribution widget, you can quickly get an overview of your data range a
 
 ### Appearance Configuration
 
+Finally, you can change the title of your created widget as well as background and text colors in the appearance configuration. 
