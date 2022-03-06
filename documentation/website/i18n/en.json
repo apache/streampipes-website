@@ -93,6 +93,10 @@
         "title": "StreamPipes CLI",
         "sidebar_label": "StreamPipes CLI"
       },
+      "extend-first-processor": {
+        "title": "Your first data processor",
+        "sidebar_label": "Your first data processor"
+      },
       "extend-sdk-event-model": {
         "title": "SDK Guide: Event Model",
         "sidebar_label": "SDK: Event Model"

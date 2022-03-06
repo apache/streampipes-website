@@ -9,6 +9,10 @@ The StreamPipes command-line interface (CLI) is focused on developers in order t
 * new extensions such as **connect adapters, processors, sinks** or,
 * new core features for **backend** and **ui**.
 
+The main difference between the standard Docker/K8s installation is an improved communication between services running as containers and services running locally for development.
+
+The CLI can be found in the [main repository](https://github.com/apache/incubator-streampipes/tree/master/installer/cli) or in the ``compose/cli`` folder of the downloaded source code.
+
 ## TL;DR
 
 ```bash

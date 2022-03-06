@@ -24,7 +24,7 @@ Instead of starting from scratch, we recommend using our provided maven archetyp
 
 ### Maven archetypes
 
-Create the Maven archetype as described in the [Getting Started](06_extend-archetypes.md) guide.
+Create the Maven archetype as described in the [Maven Archetypes](06_extend-archetypes.md) guide.
 
 ### Examples
 

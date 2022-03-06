@@ -26,25 +26,17 @@ In the following section, we show how to describe this stream in a form that all
 
 ## Project setup
 
-Instead of creating a new project from scratch, we recommend to use the Maven archetype to create a new project skeleton.
+Instead of creating a new project from scratch, we recommend to use the Maven archetype to create a new project skeleton (streampipes-archetype-extensions-jvm).
 Enter the following command in a command line of your choice (Apache Maven needs to be installed):
 
 ```
 mvn archetype:generate \
--DarchetypeGroupId=org.apache.streampipes -DarchetypeArtifactId=streampipes-archetype-pe-sources \
--DarchetypeVersion=0.68.0 -DgroupId=my.groupId \
+-DarchetypeGroupId=org.apache.streampipes -DarchetypeArtifactId=streampipes-archetype-extensions-jvm \
+-DarchetypeVersion=0.69.0 -DgroupId=my.groupId \
 -DartifactId=my-source -DclassNamePrefix=MySource -DpackageName=mypackagename
 ```
 
-Configure the variables ``artifactId`` (which will be the Maven artifactId), ``classNamePrefix`` (which will be the class name of your data stream) and ``packageName``.
-
-For this tutorial, use ``Vehicle`` as ``classNamePrefix``.
-
-Your project will look as follows:
-
-<img src="/docs/img/tutorial-sources/project-structure.PNG" alt="Project Structure">
-
-That's it, go to the next section to learn how to create your first data stream!
+You will see a project structure similar to the structure shown in the [archetypes](06_extend-archetypes.md) section.
 
 <div class="admonition tip">
 <div class="admonition-title">Tip</div>
@@ -55,33 +47,20 @@ That's it, go to the next section to learn how to create your first data stream!
 ## Adding a data stream description
 
 Now we will add a new data stream definition.
-First, open the class `VehicleStream` which should look as follows:
+First, create a new class `MyVehicleStream` which should look as follows:
 
 ```java
 
-package my.groupId.pe.mypackagename;
+package org.apache.streampipes.pe.example;
 
-import org.streampipes.model.SpDataStream;
-import org.streampipes.model.graph.DataSourceDescription;
-import org.streampipes.sdk.builder.DataStreamBuilder;
-import org.streampipes.sdk.helpers.EpProperties;
-import org.streampipes.sdk.helpers.Formats;
-import org.streampipes.sdk.helpers.Protocols;
-import org.streampipes.sources.AbstractAdapterIncludedStream;
+import org.apache.streampipes.model.SpDataStream;
+import org.apache.streampipes.sources.AbstractAdapterIncludedStream;
 
-
-public class MySourceStream extends AbstractAdapterIncludedStream {
+public class MyVehicleStream extends AbstractAdapterIncludedStream {
 
   @Override
-  public SpDataStream declareModel(DataSourceDescription sep) {
-    return DataStreamBuilder.create("my.groupId-mypackagename", "MySource", "")
-            .property(EpProperties.timestampProperty("timestamp"))
-
-            // configure your stream here
-
-            .format(Formats.jsonFormat())
-            .protocol(Protocols.kafka("localhost", 9092, "TOPIC_SHOULD_BE_CHANGED"))
-            .build();
+  public SpDataStream declareModel() {
+    return null;
   }
 
   @Override
@@ -122,17 +101,17 @@ These four _event properties_ compose our _event schema_. An event property must
 
 In order to complete the minimum required specification of an event stream, we need to provide information on the transport format and protocol of the data stream at runtime.
 
-This can be achieved by extending the builder with the respective properties (which should already have been auto-generated):
+This can be achieved by extending the builder with the respective properties:
 ```java
 .format(Formats.jsonFormat())
-.protocol(Protocols.kafka("localhost", 9092, "TOPIC_SHOULD_BE_CHANGED"))
+.protocol(Protocols.kafka("localhost", 9094, "TOPIC_SHOULD_BE_CHANGED"))
 .build();
 ```
 
 Set ``org.streampipes.tutorial.vehicle`` as your new topic by replacing the term ``TOPIC_SHOULD_BE_CHANGED`.
 
 In this example, we defined that the data stream consists of events in a JSON format and that Kafka is used as a message broker to transmit events.
-The last build() method call triggers the construction of the RDF-based data stream definition.
+The last build() method call triggers the construction of the data stream definition.
 
 That's it! In the next section, we will connect the data stream to a source and inspect the generated RDF description.
 
@@ -144,27 +123,24 @@ Let's assume our stream should produce some random values that are sent to Strea
 @Override
   public void executeStream() {
 
-    SpKafkaProducer producer = new SpKafkaProducer("localhost:9092", "TOPIC_SHOULD_BE_CHANGED");
+    SpKafkaProducer producer = new SpKafkaProducer("localhost:9094", "my-topic", Collections.emptyList());
     Random random = new Random();
-    Runnable runnable = new Runnable() {
-      @Override
-      public void run() {
-        for (;;) {
-          JsonObject jsonObject = new JsonObject();
-          jsonObject.addProperty("timestamp", System.currentTimeMillis());
-          jsonObject.addProperty("plateNumber", "KA-FZ 1");
-          jsonObject.addProperty("latitude", random.nextDouble());
-          jsonObject.addProperty("longitude", random.nextDouble());
-
-          producer.publish(jsonObject.toString());
-
-          try {
-            Thread.sleep(1000);
-          } catch (InterruptedException e) {
-            e.printStackTrace();
-          }
-
+    Runnable runnable = () -> {
+      for (;;) {
+        JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty("timestamp", System.currentTimeMillis());
+        jsonObject.addProperty("plateNumber", "KA-FZ 1");
+        jsonObject.addProperty("latitude", random.nextDouble());
+        jsonObject.addProperty("longitude", random.nextDouble());
+    
+        producer.publish(jsonObject.toString());
+    
+        try {
+        TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException e) {
+        e.printStackTrace();
         }
+  
       }
     };
 
@@ -174,108 +150,60 @@ Let's assume our stream should produce some random values that are sent to Strea
 
 Change the topic and the URL of your Kafka broker (as stated in the controller).
 
-## Adding a source description
+## Registering the data stream
 
-A data source can be seen like a container for a set of data streams. Usually, a data source includes events that are logically or physically connected.
-For instance, in our example we would add other streams produced by vehicle sensors (such as fuel consumption) to the same data source description.
+You need to register the stream in the service definition. Open the ``Init`` class and register the ``MyVehicleStream``:
 
-Open the class `DataSource` which should look as follows:
 ```java
 
-package my.groupId.pe.mypackagename;
-
-import org.streampipes.container.declarer.DataStreamDeclarer;
-import org.streampipes.container.declarer.SemanticEventProducerDeclarer;
-import org.streampipes.model.graph.DataSourceDescription;
-import org.streampipes.sdk.builder.DataSourceBuilder;
-
-import java.util.Arrays;
-import java.util.List;
-
-
-public class DataSource implements SemanticEventProducerDeclarer {
-
-  public DataSourceDescription declareModel() {
-    return DataSourceBuilder.create("my.groupId.mypackagename.source", "MySource " +
-        "Source", "")
+  @Override
+  public SpServiceDefinition provideServiceDefinition() {
+    return SpServiceDefinitionBuilder.create("org.apache.streampipes",
+                    "human-readable service name",
+                    "human-readable service description", 8090)
+            .registerPipelineElement(new ExampleDataProcessor())
+            .registerPipelineElement(new ExampleDataSink())
+            .registerPipelineElement(new MyVehicleStream())
+            .registerMessagingFormats(
+                    new JsonDataFormatFactory(),
+                    new CborDataFormatFactory(),
+                    new SmileDataFormatFactory(),
+                    new FstDataFormatFactory())
+            .registerMessagingProtocols(
+                    new SpKafkaProtocolFactory(),
+                    new SpJmsProtocolFactory(),
+                    new SpMqttProtocolFactory())
             .build();
   }
 
-  public List<DataStreamDeclarer> getEventStreams() {
-    return Arrays.asList(new MySourceStream());
-  }
-}
-```
-First, we need to define the source. Similar to data streams, a source consists of an id, a human-readable name and a description.
-Replace the content defined in the `declareModel` method with the following code:
-```java
-return DataSourceBuilder.create("org.streampipes.tutorial.source.vehicle", "Vehicle Source", "A data source that " +
-    "holds event streams produced by vehicles.")
-    .build();
 ```
 
-## Preparing the container
+You can remove the other two example classes if you want.
 
-The final step is to define the deployment type of our new data source. In this tutorial, we will create a so-called `StandaloneModelSubmitter`.
-This client will start an embedded web server that provides the description of our data source.
-
-Go to the class `Init` that implements `StandaloneModelSubmitter`, which should look as follows:
-```java
-package my.groupId.main;
-
-import org.streampipes.container.init.DeclarersSingleton;
-import org.streampipes.container.standalone.init.StandaloneModelSubmitter;
-import my.groupId.config.Config;
-import my.groupId.pe.mypackagename.DataSource;
-
-public class Init extends StandaloneModelSubmitter {
-
-  public static void main(String[] args) throws Exception {
-    DeclarersSingleton.getInstance()
-            .add(new DataSource());
-
-    new Init().init(Config.INSTANCE);
-
-  }
-}
-```
-This code adds the `VehicleSource`. Finally, the `init` method is called
-which triggers the generation of the corresponding RDF description and startup of the web server.
-
-<div class="admonition info">
-<div class="admonition-title">Info</div>
-<p>In the example above, we make use of a class `Config`.
-       This class contains both mandatory and additional configuration parameters required by a pipeline element container.
-       These values are stored in the Consul-based key-value store of your StreamPipes installation.
-       The SDK guide contains a detailed manual on managing container configurations.</p>
-</div>
-
-## Starting the container
+## Starting the service
 
 <div class="admonition tip">
 <div class="admonition-title">Tip</div>
-<p>By default, the container registers itself using the hostname later used by the Docker container, leading to a 404 error when you try to access an RDF description.
-       For local development, we provide an environment file in the ``development`` folder. You can add your hostname here, which will override settings from the Config class.
-       For instance, use the IntelliJ ``EnvFile`` plugin to automatically provide the environment variables upon start.
+<p>Once you start the service, it will register in StreamPipes with the hostname. The hostname will be auto-discovered and should work out-of-the-box.
+In some cases, the detected hostname is not resolvable from within a container (where the core is running). In this case, provide a SP_HOST environment variable to override the auto-discovery.
 </p>
 </div>
 
 Now we are ready to start our first container!
 
-Execute the main method in the class `Main` we've just created, open a web browser and navigate to http://localhost:8090, or change the port according to the value of the ``SP_PORT`` variable in the env file.
+Execute the main method in the class `Init`, open a web browser and navigate to http://localhost:8090, or change the port according to the value of the ``SP_PORT`` variable in the env file.
 
 You should see something as follows:
 
 <img src="/docs/img/tutorial-sources/pe-overview.PNG" alt="Pipeline Element Container Overview">
 
-Click on the link of the data source to see the RDF description of the pipeline element.
+Click on the link of the data source to see the generated description of the pipeline element.
 
-<img src="/docs/img/tutorial-sources/pe-rdf.PNG" alt="Pipeline Element RDF description">
+<img src="/docs/img/tutorial-sources/pe-rdf.PNG" alt="Pipeline Element description">
 
-The container automatically registers itself in the Consul installation of StreamPipes.
+The container automatically registers itself in StreamPipes.
 
-To install the just created element, open the StreamPipes UI and follow the manual provided in the [user guide](../user
--guide-introduction).
+To install the just created element, open the StreamPipes UI and install the source over the ``Install Pipeline Elements`` section.
 
 ## Read more
 

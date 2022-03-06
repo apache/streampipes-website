@@ -183,6 +183,7 @@
       "extend-setup",
       "extend-cli",
       "extend-archetypes",
+      "extend-first-processor",
       "extend-tutorial-data-sources",
       "extend-tutorial-data-processors",
       "extend-tutorial-data-sinks",
