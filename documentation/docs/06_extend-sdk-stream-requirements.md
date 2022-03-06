@@ -19,7 +19,7 @@ This guide covers the creation of stream requirements. Before reading this secti
 
 ## The StreamRequirementsBuilder
 
-Stream requirements can be defined in the ``Controller`` class of the pipeline element. Start with a method body like this:
+Stream requirements can be defined in the ``declareModel`` method of the pipeline element class. Start with a method body like this:
 
 ```java
 

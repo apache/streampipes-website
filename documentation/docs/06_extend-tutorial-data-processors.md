@@ -4,10 +4,9 @@ title: Tutorial: Data Processors
 sidebar_label: Tutorial: Data Processors
 ---
 
-In this tutorial, we will add a new data processor using the Apache Flink wrapper.
+In this tutorial, we will add a new data processor using the standalone wrapper.
 
-From an architectural point of view, we will create a self-contained service that includes the description of the data processor and a Flink-compatible implementation.
-Once a pipeline is started that uses this data processor, the implementation is submitted to an Apache Flink cluster.
+From an architectural point of view, we will create a self-contained service that includes the description of the data processor and a an implementation.
 
 ## Objective
 
@@ -21,25 +20,23 @@ The algorithm outputs every location event once the position has entered the geo
 <div class="admonition-title">Note</div>
 <p>The implementation in this tutorial is pretty simple - our processor will fire an event every time the GPS location is inside the geofence.
        In a real-world application, you would probably want to define a pattern that recognizes the _first_ event a vehicle enters the geofence.<br/>
-       This can be easily done using a CEP library, e.g., Apache Flink CEP.</p>
+       This can be easily done using a CEP library.</p>
 </div>
 
 
 ## Project setup
 
-To create new projects from scratch, several Maven archetypes exist to start developing.
-Enter the following command to create a new project based on the StreamPipes ``Processors-Flink`` archetype:
+Instead of creating a new project from scratch, we recommend to use the Maven archetype to create a new project skeleton (streampipes-archetype-extensions-jvm).
+Enter the following command in a command line of your choice (Apache Maven needs to be installed):
 
 ```
-mvn archetype:generate -DarchetypeGroupId=org.apache.streampipes \
--DarchetypeArtifactId=streampipes-archetype-pe-processors-flink -DarchetypeVersion=0.68.0 \
--DgroupId=org.streampipes.tutorial -DartifactId=geofence-tutorial -DclassNamePrefix=Geofencing -DpackageName=geofencing
+mvn archetype:generate \
+-DarchetypeGroupId=org.apache.streampipes -DarchetypeArtifactId=streampipes-archetype-extensions-jvm \
+-DarchetypeVersion=0.69.0 -DgroupId=my.groupId \
+-DartifactId=my-example -DclassNamePrefix=MyExample -DpackageName=mypackagename
 ```
 
-Once you've imported the generated project, the project structure should look as follows:
-
-<img src="/docs/img/tutorial-processors/project-structure-processor.PNG" alt="Project Structure Data Processor">
-
+You will see a project structure similar to the structure shown in the [archetypes](06_extend-archetypes.md) section.
 
 <div class="admonition tip">
 <div class="admonition-title">Tip</div>
@@ -51,65 +48,68 @@ Now you're ready to create your first data processor for StreamPipes!
 ## Adding data processor requirements
 
 First, we will add a new stream requirement.
-Open the class `GeofencingController` which should look as follows:
+Create a new class `GeofencingProcessor` which should look as follows:
 
 ```java
-package org.streampipes.tutorial.pe.processor.geofencing;
+package org.apache.streampipes.pe.example;
 
-import org.streampipes.tutorial.config.Config;
+import org.apache.streampipes.commons.exceptions.SpRuntimeException;
+import org.apache.streampipes.model.DataProcessorType;
+import org.apache.streampipes.model.graph.DataProcessorDescription;
+import org.apache.streampipes.model.runtime.Event;
+import org.apache.streampipes.sdk.builder.ProcessingElementBuilder;
+import org.apache.streampipes.sdk.builder.StreamRequirementsBuilder;
+import org.apache.streampipes.sdk.helpers.EpRequirements;
+import org.apache.streampipes.sdk.helpers.Labels;
+import org.apache.streampipes.sdk.helpers.Locales;
+import org.apache.streampipes.sdk.helpers.OutputStrategies;
+import org.apache.streampipes.sdk.utils.Assets;
+import org.apache.streampipes.wrapper.context.EventProcessorRuntimeContext;
+import org.apache.streampipes.wrapper.routing.SpOutputCollector;
+import org.apache.streampipes.wrapper.standalone.ProcessorParams;
+import org.apache.streampipes.wrapper.standalone.StreamPipesDataProcessor;
 
-import org.streampipes.model.DataProcessorType;
-import org.streampipes.model.graph.DataProcessorDescription;
-import org.streampipes.model.graph.DataProcessorInvocation;
-import org.streampipes.sdk.builder.ProcessingElementBuilder;
-import org.streampipes.sdk.builder.StreamRequirementsBuilder;
-import org.streampipes.sdk.extractor.ProcessingElementParameterExtractor;
-import org.streampipes.sdk.helpers.EpRequirements;
-import org.streampipes.sdk.helpers.Labels;
-import org.streampipes.sdk.helpers.OutputStrategies;
-import org.streampipes.sdk.helpers.SupportedFormats;
-import org.streampipes.sdk.helpers.SupportedProtocols;
-import org.streampipes.wrapper.flink.FlinkDataProcessorDeclarer;
-import org.streampipes.wrapper.flink.FlinkDataProcessorRuntime;
+public class GeofencingProcessor extends StreamPipesDataProcessor {
 
-public class GeofencingController extends
-				FlinkDataProcessorDeclarer<GeofencingParameters> {
+ private static final String EXAMPLE_KEY = "example-key";
 
-	private static final String EXAMPLE_KEY = "example-key";
+ @Override
+ public DataProcessorDescription declareModel() {
+  return ProcessingElementBuilder.create("org.streampipes.tutorial-geofencing")
+          .category(DataProcessorType.ENRICH)
+          .withAssets(Assets.DOCUMENTATION, Assets.ICON)
+          .withLocales(Locales.EN)
+          .requiredStream(StreamRequirementsBuilder
+                  .create()
+                  .requiredProperty(EpRequirements.anyProperty())
+                  .build())
+          .outputStrategy(OutputStrategies.keep())
+          .requiredTextParameter(Labels.from(EXAMPLE_KEY, "Example Text Parameter", "Example " +
+                  "Text Parameter Description"))
+          .build();
+ }
 
-	@Override
-	public DataProcessorDescription declareModel() {
-		return ProcessingElementBuilder.create("org.streampipes.tutorial-geofencing")
-						.category(DataProcessorType.ENRICH)
-                        .withAssets(Assets.DOCUMENTATION, Assets.ICON)
-						.withLocales(Locales.EN)
-						.requiredStream(StreamRequirementsBuilder
-							.create()
-							.requiredProperty(EpRequirements.anyProperty())
-							.build())
-						.outputStrategy(OutputStrategies.keep())
-						.requiredTextParameter(Labels.from(EXAMPLE_KEY, "Example Text Parameter", "Example " +
-				"Text Parameter Description"))
-						.build();
-	}
+ @Override
+ public void onInvocation(ProcessorParams parameters, SpOutputCollector spOutputCollector, EventProcessorRuntimeContext runtimeContext) throws SpRuntimeException {
 
-	@Override
-	public FlinkDataProcessorRuntime<GeofencingParameters> getRuntime(DataProcessorInvocation
-				graph, ProcessingElementParameterExtractor extractor) {
+ }
 
-		String exampleString = extractor.singleValueParameter(EXAMPLE_KEY, String.class);
+ @Override
+ public void onEvent(Event event, SpOutputCollector collector) throws SpRuntimeException {
 
-		GeofencingParameters params = new GeofencingParameters(graph, exampleString);
+ }
 
-		return new GeofencingProgram(params, Config.INSTANCE.getDebug());
-	}
+ @Override
+ public void onDetach() throws SpRuntimeException {
 
+ }
 }
+
 
 ```
 
-In this class, we need to implement two methods: The `declareModel` method is used to define abstract stream requirements such as event properties that must be present in any input stream that is later connected to the element using the StreamPipes UI.
-The second method, `getRuntime` is used to create and deploy the parameterized Flink program once a pipeline using this element is started.
+In this class, we need to implement three methods: The `declareModel` method is used to define abstract stream requirements such as event properties that must be present in any input stream that is later connected to the element using the StreamPipes UI.
+The second method, `onInvocation` is triggered once a pipeline is started. Finally, the `onEvent` method
 
 Similar to data sources, the SDK provides a builder class to generate the description for data processors.
 Delete the content within the ``declareModel`` method and add the following lines to the `declareModel` method:

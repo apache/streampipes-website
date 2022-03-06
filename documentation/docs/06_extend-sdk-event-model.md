@@ -6,9 +6,9 @@ sidebar_label: SDK: Event Model
 
 ## Introduction
 
-The 0.61.0 release of StreamPipes introduces a new event model that replaces the ``Map`` representation of events at runtime. This guide explains the usage of the new event model to manipulate runtime events for data processors and data sink.
+This guide explains the usage of the event model to manipulate runtime events for data processors and data sink.
 
-## Reference
+## Prerequisites
 
 This guide assumes that you are already familiar with the basic setup of [data processors](dev-guide-processor-sdk.md) and [data sinks](dev-guide-sink-sdk.md).
 
