@@ -87,7 +87,7 @@ best experience), Firefox or Edge.
               </span>
           </div>
           <div class="wrapper-instruction">
-             <div style="margin-bottom:5px;">In a command prompt, open the folder <code>compose</code> and run <code>docker-compose up -d</code>.
+             <div style="margin-bottom:5px;">In a command prompt, open the folder <code>installer/compose</code> and run <code>docker-compose up -d</code>.
                 <div class="row" style="margin-top:10px;">              
                     <div class="alert alert-info" role="alert">The folder contains two docker-compose files: The standard file contains the so-called <i>lite</i> installation, which includes less pipeline elements, but also requires for less performant hardware. The <i>full</i> version includes also the Apache Flink wrapper and more pipeline elements, but requires for more memory. See the Github <a href="https://github.com/apache/incubator-streampipes-installer/tree/master/compose">README</a> for complete usage instructions.</div>
             </div>
