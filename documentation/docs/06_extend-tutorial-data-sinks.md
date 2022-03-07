@@ -18,19 +18,16 @@ To setup your own endpoint, go to [https://requestbin.com/](https://requestbin.c
 
 ## Project setup
 
-We'll create a new project using the provided sinks-standalone-jvm Maven archetype.
-Enter the following command to create a new project based on the StreamPipes ``Sinks-JVM`` archetype:
+Instead of creating a new project from scratch, we recommend to use the Maven archetype to create a new project skeleton (streampipes-archetype-extensions-jvm).
+Enter the following command in a command line of your choice (Apache Maven needs to be installed):
 
 ```
 mvn archetype:generate -DarchetypeGroupId=org.apache.streampipes \
--DarchetypeArtifactId=streampipes-archetype-pe-sinks-jvm -DarchetypeVersion=0.68.0 \
--DgroupId=org.streampipes.tutorial -DartifactId=sink-tutorial -DclassNamePrefix=Rest -DpackageName=geofencing
+-DarchetypeArtifactId=streampipes-archetype-extensions-jvm -DarchetypeVersion=0.68.0 \
+-DgroupId=org.streampipes.tutorial -DartifactId=sink-tutorial -DclassNamePrefix=Rest -DpackageName=mypackage
 ```
 
-Once you've imported the generated project, the project structure should look as follows:
-
-<img src="/docs/img/tutorial-sinks/project-structure-sinks.png" alt="Project Structure Data Sink">
-
+You will see a project structure similar to the structure shown in the [archetypes](06_extend-archetypes.md) section.
 
 <div class="admonition tip">
 <div class="admonition-title">Tip</div>
@@ -42,60 +39,63 @@ Now you're ready to create your first data sink for StreamPipes!
 ## Adding data sink requirements
 
 First, we will add a new stream requirement.
-Open the class `RestController` which should look as follows:
+Create a class `RestSink` which should look as follows:
 
 ```java
-package org.streampipes.tutorial.pe.sink.rest;
+package org.apache.streampipes.pe.example;
 
-import org.streampipes.model.DataSinkType;
-import org.streampipes.model.graph.DataSinkDescription;
-import org.streampipes.model.graph.DataSinkInvocation;
-import org.streampipes.sdk.builder.DataSinkBuilder;
-import org.streampipes.sdk.builder.StreamRequirementsBuilder;
-import org.streampipes.sdk.extractor.DataSinkParameterExtractor;
-import org.streampipes.sdk.helpers.EpRequirements;
-import org.streampipes.sdk.helpers.Labels;
-import org.streampipes.sdk.helpers.SupportedFormats;
-import org.streampipes.sdk.helpers.SupportedProtocols;
-import org.streampipes.wrapper.standalone.ConfiguredEventSink;
-import org.streampipes.wrapper.standalone.declarer.StandaloneEventSinkDeclarer;
-import org.streampipes.sdk.helpers.*;
-import org.streampipes.sdk.utils.Assets;
+import org.apache.streampipes.commons.exceptions.SpRuntimeException;
+import org.apache.streampipes.model.DataSinkType;
+import org.apache.streampipes.model.graph.DataSinkDescription;
+import org.apache.streampipes.model.runtime.Event;
+import org.apache.streampipes.model.schema.PropertyScope;
+import org.apache.streampipes.sdk.builder.DataSinkBuilder;
+import org.apache.streampipes.sdk.builder.StreamRequirementsBuilder;
+import org.apache.streampipes.sdk.helpers.EpRequirements;
+import org.apache.streampipes.sdk.helpers.Labels;
+import org.apache.streampipes.sdk.helpers.Locales;
+import org.apache.streampipes.sdk.utils.Assets;
+import org.apache.streampipes.wrapper.context.EventSinkRuntimeContext;
+import org.apache.streampipes.wrapper.standalone.SinkParams;
+import org.apache.streampipes.wrapper.standalone.StreamPipesDataSink;
 
-public class RestController extends StandaloneEventSinkDeclarer<RestParameters> {
+public class RestSink extends StreamPipesDataSink {
 
-	private static final String EXAMPLE_KEY = "example-key";
+  @Override
+  public DataSinkDescription declareModel() {
+    return DataSinkBuilder.create("org.streampipes.tutorial.pe.sink.rest")
+        .category(DataSinkType.NOTIFICATION)
+        .withAssets(Assets.DOCUMENTATION, Assets.ICON)
+        .withLocales(Locales.EN)
+        .requiredStream(StreamRequirementsBuilder
+                .create()
+                .requiredPropertyWithNaryMapping(EpRequirements.anyProperty(), Labels.withId(
+                        "fields-to-send"), PropertyScope.NONE)
+                .build())
+        .build();
+  }
 
-	@Override
-	public DataSinkDescription declareModel() {
-		return DataSinkBuilder.create("org.streampipes.tutorial.pe.sink.rest")
-						.category(DataSinkType.NOTIFICATION)
-						.withAssets(Assets.DOCUMENTATION, Assets.ICON)
-						.withLocales(Locales.EN)
-						.requiredStream(StreamRequirementsBuilder
-                                            .create()
-                                            .requiredPropertyWithNaryMapping(EpRequirements.anyProperty(), Labels.withId(
-                                                    "fields-to-send"), PropertyScope.NONE)
-                                            .build())
-						.build();
-	}
+  @Override
+  public void onInvocation(SinkParams parameters, EventSinkRuntimeContext runtimeContext) throws SpRuntimeException {
 
-	@Override
-	public ConfiguredEventSink<RestParameters> onInvocation(DataSinkInvocation graph, DataSinkParameterExtractor extractor) {
+  }
 
-		 List<String> fieldsToSend = extractor.mappingPropertyValues("fields-to-send");
-        
-         RestParameters params = new RestParameters(graph, fieldsToSend);
+  @Override
+  public void onEvent(Event event) throws SpRuntimeException {
 
-		return new ConfiguredEventSink<>(params, Rest::new);
-	}
+  }
 
+  @Override
+  public void onDetach() throws SpRuntimeException {
+
+  }
 }
+
 
 ```
 
-In this class, we need to implement two methods: The `declareModel` method is used to define abstract stream requirements such as event properties that must be present in any input stream that is later connected to the element using the StreamPipes UI.
-The second method, `onInvocation` is used to create and deploy program once a pipeline using this sink is started.
+In this class, we need to implement three methods: The `declareModel` method is used to define abstract stream requirements such as event properties that must be present in any input stream that is later connected to the element using the StreamPipes UI.
+The second method, `onInvocation` is called once a pipeline using this sink is started. The third method, `onEvent`, is called for every incoming event.
 
 The ``declareModel`` method describes the properties of our data sink:
 * ``category`` defines a category for this sink.
@@ -108,53 +108,66 @@ In this example, we simply extract the fields selected by users that should be f
 
 ## Pipeline element invocation
 
-Once users start a pipeline that uses our geofencing component, the _getRuntime_ method in our class is called. The class `DataSinkInovcation` includes a graph that contains information on the configuration parameters a users has selected in the pipeline editor and information on the acutal streams that are connected to the pipeline element.
+Once users start a pipeline that uses our geofencing component, the _onInvocation_ method in our class is called. The class `SinkParams` includes a graph that contains information on the configuration parameters a users has selected in the pipeline editor and information on the acutal streams that are connected to the pipeline element.
 
-Before we explain in more detail how to extract these values from the processor invocation, we need to adapt a little helper class.
-Open the file ```RestParameters``` and modify it as follows:
-
-```java
-public class RestParameters extends EventSinkBindingParams {
-
-  private List<String> fieldsToSend;
-
-  public RestParameters(DataSinkInvocation graph, List<String> fieldsToSend) {
-    super(graph);
-    this.fieldsToSend = fieldsToSend;
-  }
-
-  public List<String> getFieldsToSend() {
-    return fieldsToSend;
-  }
-}
-```
-
-This file will later provide information on the configured pipeline element.
 
 ## Adding an implementation
 
-Now open the class ``Rest`` to add the proper implementation (i.e., the Rest call executed for every incoming event).
+Now we'll add a proper implementation (i.e., the Rest call executed for every incoming event) to the following methods:
 
 Our final class should look as follows:
 
 ```java
-private static Logger LOG = LoggerFactory.getLogger(Rest.class.getCanonicalName());
+package org.apache.streampipes.pe.example;
+
+import com.google.common.base.Charsets;
+import org.apache.http.client.fluent.Request;
+import org.apache.http.entity.StringEntity;
+import org.apache.streampipes.commons.exceptions.SpRuntimeException;
+import org.apache.streampipes.dataformat.SpDataFormatDefinition;
+import org.apache.streampipes.dataformat.json.JsonDataFormatDefinition;
+import org.apache.streampipes.model.DataSinkType;
+import org.apache.streampipes.model.graph.DataSinkDescription;
+import org.apache.streampipes.model.runtime.Event;
+import org.apache.streampipes.model.schema.PropertyScope;
+import org.apache.streampipes.sdk.builder.DataSinkBuilder;
+import org.apache.streampipes.sdk.builder.StreamRequirementsBuilder;
+import org.apache.streampipes.sdk.helpers.EpRequirements;
+import org.apache.streampipes.sdk.helpers.Labels;
+import org.apache.streampipes.sdk.helpers.Locales;
+import org.apache.streampipes.sdk.utils.Assets;
+import org.apache.streampipes.wrapper.context.EventSinkRuntimeContext;
+import org.apache.streampipes.wrapper.standalone.SinkParams;
+import org.apache.streampipes.wrapper.standalone.StreamPipesDataSink;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
+
+public class RestSink extends StreamPipesDataSink {
+
+  private static final Logger LOG = LoggerFactory.getLogger(RestSink.class);
 
   private static final String REST_ENDPOINT_URI = YOUR_REQUEST_BIN_URL;
   private List<String> fieldsToSend;
   private SpDataFormatDefinition dataFormatDefinition;
 
-  public Rest() {
+  @Override
+  public DataSinkDescription declareModel() {
+    ...
+  }
+
+  @Override
+  public void onInvocation(SinkParams parameters, EventSinkRuntimeContext runtimeContext) throws SpRuntimeException {
     this.dataFormatDefinition = new JsonDataFormatDefinition();
+    this.fieldsToSend = parameters.extractor().mappingPropertyValues("fields-to-send");
+
   }
 
   @Override
-  public void onInvocation(RestParameters parameters, EventSinkRuntimeContext runtimeContext) {
-    this.fieldsToSend = parameters.getFieldsToSend();
-  }
-
-  @Override
-  public void onEvent(Event event) {
+  public void onEvent(Event event) throws SpRuntimeException {
     Map<String, Object> outEventMap = event.getSubset(fieldsToSend).getRaw();
     try {
       String json = new String(dataFormatDefinition.fromMap(outEventMap));
@@ -167,78 +180,48 @@ private static Logger LOG = LoggerFactory.getLogger(Rest.class.getCanonicalName(
   }
 
   @Override
-  public void onDetach() {
+  public void onDetach() throws SpRuntimeException {
 
   }
+}
+
 ```
 The only class variable you need to change right now is the REST_ENDPOINT_URL. Change this url to the URL provided by your request bin.
-We'll ignore the other class variables and the constructor for now. Important are three methods, ``onInvocation``, ``onEvent`` and ``onDetach``.
-
-The ``onInvocation`` method is called once a pipeline containing our REST data sink is started. The ``onEvent`` method is called for each incoming event. Finally, ``onDetach`` is called when a pipeline is stopped.
-
-In the ``onInvocation`` method, we can extract the selected fields to be forwarded to the REST endpoint.
 In the ``ònEvent`` method, we use a helper method to get a subset of the incoming event.
 Finally, we convert the resulting ``Map`` to a JSON string and call the endpoint.
 
 
-## Preparing the container
-The final step is to define the deployment type of our new data source. In this tutorial, we will create a so-called `StandaloneModelSubmitter`.
-This client will start an embedded web server that provides the description of our data source and automatically starts the program in an embedded container.
+## Preparing the service
+The final step is to register the sink as a pipeline element.
 
-Go to the class `Init` that extends `StandaloneModelSubmitter` and should look as follows:
+Go to the class `Init` and register the sink:
 ```java
-
-public static void main(String[] args) throws Exception {
-    DeclarersSingleton.getInstance()
-            .add(new RestController());
-
-    DeclarersSingleton.getInstance().setPort(Config.INSTANCE.getPort());
-    DeclarersSingleton.getInstance().setHostName(Config.INSTANCE.getHost());
-
-    DeclarersSingleton.getInstance().registerDataFormats(new JsonDataFormatFactory(),
-            new CborDataFormatFactory(),
-            new SmileDataFormatFactory(),
-            new FstDataFormatFactory());
-
-    DeclarersSingleton.getInstance().registerProtocols(new SpKafkaProtocolFactory(),
-            new SpJmsProtocolFactory());
-
-    new Init().init(Config.INSTANCE);
+.registerPipelineElement(new RestSink())
 ```
 
-<div class="admonition info">
-<div class="admonition-title">Info</div>
-<p>In the example above, we make use of a class `Config`.
-       This class contains both mandatory and additional configuration parameters required by a pipeline element container.
-       These values are stored in the Consul-based key-value store of your StreamPipes installation.
-       The SDK guide contains a detailed manual on managing container configurations.
-</p>
-</div>
-
-## Starting the container
+## Starting the service
 <div class="admonition tip">
 <div class="admonition-title">Tip</div>
-<p>By default, the container registers itself using the hostname later used by the Docker container, leading to a 404 error when you try to access an RDF description.
-       For local development, we provide an environment file in the ``development`` folder. You can add your hostname here, which will override settings from the Config class.
-       For instance, use the IntelliJ ``EnvFile`` plugin to automatically provide the environment variables upon start.
+<p>Once you start the service, it will register in StreamPipes with the hostname. The hostname will be auto-discovered and should work out-of-the-box.
+In some cases, the detected hostname is not resolvable from within a container (where the core is running). In this case, provide a SP_HOST environment variable to override the auto-discovery.
 </p>
 </div>
 
 
 <div class="admonition tip">
 <div class="admonition-title">Tip</div>
-<p> The default port of all pipeline element containers as defined in the `Config` file is port 8090.
-       If you'd like to run mutliple containers at the same time on your development machine, change the port in the environment file.
+<p> The default port of all pipeline element services as defined in the `create` method is port 8090.
+       If you'd like to run multiple services at the same time on your development machine, change the port here. As an alternative, you can also provide an env variable `SP_PORT` which overrides the port settings. This is useful to use different configs for dev and prod environments.
 </p>
 </div>
 
-Now we are ready to start our container!
+Now we are ready to start our service!
 
-Execute the main method in the class `Main` we've just created.
+Execute the main method in the class `Init` we've just created, open a web browser and navigate to http://localhost:8090 (or the port you have assigned).
 
-The container automatically registers itself in the Consul installation of StreamPipes.
+The services automatically registers itself in StreamPipes.
 
-To install the just created element, open the StreamPipes UI and follow the manual provided in the [user guide](03_use-install-pipeline-elements.md).
+To install the created element, open the StreamPipes UI and follow the manual provided in the [user guide](03_use-install-pipeline-elements.md).
 
 ## Read more
 

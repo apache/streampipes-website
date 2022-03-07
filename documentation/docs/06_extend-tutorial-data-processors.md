@@ -71,21 +71,14 @@ import org.apache.streampipes.wrapper.standalone.StreamPipesDataProcessor;
 
 public class GeofencingProcessor extends StreamPipesDataProcessor {
 
- private static final String EXAMPLE_KEY = "example-key";
+ private static final String LATITUDE_CENTER = "latitude-center";
+ private static final String LONGITUDE_CENTER = "longitude-center";
 
  @Override
  public DataProcessorDescription declareModel() {
   return ProcessingElementBuilder.create("org.streampipes.tutorial-geofencing")
           .category(DataProcessorType.ENRICH)
           .withAssets(Assets.DOCUMENTATION, Assets.ICON)
-          .withLocales(Locales.EN)
-          .requiredStream(StreamRequirementsBuilder
-                  .create()
-                  .requiredProperty(EpRequirements.anyProperty())
-                  .build())
-          .outputStrategy(OutputStrategies.keep())
-          .requiredTextParameter(Labels.from(EXAMPLE_KEY, "Example Text Parameter", "Example " +
-                  "Text Parameter Description"))
           .build();
  }
 
@@ -115,8 +108,7 @@ Similar to data sources, the SDK provides a builder class to generate the descri
 Delete the content within the ``declareModel`` method and add the following lines to the `declareModel` method:
 
 ```java
-return ProcessingElementBuilder.create("org.streampipes.tutorial.geofencing", "Geofencing", "A simple geofencing data processor " +
-            "using the Apache Flink wrapper")
+return ProcessingElementBuilder.create("org.streampipes.tutorial.geofencing", "Geofencing", "A simple geofencing data processor")
 ```
 
 This creates a new data processor with the ID, title and description assigned to the element builder.
@@ -159,31 +151,14 @@ In the StreamPipes UI, a required text parameter is rendered as a text input fie
 Such user-defined parameters are called _static properties_. There are many different types of static properties (see
  the [Processor SDK](06_extend-sdk-static-properties.md) for an overview).
 
-One example are _DomainProperties_ we use for defining the center of the geofence.
-Our data processor requires a lat/lng pair that marks the center of the geofence.
-However, letting users directly input latitude and longitude coordinates wouldn't be very user-friendly.
-Therefore, we can link required text parameters to _ontology concepts_. By understanding the required input, the StreamPipes UI is able to determine which user interface works best for a specific concept.
+In this example, we'll further add two very simple input fields to let users provide latitude and longitude of the geofence center.
 
 Add the following line to the `declareModel` method:
 
 ```java
-.requiredOntologyConcept(Labels.from("location", "Geofence Center", "Provide the coordinate of the " +
-    "geofence center"), OntologyProperties.mandatory(Geo.lat), OntologyProperties.mandatory(Geo.lng))
+   .requiredFloatParameter(Labels.from(LATITUDE_KEY, "Latitude", "The latitude value"))
+   .requiredFloatParameter(Labels.from(LONGITUDE_KEY, "Longitude", "The longitude value"))
 
-```
-
-We've now defined that we would like to receive an instance that provides a latitude and a longitude coordinate.
-Users can input these values either manually, or they can look up _domain knowledge_, i.e., knowledge stored isolated from the stream definition.
-
-Finally, we need to define technical requirements of the data processor, called _groundings_.
-StreamPipes supports various runtime data formats (e.g., JSON or Thrift) and various protocols (e.g., Kafka or JMS).
-Each component defines supports formats and protocol separately.
-For our example, we'd like to support JSON-based messages and Kafka as input and output broker protocol, so append the following:
-
-```java
-.supportedProtocols(SupportedProtocols.kafka())
-.supportedFormats(SupportedFormats.jsonFormat())
-.build();
 ```
 
 Now we need to define the output of our Geofencing pipeline element.
@@ -198,63 +173,12 @@ Although we don't know the exact input right now as it depends on the stream use
 This defines a _KeepOutputStrategy_, i.e., the input event schema is not modified by the processor.
 There are many more output strategies you can define depending on the functionality you desire, e.g., _AppendOutput_ for defining a processor that enriches events or _CustomOutput_ in case you would like users to select the output by themselves.
 
-That's it! We've now defined input requirements, required user input, technical requirements concerned with data format and protocol and an output strategy.
+That's it! We've now defined input requirements, required user input and an output strategy.
 In the next section, you will learn how to extract these parameters once the pipeline element is invoked after a pipeline was created.
 
 ## Pipeline element invocation
 
-Once users start a pipeline that uses our geofencing component, the _getRuntime_ method in our class is called. The class `DataSinkInovcation` includes a graph that contains information on the configuration parameters a users has selected in the pipeline editor and information on the acutal streams that are connected to the pipeline element.
-
-Before we explain in more detail how to extract these values from the processor invocation, we need to adapt a little helper class.
-Open the file ```GeofencingParameters``` and modify it as follows:
-
-```java
-public class GeofencingParameters extends EventProcessorBindingParams {
-
-  private String latitudeFieldName;
-  private String longitudeFieldName;
-
-  private Float centerLatitude;
-  private Float centerLongitude;
-
-  private Integer radius;
-
-  public GeofencingParameters(DataProcessorInvocation graph, String latitudeFieldName, String longitudeFieldName,
-                              Float centerLatitude, Float centerLongitude, Integer radius) {
-    super(graph);
-    this.latitudeFieldName = latitudeFieldName;
-    this.longitudeFieldName = longitudeFieldName;
-    this.centerLatitude = centerLatitude;
-    this.centerLongitude = centerLongitude;
-    this.radius = radius;
-  }
-
-  public String getLatitudeFieldName() {
-    return latitudeFieldName;
-  }
-
-  public String getLongitudeFieldName() {
-    return longitudeFieldName;
-  }
-
-  public Float getCenterLatitude() {
-    return centerLatitude;
-  }
-
-  public Float getCenterLongitude() {
-    return centerLongitude;
-  }
-
-  public Integer getRadius() {
-    return radius;
-  }
-```
-
-This simple Pojo class will later serve to store user-defined parameters in a single object.
-
-Now we go back to the controller class and extract these values from the invocation object.
-
-The ``ProcessingElementParameterExtractor``  provides convenience methods to extract the relevant information from the `DataProcessorInvocation` object.
+Once users start a pipeline that uses our geofencing component, the _onInvocation_ method in our class is called. The class `ProcessorParams` includes convenient access to user-configured parameters a users has selected in the pipeline editor and information on the acutal streams that are connected to the pipeline element.
 
 Next, we are interested in the fields of the input event stream that contains the latitude and longitude value we would like to compute against the geofence center location as follows:
 
@@ -265,143 +189,115 @@ String longitudeFieldName = extractor.mappingPropertyValue("longitude-field");
 
 We use the same `internalId` we've used to define the mapping property requirements in the `declareModel` method.
 
-Next, for extracting the geofence center coordinates, we use the following statements:
+Next, for extracting the geofence center coordinates, add to class variables centerLatitude and centerLongitude and assign the selected values using the following statements:
 
 ```java
-Float centerLatitude = extractor.supportedOntologyPropertyValue("location", Geo.lat, Float.class);
-Float centerLongitude = extractor.supportedOntologyPropertyValue("location", Geo.lng, Float.class);
+this.centerLatitude = parameters.extractor().singleValueParameter(LATITUDE_CENTER, Float.class);
+this.centerLongitude = parameters.extractor().singleValueParameter(LONGITUDE_CENTER, Float.class);
 ```
 
 The radius value can be extracted as follows:
 
 ```java
-Integer radius = extractor.singleValueParameter("radius", Integer.class);
+int radius = parameters.extractor().singleValueParameter("radius", Float.class);
 ```
-
-Now we can create a new instance of our previously created parameter class:
-
-```java
-GeofencingParameters params = new GeofencingParameters(dataProcessorInvocation, latitudeFieldName,
-            longitudeFieldName, centerLatitude, centerLongitude, radius);
-```
-
-Finally, return an instance of the class ```GeofencingProgram```:
-
-```java
-return new GeofencingProgram(params, true);
-```
-
-<div class="admonition tip">
-<div class="admonition-title">Info</div>
-<p>The line above uses the Flink MiniCluster to start the Flink program for debugging purposes.
-       Before you build the project and use it in a real environment, replace the line as follows, which triggers cluster execution:
-       <code>return new GeofencingProgram(params, new FlinkDeploymentConfig(Config.JAR_FILE, Config.INSTANCE.getFlinkHost(), Config.INSTANCE.getFlinkPort())</code></p>
-</div>
-
 
 Great! That's all we need to describe a data processor for usage in StreamPipes. Your controller class should look as follows:
 
 ```java
-import org.streampipes.model.graph.DataProcessorDescription;
-import org.streampipes.model.graph.DataProcessorInvocation;
-import org.streampipes.model.schema.PropertyScope;
-import org.streampipes.sdk.builder.ProcessingElementBuilder;
-import org.streampipes.sdk.builder.StreamRequirementsBuilder;
-import org.streampipes.sdk.extractor.ProcessingElementParameterExtractor;
-import org.streampipes.sdk.helpers.EpRequirements;
-import org.streampipes.sdk.helpers.Labels;
-import org.streampipes.sdk.helpers.OntologyProperties;
-import org.streampipes.sdk.helpers.OutputStrategies;
-import org.streampipes.sdk.helpers.SupportedFormats;
-import org.streampipes.sdk.helpers.SupportedProtocols;
-import org.streampipes.vocabulary.Geo;
-import org.streampipes.wrapper.flink.FlinkDataProcessorDeclarer;
-import org.streampipes.wrapper.flink.FlinkDataProcessorRuntime;
+package org.apache.streampipes.pe.example;
 
-public class GeofencingController extends FlinkDataProcessorDeclarer<GeofencingParameters> {
+import org.apache.streampipes.commons.exceptions.SpRuntimeException;
+import org.apache.streampipes.model.DataProcessorType;
+import org.apache.streampipes.model.graph.DataProcessorDescription;
+import org.apache.streampipes.model.runtime.Event;
+import org.apache.streampipes.model.schema.PropertyScope;
+import org.apache.streampipes.sdk.builder.ProcessingElementBuilder;
+import org.apache.streampipes.sdk.builder.StreamRequirementsBuilder;
+import org.apache.streampipes.sdk.helpers.EpRequirements;
+import org.apache.streampipes.sdk.helpers.Labels;
+import org.apache.streampipes.sdk.helpers.Locales;
+import org.apache.streampipes.sdk.helpers.OutputStrategies;
+import org.apache.streampipes.sdk.utils.Assets;
+import org.apache.streampipes.vocabulary.Geo;
+import org.apache.streampipes.wrapper.context.EventProcessorRuntimeContext;
+import org.apache.streampipes.wrapper.routing.SpOutputCollector;
+import org.apache.streampipes.wrapper.standalone.ProcessorParams;
+import org.apache.streampipes.wrapper.standalone.StreamPipesDataProcessor;
 
-  @Override
-  protected FlinkDataProcessorRuntime<GeofencingParameters> getRuntime(DataProcessorInvocation dataProcessorInvocation) {
-    ProcessingElementParameterExtractor extractor = ProcessingElementParameterExtractor.from(dataProcessorInvocation);
+public class GeofencingProcessor extends StreamPipesDataProcessor {
 
-    String latitudeFieldName = extractor.mappingPropertyValue("latitude-field");
-    String longitudeFieldName = extractor.mappingPropertyValue("longitude-field");
+ private static final String LATITUDE_CENTER = "latitude-center";
+ private static final String LONGITUDE_CENTER = "longitude-center";
 
-    Float centerLatitude = extractor.supportedOntologyPropertyValue("location", Geo.lat, Float.class);
-    Float centerLongitude = extractor.supportedOntologyPropertyValue("location", Geo.lng, Float.class);
+ private float centerLatitude;
+ private float centerLongitude;
+ private int radius;
 
-    Integer radius = extractor.singleValueParameter("radius", Integer.class);
+ @Override
+ public DataProcessorDescription declareModel() {
+  return ProcessingElementBuilder.create("org.streampipes.tutorial-geofencing")
+          .category(DataProcessorType.ENRICH)
+          .withAssets(Assets.DOCUMENTATION, Assets.ICON)
+          .withLocales(Locales.EN)
+          .requiredStream(StreamRequirementsBuilder
+                  .create()
+                  .requiredPropertyWithUnaryMapping(EpRequirements.domainPropertyReq(Geo.lat),
+                          Labels.from("latitude-field", "Latitude", "The event " +
+                                  "property containing the latitude value"), PropertyScope.MEASUREMENT_PROPERTY)
+                  .requiredPropertyWithUnaryMapping(EpRequirements.domainPropertyReq(Geo.lng),
+                          Labels.from("longitude-field", "Longitude", "The event " +
+                                  "property containing the longitude value"), PropertyScope.MEASUREMENT_PROPERTY)
+                  .build())
+          .outputStrategy(OutputStrategies.keep())
+          .requiredIntegerParameter("radius", "Geofence Size", "The size of the circular geofence in meters.", 0, 1000, 1)
+          .requiredFloatParameter(Labels.from(LATITUDE_CENTER, "Latitude", "The latitude value"))
+          .requiredFloatParameter(Labels.from(LONGITUDE_CENTER, "Longitude", "The longitude value"))
+          .build();
+ }
 
-    GeofencingParameters params = new GeofencingParameters(dataProcessorInvocation, latitudeFieldName,
-            longitudeFieldName, centerLatitude, centerLongitude, radius);
+ @Override
+ public void onInvocation(ProcessorParams parameters, SpOutputCollector spOutputCollector, EventProcessorRuntimeContext runtimeContext) throws SpRuntimeException {
+  this.centerLatitude = parameters.extractor().singleValueParameter(LATITUDE_CENTER, Float.class);
+  this.centerLongitude = parameters.extractor().singleValueParameter(LONGITUDE_CENTER, Float.class);
+  this.radius = parameters.extractor().singleValueParameter("radius", Integer.class);
+ }
 
-    return new GeofencingProgram(params);
-  }
+ @Override
+ public void onEvent(Event event, SpOutputCollector collector) throws SpRuntimeException {
 
-  @Override
-  public DataProcessorDescription declareModel() {
-    return ProcessingElementBuilder.create("geofencing-flink", "Geofencing", "A simple geofencing data processor " +
-            "using the Apache Flink wrapper")
-            .requiredStream(StreamRequirementsBuilder
-                    .create()
-                    .requiredPropertyWithUnaryMapping(EpRequirements.domainPropertyReq(Geo.lat),
-                            Labels.from("latitude-field", "Latitude", "The event " +
-                            "property containing the latitude value"), PropertyScope.MEASUREMENT_PROPERTY)
-                    .requiredPropertyWithUnaryMapping(EpRequirements.domainPropertyReq(Geo.lng),
-                            Labels.from("longitude-field", "Longitude", "The event " +
-                                    "property containing the longitude value"), PropertyScope.MEASUREMENT_PROPERTY)
-                    .build())
-            .requiredIntegerParameter("radius", "Geofence Size", "The size of the circular geofence in meters.",
-                    0, 1000, 1)
-            .requiredOntologyConcept(Labels.from("location", "Geofence Center", "Provide the coordinate of the " +
-                    "geofence center"), OntologyProperties.mandatory(Geo.lat), OntologyProperties.mandatory(Geo.lng))
-            .supportedProtocols(SupportedProtocols.kafka())
-            .supportedFormats(SupportedFormats.jsonFormat())
-            .outputStrategy(OutputStrategies.keep())
-            .build();
-  }
+ }
+
+ @Override
+ public void onDetach() throws SpRuntimeException {
+
+ }
 }
+
 
 ```
 
 ## Adding an implementation
 
-Everything we need to do now is to add an implementation which does not differ from writing an Apache Flink topology.
+Everything we need to do now is to add an implementation.
 
-Open the class `GeofencingProcessor.java` and add the following piece of code, which realizes the Geofencing functionality:
+Open the class `GeofencingProcessor.java` and add the following piece of code to the onEvent method, which realizes the Geofencing functionality:
 
 ```java
-public class GeofencingProcessor implements FlatMapFunction<Map<String, Object>, Map<String, Object>> {
-
-  private String latitudeFieldName;
-  private String longitudeFieldName;
-
-  private Float centerLatitude;
-  private Float centerLongitude;
-
-  private Integer radius;
-
-  public GeofencingProcessor(String latitudeFieldName, String longitudeFieldName, Float centerLatitude, Float centerLongitude, Integer radius) {
-    this.latitudeFieldName = latitudeFieldName;
-    this.longitudeFieldName = longitudeFieldName;
-    this.centerLatitude = centerLatitude;
-    this.centerLongitude = centerLongitude;
-    this.radius = radius;
-  }
 
   @Override
-  public void flatMap(Event in, Collector<Event> out) throws Exception {
-    Float latitude = in.getFieldBySelector(latitudeFieldName).getAsPrimitive().getAsFloat();
-    Float longitude = in.getFieldBySelector(longitudeFieldName).getAsPrimitive().getAsFloat();
+  public void onEvent(Event event, SpOutputCollector collector) throws SpRuntimeException {
+      float latitude = event.getFieldBySelector(latitudeFieldName).getAsPrimitive().getAsFloat();
+      float longitude = event.getFieldBySelector(longitudeFieldName).getAsPrimitive().getAsFloat();
 
-    Float distance = distFrom(latitude, longitude, centerLatitude, centerLongitude);
+      float distance = distFrom(latitude, longitude, centerLatitude, centerLongitude);
 
-    if (distance <= radius) {
-      out.collect(in);
-    }
+      if (distance <= radius) {
+      collector.collect(event);
+      }
   }
 
-  public static Float distFrom(float lat1, float lng1, float lat2, float lng2) {
+  public static float distFrom(float lat1, float lng1, float lat2, float lng2) {
     double earthRadius = 6371000;
     double dLat = Math.toRadians(lat2-lat1);
     double dLng = Math.toRadians(lng2-lng1);
@@ -418,79 +314,41 @@ public class GeofencingProcessor implements FlatMapFunction<Map<String, Object>,
 We won't go into details here as this isn't StreamPipes-related code, but in general the class extracts latitude and longitude fields from the input event (which is provided as a map data type) and calculates the distance between the geofence center and these coordinates.
 If the distance is below the given radius, the event is forwarded to the next operator.
 
-Finally, we need to connect this program to the Flink topology. StreamPipes automatically adds things like the Kafka consumer and producer, so that you only need to invoke the actual geofencing processor.
-Open the file `GeofencingProgram` and append the following line inside the `getApplicationLogic()` method:
+See the [event model](06_extend-sdk-event-model.md) guide to learn how to extract parameters from events.
+
+## Registering the pipeline element
+The final step is to register the data processor in the `Init` method. Add the following line to the `SpServiceDefinitionBuilder`:
 
 ```java
-return dataStreams[0].flatMap(new GeofencingProcessor(params.getLatitudeFieldName(), params.getLongitudeFieldName(),
-    params.getCenterLatitude(), params.getCenterLongitude(), params.getRadius()));
+ .registerPipelineElement(new GeofencingProcessor())
 ```
 
-## Preparing the container
-The final step is to define the deployment type of our new data source. In this tutorial, we will create a so-called `StandaloneModelSubmitter`.
-This client will start an embedded web server that provides the description of our data source and automatically submits the program to the registered Apache Flink cluster.
-
-Go to the class `Init` that extends `StandaloneModelSubmitter` and should look as follows:
-```java
-package org.streampipes.tutorial.main;
-
-import org.streampipes.container.init.DeclarersSingleton;
-import org.streampipes.container.standalone.init.StandaloneModelSubmitter;
-
-import org.streampipes.tutorial.config.Config;
-import org.streampipes.tutorial.pe.processor.geofencing.GeofencingController;
-
-public class Init extends StandaloneModelSubmitter {
-
-  public static void main(String[] args) throws Exception {
-    DeclarersSingleton.getInstance()
-            .add(new GeofencingController());
-
-    new Init().init(Config.INSTANCE);
-
-  }
-}
-```
-
-<div class="admonition info">
-<div class="admonition-title">Info</div>
-<p>In the example above, we make use of a class `Config`.
-       This class contains both mandatory and additional configuration parameters required by a pipeline element container.
-       These values are stored in the Consul-based key-value store of your StreamPipes installation.
-       The SDK guide contains a detailed manual on managing container configurations.
-</p>
-</div>
-
-## Starting the container
+## Starting the service
 <div class="admonition tip">
 <div class="admonition-title">Tip</div>
-<p>By default, the container registers itself using the hostname later used by the Docker container, leading to a 404 error when you try to access an RDF description.
-       For local development, we provide an environment file in the ``development`` folder. You can add your hostname here, which will override settings from the Config class.
-       For instance, use the IntelliJ ``EnvFile`` plugin to automatically provide the environment variables upon start.
+<p>Once you start the service, it will register in StreamPipes with the hostname. The hostname will be auto-discovered and should work out-of-the-box.
+In some cases, the detected hostname is not resolvable from within a container (where the core is running). In this case, provide a SP_HOST environment variable to override the auto-discovery.
 </p>
 </div>
 
 
 <div class="admonition tip">
 <div class="admonition-title">Tip</div>
-<p> The default port of all pipeline element containers as defined in the `Config` file is port 8090.
-       If you'd like to run mutliple containers at the same time on your development machine, change the port in the environment file.
+<p> The default port of all pipeline element services as defined in the `create` method is port 8090.
+       If you'd like to run multiple services at the same time on your development machine, change the port here. As an alternative, you can also provide an env variable `SP_PORT` which overrides the port settings. This is useful to use different configs for dev and prod environments.
 </p>
 </div>
 
-Now we are ready to start our container!
+Now we are ready to start our service!
 
-Execute the main method in the class `Main` we've just created, open a web browser and navigate to http://localhost:8090 (or the port you have assigned in the environment file).
+Execute the main method in the class `Init` we've just created, open a web browser and navigate to http://localhost:8090 (or the port you have assigned).
 
 You should see something as follows:
 
-<img src="/docs/img/tutorial-processors/pe-overview-flink.PNG" alt="Pipeline Element Container Overview (Flink)">
+<img src="/docs/img/tutorial-processors/pe-overview-flink.PNG" alt="Pipeline Element Container Overview">
 
-Click on the link of the data source to see the RDF description of the pipeline element.
 
-<img src="/docs/img/tutorial-processors/pe-rdf-geofencing.PNG" alt="Geofencing RDF description">
-
-The container automatically registers itself in the Consul installation of StreamPipes.
+The services automatically registers itself in StreamPipes.
 To install the just created element, open the StreamPipes UI and follow the manual provided in the [user guide](03_use-install-pipeline-elements.md).
 
 ## Read more
