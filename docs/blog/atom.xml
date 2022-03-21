@@ -9,6 +9,22 @@
     <logo>https://streampipes.apache.org/docs/img/sp-logo-color-docs.png</logo>
     <rights>Copyright © 2022 The Apache Software Foundation</rights>
     <entry>
+        <title type="html"><![CDATA[Apache StreamPipes release 0.69.0]]></title>
+        <id>https://streampipes.apache.org/docs/blog/2022/03/21_release/0690.html</id>
+        <link href="https://streampipes.apache.org/docs/blog/2022/03/21_release/0690.html"/>
+        <updated>1970-01-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">5 minutes to read</div></strong>
+<br></p>
+<p>The Apache StreamPipes (incubating) community is pleased to announce Apache StreamPipes version 0.69.0!
+The most notable highlights of this release include a completely reworked data explorer for quick exploration of IoT data and advanced user and access rights management.
+In addition, our new release includes more than 80 improvements and bug fixes.</p>
+]]></summary>
+        <author>
+            <name>Dominik Riemer</name>
+            <uri>https://twitter.com/dominikjriemer</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Apache StreamPipes release 0.68.0]]></title>
         <id>https://streampipes.apache.org/docs/blog/2021/07/22_release/0680.html</id>
         <link href="https://streampipes.apache.org/docs/blog/2021/07/22_release/0680.html"/>
