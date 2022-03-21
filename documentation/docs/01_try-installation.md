@@ -60,12 +60,12 @@ best experience), Firefox or Edge.
                       </thead>
                       <tbody>
                       <tr>
-                          <td><a href="https://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=incubator/streampipes/installer/0.68.0/apache-streampipes-installer-0.68.0-incubating-source-release.zip">apache-streampipes-installer-0.68.0-incubating-source-release.zip</a></td>
-                          <td>0.68.0</td>
-                          <td>2021-07-22</td>
+                          <td><a href="https://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=incubator/streampipes/0.69.0/apache-streampipes-0.69.0-incubating-source-release.zip">apache-streampipes-0.69.0-incubating-source-release.zip</a></td>
+                          <td>0.69.0</td>
+                          <td>2022-03-21</td>
                           <td>
-                              <a href="https://downloads.apache.org/incubator/streampipes/installer/0.68.0/apache-streampipes-installer-0.68.0-incubating-source-release.zip.sha512">SHA</a>
-                              <a href="https://downloads.apache.org/incubator/streampipes/installer/0.68.0/apache-streampipes-installer-0.68.0-incubating-source-release.zip.asc">PGP</a>
+                              <a href="https://downloads.apache.org/incubator/streampipes/0.69.0/apache-streampipes-0.69.0-incubating-source-release.zip.sha512">SHA</a>
+                              <a href="https://downloads.apache.org/incubator/streampipes/0.69.0/apache-streampipes-0.69.0-incubating-source-release.zip.asc">PGP</a>
                           </td>
                       </tr>
                       </tbody>
@@ -89,7 +89,7 @@ best experience), Firefox or Edge.
           <div class="wrapper-instruction">
              <div style="margin-bottom:5px;">In a command prompt, open the folder <code>installer/compose</code> and run <code>docker-compose up -d</code>.
                 <div class="row" style="margin-top:10px;">              
-                    <div class="alert alert-info" role="alert">The folder contains two docker-compose files: The standard file contains the so-called <i>lite</i> installation, which includes less pipeline elements, but also requires for less performant hardware. The <i>full</i> version includes also the Apache Flink wrapper and more pipeline elements, but requires for more memory. See the Github <a href="https://github.com/apache/incubator-streampipes-installer/tree/master/compose">README</a> for complete usage instructions.</div>
+                    <div class="alert alert-info" role="alert">The folder contains two docker-compose files: The standard file contains the so-called <i>lite</i> installation, which includes less pipeline elements, but also demands for less performant hardware. See the Github <a href="https://github.com/apache/incubator-streampipes-installer/tree/master/compose">README</a> for complete usage instructions.</div>
             </div>
             </div>
         </div>
