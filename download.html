@@ -6,19 +6,7 @@
 <meta name="description" content="Apache StreamPipes is a self-service (Industrial) IoT toolbox to enable non-technical users to connect, analyze and explore IIoT data streams">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 <!-- Favicon -->
-<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png?v=2"/>
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png?v=2"/>
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png?v=2"/>
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png?v=2"/>
-<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png?v=2"/>
-<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png?v=2"/>
-<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png?v=2"/>
-<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png?v=2"/>
-<link rel="icon" type="image/png" href="/img/favicon/favicon-196x196.png?v=2" sizes="196x196"/>
-<link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png?v=2" sizes="96x96"/>
-<link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png?v=2" sizes="32x32"/>
-<link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png?v=2" sizes="16x16"/>
-<link rel="icon" type="image/png" href="/img/favicon/favicon-128.png?v=2" sizes="128x128"/>
+<link rel="shortcut icon" href="/img/favicon/favicon.png">
 <link href="/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -37,7 +25,7 @@
 <body>
 <div class="header-banner">
 <div class="header-banner-news">
-<b>The Apache StreamPipes (incubating) community is pleased to announce our new Apache release. Download the latest version (0.68.0) <a class="banner-link" href="/download.html">here</a>!</b>
+<b>The Apache StreamPipes (incubating) community is pleased to announce release 0.69.0! Download the latest version <a class="banner-link" href="/download.html">here</a>!</b>
 </div>
 <div style="display: flex; align-items: center;justify-content: flex-end;padding-right:20px;height:40px;">
 <span flex></span>
@@ -57,7 +45,7 @@
 <div class="col-12 h-100">
 <div class="menu-area h-100">
 <nav class="navbar h-100 navbar-expand-lg align-items-center">
-<a class="navbar-brand" href="/"><img src="/img/sp-logo-color.png" style="height:40px"></a>
+<a class="navbar-brand" href="/"><img src="/img/sp-logo-color.png" style="height:60px"></a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sp-navbar"
 aria-controls="sp-navbar" aria-expanded="false" aria-label="Toggle navigation"><span
 class="navbar-toggler-icon"></span></button>
@@ -156,7 +144,6 @@ aria-haspopup="true" aria-expanded="false">Apache</a>
 href="https://docs.docker.com/install/" target="_blank">Docker</a> and <a
 href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose</a>
 </li>
-<li><i class="fas fa-check sp-color-green"></i> StreamPipes comes with two versions, a <b>lite version</b> with few pipeline elements for testing purposes and a <b>full version</b> with distributed wrappers and the full set of pipeline elements. The full version requires at least 6 GB memory, make sure this is available to Docker.
 </li>
 </ul>
 </div>
@@ -185,12 +172,12 @@ Download the latest Apache StreamPipes release and extract the zip file to a dir
 </thead>
 <tbody>
 <tr>
-<td><a href="https://www.apache.org/dyn/closer.lua?action=download&filename=incubator/streampipes/installer/0.68.0/apache-streampipes-installer-0.68.0-incubating-source-release.zip">apache-streampipes-installer-0.68.0-incubating-source-release.zip</a></td>
-<td>0.68.0</td>
-<td>2021-07-22</td>
+<td><a href="https://www.apache.org/dyn/closer.lua?action=download&filename=incubator/streampipes/0.69.0/apache-streampipes-0.69.0-incubating-source-release.zip">apache-streampipes-0.69.0-incubating-source-release.zip</a></td>
+<td>0.69.0</td>
+<td>2022-03-21</td>
 <td>
-<a href="https://downloads.apache.org/incubator/streampipes/installer/0.68.0/apache-streampipes-installer-0.68.0-incubating-source-release.zip.sha512">SHA</a>
-<a href="https://downloads.apache.org/incubator/streampipes/installer/0.68.0/apache-streampipes-installer-0.68.0-incubating-source-release.zip.asc">PGP</a>
+<a href="https://downloads.apache.org/incubator/streampipes/0.69.0/apache-streampipes-0.69.0-incubating-source-release.zip.sha512">SHA</a>
+<a href="https://downloads.apache.org/incubator/streampipes/0.69.0/apache-streampipes-0.69.0-incubating-source-release.zip.asc">PGP</a>
 </td>
 </tr>
 </tbody>
@@ -214,7 +201,7 @@ The above release file should be verified using the PGP signatures and the <a hr
 </span>
 </div>
 <div class="col-md-11 col-9">
-In a command prompt, open the folder <code>compose/</code> and run <code>docker-compose up -d</code>
+In a command prompt, open the folder <code>installer/compose/</code> and run <code>docker-compose up -d</code>
 </div>
 </div>
 </li>
@@ -229,6 +216,7 @@ In a command prompt, open the folder <code>compose/</code> and run <code>docker-
 </div>
 <div class="col-md-11 col-9">
 Open your browser, navigate to http://localhost:80 (or use the domain name of your server) and finish the setup according to the instructions.
+The default login credentials are <code>admin@streampipes.apache.org</code>, password <code>admin</code>
 </div>
 </div>
 </li>
@@ -242,7 +230,7 @@ Open your browser, navigate to http://localhost:80 (or use the domain name of yo
 </span>
 </div>
 <div class="col-md-11 col-9">
-For a detailed description of the installer go to the <a href="https://github.com/apache/incubator-streampipes-installer">GitHub repository</a>
+For a detailed description of the installer go to the <a href="https://github.com/apache/incubator-streampipes/tree/dev/installer">GitHub repository</a>
 </div>
 </div>
 </li>
@@ -291,19 +279,6 @@ Check the <a href="https://streampipes.apache.org/docs/docs/try-tutorial.html"> 
 </span>
 </div>
 <div class="col-md-11 col-9">
-Subscribe to our <a href="https://join.slack.com/t/streampipes-community/shared_invite/zt-pvivlspi-RLLqpx7eujbHVb5t1SDXHg">Slack channel</a> and ask us if you have any questions.
-</div>
-</div>
-</li>
-<li class="installation-step">
-<div class="row" style="align-items: center;justify-content: center;">
-<div class="col-md-1 col-3">
-<span class="fa-stack fa-2x">
-<i class="fas fa-circle fa-stack-2x sp-color-green"></i>
-<i class="fas fa-check fa-stack-1x" style="color:white;"></i>
-</span>
-</div>
-<div class="col-md-11 col-9">
 Ask your question on  <a href="https://stackoverflow.com/questions/tagged/streampipes">Stack Overflow</a>.
 </div>
 </div>
@@ -317,7 +292,7 @@ Ask your question on  <a href="https://stackoverflow.com/questions/tagged/stream
 </span>
 </div>
 <div class="col-md-11 col-9">
-Send us an <a href="mailto:users@streampipes.apache.org">email</a> and we'll be glad to help!
+Send an <a href="mailto:users@streampipes.apache.org">email</a> to our mailing list and we'll be glad to help!
 </div>
 </div>
 </li>

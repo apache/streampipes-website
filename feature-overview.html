@@ -6,19 +6,7 @@
 <meta name="description" content="Apache StreamPipes is a self-service (Industrial) IoT toolbox to enable non-technical users to connect, analyze and explore IIoT data streams">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 <!-- Favicon -->
-<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png?v=2"/>
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png?v=2"/>
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png?v=2"/>
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png?v=2"/>
-<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png?v=2"/>
-<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png?v=2"/>
-<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png?v=2"/>
-<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png?v=2"/>
-<link rel="icon" type="image/png" href="/img/favicon/favicon-196x196.png?v=2" sizes="196x196"/>
-<link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png?v=2" sizes="96x96"/>
-<link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png?v=2" sizes="32x32"/>
-<link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png?v=2" sizes="16x16"/>
-<link rel="icon" type="image/png" href="/img/favicon/favicon-128.png?v=2" sizes="128x128"/>
+<link rel="shortcut icon" href="/img/favicon/favicon.png">
 <link href="/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -37,7 +25,7 @@
 <body>
 <div class="header-banner">
 <div class="header-banner-news">
-<b>The Apache StreamPipes (incubating) community is pleased to announce our new Apache release. Download the latest version (0.68.0) <a class="banner-link" href="/download.html">here</a>!</b>
+<b>The Apache StreamPipes (incubating) community is pleased to announce release 0.69.0! Download the latest version <a class="banner-link" href="/download.html">here</a>!</b>
 </div>
 <div style="display: flex; align-items: center;justify-content: flex-end;padding-right:20px;height:40px;">
 <span flex></span>
@@ -57,7 +45,7 @@
 <div class="col-12 h-100">
 <div class="menu-area h-100">
 <nav class="navbar h-100 navbar-expand-lg align-items-center">
-<a class="navbar-brand" href="/"><img src="/img/sp-logo-color.png" style="height:40px"></a>
+<a class="navbar-brand" href="/"><img src="/img/sp-logo-color.png" style="height:60px"></a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sp-navbar"
 aria-controls="sp-navbar" aria-expanded="false" aria-label="Toggle navigation"><span
 class="navbar-toggler-icon"></span></button>
@@ -149,18 +137,18 @@ aria-haspopup="true" aria-expanded="false">Apache</a>
 <div class="col-md-6 col-12">
 <ul>
 <li><h5 class="feature-item-margin">
-<span class="feature-highlights-bg">Easy to use.</span> Web-based user interface to create stream processing pipelines in a graphical editor. 
+<span class="feature-highlights-bg">Easy to use.</span> Web-based user interface to create data processing pipelines in a graphical editor.
 </h5></li>
 <li><h5 class="feature-item-margin">
-<span class="feature-highlights-bg">Powerful.</span> Select data streams, add transformation modules and choose a data sink. StreamPipes cares about execution details of your pipeline. 
+<span class="feature-highlights-bg">Powerful.</span> Select data streams, add transformation modules and choose a data sink. StreamPipes cares about execution details of your pipeline.
 </h5></li>
 <li><h5 class="feature-item-margin">
-<span class="feature-highlights-bg">Intelligent.</span> Our built-in semantics recommend you elements you can connect and disallow you to connect elements that wo not work. 
+<span class="feature-highlights-bg">Intelligent.</span> Our data model also considers the semantics of data streams and fields. You get modeling support so that pipeline elements can only be connected when their requirements match.
 </h5></li>
 </ul>
 </div>
 <div class="col-md-6 col-12">
-<img src="/img/screenshots/pipeline-editor-2.png">
+<img src="/img/screenshots/sp-editor-pipeline.png">
 </div>
 </div>
 </div>
@@ -174,7 +162,7 @@ aria-haspopup="true" aria-expanded="false">Apache</a>
 <h2 class="page-section-title">Quickly connect IoT data with StreamPipes Connect.</h2>
 <div class="row">
 <div class="col-md-6 col-12">
-<img src="/img/screenshots/connect-marketplace.png" style="margin-bottom:20px;">
+<img src="/img/screenshots/sp-connect.png" style="margin-bottom:20px;">
 </div>
 <div class="col-md-6 col-12">
 <ul>
@@ -183,11 +171,11 @@ aria-haspopup="true" aria-expanded="false">Apache</a>
 StreamPipes Connect supports both data sets and real-time data streams.</h5></li>
 <li><h5 class="feature-item-margin">
 <span class="feature-highlights-bg">Generic adapters</span>
-StreamPipes Connect includes a variety of adapters for popular communication protocols and technologies such as HTTP/REST, MQTT, Kafka, OPC UA or ROS. Adapters can be easily configured right from the user interface - without any coding skills.
+StreamPipes Connect includes a variety of adapters for popular communication protocols and technologies such as HTTP/REST, MQTT, Kafka, OPC UA, S7, Modbus or ROS. Adapters can be easily configured right from the user interface - without any coding skills.
 </h5></li>
 <li><h5 class="feature-item-margin">
 <span class="feature-highlights-bg">APIs</span>
-In addition, Web APIs (e.g., Slack, Wikipedia or open data sources) can be used to ingest data into StreamPipes. Specific adapters can be exported and shared.
+In addition, Web APIs (e.g., Slack, Wikipedia or open data sources) are available to ingest data into StreamPipes. Specific adapters can be exported and shared.
 </h5>
 </li>
 </ul>
@@ -244,13 +232,13 @@ class="pe-icon">
 <div class="col-12">
 <ul>
 <li><h5 class="feature-item-margin">
-<span class="feature-highlights-bg">Filter, Aggregate, Enrich.</span> You need less data, more data or other data? Stateless processing components transform your input streams. 
+<span class="feature-highlights-bg">Filter, Aggregate, Enrich.</span> You need less data, more data or other data? Stateless processing components transform your input streams.
 </h5></li>
 <li><h5 class="feature-item-margin">
-<span class="feature-highlights-bg">Advanced Analytics.</span> Advanced methods (e.g., ML-algorithms) can be used as pipeline elements. 
+<span class="feature-highlights-bg">Advanced Analytics.</span> Advanced methods (e.g., ML-algorithms) can be used as pipeline elements. Offer your own models as pipeline elements with the SDK.
 </h5></li>
 <li><h5 class="feature-item-margin">
-<span class="feature-highlights-bg">Pattern Detection.</span> We have developed modules supporting pattern detection, e.g., detection of sequences over time. 
+<span class="feature-highlights-bg">Pattern Detection.</span> We have developed modules supporting pattern detection, e.g., detection of sequences over time.
 </h5></li>
 </ul>
 </div>
@@ -296,13 +284,13 @@ class="pe-icon">
 <div class="col-12">
 <ul>
 <li><h5 class="feature-item-margin">
-<span class="feature-highlights-bg">Visualize.</span> Create real-time visualizations and observe your KPIs and production systems from web-based cockpits. 
+<span class="feature-highlights-bg">Visualize.</span> Create real-time visualizations and observe your KPIs and production systems from web-based cockpits.
 </h5></li>
 <li><h5 class="feature-item-margin">
 <span class="feature-highlights-bg">Notify.</span> Detect problems or other situations of interest and notify the people in your organization who need to be informed. 
 </h5></li>
 <li><h5 class="feature-item-margin">
-<span class="feature-highlights-bg">Store.</span> Harmonize your data stream and store it in third-party systems, e.g. for offline analysis. We have adapters for Elasticsearch, HDFS, Cassandra and NoSQL databases. 
+<span class="feature-highlights-bg">Store.</span> Harmonize your data stream and store it in third-party systems, e.g. for offline analysis. We have adapters for MySQL, InfluxDB, Elasticsearch or other databases. 
 </h5></li>
 </ul>
 </div>
@@ -320,15 +308,19 @@ class="pe-icon">
 <h2 class="page-section-title">Visualize Live Data.</h2>
 <div class="row">
 <div class="col-md-6 col-12">
-<img src="/img/screenshots/live-dashboard.png" style="margin-bottom:20px;">
+<img src="/img/screenshots/sp-dashboard-config.png" style="margin-bottom:20px;">
+<img src="/img/screenshots/sp-data-explorer-heatmap.png" style="margin-bottom:20px;">
 </div>
 <div class="col-md-6 col-12">
 <ul>
 <li><h5 class="feature-item-margin">
-<span class="feature-highlights-bg">Real-Time Dashboard.</span> To quickly gather insights, pipelines can make use of the real-time dashboard to visualize live data. 
+<span class="feature-highlights-bg">Real-Time Dashboard.</span> To quickly gather insights, pipelines can make use of the real-time dashboard to visualize live data.
 </h5></li>
 <li><h5 class="feature-item-margin">
-<span class="feature-highlights-bg">Charts.</span> The live dashboard includes several chart types such as line charts, traffic lights, gauges, tables and number values. 
+<span class="feature-highlights-bg">Charts.</span> The live dashboard includes several chart types such as line charts, traffic lights, gauges, tables and number values.
+</h5></li>
+<li><h5 class="feature-item-margin">
+<span class="feature-highlights-bg">Data Explorer.</span> The data explorer allows you to quickly visually investigate stored time-series data. Choose from a wide range of visualizations, and create queries using our no-code editor.
 </h5></li>
 </ul>
 </div>
@@ -344,17 +336,60 @@ class="pe-icon">
 <h2 class="page-section-title">Easy to extend with the built-in SDK.</h2>
 <div class="row">
 <div class="col-md-6 col-12">
-<img src="/img/screenshots/pipeline-element-marketplace.png" style="margin-bottom:20px;">
+<img src="/img/screenshots/sp-install-pipeline-elements.png" style="margin-bottom:20px;">
 </div>
 <div class="col-md-6 col-12">
 <ul>
 <li><h5 class="feature-item-margin">
-<span class="feature-highlights-bg">Analytics Microservices.</span> Pipeline elements in StreamPipes are encapsulated as standalone microservices. This makes it easy to add new pipeline elements once new requirements arise. Data processors and sinks can be easily installed from the Pipeline Element Marketplace. 
+<span class="feature-highlights-bg">Analytics Microservices.</span> Pipeline elements in StreamPipes are encapsulated as standalone microservices. This makes it easy to add new pipeline elements once new requirements arise. Data processors and sinks can be easily installed from the Pipeline Element Marketplace.
 </h5></li>
 <li><h5 class="feature-item-margin">
-<span class="feature-highlights-bg">SDK.</span> The developer-oriented Software Development Kit (SDK) and Maven archetypes make it easy to create new processing elements using one of several available wrappers (e.g., Standalone, Apache Flink and Apache Spark). 
+<span class="feature-highlights-bg">SDK.</span> The developer-oriented Software Development Kit (SDK) and Maven archetypes make it easy to create new data processors, sinks or new adapters.
 </h5></li>
 </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elements-area section-padding-50 feature-section-gray">
+<div class="container">
+<div class="row feature-section">
+<div class="col-12">
+<h2 class="page-section-title">Other features</h2>
+<div class="row">
+<div class="col-md-6 col-12">
+<img src="/img/screenshots/sp-user-management.png" style="margin-bottom:20px;">
+</div>
+<div class="col-md-6 col-12">
+<ul>
+<li><h5 class="feature-item-margin">
+<span class="feature-highlights-bg">User & Permission Management.</span>  Create users, groups and restrict the visibility of resources such as pipelines or adapters to individual users or groups.
+</h5></li>
+<li><h5 class="feature-item-margin">
+<span class="feature-highlights-bg">Mail System.</span> StreamPipes comes with a built-in mail system, configurable over the UI, which allows you to trigger password recovery mails or notifications.
+</h5></li>
+<li><h5 class="feature-item-margin">
+<span class="feature-highlights-bg">Pipeline Health & Monitoring.</span> StreamPipes monitors pipeline health and auto-restarts pipeline elements.
+</h5></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elements-area section-padding-50">
+<div class="container">
+<div class="row feature-section">
+<div class="col-12">
+<h2 class="page-section-title">Need more info?</h2>
+<div class="row">
+<div class="col-md-12 col-12">
+<div class="col-12 text-center margin-top-20">
+<a href="https://streampipes.apache.org/docs" class="btn sp-button sp-button-blue">Check our documentation!</a>
+</div>
 </div>
 </div>
 </div>

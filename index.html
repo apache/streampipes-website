@@ -6,19 +6,7 @@
 <meta name="description" content="Apache StreamPipes is a self-service (Industrial) IoT toolbox to enable non-technical users to connect, analyze and explore IIoT data streams">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 <!-- Favicon -->
-<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png?v=2"/>
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png?v=2"/>
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png?v=2"/>
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png?v=2"/>
-<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png?v=2"/>
-<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png?v=2"/>
-<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png?v=2"/>
-<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png?v=2"/>
-<link rel="icon" type="image/png" href="/img/favicon/favicon-196x196.png?v=2" sizes="196x196"/>
-<link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png?v=2" sizes="96x96"/>
-<link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png?v=2" sizes="32x32"/>
-<link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png?v=2" sizes="16x16"/>
-<link rel="icon" type="image/png" href="/img/favicon/favicon-128.png?v=2" sizes="128x128"/>
+<link rel="shortcut icon" href="/img/favicon/favicon.png">
 <link href="/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -37,7 +25,7 @@
 <body>
 <div class="header-banner">
 <div class="header-banner-news">
-<b>The Apache StreamPipes (incubating) community is pleased to announce our new Apache release. Download the latest version (0.68.0) <a class="banner-link" href="/download.html">here</a>!</b>
+<b>The Apache StreamPipes (incubating) community is pleased to announce release 0.69.0! Download the latest version <a class="banner-link" href="/download.html">here</a>!</b>
 </div>
 <div style="display: flex; align-items: center;justify-content: flex-end;padding-right:20px;height:40px;">
 <span flex></span>
@@ -57,7 +45,7 @@
 <div class="col-12 h-100">
 <div class="menu-area h-100">
 <nav class="navbar h-100 navbar-expand-lg align-items-center">
-<a class="navbar-brand" href="/"><img src="/img/sp-logo-color.png" style="height:40px"></a>
+<a class="navbar-brand" href="/"><img src="/img/sp-logo-color.png" style="height:60px"></a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sp-navbar"
 aria-controls="sp-navbar" aria-expanded="false" aria-label="Toggle navigation"><span
 class="navbar-toggler-icon"></span></button>
@@ -213,10 +201,13 @@ class="fas fa-rocket"></i> Get started
 <a href="https://www.ros.org">Robot Operating System (ROS)</a>,
 Mysql, OPC-UA, MQTT and more.
 </p>
+<hr/>
+<p>Adapters can be easily configured right from the user interface - with an intuitive configuration menu.</p>
+<p>Pre-processing rules can be added to harmonize data before ingestion, e.g., transformation of measurement units.</p>
 </div>
 </div>
 <div class="col-md-8">
-<img class="d-block w-100" src="/img/screenshots/connect-marketplace.png" alt="StreamPipes Connect">
+<img class="d-block w-100" src="/img/screenshots/sp-connect.png" alt="StreamPipes Connect">
 </div>
 </div>
 <hr style="margin-top:20px;margin-bottom:20px;"/>
@@ -233,10 +224,13 @@ Mysql, OPC-UA, MQTT and more.
 Trend Detection, Peak Detection, Numerical Filter, Sequence, Boilerplate Removal, Event Rate, Field Converter, Frequency Calculation,
 Generic image Classification, Measurement Unit Converter, Projection, Timestamp Enricher, Trigonometry Functions and many more.
 </p>
+<hr/>
+<p>Our pipeline elements focus on analyzing industrial IoT data - for instance, we provide many operators to transform process data from PLC systems.</p>
 </div>
 </div>
 <div class="col-md-8">
-<img class="d-block w-100" src="/img/screenshots/pipeline-editor-2.png" alt="Pipeline Editor">
+<img class="d-block w-100" src="/img/screenshots/sp-editor-pipeline.png" alt="Pipeline Editor">
+<img class="d-block w-100 mt-10" src="/img/screenshots/sp-editor-config-trend.png" alt="Pipeline Editor Configuration">
 </div>
 </div>
 <hr style="margin-top:20px;margin-bottom:20px;"/>
@@ -256,10 +250,15 @@ Generic image Classification, Measurement Unit Converter, Projection, Timestamp 
 <a href="https://iotdb.apache.org">Apache IoTDB</a>,
 OPC-UA, RabbitMQ, Email, Slack, Internal Notification, PostgreSQL and more.
 </p>
+<hr/>
+<p>The brand-new data explorer gives you an intuitive and feature-rich component to visually analyze persisted time-series data and comes with ready-to-use visualizations such as heatmaps, value distribution charts or time-series charts.</p>
+<hr/>
+<p>Use the live dashboard to visualize data in real-time, e.g., show critical values directly on the shopfloor.</p>
 </div>
 </div>
 <div class="col-md-8">
-<img class="d-block w-100" src="/img/screenshots/live-dashboard.png" alt="Live Dashboard">
+<img class="d-block w-100" src="/img/screenshots/sp-explorer-ts.png" alt="Data Explorer">
+<img class="d-block w-100 mt-10" src="/img/screenshots/sp-dashboard.png" alt="Live Dashboard">
 </div>
 </div>
 <!-- Discover More btn -->
@@ -278,11 +277,11 @@ OPC-UA, RabbitMQ, Email, Slack, Internal Notification, PostgreSQL and more.
 <div class="col-md-6 col-12">
 <div class="section-heading">
 <p style="color:white;">StreamPipes</p>
-<h2>Self-Service IoT Data Analytics</h2>
+<h2>Self-Service (I)IoT Data Analytics</h2>
 </div>
 <div class="features-content">
 <p style="color:white;">
-StreamPipes is the first solution that makes real-time big data accessible to everyone: Our graphical modeler allows business analysts to define processing pipelines in an ad-hoc manner, without the need for big data experts or data scientists.
+StreamPipes makes IoT data analytics accessible to everyone: Our graphical modeler allows business analysts to define processing pipelines in an ad-hoc manner, without the need for data engineering or data science experts.
 </p>
 </div>
 </div>
@@ -311,14 +310,6 @@ StreamPipes is the first solution that makes real-time big data accessible to ev
 <a href="https://hub.docker.com/u/apachestreampipes">
 <img src="/img/open_source/icon-docker.png" alt="">
 <h4>Docker Hub</h4>
-</a>
-</div>
-</div>
-<div class="support-links-area">
-<div class="text-center" data-wow-delay="1s">
-<a href="https://join.slack.com/t/streampipes-community/shared_invite/zt-pvivlspi-RLLqpx7eujbHVb5t1SDXHg">
-<img src="/img/open_source/icon-slack.png" alt="">
-<h4>Slack</h4>
 </a>
 </div>
 </div>
