@@ -2456,6 +2456,58 @@
       "version-0.68.0/pe/version-0.68.0-org.apache.streampipes.sinks.notifications.jvm.telegram": {
         "title": "Telegram Publisher",
         "sidebar_label": "Telegram Publisher"
+      },
+      "version-0.69.0/version-0.69.0-try-installation": {
+        "title": "Installation",
+        "sidebar_label": "Installation"
+      },
+      "version-0.69.0/version-0.69.0-use-configurations": {
+        "title": "Configurations",
+        "sidebar_label": "Configurations"
+      },
+      "version-0.69.0/version-0.69.0-deploy-security": {
+        "title": "Security",
+        "sidebar_label": "Security"
+      },
+      "version-0.69.0/version-0.69.0-extend-archetypes": {
+        "title": "Maven Archetypes",
+        "sidebar_label": "Maven Archetypes"
+      },
+      "version-0.69.0/version-0.69.0-extend-cli": {
+        "title": "StreamPipes CLI",
+        "sidebar_label": "StreamPipes CLI"
+      },
+      "version-0.69.0/version-0.69.0-extend-first-processor": {
+        "title": "Your first data processor",
+        "sidebar_label": "Your first data processor"
+      },
+      "version-0.69.0/version-0.69.0-extend-sdk-event-model": {
+        "title": "SDK Guide: Event Model",
+        "sidebar_label": "SDK: Event Model"
+      },
+      "version-0.69.0/version-0.69.0-extend-sdk-migration-service-discovery": {
+        "title": "Migration Guide: New Service Discovery in 0.69.0",
+        "sidebar_label": "Migration Guide: 0.69.0"
+      },
+      "version-0.69.0/version-0.69.0-extend-sdk-stream-requirements": {
+        "title": "SDK Guide: Stream Requirements",
+        "sidebar_label": "SDK: Stream Requirements"
+      },
+      "version-0.69.0/version-0.69.0-extend-setup": {
+        "title": "Development Setup",
+        "sidebar_label": "Development Setup"
+      },
+      "version-0.69.0/version-0.69.0-extend-tutorial-data-processors": {
+        "title": "Tutorial: Data Processors",
+        "sidebar_label": "Tutorial: Data Processors"
+      },
+      "version-0.69.0/version-0.69.0-extend-tutorial-data-sinks": {
+        "title": "Tutorial: Data Sinks",
+        "sidebar_label": "Tutorial: Data Sinks"
+      },
+      "version-0.69.0/version-0.69.0-extend-tutorial-data-sources": {
+        "title": "Tutorial: Data Sources",
+        "sidebar_label": "Tutorial: Data Sources"
       }
     },
     "links": {
