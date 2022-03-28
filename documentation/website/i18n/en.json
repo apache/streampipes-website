@@ -2465,6 +2465,14 @@
         "title": "Configurations",
         "sidebar_label": "Configurations"
       },
+      "version-0.69.0/version-0.69.0-use-dashboard": {
+        "title": "Live Dashboard",
+        "sidebar_label": "Live Dashboard"
+      },
+      "version-0.69.0/version-0.69.0-use-data-explorer": {
+        "title": "Data Explorer",
+        "sidebar_label": "Data Explorer"
+      },
       "version-0.69.0/version-0.69.0-deploy-security": {
         "title": "Security",
         "sidebar_label": "Security"

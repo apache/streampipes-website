@@ -1,7 +1,8 @@
 ---
-id: use-dashboard
+id: version-0.69.0-use-dashboard
 title: Live Dashboard
 sidebar_label: Live Dashboard
+original_id: use-dashboard
 ---
 
 The live dashboard can be used to visualize live data of data streams using a set of visualizations
