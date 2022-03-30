@@ -342,6 +342,8 @@ In some cases, the detected hostname is not resolvable from within a container (
 
 Now we are ready to start our service!
 
+Configure your IDE to provide an environment variable called ``SP_DEBUG`` with value ``true`` when starting the project.
+
 Execute the main method in the class `Init` we've just created, open a web browser and navigate to http://localhost:8090 (or the port you have assigned).
 
 You should see something as follows:

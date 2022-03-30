@@ -193,6 +193,8 @@ Now we are ready to start our first container!
 
 Execute the main method in the class `Init`, open a web browser and navigate to http://localhost:8090, or change the port according to the value of the ``SP_PORT`` variable in the env file.
 
+Configure your IDE to provide an environment variable called ``SP_DEBUG`` with value ``true`` when starting the project.
+
 You should see something as follows:
 
 <img src="/docs/img/tutorial-sources/pe-overview.PNG" alt="Pipeline Element Container Overview">

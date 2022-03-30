@@ -18,6 +18,25 @@ In order to quickly test developed pipeline elements without needing to install 
 The CLI tool allows to switch to several templates (based on docker-compose) depending on the role. 
 
 The documentation on the usage of the CLI tool is available [here](06_extend-cli.md).
+
+## Override the SP_HOST variable
+
+By default, the backend/core of StreamPipes registers itself within StreamPipes' service discovery mechanism using an auto-discovered hostname. 
+Usually, this will be an IP address from the Docker network, which is not resolvable from outside. Therefore, for local development you need to override the hostname with an IP address which is accessible from your local host where you develop extensions.
+When using the CLI, open the CLI folder ``installer/cli``, navigate to ``deploy/standalone/backend``, open the ``docker-compose.dev.yml`` file and add the SP_HOST env variable, e.g.
+
+```
+version: "3.4"
+services:
+  backend:
+    ports:
+      - "8030:8030"
+    environment:
+      - SP_HOST=host.docker.internal
+```
+
+Note that host.docker.internal will work as an alias under Docker for Desktop on Windows and Mac, but not on Linux or M1. In this case, provide a resolvable hostname or IP address manually.
+
 ## Starter projects
 
 Now, once you've started the development instance, you are ready to develop your very first pipeline element.
