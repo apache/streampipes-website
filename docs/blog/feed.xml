@@ -4,7 +4,7 @@
         <title>Apache StreamPipes Blog</title>
         <link>https://streampipes.apache.org/docs/blog</link>
         <description>The best place to stay up-to-date with the latest Apache StreamPipes news and events.</description>
-        <lastBuildDate>Thu, 01 Jan 1970 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 05 Sep 2022 06:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
@@ -13,6 +13,16 @@
             <link>https://streampipes.apache.org/docs/blog</link>
         </image>
         <copyright>Copyright © 2022 The Apache Software Foundation</copyright>
+        <item>
+            <title><![CDATA[Using Factory I/O with StreamPipes]]></title>
+            <link>https://streampipes.apache.org/docs/blog/2022/09/05/using-factory.io-with-streampipes.html</link>
+            <guid>https://streampipes.apache.org/docs/blog/2022/09/05/using-factory.io-with-streampipes.html</guid>
+            <pubDate>Mon, 05 Sep 2022 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">10 minutes to read</div></strong><br></p>
+<p>This tutorial shows how you can stream sensor data into StreamPipes from a simulation environment (Factory I/O). The simulation environment is controlled by a &quot;Siemens S7-1200&quot; PLC and shows a conveyor belt which sorts packages by their height. The tutorial is based on the upcoming version 0.70.0 and teaches you how to load the sensor data, build a pipeline, preprocess the data and create visualizations.</p>
+<p><img class="blog-image" style="max-width:75%;" src="/docs/blog/assets/2022-09-05/plc.jpg" alt="plc"><br></p>
+]]></description>
+        </item>
         <item>
             <title><![CDATA[Apache StreamPipes release 0.69.0]]></title>
             <link>https://streampipes.apache.org/docs/blog/2022/03/21_release/0690.html</link>
