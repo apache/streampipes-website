@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Apache StreamPipes release 0.70.0 · Apache StreamPipes</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="**&lt;div style=&quot;float: left; padding-right: 40px;&quot;&gt;6 minutes to read&lt;/div&gt;**"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Apache StreamPipes release 0.70.0 · Apache StreamPipes"/><meta property="og:type" content="website"/><meta property="og:url" content="https://streampipes.apache.org/docs/blog/2022/10/13/release-070.html"/><meta property="og:description" content="**&lt;div style=&quot;float: left; padding-right: 40px;&quot;&gt;6 minutes to read&lt;/div&gt;**"/><meta property="og:image" content="https://streampipes.apache.org/docs/img/favicon.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://streampipes.apache.org/docs/img/docusaurus.png"/><link rel="shortcut icon" href="/docs/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://streampipes.apache.org/docs/blog/atom.xml" title="Apache StreamPipes Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://streampipes.apache.org/docs/blog/feed.xml" title="Apache StreamPipes Blog RSS Feed"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-154181944-1"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments); }
+              gtag('js', new Date());
+              gtag('config', 'UA-154181944-1');
+            </script><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/><link rel="stylesheet" href="/docs/css/admonition.css"/><link rel="stylesheet" href="/docs/css/custom.css"/><link rel="stylesheet" href="/docs/css/code-block-buttons.css"/><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script><script type="text/javascript" src="/docs/js/custom.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/prism.css"/><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/sp-logo-color-docs.png" alt="Apache StreamPipes"/></a><a href="/docs/versions.html"><h3>0.70.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/docs/user-guide-introduction.html" target="_self">Documentation</a></li><li class=""><a href="/docs/docs/faq-common-problems.html" target="_self">FAQ</a></li><li class="siteNavGroupActive"><a href="/docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Recent Posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Recent Posts</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/docs/blog/2022/10/13/release-070.html">Apache StreamPipes release 0.70.0</a></li><li class="navListItem"><a class="navItem" href="/docs/blog/2022/09/05/using-factory.io-with-streampipes.html">Using Factory I/O with StreamPipes</a></li><li class="navListItem"><a class="navItem" href="/docs/blog/2022/03/21_release/0690.html">Apache StreamPipes release 0.69.0</a></li><li class="navListItem"><a class="navItem" href="/docs/blog/2021/07/22_release/0680.html">Apache StreamPipes release 0.68.0</a></li><li class="navListItem"><a class="navItem" href="/docs/blog/2020/05/27/streampipes_on_k3s.html">Running StreamPipes the Kubernetes-Way using k3s</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/docs/blog/2022/10/13/release-070.html">Apache StreamPipes release 0.70.0</a></h1><p class="post-meta">October 13, 2022</p><div class="authorBlock"><p class="post-authorName"><a href="https://github.com/bossenti" target="_blank" rel="noreferrer noopener">Tim Bossenmaier</a></p><div class="authorPhoto"><a href="https://github.com/bossenti" target="_blank" rel="noreferrer noopener"><img src="/docs/img/bossenmaier.png" alt="Tim Bossenmaier"/></a></div></div></header><div><span><p><strong><div style="float: left; padding-right: 40px;">6 minutes to read</div></strong>
+<br></p>
+<p>The Apache StreamPipes (incubating) community is delighted to announce the release of Apache StreamPipes version 0.70.0!
+Key highlights of this release include many enhancements to the data explorer for fast exploration of IoT data and
+a brand new asset management that allows importing and exporting of StreamPipes resources.
+In addition, our new version includes more than 50 improvements and bug fixes.</p>
+<!--truncate-->
+<p>The current release can be downloaded <a href="https://streampipes.apache.org/download.html">here</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="preview-of-event-schema"></a><a href="#preview-of-event-schema" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Preview of Event Schema</h2>
+<p>A very important and inevitable step when connecting to a data source with Apache StreamPipes
+is the definition of the event schema. By collecting some sample events, Apache StreamPipes is able to suggest
+an event schema that describes the data structure of the incoming events.
+Although this works quite well in the vast majority of cases, there is usually a need to modify the proposed
+event schema to some degree or add additional fields. So far, a user has gotten little idea of what
+the revised data source event schema looks like until the adapter has been created and some data was consumed.
+With this release, we have included a before/after comparison of the events while defining the event schema.
+This allows to compare the proposed events of Apache StreamPipes (<code>before</code>) with the events after
+all the user's changes have been applied (<code>after</code>).
+The after view adapts to each interaction of the user.</p>
+<p><img class="blog-image" style="max-width:90%;" src="/docs/blog/assets/2022-10-13/event-schema-preview.png"></p>
+<h2><a class="anchor" aria-hidden="true" id="export-and-import-streampipes-resource"></a><a href="#export-and-import-streampipes-resource" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Export and Import StreamPipes Resource</h2>
+<p>With this release we introduce a completely new module called <code>Asset Management</code>.
+This can be selected in the menu bar of the modules on the left side as the third last icon and
+is marked by a construction icon. This module allows to combine several StreamPipes resources to a so called <code>Asset</code>,
+which can be exported and re-imported later. To do this, a new asset must first be created.
+Afterwards the asset can be edited and the following detail view allows to link all resources
+available in StreamPipes to the asset. After the asset has been finally saved, the asset (inlcuding all resources) can be downloaded
+within the configuration module by switching to the <code>Export/Import</code> tab. All existing assets are listed there and
+can be selected for download.
+The downloaded file can then be re-imported later in the same or another StreamPipes instance at the same place.</p>
+<p><img src="/docs/blog/assets/2022-10-13/asset-manager.gif" alt="demonstration how to create an asset and download it afterwards in form of a gif"></p>
+<h2><a class="anchor" aria-hidden="true" id="download-data-of-configured-query-from-data-lake"></a><a href="#download-data-of-configured-query-from-data-lake" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Download Data of Configured Query from Data Lake</h2>
+<p>Another new feature is the ability to download or export data from the StreamPipes data lake
+defined by a user-defined query. Previously, it was only possible to download all events belonging to a data lake index
+from the <code>Data Lake</code> tab of the configuration menu. In addition to this, each widget in the <code>Data Explorer</code>
+offers the possibility to download the corresponding data. The underlying query is created from the configuration
+of the widget and is also used to create the widget's figure.
+The download supports both <code>CSV</code> and <code>JSON</code> format.</p>
+<p><img src="/docs/blog/assets/2022-10-13/custom-query-download.gif" alt="demonstration how to download the data of a custom data lake query in form of a gif"></p>
+<h2><a class="anchor" aria-hidden="true" id="slide-view-in-data-explorer"></a><a href="#slide-view-in-data-explorer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Slide View in Data Explorer</h2>
+<p>Traditionally, the graphs created in the Data Explorer are displayed in a grid view, where the user can adjust
+the arrangement of the figures as well as their height and width.
+With this release, another option for displaying the dashboard widgets is available: the slide view.
+This view allows to display a single graph in full-screen mode and switch between views using a horizontal menu bar.
+When a new <code>Data View</code> is created in the Data Explorer, a choice can be made between <code>grid view</code> and
+<code>slide view</code> as the default display mode.
+Once a <code>Data View</code> is created, the display mode can be changed by clicking the icon in the upper left corner
+right next to the <code>Back</code> button.</p>
+<p><img src="/docs/blog/assets/2022-10-13/slide-view.gif" alt="demonstration how to use the slide view in the data explorer in form of a gif"></p>
+<h2><a class="anchor" aria-hidden="true" id="templates-for-adapter-configuration"></a><a href="#templates-for-adapter-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Templates for Adapter Configuration</h2>
+<p>Similar to the processing elements, it is now possible to create templates for adapter configurations.
+This allows you to start from a previously defined set of configuration settings when creating similar adapters.
+To create a template for an adapter configuration, start by creating a new adapter and
+configuring all the settings that will be part of the template. Before proceeding to the field
+configuration (the second step of adapter creation), save the current configuration as a template.
+Whenever a new instance of the same adapter is created, the template can be selected from
+the drop-down menu that appears. Templates are only available for the same type of adapter (obviously).</p>
+<p><img src="/docs/blog/assets/2022-10-13/adapter-template.gif" alt="demonstration how to create an adapter template in form of a gif"></p>
+<h2><a class="anchor" aria-hidden="true" id="upload-multiple-files-at-once"></a><a href="#upload-multiple-files-at-once" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Upload Multiple Files at Once</h2>
+<p>A rather small but very handy improvement is the possibility to upload multiple files at once to StreamPipes.
+When you click the <code>UPLOAD NEW FILE</code> button in the <code>File Management</code> module, it is now possible to select
+as many files as you want in the file upload dialog.</p>
+<p><br></p>
+<p>To get a comprehensive overview of all changes released within Apache StreamPipes 0.70.0
+please visit our <a href="https://github.com/apache/incubator-streampipes/blob/release/0.70.0/RELEASE_NOTES.md#0700">release notes</a>.</p>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/docs/blog/">Recent Posts</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#preview-of-event-schema">Preview of Event Schema</a></li><li><a href="#export-and-import-streampipes-resource">Export and Import StreamPipes Resource</a></li><li><a href="#download-data-of-configured-query-from-data-lake">Download Data of Configured Query from Data Lake</a></li><li><a href="#slide-view-in-data-explorer">Slide View in Data Explorer</a></li><li><a href="#templates-for-adapter-configuration">Templates for Adapter Configuration</a></li><li><a href="#upload-multiple-files-at-once">Upload Multiple Files at Once</a></li></ul></nav></div><div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/sp-logo-color.png" alt="Apache StreamPipes" width="66"/></a><div><h5>Docs</h5><a href="/docs/docs/user-guide-introduction">User Guide</a><a href="/docs/docs/dev-guide-introduction">Developer Guide</a><a href="/docs/docs/faq-common-problems">Frequently Asked Questions</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/streampipes" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/streampipes" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://github.com/apache/incubator-streampipes" target="_blank" rel="noreferrer noopener">Github</a><a href="https://hub.docker.com/u/streampipes" target="_blank" rel="noreferrer noopener">Docker Hub</a></div><div><h5>More</h5><a href="/docs/blog">Blog</a><a href="https://streampipes.apache.org">Website</a><a href="https://www.apache.org/foundation/policies/privacy.html">Privacy</a><a class="github-button" href="https://github.com/apache/incubator-streampipes" data-icon="octicon-star" data-count-href="/streampipes/streampipes/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2022 The Apache Software Foundation<p style="margin-bottom:0px;margin-left:20px;margin-right:20px">Disclaimer: Apache StreamPipes (incubating) is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.</p></section></footer></div></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '0fedc89dddf2810657708b178e56ef02',
+                indexName: 'streampipes',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

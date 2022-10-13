@@ -2,12 +2,29 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://streampipes.apache.org/docs/blog</id>
     <title>Apache StreamPipes Blog</title>
-    <updated>2022-09-05T06:00:00.000Z</updated>
+    <updated>2022-10-13T06:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://streampipes.apache.org/docs/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Apache StreamPipes news and events.</subtitle>
     <logo>https://streampipes.apache.org/docs/img/sp-logo-color-docs.png</logo>
     <rights>Copyright © 2022 The Apache Software Foundation</rights>
+    <entry>
+        <title type="html"><![CDATA[Apache StreamPipes release 0.70.0]]></title>
+        <id>https://streampipes.apache.org/docs/blog/2022/10/13/release-070.html</id>
+        <link href="https://streampipes.apache.org/docs/blog/2022/10/13/release-070.html"/>
+        <updated>2022-10-13T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">6 minutes to read</div></strong>
+<br></p>
+<p>The Apache StreamPipes (incubating) community is delighted to announce the release of Apache StreamPipes version 0.70.0!
+Key highlights of this release include many enhancements to the data explorer for fast exploration of IoT data and
+a brand new asset management that allows importing and exporting of StreamPipes resources.
+In addition, our new version includes more than 50 improvements and bug fixes.</p>
+]]></summary>
+        <author>
+            <name>Tim Bossenmaier</name>
+            <uri>https://github.com/bossenti</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Using Factory I/O with StreamPipes]]></title>
         <id>https://streampipes.apache.org/docs/blog/2022/09/05/using-factory.io-with-streampipes.html</id>
