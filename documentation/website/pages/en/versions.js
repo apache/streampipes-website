@@ -45,7 +45,7 @@ function Versions(props) {
                   <a href={`${siteConfig.baseUrl}docs/user-guide-introduction`}>Documentation</a>
                 </td>
                 <td>
-                  <a href={`${repoUrl}/releases/tag/${latestVersion}`}>Release Notes</a>
+                  <a href={`${repoUrl}/releases/tag/release/${latestVersion}`}>Release Notes</a>
                 </td>
               </tr>
             </tbody>
@@ -55,42 +55,58 @@ function Versions(props) {
             install this project.
           </p>
           <h3 id="rc">Pre-release versions</h3>
+          <p>The current development status can be found in our dev-branch on GitHub or in our SNAPSHOT Docker images. <br/>
+            Please note that the software is still under development, which means that features may still change or disappear or behave error-prone until the next release.</p>
           <table className="versions">
             <tbody>
               <tr>
-                <th>master</th>
+                <th>dev</th>
                 <td>
-                  <a href={`${siteConfig.baseUrl}docs/next/user-guide-introduction`}>Documentation</a>
+                  <a href={"???"}>Snapshot Build</a>
                 </td>
                 <td>
-                  <a href="">Release Notes</a>
+                  <a href="https://github.com/apache/incubator-streampipes/tree/dev">Development Branch</a>
                 </td>
               </tr>
             </tbody>
           </table>
-          <p>Other text describing this section.</p>
+          <p></p>
           <h3 id="archive">Past Versions</h3>
           <table className="versions">
             <tbody>
               {versions.map(
                 version =>
-                  version !== latestVersion && (
+                  version !== latestVersion && !version.includes("pre-asf") && (
                     <tr>
                       <th>{version}</th>
                       <td>
                         <a href={`${siteConfig.baseUrl}docs/${version}/user-guide-introduction`}>Documentation</a>
                       </td>
                       <td>
-                        <a href={`${repoUrl}/releases/tag/${version}`}>Release Notes</a>
+                        <a href={`${repoUrl}/releases/tag/release/${version}`}>Release Notes</a>
                       </td>
                     </tr>
                   ),
+              )}
+              {versions.map(
+                  version =>
+                      version !== latestVersion && version.includes("pre-asf") && (
+                          <tr>
+                            <th>{version}</th>
+                            <td>
+                              <a href={`${siteConfig.baseUrl}docs/${version}/user-guide-introduction`}>Documentation</a>
+                            </td>
+                            <td>
+                              <a href={`${repoUrl}/releases/tag/${version.replace("-pre-asf", "")}`}>Release Notes</a>
+                            </td>
+                          </tr>
+                      ),
               )}
             </tbody>
           </table>
           <p>
             You can find past versions of this project on{' '}
-            <a href={repoUrl}>GitHub</a>.
+            <a href={`${repoUrl}/releases`}>GitHub</a>
           </p>
         </div>
       </Container>
