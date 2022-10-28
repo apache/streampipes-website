@@ -55,17 +55,18 @@ function Versions(props) {
             install this project.
           </p>
           <h3 id="rc">Pre-release versions</h3>
-          <p>The current development status can be found in our dev-branch on GitHub or in our SNAPSHOT Docker images. <br/>
-            Please note that the software is still under development, which means that features may still change or disappear or behave error-prone until the next release.</p>
+          <p>The current development status can be found in our dev-branch on GitHub.<br/>
+            Please note that the software is still under development, which means that features may still change or disappear or behave error-prone until the next release.<br/>
+            If you have ideas for new features, you can discuss them on the mailing list or create an entry in the issue tracker.</p>
           <table className="versions">
             <tbody>
               <tr>
                 <th>dev</th>
                 <td>
-                  <a href={"???"}>Snapshot Build</a>
+                  <a href="https://github.com/apache/incubator-streampipes/tree/dev">Development Branch</a>
                 </td>
                 <td>
-                  <a href="https://github.com/apache/incubator-streampipes/tree/dev">Development Branch</a>
+                  <a href="https://issues.apache.org/jira/projects/STREAMPIPES/issues/">Issue Tracker</a>
                 </td>
               </tr>
             </tbody>
