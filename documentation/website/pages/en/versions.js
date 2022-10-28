@@ -42,10 +42,10 @@ function Versions(props) {
               <tr>
                 <th>{latestVersion}</th>
                 <td>
-                  <a href={`${siteConfig.baseUrl}docs/user-guide-introduction`}>Documentation</a>
+                  <a href={`${siteConfig.baseUrl}docs/user-guide-introduction`}>&#x1F4DA; Documentation</a>
                 </td>
                 <td>
-                  <a href={`${repoUrl}/releases/tag/${latestVersion}`}>Release Notes</a>
+                  <a href={`${repoUrl}/releases/tag/release/${latestVersion}`}>&#x1F5DE; Release Notes</a>
                 </td>
               </tr>
             </tbody>
@@ -55,42 +55,61 @@ function Versions(props) {
             install this project.
           </p>
           <h3 id="rc">Pre-release versions</h3>
+          <p>The current development status can be found in our dev-branch on GitHub.<br/>
+            Please note that the software is still under development, which means that features may still change or disappear or behave error-prone until the next release.<br/>
+            If you have ideas for new features, you can discuss them on the mailing list or create an entry in the issue tracker.</p>
           <table className="versions">
             <tbody>
               <tr>
-                <th>master</th>
                 <td>
-                  <a href={`${siteConfig.baseUrl}docs/next/user-guide-introduction`}>Documentation</a>
+                  <a href="https://github.com/apache/incubator-streampipes/tree/dev">&#128421; Development Branch</a>
                 </td>
                 <td>
-                  <a href="">Release Notes</a>
+                  <a href="https://streampipes.apache.org/mailinglists.html">&#x1F4EF; Mailing list</a>
+                </td>
+                <td>
+                  <a href="https://issues.apache.org/jira/projects/STREAMPIPES/issues/">&#x1F4A1; Issue Tracker</a>
                 </td>
               </tr>
             </tbody>
           </table>
-          <p>Other text describing this section.</p>
+          <p></p>
           <h3 id="archive">Past Versions</h3>
           <table className="versions">
             <tbody>
               {versions.map(
                 version =>
-                  version !== latestVersion && (
+                  version !== latestVersion && !version.includes("pre-asf") && (
                     <tr>
                       <th>{version}</th>
                       <td>
-                        <a href={`${siteConfig.baseUrl}docs/${version}/user-guide-introduction`}>Documentation</a>
+                        <a href={`${siteConfig.baseUrl}docs/${version}/user-guide-introduction`}>&#x1F4DA; Documentation</a>
                       </td>
                       <td>
-                        <a href={`${repoUrl}/releases/tag/${version}`}>Release Notes</a>
+                        <a href={`${repoUrl}/releases/tag/release/${version}`}>&#x1F5DE; Release Notes</a>
                       </td>
                     </tr>
                   ),
+              )}
+              {versions.map(
+                  version =>
+                      version !== latestVersion && version.includes("pre-asf") && (
+                          <tr>
+                            <th>{version}</th>
+                            <td>
+                              <a href={`${siteConfig.baseUrl}docs/${version}/user-guide-introduction`}>&#x1F4DA; Documentation</a>
+                            </td>
+                            <td>
+                              <a href={`${repoUrl}/releases/tag/${version.replace("-pre-asf", "")}`}>&#x1F5DE; Release Notes</a>
+                            </td>
+                          </tr>
+                      ),
               )}
             </tbody>
           </table>
           <p>
             You can find past versions of this project on{' '}
-            <a href={repoUrl}>GitHub</a>.
+            <a href={`${repoUrl}/releases`}>GitHub</a>
           </p>
         </div>
       </Container>
