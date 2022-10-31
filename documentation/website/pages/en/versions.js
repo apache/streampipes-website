@@ -65,6 +65,9 @@ function Versions(props) {
                   <a href="https://github.com/apache/incubator-streampipes/tree/dev">&#128421; Development Branch</a>
                 </td>
                 <td>
+                  <a href="https://streampipes.apache.org/docs/docs/next/user-guide-introduction">&#x1F6A7; Documentation</a>
+                </td>
+                <td>
                   <a href="https://streampipes.apache.org/mailinglists.html">&#x1F4EF; Mailing list</a>
                 </td>
                 <td>
