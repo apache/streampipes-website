@@ -2516,6 +2516,18 @@
       "version-0.69.0/version-0.69.0-extend-tutorial-data-sources": {
         "title": "Tutorial: Data Sources",
         "sidebar_label": "Tutorial: Data Sources"
+      },
+      "version-0.70.0/version-0.70.0-try-installation": {
+        "title": "Installation",
+        "sidebar_label": "Installation"
+      },
+      "version-0.70.0/version-0.70.0-extend-setup": {
+        "title": "Development Setup",
+        "sidebar_label": "Development Setup"
+      },
+      "version-0.70.0/version-0.70.0-extend-tutorial-data-sources": {
+        "title": "Tutorial: Data Sources",
+        "sidebar_label": "Tutorial: Data Sources"
       }
     },
     "links": {

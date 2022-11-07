@@ -39,8 +39,6 @@ const siteConfig = {
         indexName: 'streampipes',
         algoliaOptions: {} // Optional, if provided by Algolia
     },
-    gaTrackingId: 'UA-154181944-1',
-    gaGtag: true,
 
     disableHeaderTitle: true,
     docsSideNavCollapsible: true,
@@ -64,20 +62,20 @@ const siteConfig = {
         theme: 'atom-one-dark',
     },
 
-    scripts: ['https://code.jquery.com/jquery-3.3.1.min.js',
-        'https://buttons.github.io/buttons.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js',
+    scripts: ['/docs/js/jquery-3.3.1.min.js',
+        '/docs/js/buttons.js',
+        '/docs/js/slick.min.js',
         '/docs/js/custom.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
+        '/docs/js/clipboard.min.js',
         '/docs/js/code-block-buttons.js'],
-    stylesheets: ['https://fonts.googleapis.com/icon?family=Material+Icons',
-        'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css',
-        'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css',
-        'https://fonts.googleapis.com/css?family=Roboto',
+    stylesheets: [
+        '/docs/css/slick.min.css',
+        '/docs/css/slick-theme.min.css',
+        '/docs/css/fonts.css',
         '/docs/css/admonition.css',
         '/docs/css/custom.css',
         '/docs/css/code-block-buttons.css',
-        'https://use.fontawesome.com/releases/v5.7.2/css/all.css'],
+        '/docs/css/all.min.css'],
 
     onPageNav: 'separate',
     scrollToTop: true,
