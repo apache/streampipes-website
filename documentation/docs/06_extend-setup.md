@@ -47,4 +47,4 @@ Create the Maven archetype as described in the [Maven Archetypes](06_extend-arch
 
 ### Examples
 
-We provide several examples that explain the usage of some concepts in this [Github repo](https://github.com/apache/incubator-streampipes-examples). 
+We provide several examples that explain the usage of some concepts in this [Github repo](https://github.com/apache/streampipes-examples). 

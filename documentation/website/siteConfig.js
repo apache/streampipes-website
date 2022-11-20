@@ -86,7 +86,7 @@ const siteConfig = {
     /* Open Graph and Twitter card images */
     ogImage: 'img/favicon.png',
     twitterImage: 'img/docusaurus.png',
-    repoUrl: 'https://github.com/apache/incubator-streampipes'
+    repoUrl: 'https://github.com/apache/streampipes'
 };
 
 module.exports = siteConfig;

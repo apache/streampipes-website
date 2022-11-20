@@ -53,7 +53,7 @@ You need to have Docker installed on your system before you continue with the in
                         </span>
                     </div>
                     <div class="wrapper-instruction">
-                        <a href="https://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=incubator/streampipes/installer/0.67.0/apache-streampipes-installer-0.67.0-incubating-source-release.zip">Download</a>
+                        <a href="https://www.apache.org/dyn/mirrors/mirrors.cgi?action=download&filename=streampipes/installer/0.70.0/apache-streampipes-installer-0.70.0-incubating-source-release.zip">Download</a>
                         the latest Apache StreamPipes release and extract the zip file to a directory of your choice.
                     </div>
                 </div>
