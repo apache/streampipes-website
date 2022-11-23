@@ -27,7 +27,7 @@ const versions = require(`${CWD}/versions.json`);
 
 function Versions(props) {
   const latestVersion = versions[0];
-  const repoUrl = `https://github.com/apache/incubator-streampipes`;
+  const repoUrl = `https://github.com/apache/streampipes`;
   return (
     <div className="docMainWrapper wrapper">
       <Container className="mainContainer versionsContainer">
@@ -62,7 +62,7 @@ function Versions(props) {
             <tbody>
               <tr>
                 <td>
-                  <a href="https://github.com/apache/incubator-streampipes/tree/dev">&#128421; Development Branch</a>
+                  <a href="https://github.com/apache/streampipes/tree/dev">&#128421; Development Branch</a>
                 </td>
                 <td>
                   <a href="https://streampipes.apache.org/docs/docs/next/user-guide-introduction">&#x1F6A7; Documentation</a>
