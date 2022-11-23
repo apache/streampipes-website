@@ -101,6 +101,13 @@ class Footer extends React.Component {
                             </a>
                         </div>
                     </section>
+                    <section className="copyright">
+                        {this.props.config.copyright}
+                        <p style={{marginBottom:'0px', marginLeft:'20px', marginRight:'20px', textAlign: 'center'}}>
+                            Apache and the Apache feather logo are trademarks of The Apache Software Foundation.
+                        </p>
+                    </section>
+
                 </footer>
             </div>
 

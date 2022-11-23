@@ -53,7 +53,7 @@ const siteConfig = {
     },
 
     copyright:
-    'Copyright © ' +
+    'Copyright © 2019 - ' +
     new Date().getFullYear() +
     ' The Apache Software Foundation',
 
