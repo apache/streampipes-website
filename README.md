@@ -1,8 +1,8 @@
-[![Github Actions](https://img.shields.io/github/workflow/status/apache/incubator-streampipes-website/Build%20and%20Deploy)](https://github.com/apache/incubator-streampipes-website/actions/)
-# Apache StreamPipes (incubating) Website + Docs
+[![Github Actions](https://img.shields.io/github/workflow/status/apache/streampipes-website/Build%20and%20Deploy)](https://github.com/apache/streampipes-website/actions/)
+# Apache StreamPipes Website + Docs
 
 ## Intro
-This repository includes the website and documentation of Apache StreamPipes (incubating) on [https://streampipes.apache.org](https://streampipes.apache.org).
+This repository includes the website and documentation of Apache StreamPipes on [https://streampipes.apache.org](https://streampipes.apache.org).
 Two different technologies are used to create both sites:
 * The website uses [harp.js](http://harpjs.com/) to create static pages from ejs files.
 * The documentation uses [Docusaurus](https://docusaurus.io/) to create a versioned documentation.

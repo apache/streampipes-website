@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://www.github.com/apache/incubator-streampipes-website"
+    "url": "https://www.github.com/apache/streampipes-website"
   },
   "keywords": [],
   "license": "Apache License 2.0"

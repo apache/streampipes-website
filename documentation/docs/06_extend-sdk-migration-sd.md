@@ -17,7 +17,7 @@ Therefore, we recommend to reinstall StreamPipes when updating to 0.69.0. We cur
 
 ## Installation
 * Before upgrading to 0.69.0, clean any existing installation (e.g., by running ``docker-compose down -v``) and make sure that no volumes of StreamPipes are left.
-* Upgrade to the latest installer version (currently the dev branch of incubator-streampipes-installer)
+* Upgrade to the latest installer version (can be found at [streampipes/installer](https://github.com/apache/streampipes/tree/dev/installer))
 * Upon restart, make sure that the setup dialog appears (make sure that the new StreamPipes logo appears) and re-initialize the system.
 
 ## SDK changes
