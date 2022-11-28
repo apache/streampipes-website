@@ -101,6 +101,10 @@
         "title": "SDK Guide: Event Model",
         "sidebar_label": "SDK: Event Model"
       },
+      "extend-sdk-functions": {
+        "title": "SDK Guide: Functions",
+        "sidebar_label": "SDK: Functions"
+      },
       "extend-sdk-migration-service-discovery": {
         "title": "Migration Guide: New Service Discovery in 0.69.0",
         "sidebar_label": "Migration Guide: 0.69.0"
@@ -2544,11 +2548,11 @@
       "💻 Extend StreamPipes": "💻 Extend StreamPipes",
       "🔧 Technicals": "🔧 Technicals",
       "👪 Community": "👪 Community",
+      "FAQ": "FAQ",
       "Basics": "Basics",
       "Tutorials": "Tutorials",
       "SDK Reference": "SDK Reference",
       "Configuration": "Configuration",
-      "FAQ": "FAQ",
       "Getting Started": "Getting Started",
       "Pipeline Elements": "Pipeline Elements",
       "Extending StreamPipes": "Extending StreamPipes",
