@@ -19,8 +19,8 @@ We also maintain a Slack channel which might be a good way for problems that req
 
 ## Bugs and Feature Requests
 
-If you've found a bug or have a feature that you'd love to see in StreamPipes, feel free to create an issue in our Jira:
-[https://issues.apache.org/jira/projects/STREAMPIPES](https://issues.apache.org/jira/projects/STREAMPIPES)
+If you've found a bug or have a feature that you'd love to see in StreamPipes, feel free to create an issue on [GitHub](https://github.com/apache/streampipes/issues)
+or [discuss your ideas](https://github.com/apache/streampipes/discussions/categories/ideas).
 
 
 

@@ -71,7 +71,7 @@ function Versions(props) {
                   <a href="https://streampipes.apache.org/mailinglists.html">&#x1F4EF; Mailing list</a>
                 </td>
                 <td>
-                  <a href="https://issues.apache.org/jira/projects/STREAMPIPES/issues/">&#x1F4A1; Issue Tracker</a>
+                  <a href="https://github.com/apache/streampipes/issues">&#x1F4A1; Issue Tracker</a>
                 </td>
               </tr>
             </tbody>
