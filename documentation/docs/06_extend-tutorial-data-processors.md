@@ -4,13 +4,13 @@ title: Tutorial: Data Processors
 sidebar_label: Tutorial: Data Processors
 ---
 
-In this tutorial, we will add a new data processor using the standalone wrapper.
+In this tutorial, we will add a new data processor.
 
-From an architectural point of view, we will create a self-contained service that includes the description of the data processor and a an implementation.
+From an architectural point of view, we will create a self-contained service that includes the description of the data processor and an implementation.
 
 ## Objective
 
-We are going to create a new data processor that realized a simple geofencing algorithm - we detect vehicles that enter a specified radius around a user-defined location.
+We are going to create a new data processor that realizes a simple geofencing algorithm - we detect vehicles that enter a specified radius around a user-defined location.
 This pipeline element will be a generic element that works with any event stream that provides geospatial coordinates in form of a latitude/longitude pair.
 
 The algorithm outputs every location event once the position has entered the geofence.
@@ -32,7 +32,7 @@ Enter the following command in a command line of your choice (Apache Maven needs
 ```
 mvn archetype:generate \
 -DarchetypeGroupId=org.apache.streampipes -DarchetypeArtifactId=streampipes-archetype-extensions-jvm \
--DarchetypeVersion=0.69.0 -DgroupId=my.groupId \
+-DarchetypeVersion=0.70.0 -DgroupId=my.groupId \
 -DartifactId=my-example -DclassNamePrefix=MyExample -DpackageName=mypackagename
 ```
 
@@ -76,7 +76,7 @@ public class GeofencingProcessor extends StreamPipesDataProcessor {
 
  @Override
  public DataProcessorDescription declareModel() {
-  return ProcessingElementBuilder.create("org.streampipes.tutorial-geofencing")
+  return ProcessingElementBuilder.create("org.apache.streampipes.tutorial-geofencing")
           .category(DataProcessorType.ENRICH)
           .withAssets(Assets.DOCUMENTATION, Assets.ICON)
           .build();
@@ -108,7 +108,7 @@ Similar to data sources, the SDK provides a builder class to generate the descri
 Delete the content within the ``declareModel`` method and add the following lines to the `declareModel` method:
 
 ```java
-return ProcessingElementBuilder.create("org.streampipes.tutorial.geofencing", "Geofencing", "A simple geofencing data processor")
+return ProcessingElementBuilder.create("org.apache.streampipes.tutorial.geofencing", "Geofencing", "A simple geofencing data processor")
 ```
 
 This creates a new data processor with the ID, title and description assigned to the element builder.
@@ -202,7 +202,7 @@ The radius value can be extracted as follows:
 int radius = parameters.extractor().singleValueParameter("radius", Float.class);
 ```
 
-Great! That's all we need to describe a data processor for usage in StreamPipes. Your controller class should look as follows:
+Great! That's all we need to describe a data processor for usage in StreamPipes. Your processor class should look as follows:
 
 ```java
 package org.apache.streampipes.pe.example;
@@ -281,7 +281,7 @@ public class GeofencingProcessor extends StreamPipesDataProcessor {
 
 Everything we need to do now is to add an implementation.
 
-Open the class `GeofencingProcessor.java` and add the following piece of code to the onEvent method, which realizes the Geofencing functionality:
+Add the following piece of code to the onEvent method, which realizes the Geofencing functionality:
 
 ```java
 
@@ -343,14 +343,9 @@ Now we are ready to start our service!
 
 Configure your IDE to provide an environment variable called ``SP_DEBUG`` with value ``true`` when starting the project.
 
-Execute the main method in the class `Init` we've just created, open a web browser and navigate to http://localhost:8090 (or the port you have assigned).
+Execute the main method in the class `Init` we've just created.
 
-You should see something as follows:
-
-<img src="/docs/img/tutorial-processors/pe-overview-flink.PNG" alt="Pipeline Element Container Overview">
-
-
-The services automatically registers itself in StreamPipes.
+The service automatically registers itself in StreamPipes.
 To install the just created element, open the StreamPipes UI and follow the manual provided in the [user guide](03_use-install-pipeline-elements.md).
 
 ## Read more

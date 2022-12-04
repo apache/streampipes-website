@@ -23,7 +23,7 @@ Enter the following command in a command line of your choice (Apache Maven needs
 
 ```
 mvn archetype:generate -DarchetypeGroupId=org.apache.streampipes \
--DarchetypeArtifactId=streampipes-archetype-extensions-jvm -DarchetypeVersion=0.68.0 \
+-DarchetypeArtifactId=streampipes-archetype-extensions-jvm -DarchetypeVersion=0.70.0 \
 -DgroupId=org.streampipes.tutorial -DartifactId=sink-tutorial -DclassNamePrefix=Rest -DpackageName=mypackage
 ```
 
@@ -63,7 +63,7 @@ public class RestSink extends StreamPipesDataSink {
 
   @Override
   public DataSinkDescription declareModel() {
-    return DataSinkBuilder.create("org.streampipes.tutorial.pe.sink.rest")
+    return DataSinkBuilder.create("org.apache.streampipes.tutorial.pe.sink.rest")
         .category(DataSinkType.NOTIFICATION)
         .withAssets(Assets.DOCUMENTATION, Assets.ICON)
         .withLocales(Locales.EN)
@@ -219,9 +219,7 @@ Now we are ready to start our service!
 
 Configure your IDE to provide an environment variable called ``SP_DEBUG`` with value ``true`` when starting the project.
 
-Execute the main method in the class `Init` we've just created, open a web browser and navigate to http://localhost:8090 (or the port you have assigned).
-
-The services automatically registers itself in StreamPipes.
+Execute the main method in the class `Init` we've just created. The service automatically registers itself in StreamPipes.
 
 To install the created element, open the StreamPipes UI and follow the manual provided in the [user guide](03_use-install-pipeline-elements.md).
 
