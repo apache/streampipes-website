@@ -183,8 +183,8 @@ Once users start a pipeline that uses our geofencing component, the _onInvocatio
 Next, we are interested in the fields of the input event stream that contains the latitude and longitude value we would like to compute against the geofence center location as follows:
 
 ```java
-String latitudeFieldName = extractor.mappingPropertyValue("latitude-field");
-String longitudeFieldName = extractor.mappingPropertyValue("longitude-field");
+String latitudeFieldName = parameters.extractor().mappingPropertyValue("latitude-field");
+String longitudeFieldName = parameters.extractor().mappingPropertyValue("longitude-field");
 ```
 
 We use the same `internalId` we've used to define the mapping property requirements in the `declareModel` method.
@@ -232,6 +232,9 @@ public class GeofencingProcessor extends StreamPipesDataProcessor {
 
  private float centerLatitude;
  private float centerLongitude;
+ private String latitudeFieldName;
+ private String longitudeFieldName;
+ 
  private int radius;
 
  @Override
@@ -257,9 +260,13 @@ public class GeofencingProcessor extends StreamPipesDataProcessor {
  }
 
  @Override
- public void onInvocation(ProcessorParams parameters, SpOutputCollector spOutputCollector, EventProcessorRuntimeContext runtimeContext) throws SpRuntimeException {
+ public void onInvocation(ProcessorParams parameters, 
+                          SpOutputCollector spOutputCollector, 
+                          EventProcessorRuntimeContext runtimeContext) throws SpRuntimeException {
   this.centerLatitude = parameters.extractor().singleValueParameter(LATITUDE_CENTER, Float.class);
   this.centerLongitude = parameters.extractor().singleValueParameter(LONGITUDE_CENTER, Float.class);
+  this.latitudeFieldName = parameters.extractor().mappingPropertyValue("latitude-field");
+  this.longitudeFieldName = parameters.extractor().mappingPropertyValue("longitude-field");
   this.radius = parameters.extractor().singleValueParameter("radius", Integer.class);
  }
 
