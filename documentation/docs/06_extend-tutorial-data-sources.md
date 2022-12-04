@@ -32,7 +32,7 @@ Enter the following command in a command line of your choice (Apache Maven needs
 ```
 mvn archetype:generate \
 -DarchetypeGroupId=org.apache.streampipes -DarchetypeArtifactId=streampipes-archetype-extensions-jvm \
--DarchetypeVersion=0.69.0 -DgroupId=my.groupId \
+-DarchetypeVersion=0.70.0 -DgroupId=my.groupId \
 -DartifactId=my-source -DclassNamePrefix=MySource -DpackageName=mypackagename
 ```
 
@@ -75,7 +75,7 @@ In contrast, the class `AbstractAlreadyExistingStream` indicates that we only wa
 
 Next, we will add the definition of the data stream. Add the following code inside of the `declareModel` method:
 ```java
-return DataStreamBuilder.create("org.streampipes.tutorial.vehicle.position", "Vehicle Position", "An event stream " +
+return DataStreamBuilder.create("org.apache.streampipes.tutorial.vehicle.position", "Vehicle Position", "An event stream " +
           "that produces current vehicle positions")
 ```
 
@@ -104,11 +104,10 @@ In order to complete the minimum required specification of an event stream, we n
 This can be achieved by extending the builder with the respective properties:
 ```java
 .format(Formats.jsonFormat())
-.protocol(Protocols.kafka("localhost", 9094, "TOPIC_SHOULD_BE_CHANGED"))
+.protocol(Protocols.kafka("localhost", 9094, "org.apache.streampipes.tutoria.vehicle"))
 .build();
 ```
 
-Set ``org.streampipes.tutorial.vehicle`` as your new topic by replacing the term ``TOPIC_SHOULD_BE_CHANGED`.
 
 In this example, we defined that the data stream consists of events in a JSON format and that Kafka is used as a message broker to transmit events.
 The last build() method call triggers the construction of the data stream definition.
@@ -129,7 +128,7 @@ Let's assume our stream should produce some random values that are sent to Strea
       for (;;) {
         JsonObject jsonObject = new JsonObject();
         jsonObject.addProperty("timestamp", System.currentTimeMillis());
-        jsonObject.addProperty("plateNumber", "KA-FZ 1");
+        jsonObject.addProperty("plateNumber", "KA-SP 1");
         jsonObject.addProperty("latitude", random.nextDouble());
         jsonObject.addProperty("longitude", random.nextDouble());
     
@@ -191,19 +190,9 @@ In some cases, the detected hostname is not resolvable from within a container (
 
 Now we are ready to start our first container!
 
-Execute the main method in the class `Init`, open a web browser and navigate to http://localhost:8090, or change the port according to the value of the ``SP_PORT`` variable in the env file.
-
 Configure your IDE to provide an environment variable called ``SP_DEBUG`` with value ``true`` when starting the project.
 
-You should see something as follows:
-
-<img src="/docs/img/tutorial-sources/pe-overview.PNG" alt="Pipeline Element Container Overview">
-
-Click on the link of the data source to see the generated description of the pipeline element.
-
-<img src="/docs/img/tutorial-sources/pe-rdf.PNG" alt="Pipeline Element description">
-
-The container automatically registers itself in StreamPipes.
+The service automatically registers itself in StreamPipes.
 
 To install the just created element, open the StreamPipes UI and install the source over the ``Install Pipeline Elements`` section.
 
@@ -211,3 +200,5 @@ To install the just created element, open the StreamPipes UI and install the sou
 
 Congratulations! You've just created your first pipeline element for StreamPipes.
 There are many more things to explore and data sources can be defined in much more detail.
+Also consider that in some cases, you would like to create a configurable adapter, 
+where a data source can be configured by users in the UI when connecting data.

@@ -11,7 +11,7 @@ The StreamPipes command-line interface (CLI) is focused on developers in order t
 
 The main difference between the standard Docker/K8s installation is an improved communication between services running as containers and services running locally for development.
 
-The CLI can be found in the [main repository](https://github.com/apache/streampipes/tree/master/installer/cli) or in the ``compose/cli`` folder of the downloaded source code.
+The CLI can be found in the [main repository](https://github.com/apache/streampipes/tree/master/installer/cli) or in the ``installer/cli`` folder of the downloaded source code.
 
 ## TL;DR
 
