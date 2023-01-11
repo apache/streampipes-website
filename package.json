@@ -15,7 +15,7 @@
     "node-sass": "^7.0.1"
   },
   "devDependencies": {
-    "harp": "^0.32.0"
+    "harp": "^0.40.3"
   },
   "repository": {
     "type": "git",
