@@ -26,7 +26,7 @@ jobs:
           cp .htaccess build
       - name: Build Docs
         run: |
-          mkdir build/docs
+          mkdir ./build/docs
           cd documentation/website
           npm install
           npm run build
