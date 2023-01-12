@@ -20,14 +20,13 @@ jobs:
           npm run build-website
       - name: Copy asf yaml
         run: |
-          cp .asf.yaml build
+          cp .asf.yaml build/
       - name: Copy htaccess
         run: |
-          cp .htaccess build
+          cp .htaccess build/
       - name: Build Docs
         run: |
-          ls
-          mkdir -p ./build/docs
+          mkdir build/docs
           cd documentation/website
           npm install
           npm run build
