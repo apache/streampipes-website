@@ -62,12 +62,15 @@ const siteConfig = {
         theme: 'atom-one-dark',
     },
 
-    scripts: ['/docs/js/jquery-3.3.1.min.js',
+    scripts: [
+        '/docs/js/matomo.js',
+        '/docs/js/jquery-3.3.1.min.js',
         '/docs/js/buttons.js',
         '/docs/js/slick.min.js',
         '/docs/js/custom.js',
         '/docs/js/clipboard.min.js',
-        '/docs/js/code-block-buttons.js'],
+        '/docs/js/code-block-buttons.js'
+    ],
     stylesheets: [
         '/docs/css/slick.min.css',
         '/docs/css/slick-theme.min.css',
