@@ -1,7 +1,8 @@
 ---
-id: community-get-help
+id: version-0.70.0-community-get-help
 title: Get Help
 sidebar_label: Get Help
+original_id: community-get-help
 ---
 
 The Apache StreamPipes community is happy to help with any questions or problems you might have.
