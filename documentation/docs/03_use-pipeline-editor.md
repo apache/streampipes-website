@@ -39,8 +39,6 @@ Further options for a pipeline element can be displayed by hovering over a pipel
 * **Compatible element** opens a dialog which shows all pipeline elements that are compatible to the current element's output data stream. The dialog offers an alternative to selecting pipeline elements directly from the pipeline element selection in the top.
 * **Pipeline Element Recommendation** opens a dialog which shows all recommended pipeline elements that are compatible the current element's output data stream. The recommendation is based on previously connected pipeline elements and is displayed below.
 
-<img class="docs-image" src="/docs/img/03_use-pipeline-editor/04_pipeline-element-recommendation.png" alt="StreamPipes Pipeline Element Recommendation">
-
 ### Pipeline Editor Options
 Several pipeline editor options are available in the menu bar of the pipeline assembly:
 

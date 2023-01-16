@@ -2532,6 +2532,10 @@
       "version-0.70.0/version-0.70.0-extend-tutorial-data-sources": {
         "title": "Tutorial: Data Sources",
         "sidebar_label": "Tutorial: Data Sources"
+      },
+      "version-0.70.0/version-0.70.0-community-get-help": {
+        "title": "Get Help",
+        "sidebar_label": "Get Help"
       }
     },
     "links": {

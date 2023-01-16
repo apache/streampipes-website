@@ -6,7 +6,7 @@ sidebar_label: Overview
 
 This is the documentation of Apache StreamPipes.
 
-<img class="docs-image docs-image-small" src="/docs/img/01_try-overview/01_streampipes-overview.png" alt="StreamPipes Overview">
+<img class="docs-image docs-image-small docs-image-no-shadow" style="padding: 10px;" src="/docs/img/01_try-overview/01_streampipes-overview.png" alt="StreamPipes Overview">
 
 
 <div class="container grid col-3">
@@ -85,7 +85,7 @@ This is the documentation of Apache StreamPipes.
                 </a>,
                 <a href="extend-sdk-event-model.html">Event Model</a>, <a href="extend-sdk-stream-requirements.html">Stream
                  Requirements</a>, <a href="extend-sdk-static-properties.html">Static Properties</a>,
-                <a href="extend-output-strategies.html">Output Strategies</a>
+                <a href="extend-sdk-output-strategies.html">Output Strategies</a>
             </div>
         </div>
     </div>

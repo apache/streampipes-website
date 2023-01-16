@@ -7,7 +7,7 @@ sidebar_label: StreamPipes Connect
 StreamPipes Connect is the module to connect external data sources with Apache StreamPipes directly from the user interface. 
 StreamPipes Connect offers various adapters for common communication protocols and some specific sensors. Besides connecting data, StreamPipes Connect offers ways to pre-process data without the need to build pipelines and integrates a schema guesser that listens for incoming data and recommends the recognized event schema.
 
-The screenshot below illustrates the data marketplace, which is the start screen of StreamPipes Connect.
+The screenshot below illustrates the data marketplace, which shown after navigating to "StreamPipes Connect" and then clicking the "New adapter" button at the top.
 
 <img class="docs-image" src="/docs/img/03_use-connect/01_connect-overview.png" alt="StreamPipes Connect Overview">
 
@@ -19,7 +19,9 @@ Adapters are distinguished a) by the data source concept they provide (data set 
 Several filter options are available to find a suitable adapter. The configuration of a new adapter starts with selecting one of the available adapters, which starts an assistant that supports the adapter generation.
 
 ### Protocol/Basic Settings
-In the first step, basic configurations need to be provided. For instance, for an Apache PLC4X adapter, the IP address of the PLC needs to be provided. After all values are provided, the "Next" button opens the next step.
+In the first step, basic configurations need to be provided. For instance, for an Apache PLC4X adapter, the IP address of the PLC needs to be provided. In this example, we provide basic settings for connecting to an Apache Kafka broker. After all values are provided, the "Next" button opens the next step. 
+
+<img class="docs-image" src="/docs/img/03_use-connect/06_connect-create.png" alt="StreamPipes Connect Basic Settings">
 
 ### Format Specification
 The next step, format generation, is only available for generic adapters which support different message formats to be sent over the corresponding protocol. Think of a message broker that is able to consume messages in both JSON format or binary format.
@@ -52,6 +54,8 @@ For each field (also called event property) of the schema, additional configurat
 * **Unit**. Allows to specify the unit in which the value is measured. Once selected, you can also automatically convert the unit to a target unit, which will then be inserted into the data stream produced by the adapter (see screenshot below). 
 
 <img class="docs-image" src="/docs/img/03_use-connect/04_schema-editor-conversion.png" alt="StreamPipes Connect Unit Conversion">
+
+Assigning a timestamp is mandatory and can be either done by adding a timestamp from the menu, or by choosing an existing field and marking it as timestamp.
 
 ### Adapter Generation
 Finally, the adapter is ready to be started. In the _Adapter Generation_ page, a name and description for the resulting data stream must be provided.
