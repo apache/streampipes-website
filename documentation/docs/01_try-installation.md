@@ -19,14 +19,6 @@ Installation instructions can be found below.
         again) and check that Docker is installed correctly by executing docker-run hello-world</p>
 </div>
 
-<div class="admonition info">
-    <div class="admonition-title">Configure Docker</div>
-    <p>By default, Docker uses only a limited number of CPU cores and memory.
-        If you run StreamPipes on Windows or on a Mac you need to adjust the default settings.
-        To do that, click on the Docker icon in your tab bar and open the preferences.
-        Go to the advanced preferences and set the **number of CPUs to 6** (recommended) and the **Memory to 4GB**.
-        After changing the settings, Docker needs to be restarted.</p></div>
-
 ### Supported operating systems
 
 The Docker-based installation supports the operating systems **Linux**, **Mac OS X** and **Windows 10**. Older windows
@@ -138,10 +130,9 @@ Congratulations! You've successfully managed to install StreamPipes. Now we're r
     <p>In most cases, errors during the installation are due to an under-powered system.<br/>
         If there is a problem with any of the components, please restart the whole system (<code>docker-compose
             down</code> and eventually also delete the volumes).
-        Please also make sure that your system meets the hardware requirements as mentioned in the first section of the
-        installation guide.</p>
+        Please also make sure that you've assigned enough memory available to Docker.</p>
 </div>
 
 ## Next Steps
 
-That's it! To ease your first steps with StreamPipes, we've created an [interactive tutorial](01_try-tutorial.md).
+That's it! Have a look at the usage guide to learn how to use Apache StreamPipes.
