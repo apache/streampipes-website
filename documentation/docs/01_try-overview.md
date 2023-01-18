@@ -17,7 +17,7 @@ This is the documentation of Apache StreamPipes.
             </div>
             <div class="toc-content">
                 <div class="toc-section-header"><b>Your first steps with Apache StreamPipes.</b></div>
-               <a href="try-installation.html">Install StreamPipes</a>, <a href="try-tutorial.html">Interactive Tutorial</a>
+               <a href="try-installation.html">Install StreamPipes</a>
             </div>
         </div>
     </div>
