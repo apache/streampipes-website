@@ -2536,6 +2536,78 @@
       "version-0.70.0/version-0.70.0-community-get-help": {
         "title": "Get Help",
         "sidebar_label": "Get Help"
+      },
+      "version-0.90.0/version-0.90.0-try-installation": {
+        "title": "Installation",
+        "sidebar_label": "Installation"
+      },
+      "version-0.90.0/version-0.90.0-user-guide-introduction": {
+        "title": "Apache StreamPipes Documentation",
+        "sidebar_label": "Overview"
+      },
+      "version-0.90.0/version-0.90.0-use-connect": {
+        "title": "StreamPipes Connect",
+        "sidebar_label": "StreamPipes Connect"
+      },
+      "version-0.90.0/version-0.90.0-use-pipeline-editor": {
+        "title": "Pipeline Editor",
+        "sidebar_label": "Pipeline Editor"
+      },
+      "version-0.90.0/version-0.90.0-extend-cli": {
+        "title": "StreamPipes CLI",
+        "sidebar_label": "StreamPipes CLI"
+      },
+      "version-0.90.0/version-0.90.0-extend-sdk-functions": {
+        "title": "SDK Guide: Functions",
+        "sidebar_label": "SDK: Functions"
+      },
+      "version-0.90.0/version-0.90.0-extend-sdk-migration-service-discovery": {
+        "title": "Migration Guide: New Service Discovery in 0.69.0",
+        "sidebar_label": "Migration Guide: 0.69.0"
+      },
+      "version-0.90.0/version-0.90.0-extend-sdk-output-strategies": {
+        "title": "SDK Guide: Output Strategies",
+        "sidebar_label": "SDK: Output Strategies"
+      },
+      "version-0.90.0/version-0.90.0-extend-sdk-static-properties": {
+        "title": "SDK Guide: Static Properties",
+        "sidebar_label": "SDK: Static Properties"
+      },
+      "version-0.90.0/version-0.90.0-extend-sdk-stream-requirements": {
+        "title": "SDK Guide: Stream Requirements",
+        "sidebar_label": "SDK: Stream Requirements"
+      },
+      "version-0.90.0/version-0.90.0-extend-setup": {
+        "title": "Development Setup",
+        "sidebar_label": "Development Setup"
+      },
+      "version-0.90.0/version-0.90.0-extend-tutorial-data-processors": {
+        "title": "Tutorial: Data Processors",
+        "sidebar_label": "Tutorial: Data Processors"
+      },
+      "version-0.90.0/version-0.90.0-extend-tutorial-data-sinks": {
+        "title": "Tutorial: Data Sinks",
+        "sidebar_label": "Tutorial: Data Sinks"
+      },
+      "version-0.90.0/version-0.90.0-extend-tutorial-data-sources": {
+        "title": "Tutorial: Data Sources",
+        "sidebar_label": "Tutorial: Data Sources"
+      },
+      "version-0.90.0/version-0.90.0-technicals-configuration": {
+        "title": "Configuration",
+        "sidebar_label": "Configuration"
+      },
+      "version-0.90.0/version-0.90.0-community-contribute": {
+        "title": "Contribute",
+        "sidebar_label": "Contribute"
+      },
+      "version-0.90.0/version-0.90.0-pipeline-elements": {
+        "title": "Overview",
+        "sidebar_label": "Overview"
+      },
+      "version-0.90.0/version-0.90.0-user-guide-installation": {
+        "title": "Installation",
+        "sidebar_label": "Installation"
       }
     },
     "links": {
