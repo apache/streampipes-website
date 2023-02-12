@@ -32,7 +32,7 @@
     
     
       
-        <title>Using Online Machine Learning on a StreamPipes data stream - Apache StreamPipes for Python</title>
+        <title>Using Online Machine Learning on a StreamPipes data stream - Apache StreamPipes Python Client</title>
       
     
     
@@ -47,12 +47,6 @@
     
     
     
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -99,7 +93,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Apache StreamPipes for Python" class="md-header__button md-logo" aria-label="Apache StreamPipes for Python" data-md-component="logo">
+    <a href="../.." title="Apache StreamPipes Python Client" class="md-header__button md-logo" aria-label="Apache StreamPipes Python Client" data-md-component="logo">
       
   <img src="https://streampipes.apache.org/img/sp-logo-white-right.png" alt="logo">
 
@@ -111,7 +105,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Apache StreamPipes for Python
+            Apache StreamPipes Python Client
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -184,15 +178,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../1-introduction-to-streampipes-python-client/" class="md-tabs__link md-tabs__link--active">
+      <a href="../1-introduction-to-streampipes-python-client/" class="md-tabs__link">
         Examples
       </a>
     </li>
@@ -243,12 +235,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Apache StreamPipes for Python" class="md-nav__button md-logo" aria-label="Apache StreamPipes for Python" data-md-component="logo">
+    <a href="../.." title="Apache StreamPipes Python Client" class="md-nav__button md-logo" aria-label="Apache StreamPipes Python Client" data-md-component="logo">
       
   <img src="https://streampipes.apache.org/img/sp-logo-white-right.png" alt="logo">
 
     </a>
-    Apache StreamPipes for Python
+    Apache StreamPipes Python Client
   </label>
   
     <div class="md-nav__source">
@@ -354,19 +346,15 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
-        
-          
         
           
         
@@ -425,82 +413,6 @@
       <a href="../3-getting-live-data-from-the-streampipes-data-stream/" class="md-nav__link">
         Getting live data from the StreamPipes data stream
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Using Online Machine Learning on a StreamPipes data stream
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Using Online Machine Learning on a StreamPipes data stream
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-use-online-machine-learning-with-streampipes" class="md-nav__link">
-    How to use Online Machine Learning with StreamPipes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kmeans" class="md-nav__link">
-    KMeans
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hoeffdingtreeregressor" class="md-nav__link">
-    HoeffdingTreeRegressor
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#decisiontreeclassifier" class="md-nav__link">
-    DecisionTreeClassifier
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2477,7 +2389,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="using-online-machine-learning-on-a-streampipes-data-stream">Using Online Machine Learning on a StreamPipes data stream<a class="anchor-link" href="#using-online-machine-learning-on-a-streampipes-data-stream">&#182;</a></h1><p>The last example (<a href="">Getting live data from the StreamPipes data stream</a>) showed how we can connect to a data stream, and it would be possible to use Online Machine Learning with this approach and train a model with the incoming events at the <code>onEvent</code> method. However, the StreamPipes client also provides an easier way to do this with the use of the River library for Online Machine Learning. We will have a look at this now.</p>
+<h1 id="using-online-machine-learning-on-a-streampipes-data-stream">Using Online Machine Learning on a StreamPipes data stream<a class="anchor-link" href="#using-online-machine-learning-on-a-streampipes-data-stream">&#182;</a></h1><p>The last example (<a href="">Getting live data from the StreamPipes data stream</a>) showed how we can connect to a data stream and it would be possible to use Online Machine Learning with this approach and train a model with the incoming events at the <code>onEvent</code> method. However the StreamPipes client also provides an easier way to do this with the use of the River library for Online Machine Learning. We will have a look at this now.</p>
 
 </div>
 </div>

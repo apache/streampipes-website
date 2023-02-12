@@ -32,7 +32,7 @@
     
     
       
-        <title>Apache StreamPipes for Python</title>
+        <title>Apache StreamPipes Python Client</title>
       
     
     
@@ -47,12 +47,6 @@
     
     
     
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -99,7 +93,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Apache StreamPipes for Python" class="md-header__button md-logo" aria-label="Apache StreamPipes for Python" data-md-component="logo">
+    <a href="." title="Apache StreamPipes Python Client" class="md-header__button md-logo" aria-label="Apache StreamPipes Python Client" data-md-component="logo">
       
   <img src="https://streampipes.apache.org/img/sp-logo-white-right.png" alt="logo">
 
@@ -111,7 +105,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Apache StreamPipes for Python
+            Apache StreamPipes Python Client
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -243,12 +237,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Apache StreamPipes for Python" class="md-nav__button md-logo" aria-label="Apache StreamPipes for Python" data-md-component="logo">
+    <a href="." title="Apache StreamPipes Python Client" class="md-nav__button md-logo" aria-label="Apache StreamPipes Python Client" data-md-component="logo">
       
   <img src="https://streampipes.apache.org/img/sp-logo-white-right.png" alt="logo">
 
     </a>
-    Apache StreamPipes for Python
+    Apache StreamPipes Python Client
   </label>
   
     <div class="md-nav__source">
@@ -407,8 +401,6 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_3">
@@ -459,20 +451,6 @@
     <li class="md-nav__item">
       <a href="examples/3-getting-live-data-from-the-streampipes-data-stream/" class="md-nav__link">
         Getting live data from the StreamPipes data stream
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="examples/4-using-online-machine-learning-on-a-streampipes-data-stream/" class="md-nav__link">
-        Using Online Machine Learning on a StreamPipes data stream
       </a>
     </li>
   
@@ -1417,54 +1395,66 @@
 <h4 align="center"><a href="[StreamPipes](https://github.com/apache/streampipes)">StreamPipes</a> is a self-service (Industrial) IoT toolbox to enable non-technical users to connect , analyze and explore IoT data streams.</h4>
 
 <p><br></p>
-<h3 align="center">Apache StreamPipes for Python</h3>
+<h3 align="center">Apache StreamPipes client for Python</h3>
 
-<p align="center"> Apache StreamPipes meets Python! We are working highly motivated on a Python library to interact with StreamPipes.
+<p align="center"> Apache StreamPipes meets Python! We are working highly motivated on a Python-based client to interact with StreamPipes.
 In this way, we would like to unite the power of StreamPipes to easily connect to and read different data sources, especially in the IoT domain,
 and the amazing universe of data analytics libraries in Python. </p>
 
 <hr />
 <p><br></p>
-<p><strong>💡 The current version of this Python library is still a beta version.</strong>
+<p><strong>💡 The current version of this Python client is still a beta version.</strong>
 <br>
 <strong>This means that it is still heavily under development, which may result in frequent and extensive API changes, unstable behavior, etc.</strong>
 <br></p>
 <h2 id="quickstart">⚡️ Quickstart<a class="headerlink" href="#quickstart" title="Permanent link">&para;</a></h2>
 <p>As a quick example, we demonstrate how to set up and configure a StreamPipes client.
 In addition, we will get the available data lake measures out of StreamPipes.</p>
-<p><div class="language-python highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">streampipes.client</span> <span class="kn">import</span> <span class="n">StreamPipesClient</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">streampipes.client.config</span> <span class="kn">import</span> <span class="n">StreamPipesClientConfig</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">streampipes.client.credential_provider</span> <span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
+<p><div class="language-python highlight"><pre><span></span><code><span class="o">&gt;&gt;</span> <span class="o">&gt;</span> <span class="kn">from</span> <span class="nn">streampipes.client</span> <span class="kn">import</span> <span class="n">StreamPipesClient</span>
+<span class="o">&gt;&gt;</span> <span class="o">&gt;</span> <span class="kn">from</span> <span class="nn">streampipes.client.client_config</span> <span class="kn">import</span> <span class="n">StreamPipesClientConfig</span>
+<span class="o">&gt;&gt;</span> <span class="o">&gt;</span> <span class="kn">from</span> <span class="nn">streampipes.client.credential_provider</span> <span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">config</span> <span class="o">=</span> <span class="n">StreamPipesClientConfig</span><span class="p">(</span>
-<span class="o">...</span>     <span class="n">credential_provider</span> <span class="o">=</span> <span class="n">StreamPipesApiKeyCredentials</span><span class="p">(</span>
-<span class="o">...</span>         <span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;test@streampipes.apache.org&quot;</span><span class="p">,</span>
-<span class="o">...</span>         <span class="n">api_key</span> <span class="o">=</span> <span class="s2">&quot;DEMO-KEY&quot;</span><span class="p">,</span>
-<span class="o">...</span>         <span class="p">),</span>
-<span class="o">...</span>     <span class="n">host_address</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
-<span class="o">...</span>     <span class="n">http_disabled</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-<span class="o">...</span>     <span class="n">port</span> <span class="o">=</span> <span class="mi">80</span>
+<span class="o">&gt;&gt;</span> <span class="o">&gt;</span> <span class="n">config</span> <span class="o">=</span> <span class="n">StreamPipesClientConfig</span><span class="p">(</span>
+    <span class="o">...</span>
+<span class="n">credential_provider</span> <span class="o">=</span> <span class="n">StreamPipesApiKeyCredentials</span><span class="p">(</span>
+    <span class="o">...</span>
+<span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;test@streampipes.apache.org&quot;</span><span class="p">,</span>
+           <span class="o">...</span>
+<span class="n">api_key</span> <span class="o">=</span> <span class="s2">&quot;DEMO-KEY&quot;</span><span class="p">,</span>
+          <span class="o">...</span>         <span class="p">),</span>
+<span class="o">...</span>
+<span class="n">host_address</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+               <span class="o">...</span>
+<span class="n">http_disabled</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="o">...</span>
+<span class="n">port</span> <span class="o">=</span> <span class="mi">80</span>
 <span class="o">...</span><span class="p">)</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">client</span> <span class="o">=</span> <span class="n">StreamPipesClient</span><span class="p">(</span><span class="n">client_config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span> <span class="o">&gt;</span> <span class="n">client</span> <span class="o">=</span> <span class="n">StreamPipesClient</span><span class="p">(</span><span class="n">client_config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
 
 <span class="c1"># get all available datat lake measures</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">measures</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">dataLakeMeasureApi</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="o">&gt;&gt;</span> <span class="o">&gt;</span> <span class="n">measures</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">dataLakeMeasureApi</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
 
 <span class="c1"># get amount of retrieved measures</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">measures</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">measures</span><span class="p">)</span>
 <span class="mi">1</span>
 
 <span class="c1"># inspect the data lake measures as pandas dataframe</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">measures</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
-<span class="n">measure_name</span> <span class="n">timestamp_field</span> <span class="o">...</span> <span class="n">pipeline_is_running</span> <span class="n">num_event_properties</span>
-<span class="mi">0</span> <span class="n">test</span> <span class="n">s0</span><span class="p">::</span><span class="n">timestamp</span> <span class="o">...</span> <span class="kc">False</span> <span class="mi">2</span>
+<span class="o">&gt;&gt;</span> <span class="o">&gt;</span> <span class="n">measures</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
+<span class="n">measure_name</span>
+<span class="n">timestamp_field</span><span class="o">...</span><span class="n">pipeline_is_running</span>
+<span class="n">num_event_properties</span>
+<span class="mi">0</span>
+<span class="n">test</span>
+<span class="n">s0</span><span class="p">::</span><span class="n">timestamp</span><span class="o">...</span>
+<span class="kc">False</span>
+<span class="mi">2</span>
 <span class="p">[</span><span class="mi">1</span> <span class="n">rows</span> <span class="n">x</span> <span class="mi">6</span> <span class="n">columns</span><span class="p">]</span>
 </code></pre></div>
 <br>
 Alternatively, you can provide your credentials via environment variables.
 Simply define your credential provider as follows:</p>
-<p><div class="language-python highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">streampipes.client.credential_provider</span> <span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
+<p><div class="language-python highlight"><pre><span></span><code><span class="o">&gt;&gt;</span> <span class="o">&gt;</span> <span class="kn">from</span> <span class="nn">streampipes.client.credential_provider</span> <span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
 
 <span class="n">StreamPipesApiKeyCredentials</span><span class="o">.</span><span class="n">from_env</span><span class="p">(</span><span class="n">username_env</span><span class="o">=</span><span class="s2">&quot;USER&quot;</span><span class="p">,</span> <span class="n">api_key_env</span><span class="o">=</span><span class="s2">&quot;API-KEY&quot;</span><span class="p">)</span>
 </code></pre></div>
