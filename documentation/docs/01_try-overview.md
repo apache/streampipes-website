@@ -121,7 +121,7 @@ This is the documentation of Apache StreamPipes.
             </div>
             <div class="toc-content">
                 <div class="toc-section-header"><b>Discover what we offer for the Python world:</b></div>
-                <a href="/docs/docs/python/index.html">Python Documentation 🔗</a>
+                <a href="/docs/docs/python/latest">Python Documentation 🔗</a>
             </div>
         </div>
     </div>
