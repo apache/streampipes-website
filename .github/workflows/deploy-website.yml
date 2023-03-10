@@ -31,6 +31,9 @@ jobs:
           npm install
           npm run build
           cp -r build/streampipes-docs/* ../../build/docs
+      - name: Copy Python docs
+        run: |
+          cp -r docs-python/* build/docs/docs/python
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v2.4.0
         env:
