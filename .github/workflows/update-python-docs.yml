@@ -41,7 +41,7 @@ jobs:
           if_no_artifact_found: fail
           branch: dev
           workflow: python-docs.yml
-          path: ./documentation/static/docs/python
+          path: ./docs-python
 
       - name: create PR to update python docs
         uses: peter-evans/create-pull-request@v4
