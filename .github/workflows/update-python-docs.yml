@@ -18,15 +18,32 @@ name: update-python-docs
 
 on:
   workflow_dispatch:
+    inputs:
+      source-branch:
+        type: text
+        description: Name of the branch form which the docs should be fetched (e.g., `release/0.90.0`)
+        required: true
   schedule:
-    - cron:  "0 2 * * 6"  # runs every saturday at 02:00:00
+    - cron: "0 2 * * 6"  # runs every saturday at 02:00:00
 
 jobs:
-  python-docs:
+  fetch-python-docs-from-core-repo:
     runs-on: ubuntu-latest
     steps:
       - name: clone
         uses: actions/checkout@v3
+
+      - name: set source branch to dev
+        if: ${{ github.event_name == 'schedule' }}
+        run: |
+          echo "source branch is set to dev"
+          echo "source_branch=dev" >> $GITHUB_ENV
+
+      - name: set source branch to input
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        run: |
+          echo "source branch is set to ${{ inputs.source-branch}}"
+          echo "source_branch=${{ inputs.source-branch}}" >> $GITHUB_ENV
 
       - name: fetch python docs from artifact
         uses: dawidd6/action-download-artifact@v2
@@ -39,7 +56,7 @@ jobs:
           search_artifacts: true
           skip_unpack: false
           if_no_artifact_found: fail
-          branch: dev
+          branch: ${{ env.source_branch }}
           workflow: python-docs.yml
           path: ./docs-python
 
