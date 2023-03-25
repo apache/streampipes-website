@@ -25,7 +25,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Python library for Apache StreamPipes">
       
+      
+        <meta name="author" content="Apache Software Foundation (ASF)">
+      
+      
+        <link rel="canonical" href="https://streampipes.apache.org/docs/docs/python/latest/latest/reference/functions/broker/nats_broker/">
       
       
         <link rel="prev" href="../kafka_message_fetcher/">
@@ -38,7 +44,7 @@
     
     
       
-        <title>Nats broker - Apache StreamPipes for Python</title>
+        <title>Nats broker - Apache StreamPipes Python</title>
       
     
     
@@ -146,7 +152,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="https://streampipes.apache.org/" title="Apache StreamPipes for Python" class="md-header__button md-logo" aria-label="Apache StreamPipes for Python" data-md-component="logo">
+    <a href="https://streampipes.apache.org/" title="Apache StreamPipes Python" class="md-header__button md-logo" aria-label="Apache StreamPipes Python" data-md-component="logo">
       
   <img src="https://streampipes.apache.org/img/sp-logo-white-right.png" alt="logo">
 
@@ -158,7 +164,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Apache StreamPipes for Python
+            Apache StreamPipes Python
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -214,7 +220,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    GitHub
+    apache/streampipes
   </div>
 </a>
       </div>
@@ -234,7 +240,7 @@
 
   <li class="md-tabs__item">
     <a href="../../../.." class="md-tabs__link">
-      Home
+      🏡 Home
     </a>
   </li>
 
@@ -249,7 +255,7 @@
   
     <li class="md-tabs__item">
       <a href="../../../../getting-started/first-steps/" class="md-tabs__link">
-        Getting Started
+        🚀 Getting Started
       </a>
     </li>
   
@@ -264,8 +270,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../examples/1-introduction-to-streampipes-python-client/" class="md-tabs__link">
-        Examples
+      <a href="../../../../tutorials/1-introduction-to-streampipes-python-client/" class="md-tabs__link">
+        🤓 Tutorials
       </a>
     </li>
   
@@ -288,7 +294,7 @@
   
     <li class="md-tabs__item">
       <a href="../../../client/client/" class="md-tabs__link md-tabs__link--active">
-        Reference
+        📚 Reference
       </a>
     </li>
   
@@ -323,12 +329,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://streampipes.apache.org/" title="Apache StreamPipes for Python" class="md-nav__button md-logo" aria-label="Apache StreamPipes for Python" data-md-component="logo">
+    <a href="https://streampipes.apache.org/" title="Apache StreamPipes Python" class="md-nav__button md-logo" aria-label="Apache StreamPipes Python" data-md-component="logo">
       
   <img src="https://streampipes.apache.org/img/sp-logo-white-right.png" alt="logo">
 
     </a>
-    Apache StreamPipes for Python
+    Apache StreamPipes Python
   </label>
   
     <div class="md-nav__source">
@@ -338,7 +344,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    GitHub
+    apache/streampipes
   </div>
 </a>
     </div>
@@ -354,7 +360,7 @@
   
     <li class="md-nav__item">
       <a href="../../../.." class="md-nav__link">
-        Home
+        🏡 Home
       </a>
     </li>
   
@@ -386,14 +392,14 @@
       
       
         <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-          Getting Started
+          🚀 Getting Started
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Getting Started
+          🚀 Getting Started
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -473,14 +479,14 @@
       
       
         <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-          Examples
+          🤓 Tutorials
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Examples
+          🤓 Tutorials
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -490,7 +496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/1-introduction-to-streampipes-python-client/" class="md-nav__link">
+      <a href="../../../../tutorials/1-introduction-to-streampipes-python-client/" class="md-nav__link">
         Introduction to StreamPipes Python
       </a>
     </li>
@@ -504,7 +510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/2-extracting-data-from-the-streampipes-data-lake/" class="md-nav__link">
+      <a href="../../../../tutorials/2-extracting-data-from-the-streampipes-data-lake/" class="md-nav__link">
         Extracting Data from the StreamPipes data lake
       </a>
     </li>
@@ -518,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/3-getting-live-data-from-the-streampipes-data-stream/" class="md-nav__link">
+      <a href="../../../../tutorials/3-getting-live-data-from-the-streampipes-data-stream/" class="md-nav__link">
         Getting live data from the StreamPipes data stream
       </a>
     </li>
@@ -532,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/4-using-online-machine-learning-on-a-streampipes-data-stream/" class="md-nav__link">
+      <a href="../../../../tutorials/4-using-online-machine-learning-on-a-streampipes-data-stream/" class="md-nav__link">
         Using Online Machine Learning on a StreamPipes data stream
       </a>
     </li>
@@ -578,14 +584,14 @@
       
       
         <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-          Reference
+          📚 Reference
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Reference
+          📚 Reference
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1778,12 +1784,16 @@
     <tbody>
         <tr>
           <td>
-              <span class="doc-returns-annotation">
-                  <code>An async iterator for the messages.</code>
-              </span>
+              <code>message_iterator</code>
           </td>
           <td class="doc-returns-details">
-            
+            <p>An async iterator for the messages.</p>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code><span title="typing.AsyncIterator">AsyncIterator</span></code>
+                </span>
+              </p>
           </td>
         </tr>
     </tbody>
@@ -1810,6 +1820,29 @@
   <div class="doc doc-contents ">
   
       <p>Publish an event to a connected data stream.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>event</code></td>
+          <td class="doc-param-details">
+            <p>The event to be published.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 
   <table>
     <thead>
