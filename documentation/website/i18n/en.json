@@ -73,6 +73,9 @@
         "title": "Docker Deployment",
         "sidebar_label": "Docker Deployment"
       },
+      "05_deploy-environment-variables": {
+        "title": "05_deploy-environment-variables"
+      },
       "deploy-kubernetes": {
         "title": "Kubernetes Deployment",
         "sidebar_label": "Kubernetes Deployment"

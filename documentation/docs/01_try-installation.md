@@ -32,6 +32,13 @@ best experience), Firefox or Edge.
 
 ## Install StreamPipes
 
+<div class="admonition info">
+    <div class="admonition-title">Migration from 0.90.0 to 0.91.0</div>
+    <p>When upgrading an existing installation from 0.90.0 to 0.91.0, set the environment variable 
+<b>SP_INFLUX_INIT_MODE</b> to <b>upgrade</b> instead of <b>setup</b> due to an upgrade of the underlying time-series storage. </p>
+<p>Depending on the installation type, this needs to be set in the <b>.env</b> or the <b>values.yml</b> file.</p>
+</div>
+
 <ul style="padding-left:0">
     <li class="installation-step" style="margin-top:20px;">
         <div class="wrapper-container" style="">
