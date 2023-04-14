@@ -55,13 +55,13 @@ best experience), Firefox or Edge.
                     <tbody>
                     <tr>
                         <td>
-                            <a href="https://www.apache.org/dyn/closer.lua?action=download&filename=streampipes/0.90.0/apache-streampipes-0.90.0-source-release.zip">apache-streampipes-0.90.0-source-release.zip</a>
+                            <a href="https://www.apache.org/dyn/closer.lua?action=download&filename=streampipes/0.91.0/apache-streampipes-0.91.0-source-release.zip">apache-streampipes-0.91.0-source-release.zip</a>
                         </td>
-                        <td>0.90.0</td>
-                        <td>2023-01-17</td>
+                        <td>0.91.0</td>
+                        <td>2023-04-14</td>
                         <td>
-                            <a href="https://downloads.apache.org/streampipes/0.90.0/apache-streampipes-0.90.0-source-release.zip.sha512">SHA</a>
-                            <a href="https://downloads.apache.org/streampipes/0.90.0/apache-streampipes-0.90.0-source-release.zip.asc">PGP</a>
+                            <a href="https://downloads.apache.org/streampipes/0.91.0/apache-streampipes-0.91.0-source-release.zip.sha512">SHA</a>
+                            <a href="https://downloads.apache.org/streampipes/0.91.0/apache-streampipes-0.91.0-source-release.zip.asc">PGP</a>
                         </td>
                     </tr>
                     </tbody>
