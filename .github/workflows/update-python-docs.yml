@@ -1,0 +1,82 @@
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+
+name: update-python-docs
+
+on:
+  workflow_dispatch:
+    inputs:
+      source-branch:
+        type: text
+        description: Name of the branch form which the docs should be fetched (e.g., `release/0.90.0`)
+        required: true
+  schedule:
+    - cron: "0 2 * * 6"  # runs every saturday at 02:00:00
+
+jobs:
+  fetch-python-docs-from-core-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone
+        uses: actions/checkout@v3
+
+      - name: set source branch to dev
+        if: ${{ github.event_name == 'schedule' }}
+        run: |
+          echo "source branch is set to dev"
+          echo "source_branch=dev" >> $GITHUB_ENV
+
+      - name: set source branch to input
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        run: |
+          echo "source branch is set to ${{ inputs.source-branch}}"
+          echo "source_branch=${{ inputs.source-branch}}" >> $GITHUB_ENV
+
+      - name: fetch python docs from artifact
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          workflow_conclusion: success
+          name: streampipes-python-docs
+          repo: apache/streampipes
+          check_artifacts: true
+          search_artifacts: true
+          skip_unpack: false
+          if_no_artifact_found: fail
+          branch: ${{ env.source_branch }}
+          workflow: python-docs.yml
+          path: ./docs-python
+
+      - name: create PR to update python docs
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: "chore(python-docs): update python doc assets to recent development state"
+          committer: GitHub <noreply@github.com>
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          signoff: false
+          branch: "chore/update-python-docs"
+          delete-branch: true
+          title: 'chore(python-docs): update python doc assets'
+          body: |
+            Update python doc assets.
+            Automatically created.
+          draft: false
+          base: dev
+          reviewers: |
+            bossenti
+            tenthe
+            dominikriemer
+            SvenO3

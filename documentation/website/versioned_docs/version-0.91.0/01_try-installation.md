@@ -1,7 +1,8 @@
 ---
-id: try-installation
+id: version-0.91.0-try-installation
 title: Installation
 sidebar_label: Installation
+original_id: try-installation
 ---
 
 The easiest way to install StreamPipes is our Docker-based installation. For production-grade deployments, we also
