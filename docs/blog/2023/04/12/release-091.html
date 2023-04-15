@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Apache StreamPipes release 0.91.0 · Apache StreamPipes</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="**&lt;div style=&quot;float: left; padding-right: 40px;&quot;&gt;14 minutes to read&lt;/div&gt;**"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Apache StreamPipes release 0.91.0 · Apache StreamPipes"/><meta property="og:type" content="website"/><meta property="og:url" content="https://streampipes.apache.org/docs/blog/2023/04/12/release-091.html"/><meta property="og:description" content="**&lt;div style=&quot;float: left; padding-right: 40px;&quot;&gt;14 minutes to read&lt;/div&gt;**"/><meta property="og:image" content="https://streampipes.apache.org/docs/img/favicon.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://streampipes.apache.org/docs/img/docusaurus.png"/><link rel="shortcut icon" href="/docs/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://streampipes.apache.org/docs/blog/atom.xml" title="Apache StreamPipes Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://streampipes.apache.org/docs/blog/feed.xml" title="Apache StreamPipes Blog RSS Feed"/><link rel="stylesheet" href="/docs/css/slick.min.css"/><link rel="stylesheet" href="/docs/css/slick-theme.min.css"/><link rel="stylesheet" href="/docs/css/fonts.css"/><link rel="stylesheet" href="/docs/css/admonition.css"/><link rel="stylesheet" href="/docs/css/custom.css"/><link rel="stylesheet" href="/docs/css/code-block-buttons.css"/><link rel="stylesheet" href="/docs/css/all.min.css"/><script type="text/javascript" src="/docs/js/matomo.js"></script><script type="text/javascript" src="/docs/js/jquery-3.3.1.min.js"></script><script type="text/javascript" src="/docs/js/buttons.js"></script><script type="text/javascript" src="/docs/js/slick.min.js"></script><script type="text/javascript" src="/docs/js/custom.js"></script><script type="text/javascript" src="/docs/js/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/prism.css"/><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/sp-logo-color-docs.png" alt="Apache StreamPipes"/></a><a href="/docs/versions.html"><h3>0.91.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/docs/user-guide-introduction.html" target="_self">Documentation</a></li><li class=""><a href="/docs/docs/faq-common-problems.html" target="_self">FAQ</a></li><li class="siteNavGroupActive"><a href="/docs/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Recent Posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Recent Posts</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/docs/blog/2023/04/12/release-091.html">Apache StreamPipes release 0.91.0</a></li><li class="navListItem"><a class="navItem" href="/docs/blog/2023/01/17/release-090.html">Apache StreamPipes release 0.90.0</a></li><li class="navListItem"><a class="navItem" href="/docs/blog/2022/10/13/release-070.html">Apache StreamPipes release 0.70.0</a></li><li class="navListItem"><a class="navItem" href="/docs/blog/2022/09/05/using-factory.io-with-streampipes.html">Using Factory I/O with StreamPipes</a></li><li class="navListItem"><a class="navItem" href="/docs/blog/2022/03/21_release/0690.html">Apache StreamPipes release 0.69.0</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/docs/blog/2023/04/12/release-091.html">Apache StreamPipes release 0.91.0</a></h1><p class="post-meta">April 12, 2023</p><div class="authorBlock"><p class="post-authorName"><a href="https://github.com/bossenti" target="_blank" rel="noreferrer noopener">Tim Bossenmaier</a></p><div class="authorPhoto"><a href="https://github.com/bossenti" target="_blank" rel="noreferrer noopener"><img src="/docs/img/bossenmaier.png" alt="Tim Bossenmaier"/></a></div></div></header><div><span><p><strong><div style="float: left; padding-right: 40px;">14 minutes to read</div></strong>
+<br></p>
+<p>The Apache StreamPipes community is delighted to announce the release of Apache StreamPipes version 0.91.0!
+The biggest highlight of this release is the birth of our official StreamPipes Python library.
+Apart from that, we have made a lot of improvements under the hood, especially in terms of improving the development experience (e.g., by introducing and enforcing code style rules).
+Nevertheless, our new version includes more than 90 improvements and bug fixes in total.</p>
+<!--truncate-->
+<p>The current release can be downloaded <a href="https://streampipes.apache.org/download.html">here</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="streampipes-python"></a><a href="#streampipes-python" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>StreamPipes Python</h2>
+<p><a href="https://streampipes.apache.org/">Apache StreamPipes</a> aims to enable non-technical users to connect and analyze IoT data streams.
+To this end, it provides an easy-to-use and convenient user interface that allows one to connect to an IoT data source and create some visual
+graphs within a few minutes. <br>
+Although this is the main use case of Apache StreamPipes, it can also provide great value for people who are eager to work on data analysis or data science with IoT data, but don't want to get in touch with all the hassle associated with extracting data from devices in a suitable format.
+In this scenario, StreamPipes helps you connect to your data source and extract the data for you.
+You then can make the data available outside StreamPipes by writing it into an external source, such as a database, Kafka, etc.
+While this requires another component, you can also extract your data directly from StreamPipes programmatically using the StreamPipes API.
+For convenience, we also provide you with a StreamPipes client both available for Java and Python.
+Specifically with StreamPipes Python, we want to address the amazing data analytics and data science community in Python and benefit from the great universe of Python libraries out there.</p>
+<h3><a class="anchor" aria-hidden="true" id="getting-started"></a><a href="#getting-started" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Getting started</h3>
+<p>Besides our official version, which you can access <a href="https://streampipes.apache.org/download.html">here</a>,
+we provide Apache StreamPipes as a convenient release via PyPI.
+Therefore, you can easily install it via the following command</p>
+<pre><code class="hljs css language-bash">pip install streampipes
+</code></pre>
+<p>All documentation related to StreamPipes Python can be found <a href="https://streampipes.apache.org/docs/docs/python/latest/">here</a>.</p>
+<p>But now enough words are written, let's just start with a few examples.
+As a first step, we want to establish a connection to a running StreamPipes instance.</p>
+<pre><code class="hljs css language-python"><span class="hljs-keyword">from</span> streampipes.client <span class="hljs-keyword">import</span> StreamPipesClient
+<span class="hljs-keyword">from</span> streampipes.client.config <span class="hljs-keyword">import</span> StreamPipesClientConfig
+<span class="hljs-keyword">from</span> streampipes.client.credential_provider <span class="hljs-keyword">import</span> StreamPipesApiKeyCredentials
+
+config = StreamPipesClientConfig(
+    credential_provider = StreamPipesApiKeyCredentials(
+        username = <span class="hljs-string">"test@streampipes.apache.org"</span>,
+        api_key = <span class="hljs-string">"DEMO-KEY"</span>,
+        ),
+    host_address = <span class="hljs-string">"localhost"</span>,
+    https_disabled = <span class="hljs-literal">True</span>,
+    port = <span class="hljs-number">80</span>
+)
+
+client = StreamPipesClient(client_config=config)
+</code></pre>
+<p><code>client.describe()</code> gives you an overview about what can be discovered via the Python client:</p>
+<pre><code class="hljs css language-bash">Hi there!
+You are connected to a StreamPipes instance running at http://localhost:80.
+The following StreamPipes resources are available with this client:
+1x DataLakeMeasures
+1x DataStreams
+</code></pre>
+<p>The required API key can be retrieved from StreamPipes via the UI:</p>
+<p><img src="/docs/blog/assets/2023-04-12/how-to-get-api-key.gif" alt="demonstration how to get an API key in form of a gif"></p>
+<h3><a class="anchor" aria-hidden="true" id="query-data-from-streampipes-data-lake"></a><a href="#query-data-from-streampipes-data-lake" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query Data from StreamPipes data lake</h3>
+<p>As a first step, we can see which data sets are available in the data lake:</p>
+<pre><code class="hljs css language-python">client.dataLakeMeasureApi.all().to_pandas()
+</code></pre>
+<p>To query data for a specific data lake measure, the following command takes you there:</p>
+<pre><code class="hljs css language-python">client.dataLakeMeasureApi.get(identifier=<span class="hljs-string">"flow-rate"</span>).to_pandas()
+</code></pre>
+<p>There are some parameters that allow you to query data more specifically, visit the <a href="https://streampipes.apache.org/docs/docs/python/latest/reference/endpoint/api/data_lake_measure/#streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig">docs</a> for more detailed information.</p>
+<p>If you are curious which features are available for StreamPipes Python, have a look at our <a href="https://streampipes.apache.org/docs/docs/python/latest/tutorials/1-introduction-to-streampipes-python-client/">tutorial section</a>.</p>
+<p>We plan to further extend the Python library in the next releases - we welcome your ideas on any features you'd like to see!</p>
+<h2><a class="anchor" aria-hidden="true" id="create-adapter-without-starting"></a><a href="#create-adapter-without-starting" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create Adapter without starting</h2>
+<p>Until now, when creating an adapter in StreamPipes, the adapter was started immediately after completion.
+From now on you can choose via the adapter overview in the last dialog whether the adapter should be started immediately or later (this is then possible in the adapter overview).</p>
+<p><img src="/docs/blog/assets/2023-04-12/adapter-running.gif" alt="demonstration how to disable automatic start of an adapter in form of a gif"></p>
+<h2><a class="anchor" aria-hidden="true" id="redirect-after-login"></a><a href="#redirect-after-login" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Redirect after Login</h2>
+<p>This is another small user interface improvement: when a user opens a StreamPipes link even though they are not logged in, e.g.,
+<a href="http://streampipes.demo/#/connect">http://streampipes.demo/#/connect</a>, StreamPipes displays the login dialog and now redirects the user directly to the target view
+(in this case the connection overview).</p>
+<h2><a class="anchor" aria-hidden="true" id="support-output-streams-for-standalone-functions"></a><a href="#support-output-streams-for-standalone-functions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Support Output Streams for Standalone Functions</h2>
+<p>Within the last release, <a href="/docs/blog/2023/01/17/release-090.html">0.90.0</a>, we introduced StreamPipes Functions as a lightweight alternative to processing elements.<br>
+StreamPipes Functions do now support having output streams, which means that they allow not only to consume but to send data to StreamPipes as well.</p>
+<p>Below you can see a simple example function that demonstrates how events can be pushed back to StreamPipes again.</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FunctionPublishExample</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">StreamPipesFunction</span> </span>{
+
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger LOG = LoggerFactory.getLogger(FunctionPublishExample<span class="hljs-class">.<span class="hljs-keyword">class</span>)</span>;
+
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String FUNCTION_ID = <span class="hljs-string">"org.apache.streampipes.example.function.publish"</span>;
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String STREAM_APP_ID = <span class="hljs-string">"example-output-stream-1"</span>;
+
+  <span class="hljs-keyword">private</span> SpOutputCollector outputCollector;
+
+  <span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;String&gt; <span class="hljs-title">requiredStreamIds</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> List.of(<span class="hljs-string">"urn:streampipes.apache.org:eventstream:EtMUkN"</span>);
+  }
+
+  <span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onServiceStarted</span><span class="hljs-params">(FunctionContext context)</span> </span>{
+    LOG.info(<span class="hljs-string">"Service started"</span>);
+    <span class="hljs-keyword">this</span>.outputCollector = context.getOutputCollectors().get(STREAM_APP_ID);
+  }
+
+  <span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onEvent</span><span class="hljs-params">(Event event, String streamId)</span> </span>{
+    LOG.info(<span class="hljs-string">"on event"</span>);
+    <span class="hljs-keyword">var</span> ev = <span class="hljs-keyword">new</span> Event();
+    ev.addField(<span class="hljs-string">"timestamp"</span>, System.currentTimeMillis());
+    ev.addField(<span class="hljs-string">"example-property"</span>, <span class="hljs-string">"abc"</span>);
+    <span class="hljs-keyword">this</span>.outputCollector.collect(ev);
+  }
+
+  <span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onServiceStopped</span><span class="hljs-params">()</span> </span>{
+    LOG.info(<span class="hljs-string">"service stopped"</span>);
+  }
+
+  <span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> FunctionConfig <span class="hljs-title">getFunctionConfig</span><span class="hljs-params">()</span> </span>{
+
+    <span class="hljs-keyword">return</span> FunctionConfigBuilder
+        .create(FunctionId.from(FUNCTION_ID, <span class="hljs-number">1</span>))
+        .withOutputStream(DataStreamBuilder.create(STREAM_APP_ID, <span class="hljs-string">"My Function Stream"</span>, <span class="hljs-string">""</span>)
+            .property(EpProperties.timestampProperty(<span class="hljs-string">"timestamp"</span>))
+            .property(EpProperties.stringEp(
+                Labels.from(<span class="hljs-string">"my-example-property"</span>, <span class="hljs-string">"test"</span>, <span class="hljs-string">"test"</span>),
+                <span class="hljs-string">"example-property"</span>,
+                SO.TEXT,
+                PropertyScope.MEASUREMENT_PROPERTY))
+            .format(Formats.jsonFormat())
+            .protocol(Protocols.kafka(<span class="hljs-string">"localhost"</span>, <span class="hljs-number">9094</span>, STREAM_APP_ID))
+            .build())
+        .build();
+  }
+}
+</code></pre>
+<p>This functionality is also already supported in StreamPipes Python! 🚀</p>
+<p>This means that you can write a StreamPipes function in Python that allows you to consume streams of data from StreamPipes,
+perform any data manipulation in Python, and send the data back to StreamPipes, where it can be further processed.</p>
+<p><br>
+To get a comprehensive overview of all changes released within Apache StreamPipes 0.91.0
+please visit our <a href="https://github.com/apache/incubator-streampipes/blob/release/0.91.0/RELEASE_NOTES.md#0910">release notes</a>.</p>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/docs/blog/">Recent Posts</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#streampipes-python">StreamPipes Python</a><ul class="toc-headings"><li><a href="#getting-started">Getting started</a></li><li><a href="#query-data-from-streampipes-data-lake">Query Data from StreamPipes data lake</a></li></ul></li><li><a href="#create-adapter-without-starting">Create Adapter without starting</a></li><li><a href="#redirect-after-login">Redirect after Login</a></li><li><a href="#support-output-streams-for-standalone-functions">Support Output Streams for Standalone Functions</a></li></ul></nav></div><div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/sp-logo-color.png" alt="Apache StreamPipes" width="66"/></a><div><h5>Docs</h5><a href="/docs/docs/user-guide-introduction">User Guide</a><a href="/docs/docs/dev-guide-introduction">Developer Guide</a><a href="/docs/docs/faq-common-problems">Frequently Asked Questions</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/streampipes" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/streampipes" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://github.com/apache/streampipes" target="_blank" rel="noreferrer noopener">Github</a><a href="https://hub.docker.com/u/streampipes" target="_blank" rel="noreferrer noopener">Docker Hub</a></div><div><h5>More</h5><a href="/docs/blog">Blog</a><a href="https://streampipes.apache.org">Website</a><a href="https://www.apache.org/foundation/policies/privacy.html">Privacy</a><a class="github-button" href="https://github.com/apache/streampipes" data-icon="octicon-star" data-count-href="/streampipes/streampipes/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 - 2023 The Apache Software Foundation<p style="margin-bottom:0px;margin-left:20px;margin-right:20px;text-align:center">Apache and the Apache feather logo are trademarks of The Apache Software Foundation.</p></section></footer></div></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '0fedc89dddf2810657708b178e56ef02',
+                indexName: 'streampipes',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

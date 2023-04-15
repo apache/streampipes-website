@@ -2,12 +2,29 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://streampipes.apache.org/docs/blog</id>
     <title>Apache StreamPipes Blog</title>
-    <updated>2023-01-17T06:00:00.000Z</updated>
+    <updated>2023-04-12T06:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://streampipes.apache.org/docs/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Apache StreamPipes news and events.</subtitle>
     <logo>https://streampipes.apache.org/docs/img/sp-logo-color-docs.png</logo>
     <rights>Copyright © 2019 - 2023 The Apache Software Foundation</rights>
+    <entry>
+        <title type="html"><![CDATA[Apache StreamPipes release 0.91.0]]></title>
+        <id>https://streampipes.apache.org/docs/blog/2023/04/12/release-091.html</id>
+        <link href="https://streampipes.apache.org/docs/blog/2023/04/12/release-091.html"/>
+        <updated>2023-04-12T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">14 minutes to read</div></strong>
+<br></p>
+<p>The Apache StreamPipes community is delighted to announce the release of Apache StreamPipes version 0.91.0!
+The biggest highlight of this release is the birth of our official StreamPipes Python library.
+Apart from that, we have made a lot of improvements under the hood, especially in terms of improving the development experience (e.g., by introducing and enforcing code style rules).
+Nevertheless, our new version includes more than 90 improvements and bug fixes in total.</p>
+]]></summary>
+        <author>
+            <name>Tim Bossenmaier</name>
+            <uri>https://github.com/bossenti</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Apache StreamPipes release 0.90.0]]></title>
         <id>https://streampipes.apache.org/docs/blog/2023/01/17/release-090.html</id>
