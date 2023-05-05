@@ -10,7 +10,7 @@ In this section, we describe our recommended minimum setup for locally setting u
 
 ## IDE & required dev tools
 StreamPipes does not have specific requirements on the IDE - so feel free to choose the IDE of your choice.
-The only requirements in terms of development tools are that you have Java 8 and Maven installed.
+The only requirements in terms of development tools are that you have Java 17 and Maven installed.
 
 ## StreamPipes CLI: Docker-based local StreamPipes instance
 In order to quickly test developed pipeline elements without needing to install all services required by StreamPipes, we provide a CLI tool that allows you to selectively start StreamPipes components.
