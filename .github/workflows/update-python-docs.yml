@@ -38,12 +38,16 @@ jobs:
         run: |
           echo "source branch is set to dev"
           echo "source_branch=dev" >> $GITHUB_ENV
+          echo "target directory is set to ./docs-python/dev"
+          echo "target_directory=./docs-python/dev" >> $GITHUB_ENV
 
       - name: set source branch to input
         if: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
           echo "source branch is set to ${{ inputs.source-branch}}"
           echo "source_branch=${{ inputs.source-branch}}" >> $GITHUB_ENV
+          echo "target directory is set to ./docs-python"
+          echo "target_directory=./docs-python" >> $GITHUB_ENV
 
       - name: fetch python docs from artifact
         uses: dawidd6/action-download-artifact@v2
@@ -58,7 +62,7 @@ jobs:
           if_no_artifact_found: fail
           branch: ${{ env.source_branch }}
           workflow: python-docs.yml
-          path: ./docs-python
+          path: ${{ env.target_directory }}
 
       - name: create PR to update python docs
         uses: peter-evans/create-pull-request@v4
