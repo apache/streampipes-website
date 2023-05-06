@@ -34,10 +34,10 @@
         <link rel="canonical" href="https://streampipes.apache.org/docs/docs/python/latest/latest/reference/functions/broker/output_collector/">
       
       
-        <link rel="prev" href="../nats_broker/">
+        <link rel="prev" href="../consumer/">
       
       
-        <link rel="next" href="../../utils/async_iter_handler/">
+        <link rel="next" href="../publisher/">
       
       <link rel="icon" href="https://streampipes.apache.org/img/favicon/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
@@ -1005,6 +1005,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_4_4" id="__nav_4_4_4_label" tabindex="0">
@@ -1053,36 +1055,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../kafka_broker/" class="md-nav__link">
-        Kafka broker
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../kafka_message_fetcher/" class="md-nav__link">
-        Kafka message fetcher
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../nats_broker/" class="md-nav__link">
-        Nats broker
+      <a href="../consumer/" class="md-nav__link">
+        Consumer
       </a>
     </li>
   
@@ -1162,6 +1136,172 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publisher/" class="md-nav__link">
+        Publisher
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_4_6" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_4_6" id="__nav_4_4_4_6_label" tabindex="0">
+          Kafka
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_4_4_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Kafka
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kafka/kafka_consumer/" class="md-nav__link">
+        Kafka consumer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kafka/kafka_message_fetcher/" class="md-nav__link">
+        Kafka message fetcher
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kafka/kafka_publisher/" class="md-nav__link">
+        Kafka publisher
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_4_7" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_4_7" id="__nav_4_4_4_7_label" tabindex="0">
+          Nats
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_4_4_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Nats
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nats/nats_consumer/" class="md-nav__link">
+        Nats consumer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nats/nats_publisher/" class="md-nav__link">
+        Nats publisher
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1718,13 +1858,13 @@ Therefore, the output collector establishes a connection to the broker.</p>
     </thead>
     <tbody>
         <tr>
-          <td><code>broker</code></td>
+          <td><code>publisher</code></td>
           <td class="doc-attribute-details">
-            <p>The broker instance that sends the data to StreamPipes</p>
+            <p>The publisher instance that sends the data to StreamPipes</p>
             <p>
                 <span class="doc-attribute-annotation">
                   <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.functions.broker.broker.Broker" href="../broker/#streampipes.functions.broker.broker.Broker">Broker</a></code>
+                    <code><a class="autorefs autorefs-internal" title="streampipes.functions.broker.Publisher" href="../publisher/#streampipes.functions.broker.publisher.Publisher">Publisher</a></code>
                 </span>
             </p>
           </td>

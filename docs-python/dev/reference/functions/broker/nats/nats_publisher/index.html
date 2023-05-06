@@ -31,27 +31,27 @@
         <meta name="author" content="Apache Software Foundation (ASF)">
       
       
-        <link rel="canonical" href="https://streampipes.apache.org/docs/docs/python/latest/latest/reference/model/container/data_streams/">
+        <link rel="canonical" href="https://streampipes.apache.org/docs/docs/python/latest/latest/reference/functions/broker/nats/nats_publisher/">
       
       
-        <link rel="prev" href="../data_lake_measures/">
+        <link rel="prev" href="../nats_consumer/">
       
       
-        <link rel="next" href="../resource_container/">
+        <link rel="next" href="../../../utils/async_iter_handler/">
       
       <link rel="icon" href="https://streampipes.apache.org/img/favicon/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
-        <title>Data streams - Apache StreamPipes Python</title>
+        <title>Nats publisher - Apache StreamPipes Python</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.c4a75a56.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.c4a75a56.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -61,11 +61,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -136,7 +136,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#streampipes.model.container.data_streams" class="md-skip">
+        <a href="#streampipes.functions.broker.nats.nats_publisher" class="md-skip">
           Skip to content
         </a>
       
@@ -174,7 +174,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data streams
+              Nats publisher
             
           </span>
         </div>
@@ -263,7 +263,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../../.." class="md-tabs__link">
+    <a href="../../../../.." class="md-tabs__link">
       🏡 Home
     </a>
   </li>
@@ -278,7 +278,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../getting-started/first-steps/" class="md-tabs__link">
+      <a href="../../../../../getting-started/first-steps/" class="md-tabs__link">
         🚀 Getting Started
       </a>
     </li>
@@ -294,7 +294,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../tutorials/1-introduction-to-streampipes-python-client/" class="md-tabs__link">
+      <a href="../../../../../tutorials/1-introduction-to-streampipes-python-client/" class="md-tabs__link">
         🤓 Tutorials
       </a>
     </li>
@@ -317,7 +317,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../client/client/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../../../client/client/" class="md-tabs__link md-tabs__link--active">
         📚 Reference
       </a>
     </li>
@@ -383,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../../../.." class="md-nav__link">
         🏡 Home
       </a>
     </li>
@@ -433,7 +433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../getting-started/first-steps/" class="md-nav__link">
+      <a href="../../../../../getting-started/first-steps/" class="md-nav__link">
         First Steps
       </a>
     </li>
@@ -447,7 +447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../getting-started/developing/" class="md-nav__link">
+      <a href="../../../../../getting-started/developing/" class="md-nav__link">
         Developing & Contributing
       </a>
     </li>
@@ -461,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../getting-started/quickstart/" class="md-nav__link">
+      <a href="../../../../../getting-started/quickstart/" class="md-nav__link">
         Quickstart
       </a>
     </li>
@@ -520,7 +520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tutorials/1-introduction-to-streampipes-python-client/" class="md-nav__link">
+      <a href="../../../../../tutorials/1-introduction-to-streampipes-python-client/" class="md-nav__link">
         Introduction to StreamPipes Python
       </a>
     </li>
@@ -534,7 +534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tutorials/2-extracting-data-from-the-streampipes-data-lake/" class="md-nav__link">
+      <a href="../../../../../tutorials/2-extracting-data-from-the-streampipes-data-lake/" class="md-nav__link">
         Extracting Data from the StreamPipes data lake
       </a>
     </li>
@@ -548,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tutorials/3-getting-live-data-from-the-streampipes-data-stream/" class="md-nav__link">
+      <a href="../../../../../tutorials/3-getting-live-data-from-the-streampipes-data-stream/" class="md-nav__link">
         Getting live data from the StreamPipes data stream
       </a>
     </li>
@@ -562,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tutorials/4-using-online-machine-learning-on-a-streampipes-data-stream/" class="md-nav__link">
+      <a href="../../../../../tutorials/4-using-online-machine-learning-on-a-streampipes-data-stream/" class="md-nav__link">
         Using Online Machine Learning on a StreamPipes data stream
       </a>
     </li>
@@ -660,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../client/client/" class="md-nav__link">
+      <a href="../../../../client/client/" class="md-nav__link">
         Client
       </a>
     </li>
@@ -674,7 +674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../client/config/" class="md-nav__link">
+      <a href="../../../../client/config/" class="md-nav__link">
         Config
       </a>
     </li>
@@ -688,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../client/credential_provider/" class="md-nav__link">
+      <a href="../../../../client/credential_provider/" class="md-nav__link">
         Credential provider
       </a>
     </li>
@@ -744,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../endpoint/endpoint/" class="md-nav__link">
+      <a href="../../../../endpoint/endpoint/" class="md-nav__link">
         Endpoint
       </a>
     </li>
@@ -758,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../endpoint/exceptions/" class="md-nav__link">
+      <a href="../../../../endpoint/exceptions/" class="md-nav__link">
         Exceptions
       </a>
     </li>
@@ -805,7 +805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../endpoint/api/data_lake_measure/" class="md-nav__link">
+      <a href="../../../../endpoint/api/data_lake_measure/" class="md-nav__link">
         Data lake measure
       </a>
     </li>
@@ -819,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../endpoint/api/data_stream/" class="md-nav__link">
+      <a href="../../../../endpoint/api/data_stream/" class="md-nav__link">
         Data stream
       </a>
     </li>
@@ -878,7 +878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../function_zoo/river_function/" class="md-nav__link">
+      <a href="../../../../function_zoo/river_function/" class="md-nav__link">
         River function
       </a>
     </li>
@@ -897,14 +897,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
       
       
         
@@ -925,7 +927,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4_4">
           <span class="md-nav__icon md-icon"></span>
           Functions
@@ -938,7 +940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../functions/function_handler/" class="md-nav__link">
+      <a href="../../../function_handler/" class="md-nav__link">
         Function handler
       </a>
     </li>
@@ -952,7 +954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../functions/registration/" class="md-nav__link">
+      <a href="../../../registration/" class="md-nav__link">
         Registration
       </a>
     </li>
@@ -966,7 +968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../functions/streampipes_function/" class="md-nav__link">
+      <a href="../../../streampipes_function/" class="md-nav__link">
         Streampipes function
       </a>
     </li>
@@ -978,14 +980,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_4" checked>
       
       
         
@@ -1010,7 +1014,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_4_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4_4_4">
           <span class="md-nav__icon md-icon"></span>
           Broker
@@ -1023,7 +1027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../functions/broker/broker/" class="md-nav__link">
+      <a href="../../broker/" class="md-nav__link">
         Broker
       </a>
     </li>
@@ -1037,7 +1041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../functions/broker/broker_handler/" class="md-nav__link">
+      <a href="../../broker_handler/" class="md-nav__link">
         Broker handler
       </a>
     </li>
@@ -1051,7 +1055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../functions/broker/consumer/" class="md-nav__link">
+      <a href="../../consumer/" class="md-nav__link">
         Consumer
       </a>
     </li>
@@ -1065,7 +1069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../functions/broker/output_collector/" class="md-nav__link">
+      <a href="../../output_collector/" class="md-nav__link">
         Output collector
       </a>
     </li>
@@ -1079,7 +1083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../functions/broker/publisher/" class="md-nav__link">
+      <a href="../../publisher/" class="md-nav__link">
         Publisher
       </a>
     </li>
@@ -1128,7 +1132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../functions/broker/kafka/kafka_consumer/" class="md-nav__link">
+      <a href="../../kafka/kafka_consumer/" class="md-nav__link">
         Kafka consumer
       </a>
     </li>
@@ -1142,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../functions/broker/kafka/kafka_message_fetcher/" class="md-nav__link">
+      <a href="../../kafka/kafka_message_fetcher/" class="md-nav__link">
         Kafka message fetcher
       </a>
     </li>
@@ -1156,7 +1160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../functions/broker/kafka/kafka_publisher/" class="md-nav__link">
+      <a href="../../kafka/kafka_publisher/" class="md-nav__link">
         Kafka publisher
       </a>
     </li>
@@ -1175,14 +1179,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_4_7" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_4_7" checked>
       
       
         
@@ -1197,7 +1203,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_4_4_7_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_4_4_7_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4_4_4_7">
           <span class="md-nav__icon md-icon"></span>
           Nats
@@ -1210,7 +1216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../functions/broker/nats/nats_consumer/" class="md-nav__link">
+      <a href="../nats_consumer/" class="md-nav__link">
         Nats consumer
       </a>
     </li>
@@ -1222,11 +1228,75 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../functions/broker/nats/nats_publisher/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Nats publisher
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Nats publisher
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#streampipes.functions.broker.nats.nats_publisher" class="md-nav__link">
+    streampipes.functions.broker.nats.nats_publisher
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#streampipes.functions.broker.nats.nats_publisher.NatsPublisher" class="md-nav__link">
+    NatsPublisher
+  </a>
+  
+    <nav class="md-nav" aria-label="NatsPublisher">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#streampipes.functions.broker.nats.nats_publisher.NatsPublisher.disconnect" class="md-nav__link">
+    disconnect()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streampipes.functions.broker.nats.nats_publisher.NatsPublisher.publish_event" class="md-nav__link">
+    publish_event()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1289,7 +1359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../functions/utils/async_iter_handler/" class="md-nav__link">
+      <a href="../../../utils/async_iter_handler/" class="md-nav__link">
         Async iter handler
       </a>
     </li>
@@ -1303,7 +1373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../functions/utils/data_stream_context/" class="md-nav__link">
+      <a href="../../../utils/data_stream_context/" class="md-nav__link">
         Data stream context
       </a>
     </li>
@@ -1317,7 +1387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../functions/utils/data_stream_generator/" class="md-nav__link">
+      <a href="../../../utils/data_stream_generator/" class="md-nav__link">
         Data stream generator
       </a>
     </li>
@@ -1331,7 +1401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../functions/utils/function_context/" class="md-nav__link">
+      <a href="../../../utils/function_context/" class="md-nav__link">
         Function context
       </a>
     </li>
@@ -1357,16 +1427,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
       
       
         
@@ -1383,7 +1451,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_5">
           <span class="md-nav__icon md-icon"></span>
           Model
@@ -1396,7 +1464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../common/" class="md-nav__link">
+      <a href="../../../../model/common/" class="md-nav__link">
         Common
       </a>
     </li>
@@ -1408,16 +1476,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_2" >
       
       
         
@@ -1434,7 +1500,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_5_2">
           <span class="md-nav__icon md-icon"></span>
           Container
@@ -1447,7 +1513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data_lake_measures/" class="md-nav__link">
+      <a href="../../../../model/container/data_lake_measures/" class="md-nav__link">
         Data lake measures
       </a>
     </li>
@@ -1459,55 +1525,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Data streams
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../model/container/data_streams/" class="md-nav__link">
         Data streams
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#streampipes.model.container.data_streams" class="md-nav__link">
-    streampipes.model.container.data_streams
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#streampipes.model.container.data_streams.DataStreams" class="md-nav__link">
-    DataStreams
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1519,7 +1541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../resource_container/" class="md-nav__link">
+      <a href="../../../../model/container/resource_container/" class="md-nav__link">
         Resource container
       </a>
     </li>
@@ -1583,7 +1605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../resource/data_lake_measure/" class="md-nav__link">
+      <a href="../../../../model/resource/data_lake_measure/" class="md-nav__link">
         Data lake measure
       </a>
     </li>
@@ -1597,7 +1619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../resource/data_series/" class="md-nav__link">
+      <a href="../../../../model/resource/data_series/" class="md-nav__link">
         Data series
       </a>
     </li>
@@ -1611,7 +1633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../resource/data_stream/" class="md-nav__link">
+      <a href="../../../../model/resource/data_stream/" class="md-nav__link">
         Data stream
       </a>
     </li>
@@ -1625,7 +1647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../resource/exceptions/" class="md-nav__link">
+      <a href="../../../../model/resource/exceptions/" class="md-nav__link">
         Exceptions
       </a>
     </li>
@@ -1639,7 +1661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../resource/function_definition/" class="md-nav__link">
+      <a href="../../../../model/resource/function_definition/" class="md-nav__link">
         Function definition
       </a>
     </li>
@@ -1653,7 +1675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../resource/query_result/" class="md-nav__link">
+      <a href="../../../../model/resource/query_result/" class="md-nav__link">
         Query result
       </a>
     </li>
@@ -1667,7 +1689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../resource/resource/" class="md-nav__link">
+      <a href="../../../../model/resource/resource/" class="md-nav__link">
         Resource
       </a>
     </li>
@@ -1720,16 +1742,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#streampipes.model.container.data_streams" class="md-nav__link">
-    streampipes.model.container.data_streams
+  <a href="#streampipes.functions.broker.nats.nats_publisher" class="md-nav__link">
+    streampipes.functions.broker.nats.nats_publisher
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#streampipes.model.container.data_streams.DataStreams" class="md-nav__link">
-    DataStreams
+  <a href="#streampipes.functions.broker.nats.nats_publisher.NatsPublisher" class="md-nav__link">
+    NatsPublisher
   </a>
+  
+    <nav class="md-nav" aria-label="NatsPublisher">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#streampipes.functions.broker.nats.nats_publisher.NatsPublisher.disconnect" class="md-nav__link">
+    disconnect()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streampipes.functions.broker.nats.nats_publisher.NatsPublisher.publish_event" class="md-nav__link">
+    publish_event()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1751,15 +1793,13 @@
   
 
 
-  <h1>Data streams</h1>
+  <h1>Nats publisher</h1>
 
 <div class="doc doc-object doc-module">
 
 
-<a id="streampipes.model.container.data_streams"></a>
+<a id="streampipes.functions.broker.nats.nats_publisher"></a>
   <div class="doc doc-contents first">
-  
-      <p>Implementation of a resource container for the data streams endpoint.</p>
 
   
 
@@ -1776,22 +1816,19 @@
 
 
 
-<h2 id="streampipes.model.container.data_streams.DataStreams" class="doc doc-heading">
-        <code>DataStreams</code>
+<h2 id="streampipes.functions.broker.nats.nats_publisher.NatsPublisher" class="doc doc-heading">
+        <code>NatsPublisher</code>
 
 
-<a href="#streampipes.model.container.data_streams.DataStreams" class="headerlink" title="Permanent link">&para;</a></h2>
+<a href="#streampipes.functions.broker.nats.nats_publisher.NatsPublisher" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
       <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="streampipes.model.container.resource_container.ResourceContainer" href="../resource_container/#streampipes.model.container.resource_container.ResourceContainer">ResourceContainer</a></code></p>
+        Bases: <code><a class="autorefs autorefs-internal" title="streampipes.functions.broker.Publisher" href="../../publisher/#streampipes.functions.broker.publisher.Publisher">Publisher</a></code></p>
 
   
-      <p>Implementation of the resource container for the data stream endpoint.</p>
-<p>This resource container is a collection of data streams returned by the StreamPipes API.
-It is capable of parsing the response content directly into a list of queried <code>DataStream</code>.
-Furthermore, the resource container makes them accessible in a pythonic manner.</p>
+      <p>Implementation of a publisher for NATS</p>
 
 
 
@@ -1806,6 +1843,115 @@ Furthermore, the resource container makes them accessible in a pythonic manner.<
 
 
 
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="streampipes.functions.broker.nats.nats_publisher.NatsPublisher.disconnect" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">disconnect</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+<a href="#streampipes.functions.broker.nats.nats_publisher.NatsPublisher.disconnect" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Closes the connection to the server.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <span class="doc-returns-annotation">
+                  <code>None</code>
+              </span>
+          </td>
+          <td class="doc-returns-details">
+            
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="streampipes.functions.broker.nats.nats_publisher.NatsPublisher.publish_event" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">publish_event</span><span class="p">(</span><span class="n">event</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+<a href="#streampipes.functions.broker.nats.nats_publisher.NatsPublisher.publish_event" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Publish an event to a connected data stream.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>event</code></td>
+          <td class="doc-param-details">
+            <p>The event to be published.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <span class="doc-returns-annotation">
+                  <code>None</code>
+              </span>
+          </td>
+          <td class="doc-returns-details">
+            
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
 
 
 
@@ -1881,10 +2027,10 @@ Furthermore, the resource container makes them accessible in a pythonic manner.<
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.indexes", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.indexes", "navigation.tracking"], "search": "../../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
       
     
   </body>

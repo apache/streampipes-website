@@ -37,7 +37,7 @@
         <link rel="prev" href="../broker/">
       
       
-        <link rel="next" href="../kafka_broker/">
+        <link rel="next" href="../consumer/">
       
       <link rel="icon" href="https://streampipes.apache.org/img/favicon/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
@@ -1005,6 +1005,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_4_4_4" id="__nav_4_4_4_label" tabindex="0">
@@ -1096,6 +1098,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#streampipes.functions.broker.broker_handler.get_broker_description" class="md-nav__link">
+    get_broker_description()
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1111,36 +1120,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../kafka_broker/" class="md-nav__link">
-        Kafka broker
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../kafka_message_fetcher/" class="md-nav__link">
-        Kafka message fetcher
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../nats_broker/" class="md-nav__link">
-        Nats broker
+      <a href="../consumer/" class="md-nav__link">
+        Consumer
       </a>
     </li>
   
@@ -1156,6 +1137,172 @@
       <a href="../output_collector/" class="md-nav__link">
         Output collector
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publisher/" class="md-nav__link">
+        Publisher
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_4_6" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_4_6" id="__nav_4_4_4_6_label" tabindex="0">
+          Kafka
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_4_4_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Kafka
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kafka/kafka_consumer/" class="md-nav__link">
+        Kafka consumer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kafka/kafka_message_fetcher/" class="md-nav__link">
+        Kafka message fetcher
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kafka/kafka_publisher/" class="md-nav__link">
+        Kafka publisher
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_4_7" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_4_7" id="__nav_4_4_4_7_label" tabindex="0">
+          Nats
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_4_4_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Nats
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nats/nats_consumer/" class="md-nav__link">
+        Nats consumer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nats/nats_publisher/" class="md-nav__link">
+        Nats publisher
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1621,6 +1768,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#streampipes.functions.broker.broker_handler.get_broker_description" class="md-nav__link">
+    get_broker_description()
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1703,7 +1857,7 @@
 
 
 <h2 id="streampipes.functions.broker.broker_handler.UnsupportedBrokerError" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">UnsupportedBrokerError</span><span class="p">(</span><span class="n">message</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">UnsupportedBrokerError</span><span class="p">(</span><span class="n">broker_name</span><span class="p">)</span></code>
 
 <a href="#streampipes.functions.broker.broker_handler.UnsupportedBrokerError" class="headerlink" title="Permanent link">&para;</a></h2>
 
@@ -1743,7 +1897,7 @@
 
 
 <h2 id="streampipes.functions.broker.broker_handler.get_broker" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">get_broker</span><span class="p">(</span><span class="n">data_stream</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">get_broker</span><span class="p">(</span><span class="n">data_stream</span><span class="p">,</span> <span class="n">is_publisher</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#streampipes.functions.broker.broker_handler.get_broker" class="headerlink" title="Permanent link">&para;</a></h2>
 
@@ -1793,6 +1947,93 @@
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
                     <code><a class="autorefs autorefs-internal" title="streampipes.functions.broker.Broker" href="../broker/#streampipes.functions.broker.broker.Broker">Broker</a></code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RAISES</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+            <span class="doc-raises-annotation">
+                <code><a class="autorefs autorefs-internal" title="streampipes.functions.broker.broker_handler.UnsupportedBrokerError" href="#streampipes.functions.broker.broker_handler.UnsupportedBrokerError">UnsupportedBrokerError</a></code>
+            </span>
+          </td>
+          <td class="doc-raises-details">
+            <p>Is raised when the given data stream belongs to a broker that is currently not supported by StreamPipes Python.</p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="streampipes.functions.broker.broker_handler.get_broker_description" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_broker_description</span><span class="p">(</span><span class="n">data_stream</span><span class="p">)</span></code>
+
+<a href="#streampipes.functions.broker.broker_handler.get_broker_description" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Derive the decription of the broker for the given data stream.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>data_stream</code></td>
+          <td class="doc-param-details">
+            <p>Data stream instance from which the broker is inferred</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="streampipes.model.resource.data_stream.DataStream" href="../../../model/resource/data_stream/#streampipes.model.resource.data_stream.DataStream">DataStream</a></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>broker</code>
+          </td>
+          <td class="doc-returns-details">
+            <p>The corresponding broker description derived from data stream.</p>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="streampipes.functions.broker.broker_handler.SupportedBroker" href="#streampipes.functions.broker.broker_handler.SupportedBroker">SupportedBroker</a></code>
                 </span>
               </p>
           </td>
