@@ -31,20 +31,20 @@
         <meta name="author" content="Apache Software Foundation (ASF)">
       
       
-        <link rel="canonical" href="https://streampipes.apache.org/docs/docs/python/latest/latest/reference/endpoint/api/data_stream/">
+        <link rel="canonical" href="https://streampipes.apache.org/docs/docs/python/latest/latest/reference/endpoint/api/version/">
       
       
-        <link rel="prev" href="../data_lake_measure/">
+        <link rel="prev" href="../data_stream/">
       
       
-        <link rel="next" href="../version/">
+        <link rel="next" href="../../../function_zoo/river_function/">
       
       <link rel="icon" href="https://streampipes.apache.org/img/favicon/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
-        <title>Data stream - Apache StreamPipes Python</title>
+        <title>Version - Apache StreamPipes Python</title>
       
     
     
@@ -136,7 +136,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#streampipes.endpoint.api.data_stream" class="md-skip">
+        <a href="#streampipes.endpoint.api.version" class="md-skip">
           Skip to content
         </a>
       
@@ -174,7 +174,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data stream
+              Version
             
           </span>
         </div>
@@ -823,6 +823,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../data_stream/" class="md-nav__link">
+        Data stream
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -833,12 +847,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Data stream
+          Version
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Data stream
+        Version
       </a>
       
         
@@ -855,16 +869,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#streampipes.endpoint.api.data_stream" class="md-nav__link">
-    streampipes.endpoint.api.data_stream
+  <a href="#streampipes.endpoint.api.version" class="md-nav__link">
+    streampipes.endpoint.api.version
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#streampipes.endpoint.api.data_stream.DataStreamEndpoint" class="md-nav__link">
-    DataStreamEndpoint
+  <a href="#streampipes.endpoint.api.version.VersionEndpoint" class="md-nav__link">
+    VersionEndpoint
   </a>
+  
+    <nav class="md-nav" aria-label="VersionEndpoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#streampipes.endpoint.api.version.VersionEndpoint.all" class="md-nav__link">
+    all()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streampipes.endpoint.api.version.VersionEndpoint.get" class="md-nav__link">
+    get()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streampipes.endpoint.api.version.VersionEndpoint.post" class="md-nav__link">
+    post()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -872,20 +913,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../version/" class="md-nav__link">
-        Version
-      </a>
     </li>
   
 
@@ -1768,16 +1795,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#streampipes.endpoint.api.data_stream" class="md-nav__link">
-    streampipes.endpoint.api.data_stream
+  <a href="#streampipes.endpoint.api.version" class="md-nav__link">
+    streampipes.endpoint.api.version
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#streampipes.endpoint.api.data_stream.DataStreamEndpoint" class="md-nav__link">
-    DataStreamEndpoint
+  <a href="#streampipes.endpoint.api.version.VersionEndpoint" class="md-nav__link">
+    VersionEndpoint
   </a>
+  
+    <nav class="md-nav" aria-label="VersionEndpoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#streampipes.endpoint.api.version.VersionEndpoint.all" class="md-nav__link">
+    all()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streampipes.endpoint.api.version.VersionEndpoint.get" class="md-nav__link">
+    get()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streampipes.endpoint.api.version.VersionEndpoint.post" class="md-nav__link">
+    post()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1799,15 +1853,15 @@
   
 
 
-  <h1>Data stream</h1>
+  <h1>Version</h1>
 
 <div class="doc doc-object doc-module">
 
 
-<a id="streampipes.endpoint.api.data_stream"></a>
+<a id="streampipes.endpoint.api.version"></a>
   <div class="doc doc-contents first">
   
-      <p>Specific implementation of the StreamPipes API's data stream endpoints.</p>
+      <p>Specific implementation of the StreamPipes API's version endpoint.</p>
 
   
 
@@ -1824,41 +1878,58 @@
 
 
 
-<h2 id="streampipes.endpoint.api.data_stream.DataStreamEndpoint" class="doc doc-heading">
-        <code>DataStreamEndpoint</code>
+<h2 id="streampipes.endpoint.api.version.VersionEndpoint" class="doc doc-heading">
+        <code>VersionEndpoint</code>
 
 
-<a href="#streampipes.endpoint.api.data_stream.DataStreamEndpoint" class="headerlink" title="Permanent link">&para;</a></h2>
+<a href="#streampipes.endpoint.api.version.VersionEndpoint" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
       <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="streampipes.endpoint.endpoint.APIEndpoint" href="../../endpoint/#streampipes.endpoint.endpoint.APIEndpoint">APIEndpoint</a></code></p>
+        Bases: <code><a class="autorefs autorefs-internal" title="streampipes.endpoint.APIEndpoint" href="../../endpoint/#streampipes.endpoint.endpoint.APIEndpoint">APIEndpoint</a></code></p>
 
   
-      <p>Implementation of the DataStream endpoint.</p>
-<p>Consequently, it allows querying metadata about available data streams (see <code>all()</code> method).
-The metadata is returned as an instance of <a class="autorefs autorefs-internal" href="../../../model/container/data_streams/#streampipes.model.container.data_streams.DataStreams"><code>DataStreams</code></a>.</p>
+      <p>Implementation of the Versions endpoint.</p>
+<p>This endpoint provides metadata about the StreamPipes version of the connected instance.
+It only allows to apply the <code>get()</code> method with an empty string as identifier.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>parent_client</code></td>
+          <td class="doc-param-details">
+            <p>The instance of <a class="autorefs autorefs-internal" href="../../../client/client/#streampipes.client.client.StreamPipesClient">StreamPipesClient</a> the endpoint is attached to.</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 
 <p><strong>Examples:</strong></p>
-    <div class="language-python highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">streampipes.client</span> <span class="kn">import</span> <span class="n">StreamPipesClient</span>
-<span class="kn">from</span> <span class="nn">streampipes.client.config</span> <span class="kn">import</span> <span class="n">StreamPipesClientConfig</span>
-<span class="kn">from</span> <span class="nn">streampipes.client.credential_provider</span> <span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
-
-<span class="n">client_config</span> <span class="o">=</span> <span class="n">StreamPipesClientConfig</span><span class="p">(</span>
-    <span class="n">credential_provider</span><span class="o">=</span><span class="n">StreamPipesApiKeyCredentials</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;test-user&quot;</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;api-key&quot;</span><span class="p">),</span>
-    <span class="n">host_address</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
-    <span class="n">port</span><span class="o">=</span><span class="mi">8082</span><span class="p">,</span>
-    <span class="n">https_disabled</span><span class="o">=</span><span class="kc">True</span>
-<span class="p">)</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">StreamPipesClient</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">client_config</span><span class="o">=</span><span class="n">client_config</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">streampipes.client</span> <span class="kn">import</span> <span class="n">StreamPipesClient</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">streampipes.client.config</span> <span class="kn">import</span> <span class="n">StreamPipesClientConfig</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">streampipes.client.credential_provider</span> <span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
 </code></pre></div>
-<p><div class="language-python highlight"><pre><span></span><code><span class="c1"># let&#39;s get all existing data streams in StreamPipes</span>
-<span class="n">data_streams</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">dataStreamApi</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
-<span class="nb">len</span><span class="p">(</span><span class="n">data_streams</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">client_config</span> <span class="o">=</span> <span class="n">StreamPipesClientConfig</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">credential_provider</span><span class="o">=</span><span class="n">StreamPipesApiKeyCredentials</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;test-user&quot;</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;api-key&quot;</span><span class="p">),</span>
+<span class="gp">... </span>    <span class="n">host_address</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">port</span><span class="o">=</span><span class="mi">8082</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">https_disabled</span><span class="o">=</span><span class="kc">True</span>
+<span class="gp">... </span><span class="p">)</span>
 </code></pre></div>
-<div class="language-text highlight"><pre><span></span><code>2
-</code></pre></div></p>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">client</span> <span class="o">=</span> <span class="n">StreamPipesClient</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">client_config</span><span class="o">=</span><span class="n">client_config</span><span class="p">)</span>
+</code></pre></div>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">versionApi</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">use_source_names</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="go">{&#39;backend_version&#39;: &#39;0.92.0-SNAPSHOT&#39;}</span>
+</code></pre></div>
 
 
 
@@ -1873,6 +1944,153 @@ The metadata is returned as an instance of <a class="autorefs autorefs-internal"
 
 
 
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="streampipes.endpoint.api.version.VersionEndpoint.all" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">all</span><span class="p">()</span></code>
+
+<a href="#streampipes.endpoint.api.version.VersionEndpoint.all" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Usually, this method returns information about all resources provided by this endpoint.
+However, this endpoint does not support this kind of operation.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RAISES</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+            <span class="doc-raises-annotation">
+                <code>NotImplementedError</code>
+            </span>
+          </td>
+          <td class="doc-raises-details">
+            <p>this endpoint does not return multiple entries, therefore this method is not available</p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="streampipes.endpoint.api.version.VersionEndpoint.get" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">identifier</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#streampipes.endpoint.api.version.VersionEndpoint.get" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Queries the resource from the API endpoint.</p>
+<p>For this endpoint only one resource is available.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>identifier</code></td>
+          <td class="doc-param-details">
+            <p>Not supported by this endpoint, is set to an empty string.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>str</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>versions</code>
+          </td>
+          <td class="doc-returns-details">
+            <p>The specified resource as an instance of the corresponding model class(<a class="autorefs autorefs-internal" href="../../../model/resource/version/#streampipes.model.resource.version.Version">Version</a>).  # noqa: 501</p>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code>Version</code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="streampipes.endpoint.api.version.VersionEndpoint.post" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">post</span><span class="p">(</span><span class="n">resource</span><span class="p">)</span></code>
+
+<a href="#streampipes.endpoint.api.version.VersionEndpoint.post" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Usually, this method allows to create via this endpoint.
+Since the data represented by this endpoint is immutable, it does not support this kind of operation.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RAISES</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+            <span class="doc-raises-annotation">
+                <code>NotImplementedError</code>
+            </span>
+          </td>
+          <td class="doc-raises-details">
+            <p>this endpoint does not allow for POST requests, therefore this method is not available</p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
 
 
 
