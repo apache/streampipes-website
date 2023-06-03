@@ -2891,8 +2891,8 @@ from streampipes.client.credential_provider import StreamPipesApiKeyCredentials<
             </div>
             <div class="highlight-ipynb hl-python "><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 
-<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;USER&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;admin@streampipes.apache.org&quot;</span>
-<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;API-KEY&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;XXX&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;SP_USERNAME&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;admin@streampipes.apache.org&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;SP_API_KEY&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;XXX&quot;</span>
 
 <span class="c1"># Use this if you work locally:</span>
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;BROKER-HOST&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span>  
@@ -2900,8 +2900,8 @@ from streampipes.client.credential_provider import StreamPipesApiKeyCredentials<
 </pre></div>
 <div id="cell-3" class="clipboard-copy-txt">import os
 
-os.environ["USER"] = "admin@streampipes.apache.org"
-os.environ["API-KEY"] = "XXX"
+os.environ["SP_USERNAME"] = "admin@streampipes.apache.org"
+os.environ["SP_API_KEY"] = "XXX"
 
 # Use this if you work locally:
 os.environ["BROKER-HOST"] = "localhost"  
@@ -2936,7 +2936,7 @@ os.environ["KAFKA-PORT"] = "9094" # When using Kafka as message broker</div>
                 </clipboard-copy>
             </div>
             <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">client_config</span> <span class="o">=</span> <span class="n">StreamPipesClientConfig</span><span class="p">(</span>
-    <span class="n">credential_provider</span><span class="o">=</span><span class="n">StreamPipesApiKeyCredentials</span><span class="o">.</span><span class="n">from_env</span><span class="p">(</span><span class="n">username_env</span><span class="o">=</span><span class="s2">&quot;USER&quot;</span><span class="p">,</span> <span class="n">api_key_env</span><span class="o">=</span><span class="s2">&quot;API-KEY&quot;</span><span class="p">),</span>
+    <span class="n">credential_provider</span><span class="o">=</span><span class="n">StreamPipesApiKeyCredentials</span><span class="p">(),</span>
     <span class="n">host_address</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
     <span class="n">port</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
     <span class="n">https_disabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
@@ -2944,7 +2944,7 @@ os.environ["KAFKA-PORT"] = "9094" # When using Kafka as message broker</div>
 <span class="n">client</span> <span class="o">=</span> <span class="n">StreamPipesClient</span><span class="p">(</span><span class="n">client_config</span><span class="o">=</span><span class="n">client_config</span><span class="p">)</span>
 </pre></div>
 <div id="cell-4" class="clipboard-copy-txt">client_config = StreamPipesClientConfig(
-    credential_provider=StreamPipesApiKeyCredentials.from_env(username_env="USER", api_key_env="API-KEY"),
+    credential_provider=StreamPipesApiKeyCredentials(),
     host_address="localhost",
     port=80,
     https_disabled=True,
