@@ -3122,9 +3122,9 @@ To do so, you must initialize the credential provider like the following:</p>
                     </div>
                 </clipboard-copy>
             </div>
-            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">StreamPipesApiKeyCredentials</span><span class="o">.</span><span class="n">from_env</span><span class="p">(</span><span class="n">username_env</span><span class="o">=</span><span class="s2">&quot;USER&quot;</span><span class="p">,</span> <span class="n">api_key_env</span><span class="o">=</span><span class="s2">&quot;API-KEY&quot;</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">StreamPipesApiKeyCredentials</span><span class="p">()</span>
 </pre></div>
-<div id="cell-5" class="clipboard-copy-txt">StreamPipesApiKeyCredentials.from_env(username_env="USER", api_key_env="API-KEY")</div>
+<div id="cell-5" class="clipboard-copy-txt">StreamPipesApiKeyCredentials()</div>
         
         </div>
     </div>
@@ -3140,9 +3140,8 @@ To do so, you must initialize the credential provider like the following:</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Please note that you pass the names of the environment variables.
-To ensure that the above code works, you must set the environment variables with the same name you specified in <code>from_env</code>.
-In this scenario this would look like the following:</p>
+<p>To ensure that the above code works, you must set the environment variables as expected.
+This can be done like following:</p>
 
 </div>
 </div>
@@ -3168,11 +3167,11 @@ In this scenario this would look like the following:</p>
                     </div>
                 </clipboard-copy>
             </div>
-            <div class="highlight-ipynb hl-python "><pre><span></span><span class="o">%</span><span class="n">export</span> <span class="n">USER</span><span class="o">=</span><span class="s2">&quot;&lt;USERNAME&gt;&quot;</span>
-<span class="o">%</span><span class="n">export</span> <span class="n">API_KEY</span><span class="o">=</span><span class="s2">&quot;&lt;API-KEY&gt;&quot;</span>
+            <div class="highlight-ipynb hl-python "><pre><span></span><span class="o">%</span><span class="n">export</span> <span class="n">SP_USERNAME</span><span class="o">=</span><span class="s2">&quot;&lt;USERNAME&gt;&quot;</span>
+<span class="o">%</span><span class="n">export</span> <span class="n">SP_API_KEY</span><span class="o">=</span><span class="s2">&quot;&lt;API-KEY&gt;&quot;</span>
 </pre></div>
-<div id="cell-6" class="clipboard-copy-txt">%export USER="<USERNAME>"
-%export API_KEY="<API-KEY>"</div>
+<div id="cell-6" class="clipboard-copy-txt">%export SP_USERNAME="<USERNAME>"
+%export SP_API_KEY="<API-KEY>"</div>
         
         </div>
     </div>
@@ -3315,17 +3314,6 @@ Then check out the next tutorial on <a href="../2-extracting-data-from-the-strea
 We hope you like it and would love to receive some feedback from you.
 Just go to our <a href="https://github.com/apache/streampipes/discussions">GitHub discussion page</a> and let us know your impression.
 We'll read and react to them all, we promise!</p>
-
-</div>
-</div>
-</div>
-</div>
-<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 
 </div>
 </div>
