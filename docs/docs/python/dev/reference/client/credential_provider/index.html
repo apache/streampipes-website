@@ -1945,7 +1945,9 @@ Must be inherited by all credential providers.</p>
         <tr>
           <td><code>http_headers</code></td>
           <td class="doc-param-details">
-            <p>Additional HTTP headers the generated headers are extended by.</p>
+            <div class="doc-md-description">
+              <p>Additional HTTP headers the generated headers are extended by.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -1974,9 +1976,11 @@ Must be inherited by all credential providers.</p>
               <code>https_headers</code>
           </td>
           <td class="doc-returns-details">
-            <p>Dictionary with header information as string key-value pairs. <br>
+            <div class="doc-md-description">
+              <p>Dictionary with header information as string key-value pairs. <br>
 Contains all pairs given as parameter plus the header pairs for authentication
 determined by the credential provider.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -2035,8 +2039,10 @@ If they are not passed, they are retrieved from environment variables:</p>
         <tr>
           <td><code>username</code></td>
           <td class="doc-param-details">
-            <p>The username to which the API token is granted, e.g., <code>demo-user@streampipes.apche.org</code>.<br>
+            <div class="doc-md-description">
+              <p>The username to which the API token is granted, e.g., <code>demo-user@streampipes.apche.org</code>.<br>
 If not passed, the username is retrieved from environment variable <code>SP_USERNAME</code>.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2052,8 +2058,10 @@ If not passed, the username is retrieved from environment variable <code>SP_USER
         <tr>
           <td><code>api_key</code></td>
           <td class="doc-param-details">
-            <p>The StreamPipes API key as it is displayed in the UI.<br>
+            <div class="doc-md-description">
+              <p>The StreamPipes API key as it is displayed in the UI.<br>
 If not passed, the api key is retrieved from environment variable <code>SP_API_KEY</code></p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2116,7 +2124,9 @@ If not passed, the api key is retrieved from environment variable <code>SP_API_K
         <tr>
           <td><code>username_env</code></td>
           <td class="doc-param-details">
-            <p>Name of the environment variable that contains the username</p>
+            <div class="doc-md-description">
+              <p>Name of the environment variable that contains the username</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2128,7 +2138,9 @@ If not passed, the api key is retrieved from environment variable <code>SP_API_K
         <tr>
           <td><code>api_key_env</code></td>
           <td class="doc-param-details">
-            <p>Name of the environment variable that contains the API key</p>
+            <div class="doc-md-description">
+              <p>Name of the environment variable that contains the API key</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2155,7 +2167,9 @@ If not passed, the api key is retrieved from environment variable <code>SP_API_K
               </span>
           </td>
           <td class="doc-returns-details">
-            
+            <div class="doc-md-description">
+              
+            </div>
           </td>
         </tr>
     </tbody>
@@ -2176,7 +2190,9 @@ If not passed, the api key is retrieved from environment variable <code>SP_API_K
             </span>
           </td>
           <td class="doc-raises-details">
-            <p>If one of the environment variables is not defined</p>
+            <div class="doc-md-description">
+              <p>If one of the environment variables is not defined</p>
+            </div>
           </td>
         </tr>
     </tbody>

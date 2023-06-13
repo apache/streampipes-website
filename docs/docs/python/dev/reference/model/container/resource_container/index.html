@@ -1950,7 +1950,9 @@ Furthermore, the resource container makes them accessible in a pythonic manner.<
         <tr>
           <td><code>resources</code></td>
           <td class="doc-param-details">
-            <p>A list of resources to be contained in the <code>ResourceContainer</code>.</p>
+            <div class="doc-md-description">
+              <p>A list of resources to be contained in the <code>ResourceContainer</code>.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2005,7 +2007,9 @@ Furthermore, the resource container makes them accessible in a pythonic manner.<
         <tr>
           <td><code>json_string</code></td>
           <td class="doc-param-details">
-            <p>The JSON string returned from the StreamPipes API.</p>
+            <div class="doc-md-description">
+              <p>The JSON string returned from the StreamPipes API.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2030,7 +2034,9 @@ Furthermore, the resource container makes them accessible in a pythonic manner.<
               <code>container</code>
           </td>
           <td class="doc-returns-details">
-            <p>instance of the container derived from the JSON definition</p>
+            <div class="doc-md-description">
+              <p>instance of the container derived from the JSON definition</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -2057,7 +2063,9 @@ Furthermore, the resource container makes them accessible in a pythonic manner.<
             </span>
           </td>
           <td class="doc-raises-details">
-            <p>If a resource cannot be mapped to the corresponding Python data model.</p>
+            <div class="doc-md-description">
+              <p>If a resource cannot be mapped to the corresponding Python data model.</p>
+            </div>
           </td>
         </tr>
         <tr>
@@ -2067,7 +2075,9 @@ Furthermore, the resource container makes them accessible in a pythonic manner.<
             </span>
           </td>
           <td class="doc-raises-details">
-            <p>If JSON response cannot be parsed to a <code>ResourceContainer</code>.</p>
+            <div class="doc-md-description">
+              <p>If JSON response cannot be parsed to a <code>ResourceContainer</code>.</p>
+            </div>
           </td>
         </tr>
     </tbody>
@@ -2102,8 +2112,10 @@ Furthermore, the resource container makes them accessible in a pythonic manner.<
         <tr>
           <td><code>use_source_names</code></td>
           <td class="doc-param-details">
-            <p>Determines whether the field names are named in Python style (=<code>False</code>) or
+            <div class="doc-md-description">
+              <p>Determines whether the field names are named in Python style (=<code>False</code>) or
 as originally named by StreamPipes (=<code>True</code>).</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2132,8 +2144,10 @@ as originally named by StreamPipes (=<code>True</code>).</p>
               <code>dictionary_list</code>
           </td>
           <td class="doc-returns-details">
-            <p>List of resources in dictionary representation.
+            <div class="doc-md-description">
+              <p>List of resources in dictionary representation.
 If <code>use_source_names</code> equals <code>True</code> the keys are named as in the StreamPipes backend.</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -2178,8 +2192,10 @@ If <code>use_source_names</code> equals <code>True</code> the keys are named as 
               </span>
           </td>
           <td class="doc-returns-details">
-            <p>JSON representation of the resource container where key names are equal to
+            <div class="doc-md-description">
+              <p>JSON representation of the resource container where key names are equal to
 keys used in the StreamPipes backend</p>
+            </div>
           </td>
         </tr>
     </tbody>
@@ -2216,7 +2232,9 @@ keys used in the StreamPipes backend</p>
               <code>resource_container_df</code>
           </td>
           <td class="doc-returns-details">
-            <p>Representation of the resource container as pandas DataFrame</p>
+            <div class="doc-md-description">
+              <p>Representation of the resource container as pandas DataFrame</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -2269,7 +2287,9 @@ during the parsing of StreamPipes API responses.</p>
         <tr>
           <td><code>validation_error</code></td>
           <td class="doc-param-details">
-            <p>The validation error thrown by Pydantic during parsing.</p>
+            <div class="doc-md-description">
+              <p>The validation error thrown by Pydantic during parsing.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2332,7 +2352,9 @@ does not suit to the structure of resource container.</p>
         <tr>
           <td><code>container_name</code></td>
           <td class="doc-param-details">
-            <p>The class name of the resource container where the invalid data structure was detected.</p>
+            <div class="doc-md-description">
+              <p>The class name of the resource container where the invalid data structure was detected.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2344,7 +2366,9 @@ does not suit to the structure of resource container.</p>
         <tr>
           <td><code>json_string</code></td>
           <td class="doc-param-details">
-            <p>The JSON string that has been tried to parse.</p>
+            <div class="doc-md-description">
+              <p>The JSON string that has been tried to parse.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
