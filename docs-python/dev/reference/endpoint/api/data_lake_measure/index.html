@@ -2038,7 +2038,9 @@ This behaviour can be influenced by passing the parameter <code>limit</code> wit
         <tr>
           <td><code>identifier</code></td>
           <td class="doc-param-details">
-            <p>The identifier of the data lake measure to be queried.</p>
+            <div class="doc-md-description">
+              <p>The identifier of the data lake measure to be queried.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2050,9 +2052,11 @@ This behaviour can be influenced by passing the parameter <code>limit</code> wit
         <tr>
           <td><code>**kwargs</code></td>
           <td class="doc-param-details">
-            <p>keyword arguments can be used to provide additional query parameters.
+            <div class="doc-md-description">
+              <p>keyword arguments can be used to provide additional query parameters.
 The available query parameters are defined by the
 <a class="autorefs autorefs-internal" href="#streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig">MeasurementGetQueryConfig</a>.</p>
+            </div>
             <p>
                 <span class="doc-param-annotation">
                   <b>TYPE:</b>
@@ -2081,7 +2085,9 @@ The available query parameters are defined by the
               <code>measurement</code>
           </td>
           <td class="doc-returns-details">
-            <p>the specified data lake measure</p>
+            <div class="doc-md-description">
+              <p>the specified data lake measure</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
@@ -2141,9 +2147,11 @@ for which <a href="https://docs.pydantic.dev/usage/model_config/#options">Pydant
         <tr>
           <td><code>columns</code></td>
           <td class="doc-attribute-details">
-            <p>A comma separated list of column names (e.g., <code>time,value</code>)<br>
+            <div class="doc-md-description">
+              <p>A comma separated list of column names (e.g., <code>time,value</code>)<br>
 If provided, the returned data only consists of the given columns.<br>
 Please be aware that the column <code>time</code> as an index is always included.</p>
+            </div>
             <p>
                 <span class="doc-attribute-annotation">
                   <b>TYPE:</b>
@@ -2155,7 +2163,9 @@ Please be aware that the column <code>time</code> as an index is always included
         <tr>
           <td><code>end_date</code></td>
           <td class="doc-attribute-details">
-            <p>Restricts queried data to be younger than the specified time.</p>
+            <div class="doc-md-description">
+              <p>Restricts queried data to be younger than the specified time.</p>
+            </div>
             <p>
                 <span class="doc-attribute-annotation">
                   <b>TYPE:</b>
@@ -2167,8 +2177,10 @@ Please be aware that the column <code>time</code> as an index is always included
         <tr>
           <td><code>limit</code></td>
           <td class="doc-attribute-details">
-            <p>Amount of records returned at maximum (default: <code>1000</code>) <br>
+            <div class="doc-md-description">
+              <p>Amount of records returned at maximum (default: <code>1000</code>) <br>
 This needs to be at least <code>1</code></p>
+            </div>
             <p>
                 <span class="doc-attribute-annotation">
                   <b>TYPE:</b>
@@ -2180,8 +2192,10 @@ This needs to be at least <code>1</code></p>
         <tr>
           <td><code>offset</code></td>
           <td class="doc-attribute-details">
-            <p>Offset to be applied to returned data <br>
+            <div class="doc-md-description">
+              <p>Offset to be applied to returned data <br>
 This needs to be at least <code>0</code></p>
+            </div>
             <p>
                 <span class="doc-attribute-annotation">
                   <b>TYPE:</b>
@@ -2193,8 +2207,10 @@ This needs to be at least <code>0</code></p>
         <tr>
           <td><code>order</code></td>
           <td class="doc-attribute-details">
-            <p>Ordering of query results <br>
+            <div class="doc-md-description">
+              <p>Ordering of query results <br>
 Allowed values: <code>ASC</code> and <code>DESC</code> (default: <code>ASC</code>)</p>
+            </div>
             <p>
                 <span class="doc-attribute-annotation">
                   <b>TYPE:</b>
@@ -2206,8 +2222,10 @@ Allowed values: <code>ASC</code> and <code>DESC</code> (default: <code>ASC</code
         <tr>
           <td><code>page_no</code></td>
           <td class="doc-attribute-details">
-            <p>Page number used for paging operation <br>
+            <div class="doc-md-description">
+              <p>Page number used for paging operation <br>
 This needs to be at least <code>1</code></p>
+            </div>
             <p>
                 <span class="doc-attribute-annotation">
                   <b>TYPE:</b>
@@ -2219,7 +2237,9 @@ This needs to be at least <code>1</code></p>
         <tr>
           <td><code>start_date</code></td>
           <td class="doc-attribute-details">
-            <p>Restricts queried data to be older than the specified time</p>
+            <div class="doc-md-description">
+              <p>Restricts queried data to be older than the specified time</p>
+            </div>
             <p>
                 <span class="doc-attribute-annotation">
                   <b>TYPE:</b>
@@ -2313,7 +2333,9 @@ This query string is not an entire URL, instead it needs to appended to an API p
               <code>query_param_string</code>
           </td>
           <td class="doc-returns-details">
-            <p>HTTP query params string (<code>?param1=value1&amp;param2=value2...</code>)</p>
+            <div class="doc-md-description">
+              <p>HTTP query params string (<code>?param1=value1&amp;param2=value2...</code>)</p>
+            </div>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
