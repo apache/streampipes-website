@@ -2,12 +2,28 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://streampipes.apache.org/docs/blog</id>
     <title>Apache StreamPipes Blog</title>
-    <updated>2023-04-12T06:00:00.000Z</updated>
+    <updated>2023-06-16T06:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://streampipes.apache.org/docs/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Apache StreamPipes news and events.</subtitle>
     <logo>https://streampipes.apache.org/docs/img/sp-logo-color-docs.png</logo>
     <rights>Copyright © 2019 - 2023 The Apache Software Foundation</rights>
+    <entry>
+        <title type="html"><![CDATA[Apache StreamPipes release 0.92.0]]></title>
+        <id>https://streampipes.apache.org/docs/blog/2023/06/16/release-092.html</id>
+        <link href="https://streampipes.apache.org/docs/blog/2023/06/16/release-092.html"/>
+        <updated>2023-06-16T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">8 minutes to read</div></strong>
+<br></p>
+<p>We are pleased to announce the release of StreamPipes 0.92.0, which includes several bug fixes, performance improvements, and new features.
+This version focuses on enhancing the technical aspects of StreamPipes.
+Let's explore the key updates in this release:</p>
+]]></summary>
+        <author>
+            <name>Philipp Zehnder</name>
+            <uri>https://github.com/tenthe</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Apache StreamPipes release 0.91.0]]></title>
         <id>https://streampipes.apache.org/docs/blog/2023/04/12/release-091.html</id>

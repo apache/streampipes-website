@@ -4,7 +4,7 @@
         <title>Apache StreamPipes Blog</title>
         <link>https://streampipes.apache.org/docs/blog</link>
         <description>The best place to stay up-to-date with the latest Apache StreamPipes news and events.</description>
-        <lastBuildDate>Wed, 12 Apr 2023 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 16 Jun 2023 06:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
@@ -13,6 +13,18 @@
             <link>https://streampipes.apache.org/docs/blog</link>
         </image>
         <copyright>Copyright © 2019 - 2023 The Apache Software Foundation</copyright>
+        <item>
+            <title><![CDATA[Apache StreamPipes release 0.92.0]]></title>
+            <link>https://streampipes.apache.org/docs/blog/2023/06/16/release-092.html</link>
+            <guid>https://streampipes.apache.org/docs/blog/2023/06/16/release-092.html</guid>
+            <pubDate>Fri, 16 Jun 2023 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p><strong><div style="float: left; padding-right: 40px;">8 minutes to read</div></strong>
+<br></p>
+<p>We are pleased to announce the release of StreamPipes 0.92.0, which includes several bug fixes, performance improvements, and new features.
+This version focuses on enhancing the technical aspects of StreamPipes.
+Let's explore the key updates in this release:</p>
+]]></description>
+        </item>
         <item>
             <title><![CDATA[Apache StreamPipes release 0.91.0]]></title>
             <link>https://streampipes.apache.org/docs/blog/2023/04/12/release-091.html</link>
