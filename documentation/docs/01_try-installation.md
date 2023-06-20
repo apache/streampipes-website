@@ -32,13 +32,6 @@ best experience), Firefox or Edge.
 
 ## Install StreamPipes
 
-<div class="admonition info">
-    <div class="admonition-title">Migration from 0.90.0 to 0.91.0</div>
-    <p>When upgrading an existing installation from 0.90.0 to 0.91.0, set the environment variable 
-<b>SP_INFLUX_INIT_MODE</b> to <b>upgrade</b> instead of <b>setup</b> due to an upgrade of the underlying time-series storage. </p>
-<p>Depending on the installation type, this needs to be set in the <b>.env</b> or the <b>values.yml</b> file.</p>
-</div>
-
 <ul style="padding-left:0">
     <li class="installation-step" style="margin-top:20px;">
         <div class="wrapper-container" style="">
@@ -62,13 +55,13 @@ best experience), Firefox or Edge.
                     <tbody>
                     <tr>
                         <td>
-                            <a href="https://www.apache.org/dyn/closer.lua?action=download&filename=streampipes/0.91.0/apache-streampipes-0.91.0-source-release.zip">apache-streampipes-0.91.0-source-release.zip</a>
+                            <a href="https://www.apache.org/dyn/closer.lua?action=download&filename=streampipes/0.92.0/apache-streampipes-0.92.0-source-release.zip">apache-streampipes-0.92.0-source-release.zip</a>
                         </td>
-                        <td>0.91.0</td>
-                        <td>2023-04-14</td>
+                        <td>0.92.0</td>
+                        <td>2023-06-16</td>
                         <td>
-                            <a href="https://downloads.apache.org/streampipes/0.91.0/apache-streampipes-0.91.0-source-release.zip.sha512">SHA</a>
-                            <a href="https://downloads.apache.org/streampipes/0.91.0/apache-streampipes-0.91.0-source-release.zip.asc">PGP</a>
+                            <a href="https://downloads.apache.org/streampipes/0.92.0/apache-streampipes-0.92.0-source-release.zip.sha512">SHA</a>
+                            <a href="https://downloads.apache.org/streampipes/0.92.0/apache-streampipes-0.92.0-source-release.zip.asc">PGP</a>
                         </td>
                     </tr>
                     </tbody>
