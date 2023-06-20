@@ -2619,6 +2619,14 @@
       "version-0.91.0/version-0.91.0-user-guide-introduction": {
         "title": "Apache StreamPipes Documentation",
         "sidebar_label": "Overview"
+      },
+      "version-0.92.0/version-0.92.0-try-installation": {
+        "title": "Installation",
+        "sidebar_label": "Installation"
+      },
+      "version-0.92.0/version-0.92.0-extend-setup": {
+        "title": "Development Setup",
+        "sidebar_label": "Development Setup"
       }
     },
     "links": {
