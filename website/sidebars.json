@@ -4,7 +4,8 @@
       "user-guide-introduction",
       "try-installation"
     ],
-    "\uD83D\uDCA1 Concepts": [
+    "Concepts": [
+      "introduction",
       "concepts-overview"
     ],
     "\uD83C\uDF93 Use StreamPipes": [

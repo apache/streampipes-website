@@ -37,6 +37,10 @@
         "title": "Pipelines",
         "sidebar_label": "Pipelines"
       },
+      "introduction": {
+        "title": "Introduction",
+        "sidebar_label": "Introduction"
+      },
       "use-configurations": {
         "title": "Configurations",
         "sidebar_label": "Configurations"
@@ -2636,7 +2640,7 @@
     },
     "categories": {
       "🚀 Try StreamPipes": "🚀 Try StreamPipes",
-      "💡 Concepts": "💡 Concepts",
+      "Concepts": "Concepts",
       "🎓 Use StreamPipes": "🎓 Use StreamPipes",
       "📚 Pipeline Elements": "📚 Pipeline Elements",
       "⚡ Deploy StreamPipes": "⚡ Deploy StreamPipes",
@@ -2644,6 +2648,7 @@
       "🔧 Technicals": "🔧 Technicals",
       "👪 Community": "👪 Community",
       "FAQ": "FAQ",
+      "💡 Concepts": "💡 Concepts",
       "Basics": "Basics",
       "Tutorials": "Tutorials",
       "SDK Reference": "SDK Reference",
