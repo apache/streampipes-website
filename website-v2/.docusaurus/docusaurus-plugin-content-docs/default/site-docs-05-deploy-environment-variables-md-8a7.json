@@ -1,0 +1,18 @@
+{
+  "unversionedId": "deploy-environment-variables",
+  "id": "deploy-environment-variables",
+  "title": "deploy-environment-variables",
+  "description": "---",
+  "source": "@site/../docs/05_deploy-environment-variables.md",
+  "sourceDirName": ".",
+  "slug": "/deploy-environment-variables",
+  "permalink": "/docs/next/deploy-environment-variables",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 5,
+  "frontMatter": {}
+}

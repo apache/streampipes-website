@@ -1,0 +1,53 @@
+{
+  "pluginId": "default",
+  "version": "0.63.0-pre-asf",
+  "label": "0.63.0-pre-asf",
+  "banner": "unmaintained",
+  "badge": true,
+  "noIndex": false,
+  "className": "docs-version-0.63.0-pre-asf",
+  "isLast": false,
+  "docsSidebars": {},
+  "docs": {
+    "dev-guide-archetype": {
+      "id": "dev-guide-archetype",
+      "title": "Start Developing",
+      "description": "In this tutorial we explain how you can use the Maven archetypes to develop your own StreamPipes processors and sinks."
+    },
+    "dev-guide-configuration": {
+      "id": "dev-guide-configuration",
+      "title": "Configuration",
+      "description": "On this page we explain how the StreamPipes configuration works."
+    },
+    "dev-guide-development-environment": {
+      "id": "dev-guide-development-environment",
+      "title": "Development Environment",
+      "description": "In this section, we describe our recommended minimum setup for locally setting up a development instance of StreamPipes needed to develop, run and test new pipeline elements."
+    },
+    "dev-guide-tutorial-processors": {
+      "id": "dev-guide-tutorial-processors",
+      "title": "Tutorial: Data Processors",
+      "description": "In this tutorial, we will add a new data processor using the Apache Flink wrapper."
+    },
+    "dev-guide-tutorial-sinks": {
+      "id": "dev-guide-tutorial-sinks",
+      "title": "Tutorial: Data Sinks",
+      "description": "In this tutorial, we will add a new data sink using the standalone wrapper."
+    },
+    "dev-guide-tutorial-sources": {
+      "id": "dev-guide-tutorial-sources",
+      "title": "Tutorial: Data Sources",
+      "description": "In this tutorial, we will add a new data source consisting of a single data stream. The source will be provided as a standalone component (i.e., the description will be accessible through an integrated web server)."
+    },
+    "user-guide-first-steps": {
+      "id": "user-guide-first-steps",
+      "title": "First steps",
+      "description": "In this section, you'll learn how to create and run pipelines in StreamPipes."
+    },
+    "user-guide-installation": {
+      "id": "user-guide-installation",
+      "title": "Installation",
+      "description": "Prerequisites"
+    }
+  }
+}

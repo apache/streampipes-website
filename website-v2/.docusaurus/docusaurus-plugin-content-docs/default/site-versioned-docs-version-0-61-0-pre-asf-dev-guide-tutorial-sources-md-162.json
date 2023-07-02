@@ -1,0 +1,22 @@
+{
+  "unversionedId": "dev-guide-tutorial-sources",
+  "id": "version-0.61.0-pre-asf/dev-guide-tutorial-sources",
+  "title": "Tutorial: Data Sources",
+  "description": "In this tutorial, we will add a new data source consisting of a single data stream. The source will be provided as a standalone component (i.e., the description will be accessible through an integrated web server).",
+  "source": "@site/versioned_docs/version-0.61.0-pre-asf/dev-guide-tutorial-sources.md",
+  "sourceDirName": ".",
+  "slug": "/dev-guide-tutorial-sources",
+  "permalink": "/docs/0.61.0-pre-asf/dev-guide-tutorial-sources",
+  "draft": false,
+  "tags": [],
+  "version": "0.61.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "dev-guide-tutorial-sources",
+    "title": "Tutorial: Data Sources",
+    "sidebar_label": "Tutorial: Data Sources",
+    "original_id": "dev-guide-tutorial-sources"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "unversionedId": "user-guide-software-components",
+  "id": "version-0.92.0/user-guide-software-components",
+  "title": "Software Components",
+  "description": "This page contains all the software components that can be used within the StreamPipes framework.",
+  "source": "@site/versioned_docs/version-0.92.0/user-guide-software-components.md",
+  "sourceDirName": ".",
+  "slug": "/user-guide-software-components",
+  "permalink": "/docs/user-guide-software-components",
+  "draft": false,
+  "tags": [],
+  "version": "0.92.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "user-guide-software-components",
+    "title": "Software Components",
+    "sidebar_label": "Software Components"
+  }
+}

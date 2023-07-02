@@ -1,0 +1,30 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.processors.transformation.jvm.count-array",
+  "id": "pe/org.apache.streampipes.processors.transformation.jvm.count-array",
+  "title": "Count Array",
+  "description": "<!--",
+  "source": "@site/../docs/pe/org.apache.streampipes.processors.transformation.jvm.count-array.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.processors.transformation.jvm.count-array",
+  "permalink": "/docs/next/pe/org.apache.streampipes.processors.transformation.jvm.count-array",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processors.transformation.jvm.count-array",
+    "title": "Count Array",
+    "sidebar_label": "Count Array"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Count Aggregation",
+    "permalink": "/docs/next/pe/org.apache.streampipes.processors.aggregation.flink.count"
+  },
+  "next": {
+    "title": "Creates JTS Point",
+    "permalink": "/docs/next/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo"
+  }
+}

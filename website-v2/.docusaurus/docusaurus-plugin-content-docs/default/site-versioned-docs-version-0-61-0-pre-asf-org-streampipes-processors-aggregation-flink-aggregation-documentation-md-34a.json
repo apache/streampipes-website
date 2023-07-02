@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.streampipes.processors.aggregation.flink.aggregation/version-0.62.0-org.streampipes.processors.aggregation.flink.aggregation",
+  "id": "version-0.61.0-pre-asf/org.streampipes.processors.aggregation.flink.aggregation/version-0.62.0-org.streampipes.processors.aggregation.flink.aggregation",
+  "title": "Aggregation",
+  "description": "*",
+  "source": "@site/versioned_docs/version-0.61.0-pre-asf/org.streampipes.processors.aggregation.flink.aggregation/documentation.md",
+  "sourceDirName": "org.streampipes.processors.aggregation.flink.aggregation",
+  "slug": "/org.streampipes.processors.aggregation.flink.aggregation/version-0.62.0-org.streampipes.processors.aggregation.flink.aggregation",
+  "permalink": "/docs/0.61.0-pre-asf/org.streampipes.processors.aggregation.flink.aggregation/version-0.62.0-org.streampipes.processors.aggregation.flink.aggregation",
+  "draft": false,
+  "tags": [],
+  "version": "0.61.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "version-0.62.0-org.streampipes.processors.aggregation.flink.aggregation",
+    "title": "Aggregation",
+    "sidebar_label": "Aggregation",
+    "original_id": "org.streampipes.processors.aggregation.flink.aggregation"
+  }
+}

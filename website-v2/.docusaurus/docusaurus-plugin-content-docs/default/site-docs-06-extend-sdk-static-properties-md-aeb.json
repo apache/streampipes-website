@@ -1,0 +1,31 @@
+{
+  "unversionedId": "extend-sdk-static-properties",
+  "id": "extend-sdk-static-properties",
+  "title": "SDK Guide: Static Properties",
+  "description": "Introduction",
+  "source": "@site/../docs/06_extend-sdk-static-properties.md",
+  "sourceDirName": ".",
+  "slug": "/extend-sdk-static-properties",
+  "permalink": "/docs/next/extend-sdk-static-properties",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "id": "extend-sdk-static-properties",
+    "title": "SDK Guide: Static Properties",
+    "sidebar_label": "SDK: Static Properties"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "SDK: Stream Requirements",
+    "permalink": "/docs/next/extend-sdk-stream-requirements"
+  },
+  "next": {
+    "title": "SDK: Output Strategies",
+    "permalink": "/docs/next/extend-sdk-output-strategies"
+  }
+}

@@ -1,0 +1,483 @@
+{
+  "pluginId": "default",
+  "version": "0.67.0",
+  "label": "0.67.0",
+  "banner": "unmaintained",
+  "badge": true,
+  "noIndex": false,
+  "className": "docs-version-0.67.0",
+  "isLast": false,
+  "docsSidebars": {},
+  "docs": {
+    "community-contribute": {
+      "id": "community-contribute",
+      "title": "Contribute",
+      "description": "Contribute"
+    },
+    "community-get-help": {
+      "id": "community-get-help",
+      "title": "Get Help",
+      "description": "The Apache StreamPipes community is happy to help with any questions or problems you might have."
+    },
+    "concepts-adapter": {
+      "id": "concepts-adapter",
+      "title": "Data Adapters",
+      "description": "tbd"
+    },
+    "concepts-data-streams": {
+      "id": "concepts-data-streams",
+      "title": "Data Streams",
+      "description": "tbd"
+    },
+    "concepts-glossary": {
+      "id": "concepts-glossary",
+      "title": "Glossary",
+      "description": "tbd"
+    },
+    "concepts-overview": {
+      "id": "concepts-overview",
+      "title": "StreamPipes Concepts",
+      "description": "To understand how StreamPipes works, the knowledge of a few core concepts, illustrated below, will be helpful."
+    },
+    "concepts-pipelines": {
+      "id": "concepts-pipelines",
+      "title": "Pipelines",
+      "description": "tbd"
+    },
+    "debugging-debugging": {
+      "id": "debugging-debugging",
+      "title": "Debugging",
+      "description": "tbd"
+    },
+    "debugging-monitoring": {
+      "id": "debugging-monitoring",
+      "title": "Monitoring",
+      "description": "tbd"
+    },
+    "deploy-docker": {
+      "id": "deploy-docker",
+      "title": "Docker Deployment",
+      "description": "StreamPipes Compose is a simple collection of user-friendly docker-compose files that easily lets gain first-hand experience with Apache StreamPipes."
+    },
+    "deploy-kubernetes": {
+      "id": "deploy-kubernetes",
+      "title": "Kubernetes Deployment",
+      "description": "Prerequisites"
+    },
+    "deploy-use-ssl": {
+      "id": "deploy-use-ssl",
+      "title": "Use SSL",
+      "description": "This page explains how SSL Certificates can be used to provide transport layer security between your Browser and the Streampipes Backend."
+    },
+    "dev-guide-archetype": {
+      "id": "dev-guide-archetype",
+      "title": "Start Developing",
+      "description": ""
+    },
+    "dev-guide-sdk-guide-processors": {
+      "id": "dev-guide-sdk-guide-processors",
+      "title": "SDK Guide: Data Processors",
+      "description": "Project Setup"
+    },
+    "dev-guide-sdk-guide-sinks": {
+      "id": "dev-guide-sdk-guide-sinks",
+      "title": "SDK Guide: Data Sinks",
+      "description": "Project Setup"
+    },
+    "extend-archetypes": {
+      "id": "extend-archetypes",
+      "title": "Maven Archetypes",
+      "description": "In this tutorial we explain how you can use the Maven archetypes to develop your own StreamPipes processors and sinks."
+    },
+    "extend-cli": {
+      "id": "extend-cli",
+      "title": "StreamPipes CLI",
+      "description": "The StreamPipes command-line interface (CLI) is focused on developers in order to provide an easy entrypoint to set up a suitable dev environment, either planning on developing"
+    },
+    "extend-sdk-event-model": {
+      "id": "extend-sdk-event-model",
+      "title": "SDK Guide: Event Model",
+      "description": "Introduction"
+    },
+    "extend-sdk-output-strategies": {
+      "id": "extend-sdk-output-strategies",
+      "title": "SDK Guide: Output Strategies",
+      "description": "Introduction"
+    },
+    "extend-sdk-static-properties": {
+      "id": "extend-sdk-static-properties",
+      "title": "SDK Guide: Static Properties",
+      "description": "Introduction"
+    },
+    "extend-sdk-stream-requirements": {
+      "id": "extend-sdk-stream-requirements",
+      "title": "SDK Guide: Stream Requirements",
+      "description": "Introduction"
+    },
+    "extend-setup": {
+      "id": "extend-setup",
+      "title": "Development Setup",
+      "description": "Pipeline elements in StreamPipes are provided as standalone microservices. New pipeline elements can be easily developed using the provided Maven archetypes and can be installed in StreamPipes at runtime."
+    },
+    "extend-tutorial-data-processors": {
+      "id": "extend-tutorial-data-processors",
+      "title": "Tutorial: Data Processors",
+      "description": "In this tutorial, we will add a new data processor using the Apache Flink wrapper."
+    },
+    "extend-tutorial-data-sinks": {
+      "id": "extend-tutorial-data-sinks",
+      "title": "Tutorial: Data Sinks",
+      "description": "In this tutorial, we will add a new data sink using the standalone wrapper."
+    },
+    "extend-tutorial-data-sources": {
+      "id": "extend-tutorial-data-sources",
+      "title": "Tutorial: Data Sources",
+      "description": "In this tutorial, we will add a new data source consisting of a single data stream. The source will be provided as a standalone component (i.e., the description will be accessible through an integrated web server)."
+    },
+    "pe/org.apache.streampipes.connect.adapters.flic.mqtt": {
+      "id": "pe/org.apache.streampipes.connect.adapters.flic.mqtt",
+      "title": "Flic MQTT",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.opcua": {
+      "id": "pe/org.apache.streampipes.connect.adapters.opcua",
+      "title": "OPC UA",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.plc4x.modbus": {
+      "id": "pe/org.apache.streampipes.connect.adapters.plc4x.modbus",
+      "title": "PLC4X MODBUS",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.simulator.machine": {
+      "id": "pe/org.apache.streampipes.connect.adapters.simulator.machine",
+      "title": "Machine Data Simulator",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.protocol.stream.httpserver": {
+      "id": "pe/org.apache.streampipes.connect.protocol.stream.httpserver",
+      "title": "HTTP Server",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processor.geo.jvm.geocoding": {
+      "id": "pe/org.apache.streampipes.processor.geo.jvm.geocoding",
+      "title": "Google Maps Geocoder",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding": {
+      "id": "pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding",
+      "title": "Reverse Geocoder",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding": {
+      "id": "pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding",
+      "title": "Static Google Maps Geocoder",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification": {
+      "id": "pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification",
+      "title": "Generic Image Classification",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher": {
+      "id": "pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher",
+      "title": "Image Enricher",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processor.imageclassification.qrcode": {
+      "id": "pe/org.apache.streampipes.processor.imageclassification.qrcode",
+      "title": "QR Code Reader",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.aggregation.flink.aggregation": {
+      "id": "pe/org.apache.streampipes.processors.aggregation.flink.aggregation",
+      "title": "Aggregation",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.aggregation.flink.count": {
+      "id": "pe/org.apache.streampipes.processors.aggregation.flink.count",
+      "title": "Count Aggregation",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.aggregation.flink.eventcount": {
+      "id": "pe/org.apache.streampipes.processors.aggregation.flink.eventcount",
+      "title": "Event Counter",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.aggregation.flink.rate": {
+      "id": "pe/org.apache.streampipes.processors.aggregation.flink.rate",
+      "title": "Event Rate",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.changedetection.jvm.cusum": {
+      "id": "pe/org.apache.streampipes.processors.changedetection.jvm.cusum",
+      "title": "Cusum",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.filters.jvm.limit": {
+      "id": "pe/org.apache.streampipes.processors.filters.jvm.limit",
+      "title": "Rate Limit",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.filters.jvm.merge": {
+      "id": "pe/org.apache.streampipes.processors.filters.jvm.merge",
+      "title": "Synchronize Two Streams",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator": {
+      "id": "pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator",
+      "title": "Distance Calculator",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator": {
+      "id": "pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator",
+      "title": "Static Distance Calculator",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.pattern-detection.flink.absence": {
+      "id": "pe/org.apache.streampipes.processors.pattern-detection.flink.absence",
+      "title": "Absence",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.pattern-detection.flink.and": {
+      "id": "pe/org.apache.streampipes.processors.pattern-detection.flink.and",
+      "title": "And",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection": {
+      "id": "pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection",
+      "title": "Peak Detection",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.pattern-detection.flink.sequence": {
+      "id": "pe/org.apache.streampipes.processors.pattern-detection.flink.sequence",
+      "title": "Sequence",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.siddhi.frequency": {
+      "id": "pe/org.apache.streampipes.processors.siddhi.frequency",
+      "title": "Frequency Calculation",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.siddhi.frequencychange": {
+      "id": "pe/org.apache.streampipes.processors.siddhi.frequencychange",
+      "title": "Frequency Change",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.siddhi.increase": {
+      "id": "pe/org.apache.streampipes.processors.siddhi.increase",
+      "title": "Trend",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.siddhi.numericalfilter": {
+      "id": "pe/org.apache.streampipes.processors.siddhi.numericalfilter",
+      "title": "Numerical Filter (Siddhi)",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.siddhi.stop": {
+      "id": "pe/org.apache.streampipes.processors.siddhi.stop",
+      "title": "Stream Stop Detection",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.textmining.flink.languagedetection": {
+      "id": "pe/org.apache.streampipes.processors.textmining.flink.languagedetection",
+      "title": "Language Detection",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.textmining.flink.wordcount": {
+      "id": "pe/org.apache.streampipes.processors.textmining.flink.wordcount",
+      "title": "Word Count",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.flink.field-converter": {
+      "id": "pe/org.apache.streampipes.processors.transformation.flink.field-converter",
+      "title": "Field Converter",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.flink.field-renamer": {
+      "id": "pe/org.apache.streampipes.processors.transformation.flink.field-renamer",
+      "title": "Field Renamer",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.flink.fieldhasher": {
+      "id": "pe/org.apache.streampipes.processors.transformation.flink.fieldhasher",
+      "title": "Field Hasher",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter": {
+      "id": "pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter",
+      "title": "Measurement Unit Converter",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter",
+      "title": "Boolean Counter",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge",
+      "title": "Signal Edge Filter",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state",
+      "title": "Boolean To State",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.processor.state.buffer": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.processor.state.buffer",
+      "title": "State Buffer",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer",
+      "title": "State Buffer Labeler",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number",
+      "title": "Number Labeler",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state",
+      "title": "String To State",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.split-array": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.split-array",
+      "title": "Split Array",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer",
+      "title": "String Timer",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.brokers.jvm.nats": {
+      "id": "pe/org.apache.streampipes.sinks.brokers.jvm.nats",
+      "title": "NATS Publisher",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq": {
+      "id": "pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq",
+      "title": "RabbitMQ Publisher",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.databases.ditto": {
+      "id": "pe/org.apache.streampipes.sinks.databases.ditto",
+      "title": "Eclipse Ditto",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.databases.jvm.mysql": {
+      "id": "pe/org.apache.streampipes.sinks.databases.jvm.mysql",
+      "title": "MySQL Database",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.internal.jvm.notification": {
+      "id": "pe/org.apache.streampipes.sinks.internal.jvm.notification",
+      "title": "Notification",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.notifications.jvm.slack": {
+      "id": "pe/org.apache.streampipes.sinks.notifications.jvm.slack",
+      "title": "Slack Notification",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.notifications.jvm.telegram": {
+      "id": "pe/org.apache.streampipes.sinks.notifications.jvm.telegram",
+      "title": "Telegram Publisher",
+      "description": "<!--"
+    },
+    "technicals-architecture": {
+      "id": "technicals-architecture",
+      "title": "Architecture",
+      "description": "The following picture illustrates the high-level architecture of StreamPipes:"
+    },
+    "technicals-configuration": {
+      "id": "technicals-configuration",
+      "title": "Configuration",
+      "description": "On this page we explain how the StreamPipes configuration works."
+    },
+    "technicals-messaging": {
+      "id": "technicals-messaging",
+      "title": "Messaging",
+      "description": "tbd"
+    },
+    "technicals-runtime-wrappers": {
+      "id": "technicals-runtime-wrappers",
+      "title": "Runtime Wrappers",
+      "description": "tbd"
+    },
+    "technicals-user-guidance": {
+      "id": "technicals-user-guidance",
+      "title": "User Guidance",
+      "description": "tbd"
+    },
+    "try-installation": {
+      "id": "try-installation",
+      "title": "Installation",
+      "description": "The easiest way to install StreamPipes is our Docker-based installation. For production-grade deployments, we also"
+    },
+    "try-tutorial": {
+      "id": "try-tutorial",
+      "title": "Interactive Tutorial",
+      "description": "Once you've installed StreamPipes and see the home screen, you'll see a number of modules that are part of the StreamPipes toolbox."
+    },
+    "use-configurations": {
+      "id": "use-configurations",
+      "title": "Configurations",
+      "description": "tbd"
+    },
+    "use-connect": {
+      "id": "use-connect",
+      "title": "StreamPipes Connect",
+      "description": "StreamPipes Connect is the module to connect external data sources with Apache StreamPipes directly from the user interface."
+    },
+    "use-dashboard": {
+      "id": "use-dashboard",
+      "title": "Live Dashboard",
+      "description": "The live dashboard can be used to visualize live data of data streams using a set of visualizations"
+    },
+    "use-data-explorer": {
+      "id": "use-data-explorer",
+      "title": "Data Explorer",
+      "description": "The data explorer can be used to visualize and explore data streams that are persisted by using the Data Lake sink."
+    },
+    "use-install-pipeline-elements": {
+      "id": "use-install-pipeline-elements",
+      "title": "Install Pipeline Elements",
+      "description": "Install Pipeline Elements"
+    },
+    "use-managing-pipelines": {
+      "id": "use-managing-pipelines",
+      "title": "Managing Pipelines",
+      "description": "The pipeline view lists all created pipelines and provides several views and actions to manage the lifecycle of pipelines."
+    },
+    "use-notifications": {
+      "id": "use-notifications",
+      "title": "Notifications",
+      "description": "The notification module can be used to create internal notifications."
+    },
+    "use-pipeline-editor": {
+      "id": "use-pipeline-editor",
+      "title": "Pipeline Editor",
+      "description": "The pipeline editor module supports building pipelines that transform a data stream using a set of resuable data processors and data sinks."
+    },
+    "user-guide-installation": {
+      "id": "user-guide-installation",
+      "title": "Installation",
+      "description": "Prerequisites"
+    },
+    "user-guide-introduction": {
+      "id": "user-guide-introduction",
+      "title": "Apache StreamPipes Documentation",
+      "description": "This is the documentation of Apache StreamPipes."
+    },
+    "user-guide-introduction-old": {
+      "id": "user-guide-introduction-old",
+      "title": "Introduction",
+      "description": "StreamPipes is a framework that enables users to work with data streams."
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping",
+  "id": "version-0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping",
+  "title": "Measure Time Between Two Sensors",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping/documentation.md",
+  "sourceDirName": "org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping",
+  "slug": "/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping",
+  "permalink": "/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping",
+  "draft": false,
+  "tags": [],
+  "version": "0.64.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping",
+    "title": "Measure Time Between Two Sensors",
+    "sidebar_label": "Measure Time Between Two Sensors",
+    "original_id": "org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping"
+  }
+}

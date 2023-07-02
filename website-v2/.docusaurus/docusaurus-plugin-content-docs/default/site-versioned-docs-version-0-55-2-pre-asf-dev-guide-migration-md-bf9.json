@@ -1,0 +1,22 @@
+{
+  "unversionedId": "dev-guide-migration",
+  "id": "version-0.55.2-pre-asf/dev-guide-migration",
+  "title": "Migration Guide v0.61",
+  "description": "Version 0.61.0 of StreamPipes comes with an improved event model. This model makes it easier to support more complex data streams (e.g., streams containing nested properties and lists) and includes features such as automatically resolving conflicts when merging two event streams.",
+  "source": "@site/versioned_docs/version-0.55.2-pre-asf/dev-guide-migration.md",
+  "sourceDirName": ".",
+  "slug": "/dev-guide-migration",
+  "permalink": "/docs/0.55.2-pre-asf/dev-guide-migration",
+  "draft": false,
+  "tags": [],
+  "version": "0.55.2-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "dev-guide-migration",
+    "title": "Migration Guide v0.61",
+    "sidebar_label": "Migration Guide",
+    "original_id": "dev-guide-migration"
+  }
+}

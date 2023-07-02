@@ -1,0 +1,21 @@
+{
+  "unversionedId": "dev-guide-introduction",
+  "id": "version-0.92.0/dev-guide-introduction",
+  "title": "Introduction",
+  "description": "StreamPipes is an open platform which can be easily extended at runtime by adding new data streams, data processors and data sinks.",
+  "source": "@site/versioned_docs/version-0.92.0/dev-guide-introduction.md",
+  "sourceDirName": ".",
+  "slug": "/dev-guide-introduction",
+  "permalink": "/docs/dev-guide-introduction",
+  "draft": false,
+  "tags": [],
+  "version": "0.92.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "dev-guide-introduction",
+    "title": "Introduction",
+    "sidebar_label": "Introduction"
+  }
+}

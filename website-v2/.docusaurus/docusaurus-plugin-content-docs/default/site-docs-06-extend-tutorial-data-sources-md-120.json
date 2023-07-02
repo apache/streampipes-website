@@ -1,0 +1,31 @@
+{
+  "unversionedId": "extend-tutorial-data-sources",
+  "id": "extend-tutorial-data-sources",
+  "title": "Tutorial: Data Sources",
+  "description": "In this tutorial, we will add a new data source consisting of a single data stream. The source will be provided as a standalone component (i.e., the description will be accessible through an integrated web server).",
+  "source": "@site/../docs/06_extend-tutorial-data-sources.md",
+  "sourceDirName": ".",
+  "slug": "/extend-tutorial-data-sources",
+  "permalink": "/docs/next/extend-tutorial-data-sources",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "id": "extend-tutorial-data-sources",
+    "title": "Tutorial: Data Sources",
+    "sidebar_label": "Tutorial: Data Sources"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Your first data processor",
+    "permalink": "/docs/next/extend-first-processor"
+  },
+  "next": {
+    "title": "Tutorial: Data Processors",
+    "permalink": "/docs/next/extend-tutorial-data-processors"
+  }
+}

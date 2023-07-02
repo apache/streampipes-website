@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.streampipes.sinks.brokers.jvm.kafka/version-0.62.0-org.streampipes.sinks.brokers.jvm.kafka",
+  "id": "version-0.62.0-pre-asf/org.streampipes.sinks.brokers.jvm.kafka/version-0.62.0-org.streampipes.sinks.brokers.jvm.kafka",
+  "title": "Kafka Publisher",
+  "description": "*",
+  "source": "@site/versioned_docs/version-0.62.0-pre-asf/org.streampipes.sinks.brokers.jvm.kafka/documentation.md",
+  "sourceDirName": "org.streampipes.sinks.brokers.jvm.kafka",
+  "slug": "/org.streampipes.sinks.brokers.jvm.kafka/version-0.62.0-org.streampipes.sinks.brokers.jvm.kafka",
+  "permalink": "/docs/0.62.0-pre-asf/org.streampipes.sinks.brokers.jvm.kafka/version-0.62.0-org.streampipes.sinks.brokers.jvm.kafka",
+  "draft": false,
+  "tags": [],
+  "version": "0.62.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "version-0.62.0-org.streampipes.sinks.brokers.jvm.kafka",
+    "title": "Kafka Publisher",
+    "sidebar_label": "Kafka Publisher",
+    "original_id": "org.streampipes.sinks.brokers.jvm.kafka"
+  }
+}

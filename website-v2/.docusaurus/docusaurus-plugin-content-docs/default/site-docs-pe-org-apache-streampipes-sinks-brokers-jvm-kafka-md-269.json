@@ -1,0 +1,30 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.sinks.brokers.jvm.kafka",
+  "id": "pe/org.apache.streampipes.sinks.brokers.jvm.kafka",
+  "title": "Kafka Publisher",
+  "description": "<!--",
+  "source": "@site/../docs/pe/org.apache.streampipes.sinks.brokers.jvm.kafka.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.sinks.brokers.jvm.kafka",
+  "permalink": "/docs/next/pe/org.apache.streampipes.sinks.brokers.jvm.kafka",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.sinks.brokers.jvm.kafka",
+    "title": "Kafka Publisher",
+    "sidebar_label": "Kafka Publisher"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "JMS Publisher",
+    "permalink": "/docs/next/pe/org.apache.streampipes.sinks.brokers.jvm.jms"
+  },
+  "next": {
+    "title": "MySQL Database",
+    "permalink": "/docs/next/pe/org.apache.streampipes.sinks.databases.jvm.mysql"
+  }
+}

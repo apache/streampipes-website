@@ -1,0 +1,23 @@
+{
+  "unversionedId": "extend-sdk-event-model",
+  "id": "version-0.66.0/extend-sdk-event-model",
+  "title": "SDK Guide: Event Model",
+  "description": "Introduction",
+  "source": "@site/versioned_docs/version-0.66.0/06_extend-sdk-event-model.md",
+  "sourceDirName": ".",
+  "slug": "/extend-sdk-event-model",
+  "permalink": "/docs/0.66.0/extend-sdk-event-model",
+  "draft": false,
+  "tags": [],
+  "version": "0.66.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "id": "extend-sdk-event-model",
+    "title": "SDK Guide: Event Model",
+    "sidebar_label": "SDK: Event Model",
+    "original_id": "extend-sdk-event-model"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.streampipes.processors.siddhi.numericalfilter/version-0.62.0-org.streampipes.processors.siddhi.numericalfilter",
+  "id": "version-0.61.0-pre-asf/org.streampipes.processors.siddhi.numericalfilter/version-0.62.0-org.streampipes.processors.siddhi.numericalfilter",
+  "title": "Numerical Filter (Siddhi)",
+  "description": "*",
+  "source": "@site/versioned_docs/version-0.61.0-pre-asf/org.streampipes.processors.siddhi.numericalfilter/documentation.md",
+  "sourceDirName": "org.streampipes.processors.siddhi.numericalfilter",
+  "slug": "/org.streampipes.processors.siddhi.numericalfilter/version-0.62.0-org.streampipes.processors.siddhi.numericalfilter",
+  "permalink": "/docs/0.61.0-pre-asf/org.streampipes.processors.siddhi.numericalfilter/version-0.62.0-org.streampipes.processors.siddhi.numericalfilter",
+  "draft": false,
+  "tags": [],
+  "version": "0.61.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "version-0.62.0-org.streampipes.processors.siddhi.numericalfilter",
+    "title": "Numerical Filter (Siddhi)",
+    "sidebar_label": "Numerical Filter (Siddhi)",
+    "original_id": "org.streampipes.processors.siddhi.numericalfilter"
+  }
+}

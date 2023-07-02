@@ -1,0 +1,31 @@
+{
+  "unversionedId": "extend-sdk-stream-requirements",
+  "id": "extend-sdk-stream-requirements",
+  "title": "SDK Guide: Stream Requirements",
+  "description": "Introduction",
+  "source": "@site/../docs/06_extend-sdk-stream-requirements.md",
+  "sourceDirName": ".",
+  "slug": "/extend-sdk-stream-requirements",
+  "permalink": "/docs/next/extend-sdk-stream-requirements",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "id": "extend-sdk-stream-requirements",
+    "title": "SDK Guide: Stream Requirements",
+    "sidebar_label": "SDK: Stream Requirements"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "SDK: Event Model",
+    "permalink": "/docs/next/extend-sdk-event-model"
+  },
+  "next": {
+    "title": "SDK: Static Properties",
+    "permalink": "/docs/next/extend-sdk-static-properties"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.processors.siddhi.numericalfilter",
+  "id": "version-0.92.0/pe/org.apache.streampipes.processors.siddhi.numericalfilter",
+  "title": "Numerical Filter (Siddhi)",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.92.0/pe/org.apache.streampipes.processors.siddhi.numericalfilter.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.processors.siddhi.numericalfilter",
+  "permalink": "/docs/pe/org.apache.streampipes.processors.siddhi.numericalfilter",
+  "draft": false,
+  "tags": [],
+  "version": "0.92.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processors.siddhi.numericalfilter",
+    "title": "Numerical Filter (Siddhi)",
+    "sidebar_label": "Numerical Filter (Siddhi)"
+  }
+}

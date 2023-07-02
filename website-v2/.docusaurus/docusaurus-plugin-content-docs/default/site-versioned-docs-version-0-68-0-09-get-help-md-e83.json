@@ -1,0 +1,23 @@
+{
+  "unversionedId": "community-get-help",
+  "id": "version-0.68.0/community-get-help",
+  "title": "Get Help",
+  "description": "The Apache StreamPipes community is happy to help with any questions or problems you might have.",
+  "source": "@site/versioned_docs/version-0.68.0/09_get-help.md",
+  "sourceDirName": ".",
+  "slug": "/community-get-help",
+  "permalink": "/docs/0.68.0/community-get-help",
+  "draft": false,
+  "tags": [],
+  "version": "0.68.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "id": "community-get-help",
+    "title": "Get Help",
+    "sidebar_label": "Get Help",
+    "original_id": "community-get-help"
+  }
+}

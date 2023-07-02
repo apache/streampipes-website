@@ -1,0 +1,28 @@
+{
+  "permalink": "/blog/2023/06/16/release-092",
+  "source": "@site/blog/2023-06-16-release-092.md",
+  "title": "Apache StreamPipes release 0.92.0",
+  "description": "8 minutes to read",
+  "date": "2023-06-16T00:00:00.000Z",
+  "formattedDate": "June 16, 2023",
+  "tags": [],
+  "readingTime": 2.26,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Philipp Zehnder",
+      "url": "https://github.com/tenthe",
+      "imageURL": "/docs/img/zehnder.png"
+    }
+  ],
+  "frontMatter": {
+    "title": "Apache StreamPipes release 0.92.0",
+    "author": "Philipp Zehnder",
+    "authorURL": "https://github.com/tenthe",
+    "authorImageURL": "/docs/img/zehnder.png"
+  },
+  "nextItem": {
+    "title": "Apache StreamPipes release 0.91.0",
+    "permalink": "/blog/2023/04/12/release-091"
+  }
+}

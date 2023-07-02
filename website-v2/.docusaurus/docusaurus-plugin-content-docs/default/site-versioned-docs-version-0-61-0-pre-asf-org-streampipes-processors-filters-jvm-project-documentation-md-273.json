@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.streampipes.processors.filters.jvm.project/version-0.62.0-org.streampipes.processors.filters.jvm.project",
+  "id": "version-0.61.0-pre-asf/org.streampipes.processors.filters.jvm.project/version-0.62.0-org.streampipes.processors.filters.jvm.project",
+  "title": "Projection",
+  "description": "*",
+  "source": "@site/versioned_docs/version-0.61.0-pre-asf/org.streampipes.processors.filters.jvm.project/documentation.md",
+  "sourceDirName": "org.streampipes.processors.filters.jvm.project",
+  "slug": "/org.streampipes.processors.filters.jvm.project/version-0.62.0-org.streampipes.processors.filters.jvm.project",
+  "permalink": "/docs/0.61.0-pre-asf/org.streampipes.processors.filters.jvm.project/version-0.62.0-org.streampipes.processors.filters.jvm.project",
+  "draft": false,
+  "tags": [],
+  "version": "0.61.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "version-0.62.0-org.streampipes.processors.filters.jvm.project",
+    "title": "Projection",
+    "sidebar_label": "Projection",
+    "original_id": "org.streampipes.processors.filters.jvm.project"
+  }
+}

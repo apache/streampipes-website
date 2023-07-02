@@ -1,0 +1,22 @@
+{
+  "unversionedId": "user-guide-processing-elements",
+  "id": "version-0.61.0-pre-asf/user-guide-processing-elements",
+  "title": "Processing Elements",
+  "description": "This page explains some processing elements (not including the full list) that are available in the StreamPipes Starter Kit.",
+  "source": "@site/versioned_docs/version-0.61.0-pre-asf/user-guide-processing-elements.md",
+  "sourceDirName": ".",
+  "slug": "/user-guide-processing-elements",
+  "permalink": "/docs/0.61.0-pre-asf/user-guide-processing-elements",
+  "draft": false,
+  "tags": [],
+  "version": "0.61.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "user-guide-processing-elements",
+    "title": "Processing Elements",
+    "sidebar_label": "Processing Elements",
+    "original_id": "user-guide-processing-elements"
+  }
+}

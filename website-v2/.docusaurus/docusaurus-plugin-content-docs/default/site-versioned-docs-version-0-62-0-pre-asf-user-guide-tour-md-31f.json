@@ -1,0 +1,22 @@
+{
+  "unversionedId": "user-guide-tour",
+  "id": "version-0.62.0-pre-asf/user-guide-tour",
+  "title": "Tour",
+  "description": "StreamPipes is a framework that enables domain experts to model and execute stream processing pipelines in a big data infrastructure.",
+  "source": "@site/versioned_docs/version-0.62.0-pre-asf/user-guide-tour.md",
+  "sourceDirName": ".",
+  "slug": "/user-guide-tour",
+  "permalink": "/docs/0.62.0-pre-asf/user-guide-tour",
+  "draft": false,
+  "tags": [],
+  "version": "0.62.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "user-guide-tour",
+    "title": "Tour",
+    "sidebar_label": "Tour",
+    "original_id": "user-guide-tour"
+  }
+}

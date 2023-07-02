@@ -1,0 +1,23 @@
+{
+  "unversionedId": "extend-tutorial-data-sinks",
+  "id": "version-0.66.0/extend-tutorial-data-sinks",
+  "title": "Tutorial: Data Sinks",
+  "description": "In this tutorial, we will add a new data sink using the standalone wrapper.",
+  "source": "@site/versioned_docs/version-0.66.0/06_extend-tutorial-data-sinks.md",
+  "sourceDirName": ".",
+  "slug": "/extend-tutorial-data-sinks",
+  "permalink": "/docs/0.66.0/extend-tutorial-data-sinks",
+  "draft": false,
+  "tags": [],
+  "version": "0.66.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "id": "extend-tutorial-data-sinks",
+    "title": "Tutorial: Data Sinks",
+    "sidebar_label": "Tutorial: Data Sinks",
+    "original_id": "extend-tutorial-data-sinks"
+  }
+}

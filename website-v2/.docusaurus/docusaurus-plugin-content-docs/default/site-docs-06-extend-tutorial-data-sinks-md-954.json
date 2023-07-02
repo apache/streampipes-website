@@ -1,0 +1,31 @@
+{
+  "unversionedId": "extend-tutorial-data-sinks",
+  "id": "extend-tutorial-data-sinks",
+  "title": "Tutorial: Data Sinks",
+  "description": "In this tutorial, we will add a new data sink using the standalone wrapper.",
+  "source": "@site/../docs/06_extend-tutorial-data-sinks.md",
+  "sourceDirName": ".",
+  "slug": "/extend-tutorial-data-sinks",
+  "permalink": "/docs/next/extend-tutorial-data-sinks",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "id": "extend-tutorial-data-sinks",
+    "title": "Tutorial: Data Sinks",
+    "sidebar_label": "Tutorial: Data Sinks"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Tutorial: Data Processors",
+    "permalink": "/docs/next/extend-tutorial-data-processors"
+  },
+  "next": {
+    "title": "SDK: Functions",
+    "permalink": "/docs/next/extend-sdk-functions"
+  }
+}

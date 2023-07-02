@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.apache.streampipes.processors.aggregation.flink.rate/org.apache.streampipes.processors.aggregation.flink.rate",
+  "id": "version-0.65.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.rate/org.apache.streampipes.processors.aggregation.flink.rate",
+  "title": "Event Rate",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.65.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.rate/documentation.md",
+  "sourceDirName": "org.apache.streampipes.processors.aggregation.flink.rate",
+  "slug": "/org.apache.streampipes.processors.aggregation.flink.rate/org.apache.streampipes.processors.aggregation.flink.rate",
+  "permalink": "/docs/0.65.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.rate/org.apache.streampipes.processors.aggregation.flink.rate",
+  "draft": false,
+  "tags": [],
+  "version": "0.65.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processors.aggregation.flink.rate",
+    "title": "Event Rate",
+    "sidebar_label": "Event Rate",
+    "original_id": "org.apache.streampipes.processors.aggregation.flink.rate"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "pluginId": "default",
+  "version": "0.91.0",
+  "label": "0.91.0",
+  "banner": "unmaintained",
+  "badge": true,
+  "noIndex": false,
+  "className": "docs-version-0.91.0",
+  "isLast": false,
+  "docsSidebars": {},
+  "docs": {
+    "extend-setup": {
+      "id": "extend-setup",
+      "title": "Development Setup",
+      "description": "Pipeline elements in StreamPipes are provided as standalone microservices. New pipeline elements can be easily developed using the provided Maven archetypes and can be installed in StreamPipes at runtime."
+    },
+    "try-installation": {
+      "id": "try-installation",
+      "title": "Installation",
+      "description": "The easiest way to install StreamPipes is our Docker-based installation. For production-grade deployments, we also"
+    },
+    "user-guide-introduction": {
+      "id": "user-guide-introduction",
+      "title": "Apache StreamPipes Documentation",
+      "description": "This is the documentation of Apache StreamPipes."
+    }
+  }
+}

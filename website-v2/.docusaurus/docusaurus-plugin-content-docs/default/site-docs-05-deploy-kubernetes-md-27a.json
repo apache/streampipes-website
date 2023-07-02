@@ -1,0 +1,31 @@
+{
+  "unversionedId": "deploy-kubernetes",
+  "id": "deploy-kubernetes",
+  "title": "Kubernetes Deployment",
+  "description": "Prerequisites",
+  "source": "@site/../docs/05_deploy-kubernetes.md",
+  "sourceDirName": ".",
+  "slug": "/deploy-kubernetes",
+  "permalink": "/docs/next/deploy-kubernetes",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "id": "deploy-kubernetes",
+    "title": "Kubernetes Deployment",
+    "sidebar_label": "Kubernetes Deployment"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Docker Deployment",
+    "permalink": "/docs/next/deploy-docker"
+  },
+  "next": {
+    "title": "Use SSL",
+    "permalink": "/docs/next/deploy-use-ssl"
+  }
+}

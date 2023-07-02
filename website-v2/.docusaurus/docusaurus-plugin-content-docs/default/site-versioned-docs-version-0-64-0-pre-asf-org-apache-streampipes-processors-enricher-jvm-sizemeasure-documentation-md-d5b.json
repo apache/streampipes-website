@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.apache.streampipes.processors.enricher.jvm.sizemeasure/org.apache.streampipes.processors.enricher.jvm.sizemeasure",
+  "id": "version-0.64.0-pre-asf/org.apache.streampipes.processors.enricher.jvm.sizemeasure/org.apache.streampipes.processors.enricher.jvm.sizemeasure",
+  "title": "Size Measure",
+  "description": "*",
+  "source": "@site/versioned_docs/version-0.64.0-pre-asf/org.apache.streampipes.processors.enricher.jvm.sizemeasure/documentation.md",
+  "sourceDirName": "org.apache.streampipes.processors.enricher.jvm.sizemeasure",
+  "slug": "/org.apache.streampipes.processors.enricher.jvm.sizemeasure/org.apache.streampipes.processors.enricher.jvm.sizemeasure",
+  "permalink": "/docs/0.64.0-pre-asf/org.apache.streampipes.processors.enricher.jvm.sizemeasure/org.apache.streampipes.processors.enricher.jvm.sizemeasure",
+  "draft": false,
+  "tags": [],
+  "version": "0.64.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processors.enricher.jvm.sizemeasure",
+    "title": "Size Measure",
+    "sidebar_label": "Size Measure",
+    "original_id": "org.apache.streampipes.processors.enricher.jvm.sizemeasure"
+  }
+}

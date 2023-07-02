@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.streampipes.sinks.databases.jvm.influxdb/version-0.62.0-org.streampipes.sinks.databases.jvm.influxdb",
+  "id": "version-0.62.0-pre-asf/org.streampipes.sinks.databases.jvm.influxdb/version-0.62.0-org.streampipes.sinks.databases.jvm.influxdb",
+  "title": "InfluxDB",
+  "description": "*",
+  "source": "@site/versioned_docs/version-0.62.0-pre-asf/org.streampipes.sinks.databases.jvm.influxdb/documentation.md",
+  "sourceDirName": "org.streampipes.sinks.databases.jvm.influxdb",
+  "slug": "/org.streampipes.sinks.databases.jvm.influxdb/version-0.62.0-org.streampipes.sinks.databases.jvm.influxdb",
+  "permalink": "/docs/0.62.0-pre-asf/org.streampipes.sinks.databases.jvm.influxdb/version-0.62.0-org.streampipes.sinks.databases.jvm.influxdb",
+  "draft": false,
+  "tags": [],
+  "version": "0.62.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "version-0.62.0-org.streampipes.sinks.databases.jvm.influxdb",
+    "title": "InfluxDB",
+    "sidebar_label": "InfluxDB",
+    "original_id": "org.streampipes.sinks.databases.jvm.influxdb"
+  }
+}

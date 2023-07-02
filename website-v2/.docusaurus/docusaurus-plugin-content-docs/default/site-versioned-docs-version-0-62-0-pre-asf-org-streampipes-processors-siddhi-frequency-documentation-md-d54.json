@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.streampipes.processors.siddhi.frequency/version-0.62.0-org.streampipes.processors.siddhi.frequency",
+  "id": "version-0.62.0-pre-asf/org.streampipes.processors.siddhi.frequency/version-0.62.0-org.streampipes.processors.siddhi.frequency",
+  "title": "Frequency Calculation",
+  "description": "*",
+  "source": "@site/versioned_docs/version-0.62.0-pre-asf/org.streampipes.processors.siddhi.frequency/documentation.md",
+  "sourceDirName": "org.streampipes.processors.siddhi.frequency",
+  "slug": "/org.streampipes.processors.siddhi.frequency/version-0.62.0-org.streampipes.processors.siddhi.frequency",
+  "permalink": "/docs/0.62.0-pre-asf/org.streampipes.processors.siddhi.frequency/version-0.62.0-org.streampipes.processors.siddhi.frequency",
+  "draft": false,
+  "tags": [],
+  "version": "0.62.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "version-0.62.0-org.streampipes.processors.siddhi.frequency",
+    "title": "Frequency Calculation",
+    "sidebar_label": "Frequency Calculation",
+    "original_id": "org.streampipes.processors.siddhi.frequency"
+  }
+}

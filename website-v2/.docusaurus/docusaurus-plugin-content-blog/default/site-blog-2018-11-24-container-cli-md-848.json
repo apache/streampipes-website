@@ -1,0 +1,32 @@
+{
+  "permalink": "/blog/2018/11/24/container-cli",
+  "source": "@site/blog/2018-11-24-container-cli.md",
+  "title": "ContainerCLI: A CLI tool for your Docker Application",
+  "description": "6 minutes to read",
+  "date": "2018-11-24T00:00:00.000Z",
+  "formattedDate": "November 24, 2018",
+  "tags": [],
+  "readingTime": 3.895,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Philipp Zehnder",
+      "url": "http://twitter.com/philipp10der",
+      "imageURL": "/docs/img/zehnder.png"
+    }
+  ],
+  "frontMatter": {
+    "title": "ContainerCLI: A CLI tool for your Docker Application",
+    "author": "Philipp Zehnder",
+    "authorURL": "http://twitter.com/philipp10der",
+    "authorImageURL": "/docs/img/zehnder.png"
+  },
+  "prevItem": {
+    "title": "StreamPipes release 0.61.0",
+    "permalink": "/blog/2019/04/04/release-0610"
+  },
+  "nextItem": {
+    "title": "Preview: StreamPipes release 0.60.0",
+    "permalink": "/blog/2018/09/17/preview-060"
+  }
+}

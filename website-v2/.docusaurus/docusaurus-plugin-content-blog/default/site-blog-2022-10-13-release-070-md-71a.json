@@ -1,0 +1,32 @@
+{
+  "permalink": "/blog/2022/10/13/release-070",
+  "source": "@site/blog/2022-10-13-release-070.md",
+  "title": "Apache StreamPipes release 0.70.0",
+  "description": "6 minutes to read",
+  "date": "2022-10-13T00:00:00.000Z",
+  "formattedDate": "October 13, 2022",
+  "tags": [],
+  "readingTime": 4.375,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Tim Bossenmaier",
+      "url": "https://github.com/bossenti",
+      "imageURL": "/docs/img/bossenmaier.png"
+    }
+  ],
+  "frontMatter": {
+    "title": "Apache StreamPipes release 0.70.0",
+    "author": "Tim Bossenmaier",
+    "authorURL": "https://github.com/bossenti",
+    "authorImageURL": "/docs/img/bossenmaier.png"
+  },
+  "prevItem": {
+    "title": "Apache StreamPipes release 0.90.0",
+    "permalink": "/blog/2023/01/17/release-090"
+  },
+  "nextItem": {
+    "title": "Using Factory I/O with StreamPipes",
+    "permalink": "/blog/2022/09/05/using-factory.io-with-streampipes"
+  }
+}

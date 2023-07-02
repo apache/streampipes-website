@@ -1,0 +1,31 @@
+{
+  "unversionedId": "technicals-runtime-wrappers",
+  "id": "technicals-runtime-wrappers",
+  "title": "Runtime Wrappers",
+  "description": "tbd",
+  "source": "@site/../docs/07_technicals-runtime-wrappers.md",
+  "sourceDirName": ".",
+  "slug": "/technicals-runtime-wrappers",
+  "permalink": "/docs/next/technicals-runtime-wrappers",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "id": "technicals-runtime-wrappers",
+    "title": "Runtime Wrappers",
+    "sidebar_label": "Runtime Wrappers"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "User Guidance",
+    "permalink": "/docs/next/technicals-user-guidance"
+  },
+  "next": {
+    "title": "Messaging",
+    "permalink": "/docs/next/technicals-messaging"
+  }
+}

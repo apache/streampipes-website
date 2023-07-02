@@ -1,0 +1,22 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.connect.adapters.mysql.set",
+  "id": "version-0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.mysql.set",
+  "title": "MySQL Set Adapter",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.mysql.set.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.connect.adapters.mysql.set",
+  "permalink": "/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.mysql.set",
+  "draft": false,
+  "tags": [],
+  "version": "0.65.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.connect.adapters.mysql.set",
+    "title": "MySQL Set Adapter",
+    "sidebar_label": "MySQL Set Adapter",
+    "original_id": "org.apache.streampipes.connect.adapters.mysql.set"
+  }
+}

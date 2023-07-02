@@ -1,0 +1,108 @@
+{
+  "pluginId": "default",
+  "version": "0.70.0",
+  "label": "0.70.0",
+  "banner": "unmaintained",
+  "badge": true,
+  "noIndex": false,
+  "className": "docs-version-0.70.0",
+  "isLast": false,
+  "docsSidebars": {},
+  "docs": {
+    "community-contribute": {
+      "id": "community-contribute",
+      "title": "Contribute",
+      "description": "Contribute"
+    },
+    "community-get-help": {
+      "id": "community-get-help",
+      "title": "Get Help",
+      "description": "The Apache StreamPipes community is happy to help with any questions or problems you might have."
+    },
+    "extend-cli": {
+      "id": "extend-cli",
+      "title": "StreamPipes CLI",
+      "description": "The StreamPipes command-line interface (CLI) is focused on developers in order to provide an easy entrypoint to set up a suitable dev environment, either planning on developing"
+    },
+    "extend-sdk-functions": {
+      "id": "extend-sdk-functions",
+      "title": "SDK Guide: Functions",
+      "description": "Introduction"
+    },
+    "extend-sdk-migration-service-discovery": {
+      "id": "extend-sdk-migration-service-discovery",
+      "title": "Migration Guide: New Service Discovery in 0.69.0",
+      "description": "Introduction"
+    },
+    "extend-sdk-output-strategies": {
+      "id": "extend-sdk-output-strategies",
+      "title": "SDK Guide: Output Strategies",
+      "description": "Introduction"
+    },
+    "extend-sdk-static-properties": {
+      "id": "extend-sdk-static-properties",
+      "title": "SDK Guide: Static Properties",
+      "description": "Introduction"
+    },
+    "extend-sdk-stream-requirements": {
+      "id": "extend-sdk-stream-requirements",
+      "title": "SDK Guide: Stream Requirements",
+      "description": "Introduction"
+    },
+    "extend-setup": {
+      "id": "extend-setup",
+      "title": "Development Setup",
+      "description": "Pipeline elements in StreamPipes are provided as standalone microservices. New pipeline elements can be easily developed using the provided Maven archetypes and can be installed in StreamPipes at runtime."
+    },
+    "extend-tutorial-data-processors": {
+      "id": "extend-tutorial-data-processors",
+      "title": "Tutorial: Data Processors",
+      "description": "In this tutorial, we will add a new data processor."
+    },
+    "extend-tutorial-data-sinks": {
+      "id": "extend-tutorial-data-sinks",
+      "title": "Tutorial: Data Sinks",
+      "description": "In this tutorial, we will add a new data sink using the standalone wrapper."
+    },
+    "extend-tutorial-data-sources": {
+      "id": "extend-tutorial-data-sources",
+      "title": "Tutorial: Data Sources",
+      "description": "In this tutorial, we will add a new data source consisting of a single data stream. The source will be provided as a standalone component (i.e., the description will be accessible through an integrated web server)."
+    },
+    "pipeline-elements": {
+      "id": "pipeline-elements",
+      "title": "Overview",
+      "description": "<img class=\"pe-icon\""
+    },
+    "technicals-configuration": {
+      "id": "technicals-configuration",
+      "title": "Configuration",
+      "description": "On this page we explain how the StreamPipes configuration works."
+    },
+    "try-installation": {
+      "id": "try-installation",
+      "title": "Installation",
+      "description": "The easiest way to install StreamPipes is our Docker-based installation. For production-grade deployments, we also"
+    },
+    "use-connect": {
+      "id": "use-connect",
+      "title": "StreamPipes Connect",
+      "description": "StreamPipes Connect is the module to connect external data sources with Apache StreamPipes directly from the user interface."
+    },
+    "use-pipeline-editor": {
+      "id": "use-pipeline-editor",
+      "title": "Pipeline Editor",
+      "description": "The pipeline editor module supports building pipelines that transform a data stream using a set of resuable data processors and data sinks."
+    },
+    "user-guide-installation": {
+      "id": "user-guide-installation",
+      "title": "Installation",
+      "description": "Prerequisites"
+    },
+    "user-guide-introduction": {
+      "id": "user-guide-introduction",
+      "title": "Apache StreamPipes Documentation",
+      "description": "This is the documentation of Apache StreamPipes."
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "unversionedId": "dev-guide-tutorial-sinks",
+  "id": "version-0.62.0-pre-asf/dev-guide-tutorial-sinks",
+  "title": "Tutorial: Data Sinks",
+  "description": "In this tutorial, we will add a new data sink using the standalone wrapper.",
+  "source": "@site/versioned_docs/version-0.62.0-pre-asf/dev-guide-tutorial-sinks.md",
+  "sourceDirName": ".",
+  "slug": "/dev-guide-tutorial-sinks",
+  "permalink": "/docs/0.62.0-pre-asf/dev-guide-tutorial-sinks",
+  "draft": false,
+  "tags": [],
+  "version": "0.62.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "dev-guide-tutorial-sinks",
+    "title": "Tutorial: Data Sinks",
+    "sidebar_label": "Tutorial: Data Sinks",
+    "original_id": "dev-guide-tutorial-sinks"
+  }
+}

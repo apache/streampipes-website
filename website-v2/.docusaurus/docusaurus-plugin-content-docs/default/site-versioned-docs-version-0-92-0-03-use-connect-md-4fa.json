@@ -1,0 +1,22 @@
+{
+  "unversionedId": "use-connect",
+  "id": "version-0.92.0/use-connect",
+  "title": "StreamPipes Connect",
+  "description": "StreamPipes Connect is the module to connect external data sources with Apache StreamPipes directly from the user interface.",
+  "source": "@site/versioned_docs/version-0.92.0/03_use-connect.md",
+  "sourceDirName": ".",
+  "slug": "/use-connect",
+  "permalink": "/docs/use-connect",
+  "draft": false,
+  "tags": [],
+  "version": "0.92.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "use-connect",
+    "title": "StreamPipes Connect",
+    "sidebar_label": "StreamPipes Connect"
+  }
+}

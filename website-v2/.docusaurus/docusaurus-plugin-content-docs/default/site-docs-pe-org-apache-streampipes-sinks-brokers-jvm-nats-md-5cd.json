@@ -1,0 +1,30 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.sinks.brokers.jvm.nats",
+  "id": "pe/org.apache.streampipes.sinks.brokers.jvm.nats",
+  "title": "NATS Publisher",
+  "description": "<!--",
+  "source": "@site/../docs/pe/org.apache.streampipes.sinks.brokers.jvm.nats.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.sinks.brokers.jvm.nats",
+  "permalink": "/docs/next/pe/org.apache.streampipes.sinks.brokers.jvm.nats",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.sinks.brokers.jvm.nats",
+    "title": "NATS Publisher",
+    "sidebar_label": "NATS Publisher"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "MySQL Database",
+    "permalink": "/docs/next/pe/org.apache.streampipes.sinks.databases.jvm.mysql"
+  },
+  "next": {
+    "title": "Notification",
+    "permalink": "/docs/next/pe/org.apache.streampipes.sinks.internal.jvm.notification"
+  }
+}

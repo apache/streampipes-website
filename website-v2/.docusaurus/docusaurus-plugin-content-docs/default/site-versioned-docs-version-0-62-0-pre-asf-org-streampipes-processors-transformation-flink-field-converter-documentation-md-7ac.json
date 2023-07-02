@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.streampipes.processors.transformation.flink.field-converter/version-0.62.0-org.streampipes.processors.transformation.flink.field-converter",
+  "id": "version-0.62.0-pre-asf/org.streampipes.processors.transformation.flink.field-converter/version-0.62.0-org.streampipes.processors.transformation.flink.field-converter",
+  "title": "Field Converter",
+  "description": "*",
+  "source": "@site/versioned_docs/version-0.62.0-pre-asf/org.streampipes.processors.transformation.flink.field-converter/documentation.md",
+  "sourceDirName": "org.streampipes.processors.transformation.flink.field-converter",
+  "slug": "/org.streampipes.processors.transformation.flink.field-converter/version-0.62.0-org.streampipes.processors.transformation.flink.field-converter",
+  "permalink": "/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.flink.field-converter/version-0.62.0-org.streampipes.processors.transformation.flink.field-converter",
+  "draft": false,
+  "tags": [],
+  "version": "0.62.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "version-0.62.0-org.streampipes.processors.transformation.flink.field-converter",
+    "title": "Field Converter",
+    "sidebar_label": "Field Converter",
+    "original_id": "org.streampipes.processors.transformation.flink.field-converter"
+  }
+}

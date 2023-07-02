@@ -1,0 +1,30 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.processors.filters.jvm.enrich",
+  "id": "pe/org.apache.streampipes.processors.filters.jvm.enrich",
+  "title": "Merge Two Streams",
+  "description": "<!--",
+  "source": "@site/../docs/pe/org.apache.streampipes.processors.filters.jvm.enrich.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.processors.filters.jvm.enrich",
+  "permalink": "/docs/next/pe/org.apache.streampipes.processors.filters.jvm.enrich",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processors.filters.jvm.enrich",
+    "title": "Merge Two Streams",
+    "sidebar_label": "Merge Two Streams"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Measurement Unit Converter",
+    "permalink": "/docs/next/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter"
+  },
+  "next": {
+    "title": "Name Finder",
+    "permalink": "/docs/next/pe/org.apache.streampipes.processors.textmining.jvm.namefinder"
+  }
+}

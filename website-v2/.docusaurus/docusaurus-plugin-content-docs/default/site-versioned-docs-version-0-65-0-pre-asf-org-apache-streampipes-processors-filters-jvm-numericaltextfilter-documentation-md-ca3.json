@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.apache.streampipes.processors.filters.jvm.numericaltextfilter/org.apache.streampipes.processors.filters.jvm.numericaltextfilter",
+  "id": "version-0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.numericaltextfilter/org.apache.streampipes.processors.filters.jvm.numericaltextfilter",
+  "title": "Numerical Text Filter",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.numericaltextfilter/documentation.md",
+  "sourceDirName": "org.apache.streampipes.processors.filters.jvm.numericaltextfilter",
+  "slug": "/org.apache.streampipes.processors.filters.jvm.numericaltextfilter/org.apache.streampipes.processors.filters.jvm.numericaltextfilter",
+  "permalink": "/docs/0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.numericaltextfilter/org.apache.streampipes.processors.filters.jvm.numericaltextfilter",
+  "draft": false,
+  "tags": [],
+  "version": "0.65.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processors.filters.jvm.numericaltextfilter",
+    "title": "Numerical Text Filter",
+    "sidebar_label": "Numerical Text Filter",
+    "original_id": "org.apache.streampipes.processors.filters.jvm.numericaltextfilter"
+  }
+}

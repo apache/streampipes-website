@@ -1,0 +1,22 @@
+{
+  "unversionedId": "user-guide-installation",
+  "id": "version-0.55.2-pre-asf/user-guide-installation",
+  "title": "Installation",
+  "description": "StreamPipes desktop version",
+  "source": "@site/versioned_docs/version-0.55.2-pre-asf/user-guide-installation.md",
+  "sourceDirName": ".",
+  "slug": "/user-guide-installation",
+  "permalink": "/docs/0.55.2-pre-asf/user-guide-installation",
+  "draft": false,
+  "tags": [],
+  "version": "0.55.2-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "user-guide-installation",
+    "title": "Installation",
+    "sidebar_label": "Installation",
+    "original_id": "user-guide-installation"
+  }
+}

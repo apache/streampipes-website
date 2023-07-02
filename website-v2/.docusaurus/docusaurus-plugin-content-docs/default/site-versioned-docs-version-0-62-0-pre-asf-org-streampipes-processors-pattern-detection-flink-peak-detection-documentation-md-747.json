@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.streampipes.processors.pattern-detection.flink.peak-detection/version-0.62.0-org.streampipes.processors.pattern-detection.flink.peak-detection",
+  "id": "version-0.62.0-pre-asf/org.streampipes.processors.pattern-detection.flink.peak-detection/version-0.62.0-org.streampipes.processors.pattern-detection.flink.peak-detection",
+  "title": "Peak Detection",
+  "description": "*",
+  "source": "@site/versioned_docs/version-0.62.0-pre-asf/org.streampipes.processors.pattern-detection.flink.peak-detection/documentation.md",
+  "sourceDirName": "org.streampipes.processors.pattern-detection.flink.peak-detection",
+  "slug": "/org.streampipes.processors.pattern-detection.flink.peak-detection/version-0.62.0-org.streampipes.processors.pattern-detection.flink.peak-detection",
+  "permalink": "/docs/0.62.0-pre-asf/org.streampipes.processors.pattern-detection.flink.peak-detection/version-0.62.0-org.streampipes.processors.pattern-detection.flink.peak-detection",
+  "draft": false,
+  "tags": [],
+  "version": "0.62.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "version-0.62.0-org.streampipes.processors.pattern-detection.flink.peak-detection",
+    "title": "Peak Detection",
+    "sidebar_label": "Peak Detection",
+    "original_id": "org.streampipes.processors.pattern-detection.flink.peak-detection"
+  }
+}

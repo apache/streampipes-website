@@ -1,0 +1,32 @@
+{
+  "permalink": "/blog/2020/01/23/streampipes_on_rpi",
+  "source": "@site/blog/2020-01-23-streampipes_on_rpi.md",
+  "title": "StreamPi(pes) - Running StreamPipes on Raspberry Pi",
+  "description": "5 minutes to read",
+  "date": "2020-01-23T00:00:00.000Z",
+  "formattedDate": "January 23, 2020",
+  "tags": [],
+  "readingTime": 5.285,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Patrick Wiener",
+      "url": "https://twitter.com/patrickwiener",
+      "imageURL": "/docs/img/wiener.png"
+    }
+  ],
+  "frontMatter": {
+    "title": "StreamPi(pes) - Running StreamPipes on Raspberry Pi",
+    "author": "Patrick Wiener",
+    "authorURL": "https://twitter.com/patrickwiener",
+    "authorImageURL": "/docs/img/wiener.png"
+  },
+  "prevItem": {
+    "title": "Apache StreamPipes release 0.66.0",
+    "permalink": "/blog/2020/05/19/release-0660"
+  },
+  "nextItem": {
+    "title": "Moving to the Apache Incubator",
+    "permalink": "/blog/2019/11/25/moving-to-the-apache-incubator"
+  }
+}

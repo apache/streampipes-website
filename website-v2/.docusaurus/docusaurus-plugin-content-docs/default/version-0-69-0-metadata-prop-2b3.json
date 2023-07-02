@@ -1,0 +1,93 @@
+{
+  "pluginId": "default",
+  "version": "0.69.0",
+  "label": "0.69.0",
+  "banner": "unmaintained",
+  "badge": true,
+  "noIndex": false,
+  "className": "docs-version-0.69.0",
+  "isLast": false,
+  "docsSidebars": {},
+  "docs": {
+    "community-get-help": {
+      "id": "community-get-help",
+      "title": "Get Help",
+      "description": "The Apache StreamPipes community is happy to help with any questions or problems you might have."
+    },
+    "deploy-security": {
+      "id": "deploy-security",
+      "title": "Security",
+      "description": "Overriding default settings"
+    },
+    "extend-archetypes": {
+      "id": "extend-archetypes",
+      "title": "Maven Archetypes",
+      "description": "In this tutorial we explain how you can use the Maven archetypes to develop your own StreamPipes processors and sinks."
+    },
+    "extend-cli": {
+      "id": "extend-cli",
+      "title": "StreamPipes CLI",
+      "description": "The StreamPipes command-line interface (CLI) is focused on developers in order to provide an easy entrypoint to set up a suitable dev environment, either planning on developing"
+    },
+    "extend-first-processor": {
+      "id": "extend-first-processor",
+      "title": "Your first data processor",
+      "description": "In this section, we will explain how to start a pipeline element service and install it using the StreamPipes UI."
+    },
+    "extend-sdk-event-model": {
+      "id": "extend-sdk-event-model",
+      "title": "SDK Guide: Event Model",
+      "description": "Introduction"
+    },
+    "extend-sdk-migration-service-discovery": {
+      "id": "extend-sdk-migration-service-discovery",
+      "title": "Migration Guide: New Service Discovery in 0.69.0",
+      "description": "Introduction"
+    },
+    "extend-sdk-stream-requirements": {
+      "id": "extend-sdk-stream-requirements",
+      "title": "SDK Guide: Stream Requirements",
+      "description": "Introduction"
+    },
+    "extend-setup": {
+      "id": "extend-setup",
+      "title": "Development Setup",
+      "description": "Pipeline elements in StreamPipes are provided as standalone microservices. New pipeline elements can be easily developed using the provided Maven archetypes and can be installed in StreamPipes at runtime."
+    },
+    "extend-tutorial-data-processors": {
+      "id": "extend-tutorial-data-processors",
+      "title": "Tutorial: Data Processors",
+      "description": "In this tutorial, we will add a new data processor using the standalone wrapper."
+    },
+    "extend-tutorial-data-sinks": {
+      "id": "extend-tutorial-data-sinks",
+      "title": "Tutorial: Data Sinks",
+      "description": "In this tutorial, we will add a new data sink using the standalone wrapper."
+    },
+    "extend-tutorial-data-sources": {
+      "id": "extend-tutorial-data-sources",
+      "title": "Tutorial: Data Sources",
+      "description": "In this tutorial, we will add a new data source consisting of a single data stream. The source will be provided as a standalone component (i.e., the description will be accessible through an integrated web server)."
+    },
+    "try-installation": {
+      "id": "try-installation",
+      "title": "Installation",
+      "description": "The easiest way to install StreamPipes is our Docker-based installation. For production-grade deployments, we also"
+    },
+    "use-configurations": {
+      "id": "use-configurations",
+      "title": "Configurations",
+      "description": "The configuration section is an admin-only interface for system-wide settings."
+    },
+    "use-dashboard": {
+      "id": "use-dashboard",
+      "title": "Live Dashboard",
+      "description": "The live dashboard can be used to visualize live data of data streams using a set of visualizations"
+    },
+    "use-data-explorer": {
+      "id": "use-data-explorer",
+      "title": "Data Explorer",
+      "description": "The data explorer can be used to visualize and explore data streams that are persisted by using the Data Lake sink."
+    }
+  }
+}

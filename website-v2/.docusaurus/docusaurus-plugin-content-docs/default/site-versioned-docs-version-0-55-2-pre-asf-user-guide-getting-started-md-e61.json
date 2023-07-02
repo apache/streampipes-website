@@ -1,0 +1,22 @@
+{
+  "unversionedId": "user-guide-getting-started",
+  "id": "version-0.55.2-pre-asf/user-guide-getting-started",
+  "title": "Getting Started",
+  "description": "This quick start explains how StreamPipes can be set up in the browser.",
+  "source": "@site/versioned_docs/version-0.55.2-pre-asf/user-guide-getting-started.md",
+  "sourceDirName": ".",
+  "slug": "/user-guide-getting-started",
+  "permalink": "/docs/0.55.2-pre-asf/user-guide-getting-started",
+  "draft": false,
+  "tags": [],
+  "version": "0.55.2-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "user-guide-getting-started",
+    "title": "Getting Started",
+    "sidebar_label": "Getting Started",
+    "original_id": "user-guide-getting-started"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "unversionedId": "use-dashboard",
+  "id": "version-0.92.0/use-dashboard",
+  "title": "Live Dashboard",
+  "description": "The live dashboard can be used to visualize live data of data streams using a set of visualizations",
+  "source": "@site/versioned_docs/version-0.92.0/03_use-dashboard.md",
+  "sourceDirName": ".",
+  "slug": "/use-dashboard",
+  "permalink": "/docs/use-dashboard",
+  "draft": false,
+  "tags": [],
+  "version": "0.92.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "use-dashboard",
+    "title": "Live Dashboard",
+    "sidebar_label": "Live Dashboard"
+  }
+}

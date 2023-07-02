@@ -1,0 +1,22 @@
+{
+  "unversionedId": "dev-guide-configuration",
+  "id": "version-0.62.0-pre-asf/dev-guide-configuration",
+  "title": "Configuration",
+  "description": "On this page we explain how the StreamPipes configuration works.",
+  "source": "@site/versioned_docs/version-0.62.0-pre-asf/dev-guide-configuration.md",
+  "sourceDirName": ".",
+  "slug": "/dev-guide-configuration",
+  "permalink": "/docs/0.62.0-pre-asf/dev-guide-configuration",
+  "draft": false,
+  "tags": [],
+  "version": "0.62.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "dev-guide-configuration",
+    "title": "Configuration",
+    "sidebar_label": "Configuration",
+    "original_id": "dev-guide-configuration"
+  }
+}

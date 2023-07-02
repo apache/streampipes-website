@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.apache.streampipes.sinks.databases.flink.elasticsearch/org.apache.streampipes.sinks.databases.flink.elasticsearch",
+  "id": "version-0.64.0-pre-asf/org.apache.streampipes.sinks.databases.flink.elasticsearch/org.apache.streampipes.sinks.databases.flink.elasticsearch",
+  "title": "Elasticsearch",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.64.0-pre-asf/org.apache.streampipes.sinks.databases.flink.elasticsearch/documentation.md",
+  "sourceDirName": "org.apache.streampipes.sinks.databases.flink.elasticsearch",
+  "slug": "/org.apache.streampipes.sinks.databases.flink.elasticsearch/org.apache.streampipes.sinks.databases.flink.elasticsearch",
+  "permalink": "/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.databases.flink.elasticsearch/org.apache.streampipes.sinks.databases.flink.elasticsearch",
+  "draft": false,
+  "tags": [],
+  "version": "0.64.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.sinks.databases.flink.elasticsearch",
+    "title": "Elasticsearch",
+    "sidebar_label": "Elasticsearch",
+    "original_id": "org.apache.streampipes.sinks.databases.flink.elasticsearch"
+  }
+}

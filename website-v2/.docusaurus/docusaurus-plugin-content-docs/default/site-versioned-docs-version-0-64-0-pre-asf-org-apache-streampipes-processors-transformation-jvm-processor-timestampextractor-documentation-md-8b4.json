@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor",
+  "id": "version-0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor",
+  "title": "Timestamp Extractor",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor/documentation.md",
+  "sourceDirName": "org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor",
+  "slug": "/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor",
+  "permalink": "/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor",
+  "draft": false,
+  "tags": [],
+  "version": "0.64.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor",
+    "title": "Timestamp Extractor",
+    "sidebar_label": "Timestamp Extractor",
+    "original_id": "org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor"
+  }
+}

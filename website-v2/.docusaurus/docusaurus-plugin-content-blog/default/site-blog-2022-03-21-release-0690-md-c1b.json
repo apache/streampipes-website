@@ -1,0 +1,32 @@
+{
+  "permalink": "/blog/2022/03/21/_release-0690",
+  "source": "@site/blog/2022-03-21_release-0690.md",
+  "title": "Apache StreamPipes release 0.69.0",
+  "description": "5 minutes to read",
+  "date": "2022-03-21T00:00:00.000Z",
+  "formattedDate": "March 21, 2022",
+  "tags": [],
+  "readingTime": 3.755,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Dominik Riemer",
+      "url": "https://twitter.com/dominikjriemer",
+      "imageURL": "/docs/img/riemer.png"
+    }
+  ],
+  "frontMatter": {
+    "title": "Apache StreamPipes release 0.69.0",
+    "author": "Dominik Riemer",
+    "authorURL": "https://twitter.com/dominikjriemer",
+    "authorImageURL": "/docs/img/riemer.png"
+  },
+  "prevItem": {
+    "title": "Using Factory I/O with StreamPipes",
+    "permalink": "/blog/2022/09/05/using-factory.io-with-streampipes"
+  },
+  "nextItem": {
+    "title": "Apache StreamPipes release 0.68.0",
+    "permalink": "/blog/2021/07/22/_release-0680"
+  }
+}

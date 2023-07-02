@@ -1,0 +1,31 @@
+{
+  "unversionedId": "use-dashboard",
+  "id": "use-dashboard",
+  "title": "Live Dashboard",
+  "description": "The live dashboard can be used to visualize live data of data streams using a set of visualizations",
+  "source": "@site/../docs/03_use-dashboard.md",
+  "sourceDirName": ".",
+  "slug": "/use-dashboard",
+  "permalink": "/docs/next/use-dashboard",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "use-dashboard",
+    "title": "Live Dashboard",
+    "sidebar_label": "Live Dashboard"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Managing Pipelines",
+    "permalink": "/docs/next/use-managing-pipelines"
+  },
+  "next": {
+    "title": "Data Explorer",
+    "permalink": "/docs/next/use-data-explorer"
+  }
+}

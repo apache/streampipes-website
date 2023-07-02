@@ -1,0 +1,22 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper",
+  "id": "version-0.65.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper",
+  "title": "Image Cropper",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.65.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper",
+  "permalink": "/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper",
+  "draft": false,
+  "tags": [],
+  "version": "0.65.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processor.imageclassification.jvm.image-cropper",
+    "title": "Image Cropper",
+    "sidebar_label": "Image Cropper",
+    "original_id": "org.apache.streampipes.processor.imageclassification.jvm.image-cropper"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "unversionedId": "dev-guide-sdk-guide-processors",
+  "id": "version-0.55.2-pre-asf/dev-guide-sdk-guide-processors",
+  "title": "SDK Guide Processors",
+  "description": "Project Setup",
+  "source": "@site/versioned_docs/version-0.55.2-pre-asf/dev-guide-processor-sdk.md",
+  "sourceDirName": ".",
+  "slug": "/dev-guide-sdk-guide-processors",
+  "permalink": "/docs/0.55.2-pre-asf/dev-guide-sdk-guide-processors",
+  "draft": false,
+  "tags": [],
+  "version": "0.55.2-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "dev-guide-sdk-guide-processors",
+    "title": "SDK Guide Processors",
+    "sidebar_label": "SDK Guide Processors",
+    "original_id": "dev-guide-sdk-guide-processors"
+  }
+}

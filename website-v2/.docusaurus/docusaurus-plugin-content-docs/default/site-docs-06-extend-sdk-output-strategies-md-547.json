@@ -1,0 +1,31 @@
+{
+  "unversionedId": "extend-sdk-output-strategies",
+  "id": "extend-sdk-output-strategies",
+  "title": "SDK Guide: Output Strategies",
+  "description": "Introduction",
+  "source": "@site/../docs/06_extend-sdk-output-strategies.md",
+  "sourceDirName": ".",
+  "slug": "/extend-sdk-output-strategies",
+  "permalink": "/docs/next/extend-sdk-output-strategies",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "id": "extend-sdk-output-strategies",
+    "title": "SDK Guide: Output Strategies",
+    "sidebar_label": "SDK: Output Strategies"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "SDK: Static Properties",
+    "permalink": "/docs/next/extend-sdk-static-properties"
+  },
+  "next": {
+    "title": "Migration Guide: 0.69.0",
+    "permalink": "/docs/next/extend-sdk-migration-service-discovery"
+  }
+}

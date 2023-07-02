@@ -1,0 +1,31 @@
+{
+  "unversionedId": "introduction",
+  "id": "introduction",
+  "title": "Introduction",
+  "description": "What is StreamPipes?",
+  "source": "@site/../docs/02_introduction.md",
+  "sourceDirName": ".",
+  "slug": "/introduction",
+  "permalink": "/docs/next/introduction",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "introduction",
+    "title": "Introduction",
+    "sidebar_label": "Introduction"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Installation",
+    "permalink": "/docs/next/try-installation"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/docs/next/concepts-overview"
+  }
+}

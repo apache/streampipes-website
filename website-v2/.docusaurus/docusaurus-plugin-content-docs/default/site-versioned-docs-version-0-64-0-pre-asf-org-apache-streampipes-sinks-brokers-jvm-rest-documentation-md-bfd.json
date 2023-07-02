@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.apache.streampipes.sinks.brokers.jvm.rest/org.apache.streampipes.sinks.brokers.jvm.rest",
+  "id": "version-0.64.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.rest/org.apache.streampipes.sinks.brokers.jvm.rest",
+  "title": "REST Publisher",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.64.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.rest/documentation.md",
+  "sourceDirName": "org.apache.streampipes.sinks.brokers.jvm.rest",
+  "slug": "/org.apache.streampipes.sinks.brokers.jvm.rest/org.apache.streampipes.sinks.brokers.jvm.rest",
+  "permalink": "/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.rest/org.apache.streampipes.sinks.brokers.jvm.rest",
+  "draft": false,
+  "tags": [],
+  "version": "0.64.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.sinks.brokers.jvm.rest",
+    "title": "REST Publisher",
+    "sidebar_label": "REST Publisher",
+    "original_id": "org.apache.streampipes.sinks.brokers.jvm.rest"
+  }
+}

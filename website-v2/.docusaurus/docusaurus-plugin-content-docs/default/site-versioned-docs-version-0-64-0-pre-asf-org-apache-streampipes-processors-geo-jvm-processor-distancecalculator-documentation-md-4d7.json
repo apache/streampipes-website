@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.apache.streampipes.processors.geo.jvm.processor.distancecalculator/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator",
+  "id": "version-0.64.0-pre-asf/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator",
+  "title": "Distance Calculator",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.64.0-pre-asf/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator/documentation.md",
+  "sourceDirName": "org.apache.streampipes.processors.geo.jvm.processor.distancecalculator",
+  "slug": "/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator",
+  "permalink": "/docs/0.64.0-pre-asf/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator",
+  "draft": false,
+  "tags": [],
+  "version": "0.64.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processors.geo.jvm.processor.distancecalculator",
+    "title": "Distance Calculator",
+    "sidebar_label": "Distance Calculator",
+    "original_id": "org.apache.streampipes.processors.geo.jvm.processor.distancecalculator"
+  }
+}

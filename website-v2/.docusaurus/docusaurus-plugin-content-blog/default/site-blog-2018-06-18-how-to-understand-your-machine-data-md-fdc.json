@@ -1,0 +1,32 @@
+{
+  "permalink": "/blog/2018/06/18/how-to-understand-your-machine-data",
+  "source": "@site/blog/2018-06-18-how-to-understand-your-machine-data.md",
+  "title": "How to understand your machine data?",
+  "description": "8 minutes to read",
+  "date": "2018-06-18T00:00:00.000Z",
+  "formattedDate": "June 18, 2018",
+  "tags": [],
+  "readingTime": 6.69,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Philipp Zehnder",
+      "url": "http://twitter.com/philipp10der",
+      "imageURL": "/docs/img/zehnder.png"
+    }
+  ],
+  "frontMatter": {
+    "title": "How to understand your machine data?",
+    "author": "Philipp Zehnder",
+    "authorURL": "http://twitter.com/philipp10der",
+    "authorImageURL": "/docs/img/zehnder.png"
+  },
+  "prevItem": {
+    "title": "Preview: StreamPipes release 0.60.0",
+    "permalink": "/blog/2018/09/17/preview-060"
+  },
+  "nextItem": {
+    "title": "Welcome to StreamPipes!",
+    "permalink": "/blog/2018/06/14/welcome"
+  }
+}

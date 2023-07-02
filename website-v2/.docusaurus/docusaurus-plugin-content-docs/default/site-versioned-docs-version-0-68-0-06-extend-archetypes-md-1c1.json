@@ -1,0 +1,23 @@
+{
+  "unversionedId": "extend-archetypes",
+  "id": "version-0.68.0/extend-archetypes",
+  "title": "Maven Archetypes",
+  "description": "In this tutorial we explain how you can use the Maven archetypes to develop your own StreamPipes processors and sinks.",
+  "source": "@site/versioned_docs/version-0.68.0/06_extend-archetypes.md",
+  "sourceDirName": ".",
+  "slug": "/extend-archetypes",
+  "permalink": "/docs/0.68.0/extend-archetypes",
+  "draft": false,
+  "tags": [],
+  "version": "0.68.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "id": "extend-archetypes",
+    "title": "Maven Archetypes",
+    "sidebar_label": "Maven Archetypes",
+    "original_id": "extend-archetypes"
+  }
+}

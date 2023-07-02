@@ -1,0 +1,22 @@
+{
+  "unversionedId": "concepts-adapter",
+  "id": "concepts-adapter",
+  "title": "Data Adapters",
+  "description": "tbd",
+  "source": "@site/../docs/02_concepts-adapter.md",
+  "sourceDirName": ".",
+  "slug": "/concepts-adapter",
+  "permalink": "/docs/next/concepts-adapter",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "concepts-adapter",
+    "title": "Data Adapters",
+    "sidebar_label": "Data Adapters"
+  }
+}

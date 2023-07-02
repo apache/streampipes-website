@@ -1,0 +1,22 @@
+{
+  "unversionedId": "user-guide-introduction",
+  "id": "version-0.55.2-pre-asf/user-guide-introduction",
+  "title": "Introduction",
+  "description": "StreamPipes is a framework that enables users to work with data streams.",
+  "source": "@site/versioned_docs/version-0.55.2-pre-asf/user-guide-introduction.md",
+  "sourceDirName": ".",
+  "slug": "/user-guide-introduction",
+  "permalink": "/docs/0.55.2-pre-asf/user-guide-introduction",
+  "draft": false,
+  "tags": [],
+  "version": "0.55.2-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "user-guide-introduction",
+    "title": "Introduction",
+    "sidebar_label": "Introduction",
+    "original_id": "user-guide-introduction"
+  }
+}

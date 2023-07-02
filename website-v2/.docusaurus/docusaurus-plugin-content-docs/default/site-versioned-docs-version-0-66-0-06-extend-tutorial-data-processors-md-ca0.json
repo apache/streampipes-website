@@ -1,0 +1,23 @@
+{
+  "unversionedId": "extend-tutorial-data-processors",
+  "id": "version-0.66.0/extend-tutorial-data-processors",
+  "title": "Tutorial: Data Processors",
+  "description": "In this tutorial, we will add a new data processor using the Apache Flink wrapper.",
+  "source": "@site/versioned_docs/version-0.66.0/06_extend-tutorial-data-processors.md",
+  "sourceDirName": ".",
+  "slug": "/extend-tutorial-data-processors",
+  "permalink": "/docs/0.66.0/extend-tutorial-data-processors",
+  "draft": false,
+  "tags": [],
+  "version": "0.66.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "id": "extend-tutorial-data-processors",
+    "title": "Tutorial: Data Processors",
+    "sidebar_label": "Tutorial: Data Processors",
+    "original_id": "extend-tutorial-data-processors"
+  }
+}

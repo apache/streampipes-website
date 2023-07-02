@@ -1,0 +1,22 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator",
+  "id": "version-0.65.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator",
+  "title": "Static Distance Calculator",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.65.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator",
+  "permalink": "/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator",
+  "draft": false,
+  "tags": [],
+  "version": "0.65.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator",
+    "title": "Static Distance Calculator",
+    "sidebar_label": "Static Distance Calculator",
+    "original_id": "org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator"
+  }
+}

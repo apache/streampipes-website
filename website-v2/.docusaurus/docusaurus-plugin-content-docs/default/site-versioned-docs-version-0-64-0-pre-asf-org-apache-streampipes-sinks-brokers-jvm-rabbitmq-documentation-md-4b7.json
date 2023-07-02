@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.apache.streampipes.sinks.brokers.jvm.rabbitmq/org.apache.streampipes.sinks.brokers.jvm.rabbitmq",
+  "id": "version-0.64.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.rabbitmq/org.apache.streampipes.sinks.brokers.jvm.rabbitmq",
+  "title": "RabbitMQ Publisher",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.64.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.rabbitmq/documentation.md",
+  "sourceDirName": "org.apache.streampipes.sinks.brokers.jvm.rabbitmq",
+  "slug": "/org.apache.streampipes.sinks.brokers.jvm.rabbitmq/org.apache.streampipes.sinks.brokers.jvm.rabbitmq",
+  "permalink": "/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.rabbitmq/org.apache.streampipes.sinks.brokers.jvm.rabbitmq",
+  "draft": false,
+  "tags": [],
+  "version": "0.64.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.sinks.brokers.jvm.rabbitmq",
+    "title": "RabbitMQ Publisher",
+    "sidebar_label": "RabbitMQ Publisher",
+    "original_id": "org.apache.streampipes.sinks.brokers.jvm.rabbitmq"
+  }
+}

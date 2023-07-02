@@ -1,0 +1,17 @@
+{
+  "unversionedId": "license",
+  "id": "license",
+  "title": "license",
+  "description": "---",
+  "source": "@site/../docs/license.md",
+  "sourceDirName": ".",
+  "slug": "/license",
+  "permalink": "/docs/next/license",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {}
+}

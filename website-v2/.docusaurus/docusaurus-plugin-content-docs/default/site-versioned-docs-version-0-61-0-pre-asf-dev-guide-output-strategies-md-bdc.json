@@ -1,0 +1,22 @@
+{
+  "unversionedId": "dev-guide-output-strategies",
+  "id": "version-0.61.0-pre-asf/dev-guide-output-strategies",
+  "title": "SDK Guide: Output Strategies",
+  "description": "Introduction",
+  "source": "@site/versioned_docs/version-0.61.0-pre-asf/dev-guide-output-strategies.md",
+  "sourceDirName": ".",
+  "slug": "/dev-guide-output-strategies",
+  "permalink": "/docs/0.61.0-pre-asf/dev-guide-output-strategies",
+  "draft": false,
+  "tags": [],
+  "version": "0.61.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "dev-guide-output-strategies",
+    "title": "SDK Guide: Output Strategies",
+    "sidebar_label": "Output Strategies",
+    "original_id": "dev-guide-output-strategies"
+  }
+}

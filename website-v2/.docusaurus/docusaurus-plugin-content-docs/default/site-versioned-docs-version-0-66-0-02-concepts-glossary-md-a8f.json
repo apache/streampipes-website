@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concepts-glossary",
+  "id": "version-0.66.0/concepts-glossary",
+  "title": "Glossary",
+  "description": "tbd",
+  "source": "@site/versioned_docs/version-0.66.0/02_concepts-glossary.md",
+  "sourceDirName": ".",
+  "slug": "/concepts-glossary",
+  "permalink": "/docs/0.66.0/concepts-glossary",
+  "draft": false,
+  "tags": [],
+  "version": "0.66.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "concepts-glossary",
+    "title": "Glossary",
+    "sidebar_label": "Glossary",
+    "original_id": "concepts-glossary"
+  }
+}

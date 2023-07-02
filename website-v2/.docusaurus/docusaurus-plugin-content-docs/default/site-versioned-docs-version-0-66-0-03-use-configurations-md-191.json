@@ -1,0 +1,23 @@
+{
+  "unversionedId": "use-configurations",
+  "id": "version-0.66.0/use-configurations",
+  "title": "Configurations",
+  "description": "tbd",
+  "source": "@site/versioned_docs/version-0.66.0/03_use-configurations.md",
+  "sourceDirName": ".",
+  "slug": "/use-configurations",
+  "permalink": "/docs/0.66.0/use-configurations",
+  "draft": false,
+  "tags": [],
+  "version": "0.66.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "use-configurations",
+    "title": "Configurations",
+    "sidebar_label": "Configurations",
+    "original_id": "use-configurations"
+  }
+}

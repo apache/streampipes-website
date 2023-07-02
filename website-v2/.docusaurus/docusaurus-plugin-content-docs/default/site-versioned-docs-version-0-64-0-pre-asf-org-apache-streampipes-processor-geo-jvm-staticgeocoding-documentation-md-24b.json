@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.apache.streampipes.processor.geo.jvm.staticgeocoding/org.apache.streampipes.processor.geo.jvm.staticgeocoding",
+  "id": "version-0.64.0-pre-asf/org.apache.streampipes.processor.geo.jvm.staticgeocoding/org.apache.streampipes.processor.geo.jvm.staticgeocoding",
+  "title": "Static Google Maps Geocoder",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.64.0-pre-asf/org.apache.streampipes.processor.geo.jvm.staticgeocoding/documentation.md",
+  "sourceDirName": "org.apache.streampipes.processor.geo.jvm.staticgeocoding",
+  "slug": "/org.apache.streampipes.processor.geo.jvm.staticgeocoding/org.apache.streampipes.processor.geo.jvm.staticgeocoding",
+  "permalink": "/docs/0.64.0-pre-asf/org.apache.streampipes.processor.geo.jvm.staticgeocoding/org.apache.streampipes.processor.geo.jvm.staticgeocoding",
+  "draft": false,
+  "tags": [],
+  "version": "0.64.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processor.geo.jvm.staticgeocoding",
+    "title": "Static Google Maps Geocoder",
+    "sidebar_label": "Static Google Maps Geocoder",
+    "original_id": "org.apache.streampipes.processor.geo.jvm.staticgeocoding"
+  }
+}

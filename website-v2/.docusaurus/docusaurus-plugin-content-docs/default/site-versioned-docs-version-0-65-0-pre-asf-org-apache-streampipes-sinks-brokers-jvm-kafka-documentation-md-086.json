@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.apache.streampipes.sinks.brokers.jvm.kafka/org.apache.streampipes.sinks.brokers.jvm.kafka",
+  "id": "version-0.65.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.kafka/org.apache.streampipes.sinks.brokers.jvm.kafka",
+  "title": "Kafka Publisher",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.65.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.kafka/documentation.md",
+  "sourceDirName": "org.apache.streampipes.sinks.brokers.jvm.kafka",
+  "slug": "/org.apache.streampipes.sinks.brokers.jvm.kafka/org.apache.streampipes.sinks.brokers.jvm.kafka",
+  "permalink": "/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.kafka/org.apache.streampipes.sinks.brokers.jvm.kafka",
+  "draft": false,
+  "tags": [],
+  "version": "0.65.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.sinks.brokers.jvm.kafka",
+    "title": "Kafka Publisher",
+    "sidebar_label": "Kafka Publisher",
+    "original_id": "org.apache.streampipes.sinks.brokers.jvm.kafka"
+  }
+}

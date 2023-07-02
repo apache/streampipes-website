@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.streampipes.processors.transformation.jvm.changed-value/version-0.62.0-org.streampipes.processors.transformation.jvm.changed-value",
+  "id": "version-0.62.0-pre-asf/org.streampipes.processors.transformation.jvm.changed-value/version-0.62.0-org.streampipes.processors.transformation.jvm.changed-value",
+  "title": "Value Changed",
+  "description": "*",
+  "source": "@site/versioned_docs/version-0.62.0-pre-asf/org.streampipes.processors.transformation.jvm.changed-value/documentation.md",
+  "sourceDirName": "org.streampipes.processors.transformation.jvm.changed-value",
+  "slug": "/org.streampipes.processors.transformation.jvm.changed-value/version-0.62.0-org.streampipes.processors.transformation.jvm.changed-value",
+  "permalink": "/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.jvm.changed-value/version-0.62.0-org.streampipes.processors.transformation.jvm.changed-value",
+  "draft": false,
+  "tags": [],
+  "version": "0.62.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "version-0.62.0-org.streampipes.processors.transformation.jvm.changed-value",
+    "title": "Value Changed",
+    "sidebar_label": "Value Changed",
+    "original_id": "org.streampipes.processors.transformation.jvm.changed-value"
+  }
+}

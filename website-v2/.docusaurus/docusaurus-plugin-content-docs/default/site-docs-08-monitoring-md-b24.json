@@ -1,0 +1,22 @@
+{
+  "unversionedId": "debugging-monitoring",
+  "id": "debugging-monitoring",
+  "title": "Monitoring",
+  "description": "tbd",
+  "source": "@site/../docs/08_monitoring.md",
+  "sourceDirName": ".",
+  "slug": "/debugging-monitoring",
+  "permalink": "/docs/next/debugging-monitoring",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "id": "debugging-monitoring",
+    "title": "Monitoring",
+    "sidebar_label": "Monitoring"
+  }
+}

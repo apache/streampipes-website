@@ -1,0 +1,22 @@
+{
+  "unversionedId": "concepts-pipelines",
+  "id": "concepts-pipelines",
+  "title": "Pipelines",
+  "description": "tbd",
+  "source": "@site/../docs/02_concepts-pipeline.md",
+  "sourceDirName": ".",
+  "slug": "/concepts-pipelines",
+  "permalink": "/docs/next/concepts-pipelines",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "concepts-pipelines",
+    "title": "Pipelines",
+    "sidebar_label": "Pipelines"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "use-pipeline-editor",
+  "id": "version-0.90.0/use-pipeline-editor",
+  "title": "Pipeline Editor",
+  "description": "The pipeline editor module supports building pipelines that transform a data stream using a set of resuable data processors and data sinks.",
+  "source": "@site/versioned_docs/version-0.90.0/03_use-pipeline-editor.md",
+  "sourceDirName": ".",
+  "slug": "/use-pipeline-editor",
+  "permalink": "/docs/0.90.0/use-pipeline-editor",
+  "draft": false,
+  "tags": [],
+  "version": "0.90.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "use-pipeline-editor",
+    "title": "Pipeline Editor",
+    "sidebar_label": "Pipeline Editor",
+    "original_id": "use-pipeline-editor"
+  }
+}

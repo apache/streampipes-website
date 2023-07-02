@@ -1,0 +1,22 @@
+{
+  "unversionedId": "dev-guide-tutorial-processors",
+  "id": "version-0.65.0-pre-asf/dev-guide-tutorial-processors",
+  "title": "Tutorial: Data Processors",
+  "description": "In this tutorial, we will add a new data processor using the Apache Flink wrapper.",
+  "source": "@site/versioned_docs/version-0.65.0-pre-asf/dev-guide-tutorial-processors.md",
+  "sourceDirName": ".",
+  "slug": "/dev-guide-tutorial-processors",
+  "permalink": "/docs/0.65.0-pre-asf/dev-guide-tutorial-processors",
+  "draft": false,
+  "tags": [],
+  "version": "0.65.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "dev-guide-tutorial-processors",
+    "title": "Tutorial: Data Processors",
+    "sidebar_label": "Tutorial: Data Processors",
+    "original_id": "dev-guide-tutorial-processors"
+  }
+}

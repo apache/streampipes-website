@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop",
+  "id": "version-0.64.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop",
+  "title": "Static Math",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.64.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop/documentation.md",
+  "sourceDirName": "org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop",
+  "slug": "/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop",
+  "permalink": "/docs/0.64.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop",
+  "draft": false,
+  "tags": [],
+  "version": "0.64.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop",
+    "title": "Static Math",
+    "sidebar_label": "Static Math",
+    "original_id": "org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop"
+  }
+}

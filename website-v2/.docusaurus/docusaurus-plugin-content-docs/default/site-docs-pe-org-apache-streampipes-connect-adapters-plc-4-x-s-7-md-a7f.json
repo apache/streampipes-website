@@ -1,0 +1,30 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.connect.adapters.plc4x.s7",
+  "id": "pe/org.apache.streampipes.connect.adapters.plc4x.s7",
+  "title": "PLC4X S7",
+  "description": "<!--",
+  "source": "@site/../docs/pe/org.apache.streampipes.connect.adapters.plc4x.s7.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.connect.adapters.plc4x.s7",
+  "permalink": "/docs/next/pe/org.apache.streampipes.connect.adapters.plc4x.s7",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.connect.adapters.plc4x.s7",
+    "title": "PLC4X S7",
+    "sidebar_label": "PLC4X S7"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "PLC4X MODBUS",
+    "permalink": "/docs/next/pe/org.apache.streampipes.connect.adapters.plc4x.modbus"
+  },
+  "next": {
+    "title": "ROS Bridge",
+    "permalink": "/docs/next/pe/org.apache.streampipes.connect.adapters.ros"
+  }
+}
