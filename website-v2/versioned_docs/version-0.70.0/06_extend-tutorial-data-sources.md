@@ -198,11 +198,11 @@ Configure your IDE to provide an environment variable called ``SP_DEBUG`` with v
 
 You should see something as follows:
 
-<img src="/docs/img/tutorial-sources/pe-overview.PNG" alt="Pipeline Element Container Overview"/>
+<img src="/img/tutorial-sources/pe-overview.PNG" alt="Pipeline Element Container Overview"/>
 
 Click on the link of the data source to see the generated description of the pipeline element.
 
-<img src="/docs/img/tutorial-sources/pe-rdf.PNG" alt="Pipeline Element description"/>
+<img src="/img/tutorial-sources/pe-rdf.PNG" alt="Pipeline Element description"/>
 
 The container automatically registers itself in StreamPipes.
 

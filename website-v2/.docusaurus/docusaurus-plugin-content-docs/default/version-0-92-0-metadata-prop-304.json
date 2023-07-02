@@ -839,11 +839,6 @@
       "title": "Telegram Publisher",
       "description": "<!--"
     },
-    "pipeline-elements": {
-      "id": "pipeline-elements",
-      "title": "Overview",
-      "description": "<img class=\"pe-icon\""
-    },
     "privacy": {
       "id": "privacy",
       "title": "Datenschutzerklärung",

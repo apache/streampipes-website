@@ -114,11 +114,6 @@
       "title": "SDK Guide: Static Properties",
       "description": "Introduction"
     },
-    "version-0.90.0-pipeline-elements": {
-      "id": "version-0.90.0-pipeline-elements",
-      "title": "Overview",
-      "description": "<img class=\"pe-icon\""
-    },
     "version-0.90.0-technicals-configuration": {
       "id": "version-0.90.0-technicals-configuration",
       "title": "Configuration",

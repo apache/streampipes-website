@@ -56,7 +56,7 @@ If everything worked, the structure should look similar to the following image.
 In the *main* package, it is defined which processors / sinks you want to activate and the *pe.example* package contains two skeletons for creating a data processor and sink.
 For details, have a look at the other parts of the Developer Guide, where these classes are explained in more depth.
 
-<img src="/docs/img/archetype/project_structure.png" width="30%" alt="Project Structure"/>
+<img src="/img/archetype/project_structure.png" width="30%" alt="Project Structure"/>
 
 ## Next steps
 

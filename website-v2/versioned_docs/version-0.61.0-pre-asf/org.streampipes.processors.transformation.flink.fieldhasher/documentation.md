@@ -8,7 +8,7 @@ original_id: org.streampipes.processors.transformation.flink.fieldhasher
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.streampipes.processors.transformation.flink.fieldhasher/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.streampipes.processors.transformation.flink.fieldhasher/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

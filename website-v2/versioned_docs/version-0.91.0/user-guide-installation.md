@@ -101,10 +101,10 @@ On the login page, enter your credentials, then you should be forwarded to the h
 Congratulations! You've successfully managed to install StreamPipes. Now we're ready to build our first pipeline!
 
 <div className="my-carousel">
-    <img src="/docs/img/quickstart/setup/01_register_user.png" alt="Set Up User" />
-    <img src="/docs/img/quickstart/setup/02_user_set_up.png" alt="SetUp StreamPipes Components" />
-    <img src="/docs/img/quickstart/setup/03_login.png" alt="Go to login page" />
-    <img src="/docs/img/quickstart/setup/04_home.png" alt="Home page" />
+    <img src="/img/quickstart/setup/01_register_user.png" alt="Set Up User" />
+    <img src="/img/quickstart/setup/02_user_set_up.png" alt="SetUp StreamPipes Components" />
+    <img src="/img/quickstart/setup/03_login.png" alt="Go to login page" />
+    <img src="/img/quickstart/setup/04_home.png" alt="Home page" />
 </div>
 
 <div className="admonition error">

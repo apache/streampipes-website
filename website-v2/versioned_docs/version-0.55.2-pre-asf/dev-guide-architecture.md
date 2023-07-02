@@ -7,7 +7,7 @@ original_id: dev-guide-architecture
 
 The following picture illustrates the high-level architecture of StreamPipes:
 
-<img src="/docs/img/architecture/high-level-architecture.png" alt="High Level Architecture of StreamPipes"/>
+<img src="/img/architecture/high-level-architecture.png" alt="High Level Architecture of StreamPipes"/>
 
 Users mainly interact (besides other UI components) with the _Pipeline Editor_ to create stream processing pipelines based on data streams, data processors and data sinks.
 These reusable pipeline elements are provided by self-contained _pipeline element containers_, each of them having a semantic description that specifies their characteristics (e.g., input, output and required user input for data processors).
@@ -42,14 +42,14 @@ While RDF-based metadata ensures good understanding of stream capabilities, ligh
 
 Let's look at an example stream that produces a continuous stream of vehicle positions as illustrated below:
 
-<img src="/docs/img/architecture/semantic-description-stream.png" alt="Semantic description of data streams"/>
+<img src="/img/architecture/semantic-description-stream.png" alt="Semantic description of data streams"/>
 
 While the runtime layer produces plain JSON by submitting actual values of the position and the vehicle's plate number, the description layer describes various characteristics of the stream:
 For instance, it defines the event schema (including, besides the data type and the runtime name of each property also a more fine-grained meaning of the property), quality aspects (e.g., the measurement unit of a property or the frequency) and the grounding (e.g., the format used at runtime and the communication protocol used for transmitting events).
 
 The same accounts for data processors and data sinks:
 
-<img src="/docs/img/architecture/semantic-description-processor.png" alt="Semantic description of data processor"/>
+<img src="/img/architecture/semantic-description-processor.png" alt="Semantic description of data processor"/>
 
 Data processors (and, with some differences, data sinks) are annotated by providing metadata information on their required input and output.
 For instance, we can define minimum schema requirements (such as geospatial coordinates that need to be provided by any stream that is connected to a processor), but also required (minimum or maximum) quality levels and supported transport protocols and formats.

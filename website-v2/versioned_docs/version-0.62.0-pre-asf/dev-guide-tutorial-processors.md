@@ -40,7 +40,7 @@ mvn archetype:generate -DarchetypeGroupId=org.streampipes \
 
 Once you've imported the generated project, the project structure should look as follows:
 
-<img src="/docs/img/tutorial-processors/project-structure-processor.PNG" alt="Project Structure Data Processor"/>
+<img src="/img/tutorial-processors/project-structure-processor.PNG" alt="Project Structure Data Processor"/>
 
 
 Due to a dependency conflict in the 0.64.0 release, add open your pom.xml and add the following lines to the ``dependencies`` section:
@@ -495,11 +495,11 @@ Execute the main method in the class `Main` we've just created, open a web brows
 
 You should see something as follows:
 
-<img src="/docs/img/tutorial-processors/pe-overview-flink.PNG" alt="Pipeline Element Container Overview (Flink)"/>
+<img src="/img/tutorial-processors/pe-overview-flink.PNG" alt="Pipeline Element Container Overview (Flink)"/>
 
 Click on the link of the data source to see the RDF description of the pipeline element.
 
-<img src="/docs/img/tutorial-processors/pe-rdf-geofencing.PNG" alt="Geofencing RDF description"/>
+<img src="/img/tutorial-processors/pe-rdf-geofencing.PNG" alt="Geofencing RDF description"/>
 
 The container automatically registers itself in the Consul installation of StreamPipes.
 To install the just created element, open the StreamPipes UI and follow the manual provided in the [user guide](user-guide-installation).

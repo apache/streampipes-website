@@ -296,7 +296,7 @@
     },
     "config": "config---versions-5-e-9-c5a"
   },
-  "/docs/0.55.2-pre-asf-03a": {
+  "/docs/0.55.2-pre-asf-75a": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---docs-0-55-2-pre-asf-49-f-cdc"
@@ -563,10 +563,6 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-55-2-pre-asf-org-streampipes-sinks-notifications-jvm-slack-version-0-62-0-org-streampipes-sinks-notifications-jvm-slackc-92-f39"
   },
-  "/docs/0.55.2-pre-asf/pipeline-elements-7f6": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-0-55-2-pre-asf-pipeline-elements-79-c-df5"
-  },
   "/docs/0.55.2-pre-asf/privacy-af6": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-55-2-pre-asf-privacy-278-9e4"
@@ -595,7 +591,7 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-55-2-pre-asf-user-guide-tourf-4-d-f05"
   },
-  "/docs/0.61.0-pre-asf-a1a": {
+  "/docs/0.61.0-pre-asf-ce4": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---docs-0-55-2-pre-asf-49-f-cdc"
@@ -858,10 +854,6 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-61-0-pre-asf-org-streampipes-sinks-notifications-jvm-slack-version-0-62-0-org-streampipes-sinks-notifications-jvm-slack-6-cc-d47"
   },
-  "/docs/0.61.0-pre-asf/pipeline-elements-9fa": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-0-61-0-pre-asf-pipeline-elementsacd-c8a"
-  },
   "/docs/0.61.0-pre-asf/user-guide-first-steps-77c": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-61-0-pre-asf-user-guide-first-steps-4-f-2-935"
@@ -882,7 +874,7 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-61-0-pre-asf-user-guide-tour-4-a-9-2fa"
   },
-  "/docs/0.62.0-pre-asf-89f": {
+  "/docs/0.62.0-pre-asf-7ff": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---docs-0-55-2-pre-asf-49-f-cdc"
@@ -1105,10 +1097,6 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-62-0-pre-asf-org-streampipes-sinks-notifications-jvm-slack-version-0-62-0-org-streampipes-sinks-notifications-jvm-slack-96-e-9c6"
   },
-  "/docs/0.62.0-pre-asf/pipeline-elements-968": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-0-62-0-pre-asf-pipeline-elements-10-f-541"
-  },
   "/docs/0.62.0-pre-asf/user-guide-first-steps-2d0": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-62-0-pre-asf-user-guide-first-stepsa-73-39e"
@@ -1121,7 +1109,7 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-62-0-pre-asf-user-guide-tour-31-f-c80"
   },
-  "/docs/0.63.0-pre-asf-abf": {
+  "/docs/0.63.0-pre-asf-00e": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---docs-0-55-2-pre-asf-49-f-cdc"
@@ -1956,10 +1944,6 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-63-0-pre-asf-pe-org-apache-streampipes-sinks-notifications-jvm-slack-6-cf-490"
   },
-  "/docs/0.63.0-pre-asf/pipeline-elements-bee": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-0-63-0-pre-asf-pipeline-elementscd-4-897"
-  },
   "/docs/0.63.0-pre-asf/user-guide-first-steps-54d": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-63-0-pre-asf-user-guide-first-steps-8-d-0-de5"
@@ -1972,7 +1956,7 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-63-0-pre-asf-user-guide-tour-70-b-109"
   },
-  "/docs/0.64.0-pre-asf-350": {
+  "/docs/0.64.0-pre-asf-597": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---docs-0-55-2-pre-asf-49-f-cdc"
@@ -2807,10 +2791,6 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-64-0-pre-asf-pe-org-apache-streampipes-sinks-notifications-jvm-slack-873-ebf"
   },
-  "/docs/0.64.0-pre-asf/pipeline-elements-cab": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-0-64-0-pre-asf-pipeline-elementsa-40-d0c"
-  },
   "/docs/0.64.0-pre-asf/user-guide-first-steps-ccd": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-64-0-pre-asf-user-guide-first-steps-5-db-a72"
@@ -2823,7 +2803,7 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-64-0-pre-asf-user-guide-tour-4-ee-b62"
   },
-  "/docs/0.65.0-pre-asf-f9d": {
+  "/docs/0.65.0-pre-asf-197": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---docs-0-55-2-pre-asf-49-f-cdc"
@@ -3746,10 +3726,6 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-65-0-pre-asf-pe-version-0-68-0-org-apache-streampipes-sinks-notifications-jvm-telegram-6-fd-a85"
   },
-  "/docs/0.65.0-pre-asf/pipeline-elements-169": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-0-65-0-pre-asf-pipeline-elementsc-00-66d"
-  },
   "/docs/0.65.0-pre-asf/user-guide-first-steps-465": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-65-0-pre-asf-user-guide-first-steps-042-ab7"
@@ -3890,7 +3866,7 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-65-0-pre-asf-version-0-67-0-user-guide-introduction-old-56-a-0b2"
   },
-  "/docs/0.66.0-abd": {
+  "/docs/0.66.0-d0b": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---docs-0-55-2-pre-asf-49-f-cdc"
@@ -4569,10 +4545,6 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-66-0-pe-version-0-68-0-org-apache-streampipes-sinks-notifications-jvm-telegram-97-d-03a"
   },
-  "/docs/0.66.0/pipeline-elements-7e5": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-0-66-0-pipeline-elementse-77-d76"
-  },
   "/docs/0.66.0/technicals-architecture-b3c": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-66-0-technicals-architecturebb-9-71f"
@@ -4649,7 +4621,7 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-66-0-user-guide-introduction-oldd-52-928"
   },
-  "/docs/0.67.0-fee": {
+  "/docs/0.67.0-610": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---docs-0-55-2-pre-asf-49-f-cdc"
@@ -4976,10 +4948,6 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-67-0-pe-org-apache-streampipes-sinks-notifications-jvm-telegramca-1-f29"
   },
-  "/docs/0.67.0/pipeline-elements-bc1": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-0-67-0-pipeline-elements-1-ba-349"
-  },
   "/docs/0.67.0/technicals-architecture-246": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-67-0-technicals-architecturee-6-e-8a0"
@@ -5052,7 +5020,7 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-67-0-user-guide-introduction-old-254-ee2"
   },
-  "/docs/0.68.0-6ca": {
+  "/docs/0.68.0-255": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---docs-0-55-2-pre-asf-49-f-cdc"
@@ -5339,10 +5307,6 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-68-0-pe-org-apache-streampipes-sinks-notifications-jvm-telegram-0-f-5-4b1"
   },
-  "/docs/0.68.0/pipeline-elements-69a": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-0-68-0-pipeline-elementsb-42-d84"
-  },
   "/docs/0.68.0/technicals-configuration-8da": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-68-0-technicals-configuratione-69-615"
@@ -5367,7 +5331,7 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-68-0-use-data-explorerb-76-dfc"
   },
-  "/docs/0.69.0-cd7": {
+  "/docs/0.69.0-e8b": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---docs-0-55-2-pre-asf-49-f-cdc"
@@ -5458,10 +5422,6 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-69-0-version-0-90-0-extend-sdk-static-propertiesb-6-f-5fc"
   },
-  "/docs/0.69.0/version-0.90.0-pipeline-elements-df8": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-0-69-0-version-0-90-0-pipeline-elements-277-b87"
-  },
   "/docs/0.69.0/version-0.90.0-technicals-configuration-8d1": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-69-0-version-0-90-0-technicals-configuration-9-e-3-2d6"
@@ -5478,7 +5438,7 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-69-0-version-0-90-0-user-guide-installation-590-928"
   },
-  "/docs/0.70.0-0fc": {
+  "/docs/0.70.0-53f": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---docs-0-55-2-pre-asf-49-f-cdc"
@@ -5533,10 +5493,6 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-70-0-extend-tutorial-data-sourcesac-9-054"
   },
-  "/docs/0.70.0/pipeline-elements-b08": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-0-70-0-pipeline-elements-1-a-7-8fa"
-  },
   "/docs/0.70.0/technicals-configuration-7b9": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-70-0-technicals-configuration-596-b83"
@@ -5561,7 +5517,7 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-70-0-user-guide-introduction-920-3aa"
   },
-  "/docs/0.90.0-ee5": {
+  "/docs/0.90.0-f05": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---docs-0-55-2-pre-asf-49-f-cdc"
@@ -5612,10 +5568,6 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-90-0-extend-tutorial-data-sourcesb-8-a-70e"
   },
-  "/docs/0.90.0/pipeline-elements-a40": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-0-90-0-pipeline-elementsa-20-1f8"
-  },
   "/docs/0.90.0/technicals-configuration-486": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-90-0-technicals-configuration-45-a-c87"
@@ -5652,7 +5604,7 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-90-0-user-guide-software-componentse-7-b-b8b"
   },
-  "/docs/0.91.0-301": {
+  "/docs/0.91.0-e5b": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---docs-0-55-2-pre-asf-49-f-cdc"
@@ -5674,10 +5626,6 @@
   "/docs/0.91.0/pe/org.apache.streampipes.sinks.notifications.jvm.telegram-1ce": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-91-0-pe-org-apache-streampipes-sinks-notifications-jvm-telegrambba-d01"
-  },
-  "/docs/0.91.0/pipeline-elements-ee8": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-0-91-0-pipeline-elementsebb-3ef"
   },
   "/docs/0.91.0/privacy-7eb": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -5711,7 +5659,7 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-0-91-0-user-guide-touraa-9-cc3"
   },
-  "/docs/next-eef": {
+  "/docs/next-738": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---docs-0-55-2-pre-asf-49-f-cdc"
@@ -6378,10 +6326,6 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-next-pe-org-apache-streampipes-sinks-notifications-jvm-telegramd-11-3b1"
   },
-  "/docs/next/pipeline-elements-7bf": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-next-pipeline-elements-488-034"
-  },
   "/docs/next/privacy-289": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-next-privacy-59-d-580"
@@ -6470,7 +6414,7 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-next-user-guide-tour-3-e-9-bae"
   },
-  "/docs-d8c": {
+  "/docs-b75": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---docs-0-55-2-pre-asf-49-f-cdc"
@@ -7140,10 +7084,6 @@
   "/docs/pe/org.apache.streampipes.sinks.notifications.jvm.telegram-f35": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-pe-org-apache-streampipes-sinks-notifications-jvm-telegramff-8-431"
-  },
-  "/docs/pipeline-elements-3a2": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-pipeline-elements-859-0c7"
   },
   "/docs/privacy-619": {
     "__comp": "__comp---theme-doc-item-178-a40",

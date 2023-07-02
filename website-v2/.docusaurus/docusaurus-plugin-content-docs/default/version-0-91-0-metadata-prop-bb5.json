@@ -29,11 +29,6 @@
       "title": "Telegram Publisher",
       "description": "~ Licensed to the Apache Software Foundation (ASF) under one or more"
     },
-    "pipeline-elements": {
-      "id": "pipeline-elements",
-      "title": "Overview",
-      "description": "Data Processor"
-    },
     "privacy": {
       "id": "privacy",
       "title": "Datenschutzerklärung",

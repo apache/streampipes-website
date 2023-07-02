@@ -25,7 +25,7 @@ sidebar_label: OPC UA
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.apache.streampipes.connect.adapters.opcua/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.opcua/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***
@@ -50,15 +50,15 @@ Duration of the polling interval in seconds
 
 Choose whether you want to connect anonymously or authenticate using your credentials.
 
-&nbsp;&nbsp;&nbsp;&nbsp; **Anonymous**: No further information required <br>
+&nbsp;&nbsp;&nbsp;&nbsp; **Anonymous**: No further information required <br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **Username/Password**: Insert your `username` and `password` to access the OPC UA server
 
 ### OPC UA Server
 
 Where can the OPC UA server be found?
 
-&nbsp;&nbsp;&nbsp;&nbsp; **URL**: Specify the server's full `URL` (including port), can be with our without leading `opc.tcp://`<br>
-&nbsp;&nbsp;&nbsp;&nbsp; **Host/Port**: Insert the `host` address (with or without leading `opc.tcp://`) and the `port`<br>
+&nbsp;&nbsp;&nbsp;&nbsp; **URL**: Specify the server's full `URL` (including port), can be with our without leading `opc.tcp://`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **Host/Port**: Insert the `host` address (with or without leading `opc.tcp://`) and the `port`<br/>
 
 ### Namespace Index
 

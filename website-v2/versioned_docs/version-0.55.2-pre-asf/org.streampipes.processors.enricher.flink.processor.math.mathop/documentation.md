@@ -8,7 +8,7 @@ original_id: org.streampipes.processors.enricher.flink.processor.math.mathop
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.streampipes.processors.enricher.flink.processor.math.mathop/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.streampipes.processors.enricher.flink.processor.math.mathop/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

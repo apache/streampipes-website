@@ -409,11 +409,6 @@
       "title": "Telegram Publisher",
       "description": "<!--"
     },
-    "pipeline-elements": {
-      "id": "pipeline-elements",
-      "title": "Overview",
-      "description": "<img class=\"pe-icon\""
-    },
     "technicals-architecture": {
       "id": "technicals-architecture",
       "title": "Architecture",

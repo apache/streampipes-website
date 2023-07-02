@@ -6,7 +6,7 @@ sidebar_label: Overview
 
 To understand how StreamPipes works, the knowledge of a few core concepts, illustrated below, will be helpful.
 
-<img class="docs-image" src="/docs/img/02_concepts-overview/01_overview.png" alt="Overview of concepts"/>
+<img class="docs-image" src="/img/02_concepts-overview/01_overview.png" alt="Overview of concepts"/>
 
 ## Adapter
 An adapter connects to any external data source and forwards received events to the internal StreamPipes system. Within StreamPipes, the output of adapters are available in form of the two primary building blocks **Data Set** and **Data Stream**.

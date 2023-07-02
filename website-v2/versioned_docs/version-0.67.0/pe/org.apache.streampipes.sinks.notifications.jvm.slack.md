@@ -26,7 +26,7 @@ original_id: org.apache.streampipes.sinks.notifications.jvm.slack
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.apache.streampipes.sinks.notifications.jvm.slack/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.sinks.notifications.jvm.slack/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

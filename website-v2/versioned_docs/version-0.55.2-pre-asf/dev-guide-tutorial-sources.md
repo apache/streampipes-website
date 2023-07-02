@@ -36,7 +36,7 @@ Clone the following project from our Github repo: https://github.com/streampipes
 Import the project into an IDE of your choice.
 You should see a structure like this:
 
-<img src="/docs/img/tutorial-sources/project-structure.PNG" alt="Project Structure"/>
+<img src="/img/tutorial-sources/project-structure.PNG" alt="Project Structure"/>
 
 Rename the class `TemplateSource.java` to `VehicleSource.java` and the class `TemplateStream.java` to `VehicleStream.java`.
 
@@ -203,11 +203,11 @@ Execute the main method in the class `Main` we've just created, open a web brows
 
 You should see something as follows:
 
-<img src="/docs/img/tutorial-sources/pe-overview.PNG" alt="Pipeline Element Container Overview"/>
+<img src="/img/tutorial-sources/pe-overview.PNG" alt="Pipeline Element Container Overview"/>
 
 Click on the link of the data source to see the RDF description of the pipeline element.
 
-<img src="/docs/img/tutorial-sources/pe-rdf.PNG" alt="Pipeline Element RDF description"/>
+<img src="/img/tutorial-sources/pe-rdf.PNG" alt="Pipeline Element RDF description"/>
 
 The container automatically registers itself in the Consul installation of StreamPipes.
 To install the just created element, open the StreamPipes UI and follow the manual provided in the [user guide](user-guide-processing-elements.md).

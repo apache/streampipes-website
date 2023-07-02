@@ -26,7 +26,7 @@ original_id: org.apache.streampipes.sinks.databases.jvm.mysql
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.apache.streampipes.sinks.databases.jvm.mysql/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.sinks.databases.jvm.mysql/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***
@@ -73,4 +73,3 @@ The password for the MySQL Server.
 
 (not applicable for data sinks)
 
-      

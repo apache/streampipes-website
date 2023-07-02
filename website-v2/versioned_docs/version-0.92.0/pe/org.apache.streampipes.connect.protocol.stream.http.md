@@ -25,7 +25,7 @@ sidebar_label: HTTP Stream
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.apache.streampipes.connect.protocol.stream.http/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.connect.protocol.stream.http/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

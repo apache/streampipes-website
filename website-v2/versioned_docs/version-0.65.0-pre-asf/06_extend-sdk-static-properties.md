@@ -43,7 +43,7 @@ A unary mapping property maps a stream requirement to an actual field of an even
 
 This leads to a selection dialog in the pipeline element customization which provides the user with a selection of all event properties (fields) from the input stream that match the specified property requirement:
 
-<img src="/docs/img/dev-guide-static-properties/sp-mapping-unary.png" width="80%" alt="Text">
+<img src="/img/dev-guide-static-properties/sp-mapping-unary.png" width="80%"alt="Text"/>
 
 At invocation time, the value can be extracted in the ``onInvocation`` method as follows:
 
@@ -69,7 +69,7 @@ N-ary mapping properties work similar to unary mapping properties, but allow the
 
 This renders the following selection, where users can select more than one matching event property:
 
-<img src="/docs/img/dev-guide-static-properties/sp-mapping-nary.png" width="80%" alt="Text">
+<img src="/img/dev-guide-static-properties/sp-mapping-nary.png" width="80%"alt="Text"/>
 
 The following snippet returns a list containing the property selectors of all event properties that have been selected:
 
@@ -93,7 +93,7 @@ A text parameter lets the user enter a string value. The following code line in 
 
 leads to the following input dialog in the pipeline editor:
 
-<img src="/docs/img/dev-guide-static-properties/sp-text-parameter.png" width="80%" alt="Text">
+<img src="/img/dev-guide-static-properties/sp-text-parameter.png" width="80%"alt="Text"/>
 
 Users can enter any value that will be converted to a string datatype. To receive the entered value in the ``onInvocation`` method, use the following method from the ``ParameterExtractor``
 
@@ -116,7 +116,7 @@ A number parameter lets the user enter a number value, either a floating-point n
 
 leads to the following input dialog in the pipeline editor only accepting integer values:
 
-<img src="/docs/img/dev-guide-static-properties/sp-number-parameter.png" width="80%" alt="Number Parameter">
+<img src="/img/dev-guide-static-properties/sp-number-parameter.png" width="80%"alt="Number Parameter"/>
 
 The pipeline editor performs type validation and ensures that only numbers can be added by the user. To receive the entered value in the ``onInvocation`` method, use the following method from the ``ParameterExtractor``
 
@@ -141,7 +141,7 @@ You can also specify the value range of a number-based free text parameter:
 
 which renders the following input field:
 
-<img src="/docs/img/dev-guide-static-properties/sp-number-parameter-with-range.png" width="80%" alt="Number Parameter">
+<img src="/img/dev-guide-static-properties/sp-number-parameter-with-range.png" width="80%"alt="Number Parameter"/>
 
 Receive the entered value in the same way as a standard number parameter.
 
@@ -161,7 +161,7 @@ A single-value selection requires to select exactly one option.
 
 Single-value selections will be rendered as a set of radio buttons in the pipeline editor:
 
-<img src="/docs/img/dev-guide-static-properties/sp-single-selection.png" width="80%" alt="Number Parameter">
+<img src="/img/dev-guide-static-properties/sp-single-selection.png" width="80%"alt="Number Parameter"/>
 
 To extract the selected value, use the following method from the parameter extractor:
 
@@ -173,7 +173,7 @@ String selectedSingleValue = extractor.selectedSingleValue("id", String.class);
 <div class="admonition tip">
 <div class="admonition-title">Declaring options</div>
 <p>Sometimes, you may want to use an internal name that differs from the display name of an option.
-For that, you can use the method Options.from(Tuple2<String, String>) and the extractor method selectedSingleValueInternalName.</p>
+For that, you can use the method Options.from(Tuple2{'<'}String, String{'>'}) and the extractor method selectedSingleValueInternalName.</p>
 </div>
 
 
@@ -190,7 +190,7 @@ Multi-value selections let the user select from a pre-defined list of options, w
 
 Multi-value selections will be rendered as a set of checkboxes in the pipeline editor:
 
-<img src="/docs/img/dev-guide-static-properties/sp-multi-selection.png" width="80%" alt="Number Parameter">
+<img src="/img/dev-guide-static-properties/sp-multi-selection.png" width="80%"alt="Number Parameter"/>
 
 To extract the selected value, use the following method from the parameter extractor:
 
@@ -216,7 +216,7 @@ You can also define collections based on other static properties.
 
 While the items of the collection can be provided in the same way as the underlying static property, the UI provides buttons to add and remove items to the collections.
 
-<img src="/docs/img/dev-guide-static-properties/sp-collection.png" width="80%" alt="Number Parameter">
+<img src="/img/dev-guide-static-properties/sp-collection.png" width="80%"alt="Number Parameter"/>
 
 To extract the selected values from the collection, use the following method from the parameter extractor:
 
@@ -255,7 +255,7 @@ Finally, implement the method ``resolveOptions``, which will be called at runtim
 
 The UI will render a single-value parameter based on the options provided at runtime:
 
-<img src="/docs/img/dev-guide-static-properties/sp-single-selection-remote.png" width="80%" alt="Number Parameter">
+<img src="/img/dev-guide-static-properties/sp-single-selection-remote.png" width="80%"alt="Number Parameter"/>
 
 The parameter extraction does not differ from the extraction of static single-value parameters.
 

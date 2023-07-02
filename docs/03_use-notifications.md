@@ -6,7 +6,7 @@ sidebar_label: Notifications
 
 The notification module can be used to create internal notifications.
 
-<img class="docs-image" src="/docs/img/03_use-notifications/01_notifications-overview.png" alt="StreamPipes Notifications"/>
+<img class="docs-image" src="/img/03_use-notifications/01_notifications-overview.png" alt="StreamPipes Notifications"/>
 
 ## Using notifications
 

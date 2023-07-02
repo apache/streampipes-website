@@ -25,7 +25,7 @@ sidebar_label: ISS Location
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.apache.streampipes.connect.adapters.iss/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.iss/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

@@ -12,8 +12,6 @@ In this page, an overview of the many features of StreamPipes is given. We will 
 First of all, a user needs to log in to the system.
 The credentials for the user are specified during the installation process.
 
-![StreamPipes Login](/docs//img/features_0_62_0/login.png) 
-
 ## Home
 After logging in, the user is redirected on to the home page.
 The home page gives an overview over the different features available in the StreamPipes UI.
@@ -25,8 +23,8 @@ top left to open the details view of the navigation menu.
 On the top right, a link refers to the documentation and the logout button is present.
 
 <div class="my-carousel">
-    <img src="/docs/img/features_0_62_0/home/home.png" alt="Home"/>
-    <img src="/docs/img/features_0_62_0/home/open_menu.png" alt="Open Menu"/>
+    <img src="/img/features_0_62_0/home/home.png" alt="Home"/>
+    <img src="/img/features_0_62_0/home/open_menu.png" alt="Open Menu"/>
 </div>
 
 
@@ -40,10 +38,10 @@ Each tab contains multiple pipeline elements, which can be installed at runtime.
 The installation of pipeline elements is explained later in section [Install Pipeline Elements](user-guide-tour.md#install-pipeline-elements).
 
 <div class="my-carousel">
-    <img src="/docs/img/features_0_62_0/editor/2_PipelineEditor_DataStreams.png" alt="Data Streams"/>
-    <img src="/docs/img/features_0_62_0/editor/3_PipelineEditor_DataProcessors.png" alt="Processing Elements"/>
-    <img src="/docs/img/features_0_62_0/editor/4_PipelineEditor_DataSinks.png" alt="Data Sinks"/>
-    <img src="/docs/img/features_0_62_0/editor/1_PipelineEditor_DataSets.png" alt="Data Sets"/>
+    <img src="/img/features_0_62_0/editor/2_PipelineEditor_DataStreams.png" alt="Data Streams"/>
+    <img src="/img/features_0_62_0/editor/3_PipelineEditor_DataProcessors.png" alt="Processing Elements"/>
+    <img src="/img/features_0_62_0/editor/4_PipelineEditor_DataSinks.png" alt="Data Sinks"/>
+    <img src="/img/features_0_62_0/editor/1_PipelineEditor_DataSets.png" alt="Data Sets"/>
 </div>
 
 There are multiple ways to search for a pipeline element. 
@@ -54,9 +52,9 @@ The system then filters the elements according to the selected category.
 The category of an element is defined by its functionality.
 
 <div class="my-carousel">
-    <img src="/docs/img/features_0_62_0/editor/5_text_filter.png" alt="Text Filter"/>
-    <img src="/docs/img/features_0_62_0/editor/6_category_drop_down.png" alt="Category Drop Down"/>
-    <img src="/docs/img/features_0_62_0/editor/7_category_filter.png" alt="Category Filter"/>
+    <img src="/img/features_0_62_0/editor/5_text_filter.png" alt="Text Filter"/>
+    <img src="/img/features_0_62_0/editor/6_category_drop_down.png" alt="Category Drop Down"/>
+    <img src="/img/features_0_62_0/editor/7_category_filter.png" alt="Category Filter"/>
 </div>
 
 Modelling of a pipeline starts with choosing one ore more data sources. Therefore a data stream or data set must be selected
@@ -72,15 +70,15 @@ It is also ensured that all required parameters are provided by the user, otherw
 
 
 <div class="my-carousel">
-    <img src="/docs/img/features_0_62_0/editor/8_connect_elements.png" alt="Connect Elements"/>
-    <img src="/docs/img/features_0_62_0/editor/9_configure_element.png" alt="Configure Elements"/>
+    <img src="/img/features_0_62_0/editor/8_connect_elements.png" alt="Connect Elements"/>
+    <img src="/img/features_0_62_0/editor/9_configure_element.png" alt="Configure Elements"/>
 </div>
 
 When the user tries to connect two elements that are not compatible, the system shows a __connection error__ message.
 The example illustrated below shows such a case. The user tried to connect a text filter to a light sensor.
 This is not possible since the text filter processing element requires at least one event property of type string, which is not provided by the light sensor.
 
-![Connection Error](/docs/img/features_0_62_0/editor/10_connection_error.png) 
+![Connection Error](/img/features_0_62_0/editor/10_connection_error.png) 
 
 To further improve the usability, multiple ways are available to connect new elements besides the drag and drop option.
 Each processing element has multiple short-cut buttons to connect it with another element.
@@ -96,9 +94,9 @@ This way it is ensured that the user can not change the behaviour of the pipelin
  
 
 <div class="my-carousel">
-    <img src="/docs/img/features_0_62_0/editor/11_shortcut_buttons.png" alt="Shortcut Buttons"/>
-    <img src="/docs/img/features_0_62_0/editor/12_compatible_elements.png" alt="Compatible Elements"/>
-    <img src="/docs/img/features_0_62_0/editor/13_recommend_elements.png" alt="Recommended elements"/>
+    <img src="/img/features_0_62_0/editor/11_shortcut_buttons.png" alt="Shortcut Buttons"/>
+    <img src="/img/features_0_62_0/editor/12_compatible_elements.png" alt="Compatible Elements"/>
+    <img src="/img/features_0_62_0/editor/13_recommend_elements.png" alt="Recommended elements"/>
 </div>
 
 
@@ -116,9 +114,9 @@ In this view, the user gets immediate feedback whether all components did start 
 This view also shows that individual elements might run in different environments on different servers.
 If there is an error during the execution, a notification containing a (hopefully) detailed error description is provided in this view.
 <div class="my-carousel">
-    <img src="/docs/img/features_0_62_0/editor/14_save_adjust.png" alt="Save adjust delete"/>
-    <img src="/docs/img/features_0_62_0/editor/15_save_dialogue.png" alt="Complete pipeline"/>
-    <img src="/docs/img/features_0_62_0/editor/16_pipeline_sucessfully_started.png" alt="Pipeline sucessfully started"/>
+    <img src="/img/features_0_62_0/editor/14_save_adjust.png" alt="Save adjust delete"/>
+    <img src="/img/features_0_62_0/editor/15_save_dialogue.png" alt="Complete pipeline"/>
+    <img src="/img/features_0_62_0/editor/16_pipeline_sucessfully_started.png" alt="Pipeline sucessfully started"/>
 </div>
 
 
@@ -131,10 +129,10 @@ For each pipeline, the title and description is displayed in the table.
 By clicking the edit symbol an overview of the created pipline is shown. In this window you are able to analyze statistics, identify errors or edit the pipeline.
 
 <div class="my-carousel">
-    <img src="/docs/img/features_0_62_0/manage_pipelines/1_pipeline_overview.png" alt="Pipeline Overview"/>
-    <img src="/docs/img/features_0_62_0/manage_pipelines/2_pipeline_information.png" alt="Pipeline infomation"/>
-    <img src="/docs/img/features_0_62_0/manage_pipelines/3_delete_pipeline.png" alt="Delete Pipelines"/>
-    <img src="/docs/img/features_0_62_0/manage_pipelines/4_pipeline_deleted.png" alt="Delete Pipelines"/>
+    <img src="/img/features_0_62_0/manage_pipelines/1_pipeline_overview.png" alt="Pipeline Overview"/>
+    <img src="/img/features_0_62_0/manage_pipelines/2_pipeline_information.png" alt="Pipeline infomation"/>
+    <img src="/img/features_0_62_0/manage_pipelines/3_delete_pipeline.png" alt="Delete Pipelines"/>
+    <img src="/img/features_0_62_0/manage_pipelines/4_pipeline_deleted.png" alt="Delete Pipelines"/>
 </div>
 
 In a setting with many defined pipelines, it can get really hard to keep track of all pipelines.
@@ -147,10 +145,10 @@ The new category is then presented as a tab in the _Pipeline Management_ view.
 This tab contains all previously defined pipelines.
 
 <div class="my-carousel">
-    <img src="/docs/img/features_0_62_0/manage_pipelines/5_pipeline_category.png" alt="Pipeline Category"/>
-    <img src="/docs/img/features_0_62_0/manage_pipelines/6_add_category.png" alt="Add Pipeline Category"/>
-    <img src="/docs/img/features_0_62_0/manage_pipelines/7_new_category.png" alt="New Category"/>
-    <img src="/docs/img/features_0_62_0/manage_pipelines/8_show_new_category.png" alt="Show new Category"/>
+    <img src="/img/features_0_62_0/manage_pipelines/5_pipeline_category.png" alt="Pipeline Category"/>
+    <img src="/img/features_0_62_0/manage_pipelines/6_add_category.png" alt="Add Pipeline Category"/>
+    <img src="/img/features_0_62_0/manage_pipelines/7_new_category.png" alt="New Category"/>
+    <img src="/img/features_0_62_0/manage_pipelines/8_show_new_category.png" alt="Show new Category"/>
 </div>
 
 ## Live Dashboard
@@ -168,11 +166,11 @@ In the example below, the water level value should be monitored and the gauge va
 Once all steps are completed, the new visualization is placed on the dashboard and live data is presented as soon as it becomes available.
 
 <div class="my-carousel">
-    <img src="/docs/img/features_0_62_0/dashboard/01_dashboard.png" alt="Screenshot of live dashboard"/>
-    <img src="/docs/img/features_0_62_0/dashboard/02_new_visualisation.png" alt="Select Pipeline to visualize"/>
-    <img src="/docs/img/features_0_62_0/dashboard/03_select_gauge.png" alt="Select Visualization Type"/>
-    <img src="/docs/img/features_0_62_0/dashboard/04_configure_gauge.png" alt="Configure  Visualzation"/>
-    <img src="/docs/img/features_0_62_0/dashboard/05_new_gauge_done.png" alt="Show new Visualzation"/>
+    <img src="/img/features_0_62_0/dashboard/01_dashboard.png" alt="Screenshot of live dashboard"/>
+    <img src="/img/features_0_62_0/dashboard/02_new_visualisation.png" alt="Select Pipeline to visualize"/>
+    <img src="/img/features_0_62_0/dashboard/03_select_gauge.png" alt="Select Visualization Type"/>
+    <img src="/img/features_0_62_0/dashboard/04_configure_gauge.png" alt="Configure  Visualzation"/>
+    <img src="/img/features_0_62_0/dashboard/05_new_gauge_done.png" alt="Show new Visualzation"/>
 </div>
 
 ## File Download
@@ -191,9 +189,9 @@ When a file is needed again at a later point in time it is easy to create it aga
 This way a lot of disk space on the server can be saved, especially when the files are rather large.
 
 <div class="my-carousel">
-    <img src="/docs/img/features_0_62_0/file_download/01_file_download.png" alt="File Download"/>
-    <img src="/docs/img/features_0_62_0/file_download/02_file_download.png" alt="File Download with selected time range"/>
-    <img src="/docs/img/features_0_62_0/file_download/03_file_download.png" alt="File Download with new File"/>
+    <img src="/img/features_0_62_0/file_download/01_file_download.png" alt="File Download"/>
+    <img src="/img/features_0_62_0/file_download/02_file_download.png" alt="File Download with selected time range"/>
+    <img src="/img/features_0_62_0/file_download/03_file_download.png" alt="File Download with new File"/>
 </div>
 
 ## Notifications
@@ -208,8 +206,8 @@ All available properties are presented in the notification configurator.
 When the notification is triggered the #property# template is replaced with the actual value of the property.
 
 <div class="my-carousel">
-    <img src="/docs/img/features_0_62_0/notification/01_select_notification_sink.png" alt="Select Notification"/>
-    <img src="/docs/img/features_0_62_0/notification/02_configure_notification.png" alt="Configure Notification"/>
+    <img src="/img/features_0_62_0/notification/01_select_notification_sink.png" alt="Select Notification"/>
+    <img src="/img/features_0_62_0/notification/02_configure_notification.png" alt="Configure Notification"/>
 </div>
 
 A pop up icon on the notification tab in the menu shows the user how many unread notifications currently are in the system.
@@ -221,7 +219,7 @@ Those notifications are then no longer in the unread section, but they remain in
 This way it is possible to keep track of all notifications and have a look at them at a later point in time.
 
 <div class="my-carousel">
-    <img src="/docs/img/features_0_62_0/notification/03_new_notification.png" alt="New Notification"/>
+    <img src="/img/features_0_62_0/notification/03_new_notification.png" alt="New Notification"/>
 </div>
 
 
@@ -236,10 +234,10 @@ Elements that are uninstalled are removed from the system.
 They can not longer be used within pipelines.
 
 <div class="my-carousel">
-    <img src="/docs/img/features_0_62_0/install_elements/01_install_elements.png" alt="Install Elements View"/>
-    <img src="/docs/img/features_0_62_0/install_elements/02_install_countAggregation.png" alt="Insall new Element"/>
-    <img src="/docs/img/features_0_62_0/install_elements/03_installed_countAggregation.png" alt="Installation Successful"/>
-    <img src="/docs/img/features_0_62_0/install_elements/04_countAggregation_in_editor.png" alt="Show new installed element"/>
+    <img src="/img/features_0_62_0/install_elements/01_install_elements.png" alt="Install Elements View"/>
+    <img src="/img/features_0_62_0/install_elements/02_install_countAggregation.png" alt="Insall new Element"/>
+    <img src="/img/features_0_62_0/install_elements/03_installed_countAggregation.png" alt="Installation Successful"/>
+    <img src="/img/features_0_62_0/install_elements/04_countAggregation_in_editor.png" alt="Show new installed element"/>
 </div>
 
 
@@ -251,8 +249,8 @@ This is not important for a user, but it is worth noting that the system uses th
 For example all the information of the sources, like data schema or unit information is in the JSON-LD meta data.
 
 <div class="my-carousel">
-    <img src="/docs/img/features_0_62_0/my_elements/01_my_elements.png" alt="My Elements Overview"/>
-    <img src="/docs/img/features_0_62_0/my_elements/02_my_elements_jsonid.png" alt="View JSON-LD"/>
+    <img src="/img/features_0_62_0/my_elements/01_my_elements.png" alt="My Elements Overview"/>
+    <img src="/img/features_0_62_0/my_elements/02_my_elements_jsonid.png" alt="View JSON-LD"/>
 </div>
 
 ## Configuration
@@ -270,8 +268,8 @@ A user should keep in mind that sometimes it is necessary to restart a container
 Sometimes it is also necessary to re-import the pipeline element description, either by uninstalling and re-installing them after the container restart or be reloading the description in the "My elements" view.
 
 <div class="my-carousel">
-    <img src="/docs/img/features_0_62_0/configuration/01_configuration_overview.png" alt="Configuration Overview"/>
-    <img src="/docs/img/features_0_62_0/configuration/02_change_config.png" alt="Change Configuration"/>
+    <img src="/img/features_0_62_0/configuration/01_configuration_overview.png" alt="Configuration Overview"/>
+    <img src="/img/features_0_62_0/configuration/02_change_config.png" alt="Change Configuration"/>
 </div>
 
 

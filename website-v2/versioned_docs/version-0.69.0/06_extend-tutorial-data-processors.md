@@ -348,7 +348,7 @@ Execute the main method in the class `Init` we've just created, open a web brows
 
 You should see something as follows:
 
-<img src="/docs/img/tutorial-processors/pe-overview-flink.PNG" alt="Pipeline Element Container Overview"/>
+<img src="/img/tutorial-processors/pe-overview-flink.PNG" alt="Pipeline Element Container Overview"/>
 
 
 The services automatically registers itself in StreamPipes.

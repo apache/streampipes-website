@@ -25,7 +25,7 @@ sidebar_label: Measure Time Between Two Sensors
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***
@@ -41,7 +41,7 @@ There can also be multiple parts on the conveyor as long as the individual parts
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping/time_measure_example.png" width="300px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping/time_measure_example.png" width="300px;" class="pe-image-documentation"/>
 </p>
 
 ***

@@ -8,7 +8,7 @@ original_id: org.streampipes.sinks.notifications.jvm.onesignal
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.streampipes.sinks.notifications.jvm.onesignal/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.streampipes.sinks.notifications.jvm.onesignal/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

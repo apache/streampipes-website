@@ -25,7 +25,7 @@ sidebar_label: Boolean To State
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

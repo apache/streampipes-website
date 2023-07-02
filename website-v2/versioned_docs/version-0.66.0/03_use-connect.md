@@ -10,7 +10,7 @@ StreamPipes Connect offers various adapters for common communication protocols a
 
 The screenshot below illustrates the data marketplace, which is the start screen of StreamPipes Connect.
 
-<img class="docs-image" src="/docs/img/03_use-connect/01_connect-overview.png" alt="StreamPipes Connect Overview"/>
+<img class="docs-image" src="/img/03_use-connect/01_connect-overview.png" alt="StreamPipes Connect Overview"/>
 
 ## Connecting new data sources
 
@@ -26,12 +26,12 @@ In the first step, basic configurations need to be provided. For instance, for a
 The next step, format generation, is only available for generic adapters which support different message formats to be sent over the corresponding protocol. Think of a message broker that is able to consume messages in both JSON format or binary format.
 Currently supported formats include XML, various JSON representations, images and CSV. After a format has been selected, further format configurations can be provided (depending on the selected format) to further customize the incoming message format.
 
-<img class="docs-image" src="/docs/img/03_use-connect/02_customize-format.png" alt="StreamPipes Connect Format Selection"/>
+<img class="docs-image" src="/img/03_use-connect/02_customize-format.png" alt="StreamPipes Connect Format Selection"/>
 
 ### Schema Editor
 In the next step, based on the previously provided protocol and format settings, the system will either provide the fixed/pre-defined schema of the adapter or, in case of specific adapters, will connect to the underlying system and try to listen for incoming data. After a few seconds, the schema editor will appear that provides a list of detected fields from the incoming events (the schema).
 
-<img class="docs-image" src="/docs/img/03_use-connect/03_schema-editor.png" alt="StreamPipes Connect Schema Editor"/>
+<img class="docs-image" src="/img/03_use-connect/03_schema-editor.png" alt="StreamPipes Connect Schema Editor"/>
 
 In the toolbar, several configuration options are available which transform the original schema:
 
@@ -52,14 +52,14 @@ For each field (also called event property) of the schema, additional configurat
 * **Runtime Type**. Here, the data type can be changed  
 * **Unit**. Allows to specify the unit in which the value is measured. Once selected, you can also automatically convert the unit to a target unit, which will then be inserted into the data stream produced by the adapter (see screenshot below). 
 
-<img class="docs-image" src="/docs/img/03_use-connect/04_schema-editor-conversion.png" alt="StreamPipes Connect Unit Conversion"/>
+<img class="docs-image" src="/img/03_use-connect/04_schema-editor-conversion.png" alt="StreamPipes Connect Unit Conversion"/>
 
 ### Adapter Generation
 Finally, the adapter is ready to be started. In the _Adapter Generation_ page, a name and description for the resulting data stream must be provided.
 Once started, StreamPipes creates your new adapter and displays a preview of the connected data, which refreshes about once per second.
 Afterwards, the newly created data stream is available in the pipeline editor for further usage.
 
-<img class="docs-image" src="/docs/img/03_use-connect/05_adapter-generation.png" alt="StreamPipes Connect Adapter Generation"/>
+<img class="docs-image" src="/img/03_use-connect/05_adapter-generation.png" alt="StreamPipes Connect Adapter Generation"/>
 
 ## Managing adapters
 

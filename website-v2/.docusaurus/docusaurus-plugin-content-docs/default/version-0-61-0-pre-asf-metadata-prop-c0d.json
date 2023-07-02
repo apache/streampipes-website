@@ -329,11 +329,6 @@
       "title": "Slack Notification",
       "description": "*"
     },
-    "pipeline-elements": {
-      "id": "pipeline-elements",
-      "title": "Pipeline Elements",
-      "description": "Starting from StreamPipes version 0.62.0, this section will contain an overview of currently available pipeline elements."
-    },
     "user-guide-first-steps": {
       "id": "user-guide-first-steps",
       "title": "First steps",

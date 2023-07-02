@@ -17,5 +17,5 @@ You can cancel the tour anytime by clicking the **Exit Tour** button.
 
 <img class="docs-image" src="/docs/img/01_try-tutorial/02_tutorial-process.png" alt="Tutorial Welcome Page">
 
-Now after you've built your first pipeline, you might be interested in reading about some of our core [concepts]() 
+Now after you've built your first pipeline, you might be interested in reading about some of our core [concepts](02_concepts-overview) 
 

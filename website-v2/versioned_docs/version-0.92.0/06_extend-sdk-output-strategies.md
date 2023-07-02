@@ -171,7 +171,7 @@ In some cases, pipeline developers using the StreamPipes UI should be able to ma
 
 If a data processor defines a custom output strategy, the customization dialog in the pipeline editor will show a dialog to let users select the fields to keep:
 
-<img src="/docs/img/dev-guide-output-strategies/os-custom.png" width="80%" alt="Number Parameter"/>
+<img src="/img/dev-guide-output-strategies/os-custom.png" width="80%" alt="Number Parameter"/>
 
 Taking our example, and assuming that the user selects both the ``timestamp`` and the ``temperature`` the expected output event should look like this:
 

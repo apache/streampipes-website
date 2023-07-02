@@ -25,7 +25,7 @@ sidebar_label: Split Array
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.split-array/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.split-array/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

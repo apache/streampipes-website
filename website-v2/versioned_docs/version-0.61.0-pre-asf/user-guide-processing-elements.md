@@ -15,48 +15,47 @@ Check the [developer guide](dev-guide-tutorial-processors) to learn how new Proc
 <details class="info">
 <summary>Water Level</summary>
 
-	 	Example Event
-		  {
-				"underflow": false,
-				"overflow": false,
-				"level": 74.2184,
-				"timestamp": 1515450274503,
-				"sensorId": "level01"
-			}
+{'{'}
+"underflow": false,
+"overflow": false,
+"level": 74.2184,
+"timestamp": 1515450274503,
+"sensorId": "level01"
+{'}'}
 </details>
 
 <details class="info">
 <summary>Flow Rate</summary>
 
 		Example Event:
-			{
+			{'{'}
 				"mass_flow":5.344,
 				"temperature":45.8665,
 				"timestamp":1515450053387,
 				"sensorId":"flowrate01"
-			}
+        {'}'}
 </details>
 
 <details class="info">
 <summary>Pressure Tank</summary>
 
     Example Event:
-		{
+		{'{'}
 			"pressure": 57.1648,
 			"timestamp": 1515450424800,
 			"sensorId": "pressure01"
-		}
+		  {'}'}
 </details>
 
 <details class="info">
 <summary>Vehicle Position</summary>
  		Example Event:
-		{
+		{'{'}
 			"latitude": 40.7551,
 			"plateNumber": "level02",
 			"timestamp": 1515450606449,
 			"longitude": -73.953
-		}
+		  {'}'}
 </details>
     
 ## Processing Elements

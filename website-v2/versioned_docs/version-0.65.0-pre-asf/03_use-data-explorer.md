@@ -7,7 +7,7 @@ original_id: use-data-explorer
 
 The data explorer can be used to visualize and explore data streams that are persisted by using the **Data Lake** sink.
 
-<img class="docs-image" src="/docs/img/03_use-data-explorer/01_data-explorer-overview.png" alt="StreamPipes Data Explorer Overview">
+<img class="docs-image" src="/img/03_use-data-explorer/01_data-explorer-overview.png"alt="StreamPipes Data Explorer Overview"/>
 
 It provides a canvas where various visualizations from multiple pipelines can be placed. A global date and time range can be selected for all displayed visualizations.
 

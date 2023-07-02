@@ -25,7 +25,7 @@ sidebar_label: Buffered REST Publisher
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.apache.streampipes.sinks.brokers.jvm.bufferrest/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.sinks.brokers.jvm.bufferrest/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

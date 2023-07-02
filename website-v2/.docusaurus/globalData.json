@@ -828,10 +828,6 @@
               "sidebar": "documentation"
             },
             {
-              "id": "pipeline-elements",
-              "path": "/docs/next/pipeline-elements"
-            },
-            {
               "id": "privacy",
               "path": "/docs/next/privacy"
             },
@@ -1623,10 +1619,6 @@
               "path": "/docs/pe/org.apache.streampipes.sinks.notifications.jvm.telegram"
             },
             {
-              "id": "pipeline-elements",
-              "path": "/docs/pipeline-elements"
-            },
-            {
               "id": "privacy",
               "path": "/docs/privacy"
             },
@@ -1742,10 +1734,6 @@
               "path": "/docs/0.91.0/pe/org.apache.streampipes.sinks.notifications.jvm.telegram"
             },
             {
-              "id": "pipeline-elements",
-              "path": "/docs/0.91.0/pipeline-elements"
-            },
-            {
               "id": "privacy",
               "path": "/docs/0.91.0/privacy"
             },
@@ -1831,10 +1819,6 @@
             {
               "id": "extend-tutorial-data-sources",
               "path": "/docs/0.90.0/extend-tutorial-data-sources"
-            },
-            {
-              "id": "pipeline-elements",
-              "path": "/docs/0.90.0/pipeline-elements"
             },
             {
               "id": "technicals-configuration",
@@ -1930,10 +1914,6 @@
             {
               "id": "extend-tutorial-data-sources",
               "path": "/docs/0.70.0/extend-tutorial-data-sources"
-            },
-            {
-              "id": "pipeline-elements",
-              "path": "/docs/0.70.0/pipeline-elements"
             },
             {
               "id": "technicals-configuration",
@@ -2053,10 +2033,6 @@
             {
               "id": "version-0.90.0-extend-sdk-static-properties",
               "path": "/docs/0.69.0/version-0.90.0-extend-sdk-static-properties"
-            },
-            {
-              "id": "version-0.90.0-pipeline-elements",
-              "path": "/docs/0.69.0/version-0.90.0-pipeline-elements"
             },
             {
               "id": "version-0.90.0-technicals-configuration",
@@ -2364,10 +2340,6 @@
             {
               "id": "pe/org.apache.streampipes.sinks.notifications.jvm.telegram",
               "path": "/docs/0.68.0/pe/org.apache.streampipes.sinks.notifications.jvm.telegram"
-            },
-            {
-              "id": "pipeline-elements",
-              "path": "/docs/0.68.0/pipeline-elements"
             },
             {
               "id": "technicals-configuration",
@@ -2723,10 +2695,6 @@
             {
               "id": "pe/org.apache.streampipes.sinks.notifications.jvm.telegram",
               "path": "/docs/0.67.0/pe/org.apache.streampipes.sinks.notifications.jvm.telegram"
-            },
-            {
-              "id": "pipeline-elements",
-              "path": "/docs/0.67.0/pipeline-elements"
             },
             {
               "id": "technicals-architecture",
@@ -3482,10 +3450,6 @@
             {
               "id": "pe/version-0.68.0-org.apache.streampipes.sinks.notifications.jvm.telegram",
               "path": "/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.sinks.notifications.jvm.telegram"
-            },
-            {
-              "id": "pipeline-elements",
-              "path": "/docs/0.66.0/pipeline-elements"
             },
             {
               "id": "technicals-architecture",
@@ -4491,10 +4455,6 @@
               "path": "/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.sinks.notifications.jvm.telegram"
             },
             {
-              "id": "pipeline-elements",
-              "path": "/docs/0.65.0-pre-asf/pipeline-elements"
-            },
-            {
               "id": "user-guide-first-steps",
               "path": "/docs/0.65.0-pre-asf/user-guide-first-steps"
             },
@@ -5474,10 +5434,6 @@
               "path": "/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.slack"
             },
             {
-              "id": "pipeline-elements",
-              "path": "/docs/0.64.0-pre-asf/pipeline-elements"
-            },
-            {
               "id": "user-guide-first-steps",
               "path": "/docs/0.64.0-pre-asf/user-guide-first-steps"
             },
@@ -6329,10 +6285,6 @@
               "path": "/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.slack"
             },
             {
-              "id": "pipeline-elements",
-              "path": "/docs/0.63.0-pre-asf/pipeline-elements"
-            },
-            {
               "id": "user-guide-first-steps",
               "path": "/docs/0.63.0-pre-asf/user-guide-first-steps"
             },
@@ -6570,10 +6522,6 @@
             {
               "id": "org.streampipes.sinks.notifications.jvm.slack/version-0.62.0-org.streampipes.sinks.notifications.jvm.slack",
               "path": "/docs/0.62.0-pre-asf/org.streampipes.sinks.notifications.jvm.slack/version-0.62.0-org.streampipes.sinks.notifications.jvm.slack"
-            },
-            {
-              "id": "pipeline-elements",
-              "path": "/docs/0.62.0-pre-asf/pipeline-elements"
             },
             {
               "id": "user-guide-first-steps",
@@ -6853,10 +6801,6 @@
             {
               "id": "org.streampipes.sinks.notifications.jvm.slack/version-0.62.0-org.streampipes.sinks.notifications.jvm.slack",
               "path": "/docs/0.61.0-pre-asf/org.streampipes.sinks.notifications.jvm.slack/version-0.62.0-org.streampipes.sinks.notifications.jvm.slack"
-            },
-            {
-              "id": "pipeline-elements",
-              "path": "/docs/0.61.0-pre-asf/pipeline-elements"
             },
             {
               "id": "user-guide-first-steps",
@@ -7148,10 +7092,6 @@
             {
               "id": "org.streampipes.sinks.notifications.jvm.slack/version-0.62.0-org.streampipes.sinks.notifications.jvm.slack",
               "path": "/docs/0.55.2-pre-asf/org.streampipes.sinks.notifications.jvm.slack/version-0.62.0-org.streampipes.sinks.notifications.jvm.slack"
-            },
-            {
-              "id": "pipeline-elements",
-              "path": "/docs/0.55.2-pre-asf/pipeline-elements"
             },
             {
               "id": "privacy",

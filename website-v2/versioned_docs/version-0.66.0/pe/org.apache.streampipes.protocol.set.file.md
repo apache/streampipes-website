@@ -26,7 +26,7 @@ original_id: org.apache.streampipes.protocol.set.file
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.apache.streampipes.protocol.set.file/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.protocol.set.file/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

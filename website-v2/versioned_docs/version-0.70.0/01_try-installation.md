@@ -89,10 +89,10 @@ best experience), Firefox or Edge.
           </div>
           <div class="wrapper-instruction">
              <div style="margin-bottom:5px;">In a command prompt, open the folder <code>installer/compose</code> and run <code>docker-compose up -d</code>.
-
             </div>
-        </div>
+</div>
     </div>
+
   </li>
     <li class="installation-step">
         <div class="wrapper-container" style="align-items: center;justify-content: center;">
@@ -111,7 +111,8 @@ best experience), Firefox or Edge.
 
 ## Setup StreamPipes
 
-Once you've opened the browser at the URL given above, you should see the StreamPipes application as shown below. At initial startup, StreamPipes automatically performs an installation process.
+Once you've opened the browser at the URL given above, you should see the StreamPipes application as shown below. At
+initial startup, StreamPipes automatically performs an installation process.
 After the installation has finished, continue by clicking on "Go to login
 page", once all components are successfully configured.
 
@@ -120,8 +121,8 @@ On the login page, enter your credentials, then you should be forwarded to the h
 Congratulations! You've successfully managed to install StreamPipes. Now we're ready to build our first pipeline!
 
 <div class="my-carousel docs-carousel">
-    <img src="/docs/img/01_try-installation/03_login.png" alt="Go to login page"/>
-    <img src="/docs/img/01_try-installation/04_home.png" alt="Home page"/>
+    <img src="/img/01_try-installation/03_login.png" alt="Go to login page"/>
+    <img src="/img/01_try-installation/04_home.png" alt="Home page"/>
 </div>
 
 <div class="admonition error">

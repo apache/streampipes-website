@@ -25,7 +25,7 @@ sidebar_label: And
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.apache.streampipes.processors.pattern-detection.flink.and/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.processors.pattern-detection.flink.and/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

@@ -69,11 +69,6 @@
       "title": "Tutorial: Data Sources",
       "description": "In this tutorial, we will add a new data source consisting of a single data stream. The source will be provided as a standalone component (i.e., the description will be accessible through an integrated web server)."
     },
-    "pipeline-elements": {
-      "id": "pipeline-elements",
-      "title": "Overview",
-      "description": "<img class=\"pe-icon\""
-    },
     "technicals-configuration": {
       "id": "technicals-configuration",
       "title": "Configuration",

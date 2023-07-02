@@ -25,7 +25,7 @@ sidebar_label: Creates JTS Point
 
 
 <p align="center">
-    <img src="/docs/img/pipeline-elements/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***
@@ -66,8 +66,8 @@ EPSG code value
 Adds a point geometry in the Well Known Text notation and in Longitude (x)  Latitude (y) axis order to the stream.
 
 ### Example
-* Input stream: <br>
+* Input stream: <br/>
   `{latitude=48.5622, longitude=-76.3501, EPSG=4326}`
 
-* Output Stream <br>
+* Output Stream <br/>
   `{latitude=48.5622, longitude=-76.3501, EPSG=4326, geom_wkt=POINT (-76.3501 48.5622)}`

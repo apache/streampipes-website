@@ -25,7 +25,7 @@ sidebar_label: Spatial Grid Enrichment
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.apache.streampipes.processor.geo.flink/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.processor.geo.flink/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

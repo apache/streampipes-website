@@ -159,7 +159,7 @@ export default [
   },
   {
     path: '/docs/0.55.2-pre-asf',
-    component: ComponentCreator('/docs/0.55.2-pre-asf', '03a'),
+    component: ComponentCreator('/docs/0.55.2-pre-asf', '75a'),
     routes: [
       {
         path: '/docs/0.55.2-pre-asf/dev-guide-archetype',
@@ -487,11 +487,6 @@ export default [
         exact: true
       },
       {
-        path: '/docs/0.55.2-pre-asf/pipeline-elements',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/pipeline-elements', '7f6'),
-        exact: true
-      },
-      {
         path: '/docs/0.55.2-pre-asf/privacy',
         component: ComponentCreator('/docs/0.55.2-pre-asf/privacy', 'af6'),
         exact: true
@@ -530,7 +525,7 @@ export default [
   },
   {
     path: '/docs/0.61.0-pre-asf',
-    component: ComponentCreator('/docs/0.61.0-pre-asf', 'a1a'),
+    component: ComponentCreator('/docs/0.61.0-pre-asf', 'ce4'),
     routes: [
       {
         path: '/docs/0.61.0-pre-asf/dev-guide-archetype',
@@ -853,11 +848,6 @@ export default [
         exact: true
       },
       {
-        path: '/docs/0.61.0-pre-asf/pipeline-elements',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/pipeline-elements', '9fa'),
-        exact: true
-      },
-      {
         path: '/docs/0.61.0-pre-asf/user-guide-first-steps',
         component: ComponentCreator('/docs/0.61.0-pre-asf/user-guide-first-steps', '77c'),
         exact: true
@@ -886,7 +876,7 @@ export default [
   },
   {
     path: '/docs/0.62.0-pre-asf',
-    component: ComponentCreator('/docs/0.62.0-pre-asf', '89f'),
+    component: ComponentCreator('/docs/0.62.0-pre-asf', '7ff'),
     routes: [
       {
         path: '/docs/0.62.0-pre-asf/dev-guide-archetype',
@@ -1159,11 +1149,6 @@ export default [
         exact: true
       },
       {
-        path: '/docs/0.62.0-pre-asf/pipeline-elements',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/pipeline-elements', '968'),
-        exact: true
-      },
-      {
         path: '/docs/0.62.0-pre-asf/user-guide-first-steps',
         component: ComponentCreator('/docs/0.62.0-pre-asf/user-guide-first-steps', '2d0'),
         exact: true
@@ -1182,7 +1167,7 @@ export default [
   },
   {
     path: '/docs/0.63.0-pre-asf',
-    component: ComponentCreator('/docs/0.63.0-pre-asf', 'abf'),
+    component: ComponentCreator('/docs/0.63.0-pre-asf', '00e'),
     routes: [
       {
         path: '/docs/0.63.0-pre-asf/dev-guide-archetype',
@@ -2220,11 +2205,6 @@ export default [
         exact: true
       },
       {
-        path: '/docs/0.63.0-pre-asf/pipeline-elements',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pipeline-elements', 'bee'),
-        exact: true
-      },
-      {
         path: '/docs/0.63.0-pre-asf/user-guide-first-steps',
         component: ComponentCreator('/docs/0.63.0-pre-asf/user-guide-first-steps', '54d'),
         exact: true
@@ -2243,7 +2223,7 @@ export default [
   },
   {
     path: '/docs/0.64.0-pre-asf',
-    component: ComponentCreator('/docs/0.64.0-pre-asf', '350'),
+    component: ComponentCreator('/docs/0.64.0-pre-asf', '597'),
     routes: [
       {
         path: '/docs/0.64.0-pre-asf/dev-guide-archetype',
@@ -3281,11 +3261,6 @@ export default [
         exact: true
       },
       {
-        path: '/docs/0.64.0-pre-asf/pipeline-elements',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pipeline-elements', 'cab'),
-        exact: true
-      },
-      {
         path: '/docs/0.64.0-pre-asf/user-guide-first-steps',
         component: ComponentCreator('/docs/0.64.0-pre-asf/user-guide-first-steps', 'ccd'),
         exact: true
@@ -3304,7 +3279,7 @@ export default [
   },
   {
     path: '/docs/0.65.0-pre-asf',
-    component: ComponentCreator('/docs/0.65.0-pre-asf', 'f9d'),
+    component: ComponentCreator('/docs/0.65.0-pre-asf', '197'),
     routes: [
       {
         path: '/docs/0.65.0-pre-asf/community-get-help',
@@ -4452,11 +4427,6 @@ export default [
         exact: true
       },
       {
-        path: '/docs/0.65.0-pre-asf/pipeline-elements',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pipeline-elements', '169'),
-        exact: true
-      },
-      {
         path: '/docs/0.65.0-pre-asf/user-guide-first-steps',
         component: ComponentCreator('/docs/0.65.0-pre-asf/user-guide-first-steps', '465'),
         exact: true
@@ -4635,7 +4605,7 @@ export default [
   },
   {
     path: '/docs/0.66.0',
-    component: ComponentCreator('/docs/0.66.0', 'abd'),
+    component: ComponentCreator('/docs/0.66.0', 'd0b'),
     routes: [
       {
         path: '/docs/0.66.0/community-contribute',
@@ -5478,11 +5448,6 @@ export default [
         exact: true
       },
       {
-        path: '/docs/0.66.0/pipeline-elements',
-        component: ComponentCreator('/docs/0.66.0/pipeline-elements', '7e5'),
-        exact: true
-      },
-      {
         path: '/docs/0.66.0/technicals-architecture',
         component: ComponentCreator('/docs/0.66.0/technicals-architecture', 'b3c'),
         exact: true
@@ -5581,7 +5546,7 @@ export default [
   },
   {
     path: '/docs/0.67.0',
-    component: ComponentCreator('/docs/0.67.0', 'fee'),
+    component: ComponentCreator('/docs/0.67.0', '610'),
     routes: [
       {
         path: '/docs/0.67.0/community-contribute',
@@ -5984,11 +5949,6 @@ export default [
         exact: true
       },
       {
-        path: '/docs/0.67.0/pipeline-elements',
-        component: ComponentCreator('/docs/0.67.0/pipeline-elements', 'bc1'),
-        exact: true
-      },
-      {
         path: '/docs/0.67.0/technicals-architecture',
         component: ComponentCreator('/docs/0.67.0/technicals-architecture', '246'),
         exact: true
@@ -6082,7 +6042,7 @@ export default [
   },
   {
     path: '/docs/0.68.0',
-    component: ComponentCreator('/docs/0.68.0', '6ca'),
+    component: ComponentCreator('/docs/0.68.0', '255'),
     routes: [
       {
         path: '/docs/0.68.0/community-contribute',
@@ -6435,11 +6395,6 @@ export default [
         exact: true
       },
       {
-        path: '/docs/0.68.0/pipeline-elements',
-        component: ComponentCreator('/docs/0.68.0/pipeline-elements', '69a'),
-        exact: true
-      },
-      {
         path: '/docs/0.68.0/technicals-configuration',
         component: ComponentCreator('/docs/0.68.0/technicals-configuration', '8da'),
         exact: true
@@ -6473,7 +6428,7 @@ export default [
   },
   {
     path: '/docs/0.69.0',
-    component: ComponentCreator('/docs/0.69.0', 'cd7'),
+    component: ComponentCreator('/docs/0.69.0', 'e8b'),
     routes: [
       {
         path: '/docs/0.69.0/community-get-help',
@@ -6581,11 +6536,6 @@ export default [
         exact: true
       },
       {
-        path: '/docs/0.69.0/version-0.90.0-pipeline-elements',
-        component: ComponentCreator('/docs/0.69.0/version-0.90.0-pipeline-elements', 'df8'),
-        exact: true
-      },
-      {
         path: '/docs/0.69.0/version-0.90.0-technicals-configuration',
         component: ComponentCreator('/docs/0.69.0/version-0.90.0-technicals-configuration', '8d1'),
         exact: true
@@ -6609,7 +6559,7 @@ export default [
   },
   {
     path: '/docs/0.70.0',
-    component: ComponentCreator('/docs/0.70.0', '0fc'),
+    component: ComponentCreator('/docs/0.70.0', '53f'),
     routes: [
       {
         path: '/docs/0.70.0/community-contribute',
@@ -6672,11 +6622,6 @@ export default [
         exact: true
       },
       {
-        path: '/docs/0.70.0/pipeline-elements',
-        component: ComponentCreator('/docs/0.70.0/pipeline-elements', 'b08'),
-        exact: true
-      },
-      {
         path: '/docs/0.70.0/technicals-configuration',
         component: ComponentCreator('/docs/0.70.0/technicals-configuration', '7b9'),
         exact: true
@@ -6710,7 +6655,7 @@ export default [
   },
   {
     path: '/docs/0.90.0',
-    component: ComponentCreator('/docs/0.90.0', 'ee5'),
+    component: ComponentCreator('/docs/0.90.0', 'f05'),
     routes: [
       {
         path: '/docs/0.90.0/community-contribute',
@@ -6768,11 +6713,6 @@ export default [
         exact: true
       },
       {
-        path: '/docs/0.90.0/pipeline-elements',
-        component: ComponentCreator('/docs/0.90.0/pipeline-elements', 'a40'),
-        exact: true
-      },
-      {
         path: '/docs/0.90.0/technicals-configuration',
         component: ComponentCreator('/docs/0.90.0/technicals-configuration', '486'),
         exact: true
@@ -6821,7 +6761,7 @@ export default [
   },
   {
     path: '/docs/0.91.0',
-    component: ComponentCreator('/docs/0.91.0', '301'),
+    component: ComponentCreator('/docs/0.91.0', 'e5b'),
     routes: [
       {
         path: '/docs/0.91.0/extend-setup',
@@ -6841,11 +6781,6 @@ export default [
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.notifications.jvm.telegram',
         component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.notifications.jvm.telegram', '1ce'),
-        exact: true
-      },
-      {
-        path: '/docs/0.91.0/pipeline-elements',
-        component: ComponentCreator('/docs/0.91.0/pipeline-elements', 'ee8'),
         exact: true
       },
       {
@@ -6892,7 +6827,7 @@ export default [
   },
   {
     path: '/docs/next',
-    component: ComponentCreator('/docs/next', 'eef'),
+    component: ComponentCreator('/docs/next', '738'),
     routes: [
       {
         path: '/docs/next/community-contribute',
@@ -7877,11 +7812,6 @@ export default [
         sidebar: "documentation"
       },
       {
-        path: '/docs/next/pipeline-elements',
-        component: ComponentCreator('/docs/next/pipeline-elements', '7bf'),
-        exact: true
-      },
-      {
         path: '/docs/next/privacy',
         component: ComponentCreator('/docs/next/privacy', '289'),
         exact: true
@@ -8010,7 +7940,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', 'd8c'),
+    component: ComponentCreator('/docs', 'b75'),
     routes: [
       {
         path: '/docs/community-contribute',
@@ -8840,11 +8770,6 @@ export default [
       {
         path: '/docs/pe/org.apache.streampipes.sinks.notifications.jvm.telegram',
         component: ComponentCreator('/docs/pe/org.apache.streampipes.sinks.notifications.jvm.telegram', 'f35'),
-        exact: true
-      },
-      {
-        path: '/docs/pipeline-elements',
-        component: ComponentCreator('/docs/pipeline-elements', '3a2'),
         exact: true
       },
       {

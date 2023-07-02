@@ -30,7 +30,7 @@ mvn archetype:generate -DarchetypeGroupId=org.streampipes \
 
 Once you've imported the generated project, the project structure should look as follows:
 
-<img src="/docs/img/tutorial-sinks/project-structure-sinks.png" alt="Project Structure Data Sink"/>
+<img src="/img/tutorial-sinks/project-structure-sinks.png" alt="Project Structure Data Sink"/>
 
 Due to a dependency conflict in the 0.64.0 release, open your pom.xml and add the following lines to the ``dependencies`` section:
 ```

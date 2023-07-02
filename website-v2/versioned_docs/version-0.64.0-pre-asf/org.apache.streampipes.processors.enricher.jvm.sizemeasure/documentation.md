@@ -8,7 +8,7 @@ original_id: org.apache.streampipes.processors.enricher.jvm.sizemeasure
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.apache.streampipes.processors.enricher.jvm.sizemeasure/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.processors.enricher.jvm.sizemeasure/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

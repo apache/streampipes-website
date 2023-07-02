@@ -25,7 +25,7 @@ sidebar_label: PLC4X S7
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.apache.streampipes.connect.adapters.plc4x.s7/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.plc4x.s7/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

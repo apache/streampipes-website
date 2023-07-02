@@ -82,7 +82,7 @@ automatically discovered via the service discovery feature of Consul.
 consul:
     image: consul
     environment:
-      - "CONSUL_LOCAL_CONFIG={\"disable_update_check\": true}"
+      - "CONSUL_LOCAL_CONFIG={'{\"disable_update_check\": true}'}"
       - "CONSUL_BIND_INTERFACE=eth0"
       - "CONSUL_HTTP_ADDR=0.0.0.0"
     entrypoint:
@@ -92,7 +92,7 @@ consul:
       - -bootstrap-expect=1
       - -data-dir=/consul/data
       - -node=consul-one
-      - -bind={{ GetInterfaceIP "eth0" }}
+      - -bind={'{{ GetInterfaceIP "eth0" }}'}
       - -client=0.0.0.0
       - -enable-script-checks=true
       - -ui

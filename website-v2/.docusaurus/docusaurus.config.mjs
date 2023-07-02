@@ -49,7 +49,7 @@ export default {
           "path": "blog"
         },
         "theme": {
-          "customCss": "../src/css/customTheme.css"
+          "customCss": "./src/css/customTheme.css"
         }
       }
     ]

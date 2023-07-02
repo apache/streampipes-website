@@ -75,7 +75,7 @@ The *config* package contains all the configuration parameters of your processor
 In the *main* package, it is defined which processors / sinks you want to activate and the *pe.processor.example* package contains three classes with the application logic.
 For details, have a look at the other parts of the Developer Guide, where these classes are explained in more depth.
 
-<img src="/docs/img/archetype/project_structure.png" width="30%" alt="Project Structure"/>
+<img src="/img/archetype/project_structure.png" width="30%" alt="Project Structure"/>
 
 Due to a dependency conflict in the 0.64.0 release, open your pom.xml and add the following lines to the ``dependencies`` section:
 ```
@@ -118,13 +118,13 @@ Save all the changes by clicking *Apply*.
 Now you can start the processor.
 
 <div class="my-carousel">
-    <img src="/docs/img/archetype/run_configuration.png" alt="Configuration View"/>
-    <img src="/docs/img/archetype/run_env_configuration.png" alt="Environment Configuration View"/>
+    <img src="/img/archetype/run_configuration.png" alt="Configuration View"/>
+    <img src="/img/archetype/run_env_configuration.png" alt="Environment Configuration View"/>
 </div>
 
 To check if the service is up and running, open the browser on *'localhost:6666'*. The machine-readable escription of the processor should be visible as shown below.
 
-<img src="/docs/img/archetype/endpoint.png" width="90%" alt="Project Structure"/>
+<img src="/img/archetype/endpoint.png" width="90%" alt="Project Structure"/>
 
 
 <div class="admonition error">
@@ -144,7 +144,7 @@ Your new processor *'Example'* should now show up in the installation menu.
 Install it, then switch to the pipeline view and create a simple pipeline that makes use of your newly created processor.
 In case you opened the StreamPipes installation for the first time, it should have been automatically installed during the setup process.
 
-<img src="/docs/img/archetype/example_pipeline.png" width="80%" alt="Project Structure"/>
+<img src="/img/archetype/example_pipeline.png" width="80%" alt="Project Structure"/>
 
 Start this pipeline.
 Now you should see logging messages in your console and, once you've created a visualisation, you can also see the resulting events of your component in StreamPipes.

@@ -8,7 +8,7 @@ original_id: org.streampipes.processors.pattern-detection.flink.peak-detection
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.streampipes.processors.pattern-detection.flink.peak-detection/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.streampipes.processors.pattern-detection.flink.peak-detection/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

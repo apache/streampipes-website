@@ -26,7 +26,7 @@ original_id: org.apache.streampipes.processors.filters.jvm.merge
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.apache.streampipes.processors.filters.jvm.merge/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.processors.filters.jvm.merge/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***
@@ -39,7 +39,7 @@ Two events of the different streams are merged when they occure to the same time
 The following figure shows how the events of the two data streams will be mergrged:
 
 <p align="center"> 
-    <img width="300px;" src="/docs/img/pipeline-elements/org.apache.streampipes.processors.filters.jvm.merge/merge_description.png" class="pe-image-documentation"/>
+    <img width="300px;" src="/img/pipeline-elements/org.apache.streampipes.processors.filters.jvm.merge/merge_description.png" class="pe-image-documentation"/>
 </p>
 
 ***

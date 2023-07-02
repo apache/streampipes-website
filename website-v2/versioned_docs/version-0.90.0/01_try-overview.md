@@ -7,7 +7,7 @@ original_id: user-guide-introduction
 
 This is the documentation of Apache StreamPipes.
 
-<img class="docs-image docs-image-small docs-image-no-shadow" style="padding: 10px;" src="/docs/img/01_try-overview/01_streampipes-overview.png" alt="StreamPipes Overview"/>
+<img class="docs-image docs-image-small docs-image-no-shadow" style="padding: 10px;" src="/img/01_try-overview/01_streampipes-overview.png" alt="StreamPipes Overview"/>
 
 
 <div class="container grid col-3">

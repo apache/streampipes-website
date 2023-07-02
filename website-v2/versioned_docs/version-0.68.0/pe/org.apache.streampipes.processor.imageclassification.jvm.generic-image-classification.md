@@ -25,7 +25,7 @@ original_id: org.apache.streampipes.processor.imageclassification.jvm.generic-im
 
 
 <p align="center"> 
-    <img src="/docs/img/pipeline-elements/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***
