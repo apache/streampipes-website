@@ -88,6 +88,56 @@
       "id": "use-data-explorer",
       "title": "Data Explorer",
       "description": "The data explorer can be used to visualize and explore data streams that are persisted by using the Data Lake sink."
+    },
+    "user-guide-introduction": {
+      "id": "user-guide-introduction",
+      "title": "Apache StreamPipes Documentation",
+      "description": "This is the documentation of Apache StreamPipes."
+    },
+    "version-0.90.0-community-contribute": {
+      "id": "version-0.90.0-community-contribute",
+      "title": "Contribute",
+      "description": "Contribute"
+    },
+    "version-0.90.0-extend-sdk-functions": {
+      "id": "version-0.90.0-extend-sdk-functions",
+      "title": "SDK Guide: Functions",
+      "description": "Introduction"
+    },
+    "version-0.90.0-extend-sdk-output-strategies": {
+      "id": "version-0.90.0-extend-sdk-output-strategies",
+      "title": "SDK Guide: Output Strategies",
+      "description": "Introduction"
+    },
+    "version-0.90.0-extend-sdk-static-properties": {
+      "id": "version-0.90.0-extend-sdk-static-properties",
+      "title": "SDK Guide: Static Properties",
+      "description": "Introduction"
+    },
+    "version-0.90.0-pipeline-elements": {
+      "id": "version-0.90.0-pipeline-elements",
+      "title": "Overview",
+      "description": "<img class=\"pe-icon\""
+    },
+    "version-0.90.0-technicals-configuration": {
+      "id": "version-0.90.0-technicals-configuration",
+      "title": "Configuration",
+      "description": "On this page we explain how the StreamPipes configuration works."
+    },
+    "version-0.90.0-use-connect": {
+      "id": "version-0.90.0-use-connect",
+      "title": "StreamPipes Connect",
+      "description": "StreamPipes Connect is the module to connect external data sources with Apache StreamPipes directly from the user interface."
+    },
+    "version-0.90.0-use-pipeline-editor": {
+      "id": "version-0.90.0-use-pipeline-editor",
+      "title": "Pipeline Editor",
+      "description": "The pipeline editor module supports building pipelines that transform a data stream using a set of resuable data processors and data sinks."
+    },
+    "version-0.90.0-user-guide-installation": {
+      "id": "version-0.90.0-user-guide-installation",
+      "title": "Installation",
+      "description": "Prerequisites"
     }
   }
 }

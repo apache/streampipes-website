@@ -1,0 +1,23 @@
+{
+  "unversionedId": "version-0.67.0-technicals-user-guidance",
+  "id": "version-0.65.0-pre-asf/version-0.67.0-technicals-user-guidance",
+  "title": "User Guidance",
+  "description": "tbd",
+  "source": "@site/versioned_docs/version-0.65.0-pre-asf/07_technicals-user-guidance.md",
+  "sourceDirName": ".",
+  "slug": "/version-0.67.0-technicals-user-guidance",
+  "permalink": "/docs/0.65.0-pre-asf/version-0.67.0-technicals-user-guidance",
+  "draft": false,
+  "tags": [],
+  "version": "0.65.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "id": "version-0.67.0-technicals-user-guidance",
+    "title": "User Guidance",
+    "sidebar_label": "User Guidance",
+    "original_id": "technicals-user-guidance"
+  }
+}

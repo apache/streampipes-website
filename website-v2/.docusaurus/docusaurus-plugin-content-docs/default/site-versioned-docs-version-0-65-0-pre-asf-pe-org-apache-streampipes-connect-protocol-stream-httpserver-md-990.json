@@ -1,0 +1,22 @@
+{
+  "unversionedId": "pe/version-0.68.0-org.apache.streampipes.connect.protocol.stream.httpserver",
+  "id": "version-0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.connect.protocol.stream.httpserver",
+  "title": "HTTP Server",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.65.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.httpserver.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/version-0.68.0-org.apache.streampipes.connect.protocol.stream.httpserver",
+  "permalink": "/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.connect.protocol.stream.httpserver",
+  "draft": false,
+  "tags": [],
+  "version": "0.65.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "version-0.68.0-org.apache.streampipes.connect.protocol.stream.httpserver",
+    "title": "HTTP Server",
+    "sidebar_label": "HTTP Server",
+    "original_id": "org.apache.streampipes.connect.protocol.stream.httpserver"
+  }
+}

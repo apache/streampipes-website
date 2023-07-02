@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.streampipes.processors.enricher.flink.processor.trigonometry/version-0.62.0-org.streampipes.processors.enricher.flink.processor.trigonometry",
+  "id": "version-0.55.2-pre-asf/org.streampipes.processors.enricher.flink.processor.trigonometry/version-0.62.0-org.streampipes.processors.enricher.flink.processor.trigonometry",
+  "title": "Trigonometry Functions",
+  "description": "*",
+  "source": "@site/versioned_docs/version-0.55.2-pre-asf/org.streampipes.processors.enricher.flink.processor.trigonometry/documentation.md",
+  "sourceDirName": "org.streampipes.processors.enricher.flink.processor.trigonometry",
+  "slug": "/org.streampipes.processors.enricher.flink.processor.trigonometry/version-0.62.0-org.streampipes.processors.enricher.flink.processor.trigonometry",
+  "permalink": "/docs/0.55.2-pre-asf/org.streampipes.processors.enricher.flink.processor.trigonometry/version-0.62.0-org.streampipes.processors.enricher.flink.processor.trigonometry",
+  "draft": false,
+  "tags": [],
+  "version": "0.55.2-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "version-0.62.0-org.streampipes.processors.enricher.flink.processor.trigonometry",
+    "title": "Trigonometry Functions",
+    "sidebar_label": "Trigonometry Functions",
+    "original_id": "org.streampipes.processors.enricher.flink.processor.trigonometry"
+  }
+}

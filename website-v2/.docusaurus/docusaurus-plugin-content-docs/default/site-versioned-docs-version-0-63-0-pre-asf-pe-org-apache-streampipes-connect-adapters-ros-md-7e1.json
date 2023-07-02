@@ -1,0 +1,22 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.connect.adapters.ros",
+  "id": "version-0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.ros",
+  "title": "ROS Bridge",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.ros.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.connect.adapters.ros",
+  "permalink": "/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.ros",
+  "draft": false,
+  "tags": [],
+  "version": "0.63.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.connect.adapters.ros",
+    "title": "ROS Bridge",
+    "sidebar_label": "ROS Bridge",
+    "original_id": "org.apache.streampipes.connect.adapters.ros"
+  }
+}

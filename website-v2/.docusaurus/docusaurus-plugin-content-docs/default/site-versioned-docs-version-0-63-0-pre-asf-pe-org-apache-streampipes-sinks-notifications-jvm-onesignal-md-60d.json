@@ -1,0 +1,22 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.sinks.notifications.jvm.onesignal",
+  "id": "version-0.63.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.onesignal",
+  "title": "OneSignal",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.63.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.onesignal.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.sinks.notifications.jvm.onesignal",
+  "permalink": "/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.onesignal",
+  "draft": false,
+  "tags": [],
+  "version": "0.63.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.sinks.notifications.jvm.onesignal",
+    "title": "OneSignal",
+    "sidebar_label": "OneSignal",
+    "original_id": "org.apache.streampipes.sinks.notifications.jvm.onesignal"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "version-0.67.0-technicals-configuration",
+  "id": "version-0.65.0-pre-asf/version-0.67.0-technicals-configuration",
+  "title": "Configuration",
+  "description": "On this page we explain how the StreamPipes configuration works.",
+  "source": "@site/versioned_docs/version-0.65.0-pre-asf/07_technicals-configuration.md",
+  "sourceDirName": ".",
+  "slug": "/version-0.67.0-technicals-configuration",
+  "permalink": "/docs/0.65.0-pre-asf/version-0.67.0-technicals-configuration",
+  "draft": false,
+  "tags": [],
+  "version": "0.65.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "id": "version-0.67.0-technicals-configuration",
+    "title": "Configuration",
+    "sidebar_label": "Configuration",
+    "original_id": "technicals-configuration"
+  }
+}

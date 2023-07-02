@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.apache.streampipes.processors.transformation.jvm.csvmetadata/org.apache.streampipes.processors.transformation.jvm.csvmetadata",
+  "id": "version-0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.csvmetadata/org.apache.streampipes.processors.transformation.jvm.csvmetadata",
+  "title": "CSV Metadata Enricher",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.csvmetadata/documentation.md",
+  "sourceDirName": "org.apache.streampipes.processors.transformation.jvm.csvmetadata",
+  "slug": "/org.apache.streampipes.processors.transformation.jvm.csvmetadata/org.apache.streampipes.processors.transformation.jvm.csvmetadata",
+  "permalink": "/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.csvmetadata/org.apache.streampipes.processors.transformation.jvm.csvmetadata",
+  "draft": false,
+  "tags": [],
+  "version": "0.63.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processors.transformation.jvm.csvmetadata",
+    "title": "CSV Metadata Enricher",
+    "sidebar_label": "CSV Metadata Enricher",
+    "original_id": "org.apache.streampipes.processors.transformation.jvm.csvmetadata"
+  }
+}

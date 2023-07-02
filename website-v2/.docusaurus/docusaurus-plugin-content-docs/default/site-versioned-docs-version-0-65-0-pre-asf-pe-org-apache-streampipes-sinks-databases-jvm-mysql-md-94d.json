@@ -1,0 +1,22 @@
+{
+  "unversionedId": "pe/version-0.68.0-org.apache.streampipes.sinks.databases.jvm.mysql",
+  "id": "version-0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.sinks.databases.jvm.mysql",
+  "title": "MySQL Database",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.65.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.mysql.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/version-0.68.0-org.apache.streampipes.sinks.databases.jvm.mysql",
+  "permalink": "/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.sinks.databases.jvm.mysql",
+  "draft": false,
+  "tags": [],
+  "version": "0.65.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "version-0.68.0-org.apache.streampipes.sinks.databases.jvm.mysql",
+    "title": "MySQL Database",
+    "sidebar_label": "MySQL Database",
+    "original_id": "org.apache.streampipes.sinks.databases.jvm.mysql"
+  }
+}

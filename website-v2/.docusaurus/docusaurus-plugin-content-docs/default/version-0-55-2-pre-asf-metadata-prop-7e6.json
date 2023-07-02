@@ -94,6 +94,246 @@
       "title": "Common Problems",
       "description": "* Windows 10: Consul, Kafka, Zookeeper, or Kafka-Rest did not start"
     },
+    "org.streampipes.processor.geo.flink/version-0.62.0-org.streampipes.processor.geo.flink": {
+      "id": "org.streampipes.processor.geo.flink/version-0.62.0-org.streampipes.processor.geo.flink",
+      "title": "Spatial Grid Enrichment",
+      "description": "*"
+    },
+    "org.streampipes.processor.imageclassification.jvm.generic-image-classification/version-0.62.0-org.streampipes.processor.imageclassification.jvm.generic-image-classification": {
+      "id": "org.streampipes.processor.imageclassification.jvm.generic-image-classification/version-0.62.0-org.streampipes.processor.imageclassification.jvm.generic-image-classification",
+      "title": "Generic Image Classification",
+      "description": "*"
+    },
+    "org.streampipes.processor.imageclassification.jvm.image-enricher/version-0.62.0-org.streampipes.processor.imageclassification.jvm.image-enricher": {
+      "id": "org.streampipes.processor.imageclassification.jvm.image-enricher/version-0.62.0-org.streampipes.processor.imageclassification.jvm.image-enricher",
+      "title": "Image Enricher",
+      "description": "*"
+    },
+    "org.streampipes.processor.imageclassification.qrcode/version-0.62.0-org.streampipes.processor.imageclassification.qrcode": {
+      "id": "org.streampipes.processor.imageclassification.qrcode/version-0.62.0-org.streampipes.processor.imageclassification.qrcode",
+      "title": "QR Code Reader",
+      "description": "*"
+    },
+    "org.streampipes.processors.aggregation.flink.aggregation/version-0.62.0-org.streampipes.processors.aggregation.flink.aggregation": {
+      "id": "org.streampipes.processors.aggregation.flink.aggregation/version-0.62.0-org.streampipes.processors.aggregation.flink.aggregation",
+      "title": "Aggregation",
+      "description": "*"
+    },
+    "org.streampipes.processors.aggregation.flink.rate/version-0.62.0-org.streampipes.processors.aggregation.flink.rate": {
+      "id": "org.streampipes.processors.aggregation.flink.rate/version-0.62.0-org.streampipes.processors.aggregation.flink.rate",
+      "title": "Event Rate",
+      "description": "*"
+    },
+    "org.streampipes.processors.enricher.flink.processor.math.mathop/version-0.62.0-org.streampipes.processors.enricher.flink.processor.math.mathop": {
+      "id": "org.streampipes.processors.enricher.flink.processor.math.mathop/version-0.62.0-org.streampipes.processors.enricher.flink.processor.math.mathop",
+      "title": "Math",
+      "description": "*"
+    },
+    "org.streampipes.processors.enricher.flink.processor.math.staticmathop/version-0.62.0-org.streampipes.processors.enricher.flink.processor.math.staticmathop": {
+      "id": "org.streampipes.processors.enricher.flink.processor.math.staticmathop/version-0.62.0-org.streampipes.processors.enricher.flink.processor.math.staticmathop",
+      "title": "Static Math",
+      "description": "*"
+    },
+    "org.streampipes.processors.enricher.flink.processor.trigonometry/version-0.62.0-org.streampipes.processors.enricher.flink.processor.trigonometry": {
+      "id": "org.streampipes.processors.enricher.flink.processor.trigonometry/version-0.62.0-org.streampipes.processors.enricher.flink.processor.trigonometry",
+      "title": "Trigonometry Functions",
+      "description": "*"
+    },
+    "org.streampipes.processors.enricher.flink.processor.urldereferencing/version-0.62.0-org.streampipes.processors.enricher.flink.processor.urldereferencing": {
+      "id": "org.streampipes.processors.enricher.flink.processor.urldereferencing/version-0.62.0-org.streampipes.processors.enricher.flink.processor.urldereferencing",
+      "title": "URL Dereferencing",
+      "description": "*"
+    },
+    "org.streampipes.processors.enricher.flink.timestamp/version-0.62.0-org.streampipes.processors.enricher.flink.timestamp": {
+      "id": "org.streampipes.processors.enricher.flink.timestamp/version-0.62.0-org.streampipes.processors.enricher.flink.timestamp",
+      "title": "Timestamp Enricher",
+      "description": "*"
+    },
+    "org.streampipes.processors.filters.jvm.compose/version-0.62.0-org.streampipes.processors.filters.jvm.compose": {
+      "id": "org.streampipes.processors.filters.jvm.compose/version-0.62.0-org.streampipes.processors.filters.jvm.compose",
+      "title": "Compose",
+      "description": "*"
+    },
+    "org.streampipes.processors.filters.jvm.numericalfilter/version-0.62.0-org.streampipes.processors.filters.jvm.numericalfilter": {
+      "id": "org.streampipes.processors.filters.jvm.numericalfilter/version-0.62.0-org.streampipes.processors.filters.jvm.numericalfilter",
+      "title": "Numerical Filter",
+      "description": "*"
+    },
+    "org.streampipes.processors.filters.jvm.project/version-0.62.0-org.streampipes.processors.filters.jvm.project": {
+      "id": "org.streampipes.processors.filters.jvm.project/version-0.62.0-org.streampipes.processors.filters.jvm.project",
+      "title": "Projection",
+      "description": "*"
+    },
+    "org.streampipes.processors.filters.jvm.textfilter/version-0.62.0-org.streampipes.processors.filters.jvm.textfilter": {
+      "id": "org.streampipes.processors.filters.jvm.textfilter/version-0.62.0-org.streampipes.processors.filters.jvm.textfilter",
+      "title": "Text Filter",
+      "description": "*"
+    },
+    "org.streampipes.processors.pattern-detection.flink.peak-detection/version-0.62.0-org.streampipes.processors.pattern-detection.flink.peak-detection": {
+      "id": "org.streampipes.processors.pattern-detection.flink.peak-detection/version-0.62.0-org.streampipes.processors.pattern-detection.flink.peak-detection",
+      "title": "Peak Detection",
+      "description": "*"
+    },
+    "org.streampipes.processors.siddhi.frequency/version-0.62.0-org.streampipes.processors.siddhi.frequency": {
+      "id": "org.streampipes.processors.siddhi.frequency/version-0.62.0-org.streampipes.processors.siddhi.frequency",
+      "title": "Frequency Calculation",
+      "description": "*"
+    },
+    "org.streampipes.processors.siddhi.frequencychange/version-0.62.0-org.streampipes.processors.siddhi.frequencychange": {
+      "id": "org.streampipes.processors.siddhi.frequencychange/version-0.62.0-org.streampipes.processors.siddhi.frequencychange",
+      "title": "Frequency Change",
+      "description": "*"
+    },
+    "org.streampipes.processors.siddhi.increase/version-0.62.0-org.streampipes.processors.siddhi.increase": {
+      "id": "org.streampipes.processors.siddhi.increase/version-0.62.0-org.streampipes.processors.siddhi.increase",
+      "title": "Trend",
+      "description": "*"
+    },
+    "org.streampipes.processors.siddhi.numericalfilter/version-0.62.0-org.streampipes.processors.siddhi.numericalfilter": {
+      "id": "org.streampipes.processors.siddhi.numericalfilter/version-0.62.0-org.streampipes.processors.siddhi.numericalfilter",
+      "title": "Numerical Filter (Siddhi)",
+      "description": "*"
+    },
+    "org.streampipes.processors.siddhi.sequence/version-0.62.0-org.streampipes.processors.siddhi.sequence": {
+      "id": "org.streampipes.processors.siddhi.sequence/version-0.62.0-org.streampipes.processors.siddhi.sequence",
+      "title": "Sequence Detection",
+      "description": "*"
+    },
+    "org.streampipes.processors.siddhi.stop/version-0.62.0-org.streampipes.processors.siddhi.stop": {
+      "id": "org.streampipes.processors.siddhi.stop/version-0.62.0-org.streampipes.processors.siddhi.stop",
+      "title": "Stream Stop Detection",
+      "description": "*"
+    },
+    "org.streampipes.processors.textmining.flink.languagedetection/version-0.62.0-org.streampipes.processors.textmining.flink.languagedetection": {
+      "id": "org.streampipes.processors.textmining.flink.languagedetection/version-0.62.0-org.streampipes.processors.textmining.flink.languagedetection",
+      "title": "Language Detection",
+      "description": "*"
+    },
+    "org.streampipes.processors.textmining.flink.wordcount/version-0.62.0-org.streampipes.processors.textmining.flink.wordcount": {
+      "id": "org.streampipes.processors.textmining.flink.wordcount/version-0.62.0-org.streampipes.processors.textmining.flink.wordcount",
+      "title": "Word Count",
+      "description": "*"
+    },
+    "org.streampipes.processors.transformation.flink.field-converter/version-0.62.0-org.streampipes.processors.transformation.flink.field-converter": {
+      "id": "org.streampipes.processors.transformation.flink.field-converter/version-0.62.0-org.streampipes.processors.transformation.flink.field-converter",
+      "title": "Field Converter",
+      "description": "*"
+    },
+    "org.streampipes.processors.transformation.flink.field-mapper/version-0.62.0-org.streampipes.processors.transformation.flink.field-mapper": {
+      "id": "org.streampipes.processors.transformation.flink.field-mapper/version-0.62.0-org.streampipes.processors.transformation.flink.field-mapper",
+      "title": "Field Mapper",
+      "description": "*"
+    },
+    "org.streampipes.processors.transformation.flink.field-renamer/version-0.62.0-org.streampipes.processors.transformation.flink.field-renamer": {
+      "id": "org.streampipes.processors.transformation.flink.field-renamer/version-0.62.0-org.streampipes.processors.transformation.flink.field-renamer",
+      "title": "Field Renamer",
+      "description": "*"
+    },
+    "org.streampipes.processors.transformation.flink.fieldhasher/version-0.62.0-org.streampipes.processors.transformation.flink.fieldhasher": {
+      "id": "org.streampipes.processors.transformation.flink.fieldhasher/version-0.62.0-org.streampipes.processors.transformation.flink.fieldhasher",
+      "title": "Field Hasher",
+      "description": "*"
+    },
+    "org.streampipes.processors.transformation.flink.measurement-unit-converter/version-0.62.0-org.streampipes.processors.transformation.flink.measurement-unit-converter": {
+      "id": "org.streampipes.processors.transformation.flink.measurement-unit-converter/version-0.62.0-org.streampipes.processors.transformation.flink.measurement-unit-converter",
+      "title": "Measurement Unit Converter",
+      "description": "*"
+    },
+    "org.streampipes.processors.transformation.flink.processor.boilerplate/version-0.62.0-org.streampipes.processors.transformation.flink.processor.boilerplate": {
+      "id": "org.streampipes.processors.transformation.flink.processor.boilerplate/version-0.62.0-org.streampipes.processors.transformation.flink.processor.boilerplate",
+      "title": "Boilerplate Removal",
+      "description": "*"
+    },
+    "org.streampipes.processors.transformation.jvm.changed-value/version-0.62.0-org.streampipes.processors.transformation.jvm.changed-value": {
+      "id": "org.streampipes.processors.transformation.jvm.changed-value/version-0.62.0-org.streampipes.processors.transformation.jvm.changed-value",
+      "title": "Value Changed",
+      "description": "*"
+    },
+    "org.streampipes.processors.transformation.jvm.count-array/version-0.62.0-org.streampipes.processors.transformation.jvm.count-array": {
+      "id": "org.streampipes.processors.transformation.jvm.count-array/version-0.62.0-org.streampipes.processors.transformation.jvm.count-array",
+      "title": "Count Array",
+      "description": "*"
+    },
+    "org.streampipes.processors.transformation.jvm.duration-value/version-0.62.0-org.streampipes.processors.transformation.jvm.duration-value": {
+      "id": "org.streampipes.processors.transformation.jvm.duration-value/version-0.62.0-org.streampipes.processors.transformation.jvm.duration-value",
+      "title": "Calculate Duration",
+      "description": "*"
+    },
+    "org.streampipes.processors.transformation.jvm.processor.timestampextractor/version-0.62.0-org.streampipes.processors.transformation.jvm.processor.timestampextractor": {
+      "id": "org.streampipes.processors.transformation.jvm.processor.timestampextractor/version-0.62.0-org.streampipes.processors.transformation.jvm.processor.timestampextractor",
+      "title": "Timestamp Extractor",
+      "description": "*"
+    },
+    "org.streampipes.processors.transformation.jvm.split-array/version-0.62.0-org.streampipes.processors.transformation.jvm.split-array": {
+      "id": "org.streampipes.processors.transformation.jvm.split-array/version-0.62.0-org.streampipes.processors.transformation.jvm.split-array",
+      "title": "Split Array",
+      "description": "*"
+    },
+    "org.streampipes.sinks.brokers.jvm.jms/version-0.62.0-org.streampipes.sinks.brokers.jvm.jms": {
+      "id": "org.streampipes.sinks.brokers.jvm.jms/version-0.62.0-org.streampipes.sinks.brokers.jvm.jms",
+      "title": "JMS Publisher",
+      "description": "*"
+    },
+    "org.streampipes.sinks.brokers.jvm.kafka/version-0.62.0-org.streampipes.sinks.brokers.jvm.kafka": {
+      "id": "org.streampipes.sinks.brokers.jvm.kafka/version-0.62.0-org.streampipes.sinks.brokers.jvm.kafka",
+      "title": "Kafka Publisher",
+      "description": "*"
+    },
+    "org.streampipes.sinks.brokers.jvm.rabbitmq/version-0.62.0-org.streampipes.sinks.brokers.jvm.rabbitmq": {
+      "id": "org.streampipes.sinks.brokers.jvm.rabbitmq/version-0.62.0-org.streampipes.sinks.brokers.jvm.rabbitmq",
+      "title": "RabbitMQ Publisher",
+      "description": "*"
+    },
+    "org.streampipes.sinks.brokers.jvm.rest/version-0.62.0-org.streampipes.sinks.brokers.jvm.rest": {
+      "id": "org.streampipes.sinks.brokers.jvm.rest/version-0.62.0-org.streampipes.sinks.brokers.jvm.rest",
+      "title": "REST Publisher",
+      "description": "*"
+    },
+    "org.streampipes.sinks.databases.flink.elasticsearch/version-0.62.0-org.streampipes.sinks.databases.flink.elasticsearch": {
+      "id": "org.streampipes.sinks.databases.flink.elasticsearch/version-0.62.0-org.streampipes.sinks.databases.flink.elasticsearch",
+      "title": "Elasticsearch",
+      "description": "*"
+    },
+    "org.streampipes.sinks.databases.jvm.couchdb/version-0.62.0-org.streampipes.sinks.databases.jvm.couchdb": {
+      "id": "org.streampipes.sinks.databases.jvm.couchdb/version-0.62.0-org.streampipes.sinks.databases.jvm.couchdb",
+      "title": "CouchDB",
+      "description": "*"
+    },
+    "org.streampipes.sinks.databases.jvm.influxdb/version-0.62.0-org.streampipes.sinks.databases.jvm.influxdb": {
+      "id": "org.streampipes.sinks.databases.jvm.influxdb/version-0.62.0-org.streampipes.sinks.databases.jvm.influxdb",
+      "title": "InfluxDB",
+      "description": "*"
+    },
+    "org.streampipes.sinks.databases.jvm.postgresql/version-0.62.0-org.streampipes.sinks.databases.jvm.postgresql": {
+      "id": "org.streampipes.sinks.databases.jvm.postgresql/version-0.62.0-org.streampipes.sinks.databases.jvm.postgresql",
+      "title": "PostgreSQL",
+      "description": "*"
+    },
+    "org.streampipes.sinks.internal.jvm.dashboard/version-0.62.0-org.streampipes.sinks.internal.jvm.dashboard": {
+      "id": "org.streampipes.sinks.internal.jvm.dashboard/version-0.62.0-org.streampipes.sinks.internal.jvm.dashboard",
+      "title": "Dashboard Sink",
+      "description": "*"
+    },
+    "org.streampipes.sinks.internal.jvm.notification/version-0.62.0-org.streampipes.sinks.internal.jvm.notification": {
+      "id": "org.streampipes.sinks.internal.jvm.notification/version-0.62.0-org.streampipes.sinks.internal.jvm.notification",
+      "title": "Notification",
+      "description": "*"
+    },
+    "org.streampipes.sinks.notifications.jvm.email/version-0.62.0-org.streampipes.sinks.notifications.jvm.email": {
+      "id": "org.streampipes.sinks.notifications.jvm.email/version-0.62.0-org.streampipes.sinks.notifications.jvm.email",
+      "title": "Email Notification",
+      "description": "*"
+    },
+    "org.streampipes.sinks.notifications.jvm.onesignal/version-0.62.0-org.streampipes.sinks.notifications.jvm.onesignal": {
+      "id": "org.streampipes.sinks.notifications.jvm.onesignal/version-0.62.0-org.streampipes.sinks.notifications.jvm.onesignal",
+      "title": "OneSignal",
+      "description": "*"
+    },
+    "org.streampipes.sinks.notifications.jvm.slack/version-0.62.0-org.streampipes.sinks.notifications.jvm.slack": {
+      "id": "org.streampipes.sinks.notifications.jvm.slack/version-0.62.0-org.streampipes.sinks.notifications.jvm.slack",
+      "title": "Slack Notification",
+      "description": "*"
+    },
     "pipeline-elements": {
       "id": "pipeline-elements",
       "title": "Pipeline Elements",

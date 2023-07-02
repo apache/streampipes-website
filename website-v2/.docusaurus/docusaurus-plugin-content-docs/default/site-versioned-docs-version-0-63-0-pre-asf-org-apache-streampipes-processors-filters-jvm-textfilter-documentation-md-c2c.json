@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.apache.streampipes.processors.filters.jvm.textfilter/org.apache.streampipes.processors.filters.jvm.textfilter",
+  "id": "version-0.63.0-pre-asf/org.apache.streampipes.processors.filters.jvm.textfilter/org.apache.streampipes.processors.filters.jvm.textfilter",
+  "title": "Text Filter",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.63.0-pre-asf/org.apache.streampipes.processors.filters.jvm.textfilter/documentation.md",
+  "sourceDirName": "org.apache.streampipes.processors.filters.jvm.textfilter",
+  "slug": "/org.apache.streampipes.processors.filters.jvm.textfilter/org.apache.streampipes.processors.filters.jvm.textfilter",
+  "permalink": "/docs/0.63.0-pre-asf/org.apache.streampipes.processors.filters.jvm.textfilter/org.apache.streampipes.processors.filters.jvm.textfilter",
+  "draft": false,
+  "tags": [],
+  "version": "0.63.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processors.filters.jvm.textfilter",
+    "title": "Text Filter",
+    "sidebar_label": "Text Filter",
+    "original_id": "org.apache.streampipes.processors.filters.jvm.textfilter"
+  }
+}

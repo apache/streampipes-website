@@ -1,0 +1,23 @@
+{
+  "unversionedId": "extend-sdk-stream-requirements",
+  "id": "version-0.65.0-pre-asf/extend-sdk-stream-requirements",
+  "title": "SDK Guide: Stream Requirements",
+  "description": "Introduction",
+  "source": "@site/versioned_docs/version-0.65.0-pre-asf/06_extend-sdk-stream-requirements.md",
+  "sourceDirName": ".",
+  "slug": "/extend-sdk-stream-requirements",
+  "permalink": "/docs/0.65.0-pre-asf/extend-sdk-stream-requirements",
+  "draft": false,
+  "tags": [],
+  "version": "0.65.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "id": "extend-sdk-stream-requirements",
+    "title": "SDK Guide: Stream Requirements",
+    "sidebar_label": "SDK: Stream Requirements",
+    "original_id": "extend-sdk-stream-requirements"
+  }
+}

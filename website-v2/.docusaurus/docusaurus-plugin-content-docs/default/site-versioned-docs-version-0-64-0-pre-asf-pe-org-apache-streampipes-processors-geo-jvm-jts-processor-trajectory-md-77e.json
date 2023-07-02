@@ -1,0 +1,22 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory",
+  "id": "version-0.64.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory",
+  "title": "Single Trajectory Creator",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.64.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory",
+  "permalink": "/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory",
+  "draft": false,
+  "tags": [],
+  "version": "0.64.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory",
+    "title": "Single Trajectory Creator",
+    "sidebar_label": "Single Trajectory Creator",
+    "original_id": "org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory"
+  }
+}

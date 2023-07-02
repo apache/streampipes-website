@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.streampipes.processors.siddhi.increase/version-0.62.0-org.streampipes.processors.siddhi.increase",
+  "id": "version-0.55.2-pre-asf/org.streampipes.processors.siddhi.increase/version-0.62.0-org.streampipes.processors.siddhi.increase",
+  "title": "Trend",
+  "description": "*",
+  "source": "@site/versioned_docs/version-0.55.2-pre-asf/org.streampipes.processors.siddhi.increase/documentation.md",
+  "sourceDirName": "org.streampipes.processors.siddhi.increase",
+  "slug": "/org.streampipes.processors.siddhi.increase/version-0.62.0-org.streampipes.processors.siddhi.increase",
+  "permalink": "/docs/0.55.2-pre-asf/org.streampipes.processors.siddhi.increase/version-0.62.0-org.streampipes.processors.siddhi.increase",
+  "draft": false,
+  "tags": [],
+  "version": "0.55.2-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "version-0.62.0-org.streampipes.processors.siddhi.increase",
+    "title": "Trend",
+    "sidebar_label": "Trend",
+    "original_id": "org.streampipes.processors.siddhi.increase"
+  }
+}

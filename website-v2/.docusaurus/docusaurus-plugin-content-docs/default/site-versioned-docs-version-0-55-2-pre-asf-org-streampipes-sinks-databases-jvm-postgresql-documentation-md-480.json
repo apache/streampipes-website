@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.streampipes.sinks.databases.jvm.postgresql/version-0.62.0-org.streampipes.sinks.databases.jvm.postgresql",
+  "id": "version-0.55.2-pre-asf/org.streampipes.sinks.databases.jvm.postgresql/version-0.62.0-org.streampipes.sinks.databases.jvm.postgresql",
+  "title": "PostgreSQL",
+  "description": "*",
+  "source": "@site/versioned_docs/version-0.55.2-pre-asf/org.streampipes.sinks.databases.jvm.postgresql/documentation.md",
+  "sourceDirName": "org.streampipes.sinks.databases.jvm.postgresql",
+  "slug": "/org.streampipes.sinks.databases.jvm.postgresql/version-0.62.0-org.streampipes.sinks.databases.jvm.postgresql",
+  "permalink": "/docs/0.55.2-pre-asf/org.streampipes.sinks.databases.jvm.postgresql/version-0.62.0-org.streampipes.sinks.databases.jvm.postgresql",
+  "draft": false,
+  "tags": [],
+  "version": "0.55.2-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "version-0.62.0-org.streampipes.sinks.databases.jvm.postgresql",
+    "title": "PostgreSQL",
+    "sidebar_label": "PostgreSQL",
+    "original_id": "org.streampipes.sinks.databases.jvm.postgresql"
+  }
+}

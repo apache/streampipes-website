@@ -1,0 +1,22 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.sinks.databases.ditto",
+  "id": "version-0.63.0-pre-asf/pe/org.apache.streampipes.sinks.databases.ditto",
+  "title": "Eclipse Ditto",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.63.0-pre-asf/pe/org.apache.streampipes.sinks.databases.ditto.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.sinks.databases.ditto",
+  "permalink": "/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.databases.ditto",
+  "draft": false,
+  "tags": [],
+  "version": "0.63.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.sinks.databases.ditto",
+    "title": "Eclipse Ditto",
+    "sidebar_label": "Eclipse Ditto",
+    "original_id": "org.apache.streampipes.sinks.databases.ditto"
+  }
+}

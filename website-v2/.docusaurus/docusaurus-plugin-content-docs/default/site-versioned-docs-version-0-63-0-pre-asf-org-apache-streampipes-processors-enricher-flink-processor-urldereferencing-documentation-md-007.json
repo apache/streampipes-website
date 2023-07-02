@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.apache.streampipes.processors.enricher.flink.processor.urldereferencing/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing",
+  "id": "version-0.63.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing",
+  "title": "URL Dereferencing",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.63.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing/documentation.md",
+  "sourceDirName": "org.apache.streampipes.processors.enricher.flink.processor.urldereferencing",
+  "slug": "/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing",
+  "permalink": "/docs/0.63.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing",
+  "draft": false,
+  "tags": [],
+  "version": "0.63.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processors.enricher.flink.processor.urldereferencing",
+    "title": "URL Dereferencing",
+    "sidebar_label": "URL Dereferencing",
+    "original_id": "org.apache.streampipes.processors.enricher.flink.processor.urldereferencing"
+  }
+}

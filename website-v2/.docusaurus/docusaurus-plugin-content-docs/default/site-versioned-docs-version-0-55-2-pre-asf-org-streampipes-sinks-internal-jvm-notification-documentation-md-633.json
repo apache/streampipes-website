@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.streampipes.sinks.internal.jvm.notification/version-0.62.0-org.streampipes.sinks.internal.jvm.notification",
+  "id": "version-0.55.2-pre-asf/org.streampipes.sinks.internal.jvm.notification/version-0.62.0-org.streampipes.sinks.internal.jvm.notification",
+  "title": "Notification",
+  "description": "*",
+  "source": "@site/versioned_docs/version-0.55.2-pre-asf/org.streampipes.sinks.internal.jvm.notification/documentation.md",
+  "sourceDirName": "org.streampipes.sinks.internal.jvm.notification",
+  "slug": "/org.streampipes.sinks.internal.jvm.notification/version-0.62.0-org.streampipes.sinks.internal.jvm.notification",
+  "permalink": "/docs/0.55.2-pre-asf/org.streampipes.sinks.internal.jvm.notification/version-0.62.0-org.streampipes.sinks.internal.jvm.notification",
+  "draft": false,
+  "tags": [],
+  "version": "0.55.2-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "version-0.62.0-org.streampipes.sinks.internal.jvm.notification",
+    "title": "Notification",
+    "sidebar_label": "Notification",
+    "original_id": "org.streampipes.sinks.internal.jvm.notification"
+  }
+}

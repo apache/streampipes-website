@@ -1,0 +1,22 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.connect.adapters.influxdb.set",
+  "id": "version-0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.influxdb.set",
+  "title": "InfluxDB Set Adapter",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.influxdb.set.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.connect.adapters.influxdb.set",
+  "permalink": "/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.influxdb.set",
+  "draft": false,
+  "tags": [],
+  "version": "0.64.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.connect.adapters.influxdb.set",
+    "title": "InfluxDB Set Adapter",
+    "sidebar_label": "InfluxDB Set Adapter",
+    "original_id": "org.apache.streampipes.connect.adapters.influxdb.set"
+  }
+}

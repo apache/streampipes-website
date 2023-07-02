@@ -14,15 +14,65 @@
       "title": "Development Setup",
       "description": "Pipeline elements in StreamPipes are provided as standalone microservices. New pipeline elements can be easily developed using the provided Maven archetypes and can be installed in StreamPipes at runtime."
     },
+    "pe/org.apache.streampipes.sinks.notifications.jvm.onesignal": {
+      "id": "pe/org.apache.streampipes.sinks.notifications.jvm.onesignal",
+      "title": "OneSignal",
+      "description": "~ Licensed to the Apache Software Foundation (ASF) under one or more"
+    },
+    "pe/org.apache.streampipes.sinks.notifications.jvm.slack": {
+      "id": "pe/org.apache.streampipes.sinks.notifications.jvm.slack",
+      "title": "Slack Notification",
+      "description": "~ Licensed to the Apache Software Foundation (ASF) under one or more"
+    },
+    "pe/org.apache.streampipes.sinks.notifications.jvm.telegram": {
+      "id": "pe/org.apache.streampipes.sinks.notifications.jvm.telegram",
+      "title": "Telegram Publisher",
+      "description": "~ Licensed to the Apache Software Foundation (ASF) under one or more"
+    },
+    "pipeline-elements": {
+      "id": "pipeline-elements",
+      "title": "Overview",
+      "description": "Data Processor"
+    },
+    "privacy": {
+      "id": "privacy",
+      "title": "Datenschutzerklärung",
+      "description": "Verantwortliche Stelle"
+    },
     "try-installation": {
       "id": "try-installation",
       "title": "Installation",
       "description": "The easiest way to install StreamPipes is our Docker-based installation. For production-grade deployments, we also"
     },
+    "user-guide-first-steps": {
+      "id": "user-guide-first-steps",
+      "title": "First steps",
+      "description": "In this section, you'll learn how to create and run pipelines in StreamPipes."
+    },
+    "user-guide-installation": {
+      "id": "user-guide-installation",
+      "title": "Installation",
+      "description": "Prerequisites"
+    },
     "user-guide-introduction": {
       "id": "user-guide-introduction",
       "title": "Apache StreamPipes Documentation",
       "description": "This is the documentation of Apache StreamPipes."
+    },
+    "user-guide-introduction-old": {
+      "id": "user-guide-introduction-old",
+      "title": "Introduction",
+      "description": "StreamPipes is a framework that enables users to work with data streams."
+    },
+    "user-guide-software-components": {
+      "id": "user-guide-software-components",
+      "title": "Software Components",
+      "description": "This page contains all the software components that can be used within the StreamPipes framework."
+    },
+    "user-guide-tour": {
+      "id": "user-guide-tour",
+      "title": "Tour",
+      "description": "StreamPipes is a framework that enables domain experts to model and execute stream processing pipelines in a big data infrastructure."
     }
   }
 }

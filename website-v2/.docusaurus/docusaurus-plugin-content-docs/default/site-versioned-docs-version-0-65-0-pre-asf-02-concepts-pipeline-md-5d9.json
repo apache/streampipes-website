@@ -1,0 +1,23 @@
+{
+  "unversionedId": "version-0.67.0-concepts-pipelines",
+  "id": "version-0.65.0-pre-asf/version-0.67.0-concepts-pipelines",
+  "title": "Pipelines",
+  "description": "tbd",
+  "source": "@site/versioned_docs/version-0.65.0-pre-asf/02_concepts-pipeline.md",
+  "sourceDirName": ".",
+  "slug": "/version-0.67.0-concepts-pipelines",
+  "permalink": "/docs/0.65.0-pre-asf/version-0.67.0-concepts-pipelines",
+  "draft": false,
+  "tags": [],
+  "version": "0.65.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "version-0.67.0-concepts-pipelines",
+    "title": "Pipelines",
+    "sidebar_label": "Pipelines",
+    "original_id": "concepts-pipelines"
+  }
+}

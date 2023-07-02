@@ -1,0 +1,23 @@
+{
+  "unversionedId": "version-0.67.0-try-tutorial",
+  "id": "version-0.65.0-pre-asf/version-0.67.0-try-tutorial",
+  "title": "Interactive Tutorial",
+  "description": "Once you've installed StreamPipes and see the home screen, you'll see a number of modules that are part of the StreamPipes toolbox.",
+  "source": "@site/versioned_docs/version-0.65.0-pre-asf/01_try-tutorial.md",
+  "sourceDirName": ".",
+  "slug": "/version-0.67.0-try-tutorial",
+  "permalink": "/docs/0.65.0-pre-asf/version-0.67.0-try-tutorial",
+  "draft": false,
+  "tags": [],
+  "version": "0.65.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "version-0.67.0-try-tutorial",
+    "title": "Interactive Tutorial",
+    "sidebar_label": "Interactive Tutorial",
+    "original_id": "try-tutorial"
+  }
+}

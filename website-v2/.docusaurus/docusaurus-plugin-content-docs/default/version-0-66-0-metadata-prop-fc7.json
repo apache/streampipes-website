@@ -64,6 +64,11 @@
       "title": "Kubernetes Deployment",
       "description": "Prerequisites"
     },
+    "deploy-security": {
+      "id": "deploy-security",
+      "title": "Security",
+      "description": "Overriding default settings"
+    },
     "deploy-use-ssl": {
       "id": "deploy-use-ssl",
       "title": "Use SSL",
@@ -114,9 +119,19 @@
       "title": "StreamPipes CLI",
       "description": "The StreamPipes command-line interface (CLI) is focused on developers in order to provide an easy entrypoint to set up a suitable dev environment, either planning on developing"
     },
+    "extend-first-processor": {
+      "id": "extend-first-processor",
+      "title": "Your first data processor",
+      "description": "In this section, we will explain how to start a pipeline element service and install it using the StreamPipes UI."
+    },
     "extend-sdk-event-model": {
       "id": "extend-sdk-event-model",
       "title": "SDK Guide: Event Model",
+      "description": "Introduction"
+    },
+    "extend-sdk-migration-service-discovery": {
+      "id": "extend-sdk-migration-service-discovery",
+      "title": "Migration Guide: New Service Discovery in 0.69.0",
       "description": "Introduction"
     },
     "extend-sdk-output-strategies": {
@@ -757,6 +772,81 @@
     "pe/org.apache.streampipes.sinks.notifications.jvm.slack": {
       "id": "pe/org.apache.streampipes.sinks.notifications.jvm.slack",
       "title": "Slack Notification",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.connect.adapters.flic.mqtt": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.connect.adapters.flic.mqtt",
+      "title": "Flic MQTT",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.connect.adapters.plc4x.modbus": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.connect.adapters.plc4x.modbus",
+      "title": "PLC4X MODBUS",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.connect.adapters.simulator.machine": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.connect.adapters.simulator.machine",
+      "title": "Machine Data Simulator",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.connect.protocol.stream.httpserver": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.connect.protocol.stream.httpserver",
+      "title": "HTTP Server",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.processors.changedetection.jvm.cusum": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.processors.changedetection.jvm.cusum",
+      "title": "Cusum",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.processors.filters.jvm.limit": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.processors.filters.jvm.limit",
+      "title": "Rate Limit",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge",
+      "title": "Signal Edge Filter",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state",
+      "title": "Boolean To State",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.buffer": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.buffer",
+      "title": "State Buffer",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer",
+      "title": "State Buffer Labeler",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number",
+      "title": "Number Labeler",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state",
+      "title": "String To State",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.sinks.brokers.jvm.nats": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.sinks.brokers.jvm.nats",
+      "title": "NATS Publisher",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.sinks.databases.jvm.mysql": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.sinks.databases.jvm.mysql",
+      "title": "MySQL Database",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.sinks.notifications.jvm.telegram": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.sinks.notifications.jvm.telegram",
+      "title": "Telegram Publisher",
       "description": "<!--"
     },
     "pipeline-elements": {

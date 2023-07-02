@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.apache.streampipes.processor.geo.jvm.geocoding/org.apache.streampipes.processor.geo.jvm.geocoding",
+  "id": "version-0.63.0-pre-asf/org.apache.streampipes.processor.geo.jvm.geocoding/org.apache.streampipes.processor.geo.jvm.geocoding",
+  "title": "Google Maps Geocoder",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.63.0-pre-asf/org.apache.streampipes.processor.geo.jvm.geocoding/documentation.md",
+  "sourceDirName": "org.apache.streampipes.processor.geo.jvm.geocoding",
+  "slug": "/org.apache.streampipes.processor.geo.jvm.geocoding/org.apache.streampipes.processor.geo.jvm.geocoding",
+  "permalink": "/docs/0.63.0-pre-asf/org.apache.streampipes.processor.geo.jvm.geocoding/org.apache.streampipes.processor.geo.jvm.geocoding",
+  "draft": false,
+  "tags": [],
+  "version": "0.63.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processor.geo.jvm.geocoding",
+    "title": "Google Maps Geocoder",
+    "sidebar_label": "Google Maps Geocoder",
+    "original_id": "org.apache.streampipes.processor.geo.jvm.geocoding"
+  }
+}

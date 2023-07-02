@@ -1,0 +1,21 @@
+{
+  "unversionedId": "privacy",
+  "id": "version-0.91.0/privacy",
+  "title": "Datenschutzerklärung",
+  "description": "Verantwortliche Stelle",
+  "source": "@site/versioned_docs/version-0.91.0/privacy.md",
+  "sourceDirName": ".",
+  "slug": "/privacy",
+  "permalink": "/docs/0.91.0/privacy",
+  "draft": false,
+  "tags": [],
+  "version": "0.91.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "privacy",
+    "title": "Datenschutzerklärung",
+    "sidebar_label": "Privacy Notice"
+  }
+}

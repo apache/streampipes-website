@@ -89,6 +89,11 @@
       "title": "Pipeline Editor",
       "description": "The pipeline editor module supports building pipelines that transform a data stream using a set of resuable data processors and data sinks."
     },
+    "user-guide-first-steps": {
+      "id": "user-guide-first-steps",
+      "title": "First steps",
+      "description": "In this section, you'll learn how to create and run pipelines in StreamPipes."
+    },
     "user-guide-installation": {
       "id": "user-guide-installation",
       "title": "Installation",
@@ -98,6 +103,16 @@
       "id": "user-guide-introduction",
       "title": "Apache StreamPipes Documentation",
       "description": "This is the documentation of Apache StreamPipes."
+    },
+    "user-guide-introduction-old": {
+      "id": "user-guide-introduction-old",
+      "title": "Introduction",
+      "description": "StreamPipes is a framework that enables users to work with data streams."
+    },
+    "user-guide-software-components": {
+      "id": "user-guide-software-components",
+      "title": "Software Components",
+      "description": "This page contains all the software components that can be used within the StreamPipes framework."
     }
   }
 }

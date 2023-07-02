@@ -1,0 +1,22 @@
+{
+  "unversionedId": "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.buffer",
+  "id": "version-0.66.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.buffer",
+  "title": "State Buffer",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.buffer.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.buffer",
+  "permalink": "/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.buffer",
+  "draft": false,
+  "tags": [],
+  "version": "0.66.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.buffer",
+    "title": "State Buffer",
+    "sidebar_label": "State Buffer",
+    "original_id": "org.apache.streampipes.processors.transformation.jvm.processor.state.buffer"
+  }
+}

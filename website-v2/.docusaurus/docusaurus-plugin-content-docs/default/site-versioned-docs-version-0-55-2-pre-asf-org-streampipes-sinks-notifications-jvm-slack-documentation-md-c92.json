@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.streampipes.sinks.notifications.jvm.slack/version-0.62.0-org.streampipes.sinks.notifications.jvm.slack",
+  "id": "version-0.55.2-pre-asf/org.streampipes.sinks.notifications.jvm.slack/version-0.62.0-org.streampipes.sinks.notifications.jvm.slack",
+  "title": "Slack Notification",
+  "description": "*",
+  "source": "@site/versioned_docs/version-0.55.2-pre-asf/org.streampipes.sinks.notifications.jvm.slack/documentation.md",
+  "sourceDirName": "org.streampipes.sinks.notifications.jvm.slack",
+  "slug": "/org.streampipes.sinks.notifications.jvm.slack/version-0.62.0-org.streampipes.sinks.notifications.jvm.slack",
+  "permalink": "/docs/0.55.2-pre-asf/org.streampipes.sinks.notifications.jvm.slack/version-0.62.0-org.streampipes.sinks.notifications.jvm.slack",
+  "draft": false,
+  "tags": [],
+  "version": "0.55.2-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "version-0.62.0-org.streampipes.sinks.notifications.jvm.slack",
+    "title": "Slack Notification",
+    "sidebar_label": "Slack Notification",
+    "original_id": "org.streampipes.sinks.notifications.jvm.slack"
+  }
+}

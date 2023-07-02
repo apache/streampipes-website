@@ -1,0 +1,23 @@
+{
+  "unversionedId": "version-0.67.0-deploy-kubernetes",
+  "id": "version-0.65.0-pre-asf/version-0.67.0-deploy-kubernetes",
+  "title": "Kubernetes Deployment",
+  "description": "Prerequisites",
+  "source": "@site/versioned_docs/version-0.65.0-pre-asf/05_deploy-kubernetes.md",
+  "sourceDirName": ".",
+  "slug": "/version-0.67.0-deploy-kubernetes",
+  "permalink": "/docs/0.65.0-pre-asf/version-0.67.0-deploy-kubernetes",
+  "draft": false,
+  "tags": [],
+  "version": "0.65.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "id": "version-0.67.0-deploy-kubernetes",
+    "title": "Kubernetes Deployment",
+    "sidebar_label": "Kubernetes Deployment",
+    "original_id": "deploy-kubernetes"
+  }
+}

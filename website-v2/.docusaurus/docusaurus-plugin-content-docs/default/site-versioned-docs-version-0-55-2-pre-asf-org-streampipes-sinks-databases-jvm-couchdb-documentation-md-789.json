@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.streampipes.sinks.databases.jvm.couchdb/version-0.62.0-org.streampipes.sinks.databases.jvm.couchdb",
+  "id": "version-0.55.2-pre-asf/org.streampipes.sinks.databases.jvm.couchdb/version-0.62.0-org.streampipes.sinks.databases.jvm.couchdb",
+  "title": "CouchDB",
+  "description": "*",
+  "source": "@site/versioned_docs/version-0.55.2-pre-asf/org.streampipes.sinks.databases.jvm.couchdb/documentation.md",
+  "sourceDirName": "org.streampipes.sinks.databases.jvm.couchdb",
+  "slug": "/org.streampipes.sinks.databases.jvm.couchdb/version-0.62.0-org.streampipes.sinks.databases.jvm.couchdb",
+  "permalink": "/docs/0.55.2-pre-asf/org.streampipes.sinks.databases.jvm.couchdb/version-0.62.0-org.streampipes.sinks.databases.jvm.couchdb",
+  "draft": false,
+  "tags": [],
+  "version": "0.55.2-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "version-0.62.0-org.streampipes.sinks.databases.jvm.couchdb",
+    "title": "CouchDB",
+    "sidebar_label": "CouchDB",
+    "original_id": "org.streampipes.sinks.databases.jvm.couchdb"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "version-0.67.0-technicals-architecture",
+  "id": "version-0.65.0-pre-asf/version-0.67.0-technicals-architecture",
+  "title": "Architecture",
+  "description": "The following picture illustrates the high-level architecture of StreamPipes:",
+  "source": "@site/versioned_docs/version-0.65.0-pre-asf/07_technicals-architecture.md",
+  "sourceDirName": ".",
+  "slug": "/version-0.67.0-technicals-architecture",
+  "permalink": "/docs/0.65.0-pre-asf/version-0.67.0-technicals-architecture",
+  "draft": false,
+  "tags": [],
+  "version": "0.65.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "id": "version-0.67.0-technicals-architecture",
+    "title": "Architecture",
+    "sidebar_label": "Architecture",
+    "original_id": "technicals-architecture"
+  }
+}

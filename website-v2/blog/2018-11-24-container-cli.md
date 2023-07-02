@@ -5,7 +5,7 @@ authorURL: "http://twitter.com/philipp10der"
 authorImageURL: "/docs/img/zehnder.png"
 ---
 **<div style="float: left; padding-right: 40px;">6 minutes to read</div>**
-<br>
+<br/>
 
 In this blog post, we show how we developed a CLI tool to install and manage StreamPipes.
 In addition, we present a template project that enables you to easily create a CLI tool for your own docker application.

@@ -1,0 +1,22 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.processors.textmining.jvm.chunker",
+  "id": "version-0.64.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.chunker",
+  "title": "Chunker (English)",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.64.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.chunker.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.processors.textmining.jvm.chunker",
+  "permalink": "/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.chunker",
+  "draft": false,
+  "tags": [],
+  "version": "0.64.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processors.textmining.jvm.chunker",
+    "title": "Chunker (English)",
+    "sidebar_label": "Chunker (English)",
+    "original_id": "org.apache.streampipes.processors.textmining.jvm.chunker"
+  }
+}

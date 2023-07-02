@@ -1,0 +1,23 @@
+{
+  "unversionedId": "version-0.67.0-concepts-data-streams",
+  "id": "version-0.65.0-pre-asf/version-0.67.0-concepts-data-streams",
+  "title": "Data Streams",
+  "description": "tbd",
+  "source": "@site/versioned_docs/version-0.65.0-pre-asf/02_concepts-data-streams.md",
+  "sourceDirName": ".",
+  "slug": "/version-0.67.0-concepts-data-streams",
+  "permalink": "/docs/0.65.0-pre-asf/version-0.67.0-concepts-data-streams",
+  "draft": false,
+  "tags": [],
+  "version": "0.65.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "version-0.67.0-concepts-data-streams",
+    "title": "Data Streams",
+    "sidebar_label": "Data Streams",
+    "original_id": "concepts-data-streams"
+  }
+}

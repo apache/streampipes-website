@@ -1,0 +1,22 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.connect.adapters.image.stream",
+  "id": "version-0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.image.stream",
+  "title": "Image Upload (Stream)",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.image.stream.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.connect.adapters.image.stream",
+  "permalink": "/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.image.stream",
+  "draft": false,
+  "tags": [],
+  "version": "0.64.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.connect.adapters.image.stream",
+    "title": "Image Upload (Stream)",
+    "sidebar_label": "Image Upload (Stream)",
+    "original_id": "org.apache.streampipes.connect.adapters.image.stream"
+  }
+}

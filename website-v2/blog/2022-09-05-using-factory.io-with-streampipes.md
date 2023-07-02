@@ -3,7 +3,7 @@ title: "Using Factory I/O with StreamPipes"
 author: Sven Oehler
 ---
 
-**<div style="float: left; padding-right: 40px;">10 minutes to read</div>**<br>
+**<div style="float: left; padding-right: 40px;">10 minutes to read</div>**<br/>
 
 This tutorial shows how you can stream sensor data into StreamPipes from a simulation environment (Factory I/O). The simulation environment is controlled by a "Siemens S7-1200" PLC and shows a conveyor belt which sorts packages by their height. The tutorial is based on the upcoming version 0.70.0 and teaches you how to load the sensor data, build a pipeline, preprocess the data and create visualizations.
 
@@ -20,7 +20,7 @@ This tutorial shows how you can stream sensor data into StreamPipes from a simul
 ## 2. Adapter
 The next step is to connect the PLC to StreamPipes. To achieve this we need to create an adapter.
 - Start <a href="https://streampipes.apache.org/docs/docs/user-guide-introduction.html">*StreamPipes*</a>, go to the **CONNECT** menu and create a **NEW ADAPTER**.  
-- Select the **PLC4X S7** adapter, insert the **IP-adress** of your PLC and **import the file** with the PLC tags (see below). Then click **NEXT** on the bottom right.
+- Select the **PLC4X S7** adapter, insert the **IP-address** of your PLC and **import the file** with the PLC tags (see below). Then click **NEXT** on the bottom right.
 
 <img class="blog-image" style="max-width:90%;" src="/docs/blog/assets/2022-09-05/adapter1.png" alt="adapter1"/>
 

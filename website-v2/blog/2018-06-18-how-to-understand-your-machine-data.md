@@ -5,7 +5,7 @@ authorURL: "http://twitter.com/philipp10der"
 authorImageURL: "/docs/img/zehnder.png"
 ---
 **<div style="float: left; padding-right: 40px;">8 minutes to read</div>**
-<br>
+<br/>
 
 
 Data is the new oil. Probably everybody of you has heard or read this sentence before.

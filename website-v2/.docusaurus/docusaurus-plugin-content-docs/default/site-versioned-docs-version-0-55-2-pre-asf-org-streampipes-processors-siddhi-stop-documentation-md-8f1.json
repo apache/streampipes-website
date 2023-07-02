@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.streampipes.processors.siddhi.stop/version-0.62.0-org.streampipes.processors.siddhi.stop",
+  "id": "version-0.55.2-pre-asf/org.streampipes.processors.siddhi.stop/version-0.62.0-org.streampipes.processors.siddhi.stop",
+  "title": "Stream Stop Detection",
+  "description": "*",
+  "source": "@site/versioned_docs/version-0.55.2-pre-asf/org.streampipes.processors.siddhi.stop/documentation.md",
+  "sourceDirName": "org.streampipes.processors.siddhi.stop",
+  "slug": "/org.streampipes.processors.siddhi.stop/version-0.62.0-org.streampipes.processors.siddhi.stop",
+  "permalink": "/docs/0.55.2-pre-asf/org.streampipes.processors.siddhi.stop/version-0.62.0-org.streampipes.processors.siddhi.stop",
+  "draft": false,
+  "tags": [],
+  "version": "0.55.2-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "version-0.62.0-org.streampipes.processors.siddhi.stop",
+    "title": "Stream Stop Detection",
+    "sidebar_label": "Stream Stop Detection",
+    "original_id": "org.streampipes.processors.siddhi.stop"
+  }
+}

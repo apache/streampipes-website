@@ -9,6 +9,11 @@
   "isLast": false,
   "docsSidebars": {},
   "docs": {
+    "community-contribute": {
+      "id": "community-contribute",
+      "title": "Contribute",
+      "description": "Contribute"
+    },
     "community-get-help": {
       "id": "community-get-help",
       "title": "Get Help",
@@ -54,9 +59,24 @@
       "title": "SDK Guide: Event Model",
       "description": "Introduction"
     },
+    "extend-sdk-functions": {
+      "id": "extend-sdk-functions",
+      "title": "SDK Guide: Functions",
+      "description": "Introduction"
+    },
     "extend-sdk-migration-service-discovery": {
       "id": "extend-sdk-migration-service-discovery",
       "title": "Migration Guide: New Service Discovery in 0.69.0",
+      "description": "Introduction"
+    },
+    "extend-sdk-output-strategies": {
+      "id": "extend-sdk-output-strategies",
+      "title": "SDK Guide: Output Strategies",
+      "description": "Introduction"
+    },
+    "extend-sdk-static-properties": {
+      "id": "extend-sdk-static-properties",
+      "title": "SDK Guide: Static Properties",
       "description": "Introduction"
     },
     "extend-sdk-stream-requirements": {
@@ -338,6 +358,16 @@
       "id": "pe/org.apache.streampipes.sinks.notifications.jvm.telegram",
       "title": "Telegram Publisher",
       "description": "<!--"
+    },
+    "pipeline-elements": {
+      "id": "pipeline-elements",
+      "title": "Overview",
+      "description": "<img class=\"pe-icon\""
+    },
+    "technicals-configuration": {
+      "id": "technicals-configuration",
+      "title": "Configuration",
+      "description": "On this page we explain how the StreamPipes configuration works."
     },
     "try-installation": {
       "id": "try-installation",

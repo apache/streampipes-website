@@ -5,7 +5,7 @@ authorURL: "https://twitter.com/dominikjriemer"
 authorImageURL: "/docs/img/riemer.png"
 ---
 **<div style="float: left; padding-right: 40px;">8 minutes to read</div>**
-<br>
+<br/>
 Great news: StreamPipes is moving to the Apache Incubator!
 <!--truncate-->
 

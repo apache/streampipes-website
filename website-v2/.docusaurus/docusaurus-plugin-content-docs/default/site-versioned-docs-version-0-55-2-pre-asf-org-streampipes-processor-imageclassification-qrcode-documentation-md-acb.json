@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.streampipes.processor.imageclassification.qrcode/version-0.62.0-org.streampipes.processor.imageclassification.qrcode",
+  "id": "version-0.55.2-pre-asf/org.streampipes.processor.imageclassification.qrcode/version-0.62.0-org.streampipes.processor.imageclassification.qrcode",
+  "title": "QR Code Reader",
+  "description": "*",
+  "source": "@site/versioned_docs/version-0.55.2-pre-asf/org.streampipes.processor.imageclassification.qrcode/documentation.md",
+  "sourceDirName": "org.streampipes.processor.imageclassification.qrcode",
+  "slug": "/org.streampipes.processor.imageclassification.qrcode/version-0.62.0-org.streampipes.processor.imageclassification.qrcode",
+  "permalink": "/docs/0.55.2-pre-asf/org.streampipes.processor.imageclassification.qrcode/version-0.62.0-org.streampipes.processor.imageclassification.qrcode",
+  "draft": false,
+  "tags": [],
+  "version": "0.55.2-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "version-0.62.0-org.streampipes.processor.imageclassification.qrcode",
+    "title": "QR Code Reader",
+    "sidebar_label": "QR Code Reader",
+    "original_id": "org.streampipes.processor.imageclassification.qrcode"
+  }
+}

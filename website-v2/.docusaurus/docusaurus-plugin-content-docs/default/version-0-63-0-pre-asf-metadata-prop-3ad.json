@@ -24,6 +24,21 @@
       "title": "Development Environment",
       "description": "In this section, we describe our recommended minimum setup for locally setting up a development instance of StreamPipes needed to develop, run and test new pipeline elements."
     },
+    "dev-guide-output-strategies": {
+      "id": "dev-guide-output-strategies",
+      "title": "SDK Guide: Output Strategies",
+      "description": "Introduction"
+    },
+    "dev-guide-static-properties": {
+      "id": "dev-guide-static-properties",
+      "title": "SDK Guide: Static Properties",
+      "description": "Introduction"
+    },
+    "dev-guide-stream-requirements": {
+      "id": "dev-guide-stream-requirements",
+      "title": "SDK Guide: Stream Requirements",
+      "description": "Introduction"
+    },
     "dev-guide-tutorial-processors": {
       "id": "dev-guide-tutorial-processors",
       "title": "Tutorial: Data Processors",
@@ -39,6 +54,1001 @@
       "title": "Tutorial: Data Sources",
       "description": "In this tutorial, we will add a new data source consisting of a single data stream. The source will be provided as a standalone component (i.e., the description will be accessible through an integrated web server)."
     },
+    "org.apache.streampipes.processor.geo.flink/org.apache.streampipes.processor.geo.flink": {
+      "id": "org.apache.streampipes.processor.geo.flink/org.apache.streampipes.processor.geo.flink",
+      "title": "Spatial Grid Enrichment",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processor.geo.jvm.geocoding/org.apache.streampipes.processor.geo.jvm.geocoding": {
+      "id": "org.apache.streampipes.processor.geo.jvm.geocoding/org.apache.streampipes.processor.geo.jvm.geocoding",
+      "title": "Google Maps Geocoder",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processor.geo.jvm.reversegeocoding/org.apache.streampipes.processor.geo.jvm.reversegeocoding": {
+      "id": "org.apache.streampipes.processor.geo.jvm.reversegeocoding/org.apache.streampipes.processor.geo.jvm.reversegeocoding",
+      "title": "Reverse Geocoder",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processor.geo.jvm.staticgeocoding/org.apache.streampipes.processor.geo.jvm.staticgeocoding": {
+      "id": "org.apache.streampipes.processor.geo.jvm.staticgeocoding/org.apache.streampipes.processor.geo.jvm.staticgeocoding",
+      "title": "Static Google Maps Geocoder",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification": {
+      "id": "org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification",
+      "title": "Generic Image Classification",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processor.imageclassification.jvm.image-enricher/org.apache.streampipes.processor.imageclassification.jvm.image-enricher": {
+      "id": "org.apache.streampipes.processor.imageclassification.jvm.image-enricher/org.apache.streampipes.processor.imageclassification.jvm.image-enricher",
+      "title": "Image Enricher",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processor.imageclassification.qrcode/org.apache.streampipes.processor.imageclassification.qrcode": {
+      "id": "org.apache.streampipes.processor.imageclassification.qrcode/org.apache.streampipes.processor.imageclassification.qrcode",
+      "title": "QR Code Reader",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.aggregation.flink.aggregation/org.apache.streampipes.processors.aggregation.flink.aggregation": {
+      "id": "org.apache.streampipes.processors.aggregation.flink.aggregation/org.apache.streampipes.processors.aggregation.flink.aggregation",
+      "title": "Aggregation",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.aggregation.flink.eventcount/org.apache.streampipes.processors.aggregation.flink.eventcount": {
+      "id": "org.apache.streampipes.processors.aggregation.flink.eventcount/org.apache.streampipes.processors.aggregation.flink.eventcount",
+      "title": "Event Counter",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.aggregation.flink.rate/org.apache.streampipes.processors.aggregation.flink.rate": {
+      "id": "org.apache.streampipes.processors.aggregation.flink.rate/org.apache.streampipes.processors.aggregation.flink.rate",
+      "title": "Event Rate",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.enricher.flink.processor.math.mathop/org.apache.streampipes.processors.enricher.flink.processor.math.mathop": {
+      "id": "org.apache.streampipes.processors.enricher.flink.processor.math.mathop/org.apache.streampipes.processors.enricher.flink.processor.math.mathop",
+      "title": "Math",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop": {
+      "id": "org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop",
+      "title": "Static Math",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.enricher.flink.processor.trigonometry/org.apache.streampipes.processors.enricher.flink.processor.trigonometry": {
+      "id": "org.apache.streampipes.processors.enricher.flink.processor.trigonometry/org.apache.streampipes.processors.enricher.flink.processor.trigonometry",
+      "title": "Trigonometry Functions",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.enricher.flink.processor.urldereferencing/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing": {
+      "id": "org.apache.streampipes.processors.enricher.flink.processor.urldereferencing/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing",
+      "title": "URL Dereferencing",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.enricher.flink.timestamp/org.apache.streampipes.processors.enricher.flink.timestamp": {
+      "id": "org.apache.streampipes.processors.enricher.flink.timestamp/org.apache.streampipes.processors.enricher.flink.timestamp",
+      "title": "Timestamp Enricher",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.enricher.jvm.sizemeasure/org.apache.streampipes.processors.enricher.jvm.sizemeasure": {
+      "id": "org.apache.streampipes.processors.enricher.jvm.sizemeasure/org.apache.streampipes.processors.enricher.jvm.sizemeasure",
+      "title": "Size Measure",
+      "description": "*"
+    },
+    "org.apache.streampipes.processors.filters.jvm.compose/org.apache.streampipes.processors.filters.jvm.compose": {
+      "id": "org.apache.streampipes.processors.filters.jvm.compose/org.apache.streampipes.processors.filters.jvm.compose",
+      "title": "Compose",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.filters.jvm.enrich/org.apache.streampipes.processors.filters.jvm.enrich": {
+      "id": "org.apache.streampipes.processors.filters.jvm.enrich/org.apache.streampipes.processors.filters.jvm.enrich",
+      "title": "Merge By Enrich",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.filters.jvm.merge/org.apache.streampipes.processors.filters.jvm.merge": {
+      "id": "org.apache.streampipes.processors.filters.jvm.merge/org.apache.streampipes.processors.filters.jvm.merge",
+      "title": "Merge By Time",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.filters.jvm.numericalfilter/org.apache.streampipes.processors.filters.jvm.numericalfilter": {
+      "id": "org.apache.streampipes.processors.filters.jvm.numericalfilter/org.apache.streampipes.processors.filters.jvm.numericalfilter",
+      "title": "Numerical Filter",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.filters.jvm.numericaltextfilter/org.apache.streampipes.processors.filters.jvm.numericaltextfilter": {
+      "id": "org.apache.streampipes.processors.filters.jvm.numericaltextfilter/org.apache.streampipes.processors.filters.jvm.numericaltextfilter",
+      "title": "Numerical Text Filter",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.filters.jvm.project/org.apache.streampipes.processors.filters.jvm.project": {
+      "id": "org.apache.streampipes.processors.filters.jvm.project/org.apache.streampipes.processors.filters.jvm.project",
+      "title": "Projection",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.filters.jvm.textfilter/org.apache.streampipes.processors.filters.jvm.textfilter": {
+      "id": "org.apache.streampipes.processors.filters.jvm.textfilter/org.apache.streampipes.processors.filters.jvm.textfilter",
+      "title": "Text Filter",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.filters.jvm.threshold/org.apache.streampipes.processors.filters.jvm.threshold": {
+      "id": "org.apache.streampipes.processors.filters.jvm.threshold/org.apache.streampipes.processors.filters.jvm.threshold",
+      "title": "Threshold Detector",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.geo.jvm.processor.distancecalculator/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator": {
+      "id": "org.apache.streampipes.processors.geo.jvm.processor.distancecalculator/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator",
+      "title": "Distance Calculator",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.pattern-detection.flink.peak-detection/org.apache.streampipes.processors.pattern-detection.flink.peak-detection": {
+      "id": "org.apache.streampipes.processors.pattern-detection.flink.peak-detection/org.apache.streampipes.processors.pattern-detection.flink.peak-detection",
+      "title": "Peak Detection",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.siddhi.frequency/org.apache.streampipes.processors.siddhi.frequency": {
+      "id": "org.apache.streampipes.processors.siddhi.frequency/org.apache.streampipes.processors.siddhi.frequency",
+      "title": "Frequency Calculation",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.siddhi.frequencychange/org.apache.streampipes.processors.siddhi.frequencychange": {
+      "id": "org.apache.streampipes.processors.siddhi.frequencychange/org.apache.streampipes.processors.siddhi.frequencychange",
+      "title": "Frequency Change",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.siddhi.increase/org.apache.streampipes.processors.siddhi.increase": {
+      "id": "org.apache.streampipes.processors.siddhi.increase/org.apache.streampipes.processors.siddhi.increase",
+      "title": "Trend",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.siddhi.numericalfilter/org.apache.streampipes.processors.siddhi.numericalfilter": {
+      "id": "org.apache.streampipes.processors.siddhi.numericalfilter/org.apache.streampipes.processors.siddhi.numericalfilter",
+      "title": "Numerical Filter (Siddhi)",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.siddhi.sequence/org.apache.streampipes.processors.siddhi.sequence": {
+      "id": "org.apache.streampipes.processors.siddhi.sequence/org.apache.streampipes.processors.siddhi.sequence",
+      "title": "Sequence Detection",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.siddhi.stop/org.apache.streampipes.processors.siddhi.stop": {
+      "id": "org.apache.streampipes.processors.siddhi.stop/org.apache.streampipes.processors.siddhi.stop",
+      "title": "Stream Stop Detection",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.textmining.flink.languagedetection/org.apache.streampipes.processors.textmining.flink.languagedetection": {
+      "id": "org.apache.streampipes.processors.textmining.flink.languagedetection/org.apache.streampipes.processors.textmining.flink.languagedetection",
+      "title": "Language Detection",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.textmining.flink.wordcount/org.apache.streampipes.processors.textmining.flink.wordcount": {
+      "id": "org.apache.streampipes.processors.textmining.flink.wordcount/org.apache.streampipes.processors.textmining.flink.wordcount",
+      "title": "Word Count",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.textmining.jvm.chunker/org.apache.streampipes.processors.textmining.jvm.chunker": {
+      "id": "org.apache.streampipes.processors.textmining.jvm.chunker/org.apache.streampipes.processors.textmining.jvm.chunker",
+      "title": "Chunker (English)",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.textmining.jvm.languagedetection/org.apache.streampipes.processors.textmining.jvm.languagedetection": {
+      "id": "org.apache.streampipes.processors.textmining.jvm.languagedetection/org.apache.streampipes.processors.textmining.jvm.languagedetection",
+      "title": "Language Detection",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.textmining.jvm.namefinder/org.apache.streampipes.processors.textmining.jvm.namefinder": {
+      "id": "org.apache.streampipes.processors.textmining.jvm.namefinder/org.apache.streampipes.processors.textmining.jvm.namefinder",
+      "title": "Name Finder",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.textmining.jvm.partofspeech/org.apache.streampipes.processors.textmining.jvm.partofspeech": {
+      "id": "org.apache.streampipes.processors.textmining.jvm.partofspeech/org.apache.streampipes.processors.textmining.jvm.partofspeech",
+      "title": "Part of Speech (English)",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.textmining.jvm.sentencedetection/org.apache.streampipes.processors.textmining.jvm.sentencedetection": {
+      "id": "org.apache.streampipes.processors.textmining.jvm.sentencedetection/org.apache.streampipes.processors.textmining.jvm.sentencedetection",
+      "title": "Sentence Detection (English)",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.textmining.jvm.tokenizer/org.apache.streampipes.processors.textmining.jvm.tokenizer": {
+      "id": "org.apache.streampipes.processors.textmining.jvm.tokenizer/org.apache.streampipes.processors.textmining.jvm.tokenizer",
+      "title": "Tokenizer (English)",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.transformation.flink.field-converter/org.apache.streampipes.processors.transformation.flink.field-converter": {
+      "id": "org.apache.streampipes.processors.transformation.flink.field-converter/org.apache.streampipes.processors.transformation.flink.field-converter",
+      "title": "Field Converter",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.transformation.flink.field-mapper/org.apache.streampipes.processors.transformation.flink.field-mapper": {
+      "id": "org.apache.streampipes.processors.transformation.flink.field-mapper/org.apache.streampipes.processors.transformation.flink.field-mapper",
+      "title": "Field Mapper",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.transformation.flink.field-renamer/org.apache.streampipes.processors.transformation.flink.field-renamer": {
+      "id": "org.apache.streampipes.processors.transformation.flink.field-renamer/org.apache.streampipes.processors.transformation.flink.field-renamer",
+      "title": "Field Renamer",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.transformation.flink.fieldhasher/org.apache.streampipes.processors.transformation.flink.fieldhasher": {
+      "id": "org.apache.streampipes.processors.transformation.flink.fieldhasher/org.apache.streampipes.processors.transformation.flink.fieldhasher",
+      "title": "Field Hasher",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.transformation.flink.measurement-unit-converter/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter": {
+      "id": "org.apache.streampipes.processors.transformation.flink.measurement-unit-converter/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter",
+      "title": "Measurement Unit Converter",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.transformation.flink.processor.boilerplate/org.apache.streampipes.processors.transformation.flink.processor.boilerplate": {
+      "id": "org.apache.streampipes.processors.transformation.flink.processor.boilerplate/org.apache.streampipes.processors.transformation.flink.processor.boilerplate",
+      "title": "Boilerplate Removal",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.transformation.jvm.booloperator.counter/org.apache.streampipes.processors.transformation.jvm.booloperator.counter": {
+      "id": "org.apache.streampipes.processors.transformation.jvm.booloperator.counter/org.apache.streampipes.processors.transformation.jvm.booloperator.counter",
+      "title": "Boolean Counter",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.transformation.jvm.booloperator.inverter/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter": {
+      "id": "org.apache.streampipes.processors.transformation.jvm.booloperator.inverter/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter",
+      "title": "Boolean Inverter",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping": {
+      "id": "org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping",
+      "title": "Measure Time Between Two Sensors",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.transformation.jvm.booloperator.timer/org.apache.streampipes.processors.transformation.jvm.booloperator.timer": {
+      "id": "org.apache.streampipes.processors.transformation.jvm.booloperator.timer/org.apache.streampipes.processors.transformation.jvm.booloperator.timer",
+      "title": "Boolean Timer",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.transformation.jvm.changed-value/org.apache.streampipes.processors.transformation.jvm.changed-value": {
+      "id": "org.apache.streampipes.processors.transformation.jvm.changed-value/org.apache.streampipes.processors.transformation.jvm.changed-value",
+      "title": "Value Changed",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.transformation.jvm.count-array/org.apache.streampipes.processors.transformation.jvm.count-array": {
+      "id": "org.apache.streampipes.processors.transformation.jvm.count-array/org.apache.streampipes.processors.transformation.jvm.count-array",
+      "title": "Count Array",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.transformation.jvm.csvmetadata/org.apache.streampipes.processors.transformation.jvm.csvmetadata": {
+      "id": "org.apache.streampipes.processors.transformation.jvm.csvmetadata/org.apache.streampipes.processors.transformation.jvm.csvmetadata",
+      "title": "CSV Metadata Enricher",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.transformation.jvm.duration-value/org.apache.streampipes.processors.transformation.jvm.duration-value": {
+      "id": "org.apache.streampipes.processors.transformation.jvm.duration-value/org.apache.streampipes.processors.transformation.jvm.duration-value",
+      "title": "Calculate Duration",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor": {
+      "id": "org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor",
+      "title": "Timestamp Extractor",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.transformation.jvm.split-array/org.apache.streampipes.processors.transformation.jvm.split-array": {
+      "id": "org.apache.streampipes.processors.transformation.jvm.split-array/org.apache.streampipes.processors.transformation.jvm.split-array",
+      "title": "Split Array",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.transformation.jvm.taskduration/org.apache.streampipes.processors.transformation.jvm.taskduration": {
+      "id": "org.apache.streampipes.processors.transformation.jvm.taskduration/org.apache.streampipes.processors.transformation.jvm.taskduration",
+      "title": "Task Duration",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.processors.transformation.jvm.transform-to-boolean/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean": {
+      "id": "org.apache.streampipes.processors.transformation.jvm.transform-to-boolean/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean",
+      "title": "Transform to boolean",
+      "description": "*"
+    },
+    "org.apache.streampipes.sinks.brokers.jvm.bufferrest/org.apache.streampipes.sinks.brokers.jvm.bufferrest": {
+      "id": "org.apache.streampipes.sinks.brokers.jvm.bufferrest/org.apache.streampipes.sinks.brokers.jvm.bufferrest",
+      "title": "Buffered REST Publisher",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.sinks.brokers.jvm.jms/org.apache.streampipes.sinks.brokers.jvm.jms": {
+      "id": "org.apache.streampipes.sinks.brokers.jvm.jms/org.apache.streampipes.sinks.brokers.jvm.jms",
+      "title": "JMS Publisher",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.sinks.brokers.jvm.kafka/org.apache.streampipes.sinks.brokers.jvm.kafka": {
+      "id": "org.apache.streampipes.sinks.brokers.jvm.kafka/org.apache.streampipes.sinks.brokers.jvm.kafka",
+      "title": "Kafka Publisher",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.sinks.brokers.jvm.pulsar/org.apache.streampipes.sinks.brokers.jvm.pulsar": {
+      "id": "org.apache.streampipes.sinks.brokers.jvm.pulsar/org.apache.streampipes.sinks.brokers.jvm.pulsar",
+      "title": "Pulsar Publisher",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.sinks.brokers.jvm.rabbitmq/org.apache.streampipes.sinks.brokers.jvm.rabbitmq": {
+      "id": "org.apache.streampipes.sinks.brokers.jvm.rabbitmq/org.apache.streampipes.sinks.brokers.jvm.rabbitmq",
+      "title": "RabbitMQ Publisher",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.sinks.brokers.jvm.rest/org.apache.streampipes.sinks.brokers.jvm.rest": {
+      "id": "org.apache.streampipes.sinks.brokers.jvm.rest/org.apache.streampipes.sinks.brokers.jvm.rest",
+      "title": "REST Publisher",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.sinks.databases.ditto/org.apache.streampipes.sinks.databases.ditto": {
+      "id": "org.apache.streampipes.sinks.databases.ditto/org.apache.streampipes.sinks.databases.ditto",
+      "title": "Eclipse Ditto",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.sinks.databases.flink.elasticsearch/org.apache.streampipes.sinks.databases.flink.elasticsearch": {
+      "id": "org.apache.streampipes.sinks.databases.flink.elasticsearch/org.apache.streampipes.sinks.databases.flink.elasticsearch",
+      "title": "Elasticsearch",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.sinks.databases.jvm.couchdb/org.apache.streampipes.sinks.databases.jvm.couchdb": {
+      "id": "org.apache.streampipes.sinks.databases.jvm.couchdb/org.apache.streampipes.sinks.databases.jvm.couchdb",
+      "title": "CouchDB",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.sinks.databases.jvm.influxdb/org.apache.streampipes.sinks.databases.jvm.influxdb": {
+      "id": "org.apache.streampipes.sinks.databases.jvm.influxdb/org.apache.streampipes.sinks.databases.jvm.influxdb",
+      "title": "InfluxDB",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.sinks.databases.jvm.iotdb/org.apache.streampipes.sinks.databases.jvm.iotdb": {
+      "id": "org.apache.streampipes.sinks.databases.jvm.iotdb/org.apache.streampipes.sinks.databases.jvm.iotdb",
+      "title": "IoTDB",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.sinks.databases.jvm.opcua/org.apache.streampipes.sinks.databases.jvm.opcua": {
+      "id": "org.apache.streampipes.sinks.databases.jvm.opcua/org.apache.streampipes.sinks.databases.jvm.opcua",
+      "title": "OPC-UA",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.sinks.databases.jvm.postgresql/org.apache.streampipes.sinks.databases.jvm.postgresql": {
+      "id": "org.apache.streampipes.sinks.databases.jvm.postgresql/org.apache.streampipes.sinks.databases.jvm.postgresql",
+      "title": "PostgreSQL",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.sinks.internal.jvm.dashboard/org.apache.streampipes.sinks.internal.jvm.dashboard": {
+      "id": "org.apache.streampipes.sinks.internal.jvm.dashboard/org.apache.streampipes.sinks.internal.jvm.dashboard",
+      "title": "Dashboard Sink",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.sinks.internal.jvm.datalake/org.apache.streampipes.sinks.internal.jvm.datalake": {
+      "id": "org.apache.streampipes.sinks.internal.jvm.datalake/org.apache.streampipes.sinks.internal.jvm.datalake",
+      "title": "Data Lake",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.sinks.internal.jvm.notification/org.apache.streampipes.sinks.internal.jvm.notification": {
+      "id": "org.apache.streampipes.sinks.internal.jvm.notification/org.apache.streampipes.sinks.internal.jvm.notification",
+      "title": "Notification",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.sinks.notifications.jvm.email/org.apache.streampipes.sinks.notifications.jvm.email": {
+      "id": "org.apache.streampipes.sinks.notifications.jvm.email/org.apache.streampipes.sinks.notifications.jvm.email",
+      "title": "Email Notification",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.sinks.notifications.jvm.onesignal/org.apache.streampipes.sinks.notifications.jvm.onesignal": {
+      "id": "org.apache.streampipes.sinks.notifications.jvm.onesignal/org.apache.streampipes.sinks.notifications.jvm.onesignal",
+      "title": "OneSignal",
+      "description": "<!--"
+    },
+    "org.apache.streampipes.sinks.notifications.jvm.slack/org.apache.streampipes.sinks.notifications.jvm.slack": {
+      "id": "org.apache.streampipes.sinks.notifications.jvm.slack/org.apache.streampipes.sinks.notifications.jvm.slack",
+      "title": "Slack Notification",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.coindesk": {
+      "id": "pe/org.apache.streampipes.connect.adapters.coindesk",
+      "title": "Coindesk Bitcoin Price",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.gdelt": {
+      "id": "pe/org.apache.streampipes.connect.adapters.gdelt",
+      "title": "GDELT",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.iex.news": {
+      "id": "pe/org.apache.streampipes.connect.adapters.iex.news",
+      "title": "IEX Cloud News",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.iex.stocks": {
+      "id": "pe/org.apache.streampipes.connect.adapters.iex.stocks",
+      "title": "IEX Cloud Stock Quotes",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.image.set": {
+      "id": "pe/org.apache.streampipes.connect.adapters.image.set",
+      "title": "Image Upload (Set)",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.image.stream": {
+      "id": "pe/org.apache.streampipes.connect.adapters.image.stream",
+      "title": "Image Upload (Stream)",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.influxdb.set": {
+      "id": "pe/org.apache.streampipes.connect.adapters.influxdb.set",
+      "title": "InfluxDB Set Adapter",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.influxdb.stream": {
+      "id": "pe/org.apache.streampipes.connect.adapters.influxdb.stream",
+      "title": "InfluxDB Stream Adapter",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.iss": {
+      "id": "pe/org.apache.streampipes.connect.adapters.iss",
+      "title": "ISS Location",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.mysql.set": {
+      "id": "pe/org.apache.streampipes.connect.adapters.mysql.set",
+      "title": "MySQL Set Adapter",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.mysql.stream": {
+      "id": "pe/org.apache.streampipes.connect.adapters.mysql.stream",
+      "title": "MySql Stream Adapter",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.netio.mqtt": {
+      "id": "pe/org.apache.streampipes.connect.adapters.netio.mqtt",
+      "title": "NETIO MQTT M2M",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.netio.rest": {
+      "id": "pe/org.apache.streampipes.connect.adapters.netio.rest",
+      "title": "NETIO http JSON",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera": {
+      "id": "pe/org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera",
+      "title": "NSW Traffic Cameras",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.opcua": {
+      "id": "pe/org.apache.streampipes.connect.adapters.opcua",
+      "title": "OPC UA",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.plc4x.s7": {
+      "id": "pe/org.apache.streampipes.connect.adapters.plc4x.s7",
+      "title": "PLC4X S7",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.ros": {
+      "id": "pe/org.apache.streampipes.connect.adapters.ros",
+      "title": "ROS Bridge",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.simulator.randomdataset": {
+      "id": "pe/org.apache.streampipes.connect.adapters.simulator.randomdataset",
+      "title": "Random Data Simulator (Set)",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.simulator.randomdatastream": {
+      "id": "pe/org.apache.streampipes.connect.adapters.simulator.randomdatastream",
+      "title": "Random Data Simulator (Stream)",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.slack": {
+      "id": "pe/org.apache.streampipes.connect.adapters.slack",
+      "title": "Slack",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.ti": {
+      "id": "pe/org.apache.streampipes.connect.adapters.ti",
+      "title": "TI Sensor Tag",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.wikipedia.edit": {
+      "id": "pe/org.apache.streampipes.connect.adapters.wikipedia.edit",
+      "title": "Wikipedia Edits",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.adapters.wikipedia.new": {
+      "id": "pe/org.apache.streampipes.connect.adapters.wikipedia.new",
+      "title": "Wikipedia New Articles",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.protocol.stream.file": {
+      "id": "pe/org.apache.streampipes.connect.protocol.stream.file",
+      "title": "File Stream",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.protocol.stream.http": {
+      "id": "pe/org.apache.streampipes.connect.protocol.stream.http",
+      "title": "HTTP Stream",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.protocol.stream.kafka": {
+      "id": "pe/org.apache.streampipes.connect.protocol.stream.kafka",
+      "title": "Apache Kafka",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.protocol.stream.mqtt": {
+      "id": "pe/org.apache.streampipes.connect.protocol.stream.mqtt",
+      "title": "MQTT",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.connect.protocol.stream.pulsar": {
+      "id": "pe/org.apache.streampipes.connect.protocol.stream.pulsar",
+      "title": "Apache Pulsar",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processor.geo.flink": {
+      "id": "pe/org.apache.streampipes.processor.geo.flink",
+      "title": "Spatial Grid Enrichment",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processor.geo.jvm.geocoding": {
+      "id": "pe/org.apache.streampipes.processor.geo.jvm.geocoding",
+      "title": "Google Maps Geocoder",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding": {
+      "id": "pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding",
+      "title": "Reverse Geocoder",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding": {
+      "id": "pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding",
+      "title": "Static Google Maps Geocoder",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification": {
+      "id": "pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification",
+      "title": "Generic Image Classification",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper": {
+      "id": "pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper",
+      "title": "Image Cropper",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher": {
+      "id": "pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher",
+      "title": "Image Enricher",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processor.imageclassification.qrcode": {
+      "id": "pe/org.apache.streampipes.processor.imageclassification.qrcode",
+      "title": "QR Code Reader",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.aggregation.flink.aggregation": {
+      "id": "pe/org.apache.streampipes.processors.aggregation.flink.aggregation",
+      "title": "Aggregation",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.aggregation.flink.count": {
+      "id": "pe/org.apache.streampipes.processors.aggregation.flink.count",
+      "title": "Count Aggregation",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.aggregation.flink.eventcount": {
+      "id": "pe/org.apache.streampipes.processors.aggregation.flink.eventcount",
+      "title": "Event Counter",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.aggregation.flink.rate": {
+      "id": "pe/org.apache.streampipes.processors.aggregation.flink.rate",
+      "title": "Event Rate",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.enricher.flink.processor.math.mathop": {
+      "id": "pe/org.apache.streampipes.processors.enricher.flink.processor.math.mathop",
+      "title": "Math",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop": {
+      "id": "pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop",
+      "title": "Static Math",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.enricher.flink.processor.trigonometry": {
+      "id": "pe/org.apache.streampipes.processors.enricher.flink.processor.trigonometry",
+      "title": "Trigonometry Functions",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing": {
+      "id": "pe/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing",
+      "title": "URL Dereferencing",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.enricher.flink.timestamp": {
+      "id": "pe/org.apache.streampipes.processors.enricher.flink.timestamp",
+      "title": "Timestamp Enricher",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.enricher.jvm.sizemeasure": {
+      "id": "pe/org.apache.streampipes.processors.enricher.jvm.sizemeasure",
+      "title": "Size Measure",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.filters.jvm.compose": {
+      "id": "pe/org.apache.streampipes.processors.filters.jvm.compose",
+      "title": "Compose",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.filters.jvm.enrich": {
+      "id": "pe/org.apache.streampipes.processors.filters.jvm.enrich",
+      "title": "Merge By Enrich",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.filters.jvm.merge": {
+      "id": "pe/org.apache.streampipes.processors.filters.jvm.merge",
+      "title": "Merge By Time",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.filters.jvm.numericalfilter": {
+      "id": "pe/org.apache.streampipes.processors.filters.jvm.numericalfilter",
+      "title": "Numerical Filter",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.filters.jvm.numericaltextfilter": {
+      "id": "pe/org.apache.streampipes.processors.filters.jvm.numericaltextfilter",
+      "title": "Numerical Text Filter",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.filters.jvm.project": {
+      "id": "pe/org.apache.streampipes.processors.filters.jvm.project",
+      "title": "Projection",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.filters.jvm.textfilter": {
+      "id": "pe/org.apache.streampipes.processors.filters.jvm.textfilter",
+      "title": "Text Filter",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.filters.jvm.threshold": {
+      "id": "pe/org.apache.streampipes.processors.filters.jvm.threshold",
+      "title": "Threshold Detector",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo": {
+      "id": "pe/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo",
+      "title": "Creates JTS Point",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG": {
+      "id": "pe/org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG",
+      "title": "EPSG Code",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory": {
+      "id": "pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory",
+      "title": "Single Trajectory Creator",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator": {
+      "id": "pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator",
+      "title": "Distance Calculator",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.geo.jvm.processor.speed": {
+      "id": "pe/org.apache.streampipes.processors.geo.jvm.processor.speed",
+      "title": "Speed Calculator",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator": {
+      "id": "pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator",
+      "title": "Static Distance Calculator",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.pattern-detection.flink.absence": {
+      "id": "pe/org.apache.streampipes.processors.pattern-detection.flink.absence",
+      "title": "Absence",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.pattern-detection.flink.and": {
+      "id": "pe/org.apache.streampipes.processors.pattern-detection.flink.and",
+      "title": "And",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection": {
+      "id": "pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection",
+      "title": "Peak Detection",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.pattern-detection.flink.sequence": {
+      "id": "pe/org.apache.streampipes.processors.pattern-detection.flink.sequence",
+      "title": "Sequence",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.siddhi.frequency": {
+      "id": "pe/org.apache.streampipes.processors.siddhi.frequency",
+      "title": "Frequency Calculation",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.siddhi.frequencychange": {
+      "id": "pe/org.apache.streampipes.processors.siddhi.frequencychange",
+      "title": "Frequency Change",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.siddhi.increase": {
+      "id": "pe/org.apache.streampipes.processors.siddhi.increase",
+      "title": "Trend",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.siddhi.numericalfilter": {
+      "id": "pe/org.apache.streampipes.processors.siddhi.numericalfilter",
+      "title": "Numerical Filter (Siddhi)",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.siddhi.sequence": {
+      "id": "pe/org.apache.streampipes.processors.siddhi.sequence",
+      "title": "Sequence Detection",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.siddhi.stop": {
+      "id": "pe/org.apache.streampipes.processors.siddhi.stop",
+      "title": "Stream Stop Detection",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.statistics.flink.statistics-summary": {
+      "id": "pe/org.apache.streampipes.processors.statistics.flink.statistics-summary",
+      "title": "Statistics Summary",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.textmining.flink.languagedetection": {
+      "id": "pe/org.apache.streampipes.processors.textmining.flink.languagedetection",
+      "title": "Language Detection",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.textmining.flink.wordcount": {
+      "id": "pe/org.apache.streampipes.processors.textmining.flink.wordcount",
+      "title": "Word Count",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.textmining.jvm.chunker": {
+      "id": "pe/org.apache.streampipes.processors.textmining.jvm.chunker",
+      "title": "Chunker (English)",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.textmining.jvm.languagedetection": {
+      "id": "pe/org.apache.streampipes.processors.textmining.jvm.languagedetection",
+      "title": "Language Detection",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.textmining.jvm.namefinder": {
+      "id": "pe/org.apache.streampipes.processors.textmining.jvm.namefinder",
+      "title": "Name Finder",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.textmining.jvm.partofspeech": {
+      "id": "pe/org.apache.streampipes.processors.textmining.jvm.partofspeech",
+      "title": "Part of Speech (English)",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.textmining.jvm.sentencedetection": {
+      "id": "pe/org.apache.streampipes.processors.textmining.jvm.sentencedetection",
+      "title": "Sentence Detection (English)",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.textmining.jvm.tokenizer": {
+      "id": "pe/org.apache.streampipes.processors.textmining.jvm.tokenizer",
+      "title": "Tokenizer (English)",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.flink.field-converter": {
+      "id": "pe/org.apache.streampipes.processors.transformation.flink.field-converter",
+      "title": "Field Converter",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.flink.field-mapper": {
+      "id": "pe/org.apache.streampipes.processors.transformation.flink.field-mapper",
+      "title": "Field Mapper",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.flink.field-renamer": {
+      "id": "pe/org.apache.streampipes.processors.transformation.flink.field-renamer",
+      "title": "Field Renamer",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.flink.fieldhasher": {
+      "id": "pe/org.apache.streampipes.processors.transformation.flink.fieldhasher",
+      "title": "Field Hasher",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter": {
+      "id": "pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter",
+      "title": "Measurement Unit Converter",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.flink.processor.boilerplate": {
+      "id": "pe/org.apache.streampipes.processors.transformation.flink.processor.boilerplate",
+      "title": "Boilerplate Removal",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter",
+      "title": "Boolean Counter",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter",
+      "title": "Boolean Inverter",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping",
+      "title": "Measure Time Between Two Sensors",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timer": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timer",
+      "title": "Boolean Timer",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.changed-value": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.changed-value",
+      "title": "Value Changed",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.count-array": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.count-array",
+      "title": "Count Array",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata",
+      "title": "CSV Metadata Enricher",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.duration-value": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.duration-value",
+      "title": "Calculate Duration",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor",
+      "title": "Timestamp Extractor",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.split-array": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.split-array",
+      "title": "Split Array",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter",
+      "title": "String Counter",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer",
+      "title": "String Timer",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.taskduration": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.taskduration",
+      "title": "Task Duration",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean": {
+      "id": "pe/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean",
+      "title": "Transform to boolean",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.protocol.set.file": {
+      "id": "pe/org.apache.streampipes.protocol.set.file",
+      "title": "File Set",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.protocol.set.http": {
+      "id": "pe/org.apache.streampipes.protocol.set.http",
+      "title": "HTTP Set",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest": {
+      "id": "pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest",
+      "title": "Buffered REST Publisher",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.brokers.jvm.jms": {
+      "id": "pe/org.apache.streampipes.sinks.brokers.jvm.jms",
+      "title": "JMS Publisher",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.brokers.jvm.kafka": {
+      "id": "pe/org.apache.streampipes.sinks.brokers.jvm.kafka",
+      "title": "Kafka Publisher",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.brokers.jvm.mqtt": {
+      "id": "pe/org.apache.streampipes.sinks.brokers.jvm.mqtt",
+      "title": "MQTT Publisher",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.brokers.jvm.pulsar": {
+      "id": "pe/org.apache.streampipes.sinks.brokers.jvm.pulsar",
+      "title": "Pulsar Publisher",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq": {
+      "id": "pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq",
+      "title": "RabbitMQ Publisher",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.brokers.jvm.rest": {
+      "id": "pe/org.apache.streampipes.sinks.brokers.jvm.rest",
+      "title": "REST Publisher",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.databases.ditto": {
+      "id": "pe/org.apache.streampipes.sinks.databases.ditto",
+      "title": "Eclipse Ditto",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.databases.flink.elasticsearch": {
+      "id": "pe/org.apache.streampipes.sinks.databases.flink.elasticsearch",
+      "title": "Elasticsearch",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.databases.jvm.couchdb": {
+      "id": "pe/org.apache.streampipes.sinks.databases.jvm.couchdb",
+      "title": "CouchDB",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.databases.jvm.influxdb": {
+      "id": "pe/org.apache.streampipes.sinks.databases.jvm.influxdb",
+      "title": "InfluxDB",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.databases.jvm.iotdb": {
+      "id": "pe/org.apache.streampipes.sinks.databases.jvm.iotdb",
+      "title": "IoTDB",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.databases.jvm.opcua": {
+      "id": "pe/org.apache.streampipes.sinks.databases.jvm.opcua",
+      "title": "OPC-UA",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.databases.jvm.postgresql": {
+      "id": "pe/org.apache.streampipes.sinks.databases.jvm.postgresql",
+      "title": "PostgreSQL",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.internal.jvm.dashboard": {
+      "id": "pe/org.apache.streampipes.sinks.internal.jvm.dashboard",
+      "title": "Dashboard Sink",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.internal.jvm.datalake": {
+      "id": "pe/org.apache.streampipes.sinks.internal.jvm.datalake",
+      "title": "Data Lake",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.internal.jvm.notification": {
+      "id": "pe/org.apache.streampipes.sinks.internal.jvm.notification",
+      "title": "Notification",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.notifications.jvm.email": {
+      "id": "pe/org.apache.streampipes.sinks.notifications.jvm.email",
+      "title": "Email Notification",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.notifications.jvm.onesignal": {
+      "id": "pe/org.apache.streampipes.sinks.notifications.jvm.onesignal",
+      "title": "OneSignal",
+      "description": "<!--"
+    },
+    "pe/org.apache.streampipes.sinks.notifications.jvm.slack": {
+      "id": "pe/org.apache.streampipes.sinks.notifications.jvm.slack",
+      "title": "Slack Notification",
+      "description": "<!--"
+    },
+    "pipeline-elements": {
+      "id": "pipeline-elements",
+      "title": "Overview",
+      "description": "Data ProcessorAggregationPerforms different aggregation functions  Documentation  Docker Container  Code on GithubData ProcessorBoilerplate RemovalRemoves boilerplate and extract fulltext from HTML  Documentation  Docker Container  Code on GithubData ProcessorBoolean CounterIncreases a counter on each change of a boolean value  Documentation  Docker Container  Code on GithubData ProcessorBoolean InverterInverts the boolean value of the selected field  Documentation  Docker Container  Code on GithubData ProcessorBoolean TimerMeasures how long a boolean measure does not change  Documentation  Docker Container  Code on GithubData SinkBuffered REST PublisherOnce a given amount of events is reached, events are posted to the given REST interface.  Documentation  Docker Container  Code on GithubData ProcessorCSV Metadata EnricherEnriches an event with additional fields from a  Documentation  Docker Container  Code on GithubData ProcessorCalculate DurationCalculates the time between two timestamps.  Documentation  Docker Container  Code on GithubData ProcessorChunker (English)Segments given tokens of a text into different chunks  Documentation  Docker Container  Code on GithubData ProcessorComposeMerges two event streams  Documentation  Docker Container  Code on GithubData SinkCouchDBStores events in an Apache CouchDB database.  Documentation  Docker Container  Code on GithubData ProcessorCount ArrayCounts the size of list items.  Documentation  Docker Container  Code on GithubData SinkDashboard SinkVisualizes data streams in the StreamPipes dashboard  Documentation  Docker Container  Code on GithubData SinkData LakeStores events in the StreamPipes data lake.  Documentation  Docker Container  Code on GithubData ProcessorDistance CalculatorCalculates the distance between two geo points  Documentation  Docker Container  Code on GithubData SinkEclipse DittoPublishes events to Eclipse Ditto.  Documentation  Docker Container  Code on GithubData SinkElasticsearchStores data in an elasticsearch cluster  Documentation  Docker Container  Code on GithubData SinkEmail NotificationEmail service to send notifications emails  Documentation  Docker Container  Code on GithubData ProcessorEvent CounterCounts the number of events within a time window.  Documentation  Docker Container  Code on GithubData ProcessorEvent RateComputes current event rate. Output is a number representing events per second.  Documentation  Docker Container  Code on GithubData ProcessorField ConverterConverts a string value to a number data type  Documentation  Docker Container  Code on GithubData ProcessorField HasherHashes the value of a field using various hash functions.  Documentation  Docker Container  Code on GithubData ProcessorField MapperReplaces one or more field with a new field and computes a hash value of these fields  Documentation  Docker Container  Code on GithubData ProcessorField RenamerReplaces the runtime name of an event property with a custom defined name.  Documentation  Docker Container  Code on GithubData ProcessorFrequency CalculationCalculates the frequency of the event stream  Documentation  Docker Container  Code on GithubData ProcessorFrequency ChangeDetects when the frequency of the event stream changes  Documentation  Docker Container  Code on GithubData ProcessorGeneric Image ClassificationClassification Description (Generic Model)  Documentation  Docker Container  Code on GithubData ProcessorGoogle Maps GeocoderGeocodes a placename to a latitude/longitude combination  Documentation  Docker Container  Code on GithubData ProcessorImage EnricherEnriches an image with a bounding box of given coordinates  Documentation  Docker Container  Code on GithubData SinkInfluxDBStores events in an InfluxDB.  Documentation  Docker Container  Code on GithubData SinkIoTDBStores events in a IoTDB database.  Documentation  Docker Container  Code on GithubData SinkJMS PublisherPublishes events to a JMS topic  Documentation  Docker Container  Code on GithubData SinkKafka PublisherPublish events to Apache Kafka  Documentation  Docker Container  Code on GithubData ProcessorLanguage DetectionDetects the language of a written text.  Documentation  Docker Container  Code on GithubData ProcessorLanguage DetectionDetects the language of a given text  Documentation  Docker Container  Code on GithubData ProcessorMathPerforms calculations on event properties (+, -, , /, %)  Documentation  Docker Container  Code on GithubData ProcessorMeasure Time Between Two SensorsRequires two booleans and measures the time between two signals  Documentation  Docker Container  Code on GithubData ProcessorMeasurement Unit ConverterConverts a unit of measurement to another one  Documentation  Docker Container  Code on GithubData ProcessorMerge By EnrichMerges two event streams by adding properties of one stream to the other  Documentation  Docker Container  Code on GithubData ProcessorMerge By TimeMerges two event streams by timestamp  Documentation  Docker Container  Code on GithubData ProcessorName FinderFinds a name in given Tokens of one document  Documentation  Docker Container  Code on GithubData SinkNotificationPublish a notification to the StreamPipes UI.  Documentation  Docker Container  Code on GithubData ProcessorNumerical FilterNumerical Filter Description  Documentation  Docker Container  Code on GithubData ProcessorNumerical Filter (Siddhi)  Documentation  Docker Container  Code on GithubData ProcessorNumerical Text FilterFilters numerical and text values.  Documentation  Docker Container  Code on GithubData SinkOPC-UAWrites values in an OPC-UA server  Documentation  Docker Container  Code on GithubData SinkOneSignalSend Push Message to OneSignal-Application  Documentation  Docker Container  Code on GithubData ProcessorPart of Speech (English)Takes in a stream of tokens and appends a tag at the end of the word corresponding to the part of speech  Documentation  Docker Container  Code on GithubData ProcessorPeak DetectionDetect peaks in time series data  Documentation  Docker Container  Code on GithubData SinkPostgreSQLStores events in a Postgres database.  Documentation  Docker Container  Code on GithubData ProcessorProjectionOutputs a selectable subset of an input event type  Documentation  Docker Container  Code on GithubData SinkPulsar PublisherPublish events to Apache Pulsar  Documentation  Docker Container  Code on GithubData ProcessorQR Code ReaderDetects a QR Code in an image  Documentation  Docker Container  Code on GithubData SinkREST PublisherPosts events to a REST interface  Documentation  Docker Container  Code on GithubData SinkRabbitMQ PublisherForwards events to a RabbitMQ broker  Documentation  Docker Container  Code on GithubData ProcessorReverse GeocoderFinds the nearest place based on latitude and longitude  Documentation  Docker Container  Code on GithubData ProcessorSentence Detection (English)Splits a text up in sentences  Documentation  Docker Container  Code on GithubData ProcessorSequence DetectionMerges events from two event streams, when the top event arrives first and then the bottom event  Documentation  Docker Container  Code on GithubData ProcessorSize MeasureMeasures the size of an event in Bytes, KB or MB  Documentation  Docker Container  Code on GithubData SinkSlack NotificationSlack bot to send notifications to Slack  Documentation  Docker Container  Code on GithubData ProcessorSpatial Grid EnrichmentGroups spatial events into cells of a given size  Documentation  Docker Container  Code on GithubData ProcessorSplit ArrayOutputs an event for each entry of a list.  Documentation  Docker Container  Code on GithubData ProcessorStatic Google Maps GeocoderGeocodes a fixed placename to lat/lng coordinates and  Documentation  Docker Container  Code on GithubData ProcessorStatic MathPerforms calculation on an event property with a static value (+, -, , /, %)  Documentation  Docker Container  Code on GithubData ProcessorStream Stop DetectionTriggers an event when the input data stream stops sending events  Documentation  Docker Container  Code on GithubData ProcessorTask DurationComputes the time difference between two events  Documentation  Docker Container  Code on GithubData ProcessorText FilterText Filter Description  Documentation  Docker Container  Code on GithubData ProcessorThreshold DetectorWhen threshold rule is fulfilled true is appended  Documentation  Docker Container  Code on GithubData ProcessorTimestamp EnricherAppends the current time in ms to the event payload  Documentation  Docker Container  Code on GithubData ProcessorTimestamp ExtractorExtracts a timestamp into its individual time fields.  Documentation  Docker Container  Code on GithubData ProcessorTokenizer (English)Segments a text into different tokens  Documentation  Docker Container  Code on GithubData ProcessorTransform to booleanTransforms a string or number to a boolean  Documentation  Docker Container  Code on GithubData ProcessorTrendDetects the increase of a numerical field over a customizable time window. Example: A temperature value increases by 10 percent within 5 minutes.  Documentation  Docker Container  Code on GithubData ProcessorTrigonometry FunctionsPerforms Trigonometric functions on event properties  Documentation  Docker Container  Code on GithubData ProcessorURL DereferencingAppend the html page as a string to event  Documentation  Docker Container  Code on GithubData ProcessorValue ChangedOutpus an event every time a specific field changes.  Documentation  Docker Container  Code on GithubData ProcessorWord CountCounts words on continuous text-based streams  Documentation  Docker Container  Code on Github"
+    },
     "user-guide-first-steps": {
       "id": "user-guide-first-steps",
       "title": "First steps",
@@ -48,6 +1058,11 @@
       "id": "user-guide-installation",
       "title": "Installation",
       "description": "Prerequisites"
+    },
+    "user-guide-tour": {
+      "id": "user-guide-tour",
+      "title": "Tour",
+      "description": "StreamPipes is a framework that enables domain experts to model and execute stream processing pipelines in a big data infrastructure."
     }
   }
 }

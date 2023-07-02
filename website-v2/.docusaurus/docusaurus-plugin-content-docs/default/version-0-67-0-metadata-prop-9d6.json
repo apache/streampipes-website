@@ -64,6 +64,11 @@
       "title": "Kubernetes Deployment",
       "description": "Prerequisites"
     },
+    "deploy-security": {
+      "id": "deploy-security",
+      "title": "Security",
+      "description": "Overriding default settings"
+    },
     "deploy-use-ssl": {
       "id": "deploy-use-ssl",
       "title": "Use SSL",
@@ -94,9 +99,24 @@
       "title": "StreamPipes CLI",
       "description": "The StreamPipes command-line interface (CLI) is focused on developers in order to provide an easy entrypoint to set up a suitable dev environment, either planning on developing"
     },
+    "extend-first-processor": {
+      "id": "extend-first-processor",
+      "title": "Your first data processor",
+      "description": "In this section, we will explain how to start a pipeline element service and install it using the StreamPipes UI."
+    },
     "extend-sdk-event-model": {
       "id": "extend-sdk-event-model",
       "title": "SDK Guide: Event Model",
+      "description": "Introduction"
+    },
+    "extend-sdk-functions": {
+      "id": "extend-sdk-functions",
+      "title": "SDK Guide: Functions",
+      "description": "Introduction"
+    },
+    "extend-sdk-migration-service-discovery": {
+      "id": "extend-sdk-migration-service-discovery",
+      "title": "Migration Guide: New Service Discovery in 0.69.0",
       "description": "Introduction"
     },
     "extend-sdk-output-strategies": {
@@ -388,6 +408,11 @@
       "id": "pe/org.apache.streampipes.sinks.notifications.jvm.telegram",
       "title": "Telegram Publisher",
       "description": "<!--"
+    },
+    "pipeline-elements": {
+      "id": "pipeline-elements",
+      "title": "Overview",
+      "description": "<img class=\"pe-icon\""
     },
     "technicals-architecture": {
       "id": "technicals-architecture",

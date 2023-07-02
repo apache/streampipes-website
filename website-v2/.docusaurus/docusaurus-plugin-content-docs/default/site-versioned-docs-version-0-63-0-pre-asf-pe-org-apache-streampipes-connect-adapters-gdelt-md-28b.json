@@ -1,0 +1,22 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.connect.adapters.gdelt",
+  "id": "version-0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.gdelt",
+  "title": "GDELT",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.gdelt.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.connect.adapters.gdelt",
+  "permalink": "/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.gdelt",
+  "draft": false,
+  "tags": [],
+  "version": "0.63.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.connect.adapters.gdelt",
+    "title": "GDELT",
+    "sidebar_label": "GDELT",
+    "original_id": "org.apache.streampipes.connect.adapters.gdelt"
+  }
+}

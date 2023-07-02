@@ -6,7 +6,7 @@ authorImageURL: "/docs/img/wiener.png"
 ---
 <img class="blog-image" style="max-width:100%;" src="/docs/blog/assets/2020-05-27/streampipes_k3s.png" alt="StreamPipes on k3s"/>
 **<div style="float: left; padding-right: 40px;">15 minutes to read</div>**
-<br>
+<br/>
 
 
 This blog post is the second part of a series on how we want to bring StreamPipes closer to the edge. The [first part](/docs/blog/2020/01/23/streampipes_on_rpi) describes how we managed to build and deploy StreamPipes on one Raspberry Pi (Model 4), while the [second part](/docs/blog/2020/05/27/streampipes_on_k3s) further covers how to deploy StreamPipes over a Kubernetes cluster of two Raspberry Pi's via k3s using our StreamPipes helm chart.

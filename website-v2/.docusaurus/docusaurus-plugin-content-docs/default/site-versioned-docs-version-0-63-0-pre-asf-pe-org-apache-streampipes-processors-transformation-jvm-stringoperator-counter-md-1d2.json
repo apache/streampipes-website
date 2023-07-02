@@ -1,0 +1,22 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter",
+  "id": "version-0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter",
+  "title": "String Counter",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter",
+  "permalink": "/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter",
+  "draft": false,
+  "tags": [],
+  "version": "0.63.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processors.transformation.jvm.stringoperator.counter",
+    "title": "String Counter",
+    "sidebar_label": "String Counter",
+    "original_id": "org.apache.streampipes.processors.transformation.jvm.stringoperator.counter"
+  }
+}

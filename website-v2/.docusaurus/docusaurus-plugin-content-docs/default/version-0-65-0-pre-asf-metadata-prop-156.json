@@ -9,6 +9,11 @@
   "isLast": false,
   "docsSidebars": {},
   "docs": {
+    "community-get-help": {
+      "id": "community-get-help",
+      "title": "Get Help",
+      "description": "The Apache StreamPipes community is happy to help with any questions or problems you might have."
+    },
     "dev-guide-archetype": {
       "id": "dev-guide-archetype",
       "title": "Start Developing",
@@ -51,6 +56,36 @@
     },
     "dev-guide-tutorial-sources": {
       "id": "dev-guide-tutorial-sources",
+      "title": "Tutorial: Data Sources",
+      "description": "In this tutorial, we will add a new data source consisting of a single data stream. The source will be provided as a standalone component (i.e., the description will be accessible through an integrated web server)."
+    },
+    "extend-sdk-event-model": {
+      "id": "extend-sdk-event-model",
+      "title": "SDK Guide: Event Model",
+      "description": "Introduction"
+    },
+    "extend-sdk-stream-requirements": {
+      "id": "extend-sdk-stream-requirements",
+      "title": "SDK Guide: Stream Requirements",
+      "description": "Introduction"
+    },
+    "extend-setup": {
+      "id": "extend-setup",
+      "title": "Development Setup",
+      "description": "Pipeline elements in StreamPipes are provided as standalone microservices. New pipeline elements can be easily developed using the provided Maven archetypes and can be installed in StreamPipes at runtime."
+    },
+    "extend-tutorial-data-processors": {
+      "id": "extend-tutorial-data-processors",
+      "title": "Tutorial: Data Processors",
+      "description": "In this tutorial, we will add a new data processor."
+    },
+    "extend-tutorial-data-sinks": {
+      "id": "extend-tutorial-data-sinks",
+      "title": "Tutorial: Data Sinks",
+      "description": "In this tutorial, we will add a new data sink using the standalone wrapper."
+    },
+    "extend-tutorial-data-sources": {
+      "id": "extend-tutorial-data-sources",
       "title": "Tutorial: Data Sources",
       "description": "In this tutorial, we will add a new data source consisting of a single data stream. The source will be provided as a standalone component (i.e., the description will be accessible through an integrated web server)."
     },
@@ -1044,6 +1079,81 @@
       "title": "Slack Notification",
       "description": "<!--"
     },
+    "pe/version-0.68.0-org.apache.streampipes.connect.adapters.flic.mqtt": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.connect.adapters.flic.mqtt",
+      "title": "Flic MQTT",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.connect.adapters.plc4x.modbus": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.connect.adapters.plc4x.modbus",
+      "title": "PLC4X MODBUS",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.connect.adapters.simulator.machine": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.connect.adapters.simulator.machine",
+      "title": "Machine Data Simulator",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.connect.protocol.stream.httpserver": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.connect.protocol.stream.httpserver",
+      "title": "HTTP Server",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.processors.changedetection.jvm.cusum": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.processors.changedetection.jvm.cusum",
+      "title": "Cusum",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.processors.filters.jvm.limit": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.processors.filters.jvm.limit",
+      "title": "Rate Limit",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge",
+      "title": "Signal Edge Filter",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state",
+      "title": "Boolean To State",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.buffer": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.buffer",
+      "title": "State Buffer",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer",
+      "title": "State Buffer Labeler",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number",
+      "title": "Number Labeler",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state",
+      "title": "String To State",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.sinks.brokers.jvm.nats": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.sinks.brokers.jvm.nats",
+      "title": "NATS Publisher",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.sinks.databases.jvm.mysql": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.sinks.databases.jvm.mysql",
+      "title": "MySQL Database",
+      "description": "<!--"
+    },
+    "pe/version-0.68.0-org.apache.streampipes.sinks.notifications.jvm.telegram": {
+      "id": "pe/version-0.68.0-org.apache.streampipes.sinks.notifications.jvm.telegram",
+      "title": "Telegram Publisher",
+      "description": "<!--"
+    },
     "pipeline-elements": {
       "id": "pipeline-elements",
       "title": "Overview",
@@ -1063,6 +1173,166 @@
       "id": "user-guide-tour",
       "title": "Tour",
       "description": "StreamPipes is a framework that enables domain experts to model and execute stream processing pipelines in a big data infrastructure."
+    },
+    "version-0.67.0-community-contribute": {
+      "id": "version-0.67.0-community-contribute",
+      "title": "Contribute",
+      "description": "Contribute"
+    },
+    "version-0.67.0-concepts-adapter": {
+      "id": "version-0.67.0-concepts-adapter",
+      "title": "Data Adapters",
+      "description": "tbd"
+    },
+    "version-0.67.0-concepts-data-streams": {
+      "id": "version-0.67.0-concepts-data-streams",
+      "title": "Data Streams",
+      "description": "tbd"
+    },
+    "version-0.67.0-concepts-glossary": {
+      "id": "version-0.67.0-concepts-glossary",
+      "title": "Glossary",
+      "description": "tbd"
+    },
+    "version-0.67.0-concepts-overview": {
+      "id": "version-0.67.0-concepts-overview",
+      "title": "StreamPipes Concepts",
+      "description": "To understand how StreamPipes works, the knowledge of a few core concepts, illustrated below, will be helpful."
+    },
+    "version-0.67.0-concepts-pipelines": {
+      "id": "version-0.67.0-concepts-pipelines",
+      "title": "Pipelines",
+      "description": "tbd"
+    },
+    "version-0.67.0-debugging-debugging": {
+      "id": "version-0.67.0-debugging-debugging",
+      "title": "Debugging",
+      "description": "tbd"
+    },
+    "version-0.67.0-debugging-monitoring": {
+      "id": "version-0.67.0-debugging-monitoring",
+      "title": "Monitoring",
+      "description": "tbd"
+    },
+    "version-0.67.0-deploy-docker": {
+      "id": "version-0.67.0-deploy-docker",
+      "title": "Docker Deployment",
+      "description": "StreamPipes Compose is a simple collection of user-friendly docker-compose files that easily lets gain first-hand experience with Apache StreamPipes."
+    },
+    "version-0.67.0-deploy-kubernetes": {
+      "id": "version-0.67.0-deploy-kubernetes",
+      "title": "Kubernetes Deployment",
+      "description": "Prerequisites"
+    },
+    "version-0.67.0-deploy-use-ssl": {
+      "id": "version-0.67.0-deploy-use-ssl",
+      "title": "Use SSL",
+      "description": "This page explains how SSL Certificates can be used to provide transport layer security between your Browser and the Streampipes Backend."
+    },
+    "version-0.67.0-extend-archetypes": {
+      "id": "version-0.67.0-extend-archetypes",
+      "title": "Maven Archetypes",
+      "description": "In this tutorial we explain how you can use the Maven archetypes to develop your own StreamPipes processors and sinks."
+    },
+    "version-0.67.0-extend-cli": {
+      "id": "version-0.67.0-extend-cli",
+      "title": "StreamPipes CLI",
+      "description": "The StreamPipes command-line interface (CLI) is focused on developers in order to provide an easy entrypoint to set up a suitable dev environment, either planning on developing"
+    },
+    "version-0.67.0-extend-sdk-output-strategies": {
+      "id": "version-0.67.0-extend-sdk-output-strategies",
+      "title": "SDK Guide: Output Strategies",
+      "description": "Introduction"
+    },
+    "version-0.67.0-extend-sdk-static-properties": {
+      "id": "version-0.67.0-extend-sdk-static-properties",
+      "title": "SDK Guide: Static Properties",
+      "description": "Introduction"
+    },
+    "version-0.67.0-technicals-architecture": {
+      "id": "version-0.67.0-technicals-architecture",
+      "title": "Architecture",
+      "description": "The following picture illustrates the high-level architecture of StreamPipes:"
+    },
+    "version-0.67.0-technicals-configuration": {
+      "id": "version-0.67.0-technicals-configuration",
+      "title": "Configuration",
+      "description": "On this page we explain how the StreamPipes configuration works."
+    },
+    "version-0.67.0-technicals-messaging": {
+      "id": "version-0.67.0-technicals-messaging",
+      "title": "Messaging",
+      "description": "tbd"
+    },
+    "version-0.67.0-technicals-runtime-wrappers": {
+      "id": "version-0.67.0-technicals-runtime-wrappers",
+      "title": "Runtime Wrappers",
+      "description": "tbd"
+    },
+    "version-0.67.0-technicals-user-guidance": {
+      "id": "version-0.67.0-technicals-user-guidance",
+      "title": "User Guidance",
+      "description": "tbd"
+    },
+    "version-0.67.0-try-installation": {
+      "id": "version-0.67.0-try-installation",
+      "title": "Installation",
+      "description": "The easiest way to install StreamPipes is our Docker-based installation. For production-grade deployments, we also"
+    },
+    "version-0.67.0-try-tutorial": {
+      "id": "version-0.67.0-try-tutorial",
+      "title": "Interactive Tutorial",
+      "description": "Once you've installed StreamPipes and see the home screen, you'll see a number of modules that are part of the StreamPipes toolbox."
+    },
+    "version-0.67.0-use-configurations": {
+      "id": "version-0.67.0-use-configurations",
+      "title": "Configurations",
+      "description": "tbd"
+    },
+    "version-0.67.0-use-connect": {
+      "id": "version-0.67.0-use-connect",
+      "title": "StreamPipes Connect",
+      "description": "StreamPipes Connect is the module to connect external data sources with Apache StreamPipes directly from the user interface."
+    },
+    "version-0.67.0-use-dashboard": {
+      "id": "version-0.67.0-use-dashboard",
+      "title": "Live Dashboard",
+      "description": "The live dashboard can be used to visualize live data of data streams using a set of visualizations"
+    },
+    "version-0.67.0-use-data-explorer": {
+      "id": "version-0.67.0-use-data-explorer",
+      "title": "Data Explorer",
+      "description": "The data explorer can be used to visualize and explore data streams that are persisted by using the Data Lake sink."
+    },
+    "version-0.67.0-use-install-pipeline-elements": {
+      "id": "version-0.67.0-use-install-pipeline-elements",
+      "title": "Install Pipeline Elements",
+      "description": "Install Pipeline Elements"
+    },
+    "version-0.67.0-use-managing-pipelines": {
+      "id": "version-0.67.0-use-managing-pipelines",
+      "title": "Managing Pipelines",
+      "description": "The pipeline view lists all created pipelines and provides several views and actions to manage the lifecycle of pipelines."
+    },
+    "version-0.67.0-use-notifications": {
+      "id": "version-0.67.0-use-notifications",
+      "title": "Notifications",
+      "description": "The notification module can be used to create internal notifications."
+    },
+    "version-0.67.0-use-pipeline-editor": {
+      "id": "version-0.67.0-use-pipeline-editor",
+      "title": "Pipeline Editor",
+      "description": "The pipeline editor module supports building pipelines that transform a data stream using a set of resuable data processors and data sinks."
+    },
+    "version-0.67.0-user-guide-introduction": {
+      "id": "version-0.67.0-user-guide-introduction",
+      "title": "Apache StreamPipes Documentation",
+      "description": "This is the documentation of Apache StreamPipes."
+    },
+    "version-0.67.0-user-guide-introduction-old": {
+      "id": "version-0.67.0-user-guide-introduction-old",
+      "title": "Introduction",
+      "description": "StreamPipes is a framework that enables users to work with data streams."
     }
   }
 }

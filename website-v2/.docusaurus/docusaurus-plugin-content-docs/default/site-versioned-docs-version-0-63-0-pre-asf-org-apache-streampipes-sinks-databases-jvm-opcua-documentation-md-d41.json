@@ -1,0 +1,22 @@
+{
+  "unversionedId": "org.apache.streampipes.sinks.databases.jvm.opcua/org.apache.streampipes.sinks.databases.jvm.opcua",
+  "id": "version-0.63.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.opcua/org.apache.streampipes.sinks.databases.jvm.opcua",
+  "title": "OPC-UA",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.63.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.opcua/documentation.md",
+  "sourceDirName": "org.apache.streampipes.sinks.databases.jvm.opcua",
+  "slug": "/org.apache.streampipes.sinks.databases.jvm.opcua/org.apache.streampipes.sinks.databases.jvm.opcua",
+  "permalink": "/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.opcua/org.apache.streampipes.sinks.databases.jvm.opcua",
+  "draft": false,
+  "tags": [],
+  "version": "0.63.0-pre-asf",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.sinks.databases.jvm.opcua",
+    "title": "OPC-UA",
+    "sidebar_label": "OPC-UA",
+    "original_id": "org.apache.streampipes.sinks.databases.jvm.opcua"
+  }
+}
