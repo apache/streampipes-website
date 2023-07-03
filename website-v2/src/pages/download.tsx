@@ -9,6 +9,7 @@ import DownloadBox from '../components/download/DownloadBox';
 import DownloadFolder from '../components/download/DownloadFolder';
 import DownloadBrowser from '../components/download/DownloadBrowser';
 import DownloadMoreInfo from '../components/download/DownloadMoreInfo';
+import DownloadSection from '../components/download/DownloadSection';
 
 
 const Downloads: FC = () => (
@@ -34,10 +35,7 @@ const Downloads: FC = () => (
       <div className="installation-manual-part">
         <h5 className="feature-item-margin"><span className="feature-highlights-bg">Installation</span></h5>
         <ul>
-          <DownloadBox></DownloadBox>
-          <DownloadFolder></DownloadFolder>
-          <DownloadBrowser></DownloadBrowser>
-          <DownloadMoreInfo></DownloadMoreInfo>
+          <DownloadSection version={'0.92.0'} showMoreInfo={true} releaseDate={'2023-06-16'}></DownloadSection>
           <hr/>
         </ul>
       </div>

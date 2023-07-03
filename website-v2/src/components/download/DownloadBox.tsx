@@ -33,15 +33,15 @@ const DownloadBox = (props) => {
                 <tbody>
                 <tr>
                   <td><a
-                    href="https://www.apache.org/dyn/closer.lua?action=download&filename=streampipes/0.92.0/apache-streampipes-0.92.0-source-release.zip">apache-streampipes-0.92.0-source-release.zip</a>
+                    href={`https://www.apache.org/dyn/closer.lua?action=download&filename=streampipes/${props.version}/apache-streampipes-${props.version}-source-release.zip`}>apache-streampipes-{props.version}-source-release.zip</a>
                   </td>
-                  <td>0.92.0</td>
-                  <td>2023-06-16</td>
+                  <td>{props.version}</td>
+                  <td>{props.releaseDate}</td>
                   <td>
                     <a
-                      href="https://downloads.apache.org/streampipes/0.92.0/apache-streampipes-0.92.0-source-release.zip.sha512">SHA</a>
+                      href={`https://downloads.apache.org/streampipes/${props.version}/apache-streampipes-${props.version}-source-release.zip.sha512`}>SHA</a>
                     <a
-                      href="https://downloads.apache.org/streampipes/0.92.0/apache-streampipes-0.92.0-source-release.zip.asc">PGP</a>
+                      href={`https://downloads.apache.org/streampipes${props.version}/apache-streampipes-${props.version}-source-release.zip.asc`}>PGP</a>
                   </td>
                 </tr>
                 </tbody>
@@ -59,7 +59,6 @@ const DownloadBox = (props) => {
           </div>
         </div>
       </li>
-
     </>
   )
 }
