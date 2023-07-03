@@ -18,5 +18,14 @@
     "title": "State Buffer",
     "sidebar_label": "State Buffer",
     "original_id": "org.apache.streampipes.processors.transformation.jvm.processor.state.buffer"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Split Array",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.split-array"
+  },
+  "next": {
+    "title": "State Buffer Labeler",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer"
   }
 }

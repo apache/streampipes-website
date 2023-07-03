@@ -18,5 +18,14 @@
     "title": "Flic MQTT",
     "sidebar_label": "Flic MQTT",
     "original_id": "org.apache.streampipes.connect.adapters.flic.mqtt"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "File Set",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.protocol.set.file"
+  },
+  "next": {
+    "title": "GDELT",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.gdelt"
   }
 }

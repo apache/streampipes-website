@@ -18,5 +18,14 @@
     "title": "And",
     "sidebar_label": "And",
     "original_id": "org.apache.streampipes.processors.pattern-detection.flink.and"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Aggregation",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.aggregation.flink.aggregation"
+  },
+  "next": {
+    "title": "Boilerplate Removal",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.flink.processor.boilerplate"
   }
 }

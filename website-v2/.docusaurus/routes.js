@@ -158,6406 +158,6 @@ export default [
     exact: true
   },
   {
-    path: '/docs/0.55.2-pre-asf',
-    component: ComponentCreator('/docs/0.55.2-pre-asf', '75a'),
-    routes: [
-      {
-        path: '/docs/0.55.2-pre-asf/dev-guide-archetype',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/dev-guide-archetype', '2ac'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/dev-guide-architecture',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/dev-guide-architecture', 'a5c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/dev-guide-configuration',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/dev-guide-configuration', 'b2c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/dev-guide-development-environment',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/dev-guide-development-environment', 'e87'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/dev-guide-event-model',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/dev-guide-event-model', '4f3'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/dev-guide-introduction',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/dev-guide-introduction', '98d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/dev-guide-migration',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/dev-guide-migration', '718'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/dev-guide-output-strategies',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/dev-guide-output-strategies', '79c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/dev-guide-sdk-guide-processors',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/dev-guide-sdk-guide-processors', 'dbe'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/dev-guide-sdk-guide-sinks',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/dev-guide-sdk-guide-sinks', 'e6d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/dev-guide-sdk-guide-sources',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/dev-guide-sdk-guide-sources', '3aa'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/dev-guide-ssl',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/dev-guide-ssl', '457'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/dev-guide-static-properties',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/dev-guide-static-properties', '19a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/dev-guide-stream-requirements',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/dev-guide-stream-requirements', '205'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/dev-guide-tutorial-processors',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/dev-guide-tutorial-processors', '79a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/dev-guide-tutorial-sources',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/dev-guide-tutorial-sources', '2b2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/faq-common-problems',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/faq-common-problems', '102'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processor.geo.flink/version-0.62.0-org.streampipes.processor.geo.flink',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processor.geo.flink/version-0.62.0-org.streampipes.processor.geo.flink', '2e6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processor.imageclassification.jvm.generic-image-classification/version-0.62.0-org.streampipes.processor.imageclassification.jvm.generic-image-classification',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processor.imageclassification.jvm.generic-image-classification/version-0.62.0-org.streampipes.processor.imageclassification.jvm.generic-image-classification', '9df'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processor.imageclassification.jvm.image-enricher/version-0.62.0-org.streampipes.processor.imageclassification.jvm.image-enricher',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processor.imageclassification.jvm.image-enricher/version-0.62.0-org.streampipes.processor.imageclassification.jvm.image-enricher', '08f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processor.imageclassification.qrcode/version-0.62.0-org.streampipes.processor.imageclassification.qrcode',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processor.imageclassification.qrcode/version-0.62.0-org.streampipes.processor.imageclassification.qrcode', '7cb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.aggregation.flink.aggregation/version-0.62.0-org.streampipes.processors.aggregation.flink.aggregation',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.aggregation.flink.aggregation/version-0.62.0-org.streampipes.processors.aggregation.flink.aggregation', '5ee'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.aggregation.flink.rate/version-0.62.0-org.streampipes.processors.aggregation.flink.rate',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.aggregation.flink.rate/version-0.62.0-org.streampipes.processors.aggregation.flink.rate', 'ded'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.enricher.flink.processor.math.mathop/version-0.62.0-org.streampipes.processors.enricher.flink.processor.math.mathop',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.enricher.flink.processor.math.mathop/version-0.62.0-org.streampipes.processors.enricher.flink.processor.math.mathop', '498'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.enricher.flink.processor.math.staticmathop/version-0.62.0-org.streampipes.processors.enricher.flink.processor.math.staticmathop',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.enricher.flink.processor.math.staticmathop/version-0.62.0-org.streampipes.processors.enricher.flink.processor.math.staticmathop', '609'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.enricher.flink.processor.trigonometry/version-0.62.0-org.streampipes.processors.enricher.flink.processor.trigonometry',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.enricher.flink.processor.trigonometry/version-0.62.0-org.streampipes.processors.enricher.flink.processor.trigonometry', 'e2b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.enricher.flink.processor.urldereferencing/version-0.62.0-org.streampipes.processors.enricher.flink.processor.urldereferencing',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.enricher.flink.processor.urldereferencing/version-0.62.0-org.streampipes.processors.enricher.flink.processor.urldereferencing', '6f6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.enricher.flink.timestamp/version-0.62.0-org.streampipes.processors.enricher.flink.timestamp',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.enricher.flink.timestamp/version-0.62.0-org.streampipes.processors.enricher.flink.timestamp', 'aaf'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.filters.jvm.compose/version-0.62.0-org.streampipes.processors.filters.jvm.compose',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.filters.jvm.compose/version-0.62.0-org.streampipes.processors.filters.jvm.compose', '35c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.filters.jvm.numericalfilter/version-0.62.0-org.streampipes.processors.filters.jvm.numericalfilter',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.filters.jvm.numericalfilter/version-0.62.0-org.streampipes.processors.filters.jvm.numericalfilter', 'ae6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.filters.jvm.project/version-0.62.0-org.streampipes.processors.filters.jvm.project',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.filters.jvm.project/version-0.62.0-org.streampipes.processors.filters.jvm.project', '70f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.filters.jvm.textfilter/version-0.62.0-org.streampipes.processors.filters.jvm.textfilter',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.filters.jvm.textfilter/version-0.62.0-org.streampipes.processors.filters.jvm.textfilter', '2cd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.pattern-detection.flink.peak-detection/version-0.62.0-org.streampipes.processors.pattern-detection.flink.peak-detection',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.pattern-detection.flink.peak-detection/version-0.62.0-org.streampipes.processors.pattern-detection.flink.peak-detection', 'a47'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.siddhi.frequency/version-0.62.0-org.streampipes.processors.siddhi.frequency',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.siddhi.frequency/version-0.62.0-org.streampipes.processors.siddhi.frequency', 'bcc'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.siddhi.frequencychange/version-0.62.0-org.streampipes.processors.siddhi.frequencychange',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.siddhi.frequencychange/version-0.62.0-org.streampipes.processors.siddhi.frequencychange', 'c19'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.siddhi.increase/version-0.62.0-org.streampipes.processors.siddhi.increase',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.siddhi.increase/version-0.62.0-org.streampipes.processors.siddhi.increase', '026'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.siddhi.numericalfilter/version-0.62.0-org.streampipes.processors.siddhi.numericalfilter',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.siddhi.numericalfilter/version-0.62.0-org.streampipes.processors.siddhi.numericalfilter', '87b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.siddhi.sequence/version-0.62.0-org.streampipes.processors.siddhi.sequence',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.siddhi.sequence/version-0.62.0-org.streampipes.processors.siddhi.sequence', 'a11'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.siddhi.stop/version-0.62.0-org.streampipes.processors.siddhi.stop',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.siddhi.stop/version-0.62.0-org.streampipes.processors.siddhi.stop', '22a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.textmining.flink.languagedetection/version-0.62.0-org.streampipes.processors.textmining.flink.languagedetection',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.textmining.flink.languagedetection/version-0.62.0-org.streampipes.processors.textmining.flink.languagedetection', '913'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.textmining.flink.wordcount/version-0.62.0-org.streampipes.processors.textmining.flink.wordcount',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.textmining.flink.wordcount/version-0.62.0-org.streampipes.processors.textmining.flink.wordcount', '72f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.flink.field-converter/version-0.62.0-org.streampipes.processors.transformation.flink.field-converter',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.flink.field-converter/version-0.62.0-org.streampipes.processors.transformation.flink.field-converter', '768'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.flink.field-mapper/version-0.62.0-org.streampipes.processors.transformation.flink.field-mapper',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.flink.field-mapper/version-0.62.0-org.streampipes.processors.transformation.flink.field-mapper', '06b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.flink.field-renamer/version-0.62.0-org.streampipes.processors.transformation.flink.field-renamer',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.flink.field-renamer/version-0.62.0-org.streampipes.processors.transformation.flink.field-renamer', 'd88'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.flink.fieldhasher/version-0.62.0-org.streampipes.processors.transformation.flink.fieldhasher',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.flink.fieldhasher/version-0.62.0-org.streampipes.processors.transformation.flink.fieldhasher', '242'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.flink.measurement-unit-converter/version-0.62.0-org.streampipes.processors.transformation.flink.measurement-unit-converter',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.flink.measurement-unit-converter/version-0.62.0-org.streampipes.processors.transformation.flink.measurement-unit-converter', '173'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.flink.processor.boilerplate/version-0.62.0-org.streampipes.processors.transformation.flink.processor.boilerplate',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.flink.processor.boilerplate/version-0.62.0-org.streampipes.processors.transformation.flink.processor.boilerplate', '0f5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.jvm.changed-value/version-0.62.0-org.streampipes.processors.transformation.jvm.changed-value',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.jvm.changed-value/version-0.62.0-org.streampipes.processors.transformation.jvm.changed-value', '7f8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.jvm.count-array/version-0.62.0-org.streampipes.processors.transformation.jvm.count-array',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.jvm.count-array/version-0.62.0-org.streampipes.processors.transformation.jvm.count-array', '8af'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.jvm.duration-value/version-0.62.0-org.streampipes.processors.transformation.jvm.duration-value',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.jvm.duration-value/version-0.62.0-org.streampipes.processors.transformation.jvm.duration-value', '2b8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.jvm.processor.timestampextractor/version-0.62.0-org.streampipes.processors.transformation.jvm.processor.timestampextractor',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.jvm.processor.timestampextractor/version-0.62.0-org.streampipes.processors.transformation.jvm.processor.timestampextractor', '990'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.jvm.split-array/version-0.62.0-org.streampipes.processors.transformation.jvm.split-array',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.processors.transformation.jvm.split-array/version-0.62.0-org.streampipes.processors.transformation.jvm.split-array', '52c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.sinks.brokers.jvm.jms/version-0.62.0-org.streampipes.sinks.brokers.jvm.jms',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.sinks.brokers.jvm.jms/version-0.62.0-org.streampipes.sinks.brokers.jvm.jms', 'cf5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.sinks.brokers.jvm.kafka/version-0.62.0-org.streampipes.sinks.brokers.jvm.kafka',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.sinks.brokers.jvm.kafka/version-0.62.0-org.streampipes.sinks.brokers.jvm.kafka', 'd28'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.sinks.brokers.jvm.rabbitmq/version-0.62.0-org.streampipes.sinks.brokers.jvm.rabbitmq',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.sinks.brokers.jvm.rabbitmq/version-0.62.0-org.streampipes.sinks.brokers.jvm.rabbitmq', 'e4c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.sinks.brokers.jvm.rest/version-0.62.0-org.streampipes.sinks.brokers.jvm.rest',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.sinks.brokers.jvm.rest/version-0.62.0-org.streampipes.sinks.brokers.jvm.rest', '213'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.sinks.databases.flink.elasticsearch/version-0.62.0-org.streampipes.sinks.databases.flink.elasticsearch',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.sinks.databases.flink.elasticsearch/version-0.62.0-org.streampipes.sinks.databases.flink.elasticsearch', 'bdd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.sinks.databases.jvm.couchdb/version-0.62.0-org.streampipes.sinks.databases.jvm.couchdb',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.sinks.databases.jvm.couchdb/version-0.62.0-org.streampipes.sinks.databases.jvm.couchdb', '684'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.sinks.databases.jvm.influxdb/version-0.62.0-org.streampipes.sinks.databases.jvm.influxdb',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.sinks.databases.jvm.influxdb/version-0.62.0-org.streampipes.sinks.databases.jvm.influxdb', '7da'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.sinks.databases.jvm.postgresql/version-0.62.0-org.streampipes.sinks.databases.jvm.postgresql',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.sinks.databases.jvm.postgresql/version-0.62.0-org.streampipes.sinks.databases.jvm.postgresql', '3a5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.sinks.internal.jvm.dashboard/version-0.62.0-org.streampipes.sinks.internal.jvm.dashboard',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.sinks.internal.jvm.dashboard/version-0.62.0-org.streampipes.sinks.internal.jvm.dashboard', '9fd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.sinks.internal.jvm.notification/version-0.62.0-org.streampipes.sinks.internal.jvm.notification',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.sinks.internal.jvm.notification/version-0.62.0-org.streampipes.sinks.internal.jvm.notification', '4c0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.sinks.notifications.jvm.email/version-0.62.0-org.streampipes.sinks.notifications.jvm.email',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.sinks.notifications.jvm.email/version-0.62.0-org.streampipes.sinks.notifications.jvm.email', 'e08'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.sinks.notifications.jvm.onesignal/version-0.62.0-org.streampipes.sinks.notifications.jvm.onesignal',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.sinks.notifications.jvm.onesignal/version-0.62.0-org.streampipes.sinks.notifications.jvm.onesignal', '592'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/org.streampipes.sinks.notifications.jvm.slack/version-0.62.0-org.streampipes.sinks.notifications.jvm.slack',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/org.streampipes.sinks.notifications.jvm.slack/version-0.62.0-org.streampipes.sinks.notifications.jvm.slack', '27f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/privacy',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/privacy', 'af6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/user-guide-getting-started',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/user-guide-getting-started', 'b0b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/user-guide-installation',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/user-guide-installation', '7e8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/user-guide-introduction',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/user-guide-introduction', '33e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/user-guide-processing-elements',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/user-guide-processing-elements', '587'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/user-guide-software-components',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/user-guide-software-components', 'd99'),
-        exact: true
-      },
-      {
-        path: '/docs/0.55.2-pre-asf/user-guide-tour',
-        component: ComponentCreator('/docs/0.55.2-pre-asf/user-guide-tour', 'b42'),
-        exact: true
-      }
-    ]
-  },
-  {
-    path: '/docs/0.61.0-pre-asf',
-    component: ComponentCreator('/docs/0.61.0-pre-asf', 'ce4'),
-    routes: [
-      {
-        path: '/docs/0.61.0-pre-asf/dev-guide-archetype',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/dev-guide-archetype', '889'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/dev-guide-architecture',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/dev-guide-architecture', '8f2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/dev-guide-configuration',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/dev-guide-configuration', 'd70'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/dev-guide-development-environment',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/dev-guide-development-environment', 'bda'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/dev-guide-event-model',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/dev-guide-event-model', 'a2a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/dev-guide-migration',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/dev-guide-migration', '36c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/dev-guide-output-strategies',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/dev-guide-output-strategies', '616'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/dev-guide-sdk-guide-processors',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/dev-guide-sdk-guide-processors', 'd2c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/dev-guide-sdk-guide-sinks',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/dev-guide-sdk-guide-sinks', '377'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/dev-guide-ssl',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/dev-guide-ssl', 'eb2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/dev-guide-static-properties',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/dev-guide-static-properties', '290'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/dev-guide-stream-requirements',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/dev-guide-stream-requirements', '7aa'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/dev-guide-tutorial-processors',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/dev-guide-tutorial-processors', 'c97'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/dev-guide-tutorial-sinks',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/dev-guide-tutorial-sinks', '3b4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/dev-guide-tutorial-sources',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/dev-guide-tutorial-sources', 'a2a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/faq-common-problems',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/faq-common-problems', 'f32'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processor.geo.flink/version-0.62.0-org.streampipes.processor.geo.flink',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processor.geo.flink/version-0.62.0-org.streampipes.processor.geo.flink', '647'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processor.imageclassification.jvm.generic-image-classification/version-0.62.0-org.streampipes.processor.imageclassification.jvm.generic-image-classification',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processor.imageclassification.jvm.generic-image-classification/version-0.62.0-org.streampipes.processor.imageclassification.jvm.generic-image-classification', '1c1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processor.imageclassification.jvm.image-enricher/version-0.62.0-org.streampipes.processor.imageclassification.jvm.image-enricher',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processor.imageclassification.jvm.image-enricher/version-0.62.0-org.streampipes.processor.imageclassification.jvm.image-enricher', 'f5e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processor.imageclassification.qrcode/version-0.62.0-org.streampipes.processor.imageclassification.qrcode',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processor.imageclassification.qrcode/version-0.62.0-org.streampipes.processor.imageclassification.qrcode', 'ded'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.aggregation.flink.aggregation/version-0.62.0-org.streampipes.processors.aggregation.flink.aggregation',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.aggregation.flink.aggregation/version-0.62.0-org.streampipes.processors.aggregation.flink.aggregation', '4ce'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.aggregation.flink.rate/version-0.62.0-org.streampipes.processors.aggregation.flink.rate',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.aggregation.flink.rate/version-0.62.0-org.streampipes.processors.aggregation.flink.rate', 'c21'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.enricher.flink.processor.math.mathop/version-0.62.0-org.streampipes.processors.enricher.flink.processor.math.mathop',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.enricher.flink.processor.math.mathop/version-0.62.0-org.streampipes.processors.enricher.flink.processor.math.mathop', '961'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.enricher.flink.processor.math.staticmathop/version-0.62.0-org.streampipes.processors.enricher.flink.processor.math.staticmathop',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.enricher.flink.processor.math.staticmathop/version-0.62.0-org.streampipes.processors.enricher.flink.processor.math.staticmathop', '937'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.enricher.flink.processor.trigonometry/version-0.62.0-org.streampipes.processors.enricher.flink.processor.trigonometry',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.enricher.flink.processor.trigonometry/version-0.62.0-org.streampipes.processors.enricher.flink.processor.trigonometry', '3f2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.enricher.flink.processor.urldereferencing/version-0.62.0-org.streampipes.processors.enricher.flink.processor.urldereferencing',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.enricher.flink.processor.urldereferencing/version-0.62.0-org.streampipes.processors.enricher.flink.processor.urldereferencing', '3cc'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.enricher.flink.timestamp/version-0.62.0-org.streampipes.processors.enricher.flink.timestamp',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.enricher.flink.timestamp/version-0.62.0-org.streampipes.processors.enricher.flink.timestamp', '96f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.filters.jvm.compose/version-0.62.0-org.streampipes.processors.filters.jvm.compose',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.filters.jvm.compose/version-0.62.0-org.streampipes.processors.filters.jvm.compose', 'ac8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.filters.jvm.numericalfilter/version-0.62.0-org.streampipes.processors.filters.jvm.numericalfilter',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.filters.jvm.numericalfilter/version-0.62.0-org.streampipes.processors.filters.jvm.numericalfilter', '9f4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.filters.jvm.project/version-0.62.0-org.streampipes.processors.filters.jvm.project',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.filters.jvm.project/version-0.62.0-org.streampipes.processors.filters.jvm.project', 'a4b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.filters.jvm.textfilter/version-0.62.0-org.streampipes.processors.filters.jvm.textfilter',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.filters.jvm.textfilter/version-0.62.0-org.streampipes.processors.filters.jvm.textfilter', '3a0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.pattern-detection.flink.peak-detection/version-0.62.0-org.streampipes.processors.pattern-detection.flink.peak-detection',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.pattern-detection.flink.peak-detection/version-0.62.0-org.streampipes.processors.pattern-detection.flink.peak-detection', '32a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.siddhi.frequency/version-0.62.0-org.streampipes.processors.siddhi.frequency',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.siddhi.frequency/version-0.62.0-org.streampipes.processors.siddhi.frequency', 'e2d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.siddhi.frequencychange/version-0.62.0-org.streampipes.processors.siddhi.frequencychange',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.siddhi.frequencychange/version-0.62.0-org.streampipes.processors.siddhi.frequencychange', '6d7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.siddhi.increase/version-0.62.0-org.streampipes.processors.siddhi.increase',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.siddhi.increase/version-0.62.0-org.streampipes.processors.siddhi.increase', 'daa'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.siddhi.numericalfilter/version-0.62.0-org.streampipes.processors.siddhi.numericalfilter',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.siddhi.numericalfilter/version-0.62.0-org.streampipes.processors.siddhi.numericalfilter', 'd35'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.siddhi.sequence/version-0.62.0-org.streampipes.processors.siddhi.sequence',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.siddhi.sequence/version-0.62.0-org.streampipes.processors.siddhi.sequence', '385'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.siddhi.stop/version-0.62.0-org.streampipes.processors.siddhi.stop',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.siddhi.stop/version-0.62.0-org.streampipes.processors.siddhi.stop', '454'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.textmining.flink.languagedetection/version-0.62.0-org.streampipes.processors.textmining.flink.languagedetection',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.textmining.flink.languagedetection/version-0.62.0-org.streampipes.processors.textmining.flink.languagedetection', '53f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.textmining.flink.wordcount/version-0.62.0-org.streampipes.processors.textmining.flink.wordcount',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.textmining.flink.wordcount/version-0.62.0-org.streampipes.processors.textmining.flink.wordcount', '322'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.flink.field-converter/version-0.62.0-org.streampipes.processors.transformation.flink.field-converter',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.flink.field-converter/version-0.62.0-org.streampipes.processors.transformation.flink.field-converter', '85b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.flink.field-mapper/version-0.62.0-org.streampipes.processors.transformation.flink.field-mapper',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.flink.field-mapper/version-0.62.0-org.streampipes.processors.transformation.flink.field-mapper', 'c0d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.flink.field-renamer/version-0.62.0-org.streampipes.processors.transformation.flink.field-renamer',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.flink.field-renamer/version-0.62.0-org.streampipes.processors.transformation.flink.field-renamer', '35d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.flink.fieldhasher/version-0.62.0-org.streampipes.processors.transformation.flink.fieldhasher',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.flink.fieldhasher/version-0.62.0-org.streampipes.processors.transformation.flink.fieldhasher', 'fdf'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.flink.measurement-unit-converter/version-0.62.0-org.streampipes.processors.transformation.flink.measurement-unit-converter',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.flink.measurement-unit-converter/version-0.62.0-org.streampipes.processors.transformation.flink.measurement-unit-converter', '833'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.flink.processor.boilerplate/version-0.62.0-org.streampipes.processors.transformation.flink.processor.boilerplate',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.flink.processor.boilerplate/version-0.62.0-org.streampipes.processors.transformation.flink.processor.boilerplate', '579'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.jvm.changed-value/version-0.62.0-org.streampipes.processors.transformation.jvm.changed-value',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.jvm.changed-value/version-0.62.0-org.streampipes.processors.transformation.jvm.changed-value', '7be'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.jvm.count-array/version-0.62.0-org.streampipes.processors.transformation.jvm.count-array',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.jvm.count-array/version-0.62.0-org.streampipes.processors.transformation.jvm.count-array', '925'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.jvm.duration-value/version-0.62.0-org.streampipes.processors.transformation.jvm.duration-value',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.jvm.duration-value/version-0.62.0-org.streampipes.processors.transformation.jvm.duration-value', 'dca'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.jvm.processor.timestampextractor/version-0.62.0-org.streampipes.processors.transformation.jvm.processor.timestampextractor',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.jvm.processor.timestampextractor/version-0.62.0-org.streampipes.processors.transformation.jvm.processor.timestampextractor', 'c06'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.jvm.split-array/version-0.62.0-org.streampipes.processors.transformation.jvm.split-array',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.processors.transformation.jvm.split-array/version-0.62.0-org.streampipes.processors.transformation.jvm.split-array', '151'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.sinks.brokers.jvm.jms/version-0.62.0-org.streampipes.sinks.brokers.jvm.jms',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.sinks.brokers.jvm.jms/version-0.62.0-org.streampipes.sinks.brokers.jvm.jms', '4eb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.sinks.brokers.jvm.kafka/version-0.62.0-org.streampipes.sinks.brokers.jvm.kafka',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.sinks.brokers.jvm.kafka/version-0.62.0-org.streampipes.sinks.brokers.jvm.kafka', '8a9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.sinks.brokers.jvm.rabbitmq/version-0.62.0-org.streampipes.sinks.brokers.jvm.rabbitmq',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.sinks.brokers.jvm.rabbitmq/version-0.62.0-org.streampipes.sinks.brokers.jvm.rabbitmq', '2eb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.sinks.brokers.jvm.rest/version-0.62.0-org.streampipes.sinks.brokers.jvm.rest',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.sinks.brokers.jvm.rest/version-0.62.0-org.streampipes.sinks.brokers.jvm.rest', '0dd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.sinks.databases.flink.elasticsearch/version-0.62.0-org.streampipes.sinks.databases.flink.elasticsearch',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.sinks.databases.flink.elasticsearch/version-0.62.0-org.streampipes.sinks.databases.flink.elasticsearch', '8c1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.sinks.databases.jvm.couchdb/version-0.62.0-org.streampipes.sinks.databases.jvm.couchdb',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.sinks.databases.jvm.couchdb/version-0.62.0-org.streampipes.sinks.databases.jvm.couchdb', '27c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.sinks.databases.jvm.influxdb/version-0.62.0-org.streampipes.sinks.databases.jvm.influxdb',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.sinks.databases.jvm.influxdb/version-0.62.0-org.streampipes.sinks.databases.jvm.influxdb', 'fdc'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.sinks.databases.jvm.postgresql/version-0.62.0-org.streampipes.sinks.databases.jvm.postgresql',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.sinks.databases.jvm.postgresql/version-0.62.0-org.streampipes.sinks.databases.jvm.postgresql', '28a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.sinks.internal.jvm.dashboard/version-0.62.0-org.streampipes.sinks.internal.jvm.dashboard',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.sinks.internal.jvm.dashboard/version-0.62.0-org.streampipes.sinks.internal.jvm.dashboard', '87c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.sinks.internal.jvm.notification/version-0.62.0-org.streampipes.sinks.internal.jvm.notification',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.sinks.internal.jvm.notification/version-0.62.0-org.streampipes.sinks.internal.jvm.notification', '9a6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.sinks.notifications.jvm.email/version-0.62.0-org.streampipes.sinks.notifications.jvm.email',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.sinks.notifications.jvm.email/version-0.62.0-org.streampipes.sinks.notifications.jvm.email', '6b8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.sinks.notifications.jvm.onesignal/version-0.62.0-org.streampipes.sinks.notifications.jvm.onesignal',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.sinks.notifications.jvm.onesignal/version-0.62.0-org.streampipes.sinks.notifications.jvm.onesignal', '29e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/org.streampipes.sinks.notifications.jvm.slack/version-0.62.0-org.streampipes.sinks.notifications.jvm.slack',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/org.streampipes.sinks.notifications.jvm.slack/version-0.62.0-org.streampipes.sinks.notifications.jvm.slack', '299'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/user-guide-first-steps',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/user-guide-first-steps', '77c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/user-guide-installation',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/user-guide-installation', '1c1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/user-guide-processing-elements',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/user-guide-processing-elements', '68f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/user-guide-software-components',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/user-guide-software-components', '995'),
-        exact: true
-      },
-      {
-        path: '/docs/0.61.0-pre-asf/user-guide-tour',
-        component: ComponentCreator('/docs/0.61.0-pre-asf/user-guide-tour', '82b'),
-        exact: true
-      }
-    ]
-  },
-  {
-    path: '/docs/0.62.0-pre-asf',
-    component: ComponentCreator('/docs/0.62.0-pre-asf', '7ff'),
-    routes: [
-      {
-        path: '/docs/0.62.0-pre-asf/dev-guide-archetype',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/dev-guide-archetype', '55f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/dev-guide-configuration',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/dev-guide-configuration', '411'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/dev-guide-development-environment',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/dev-guide-development-environment', '9e1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/dev-guide-tutorial-processors',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/dev-guide-tutorial-processors', '710'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/dev-guide-tutorial-sinks',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/dev-guide-tutorial-sinks', '556'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/dev-guide-tutorial-sources',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/dev-guide-tutorial-sources', 'ed9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processor.geo.flink/version-0.62.0-org.streampipes.processor.geo.flink',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processor.geo.flink/version-0.62.0-org.streampipes.processor.geo.flink', '5bc'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processor.imageclassification.jvm.generic-image-classification/version-0.62.0-org.streampipes.processor.imageclassification.jvm.generic-image-classification',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processor.imageclassification.jvm.generic-image-classification/version-0.62.0-org.streampipes.processor.imageclassification.jvm.generic-image-classification', 'b81'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processor.imageclassification.jvm.image-enricher/version-0.62.0-org.streampipes.processor.imageclassification.jvm.image-enricher',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processor.imageclassification.jvm.image-enricher/version-0.62.0-org.streampipes.processor.imageclassification.jvm.image-enricher', '1ff'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processor.imageclassification.qrcode/version-0.62.0-org.streampipes.processor.imageclassification.qrcode',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processor.imageclassification.qrcode/version-0.62.0-org.streampipes.processor.imageclassification.qrcode', 'd8d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.aggregation.flink.aggregation/version-0.62.0-org.streampipes.processors.aggregation.flink.aggregation',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.aggregation.flink.aggregation/version-0.62.0-org.streampipes.processors.aggregation.flink.aggregation', '3ad'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.aggregation.flink.rate/version-0.62.0-org.streampipes.processors.aggregation.flink.rate',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.aggregation.flink.rate/version-0.62.0-org.streampipes.processors.aggregation.flink.rate', 'ec0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.enricher.flink.processor.math.mathop/version-0.62.0-org.streampipes.processors.enricher.flink.processor.math.mathop',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.enricher.flink.processor.math.mathop/version-0.62.0-org.streampipes.processors.enricher.flink.processor.math.mathop', 'c24'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.enricher.flink.processor.math.staticmathop/version-0.62.0-org.streampipes.processors.enricher.flink.processor.math.staticmathop',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.enricher.flink.processor.math.staticmathop/version-0.62.0-org.streampipes.processors.enricher.flink.processor.math.staticmathop', '393'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.enricher.flink.processor.trigonometry/version-0.62.0-org.streampipes.processors.enricher.flink.processor.trigonometry',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.enricher.flink.processor.trigonometry/version-0.62.0-org.streampipes.processors.enricher.flink.processor.trigonometry', 'b74'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.enricher.flink.processor.urldereferencing/version-0.62.0-org.streampipes.processors.enricher.flink.processor.urldereferencing',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.enricher.flink.processor.urldereferencing/version-0.62.0-org.streampipes.processors.enricher.flink.processor.urldereferencing', '027'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.enricher.flink.timestamp/version-0.62.0-org.streampipes.processors.enricher.flink.timestamp',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.enricher.flink.timestamp/version-0.62.0-org.streampipes.processors.enricher.flink.timestamp', 'b8f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.filters.jvm.compose/version-0.62.0-org.streampipes.processors.filters.jvm.compose',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.filters.jvm.compose/version-0.62.0-org.streampipes.processors.filters.jvm.compose', '8df'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.filters.jvm.numericalfilter/version-0.62.0-org.streampipes.processors.filters.jvm.numericalfilter',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.filters.jvm.numericalfilter/version-0.62.0-org.streampipes.processors.filters.jvm.numericalfilter', '9be'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.filters.jvm.project/version-0.62.0-org.streampipes.processors.filters.jvm.project',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.filters.jvm.project/version-0.62.0-org.streampipes.processors.filters.jvm.project', 'acb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.filters.jvm.textfilter/version-0.62.0-org.streampipes.processors.filters.jvm.textfilter',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.filters.jvm.textfilter/version-0.62.0-org.streampipes.processors.filters.jvm.textfilter', '6f4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.pattern-detection.flink.peak-detection/version-0.62.0-org.streampipes.processors.pattern-detection.flink.peak-detection',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.pattern-detection.flink.peak-detection/version-0.62.0-org.streampipes.processors.pattern-detection.flink.peak-detection', '19b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.siddhi.frequency/version-0.62.0-org.streampipes.processors.siddhi.frequency',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.siddhi.frequency/version-0.62.0-org.streampipes.processors.siddhi.frequency', '4fd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.siddhi.frequencychange/version-0.62.0-org.streampipes.processors.siddhi.frequencychange',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.siddhi.frequencychange/version-0.62.0-org.streampipes.processors.siddhi.frequencychange', 'b41'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.siddhi.increase/version-0.62.0-org.streampipes.processors.siddhi.increase',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.siddhi.increase/version-0.62.0-org.streampipes.processors.siddhi.increase', '7ee'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.siddhi.numericalfilter/version-0.62.0-org.streampipes.processors.siddhi.numericalfilter',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.siddhi.numericalfilter/version-0.62.0-org.streampipes.processors.siddhi.numericalfilter', '145'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.siddhi.sequence/version-0.62.0-org.streampipes.processors.siddhi.sequence',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.siddhi.sequence/version-0.62.0-org.streampipes.processors.siddhi.sequence', 'a67'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.siddhi.stop/version-0.62.0-org.streampipes.processors.siddhi.stop',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.siddhi.stop/version-0.62.0-org.streampipes.processors.siddhi.stop', 'd5d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.textmining.flink.languagedetection/version-0.62.0-org.streampipes.processors.textmining.flink.languagedetection',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.textmining.flink.languagedetection/version-0.62.0-org.streampipes.processors.textmining.flink.languagedetection', '85b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.textmining.flink.wordcount/version-0.62.0-org.streampipes.processors.textmining.flink.wordcount',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.textmining.flink.wordcount/version-0.62.0-org.streampipes.processors.textmining.flink.wordcount', '9f4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.flink.field-converter/version-0.62.0-org.streampipes.processors.transformation.flink.field-converter',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.flink.field-converter/version-0.62.0-org.streampipes.processors.transformation.flink.field-converter', '176'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.flink.field-mapper/version-0.62.0-org.streampipes.processors.transformation.flink.field-mapper',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.flink.field-mapper/version-0.62.0-org.streampipes.processors.transformation.flink.field-mapper', '088'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.flink.field-renamer/version-0.62.0-org.streampipes.processors.transformation.flink.field-renamer',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.flink.field-renamer/version-0.62.0-org.streampipes.processors.transformation.flink.field-renamer', '64d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.flink.fieldhasher/version-0.62.0-org.streampipes.processors.transformation.flink.fieldhasher',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.flink.fieldhasher/version-0.62.0-org.streampipes.processors.transformation.flink.fieldhasher', '796'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.flink.measurement-unit-converter/version-0.62.0-org.streampipes.processors.transformation.flink.measurement-unit-converter',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.flink.measurement-unit-converter/version-0.62.0-org.streampipes.processors.transformation.flink.measurement-unit-converter', '3a7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.flink.processor.boilerplate/version-0.62.0-org.streampipes.processors.transformation.flink.processor.boilerplate',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.flink.processor.boilerplate/version-0.62.0-org.streampipes.processors.transformation.flink.processor.boilerplate', 'dcd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.jvm.changed-value/version-0.62.0-org.streampipes.processors.transformation.jvm.changed-value',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.jvm.changed-value/version-0.62.0-org.streampipes.processors.transformation.jvm.changed-value', '17a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.jvm.count-array/version-0.62.0-org.streampipes.processors.transformation.jvm.count-array',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.jvm.count-array/version-0.62.0-org.streampipes.processors.transformation.jvm.count-array', '59c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.jvm.duration-value/version-0.62.0-org.streampipes.processors.transformation.jvm.duration-value',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.jvm.duration-value/version-0.62.0-org.streampipes.processors.transformation.jvm.duration-value', 'fe1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.jvm.processor.timestampextractor/version-0.62.0-org.streampipes.processors.transformation.jvm.processor.timestampextractor',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.jvm.processor.timestampextractor/version-0.62.0-org.streampipes.processors.transformation.jvm.processor.timestampextractor', '05b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.jvm.split-array/version-0.62.0-org.streampipes.processors.transformation.jvm.split-array',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.processors.transformation.jvm.split-array/version-0.62.0-org.streampipes.processors.transformation.jvm.split-array', '0d2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.sinks.brokers.jvm.jms/version-0.62.0-org.streampipes.sinks.brokers.jvm.jms',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.sinks.brokers.jvm.jms/version-0.62.0-org.streampipes.sinks.brokers.jvm.jms', '909'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.sinks.brokers.jvm.kafka/version-0.62.0-org.streampipes.sinks.brokers.jvm.kafka',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.sinks.brokers.jvm.kafka/version-0.62.0-org.streampipes.sinks.brokers.jvm.kafka', 'c64'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.sinks.brokers.jvm.rabbitmq/version-0.62.0-org.streampipes.sinks.brokers.jvm.rabbitmq',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.sinks.brokers.jvm.rabbitmq/version-0.62.0-org.streampipes.sinks.brokers.jvm.rabbitmq', '187'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.sinks.brokers.jvm.rest/version-0.62.0-org.streampipes.sinks.brokers.jvm.rest',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.sinks.brokers.jvm.rest/version-0.62.0-org.streampipes.sinks.brokers.jvm.rest', 'c3d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.sinks.databases.flink.elasticsearch/version-0.62.0-org.streampipes.sinks.databases.flink.elasticsearch',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.sinks.databases.flink.elasticsearch/version-0.62.0-org.streampipes.sinks.databases.flink.elasticsearch', 'd10'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.sinks.databases.jvm.couchdb/version-0.62.0-org.streampipes.sinks.databases.jvm.couchdb',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.sinks.databases.jvm.couchdb/version-0.62.0-org.streampipes.sinks.databases.jvm.couchdb', 'd95'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.sinks.databases.jvm.influxdb/version-0.62.0-org.streampipes.sinks.databases.jvm.influxdb',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.sinks.databases.jvm.influxdb/version-0.62.0-org.streampipes.sinks.databases.jvm.influxdb', '8e4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.sinks.databases.jvm.postgresql/version-0.62.0-org.streampipes.sinks.databases.jvm.postgresql',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.sinks.databases.jvm.postgresql/version-0.62.0-org.streampipes.sinks.databases.jvm.postgresql', 'eb2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.sinks.internal.jvm.dashboard/version-0.62.0-org.streampipes.sinks.internal.jvm.dashboard',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.sinks.internal.jvm.dashboard/version-0.62.0-org.streampipes.sinks.internal.jvm.dashboard', '0e4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.sinks.internal.jvm.notification/version-0.62.0-org.streampipes.sinks.internal.jvm.notification',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.sinks.internal.jvm.notification/version-0.62.0-org.streampipes.sinks.internal.jvm.notification', '8b4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.sinks.notifications.jvm.email/version-0.62.0-org.streampipes.sinks.notifications.jvm.email',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.sinks.notifications.jvm.email/version-0.62.0-org.streampipes.sinks.notifications.jvm.email', '38a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.sinks.notifications.jvm.onesignal/version-0.62.0-org.streampipes.sinks.notifications.jvm.onesignal',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.sinks.notifications.jvm.onesignal/version-0.62.0-org.streampipes.sinks.notifications.jvm.onesignal', 'ce1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/org.streampipes.sinks.notifications.jvm.slack/version-0.62.0-org.streampipes.sinks.notifications.jvm.slack',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/org.streampipes.sinks.notifications.jvm.slack/version-0.62.0-org.streampipes.sinks.notifications.jvm.slack', 'f5d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/user-guide-first-steps',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/user-guide-first-steps', '2d0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/user-guide-installation',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/user-guide-installation', '655'),
-        exact: true
-      },
-      {
-        path: '/docs/0.62.0-pre-asf/user-guide-tour',
-        component: ComponentCreator('/docs/0.62.0-pre-asf/user-guide-tour', '9da'),
-        exact: true
-      }
-    ]
-  },
-  {
-    path: '/docs/0.63.0-pre-asf',
-    component: ComponentCreator('/docs/0.63.0-pre-asf', '00e'),
-    routes: [
-      {
-        path: '/docs/0.63.0-pre-asf/dev-guide-archetype',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/dev-guide-archetype', '7f5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/dev-guide-configuration',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/dev-guide-configuration', '25e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/dev-guide-development-environment',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/dev-guide-development-environment', 'a82'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/dev-guide-output-strategies',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/dev-guide-output-strategies', '148'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/dev-guide-static-properties',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/dev-guide-static-properties', '028'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/dev-guide-stream-requirements',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/dev-guide-stream-requirements', '7ea'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/dev-guide-tutorial-processors',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/dev-guide-tutorial-processors', '8f0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/dev-guide-tutorial-sinks',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/dev-guide-tutorial-sinks', '2f7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/dev-guide-tutorial-sources',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/dev-guide-tutorial-sources', '114'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processor.geo.flink/org.apache.streampipes.processor.geo.flink',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processor.geo.flink/org.apache.streampipes.processor.geo.flink', 'a04'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processor.geo.jvm.geocoding/org.apache.streampipes.processor.geo.jvm.geocoding',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processor.geo.jvm.geocoding/org.apache.streampipes.processor.geo.jvm.geocoding', '6fd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processor.geo.jvm.reversegeocoding/org.apache.streampipes.processor.geo.jvm.reversegeocoding',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processor.geo.jvm.reversegeocoding/org.apache.streampipes.processor.geo.jvm.reversegeocoding', 'aa3'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processor.geo.jvm.staticgeocoding/org.apache.streampipes.processor.geo.jvm.staticgeocoding',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processor.geo.jvm.staticgeocoding/org.apache.streampipes.processor.geo.jvm.staticgeocoding', 'd41'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification', '71a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processor.imageclassification.jvm.image-enricher/org.apache.streampipes.processor.imageclassification.jvm.image-enricher',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processor.imageclassification.jvm.image-enricher/org.apache.streampipes.processor.imageclassification.jvm.image-enricher', 'a69'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processor.imageclassification.qrcode/org.apache.streampipes.processor.imageclassification.qrcode',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processor.imageclassification.qrcode/org.apache.streampipes.processor.imageclassification.qrcode', '462'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.aggregation/org.apache.streampipes.processors.aggregation.flink.aggregation',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.aggregation/org.apache.streampipes.processors.aggregation.flink.aggregation', 'e9a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.eventcount/org.apache.streampipes.processors.aggregation.flink.eventcount',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.eventcount/org.apache.streampipes.processors.aggregation.flink.eventcount', '3de'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.rate/org.apache.streampipes.processors.aggregation.flink.rate',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.rate/org.apache.streampipes.processors.aggregation.flink.rate', 'c6d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.math.mathop/org.apache.streampipes.processors.enricher.flink.processor.math.mathop',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.math.mathop/org.apache.streampipes.processors.enricher.flink.processor.math.mathop', '7f5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop', 'a05'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.trigonometry/org.apache.streampipes.processors.enricher.flink.processor.trigonometry',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.trigonometry/org.apache.streampipes.processors.enricher.flink.processor.trigonometry', '694'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing', '999'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.enricher.flink.timestamp/org.apache.streampipes.processors.enricher.flink.timestamp',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.enricher.flink.timestamp/org.apache.streampipes.processors.enricher.flink.timestamp', '84b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.enricher.jvm.sizemeasure/org.apache.streampipes.processors.enricher.jvm.sizemeasure',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.enricher.jvm.sizemeasure/org.apache.streampipes.processors.enricher.jvm.sizemeasure', '6d3'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.filters.jvm.compose/org.apache.streampipes.processors.filters.jvm.compose',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.filters.jvm.compose/org.apache.streampipes.processors.filters.jvm.compose', '438'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.filters.jvm.enrich/org.apache.streampipes.processors.filters.jvm.enrich',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.filters.jvm.enrich/org.apache.streampipes.processors.filters.jvm.enrich', '900'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.filters.jvm.merge/org.apache.streampipes.processors.filters.jvm.merge',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.filters.jvm.merge/org.apache.streampipes.processors.filters.jvm.merge', '40e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.filters.jvm.numericalfilter/org.apache.streampipes.processors.filters.jvm.numericalfilter',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.filters.jvm.numericalfilter/org.apache.streampipes.processors.filters.jvm.numericalfilter', '707'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.filters.jvm.numericaltextfilter/org.apache.streampipes.processors.filters.jvm.numericaltextfilter',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.filters.jvm.numericaltextfilter/org.apache.streampipes.processors.filters.jvm.numericaltextfilter', '77a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.filters.jvm.project/org.apache.streampipes.processors.filters.jvm.project',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.filters.jvm.project/org.apache.streampipes.processors.filters.jvm.project', '3c0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.filters.jvm.textfilter/org.apache.streampipes.processors.filters.jvm.textfilter',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.filters.jvm.textfilter/org.apache.streampipes.processors.filters.jvm.textfilter', '9fa'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.filters.jvm.threshold/org.apache.streampipes.processors.filters.jvm.threshold',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.filters.jvm.threshold/org.apache.streampipes.processors.filters.jvm.threshold', 'ffb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator', 'd44'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.pattern-detection.flink.peak-detection/org.apache.streampipes.processors.pattern-detection.flink.peak-detection',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.pattern-detection.flink.peak-detection/org.apache.streampipes.processors.pattern-detection.flink.peak-detection', 'f90'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.siddhi.frequency/org.apache.streampipes.processors.siddhi.frequency',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.siddhi.frequency/org.apache.streampipes.processors.siddhi.frequency', '41c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.siddhi.frequencychange/org.apache.streampipes.processors.siddhi.frequencychange',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.siddhi.frequencychange/org.apache.streampipes.processors.siddhi.frequencychange', 'c23'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.siddhi.increase/org.apache.streampipes.processors.siddhi.increase',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.siddhi.increase/org.apache.streampipes.processors.siddhi.increase', '492'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.siddhi.numericalfilter/org.apache.streampipes.processors.siddhi.numericalfilter',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.siddhi.numericalfilter/org.apache.streampipes.processors.siddhi.numericalfilter', '8bd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.siddhi.sequence/org.apache.streampipes.processors.siddhi.sequence',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.siddhi.sequence/org.apache.streampipes.processors.siddhi.sequence', '457'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.siddhi.stop/org.apache.streampipes.processors.siddhi.stop',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.siddhi.stop/org.apache.streampipes.processors.siddhi.stop', 'ec4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.textmining.flink.languagedetection/org.apache.streampipes.processors.textmining.flink.languagedetection',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.textmining.flink.languagedetection/org.apache.streampipes.processors.textmining.flink.languagedetection', 'e0d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.textmining.flink.wordcount/org.apache.streampipes.processors.textmining.flink.wordcount',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.textmining.flink.wordcount/org.apache.streampipes.processors.textmining.flink.wordcount', '68d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.chunker/org.apache.streampipes.processors.textmining.jvm.chunker',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.chunker/org.apache.streampipes.processors.textmining.jvm.chunker', '04f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.languagedetection/org.apache.streampipes.processors.textmining.jvm.languagedetection',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.languagedetection/org.apache.streampipes.processors.textmining.jvm.languagedetection', '97c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.namefinder/org.apache.streampipes.processors.textmining.jvm.namefinder',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.namefinder/org.apache.streampipes.processors.textmining.jvm.namefinder', 'baf'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.partofspeech/org.apache.streampipes.processors.textmining.jvm.partofspeech',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.partofspeech/org.apache.streampipes.processors.textmining.jvm.partofspeech', 'ea3'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.sentencedetection/org.apache.streampipes.processors.textmining.jvm.sentencedetection',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.sentencedetection/org.apache.streampipes.processors.textmining.jvm.sentencedetection', '556'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.tokenizer/org.apache.streampipes.processors.textmining.jvm.tokenizer',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.tokenizer/org.apache.streampipes.processors.textmining.jvm.tokenizer', '3c1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.flink.field-converter/org.apache.streampipes.processors.transformation.flink.field-converter',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.flink.field-converter/org.apache.streampipes.processors.transformation.flink.field-converter', '8a5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.flink.field-mapper/org.apache.streampipes.processors.transformation.flink.field-mapper',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.flink.field-mapper/org.apache.streampipes.processors.transformation.flink.field-mapper', '3fb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.flink.field-renamer/org.apache.streampipes.processors.transformation.flink.field-renamer',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.flink.field-renamer/org.apache.streampipes.processors.transformation.flink.field-renamer', '80c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.flink.fieldhasher/org.apache.streampipes.processors.transformation.flink.fieldhasher',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.flink.fieldhasher/org.apache.streampipes.processors.transformation.flink.fieldhasher', '6cf'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter', '114'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.flink.processor.boilerplate/org.apache.streampipes.processors.transformation.flink.processor.boilerplate',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.flink.processor.boilerplate/org.apache.streampipes.processors.transformation.flink.processor.boilerplate', 'e81'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.counter/org.apache.streampipes.processors.transformation.jvm.booloperator.counter',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.counter/org.apache.streampipes.processors.transformation.jvm.booloperator.counter', '2de'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter', 'a9a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping', '9ba'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.timer/org.apache.streampipes.processors.transformation.jvm.booloperator.timer',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.timer/org.apache.streampipes.processors.transformation.jvm.booloperator.timer', 'ad6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.changed-value/org.apache.streampipes.processors.transformation.jvm.changed-value',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.changed-value/org.apache.streampipes.processors.transformation.jvm.changed-value', '17c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.count-array/org.apache.streampipes.processors.transformation.jvm.count-array',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.count-array/org.apache.streampipes.processors.transformation.jvm.count-array', '8b4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.csvmetadata/org.apache.streampipes.processors.transformation.jvm.csvmetadata',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.csvmetadata/org.apache.streampipes.processors.transformation.jvm.csvmetadata', '8ec'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.duration-value/org.apache.streampipes.processors.transformation.jvm.duration-value',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.duration-value/org.apache.streampipes.processors.transformation.jvm.duration-value', '4d9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor', 'e8e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.split-array/org.apache.streampipes.processors.transformation.jvm.split-array',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.split-array/org.apache.streampipes.processors.transformation.jvm.split-array', '1cf'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.taskduration/org.apache.streampipes.processors.transformation.jvm.taskduration',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.taskduration/org.apache.streampipes.processors.transformation.jvm.taskduration', 'b07'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean', '150'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.bufferrest/org.apache.streampipes.sinks.brokers.jvm.bufferrest',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.bufferrest/org.apache.streampipes.sinks.brokers.jvm.bufferrest', '0af'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.jms/org.apache.streampipes.sinks.brokers.jvm.jms',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.jms/org.apache.streampipes.sinks.brokers.jvm.jms', 'd59'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.kafka/org.apache.streampipes.sinks.brokers.jvm.kafka',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.kafka/org.apache.streampipes.sinks.brokers.jvm.kafka', '56d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.pulsar/org.apache.streampipes.sinks.brokers.jvm.pulsar',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.pulsar/org.apache.streampipes.sinks.brokers.jvm.pulsar', '522'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.rabbitmq/org.apache.streampipes.sinks.brokers.jvm.rabbitmq',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.rabbitmq/org.apache.streampipes.sinks.brokers.jvm.rabbitmq', 'f4a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.rest/org.apache.streampipes.sinks.brokers.jvm.rest',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.rest/org.apache.streampipes.sinks.brokers.jvm.rest', '514'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.databases.ditto/org.apache.streampipes.sinks.databases.ditto',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.databases.ditto/org.apache.streampipes.sinks.databases.ditto', '693'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.databases.flink.elasticsearch/org.apache.streampipes.sinks.databases.flink.elasticsearch',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.databases.flink.elasticsearch/org.apache.streampipes.sinks.databases.flink.elasticsearch', '82d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.couchdb/org.apache.streampipes.sinks.databases.jvm.couchdb',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.couchdb/org.apache.streampipes.sinks.databases.jvm.couchdb', '957'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.influxdb/org.apache.streampipes.sinks.databases.jvm.influxdb',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.influxdb/org.apache.streampipes.sinks.databases.jvm.influxdb', 'd1d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.iotdb/org.apache.streampipes.sinks.databases.jvm.iotdb',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.iotdb/org.apache.streampipes.sinks.databases.jvm.iotdb', 'f03'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.opcua/org.apache.streampipes.sinks.databases.jvm.opcua',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.opcua/org.apache.streampipes.sinks.databases.jvm.opcua', '6e7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.postgresql/org.apache.streampipes.sinks.databases.jvm.postgresql',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.postgresql/org.apache.streampipes.sinks.databases.jvm.postgresql', '767'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.internal.jvm.dashboard/org.apache.streampipes.sinks.internal.jvm.dashboard',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.internal.jvm.dashboard/org.apache.streampipes.sinks.internal.jvm.dashboard', '5dc'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.internal.jvm.datalake/org.apache.streampipes.sinks.internal.jvm.datalake',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.internal.jvm.datalake/org.apache.streampipes.sinks.internal.jvm.datalake', '52c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.internal.jvm.notification/org.apache.streampipes.sinks.internal.jvm.notification',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.internal.jvm.notification/org.apache.streampipes.sinks.internal.jvm.notification', 'e1c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.notifications.jvm.email/org.apache.streampipes.sinks.notifications.jvm.email',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.notifications.jvm.email/org.apache.streampipes.sinks.notifications.jvm.email', '319'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.notifications.jvm.onesignal/org.apache.streampipes.sinks.notifications.jvm.onesignal',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.notifications.jvm.onesignal/org.apache.streampipes.sinks.notifications.jvm.onesignal', 'c1d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.notifications.jvm.slack/org.apache.streampipes.sinks.notifications.jvm.slack',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/org.apache.streampipes.sinks.notifications.jvm.slack/org.apache.streampipes.sinks.notifications.jvm.slack', '244'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.coindesk',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.coindesk', '8d6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.gdelt',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.gdelt', '10d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.iex.news',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.iex.news', 'c57'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.iex.stocks',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.iex.stocks', '945'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.image.set',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.image.set', '864'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.image.stream',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.image.stream', 'b9d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.influxdb.set',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.influxdb.set', 'd72'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.influxdb.stream',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.influxdb.stream', '950'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.iss',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.iss', '33e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.mysql.set',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.mysql.set', 'cf5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.mysql.stream',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.mysql.stream', '9cd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.netio.mqtt',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.netio.mqtt', '8e8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.netio.rest',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.netio.rest', '7a0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera', 'dff'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.opcua',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.opcua', '072'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.plc4x.s7',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.plc4x.s7', 'f0a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.ros',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.ros', 'e8c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.simulator.randomdataset',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.simulator.randomdataset', '4e3'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.simulator.randomdatastream',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.simulator.randomdatastream', '5e4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.slack',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.slack', '582'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.ti',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.ti', '8ac'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.wikipedia.edit',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.wikipedia.edit', 'dda'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.wikipedia.new',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.adapters.wikipedia.new', 'd31'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.file',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.file', '6d1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.http',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.http', '6d8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.kafka',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.kafka', '9fc'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.mqtt',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.mqtt', '438'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.pulsar',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.pulsar', 'bae'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processor.geo.flink',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processor.geo.flink', '16d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processor.geo.jvm.geocoding',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processor.geo.jvm.geocoding', '25f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding', 'a96'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding', 'f40'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification', 'aae'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper', 'b3b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher', '05a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.qrcode',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.qrcode', 'fb5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.aggregation',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.aggregation', 'a13'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.count',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.count', '749'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.eventcount',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.eventcount', '797'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.rate',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.rate', '88c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.math.mathop',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.math.mathop', '0dd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop', '9fa'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.trigonometry',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.trigonometry', 'def'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing', '751'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.timestamp',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.timestamp', 'e18'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.enricher.jvm.sizemeasure',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.enricher.jvm.sizemeasure', 'cdf'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.compose',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.compose', 'd74'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.enrich',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.enrich', '506'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.merge',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.merge', '509'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.numericalfilter',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.numericalfilter', '726'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.numericaltextfilter',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.numericaltextfilter', '58c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.project',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.project', 'd39'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.textfilter',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.textfilter', '063'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.threshold',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.threshold', 'cf0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo', 'fd8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG', '77d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory', '1fd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator', 'fc0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.processor.speed',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.processor.speed', 'b62'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator', 'f5b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.absence',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.absence', 'a5f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.and',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.and', '278'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection', 'bb6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.sequence',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.sequence', '23f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.frequency',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.frequency', '910'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.frequencychange',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.frequencychange', '59e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.increase',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.increase', 'fe1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.numericalfilter',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.numericalfilter', '1a6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.sequence',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.sequence', '89b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.stop',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.stop', 'a5a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.statistics.flink.statistics-summary',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.statistics.flink.statistics-summary', 'c6e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.textmining.flink.languagedetection',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.textmining.flink.languagedetection', '4d9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.textmining.flink.wordcount',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.textmining.flink.wordcount', '50c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.chunker',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.chunker', '7a9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.languagedetection',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.languagedetection', '318'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.namefinder',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.namefinder', '459'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.partofspeech',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.partofspeech', 'a26'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.sentencedetection',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.sentencedetection', 'ac9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.tokenizer',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.tokenizer', '5e6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.field-converter',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.field-converter', 'c51'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.field-mapper',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.field-mapper', 'dd2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.field-renamer',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.field-renamer', '05e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher', '59e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter', '0a8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.processor.boilerplate',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.processor.boilerplate', '70e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter', '94f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter', '3a3'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping', 'c12'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timer',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timer', '211'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.changed-value',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.changed-value', '0ef'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.count-array',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.count-array', '979'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata', '55c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.duration-value',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.duration-value', '8a5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor', '426'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.split-array',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.split-array', 'fbd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter', '40f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer', '823'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.taskduration',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.taskduration', '38b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean', '1ac'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.protocol.set.file',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.protocol.set.file', 'ba3'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.protocol.set.http',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.protocol.set.http', 'a59'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest', 'a0d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.jms',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.jms', '119'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.kafka',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.kafka', 'dc2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.mqtt',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.mqtt', '143'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.pulsar',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.pulsar', 'bac'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq', '0ca'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.rest',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.rest', '398'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.databases.ditto',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.databases.ditto', 'd95'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.databases.flink.elasticsearch',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.databases.flink.elasticsearch', '518'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.couchdb',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.couchdb', '356'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.influxdb',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.influxdb', '6fb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.iotdb',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.iotdb', 'e9d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.opcua',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.opcua', '090'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.postgresql',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.postgresql', '79d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.internal.jvm.dashboard',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.internal.jvm.dashboard', '8bb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.internal.jvm.datalake',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.internal.jvm.datalake', '7f7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.internal.jvm.notification',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.internal.jvm.notification', '9ba'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.email',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.email', 'c3c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.onesignal',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.onesignal', '2ce'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.slack',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.slack', '91a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/user-guide-first-steps',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/user-guide-first-steps', '54d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/user-guide-installation',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/user-guide-installation', '2d1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.63.0-pre-asf/user-guide-tour',
-        component: ComponentCreator('/docs/0.63.0-pre-asf/user-guide-tour', '648'),
-        exact: true
-      }
-    ]
-  },
-  {
-    path: '/docs/0.64.0-pre-asf',
-    component: ComponentCreator('/docs/0.64.0-pre-asf', '597'),
-    routes: [
-      {
-        path: '/docs/0.64.0-pre-asf/dev-guide-archetype',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/dev-guide-archetype', '32d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/dev-guide-configuration',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/dev-guide-configuration', 'bc1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/dev-guide-development-environment',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/dev-guide-development-environment', '4c9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/dev-guide-output-strategies',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/dev-guide-output-strategies', 'ec8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/dev-guide-static-properties',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/dev-guide-static-properties', 'ffc'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/dev-guide-stream-requirements',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/dev-guide-stream-requirements', '02c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/dev-guide-tutorial-processors',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/dev-guide-tutorial-processors', '867'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/dev-guide-tutorial-sinks',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/dev-guide-tutorial-sinks', '090'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/dev-guide-tutorial-sources',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/dev-guide-tutorial-sources', 'e21'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processor.geo.flink/org.apache.streampipes.processor.geo.flink',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processor.geo.flink/org.apache.streampipes.processor.geo.flink', 'ae1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processor.geo.jvm.geocoding/org.apache.streampipes.processor.geo.jvm.geocoding',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processor.geo.jvm.geocoding/org.apache.streampipes.processor.geo.jvm.geocoding', '57d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processor.geo.jvm.reversegeocoding/org.apache.streampipes.processor.geo.jvm.reversegeocoding',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processor.geo.jvm.reversegeocoding/org.apache.streampipes.processor.geo.jvm.reversegeocoding', 'c06'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processor.geo.jvm.staticgeocoding/org.apache.streampipes.processor.geo.jvm.staticgeocoding',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processor.geo.jvm.staticgeocoding/org.apache.streampipes.processor.geo.jvm.staticgeocoding', 'f43'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification', '52a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processor.imageclassification.jvm.image-enricher/org.apache.streampipes.processor.imageclassification.jvm.image-enricher',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processor.imageclassification.jvm.image-enricher/org.apache.streampipes.processor.imageclassification.jvm.image-enricher', '18b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processor.imageclassification.qrcode/org.apache.streampipes.processor.imageclassification.qrcode',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processor.imageclassification.qrcode/org.apache.streampipes.processor.imageclassification.qrcode', '622'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.aggregation/org.apache.streampipes.processors.aggregation.flink.aggregation',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.aggregation/org.apache.streampipes.processors.aggregation.flink.aggregation', '5cc'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.eventcount/org.apache.streampipes.processors.aggregation.flink.eventcount',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.eventcount/org.apache.streampipes.processors.aggregation.flink.eventcount', '2df'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.rate/org.apache.streampipes.processors.aggregation.flink.rate',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.rate/org.apache.streampipes.processors.aggregation.flink.rate', '861'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.math.mathop/org.apache.streampipes.processors.enricher.flink.processor.math.mathop',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.math.mathop/org.apache.streampipes.processors.enricher.flink.processor.math.mathop', 'bfc'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop', 'd0a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.trigonometry/org.apache.streampipes.processors.enricher.flink.processor.trigonometry',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.trigonometry/org.apache.streampipes.processors.enricher.flink.processor.trigonometry', '31e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing', 'f1d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.enricher.flink.timestamp/org.apache.streampipes.processors.enricher.flink.timestamp',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.enricher.flink.timestamp/org.apache.streampipes.processors.enricher.flink.timestamp', '98b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.enricher.jvm.sizemeasure/org.apache.streampipes.processors.enricher.jvm.sizemeasure',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.enricher.jvm.sizemeasure/org.apache.streampipes.processors.enricher.jvm.sizemeasure', '04b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.filters.jvm.compose/org.apache.streampipes.processors.filters.jvm.compose',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.filters.jvm.compose/org.apache.streampipes.processors.filters.jvm.compose', '89d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.filters.jvm.enrich/org.apache.streampipes.processors.filters.jvm.enrich',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.filters.jvm.enrich/org.apache.streampipes.processors.filters.jvm.enrich', '313'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.filters.jvm.merge/org.apache.streampipes.processors.filters.jvm.merge',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.filters.jvm.merge/org.apache.streampipes.processors.filters.jvm.merge', '58a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.filters.jvm.numericalfilter/org.apache.streampipes.processors.filters.jvm.numericalfilter',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.filters.jvm.numericalfilter/org.apache.streampipes.processors.filters.jvm.numericalfilter', 'e60'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.filters.jvm.numericaltextfilter/org.apache.streampipes.processors.filters.jvm.numericaltextfilter',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.filters.jvm.numericaltextfilter/org.apache.streampipes.processors.filters.jvm.numericaltextfilter', '8f5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.filters.jvm.project/org.apache.streampipes.processors.filters.jvm.project',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.filters.jvm.project/org.apache.streampipes.processors.filters.jvm.project', '5a5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.filters.jvm.textfilter/org.apache.streampipes.processors.filters.jvm.textfilter',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.filters.jvm.textfilter/org.apache.streampipes.processors.filters.jvm.textfilter', '6f5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.filters.jvm.threshold/org.apache.streampipes.processors.filters.jvm.threshold',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.filters.jvm.threshold/org.apache.streampipes.processors.filters.jvm.threshold', '22a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator', 'db2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.pattern-detection.flink.peak-detection/org.apache.streampipes.processors.pattern-detection.flink.peak-detection',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.pattern-detection.flink.peak-detection/org.apache.streampipes.processors.pattern-detection.flink.peak-detection', '573'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.siddhi.frequency/org.apache.streampipes.processors.siddhi.frequency',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.siddhi.frequency/org.apache.streampipes.processors.siddhi.frequency', 'ad3'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.siddhi.frequencychange/org.apache.streampipes.processors.siddhi.frequencychange',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.siddhi.frequencychange/org.apache.streampipes.processors.siddhi.frequencychange', '335'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.siddhi.increase/org.apache.streampipes.processors.siddhi.increase',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.siddhi.increase/org.apache.streampipes.processors.siddhi.increase', '9a0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.siddhi.numericalfilter/org.apache.streampipes.processors.siddhi.numericalfilter',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.siddhi.numericalfilter/org.apache.streampipes.processors.siddhi.numericalfilter', '5dd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.siddhi.sequence/org.apache.streampipes.processors.siddhi.sequence',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.siddhi.sequence/org.apache.streampipes.processors.siddhi.sequence', 'a1b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.siddhi.stop/org.apache.streampipes.processors.siddhi.stop',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.siddhi.stop/org.apache.streampipes.processors.siddhi.stop', '5cd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.textmining.flink.languagedetection/org.apache.streampipes.processors.textmining.flink.languagedetection',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.textmining.flink.languagedetection/org.apache.streampipes.processors.textmining.flink.languagedetection', 'e1a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.textmining.flink.wordcount/org.apache.streampipes.processors.textmining.flink.wordcount',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.textmining.flink.wordcount/org.apache.streampipes.processors.textmining.flink.wordcount', '7c0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.chunker/org.apache.streampipes.processors.textmining.jvm.chunker',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.chunker/org.apache.streampipes.processors.textmining.jvm.chunker', '0cc'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.languagedetection/org.apache.streampipes.processors.textmining.jvm.languagedetection',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.languagedetection/org.apache.streampipes.processors.textmining.jvm.languagedetection', 'a89'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.namefinder/org.apache.streampipes.processors.textmining.jvm.namefinder',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.namefinder/org.apache.streampipes.processors.textmining.jvm.namefinder', '478'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.partofspeech/org.apache.streampipes.processors.textmining.jvm.partofspeech',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.partofspeech/org.apache.streampipes.processors.textmining.jvm.partofspeech', 'c17'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.sentencedetection/org.apache.streampipes.processors.textmining.jvm.sentencedetection',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.sentencedetection/org.apache.streampipes.processors.textmining.jvm.sentencedetection', 'b6a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.tokenizer/org.apache.streampipes.processors.textmining.jvm.tokenizer',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.tokenizer/org.apache.streampipes.processors.textmining.jvm.tokenizer', 'ca4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.flink.field-converter/org.apache.streampipes.processors.transformation.flink.field-converter',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.flink.field-converter/org.apache.streampipes.processors.transformation.flink.field-converter', '452'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.flink.field-mapper/org.apache.streampipes.processors.transformation.flink.field-mapper',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.flink.field-mapper/org.apache.streampipes.processors.transformation.flink.field-mapper', 'cd5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.flink.field-renamer/org.apache.streampipes.processors.transformation.flink.field-renamer',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.flink.field-renamer/org.apache.streampipes.processors.transformation.flink.field-renamer', '4bf'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.flink.fieldhasher/org.apache.streampipes.processors.transformation.flink.fieldhasher',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.flink.fieldhasher/org.apache.streampipes.processors.transformation.flink.fieldhasher', 'c68'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter', '99f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.flink.processor.boilerplate/org.apache.streampipes.processors.transformation.flink.processor.boilerplate',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.flink.processor.boilerplate/org.apache.streampipes.processors.transformation.flink.processor.boilerplate', '731'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.counter/org.apache.streampipes.processors.transformation.jvm.booloperator.counter',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.counter/org.apache.streampipes.processors.transformation.jvm.booloperator.counter', 'a8d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter', 'ded'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping', 'ae5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.timer/org.apache.streampipes.processors.transformation.jvm.booloperator.timer',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.timer/org.apache.streampipes.processors.transformation.jvm.booloperator.timer', 'd7a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.changed-value/org.apache.streampipes.processors.transformation.jvm.changed-value',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.changed-value/org.apache.streampipes.processors.transformation.jvm.changed-value', '6b5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.count-array/org.apache.streampipes.processors.transformation.jvm.count-array',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.count-array/org.apache.streampipes.processors.transformation.jvm.count-array', '217'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.csvmetadata/org.apache.streampipes.processors.transformation.jvm.csvmetadata',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.csvmetadata/org.apache.streampipes.processors.transformation.jvm.csvmetadata', '143'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.duration-value/org.apache.streampipes.processors.transformation.jvm.duration-value',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.duration-value/org.apache.streampipes.processors.transformation.jvm.duration-value', '9f8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor', '501'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.split-array/org.apache.streampipes.processors.transformation.jvm.split-array',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.split-array/org.apache.streampipes.processors.transformation.jvm.split-array', '7d2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.taskduration/org.apache.streampipes.processors.transformation.jvm.taskduration',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.taskduration/org.apache.streampipes.processors.transformation.jvm.taskduration', '53c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean', 'a3a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.bufferrest/org.apache.streampipes.sinks.brokers.jvm.bufferrest',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.bufferrest/org.apache.streampipes.sinks.brokers.jvm.bufferrest', '833'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.jms/org.apache.streampipes.sinks.brokers.jvm.jms',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.jms/org.apache.streampipes.sinks.brokers.jvm.jms', '677'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.kafka/org.apache.streampipes.sinks.brokers.jvm.kafka',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.kafka/org.apache.streampipes.sinks.brokers.jvm.kafka', '2f2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.pulsar/org.apache.streampipes.sinks.brokers.jvm.pulsar',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.pulsar/org.apache.streampipes.sinks.brokers.jvm.pulsar', 'f2d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.rabbitmq/org.apache.streampipes.sinks.brokers.jvm.rabbitmq',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.rabbitmq/org.apache.streampipes.sinks.brokers.jvm.rabbitmq', 'c34'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.rest/org.apache.streampipes.sinks.brokers.jvm.rest',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.rest/org.apache.streampipes.sinks.brokers.jvm.rest', 'f47'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.databases.ditto/org.apache.streampipes.sinks.databases.ditto',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.databases.ditto/org.apache.streampipes.sinks.databases.ditto', '529'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.databases.flink.elasticsearch/org.apache.streampipes.sinks.databases.flink.elasticsearch',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.databases.flink.elasticsearch/org.apache.streampipes.sinks.databases.flink.elasticsearch', '72c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.couchdb/org.apache.streampipes.sinks.databases.jvm.couchdb',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.couchdb/org.apache.streampipes.sinks.databases.jvm.couchdb', '533'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.influxdb/org.apache.streampipes.sinks.databases.jvm.influxdb',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.influxdb/org.apache.streampipes.sinks.databases.jvm.influxdb', '91c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.iotdb/org.apache.streampipes.sinks.databases.jvm.iotdb',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.iotdb/org.apache.streampipes.sinks.databases.jvm.iotdb', '3cb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.opcua/org.apache.streampipes.sinks.databases.jvm.opcua',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.opcua/org.apache.streampipes.sinks.databases.jvm.opcua', 'ef8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.postgresql/org.apache.streampipes.sinks.databases.jvm.postgresql',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.postgresql/org.apache.streampipes.sinks.databases.jvm.postgresql', '0bf'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.internal.jvm.dashboard/org.apache.streampipes.sinks.internal.jvm.dashboard',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.internal.jvm.dashboard/org.apache.streampipes.sinks.internal.jvm.dashboard', '772'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.internal.jvm.datalake/org.apache.streampipes.sinks.internal.jvm.datalake',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.internal.jvm.datalake/org.apache.streampipes.sinks.internal.jvm.datalake', '0eb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.internal.jvm.notification/org.apache.streampipes.sinks.internal.jvm.notification',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.internal.jvm.notification/org.apache.streampipes.sinks.internal.jvm.notification', 'ef6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.notifications.jvm.email/org.apache.streampipes.sinks.notifications.jvm.email',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.notifications.jvm.email/org.apache.streampipes.sinks.notifications.jvm.email', '481'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.notifications.jvm.onesignal/org.apache.streampipes.sinks.notifications.jvm.onesignal',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.notifications.jvm.onesignal/org.apache.streampipes.sinks.notifications.jvm.onesignal', 'e69'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.notifications.jvm.slack/org.apache.streampipes.sinks.notifications.jvm.slack',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/org.apache.streampipes.sinks.notifications.jvm.slack/org.apache.streampipes.sinks.notifications.jvm.slack', '7aa'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.coindesk',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.coindesk', '5e0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.gdelt',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.gdelt', 'c3a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.iex.news',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.iex.news', '48d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.iex.stocks',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.iex.stocks', '013'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.image.set',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.image.set', '09d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.image.stream',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.image.stream', 'a21'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.influxdb.set',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.influxdb.set', '01d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.influxdb.stream',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.influxdb.stream', '796'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.iss',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.iss', 'e08'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.mysql.set',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.mysql.set', '9fb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.mysql.stream',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.mysql.stream', 'd38'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.netio.mqtt',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.netio.mqtt', 'd07'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.netio.rest',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.netio.rest', '99a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera', '58e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.opcua',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.opcua', '869'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.plc4x.s7',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.plc4x.s7', '271'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.ros',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.ros', 'f71'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.simulator.randomdataset',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.simulator.randomdataset', '121'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.simulator.randomdatastream',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.simulator.randomdatastream', '44f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.slack',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.slack', 'fca'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.ti',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.ti', 'f35'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.wikipedia.edit',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.wikipedia.edit', '17a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.wikipedia.new',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.adapters.wikipedia.new', 'f08'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.file',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.file', 'e04'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.http',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.http', 'fd2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.kafka',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.kafka', 'c23'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.mqtt',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.mqtt', '091'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.pulsar',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.pulsar', '12e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processor.geo.flink',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processor.geo.flink', '92f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processor.geo.jvm.geocoding',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processor.geo.jvm.geocoding', '710'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding', '570'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding', '95a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification', '5bb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper', '3c0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher', '882'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.qrcode',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.qrcode', 'e45'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.aggregation',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.aggregation', '567'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.count',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.count', '814'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.eventcount',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.eventcount', '38e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.rate',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.rate', 'a63'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.math.mathop',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.math.mathop', 'a32'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop', '212'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.trigonometry',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.trigonometry', 'f42'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing', '75b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.timestamp',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.timestamp', '5fa'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.enricher.jvm.sizemeasure',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.enricher.jvm.sizemeasure', '93f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.compose',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.compose', '626'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.enrich',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.enrich', '815'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.merge',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.merge', '4a8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.numericalfilter',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.numericalfilter', '2f5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.numericaltextfilter',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.numericaltextfilter', '55a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.project',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.project', '847'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.textfilter',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.textfilter', 'c72'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.threshold',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.threshold', '271'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo', '254'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG', '5aa'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory', '50e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator', 'c57'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.processor.speed',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.processor.speed', '25a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator', '49a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.absence',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.absence', '1ae'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.and',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.and', 'c59'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection', '17c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.sequence',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.sequence', '80c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.frequency',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.frequency', 'b62'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.frequencychange',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.frequencychange', '758'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.increase',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.increase', 'd44'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.numericalfilter',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.numericalfilter', '6f2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.sequence',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.sequence', 'f0c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.stop',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.stop', 'a5f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.statistics.flink.statistics-summary',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.statistics.flink.statistics-summary', '6dd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.textmining.flink.languagedetection',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.textmining.flink.languagedetection', '699'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.textmining.flink.wordcount',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.textmining.flink.wordcount', 'a81'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.chunker',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.chunker', '2ec'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.languagedetection',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.languagedetection', '935'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.namefinder',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.namefinder', '579'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.partofspeech',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.partofspeech', '1fb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.sentencedetection',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.sentencedetection', '2b4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.tokenizer',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.tokenizer', '3e5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.field-converter',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.field-converter', 'de7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.field-mapper',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.field-mapper', 'e1b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.field-renamer',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.field-renamer', '3cf'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher', 'ce7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter', '9b5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.processor.boilerplate',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.processor.boilerplate', 'edb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter', '28f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter', '774'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping', 'a78'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timer',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timer', '985'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.changed-value',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.changed-value', 'f01'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.count-array',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.count-array', 'a48'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata', '72b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.duration-value',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.duration-value', '002'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor', 'd71'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.split-array',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.split-array', '679'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter', '696'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer', '58a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.taskduration',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.taskduration', 'f95'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean', 'd06'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.protocol.set.file',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.protocol.set.file', 'de0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.protocol.set.http',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.protocol.set.http', '3cf'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest', '0a8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.jms',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.jms', 'b51'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.kafka',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.kafka', '56c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.mqtt',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.mqtt', 'd50'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.pulsar',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.pulsar', 'f73'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq', 'fca'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.rest',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.rest', '368'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.databases.ditto',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.databases.ditto', '068'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.databases.flink.elasticsearch',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.databases.flink.elasticsearch', '830'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.couchdb',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.couchdb', '846'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.influxdb',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.influxdb', 'b19'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.iotdb',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.iotdb', '3ab'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.opcua',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.opcua', 'e9e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.postgresql',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.postgresql', '363'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.internal.jvm.dashboard',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.internal.jvm.dashboard', 'a6c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.internal.jvm.datalake',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.internal.jvm.datalake', '8c7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.internal.jvm.notification',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.internal.jvm.notification', '57a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.email',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.email', '26c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.onesignal',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.onesignal', '465'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.slack',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.slack', '8c7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/user-guide-first-steps',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/user-guide-first-steps', 'ccd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/user-guide-installation',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/user-guide-installation', 'f06'),
-        exact: true
-      },
-      {
-        path: '/docs/0.64.0-pre-asf/user-guide-tour',
-        component: ComponentCreator('/docs/0.64.0-pre-asf/user-guide-tour', 'd2a'),
-        exact: true
-      }
-    ]
-  },
-  {
-    path: '/docs/0.65.0-pre-asf',
-    component: ComponentCreator('/docs/0.65.0-pre-asf', '197'),
-    routes: [
-      {
-        path: '/docs/0.65.0-pre-asf/community-get-help',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/community-get-help', '77c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/dev-guide-archetype',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/dev-guide-archetype', '789'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/dev-guide-configuration',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/dev-guide-configuration', '893'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/dev-guide-development-environment',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/dev-guide-development-environment', '99e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/dev-guide-output-strategies',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/dev-guide-output-strategies', 'd99'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/dev-guide-static-properties',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/dev-guide-static-properties', '84b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/dev-guide-stream-requirements',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/dev-guide-stream-requirements', 'b42'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/dev-guide-tutorial-processors',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/dev-guide-tutorial-processors', '709'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/dev-guide-tutorial-sinks',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/dev-guide-tutorial-sinks', '2c2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/dev-guide-tutorial-sources',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/dev-guide-tutorial-sources', '4ae'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/extend-sdk-event-model',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/extend-sdk-event-model', 'c43'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/extend-sdk-stream-requirements',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/extend-sdk-stream-requirements', '316'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/extend-setup',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/extend-setup', '3fe'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/extend-tutorial-data-processors',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/extend-tutorial-data-processors', 'db1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/extend-tutorial-data-sinks',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/extend-tutorial-data-sinks', 'b9f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/extend-tutorial-data-sources',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/extend-tutorial-data-sources', 'a0f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processor.geo.flink/org.apache.streampipes.processor.geo.flink',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processor.geo.flink/org.apache.streampipes.processor.geo.flink', '723'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processor.geo.jvm.geocoding/org.apache.streampipes.processor.geo.jvm.geocoding',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processor.geo.jvm.geocoding/org.apache.streampipes.processor.geo.jvm.geocoding', 'a09'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processor.geo.jvm.reversegeocoding/org.apache.streampipes.processor.geo.jvm.reversegeocoding',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processor.geo.jvm.reversegeocoding/org.apache.streampipes.processor.geo.jvm.reversegeocoding', 'ba0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processor.geo.jvm.staticgeocoding/org.apache.streampipes.processor.geo.jvm.staticgeocoding',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processor.geo.jvm.staticgeocoding/org.apache.streampipes.processor.geo.jvm.staticgeocoding', 'ede'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification', '83b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processor.imageclassification.jvm.image-enricher/org.apache.streampipes.processor.imageclassification.jvm.image-enricher',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processor.imageclassification.jvm.image-enricher/org.apache.streampipes.processor.imageclassification.jvm.image-enricher', 'e75'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processor.imageclassification.qrcode/org.apache.streampipes.processor.imageclassification.qrcode',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processor.imageclassification.qrcode/org.apache.streampipes.processor.imageclassification.qrcode', 'e92'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.aggregation/org.apache.streampipes.processors.aggregation.flink.aggregation',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.aggregation/org.apache.streampipes.processors.aggregation.flink.aggregation', '694'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.eventcount/org.apache.streampipes.processors.aggregation.flink.eventcount',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.eventcount/org.apache.streampipes.processors.aggregation.flink.eventcount', '0f5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.rate/org.apache.streampipes.processors.aggregation.flink.rate',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.aggregation.flink.rate/org.apache.streampipes.processors.aggregation.flink.rate', '0d6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.math.mathop/org.apache.streampipes.processors.enricher.flink.processor.math.mathop',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.math.mathop/org.apache.streampipes.processors.enricher.flink.processor.math.mathop', '2e9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop', '391'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.trigonometry/org.apache.streampipes.processors.enricher.flink.processor.trigonometry',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.trigonometry/org.apache.streampipes.processors.enricher.flink.processor.trigonometry', 'dd4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing', 'e99'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.enricher.flink.timestamp/org.apache.streampipes.processors.enricher.flink.timestamp',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.enricher.flink.timestamp/org.apache.streampipes.processors.enricher.flink.timestamp', '338'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.enricher.jvm.sizemeasure/org.apache.streampipes.processors.enricher.jvm.sizemeasure',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.enricher.jvm.sizemeasure/org.apache.streampipes.processors.enricher.jvm.sizemeasure', '5ce'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.compose/org.apache.streampipes.processors.filters.jvm.compose',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.compose/org.apache.streampipes.processors.filters.jvm.compose', '61a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.enrich/org.apache.streampipes.processors.filters.jvm.enrich',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.enrich/org.apache.streampipes.processors.filters.jvm.enrich', '8d9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.merge/org.apache.streampipes.processors.filters.jvm.merge',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.merge/org.apache.streampipes.processors.filters.jvm.merge', '076'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.numericalfilter/org.apache.streampipes.processors.filters.jvm.numericalfilter',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.numericalfilter/org.apache.streampipes.processors.filters.jvm.numericalfilter', 'ad7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.numericaltextfilter/org.apache.streampipes.processors.filters.jvm.numericaltextfilter',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.numericaltextfilter/org.apache.streampipes.processors.filters.jvm.numericaltextfilter', '3ee'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.project/org.apache.streampipes.processors.filters.jvm.project',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.project/org.apache.streampipes.processors.filters.jvm.project', '954'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.textfilter/org.apache.streampipes.processors.filters.jvm.textfilter',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.textfilter/org.apache.streampipes.processors.filters.jvm.textfilter', '269'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.threshold/org.apache.streampipes.processors.filters.jvm.threshold',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.filters.jvm.threshold/org.apache.streampipes.processors.filters.jvm.threshold', 'a32'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator', 'b64'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.pattern-detection.flink.peak-detection/org.apache.streampipes.processors.pattern-detection.flink.peak-detection',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.pattern-detection.flink.peak-detection/org.apache.streampipes.processors.pattern-detection.flink.peak-detection', '6c7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.siddhi.frequency/org.apache.streampipes.processors.siddhi.frequency',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.siddhi.frequency/org.apache.streampipes.processors.siddhi.frequency', 'a4a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.siddhi.frequencychange/org.apache.streampipes.processors.siddhi.frequencychange',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.siddhi.frequencychange/org.apache.streampipes.processors.siddhi.frequencychange', '774'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.siddhi.increase/org.apache.streampipes.processors.siddhi.increase',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.siddhi.increase/org.apache.streampipes.processors.siddhi.increase', 'ab6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.siddhi.numericalfilter/org.apache.streampipes.processors.siddhi.numericalfilter',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.siddhi.numericalfilter/org.apache.streampipes.processors.siddhi.numericalfilter', '231'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.siddhi.sequence/org.apache.streampipes.processors.siddhi.sequence',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.siddhi.sequence/org.apache.streampipes.processors.siddhi.sequence', '260'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.siddhi.stop/org.apache.streampipes.processors.siddhi.stop',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.siddhi.stop/org.apache.streampipes.processors.siddhi.stop', '158'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.textmining.flink.languagedetection/org.apache.streampipes.processors.textmining.flink.languagedetection',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.textmining.flink.languagedetection/org.apache.streampipes.processors.textmining.flink.languagedetection', '6d9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.textmining.flink.wordcount/org.apache.streampipes.processors.textmining.flink.wordcount',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.textmining.flink.wordcount/org.apache.streampipes.processors.textmining.flink.wordcount', '111'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.chunker/org.apache.streampipes.processors.textmining.jvm.chunker',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.chunker/org.apache.streampipes.processors.textmining.jvm.chunker', 'f73'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.languagedetection/org.apache.streampipes.processors.textmining.jvm.languagedetection',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.languagedetection/org.apache.streampipes.processors.textmining.jvm.languagedetection', '3d7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.namefinder/org.apache.streampipes.processors.textmining.jvm.namefinder',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.namefinder/org.apache.streampipes.processors.textmining.jvm.namefinder', '225'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.partofspeech/org.apache.streampipes.processors.textmining.jvm.partofspeech',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.partofspeech/org.apache.streampipes.processors.textmining.jvm.partofspeech', '700'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.sentencedetection/org.apache.streampipes.processors.textmining.jvm.sentencedetection',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.sentencedetection/org.apache.streampipes.processors.textmining.jvm.sentencedetection', '015'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.tokenizer/org.apache.streampipes.processors.textmining.jvm.tokenizer',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.textmining.jvm.tokenizer/org.apache.streampipes.processors.textmining.jvm.tokenizer', 'e95'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.flink.field-converter/org.apache.streampipes.processors.transformation.flink.field-converter',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.flink.field-converter/org.apache.streampipes.processors.transformation.flink.field-converter', 'bac'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.flink.field-mapper/org.apache.streampipes.processors.transformation.flink.field-mapper',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.flink.field-mapper/org.apache.streampipes.processors.transformation.flink.field-mapper', '4b3'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.flink.field-renamer/org.apache.streampipes.processors.transformation.flink.field-renamer',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.flink.field-renamer/org.apache.streampipes.processors.transformation.flink.field-renamer', '48a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.flink.fieldhasher/org.apache.streampipes.processors.transformation.flink.fieldhasher',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.flink.fieldhasher/org.apache.streampipes.processors.transformation.flink.fieldhasher', 'abc'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter', '5e2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.flink.processor.boilerplate/org.apache.streampipes.processors.transformation.flink.processor.boilerplate',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.flink.processor.boilerplate/org.apache.streampipes.processors.transformation.flink.processor.boilerplate', '20d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.counter/org.apache.streampipes.processors.transformation.jvm.booloperator.counter',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.counter/org.apache.streampipes.processors.transformation.jvm.booloperator.counter', '336'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter', '7c0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping', '3d2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.timer/org.apache.streampipes.processors.transformation.jvm.booloperator.timer',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.booloperator.timer/org.apache.streampipes.processors.transformation.jvm.booloperator.timer', 'd75'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.changed-value/org.apache.streampipes.processors.transformation.jvm.changed-value',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.changed-value/org.apache.streampipes.processors.transformation.jvm.changed-value', '30a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.count-array/org.apache.streampipes.processors.transformation.jvm.count-array',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.count-array/org.apache.streampipes.processors.transformation.jvm.count-array', '7e5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.csvmetadata/org.apache.streampipes.processors.transformation.jvm.csvmetadata',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.csvmetadata/org.apache.streampipes.processors.transformation.jvm.csvmetadata', '380'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.duration-value/org.apache.streampipes.processors.transformation.jvm.duration-value',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.duration-value/org.apache.streampipes.processors.transformation.jvm.duration-value', '140'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor', 'a50'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.split-array/org.apache.streampipes.processors.transformation.jvm.split-array',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.split-array/org.apache.streampipes.processors.transformation.jvm.split-array', '30c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.taskduration/org.apache.streampipes.processors.transformation.jvm.taskduration',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.taskduration/org.apache.streampipes.processors.transformation.jvm.taskduration', '00d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean', 'af5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.bufferrest/org.apache.streampipes.sinks.brokers.jvm.bufferrest',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.bufferrest/org.apache.streampipes.sinks.brokers.jvm.bufferrest', '162'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.jms/org.apache.streampipes.sinks.brokers.jvm.jms',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.jms/org.apache.streampipes.sinks.brokers.jvm.jms', '5be'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.kafka/org.apache.streampipes.sinks.brokers.jvm.kafka',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.kafka/org.apache.streampipes.sinks.brokers.jvm.kafka', '7c6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.pulsar/org.apache.streampipes.sinks.brokers.jvm.pulsar',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.pulsar/org.apache.streampipes.sinks.brokers.jvm.pulsar', '575'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.rabbitmq/org.apache.streampipes.sinks.brokers.jvm.rabbitmq',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.rabbitmq/org.apache.streampipes.sinks.brokers.jvm.rabbitmq', '21c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.rest/org.apache.streampipes.sinks.brokers.jvm.rest',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.brokers.jvm.rest/org.apache.streampipes.sinks.brokers.jvm.rest', 'fad'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.databases.ditto/org.apache.streampipes.sinks.databases.ditto',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.databases.ditto/org.apache.streampipes.sinks.databases.ditto', 'c66'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.databases.flink.elasticsearch/org.apache.streampipes.sinks.databases.flink.elasticsearch',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.databases.flink.elasticsearch/org.apache.streampipes.sinks.databases.flink.elasticsearch', 'b8d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.couchdb/org.apache.streampipes.sinks.databases.jvm.couchdb',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.couchdb/org.apache.streampipes.sinks.databases.jvm.couchdb', '3bf'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.influxdb/org.apache.streampipes.sinks.databases.jvm.influxdb',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.influxdb/org.apache.streampipes.sinks.databases.jvm.influxdb', '729'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.iotdb/org.apache.streampipes.sinks.databases.jvm.iotdb',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.iotdb/org.apache.streampipes.sinks.databases.jvm.iotdb', '5c9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.opcua/org.apache.streampipes.sinks.databases.jvm.opcua',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.opcua/org.apache.streampipes.sinks.databases.jvm.opcua', '187'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.postgresql/org.apache.streampipes.sinks.databases.jvm.postgresql',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.databases.jvm.postgresql/org.apache.streampipes.sinks.databases.jvm.postgresql', 'f89'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.internal.jvm.dashboard/org.apache.streampipes.sinks.internal.jvm.dashboard',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.internal.jvm.dashboard/org.apache.streampipes.sinks.internal.jvm.dashboard', '4ce'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.internal.jvm.datalake/org.apache.streampipes.sinks.internal.jvm.datalake',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.internal.jvm.datalake/org.apache.streampipes.sinks.internal.jvm.datalake', '342'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.internal.jvm.notification/org.apache.streampipes.sinks.internal.jvm.notification',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.internal.jvm.notification/org.apache.streampipes.sinks.internal.jvm.notification', 'ffe'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.notifications.jvm.email/org.apache.streampipes.sinks.notifications.jvm.email',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.notifications.jvm.email/org.apache.streampipes.sinks.notifications.jvm.email', '1d2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.notifications.jvm.onesignal/org.apache.streampipes.sinks.notifications.jvm.onesignal',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.notifications.jvm.onesignal/org.apache.streampipes.sinks.notifications.jvm.onesignal', '685'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.notifications.jvm.slack/org.apache.streampipes.sinks.notifications.jvm.slack',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/org.apache.streampipes.sinks.notifications.jvm.slack/org.apache.streampipes.sinks.notifications.jvm.slack', '16c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.coindesk',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.coindesk', '7db'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.gdelt',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.gdelt', 'c31'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.iex.news',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.iex.news', 'dbd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.iex.stocks',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.iex.stocks', '7f4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.image.set',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.image.set', '59e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.image.stream',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.image.stream', '3ee'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.influxdb.set',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.influxdb.set', 'e46'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.influxdb.stream',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.influxdb.stream', '35a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.iss',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.iss', '9e0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.mysql.set',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.mysql.set', '151'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.mysql.stream',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.mysql.stream', 'f99'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.netio.mqtt',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.netio.mqtt', 'ed7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.netio.rest',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.netio.rest', '661'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera', '376'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.opcua',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.opcua', '687'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.plc4x.s7',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.plc4x.s7', 'b98'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.ros',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.ros', '1eb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.simulator.randomdataset',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.simulator.randomdataset', '36b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.simulator.randomdatastream',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.simulator.randomdatastream', '247'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.slack',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.slack', '711'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.ti',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.ti', '0b8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.wikipedia.edit',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.wikipedia.edit', '235'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.wikipedia.new',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.adapters.wikipedia.new', '40a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.file',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.file', '77e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.http',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.http', '77a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.kafka',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.kafka', '2bd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.mqtt',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.mqtt', 'd7f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.pulsar',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.connect.protocol.stream.pulsar', 'dbd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processor.geo.flink',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processor.geo.flink', '6e3'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processor.geo.jvm.geocoding',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processor.geo.jvm.geocoding', '6d5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding', '6fb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding', '930'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification', '895'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper', 'a1c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher', 'c8e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.qrcode',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processor.imageclassification.qrcode', '15d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.aggregation',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.aggregation', 'f38'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.count',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.count', 'fd2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.eventcount',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.eventcount', 'de9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.rate',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.aggregation.flink.rate', '995'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.math.mathop',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.math.mathop', 'eff'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop', 'e59'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.trigonometry',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.trigonometry', 'd52'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing', '0e3'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.timestamp',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.enricher.flink.timestamp', 'd42'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.enricher.jvm.sizemeasure',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.enricher.jvm.sizemeasure', 'be3'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.compose',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.compose', 'a57'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.enrich',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.enrich', 'fd0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.merge',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.merge', '3a9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.numericalfilter',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.numericalfilter', '243'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.numericaltextfilter',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.numericaltextfilter', 'd61'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.project',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.project', '746'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.textfilter',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.textfilter', 'a55'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.threshold',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.filters.jvm.threshold', '97c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo', 'a6d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG', '6bc'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory', '2c9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator', '851'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.processor.speed',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.processor.speed', 'd4c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator', 'ddb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.absence',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.absence', '557'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.and',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.and', 'aca'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection', 'd8f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.sequence',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.pattern-detection.flink.sequence', 'efa'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.frequency',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.frequency', 'ba8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.frequencychange',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.frequencychange', '6a1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.increase',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.increase', '456'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.numericalfilter',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.numericalfilter', '850'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.sequence',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.sequence', 'f80'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.stop',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.siddhi.stop', 'd6e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.statistics.flink.statistics-summary',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.statistics.flink.statistics-summary', 'baf'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.textmining.flink.languagedetection',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.textmining.flink.languagedetection', 'a3c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.textmining.flink.wordcount',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.textmining.flink.wordcount', 'b49'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.chunker',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.chunker', 'f8d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.languagedetection',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.languagedetection', 'ddc'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.namefinder',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.namefinder', '031'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.partofspeech',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.partofspeech', '2ce'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.sentencedetection',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.sentencedetection', '391'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.tokenizer',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.textmining.jvm.tokenizer', '650'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.field-converter',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.field-converter', '9cc'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.field-mapper',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.field-mapper', '0e2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.field-renamer',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.field-renamer', '2d7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher', 'c91'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter', 'a21'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.processor.boilerplate',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.flink.processor.boilerplate', 'd3a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter', 'a62'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter', 'aaa'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping', 'a17'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timer',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timer', 'fde'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.changed-value',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.changed-value', '1d4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.count-array',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.count-array', '192'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata', '174'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.duration-value',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.duration-value', '67e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor', '06c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.split-array',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.split-array', 'f7b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter', 'c58'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer', 'd3c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.taskduration',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.taskduration', '8c3'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean', 'c5e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.protocol.set.file',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.protocol.set.file', '121'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.protocol.set.http',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.protocol.set.http', 'a0a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest', 'a96'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.jms',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.jms', '0c0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.kafka',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.kafka', 'dac'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.mqtt',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.mqtt', '7d3'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.pulsar',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.pulsar', '130'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq', 'bf2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.rest',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.brokers.jvm.rest', '1e9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.databases.ditto',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.databases.ditto', '5f5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.databases.flink.elasticsearch',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.databases.flink.elasticsearch', '38b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.couchdb',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.couchdb', '34a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.influxdb',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.influxdb', '441'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.iotdb',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.iotdb', 'cbd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.opcua',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.opcua', '256'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.postgresql',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.databases.jvm.postgresql', '3be'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.internal.jvm.dashboard',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.internal.jvm.dashboard', 'd0e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.internal.jvm.datalake',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.internal.jvm.datalake', '640'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.internal.jvm.notification',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.internal.jvm.notification', 'de7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.email',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.email', 'f2f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.onesignal',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.onesignal', '3c3'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.slack',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/org.apache.streampipes.sinks.notifications.jvm.slack', 'f52'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.connect.adapters.flic.mqtt',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.connect.adapters.flic.mqtt', 'c18'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.connect.adapters.plc4x.modbus',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.connect.adapters.plc4x.modbus', 'f87'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.connect.adapters.simulator.machine',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.connect.adapters.simulator.machine', '0a9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.connect.protocol.stream.httpserver',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.connect.protocol.stream.httpserver', '07c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.processors.changedetection.jvm.cusum',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.processors.changedetection.jvm.cusum', '764'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.processors.filters.jvm.limit',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.processors.filters.jvm.limit', '1c7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge', '95b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state', '2fb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.buffer',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.buffer', '2e9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer', 'e11'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number', 'fbd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state', 'c1d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.sinks.brokers.jvm.nats',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.sinks.brokers.jvm.nats', '308'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.sinks.databases.jvm.mysql',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.sinks.databases.jvm.mysql', '852'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.sinks.notifications.jvm.telegram',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/pe/version-0.68.0-org.apache.streampipes.sinks.notifications.jvm.telegram', '55e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/user-guide-first-steps',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/user-guide-first-steps', '465'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/user-guide-installation',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/user-guide-installation', '538'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/user-guide-tour',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/user-guide-tour', '23f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-community-contribute',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-community-contribute', 'b0e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-concepts-adapter',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-concepts-adapter', '03e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-concepts-data-streams',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-concepts-data-streams', '951'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-concepts-glossary',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-concepts-glossary', 'fe5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-concepts-overview',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-concepts-overview', '4cc'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-concepts-pipelines',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-concepts-pipelines', 'f6f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-debugging-debugging',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-debugging-debugging', '2c1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-debugging-monitoring',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-debugging-monitoring', '625'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-deploy-docker',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-deploy-docker', '9b5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-deploy-kubernetes',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-deploy-kubernetes', '13b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-deploy-use-ssl',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-deploy-use-ssl', 'e6c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-extend-archetypes',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-extend-archetypes', '795'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-extend-cli',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-extend-cli', '3b0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-extend-sdk-output-strategies',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-extend-sdk-output-strategies', 'aba'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-extend-sdk-static-properties',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-extend-sdk-static-properties', '0e1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-technicals-architecture',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-technicals-architecture', '945'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-technicals-configuration',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-technicals-configuration', '1b0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-technicals-messaging',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-technicals-messaging', '6ce'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-technicals-runtime-wrappers',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-technicals-runtime-wrappers', 'a8e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-technicals-user-guidance',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-technicals-user-guidance', '6a8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-try-installation',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-try-installation', '5d1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-try-tutorial',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-try-tutorial', '2d9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-use-configurations',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-use-configurations', 'dd0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-use-connect',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-use-connect', '56c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-use-dashboard',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-use-dashboard', '9e9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-use-data-explorer',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-use-data-explorer', '6ad'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-use-install-pipeline-elements',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-use-install-pipeline-elements', '731'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-use-managing-pipelines',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-use-managing-pipelines', '196'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-use-notifications',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-use-notifications', 'c91'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-use-pipeline-editor',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-use-pipeline-editor', '6a2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-user-guide-introduction',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-user-guide-introduction', '2e2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.65.0-pre-asf/version-0.67.0-user-guide-introduction-old',
-        component: ComponentCreator('/docs/0.65.0-pre-asf/version-0.67.0-user-guide-introduction-old', '2d8'),
-        exact: true
-      }
-    ]
-  },
-  {
-    path: '/docs/0.66.0',
-    component: ComponentCreator('/docs/0.66.0', 'd0b'),
-    routes: [
-      {
-        path: '/docs/0.66.0/community-contribute',
-        component: ComponentCreator('/docs/0.66.0/community-contribute', '55c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/community-get-help',
-        component: ComponentCreator('/docs/0.66.0/community-get-help', '971'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/concepts-adapter',
-        component: ComponentCreator('/docs/0.66.0/concepts-adapter', '819'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/concepts-data-streams',
-        component: ComponentCreator('/docs/0.66.0/concepts-data-streams', 'c77'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/concepts-glossary',
-        component: ComponentCreator('/docs/0.66.0/concepts-glossary', '5c9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/concepts-overview',
-        component: ComponentCreator('/docs/0.66.0/concepts-overview', '434'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/concepts-pipelines',
-        component: ComponentCreator('/docs/0.66.0/concepts-pipelines', '569'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/debugging-debugging',
-        component: ComponentCreator('/docs/0.66.0/debugging-debugging', '3e2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/debugging-monitoring',
-        component: ComponentCreator('/docs/0.66.0/debugging-monitoring', '3a9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/deploy-docker',
-        component: ComponentCreator('/docs/0.66.0/deploy-docker', '872'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/deploy-kubernetes',
-        component: ComponentCreator('/docs/0.66.0/deploy-kubernetes', 'b65'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/deploy-security',
-        component: ComponentCreator('/docs/0.66.0/deploy-security', '374'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/deploy-use-ssl',
-        component: ComponentCreator('/docs/0.66.0/deploy-use-ssl', 'c77'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/dev-guide-archetype',
-        component: ComponentCreator('/docs/0.66.0/dev-guide-archetype', 'c55'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/dev-guide-configuration',
-        component: ComponentCreator('/docs/0.66.0/dev-guide-configuration', '7f8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/dev-guide-development-environment',
-        component: ComponentCreator('/docs/0.66.0/dev-guide-development-environment', '752'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/dev-guide-output-strategies',
-        component: ComponentCreator('/docs/0.66.0/dev-guide-output-strategies', '15b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/dev-guide-static-properties',
-        component: ComponentCreator('/docs/0.66.0/dev-guide-static-properties', 'dd0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/dev-guide-stream-requirements',
-        component: ComponentCreator('/docs/0.66.0/dev-guide-stream-requirements', 'ce6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/dev-guide-tutorial-sources',
-        component: ComponentCreator('/docs/0.66.0/dev-guide-tutorial-sources', 'e16'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/extend-archetypes',
-        component: ComponentCreator('/docs/0.66.0/extend-archetypes', '24b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/extend-cli',
-        component: ComponentCreator('/docs/0.66.0/extend-cli', 'a8a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/extend-first-processor',
-        component: ComponentCreator('/docs/0.66.0/extend-first-processor', '4ab'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/extend-sdk-event-model',
-        component: ComponentCreator('/docs/0.66.0/extend-sdk-event-model', 'ea5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/extend-sdk-migration-service-discovery',
-        component: ComponentCreator('/docs/0.66.0/extend-sdk-migration-service-discovery', 'c8a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/extend-sdk-output-strategies',
-        component: ComponentCreator('/docs/0.66.0/extend-sdk-output-strategies', 'ea8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/extend-sdk-static-properties',
-        component: ComponentCreator('/docs/0.66.0/extend-sdk-static-properties', '63c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/extend-sdk-stream-requirements',
-        component: ComponentCreator('/docs/0.66.0/extend-sdk-stream-requirements', '7da'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/extend-setup',
-        component: ComponentCreator('/docs/0.66.0/extend-setup', '244'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/extend-tutorial-data-processors',
-        component: ComponentCreator('/docs/0.66.0/extend-tutorial-data-processors', '344'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/extend-tutorial-data-sinks',
-        component: ComponentCreator('/docs/0.66.0/extend-tutorial-data-sinks', '366'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/extend-tutorial-data-sources',
-        component: ComponentCreator('/docs/0.66.0/extend-tutorial-data-sources', '2d5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.coindesk',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.coindesk', '9d1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.gdelt',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.gdelt', 'afa'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.iex.news',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.iex.news', 'fe1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.iex.stocks',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.iex.stocks', '39f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.image.set',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.image.set', 'eb7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.image.stream',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.image.stream', 'ff1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.influxdb.set',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.influxdb.set', 'fff'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.influxdb.stream',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.influxdb.stream', 'cc0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.iss',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.iss', '1b4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.mysql.set',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.mysql.set', 'f87'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.mysql.stream',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.mysql.stream', 'caa'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.netio.mqtt',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.netio.mqtt', '473'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.netio.rest',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.netio.rest', '490'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera', 'fc5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.opcua',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.opcua', 'd22'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.plc4x.s7',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.plc4x.s7', '585'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.ros',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.ros', 'f4e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.simulator.randomdataset',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.simulator.randomdataset', 'ddc'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.simulator.randomdatastream',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.simulator.randomdatastream', 'c26'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.slack',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.slack', '652'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.ti',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.ti', '943'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.wikipedia.edit',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.wikipedia.edit', '004'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.wikipedia.new',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.adapters.wikipedia.new', 'e4b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.protocol.stream.file',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.protocol.stream.file', 'c93'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.protocol.stream.http',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.protocol.stream.http', 'afb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.protocol.stream.kafka',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.protocol.stream.kafka', '725'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.protocol.stream.mqtt',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.protocol.stream.mqtt', '338'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.connect.protocol.stream.pulsar',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.connect.protocol.stream.pulsar', 'aad'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processor.geo.flink',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processor.geo.flink', '298'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processor.geo.jvm.geocoding',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processor.geo.jvm.geocoding', '00c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding', 'f4b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding', '891'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification', 'c67'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper', '09e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher', 'e64'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processor.imageclassification.qrcode',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processor.imageclassification.qrcode', '6bf'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.aggregation.flink.aggregation',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.aggregation.flink.aggregation', 'b32'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.aggregation.flink.count',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.aggregation.flink.count', '381'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.aggregation.flink.eventcount',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.aggregation.flink.eventcount', 'c9b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.aggregation.flink.rate',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.aggregation.flink.rate', '1c4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.enricher.flink.processor.math.mathop',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.enricher.flink.processor.math.mathop', '257'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop', 'c18'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.enricher.flink.processor.trigonometry',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.enricher.flink.processor.trigonometry', '67c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing', 'd71'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.enricher.flink.timestamp',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.enricher.flink.timestamp', 'fc9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.enricher.jvm.sizemeasure',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.enricher.jvm.sizemeasure', 'eec'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.filters.jvm.compose',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.filters.jvm.compose', '874'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.filters.jvm.enrich',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.filters.jvm.enrich', 'aa6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.filters.jvm.merge',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.filters.jvm.merge', 'aa4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.filters.jvm.numericalfilter',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.filters.jvm.numericalfilter', 'e2a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.filters.jvm.numericaltextfilter',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.filters.jvm.numericaltextfilter', 'd2a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.filters.jvm.project',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.filters.jvm.project', 'a4c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.filters.jvm.textfilter',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.filters.jvm.textfilter', '907'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.filters.jvm.threshold',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.filters.jvm.threshold', '868'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo', '8f4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG', '8ed'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory', '51c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator', 'cae'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.geo.jvm.processor.speed',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.geo.jvm.processor.speed', 'd55'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator', '61d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.pattern-detection.flink.absence',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.pattern-detection.flink.absence', '7f7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.pattern-detection.flink.and',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.pattern-detection.flink.and', '2ef'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection', '810'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.pattern-detection.flink.sequence',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.pattern-detection.flink.sequence', '8f5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.siddhi.frequency',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.siddhi.frequency', '30d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.siddhi.frequencychange',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.siddhi.frequencychange', '7e3'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.siddhi.increase',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.siddhi.increase', 'e03'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.siddhi.numericalfilter',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.siddhi.numericalfilter', 'd5c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.siddhi.sequence',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.siddhi.sequence', 'c62'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.siddhi.stop',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.siddhi.stop', 'bf9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.statistics.flink.statistics-summary',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.statistics.flink.statistics-summary', 'ad2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.textmining.flink.languagedetection',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.textmining.flink.languagedetection', '5d0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.textmining.flink.wordcount',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.textmining.flink.wordcount', '175'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.textmining.jvm.chunker',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.textmining.jvm.chunker', 'a2b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.textmining.jvm.languagedetection',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.textmining.jvm.languagedetection', '9a1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.textmining.jvm.namefinder',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.textmining.jvm.namefinder', '792'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.textmining.jvm.partofspeech',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.textmining.jvm.partofspeech', 'd53'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.textmining.jvm.sentencedetection',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.textmining.jvm.sentencedetection', 'fe9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.textmining.jvm.tokenizer',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.textmining.jvm.tokenizer', 'c41'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.flink.field-converter',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.flink.field-converter', 'bb6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.flink.field-mapper',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.flink.field-mapper', '112'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.flink.field-renamer',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.flink.field-renamer', 'a63'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher', '086'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter', '219'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.flink.processor.boilerplate',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.flink.processor.boilerplate', 'df7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter', '415'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter', '0e9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping', '769'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timer',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timer', '790'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.changed-value',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.changed-value', '808'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.count-array',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.count-array', 'b3c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata', '69d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.duration-value',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.duration-value', '2f6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor', '7fc'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.split-array',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.split-array', '3c7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter', '8ff'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer', '977'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.taskduration',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.taskduration', '1a8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean', '909'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.protocol.set.file',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.protocol.set.file', '18d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.protocol.set.http',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.protocol.set.http', 'a29'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest', 'bd7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.sinks.brokers.jvm.jms',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.sinks.brokers.jvm.jms', '59e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.sinks.brokers.jvm.kafka',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.sinks.brokers.jvm.kafka', '3ba'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.sinks.brokers.jvm.mqtt',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.sinks.brokers.jvm.mqtt', '7d4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.sinks.brokers.jvm.pulsar',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.sinks.brokers.jvm.pulsar', '527'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq', 'b40'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.sinks.brokers.jvm.rest',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.sinks.brokers.jvm.rest', 'e10'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.sinks.databases.ditto',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.sinks.databases.ditto', '102'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.sinks.databases.flink.elasticsearch',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.sinks.databases.flink.elasticsearch', 'e38'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.sinks.databases.jvm.couchdb',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.sinks.databases.jvm.couchdb', '01c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.sinks.databases.jvm.influxdb',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.sinks.databases.jvm.influxdb', '355'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.sinks.databases.jvm.iotdb',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.sinks.databases.jvm.iotdb', '1b5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.sinks.databases.jvm.opcua',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.sinks.databases.jvm.opcua', '558'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.sinks.databases.jvm.postgresql',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.sinks.databases.jvm.postgresql', '46b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.sinks.internal.jvm.dashboard',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.sinks.internal.jvm.dashboard', 'fc4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.sinks.internal.jvm.datalake',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.sinks.internal.jvm.datalake', '157'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.sinks.internal.jvm.notification',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.sinks.internal.jvm.notification', 'a09'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.sinks.notifications.jvm.email',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.sinks.notifications.jvm.email', '455'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.sinks.notifications.jvm.onesignal',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.sinks.notifications.jvm.onesignal', '678'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/org.apache.streampipes.sinks.notifications.jvm.slack',
-        component: ComponentCreator('/docs/0.66.0/pe/org.apache.streampipes.sinks.notifications.jvm.slack', '71a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.connect.adapters.flic.mqtt',
-        component: ComponentCreator('/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.connect.adapters.flic.mqtt', '42f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.connect.adapters.plc4x.modbus',
-        component: ComponentCreator('/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.connect.adapters.plc4x.modbus', '1e5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.connect.adapters.simulator.machine',
-        component: ComponentCreator('/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.connect.adapters.simulator.machine', '2c9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.connect.protocol.stream.httpserver',
-        component: ComponentCreator('/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.connect.protocol.stream.httpserver', '39a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.processors.changedetection.jvm.cusum',
-        component: ComponentCreator('/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.processors.changedetection.jvm.cusum', '2ad'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.processors.filters.jvm.limit',
-        component: ComponentCreator('/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.processors.filters.jvm.limit', 'a68'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge',
-        component: ComponentCreator('/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge', '2e1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state',
-        component: ComponentCreator('/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state', '560'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.buffer',
-        component: ComponentCreator('/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.buffer', '20e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer',
-        component: ComponentCreator('/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer', 'c7e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number',
-        component: ComponentCreator('/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number', '0fa'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state',
-        component: ComponentCreator('/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state', '03f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.sinks.brokers.jvm.nats',
-        component: ComponentCreator('/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.sinks.brokers.jvm.nats', 'bab'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.sinks.databases.jvm.mysql',
-        component: ComponentCreator('/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.sinks.databases.jvm.mysql', 'def'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.sinks.notifications.jvm.telegram',
-        component: ComponentCreator('/docs/0.66.0/pe/version-0.68.0-org.apache.streampipes.sinks.notifications.jvm.telegram', 'd33'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/technicals-architecture',
-        component: ComponentCreator('/docs/0.66.0/technicals-architecture', 'b3c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/technicals-configuration',
-        component: ComponentCreator('/docs/0.66.0/technicals-configuration', 'e17'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/technicals-messaging',
-        component: ComponentCreator('/docs/0.66.0/technicals-messaging', 'e67'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/technicals-runtime-wrappers',
-        component: ComponentCreator('/docs/0.66.0/technicals-runtime-wrappers', '156'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/technicals-user-guidance',
-        component: ComponentCreator('/docs/0.66.0/technicals-user-guidance', '320'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/try-installation',
-        component: ComponentCreator('/docs/0.66.0/try-installation', 'fe9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/try-tutorial',
-        component: ComponentCreator('/docs/0.66.0/try-tutorial', 'a54'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/use-configurations',
-        component: ComponentCreator('/docs/0.66.0/use-configurations', 'c16'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/use-connect',
-        component: ComponentCreator('/docs/0.66.0/use-connect', '2cb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/use-dashboard',
-        component: ComponentCreator('/docs/0.66.0/use-dashboard', '70b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/use-data-explorer',
-        component: ComponentCreator('/docs/0.66.0/use-data-explorer', '3b9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/use-install-pipeline-elements',
-        component: ComponentCreator('/docs/0.66.0/use-install-pipeline-elements', '4be'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/use-managing-pipelines',
-        component: ComponentCreator('/docs/0.66.0/use-managing-pipelines', '705'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/use-notifications',
-        component: ComponentCreator('/docs/0.66.0/use-notifications', '424'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/use-pipeline-editor',
-        component: ComponentCreator('/docs/0.66.0/use-pipeline-editor', '2bd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/user-guide-first-steps',
-        component: ComponentCreator('/docs/0.66.0/user-guide-first-steps', 'f12'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/user-guide-installation',
-        component: ComponentCreator('/docs/0.66.0/user-guide-installation', '65e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/user-guide-introduction',
-        component: ComponentCreator('/docs/0.66.0/user-guide-introduction', '7f8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.66.0/user-guide-introduction-old',
-        component: ComponentCreator('/docs/0.66.0/user-guide-introduction-old', 'ab6'),
-        exact: true
-      }
-    ]
-  },
-  {
-    path: '/docs/0.67.0',
-    component: ComponentCreator('/docs/0.67.0', '610'),
-    routes: [
-      {
-        path: '/docs/0.67.0/community-contribute',
-        component: ComponentCreator('/docs/0.67.0/community-contribute', '394'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/community-get-help',
-        component: ComponentCreator('/docs/0.67.0/community-get-help', '7f9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/concepts-adapter',
-        component: ComponentCreator('/docs/0.67.0/concepts-adapter', 'b39'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/concepts-data-streams',
-        component: ComponentCreator('/docs/0.67.0/concepts-data-streams', 'aa7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/concepts-glossary',
-        component: ComponentCreator('/docs/0.67.0/concepts-glossary', '03d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/concepts-overview',
-        component: ComponentCreator('/docs/0.67.0/concepts-overview', '2d0'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/concepts-pipelines',
-        component: ComponentCreator('/docs/0.67.0/concepts-pipelines', '842'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/debugging-debugging',
-        component: ComponentCreator('/docs/0.67.0/debugging-debugging', '3d9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/debugging-monitoring',
-        component: ComponentCreator('/docs/0.67.0/debugging-monitoring', '10e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/deploy-docker',
-        component: ComponentCreator('/docs/0.67.0/deploy-docker', '817'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/deploy-kubernetes',
-        component: ComponentCreator('/docs/0.67.0/deploy-kubernetes', 'c7e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/deploy-security',
-        component: ComponentCreator('/docs/0.67.0/deploy-security', 'dda'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/deploy-use-ssl',
-        component: ComponentCreator('/docs/0.67.0/deploy-use-ssl', '6ee'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/dev-guide-archetype',
-        component: ComponentCreator('/docs/0.67.0/dev-guide-archetype', 'd1d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/dev-guide-sdk-guide-processors',
-        component: ComponentCreator('/docs/0.67.0/dev-guide-sdk-guide-processors', 'e7c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/dev-guide-sdk-guide-sinks',
-        component: ComponentCreator('/docs/0.67.0/dev-guide-sdk-guide-sinks', 'd64'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/extend-archetypes',
-        component: ComponentCreator('/docs/0.67.0/extend-archetypes', '165'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/extend-cli',
-        component: ComponentCreator('/docs/0.67.0/extend-cli', '008'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/extend-first-processor',
-        component: ComponentCreator('/docs/0.67.0/extend-first-processor', '65d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/extend-sdk-event-model',
-        component: ComponentCreator('/docs/0.67.0/extend-sdk-event-model', '4c6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/extend-sdk-functions',
-        component: ComponentCreator('/docs/0.67.0/extend-sdk-functions', '018'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/extend-sdk-migration-service-discovery',
-        component: ComponentCreator('/docs/0.67.0/extend-sdk-migration-service-discovery', '2b3'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/extend-sdk-output-strategies',
-        component: ComponentCreator('/docs/0.67.0/extend-sdk-output-strategies', '9b3'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/extend-sdk-static-properties',
-        component: ComponentCreator('/docs/0.67.0/extend-sdk-static-properties', 'c83'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/extend-sdk-stream-requirements',
-        component: ComponentCreator('/docs/0.67.0/extend-sdk-stream-requirements', '8cd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/extend-setup',
-        component: ComponentCreator('/docs/0.67.0/extend-setup', 'b00'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/extend-tutorial-data-processors',
-        component: ComponentCreator('/docs/0.67.0/extend-tutorial-data-processors', 'bd5'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/extend-tutorial-data-sinks',
-        component: ComponentCreator('/docs/0.67.0/extend-tutorial-data-sinks', '952'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/extend-tutorial-data-sources',
-        component: ComponentCreator('/docs/0.67.0/extend-tutorial-data-sources', '4f7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.connect.adapters.flic.mqtt',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.connect.adapters.flic.mqtt', '1e4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.connect.adapters.opcua',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.connect.adapters.opcua', '613'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.connect.adapters.plc4x.modbus',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.connect.adapters.plc4x.modbus', 'f69'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.connect.adapters.simulator.machine',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.connect.adapters.simulator.machine', '70f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.connect.protocol.stream.httpserver',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.connect.protocol.stream.httpserver', '244'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processor.geo.jvm.geocoding',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processor.geo.jvm.geocoding', 'bdb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding', 'ead'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding', '609'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification', 'e15'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher', '9ff'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processor.imageclassification.qrcode',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processor.imageclassification.qrcode', 'ca7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.aggregation.flink.aggregation',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.aggregation.flink.aggregation', 'fcb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.aggregation.flink.count',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.aggregation.flink.count', 'f60'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.aggregation.flink.eventcount',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.aggregation.flink.eventcount', '379'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.aggregation.flink.rate',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.aggregation.flink.rate', '774'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.changedetection.jvm.cusum',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.changedetection.jvm.cusum', '5e9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.filters.jvm.limit',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.filters.jvm.limit', 'cad'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.filters.jvm.merge',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.filters.jvm.merge', '7b4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator', '7b9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator', 'c1a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.pattern-detection.flink.absence',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.pattern-detection.flink.absence', 'a70'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.pattern-detection.flink.and',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.pattern-detection.flink.and', '15f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection', '3f8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.pattern-detection.flink.sequence',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.pattern-detection.flink.sequence', '968'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.siddhi.frequency',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.siddhi.frequency', 'e23'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.siddhi.frequencychange',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.siddhi.frequencychange', '2b6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.siddhi.increase',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.siddhi.increase', '28d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.siddhi.numericalfilter',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.siddhi.numericalfilter', '670'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.siddhi.stop',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.siddhi.stop', '445'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.textmining.flink.languagedetection',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.textmining.flink.languagedetection', 'c02'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.textmining.flink.wordcount',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.textmining.flink.wordcount', '19c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.flink.field-converter',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.flink.field-converter', '2dd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.flink.field-renamer',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.flink.field-renamer', 'd34'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher', '83e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter', '6fd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter', '03e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge', '497'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state', '816'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.buffer',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.buffer', '06c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer', 'a16'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number', '65b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state', '509'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.jvm.split-array',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.jvm.split-array', '70a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer', '10a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.sinks.brokers.jvm.nats',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.sinks.brokers.jvm.nats', 'b13'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq', '839'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.sinks.databases.ditto',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.sinks.databases.ditto', '0b3'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.sinks.databases.jvm.mysql',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.sinks.databases.jvm.mysql', '48d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.sinks.internal.jvm.notification',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.sinks.internal.jvm.notification', '9dc'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.sinks.notifications.jvm.slack',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.sinks.notifications.jvm.slack', '6d4'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/pe/org.apache.streampipes.sinks.notifications.jvm.telegram',
-        component: ComponentCreator('/docs/0.67.0/pe/org.apache.streampipes.sinks.notifications.jvm.telegram', '164'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/technicals-architecture',
-        component: ComponentCreator('/docs/0.67.0/technicals-architecture', '246'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/technicals-configuration',
-        component: ComponentCreator('/docs/0.67.0/technicals-configuration', 'f2d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/technicals-messaging',
-        component: ComponentCreator('/docs/0.67.0/technicals-messaging', '289'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/technicals-runtime-wrappers',
-        component: ComponentCreator('/docs/0.67.0/technicals-runtime-wrappers', '032'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/technicals-user-guidance',
-        component: ComponentCreator('/docs/0.67.0/technicals-user-guidance', 'cea'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/try-installation',
-        component: ComponentCreator('/docs/0.67.0/try-installation', 'd0d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/try-tutorial',
-        component: ComponentCreator('/docs/0.67.0/try-tutorial', '05d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/use-configurations',
-        component: ComponentCreator('/docs/0.67.0/use-configurations', '1a8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/use-connect',
-        component: ComponentCreator('/docs/0.67.0/use-connect', '1b6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/use-dashboard',
-        component: ComponentCreator('/docs/0.67.0/use-dashboard', 'c14'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/use-data-explorer',
-        component: ComponentCreator('/docs/0.67.0/use-data-explorer', '49d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/use-install-pipeline-elements',
-        component: ComponentCreator('/docs/0.67.0/use-install-pipeline-elements', 'e31'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/use-managing-pipelines',
-        component: ComponentCreator('/docs/0.67.0/use-managing-pipelines', '89b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/use-notifications',
-        component: ComponentCreator('/docs/0.67.0/use-notifications', 'fd9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/use-pipeline-editor',
-        component: ComponentCreator('/docs/0.67.0/use-pipeline-editor', '86b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/user-guide-installation',
-        component: ComponentCreator('/docs/0.67.0/user-guide-installation', '395'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/user-guide-introduction',
-        component: ComponentCreator('/docs/0.67.0/user-guide-introduction', '65d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.67.0/user-guide-introduction-old',
-        component: ComponentCreator('/docs/0.67.0/user-guide-introduction-old', '206'),
-        exact: true
-      }
-    ]
-  },
-  {
-    path: '/docs/0.68.0',
-    component: ComponentCreator('/docs/0.68.0', '255'),
-    routes: [
-      {
-        path: '/docs/0.68.0/community-contribute',
-        component: ComponentCreator('/docs/0.68.0/community-contribute', '140'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/community-get-help',
-        component: ComponentCreator('/docs/0.68.0/community-get-help', 'e91'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/deploy-docker',
-        component: ComponentCreator('/docs/0.68.0/deploy-docker', 'd68'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/deploy-security',
-        component: ComponentCreator('/docs/0.68.0/deploy-security', '2bb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/dev-guide-sdk-guide-processors',
-        component: ComponentCreator('/docs/0.68.0/dev-guide-sdk-guide-processors', '9c9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/dev-guide-sdk-guide-sinks',
-        component: ComponentCreator('/docs/0.68.0/dev-guide-sdk-guide-sinks', '58c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/extend-archetypes',
-        component: ComponentCreator('/docs/0.68.0/extend-archetypes', 'a5c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/extend-cli',
-        component: ComponentCreator('/docs/0.68.0/extend-cli', '68e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/extend-first-processor',
-        component: ComponentCreator('/docs/0.68.0/extend-first-processor', 'e59'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/extend-sdk-event-model',
-        component: ComponentCreator('/docs/0.68.0/extend-sdk-event-model', '7ed'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/extend-sdk-functions',
-        component: ComponentCreator('/docs/0.68.0/extend-sdk-functions', '038'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/extend-sdk-migration-service-discovery',
-        component: ComponentCreator('/docs/0.68.0/extend-sdk-migration-service-discovery', '90f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/extend-sdk-output-strategies',
-        component: ComponentCreator('/docs/0.68.0/extend-sdk-output-strategies', '418'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/extend-sdk-static-properties',
-        component: ComponentCreator('/docs/0.68.0/extend-sdk-static-properties', 'c79'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/extend-sdk-stream-requirements',
-        component: ComponentCreator('/docs/0.68.0/extend-sdk-stream-requirements', '1fa'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/extend-setup',
-        component: ComponentCreator('/docs/0.68.0/extend-setup', '71a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/extend-tutorial-data-processors',
-        component: ComponentCreator('/docs/0.68.0/extend-tutorial-data-processors', '8e9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/extend-tutorial-data-sinks',
-        component: ComponentCreator('/docs/0.68.0/extend-tutorial-data-sinks', 'd1c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/extend-tutorial-data-sources',
-        component: ComponentCreator('/docs/0.68.0/extend-tutorial-data-sources', 'ead'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.connect.adapters.flic.mqtt',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.connect.adapters.flic.mqtt', '345'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.connect.adapters.opcua',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.connect.adapters.opcua', '024'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.connect.adapters.plc4x.modbus',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.connect.adapters.plc4x.modbus', 'a02'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.connect.adapters.simulator.machine',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.connect.adapters.simulator.machine', '424'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.connect.protocol.stream.httpserver',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.connect.protocol.stream.httpserver', '78c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processor.geo.jvm.geocoding',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processor.geo.jvm.geocoding', '498'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding', '390'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding', '270'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification', 'b05'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher', '466'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processor.imageclassification.qrcode',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processor.imageclassification.qrcode', 'dc8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.aggregation.flink.aggregation',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.aggregation.flink.aggregation', 'fc7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.aggregation.flink.count',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.aggregation.flink.count', 'a01'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.aggregation.flink.eventcount',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.aggregation.flink.eventcount', 'd77'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.aggregation.flink.rate',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.aggregation.flink.rate', 'a05'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.changedetection.jvm.cusum',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.changedetection.jvm.cusum', '19e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.filters.jvm.limit',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.filters.jvm.limit', '35e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.filters.jvm.merge',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.filters.jvm.merge', '05c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator', 'e29'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator', '36e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.pattern-detection.flink.absence',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.pattern-detection.flink.absence', '210'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.pattern-detection.flink.and',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.pattern-detection.flink.and', '445'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection', 'a6f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.pattern-detection.flink.sequence',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.pattern-detection.flink.sequence', '632'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.siddhi.frequency',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.siddhi.frequency', 'f99'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.siddhi.frequencychange',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.siddhi.frequencychange', 'bba'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.siddhi.increase',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.siddhi.increase', 'faa'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.siddhi.numericalfilter',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.siddhi.numericalfilter', 'a43'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.siddhi.stop',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.siddhi.stop', '030'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.textmining.flink.languagedetection',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.textmining.flink.languagedetection', 'ec7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.textmining.flink.wordcount',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.textmining.flink.wordcount', '643'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.flink.field-converter',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.flink.field-converter', 'e8e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.flink.field-renamer',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.flink.field-renamer', '215'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher', '05e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter', 'c7d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter', '316'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge', '43c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state', '461'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.buffer',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.buffer', '50c'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer', '558'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number', '282'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state', '2d7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.jvm.split-array',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.jvm.split-array', 'eb2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer', '3a8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.sinks.brokers.jvm.nats',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.sinks.brokers.jvm.nats', 'e51'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq', '7a6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.sinks.databases.ditto',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.sinks.databases.ditto', 'c89'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.sinks.databases.jvm.mysql',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.sinks.databases.jvm.mysql', 'dca'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.sinks.internal.jvm.notification',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.sinks.internal.jvm.notification', '2e8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.sinks.notifications.jvm.slack',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.sinks.notifications.jvm.slack', '0bd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/pe/org.apache.streampipes.sinks.notifications.jvm.telegram',
-        component: ComponentCreator('/docs/0.68.0/pe/org.apache.streampipes.sinks.notifications.jvm.telegram', '1bd'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/technicals-configuration',
-        component: ComponentCreator('/docs/0.68.0/technicals-configuration', '8da'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/try-installation',
-        component: ComponentCreator('/docs/0.68.0/try-installation', '47f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/try-tutorial',
-        component: ComponentCreator('/docs/0.68.0/try-tutorial', 'f29'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/use-configurations',
-        component: ComponentCreator('/docs/0.68.0/use-configurations', '526'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/use-dashboard',
-        component: ComponentCreator('/docs/0.68.0/use-dashboard', 'd57'),
-        exact: true
-      },
-      {
-        path: '/docs/0.68.0/use-data-explorer',
-        component: ComponentCreator('/docs/0.68.0/use-data-explorer', 'e2c'),
-        exact: true
-      }
-    ]
-  },
-  {
-    path: '/docs/0.69.0',
-    component: ComponentCreator('/docs/0.69.0', 'e8b'),
-    routes: [
-      {
-        path: '/docs/0.69.0/community-get-help',
-        component: ComponentCreator('/docs/0.69.0/community-get-help', '32b'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/deploy-security',
-        component: ComponentCreator('/docs/0.69.0/deploy-security', '9e8'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/extend-archetypes',
-        component: ComponentCreator('/docs/0.69.0/extend-archetypes', 'a90'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/extend-cli',
-        component: ComponentCreator('/docs/0.69.0/extend-cli', '087'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/extend-first-processor',
-        component: ComponentCreator('/docs/0.69.0/extend-first-processor', '3b1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/extend-sdk-event-model',
-        component: ComponentCreator('/docs/0.69.0/extend-sdk-event-model', '0b7'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/extend-sdk-migration-service-discovery',
-        component: ComponentCreator('/docs/0.69.0/extend-sdk-migration-service-discovery', '6e2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/extend-sdk-stream-requirements',
-        component: ComponentCreator('/docs/0.69.0/extend-sdk-stream-requirements', '410'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/extend-setup',
-        component: ComponentCreator('/docs/0.69.0/extend-setup', '654'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/extend-tutorial-data-processors',
-        component: ComponentCreator('/docs/0.69.0/extend-tutorial-data-processors', 'b62'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/extend-tutorial-data-sinks',
-        component: ComponentCreator('/docs/0.69.0/extend-tutorial-data-sinks', 'f1a'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/extend-tutorial-data-sources',
-        component: ComponentCreator('/docs/0.69.0/extend-tutorial-data-sources', '80e'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/try-installation',
-        component: ComponentCreator('/docs/0.69.0/try-installation', 'da2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/use-configurations',
-        component: ComponentCreator('/docs/0.69.0/use-configurations', 'c8d'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/use-dashboard',
-        component: ComponentCreator('/docs/0.69.0/use-dashboard', '7e2'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/use-data-explorer',
-        component: ComponentCreator('/docs/0.69.0/use-data-explorer', '543'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/user-guide-introduction',
-        component: ComponentCreator('/docs/0.69.0/user-guide-introduction', '663'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/version-0.90.0-community-contribute',
-        component: ComponentCreator('/docs/0.69.0/version-0.90.0-community-contribute', 'bb6'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/version-0.90.0-extend-sdk-functions',
-        component: ComponentCreator('/docs/0.69.0/version-0.90.0-extend-sdk-functions', 'edc'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/version-0.90.0-extend-sdk-output-strategies',
-        component: ComponentCreator('/docs/0.69.0/version-0.90.0-extend-sdk-output-strategies', 'e5f'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/version-0.90.0-extend-sdk-static-properties',
-        component: ComponentCreator('/docs/0.69.0/version-0.90.0-extend-sdk-static-properties', 'ffb'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/version-0.90.0-technicals-configuration',
-        component: ComponentCreator('/docs/0.69.0/version-0.90.0-technicals-configuration', '8d1'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/version-0.90.0-use-connect',
-        component: ComponentCreator('/docs/0.69.0/version-0.90.0-use-connect', 'fd9'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/version-0.90.0-use-pipeline-editor',
-        component: ComponentCreator('/docs/0.69.0/version-0.90.0-use-pipeline-editor', '618'),
-        exact: true
-      },
-      {
-        path: '/docs/0.69.0/version-0.90.0-user-guide-installation',
-        component: ComponentCreator('/docs/0.69.0/version-0.90.0-user-guide-installation', 'ca6'),
-        exact: true
-      }
-    ]
-  },
-  {
     path: '/docs/0.70.0',
     component: ComponentCreator('/docs/0.70.0', '37e'),
     routes: [
@@ -7656,337 +1256,1082 @@ export default [
   },
   {
     path: '/docs/0.90.0',
-    component: ComponentCreator('/docs/0.90.0', '4a5'),
+    component: ComponentCreator('/docs/0.90.0', '545'),
     routes: [
       {
         path: '/docs/0.90.0/community-contribute',
-        component: ComponentCreator('/docs/0.90.0/community-contribute', '049'),
+        component: ComponentCreator('/docs/0.90.0/community-contribute', 'c7b'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/community-get-help',
+        component: ComponentCreator('/docs/0.90.0/community-get-help', 'cff'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/concepts-adapter',
+        component: ComponentCreator('/docs/0.90.0/concepts-adapter', '1d0'),
         exact: true
+      },
+      {
+        path: '/docs/0.90.0/concepts-data-streams',
+        component: ComponentCreator('/docs/0.90.0/concepts-data-streams', '994'),
+        exact: true
+      },
+      {
+        path: '/docs/0.90.0/concepts-glossary',
+        component: ComponentCreator('/docs/0.90.0/concepts-glossary', '603'),
+        exact: true
+      },
+      {
+        path: '/docs/0.90.0/concepts-overview',
+        component: ComponentCreator('/docs/0.90.0/concepts-overview', 'd34'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/concepts-pipelines',
+        component: ComponentCreator('/docs/0.90.0/concepts-pipelines', '5f5'),
+        exact: true
+      },
+      {
+        path: '/docs/0.90.0/debugging-debugging',
+        component: ComponentCreator('/docs/0.90.0/debugging-debugging', '421'),
+        exact: true
+      },
+      {
+        path: '/docs/0.90.0/debugging-monitoring',
+        component: ComponentCreator('/docs/0.90.0/debugging-monitoring', '89a'),
+        exact: true
+      },
+      {
+        path: '/docs/0.90.0/deploy-docker',
+        component: ComponentCreator('/docs/0.90.0/deploy-docker', 'cda'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/deploy-kubernetes',
+        component: ComponentCreator('/docs/0.90.0/deploy-kubernetes', 'fe4'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/deploy-security',
+        component: ComponentCreator('/docs/0.90.0/deploy-security', 'a20'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/deploy-use-ssl',
+        component: ComponentCreator('/docs/0.90.0/deploy-use-ssl', '2e4'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/dev-guide-archetype',
+        component: ComponentCreator('/docs/0.90.0/dev-guide-archetype', '740'),
+        exact: true
+      },
+      {
+        path: '/docs/0.90.0/dev-guide-sdk-guide-processors',
+        component: ComponentCreator('/docs/0.90.0/dev-guide-sdk-guide-processors', 'a3b'),
+        exact: true
+      },
+      {
+        path: '/docs/0.90.0/dev-guide-sdk-guide-sinks',
+        component: ComponentCreator('/docs/0.90.0/dev-guide-sdk-guide-sinks', '1d4'),
+        exact: true
+      },
+      {
+        path: '/docs/0.90.0/extend-archetypes',
+        component: ComponentCreator('/docs/0.90.0/extend-archetypes', '1b2'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/extend-cli',
-        component: ComponentCreator('/docs/0.90.0/extend-cli', '5a0'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/extend-cli', '604'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/extend-first-processor',
+        component: ComponentCreator('/docs/0.90.0/extend-first-processor', '1ef'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/extend-sdk-event-model',
+        component: ComponentCreator('/docs/0.90.0/extend-sdk-event-model', 'cae'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/extend-sdk-functions',
-        component: ComponentCreator('/docs/0.90.0/extend-sdk-functions', 'cf7'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/extend-sdk-functions', 'ba3'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/extend-sdk-migration-service-discovery',
-        component: ComponentCreator('/docs/0.90.0/extend-sdk-migration-service-discovery', '2d7'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/extend-sdk-migration-service-discovery', '8e1'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/extend-sdk-output-strategies',
-        component: ComponentCreator('/docs/0.90.0/extend-sdk-output-strategies', '64e'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/extend-sdk-output-strategies', '19a'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/extend-sdk-static-properties',
-        component: ComponentCreator('/docs/0.90.0/extend-sdk-static-properties', '137'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/extend-sdk-static-properties', '984'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/extend-sdk-stream-requirements',
-        component: ComponentCreator('/docs/0.90.0/extend-sdk-stream-requirements', 'cfa'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/extend-sdk-stream-requirements', '048'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/extend-setup',
-        component: ComponentCreator('/docs/0.90.0/extend-setup', 'e68'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/extend-setup', '50f'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/extend-tutorial-data-processors',
-        component: ComponentCreator('/docs/0.90.0/extend-tutorial-data-processors', '9b4'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/extend-tutorial-data-processors', 'edb'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/extend-tutorial-data-sinks',
-        component: ComponentCreator('/docs/0.90.0/extend-tutorial-data-sinks', '8c2'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/extend-tutorial-data-sinks', '0bd'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/extend-tutorial-data-sources',
-        component: ComponentCreator('/docs/0.90.0/extend-tutorial-data-sources', 'b7a'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/extend-tutorial-data-sources', '758'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/faq-common-problems',
+        component: ComponentCreator('/docs/0.90.0/faq-common-problems', '620'),
+        exact: true,
+        sidebar: "faq"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.coindesk',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.coindesk', '2b8'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.flic.mqtt',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.flic.mqtt', 'e76'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.flic.mqtt', '8e1'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.gdelt',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.gdelt', '493'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.iex.news',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.iex.news', '42d'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.iex.stocks',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.iex.stocks', '3e2'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.image.set',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.image.set', 'df3'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.image.stream',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.image.stream', 'db2'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.influxdb.set',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.influxdb.set', '7cb'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.influxdb.stream',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.influxdb.stream', '23a'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.iss',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.iss', '9f2'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.mysql.set',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.mysql.set', '7a4'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.mysql.stream',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.mysql.stream', '63c'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.netio.mqtt',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.netio.mqtt', '6df'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.netio.rest',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.netio.rest', '3a1'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera', '6dd'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.opcua',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.opcua', '563'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.opcua', '669'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.plc4x.modbus',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.plc4x.modbus', 'cdd'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.plc4x.modbus', 'e7c'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.plc4x.s7',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.plc4x.s7', 'd2b'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.ros',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.ros', '84a'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.simulator.machine',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.simulator.machine', 'f2d'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.simulator.machine', '408'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.simulator.randomdataset',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.simulator.randomdataset', '226'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.simulator.randomdatastream',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.simulator.randomdatastream', '378'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.slack',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.slack', '652'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.ti',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.ti', '3bf'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.wikipedia.edit',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.wikipedia.edit', 'ccd'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.wikipedia.new',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.wikipedia.new', '042'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.protocol.stream.file',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.protocol.stream.file', '26b'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.protocol.stream.http',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.protocol.stream.http', 'dde'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.connect.protocol.stream.httpserver',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.protocol.stream.httpserver', '863'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.protocol.stream.httpserver', '010'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.protocol.stream.kafka',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.protocol.stream.kafka', '52f'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.protocol.stream.mqtt',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.protocol.stream.mqtt', '5da'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.connect.protocol.stream.pulsar',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.connect.protocol.stream.pulsar', 'c3a'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processor.geo.flink',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processor.geo.flink', '2f9'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processor.geo.jvm.geocoding',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processor.geo.jvm.geocoding', '377'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processor.geo.jvm.geocoding', '162'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding', 'c14'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding', '635'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding', '876'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding', '31b'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification', '980'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification', 'e83'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper', '7e0'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher', '059'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher', '2b4'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processor.imageclassification.qrcode',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processor.imageclassification.qrcode', '65e'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processor.imageclassification.qrcode', '60b'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.aggregation.flink.aggregation',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.aggregation.flink.aggregation', '9cd'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.aggregation.flink.aggregation', '9e4'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.aggregation.flink.count',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.aggregation.flink.count', 'def'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.aggregation.flink.count', '185'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.aggregation.flink.eventcount',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.aggregation.flink.eventcount', 'd95'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.aggregation.flink.eventcount', '208'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.aggregation.flink.rate',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.aggregation.flink.rate', '96e'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.aggregation.flink.rate', '7a1'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.changedetection.jvm.cusum',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.changedetection.jvm.cusum', 'c72'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.changedetection.jvm.cusum', 'ae3'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.enricher.flink.processor.math.mathop',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.enricher.flink.processor.math.mathop', 'bbf'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop', 'bd4'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.enricher.flink.processor.trigonometry',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.enricher.flink.processor.trigonometry', 'd8a'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing', '304'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.enricher.flink.timestamp',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.enricher.flink.timestamp', '7d9'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.enricher.jvm.sizemeasure',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.enricher.jvm.sizemeasure', 'c5d'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.compose',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.compose', '0c7'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.enrich',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.enrich', 'd34'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.limit',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.limit', 'a30'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.limit', 'a4c'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.merge',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.merge', '916'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.merge', 'e1c'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.numericalfilter',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.numericalfilter', '582'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.numericaltextfilter',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.numericaltextfilter', '191'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.project',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.project', '6fd'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.textfilter',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.textfilter', 'c5c'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.threshold',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.threshold', '844'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo', '233'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG', '69e'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory', '378'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator', '9b0'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator', '040'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.geo.jvm.processor.speed',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.geo.jvm.processor.speed', '29e'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator', 'c75'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator', '8e8'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.pattern-detection.flink.absence',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.pattern-detection.flink.absence', '4a0'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.pattern-detection.flink.absence', 'e68'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.pattern-detection.flink.and',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.pattern-detection.flink.and', '574'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.pattern-detection.flink.and', '099'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection', 'ed4'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection', '4f7'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.pattern-detection.flink.sequence',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.pattern-detection.flink.sequence', 'ea1'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.pattern-detection.flink.sequence', 'c87'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.siddhi.frequency',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.siddhi.frequency', 'e69'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.siddhi.frequency', 'f49'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.siddhi.frequencychange',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.siddhi.frequencychange', '788'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.siddhi.frequencychange', '7d4'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.siddhi.increase',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.siddhi.increase', '84f'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.siddhi.increase', '00f'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.siddhi.numericalfilter',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.siddhi.numericalfilter', '0dd'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.siddhi.numericalfilter', 'ebd'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.siddhi.sequence',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.siddhi.sequence', '237'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.siddhi.stop',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.siddhi.stop', 'db0'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.siddhi.stop', '2df'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.statistics.flink.statistics-summary',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.statistics.flink.statistics-summary', 'e0d'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.textmining.flink.languagedetection',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.textmining.flink.languagedetection', '170'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.textmining.flink.languagedetection', 'da2'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.textmining.flink.wordcount',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.textmining.flink.wordcount', 'f06'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.textmining.flink.wordcount', '571'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.textmining.jvm.chunker',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.textmining.jvm.chunker', 'a97'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.textmining.jvm.languagedetection',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.textmining.jvm.languagedetection', 'e3f'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.textmining.jvm.namefinder',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.textmining.jvm.namefinder', 'ca9'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.textmining.jvm.partofspeech',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.textmining.jvm.partofspeech', 'a97'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.textmining.jvm.sentencedetection',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.textmining.jvm.sentencedetection', '7fb'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.textmining.jvm.tokenizer',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.textmining.jvm.tokenizer', '94a'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.flink.field-converter',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.flink.field-converter', 'c21'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.flink.field-converter', '162'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.flink.field-mapper',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.flink.field-mapper', '547'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.flink.field-renamer',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.flink.field-renamer', '599'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.flink.field-renamer', '84e'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher', 'd32'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher', 'a50'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter', '418'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter', '162'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.flink.processor.boilerplate',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.flink.processor.boilerplate', 'ba1'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter', 'a67'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter', '208'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter', '8ea'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping', '0f4'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timer',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timer', '814'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.changed-value',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.changed-value', '8b7'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.count-array',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.count-array', '0dc'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata', 'f97'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.duration-value',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.duration-value', 'fca'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge', '120'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge', 'e9f'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state', 'eb9'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state', '790'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.buffer',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.buffer', 'a27'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.buffer', 'ecb'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer', '618'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer', '3f7'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number', '7e6'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number', '036'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state', '364'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state', '791'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor', '99a'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.split-array',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.split-array', '131'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.split-array', '4ab'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter', 'a7e'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer', 'a31'),
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer', '10c'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.taskduration',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.taskduration', '15d'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean', '44a'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.protocol.set.file',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.protocol.set.file', 'aa1'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.protocol.set.http',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.protocol.set.http', '854'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest', 'df2'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.brokers.jvm.jms',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.brokers.jvm.jms', '589'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.brokers.jvm.kafka',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.brokers.jvm.kafka', 'da8'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.brokers.jvm.mqtt',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.brokers.jvm.mqtt', '4ad'),
         exact: true
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.brokers.jvm.nats',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.brokers.jvm.nats', '50a'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.brokers.jvm.nats', 'f75'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.brokers.jvm.pulsar',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.brokers.jvm.pulsar', '19e'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq', '9e4'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq', 'e36'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.brokers.jvm.rest',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.brokers.jvm.rest', '8ea'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.databases.ditto',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.databases.ditto', '140'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.databases.ditto', 'bfb'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.databases.flink.elasticsearch',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.databases.flink.elasticsearch', 'c3f'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.databases.jvm.couchdb',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.databases.jvm.couchdb', '7b6'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.databases.jvm.influxdb',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.databases.jvm.influxdb', '85c'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.databases.jvm.iotdb',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.databases.jvm.iotdb', 'a13'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.databases.jvm.mysql',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.databases.jvm.mysql', 'f41'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.databases.jvm.mysql', '21c'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.databases.jvm.opcua',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.databases.jvm.opcua', '8bb'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.databases.jvm.postgresql',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.databases.jvm.postgresql', '5c7'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.internal.jvm.dashboard',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.internal.jvm.dashboard', 'd91'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.internal.jvm.datalake',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.internal.jvm.datalake', '5de'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.internal.jvm.notification',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.internal.jvm.notification', '3b5'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.internal.jvm.notification', 'f0f'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.notifications.jvm.email',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.notifications.jvm.email', 'c51'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.notifications.jvm.onesignal',
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.notifications.jvm.onesignal', '889'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.notifications.jvm.slack',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.notifications.jvm.slack', '680'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.notifications.jvm.slack', 'ee8'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/pe/org.apache.streampipes.sinks.notifications.jvm.telegram',
-        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.notifications.jvm.telegram', '97e'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/pe/org.apache.streampipes.sinks.notifications.jvm.telegram', '188'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/technicals-architecture',
+        component: ComponentCreator('/docs/0.90.0/technicals-architecture', '39b'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/technicals-configuration',
-        component: ComponentCreator('/docs/0.90.0/technicals-configuration', '486'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/technicals-configuration', '7bb'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/technicals-messaging',
+        component: ComponentCreator('/docs/0.90.0/technicals-messaging', 'a06'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/technicals-runtime-wrappers',
+        component: ComponentCreator('/docs/0.90.0/technicals-runtime-wrappers', 'eab'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/technicals-user-guidance',
+        component: ComponentCreator('/docs/0.90.0/technicals-user-guidance', 'd7b'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/try-installation',
-        component: ComponentCreator('/docs/0.90.0/try-installation', 'a73'),
+        component: ComponentCreator('/docs/0.90.0/try-installation', '6a2'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/try-tutorial',
+        component: ComponentCreator('/docs/0.90.0/try-tutorial', '6f1'),
         exact: true
+      },
+      {
+        path: '/docs/0.90.0/use-configurations',
+        component: ComponentCreator('/docs/0.90.0/use-configurations', 'a6e'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/use-connect',
-        component: ComponentCreator('/docs/0.90.0/use-connect', 'dab'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/use-connect', 'a43'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/use-dashboard',
+        component: ComponentCreator('/docs/0.90.0/use-dashboard', '7d9'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/use-data-explorer',
+        component: ComponentCreator('/docs/0.90.0/use-data-explorer', 'a4b'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/use-install-pipeline-elements',
+        component: ComponentCreator('/docs/0.90.0/use-install-pipeline-elements', 'ed1'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/use-managing-pipelines',
+        component: ComponentCreator('/docs/0.90.0/use-managing-pipelines', 'be0'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.90.0/use-notifications',
+        component: ComponentCreator('/docs/0.90.0/use-notifications', 'cd9'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/use-pipeline-editor',
-        component: ComponentCreator('/docs/0.90.0/use-pipeline-editor', 'ad6'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/use-pipeline-editor', '6b0'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/user-guide-first-steps',
@@ -8000,8 +2345,9 @@ export default [
       },
       {
         path: '/docs/0.90.0/user-guide-introduction',
-        component: ComponentCreator('/docs/0.90.0/user-guide-introduction', 'a06'),
-        exact: true
+        component: ComponentCreator('/docs/0.90.0/user-guide-introduction', '4e8'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.90.0/user-guide-introduction-old',
@@ -8017,272 +2363,993 @@ export default [
   },
   {
     path: '/docs/0.91.0',
-    component: ComponentCreator('/docs/0.91.0', '421'),
+    component: ComponentCreator('/docs/0.91.0', '62f'),
     routes: [
       {
-        path: '/docs/0.91.0/extend-setup',
-        component: ComponentCreator('/docs/0.91.0/extend-setup', '1de'),
+        path: '/docs/0.91.0/community-contribute',
+        component: ComponentCreator('/docs/0.91.0/community-contribute', '57e'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/community-get-help',
+        component: ComponentCreator('/docs/0.91.0/community-get-help', '884'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/concepts-adapter',
+        component: ComponentCreator('/docs/0.91.0/concepts-adapter', 'd3c'),
         exact: true
+      },
+      {
+        path: '/docs/0.91.0/concepts-data-streams',
+        component: ComponentCreator('/docs/0.91.0/concepts-data-streams', '5f3'),
+        exact: true
+      },
+      {
+        path: '/docs/0.91.0/concepts-glossary',
+        component: ComponentCreator('/docs/0.91.0/concepts-glossary', 'da9'),
+        exact: true
+      },
+      {
+        path: '/docs/0.91.0/concepts-overview',
+        component: ComponentCreator('/docs/0.91.0/concepts-overview', 'a10'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/concepts-pipelines',
+        component: ComponentCreator('/docs/0.91.0/concepts-pipelines', '6bf'),
+        exact: true
+      },
+      {
+        path: '/docs/0.91.0/debugging-debugging',
+        component: ComponentCreator('/docs/0.91.0/debugging-debugging', 'a08'),
+        exact: true
+      },
+      {
+        path: '/docs/0.91.0/debugging-monitoring',
+        component: ComponentCreator('/docs/0.91.0/debugging-monitoring', 'd2c'),
+        exact: true
+      },
+      {
+        path: '/docs/0.91.0/deploy-docker',
+        component: ComponentCreator('/docs/0.91.0/deploy-docker', '315'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/deploy-kubernetes',
+        component: ComponentCreator('/docs/0.91.0/deploy-kubernetes', 'ec0'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/deploy-security',
+        component: ComponentCreator('/docs/0.91.0/deploy-security', '72d'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/deploy-use-ssl',
+        component: ComponentCreator('/docs/0.91.0/deploy-use-ssl', '0c5'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/dev-guide-archetype',
+        component: ComponentCreator('/docs/0.91.0/dev-guide-archetype', '1e8'),
+        exact: true
+      },
+      {
+        path: '/docs/0.91.0/dev-guide-sdk-guide-processors',
+        component: ComponentCreator('/docs/0.91.0/dev-guide-sdk-guide-processors', '4f5'),
+        exact: true
+      },
+      {
+        path: '/docs/0.91.0/dev-guide-sdk-guide-sinks',
+        component: ComponentCreator('/docs/0.91.0/dev-guide-sdk-guide-sinks', '698'),
+        exact: true
+      },
+      {
+        path: '/docs/0.91.0/extend-archetypes',
+        component: ComponentCreator('/docs/0.91.0/extend-archetypes', 'fe5'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/extend-cli',
+        component: ComponentCreator('/docs/0.91.0/extend-cli', 'ebe'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/extend-first-processor',
+        component: ComponentCreator('/docs/0.91.0/extend-first-processor', '77c'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/extend-sdk-event-model',
+        component: ComponentCreator('/docs/0.91.0/extend-sdk-event-model', '983'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/extend-sdk-functions',
+        component: ComponentCreator('/docs/0.91.0/extend-sdk-functions', '899'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/extend-sdk-migration-service-discovery',
+        component: ComponentCreator('/docs/0.91.0/extend-sdk-migration-service-discovery', '6d8'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/extend-sdk-output-strategies',
+        component: ComponentCreator('/docs/0.91.0/extend-sdk-output-strategies', 'a4f'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/extend-sdk-static-properties',
+        component: ComponentCreator('/docs/0.91.0/extend-sdk-static-properties', '157'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/extend-sdk-stream-requirements',
+        component: ComponentCreator('/docs/0.91.0/extend-sdk-stream-requirements', '6c8'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/extend-setup',
+        component: ComponentCreator('/docs/0.91.0/extend-setup', '0bf'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/extend-tutorial-data-processors',
+        component: ComponentCreator('/docs/0.91.0/extend-tutorial-data-processors', '2b8'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/extend-tutorial-data-sinks',
+        component: ComponentCreator('/docs/0.91.0/extend-tutorial-data-sinks', '927'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/extend-tutorial-data-sources',
+        component: ComponentCreator('/docs/0.91.0/extend-tutorial-data-sources', '4cd'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/faq-common-problems',
+        component: ComponentCreator('/docs/0.91.0/faq-common-problems', 'd4e'),
+        exact: true,
+        sidebar: "faq"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.coindesk',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.coindesk', 'd7f'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.flic.mqtt',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.flic.mqtt', 'afe'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.flic.mqtt', 'cb9'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.gdelt',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.gdelt', 'fc9'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.iex.news',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.iex.news', '8aa'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.iex.stocks',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.iex.stocks', '0e9'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.image.set',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.image.set', 'f67'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.image.stream',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.image.stream', '986'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.influxdb.set',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.influxdb.set', 'fb7'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.influxdb.stream',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.influxdb.stream', '971'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.iss',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.iss', 'b6f'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.mysql.set',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.mysql.set', '48b'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.mysql.stream',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.mysql.stream', '519'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.netio.mqtt',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.netio.mqtt', '4ba'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.netio.rest',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.netio.rest', '2af'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera', '224'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.opcua',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.opcua', '90b'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.opcua', '616'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.plc4x.modbus',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.plc4x.modbus', '5d9'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.plc4x.modbus', 'd25'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.plc4x.s7',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.plc4x.s7', '830'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.ros',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.ros', '417'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.simulator.machine',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.simulator.machine', '416'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.simulator.machine', 'a22'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.simulator.randomdataset',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.simulator.randomdataset', '3e3'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.simulator.randomdatastream',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.simulator.randomdatastream', 'a2d'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.slack',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.slack', '8b8'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.ti',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.ti', 'c11'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.wikipedia.edit',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.wikipedia.edit', '0b1'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.wikipedia.new',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.wikipedia.new', '852'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.protocol.stream.file',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.protocol.stream.file', '5d3'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.protocol.stream.http',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.protocol.stream.http', 'a24'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.connect.protocol.stream.httpserver',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.protocol.stream.httpserver', '790'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.protocol.stream.httpserver', '150'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.protocol.stream.kafka',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.protocol.stream.kafka', 'e97'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.protocol.stream.mqtt',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.protocol.stream.mqtt', 'd43'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.connect.protocol.stream.pulsar',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.connect.protocol.stream.pulsar', '396'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processor.geo.flink',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processor.geo.flink', '3bf'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processor.geo.jvm.geocoding',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processor.geo.jvm.geocoding', 'b13'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processor.geo.jvm.geocoding', 'f92'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding', '2d8'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding', 'cd2'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding', '450'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding', 'eb0'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification', '28d'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification', '544'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper', '8a6'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher', 'f9d'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher', 'd43'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processor.imageclassification.qrcode',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processor.imageclassification.qrcode', '39b'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processor.imageclassification.qrcode', 'bb7'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.aggregation.flink.aggregation',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.aggregation.flink.aggregation', 'dd6'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.aggregation.flink.aggregation', 'dfa'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.aggregation.flink.count',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.aggregation.flink.count', 'e2d'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.aggregation.flink.count', 'a88'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.aggregation.flink.eventcount',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.aggregation.flink.eventcount', '7b1'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.aggregation.flink.eventcount', '93b'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.aggregation.flink.rate',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.aggregation.flink.rate', '7c9'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.aggregation.flink.rate', '39e'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.changedetection.jvm.cusum',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.changedetection.jvm.cusum', '794'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.changedetection.jvm.cusum', '4ed'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.enricher.flink.processor.math.mathop',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.enricher.flink.processor.math.mathop', '2fd'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop', '69f'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.enricher.flink.processor.trigonometry',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.enricher.flink.processor.trigonometry', '8cd'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing', '667'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.enricher.flink.timestamp',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.enricher.flink.timestamp', 'c19'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.enricher.jvm.sizemeasure',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.enricher.jvm.sizemeasure', 'bc4'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.compose',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.compose', '243'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.enrich',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.enrich', 'b89'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.limit',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.limit', '673'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.limit', '6b6'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.merge',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.merge', '405'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.merge', '534'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.numericalfilter',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.numericalfilter', 'c7d'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.numericaltextfilter',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.numericaltextfilter', 'cd7'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.project',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.project', 'aac'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.textfilter',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.textfilter', '57b'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.threshold',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.threshold', '340'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo', '8d7'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG', '420'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory', '7bd'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator', '052'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator', '70c'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.geo.jvm.processor.speed',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.geo.jvm.processor.speed', '2f7'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator', 'ac8'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator', '424'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.pattern-detection.flink.absence',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.pattern-detection.flink.absence', '889'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.pattern-detection.flink.absence', '502'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.pattern-detection.flink.and',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.pattern-detection.flink.and', '054'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.pattern-detection.flink.and', '9b9'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection', '9a7'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection', '32d'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.pattern-detection.flink.sequence',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.pattern-detection.flink.sequence', '035'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.pattern-detection.flink.sequence', 'a0a'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.siddhi.frequency',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.siddhi.frequency', '440'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.siddhi.frequency', '9dd'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.siddhi.frequencychange',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.siddhi.frequencychange', '591'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.siddhi.frequencychange', '9d7'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.siddhi.increase',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.siddhi.increase', 'b09'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.siddhi.increase', 'b19'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.siddhi.numericalfilter',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.siddhi.numericalfilter', '055'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.siddhi.numericalfilter', '537'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.siddhi.sequence',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.siddhi.sequence', '80d'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.siddhi.stop',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.siddhi.stop', '6c0'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.siddhi.stop', 'c53'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.statistics.flink.statistics-summary',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.statistics.flink.statistics-summary', '3dd'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.textmining.flink.languagedetection',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.textmining.flink.languagedetection', '576'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.textmining.flink.languagedetection', '226'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.textmining.flink.wordcount',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.textmining.flink.wordcount', '3a3'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.textmining.flink.wordcount', '956'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.textmining.jvm.chunker',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.textmining.jvm.chunker', '0fe'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.textmining.jvm.languagedetection',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.textmining.jvm.languagedetection', '9c8'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.textmining.jvm.namefinder',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.textmining.jvm.namefinder', '8ae'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.textmining.jvm.partofspeech',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.textmining.jvm.partofspeech', 'daa'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.textmining.jvm.sentencedetection',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.textmining.jvm.sentencedetection', '41b'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.textmining.jvm.tokenizer',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.textmining.jvm.tokenizer', 'c34'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.flink.field-converter',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.flink.field-converter', '933'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.flink.field-converter', '62b'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.flink.field-mapper',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.flink.field-mapper', '061'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.flink.field-renamer',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.flink.field-renamer', 'c52'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.flink.field-renamer', 'cc3'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher', '1f2'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher', 'ccd'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter', '027'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter', '02b'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.flink.processor.boilerplate',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.flink.processor.boilerplate', '55b'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter', 'fac'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter', '67d'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter', 'a64'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping', '558'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timer',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timer', '9a2'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.changed-value',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.changed-value', '969'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.count-array',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.count-array', 'e9e'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata', '083'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.duration-value',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.duration-value', 'e6c'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge', '783'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge', '45f'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state', '9e2'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state', 'b12'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.buffer',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.buffer', 'e85'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.buffer', '70c'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer', 'c90'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer', 'd2c'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number', '8b5'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number', '0f7'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state', '70b'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state', '7d6'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor', 'ecd'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.split-array',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.split-array', 'a4b'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.split-array', 'cce'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter', '148'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer', '8da'),
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer', '2a7'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.taskduration',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.taskduration', '591'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean', '36b'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.protocol.set.file',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.protocol.set.file', '635'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.protocol.set.http',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.protocol.set.http', '91c'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest', 'b83'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.jms',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.jms', '5ec'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.kafka',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.kafka', '257'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.mqtt',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.mqtt', '050'),
         exact: true
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.nats',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.nats', '9e7'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.nats', '59a'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.pulsar',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.pulsar', '6c2'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq', 'd9f'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq', '807'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.rest',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.rest', 'f72'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.databases.ditto',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.databases.ditto', '6e3'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.databases.ditto', 'e1e'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.databases.flink.elasticsearch',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.databases.flink.elasticsearch', '007'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.databases.jvm.couchdb',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.databases.jvm.couchdb', '80e'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.databases.jvm.influxdb',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.databases.jvm.influxdb', '15c'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.databases.jvm.iotdb',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.databases.jvm.iotdb', '6ad'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.databases.jvm.mysql',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.databases.jvm.mysql', '4c3'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.databases.jvm.mysql', '585'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.databases.jvm.opcua',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.databases.jvm.opcua', '6ea'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.databases.jvm.postgresql',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.databases.jvm.postgresql', '7ba'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.internal.jvm.dashboard',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.internal.jvm.dashboard', 'be4'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.internal.jvm.datalake',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.internal.jvm.datalake', '5de'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.internal.jvm.notification',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.internal.jvm.notification', 'c89'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.internal.jvm.notification', 'eb7'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.notifications.jvm.email',
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.notifications.jvm.email', '126'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.notifications.jvm.onesignal',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.notifications.jvm.onesignal', '084'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.notifications.jvm.onesignal', '458'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.notifications.jvm.slack',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.notifications.jvm.slack', '080'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.notifications.jvm.slack', '544'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/pe/org.apache.streampipes.sinks.notifications.jvm.telegram',
-        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.notifications.jvm.telegram', '1ce'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/pe/org.apache.streampipes.sinks.notifications.jvm.telegram', '516'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/privacy',
@@ -8290,9 +3357,93 @@ export default [
         exact: true
       },
       {
+        path: '/docs/0.91.0/technicals-architecture',
+        component: ComponentCreator('/docs/0.91.0/technicals-architecture', '38d'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/technicals-configuration',
+        component: ComponentCreator('/docs/0.91.0/technicals-configuration', 'edf'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/technicals-messaging',
+        component: ComponentCreator('/docs/0.91.0/technicals-messaging', '17c'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/technicals-runtime-wrappers',
+        component: ComponentCreator('/docs/0.91.0/technicals-runtime-wrappers', '7eb'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/technicals-user-guidance',
+        component: ComponentCreator('/docs/0.91.0/technicals-user-guidance', '9f1'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
         path: '/docs/0.91.0/try-installation',
-        component: ComponentCreator('/docs/0.91.0/try-installation', '3a8'),
+        component: ComponentCreator('/docs/0.91.0/try-installation', '02e'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/try-tutorial',
+        component: ComponentCreator('/docs/0.91.0/try-tutorial', '096'),
         exact: true
+      },
+      {
+        path: '/docs/0.91.0/use-configurations',
+        component: ComponentCreator('/docs/0.91.0/use-configurations', '135'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/use-connect',
+        component: ComponentCreator('/docs/0.91.0/use-connect', '3f9'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/use-dashboard',
+        component: ComponentCreator('/docs/0.91.0/use-dashboard', '3c8'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/use-data-explorer',
+        component: ComponentCreator('/docs/0.91.0/use-data-explorer', 'd5d'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/use-install-pipeline-elements',
+        component: ComponentCreator('/docs/0.91.0/use-install-pipeline-elements', '16f'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/use-managing-pipelines',
+        component: ComponentCreator('/docs/0.91.0/use-managing-pipelines', '6fd'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/use-notifications',
+        component: ComponentCreator('/docs/0.91.0/use-notifications', 'b9a'),
+        exact: true,
+        sidebar: "documentation"
+      },
+      {
+        path: '/docs/0.91.0/use-pipeline-editor',
+        component: ComponentCreator('/docs/0.91.0/use-pipeline-editor', 'c77'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/user-guide-first-steps',
@@ -8306,8 +3457,9 @@ export default [
       },
       {
         path: '/docs/0.91.0/user-guide-introduction',
-        component: ComponentCreator('/docs/0.91.0/user-guide-introduction', 'b47'),
-        exact: true
+        component: ComponentCreator('/docs/0.91.0/user-guide-introduction', 'fbc'),
+        exact: true,
+        sidebar: "documentation"
       },
       {
         path: '/docs/0.91.0/user-guide-introduction-old',
@@ -9441,7 +4593,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', 'c7e'),
+    component: ComponentCreator('/docs', 'c40'),
     routes: [
       {
         path: '/docs/community-contribute',
@@ -9521,8 +4673,23 @@ export default [
         sidebar: "documentation"
       },
       {
+        path: '/docs/dev-guide-archetype',
+        component: ComponentCreator('/docs/dev-guide-archetype', 'd1a'),
+        exact: true
+      },
+      {
         path: '/docs/dev-guide-introduction',
         component: ComponentCreator('/docs/dev-guide-introduction', '3b8'),
+        exact: true
+      },
+      {
+        path: '/docs/dev-guide-sdk-guide-processors',
+        component: ComponentCreator('/docs/dev-guide-sdk-guide-processors', '2c5'),
+        exact: true
+      },
+      {
+        path: '/docs/dev-guide-sdk-guide-sinks',
+        component: ComponentCreator('/docs/dev-guide-sdk-guide-sinks', '547'),
         exact: true
       },
       {
@@ -10315,6 +5482,11 @@ export default [
         component: ComponentCreator('/docs/pe/org.apache.streampipes.sinks.brokers.jvm.kafka', '569'),
         exact: true,
         sidebar: "documentation"
+      },
+      {
+        path: '/docs/pe/org.apache.streampipes.sinks.brokers.jvm.mqtt',
+        component: ComponentCreator('/docs/pe/org.apache.streampipes.sinks.brokers.jvm.mqtt', 'f51'),
+        exact: true
       },
       {
         path: '/docs/pe/org.apache.streampipes.sinks.brokers.jvm.nats',

@@ -18,5 +18,14 @@
     "title": "HTTP Server",
     "sidebar_label": "HTTP Server",
     "original_id": "org.apache.streampipes.connect.protocol.stream.httpserver"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "GDELT",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.gdelt"
+  },
+  "next": {
+    "title": "HTTP Set",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.protocol.set.http"
   }
 }

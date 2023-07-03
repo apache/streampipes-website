@@ -18,5 +18,14 @@
     "title": "Rate Limit",
     "sidebar_label": "Rate Limit",
     "original_id": "org.apache.streampipes.processors.filters.jvm.limit"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "QR Code Reader",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processor.imageclassification.qrcode"
+  },
+  "next": {
+    "title": "Reverse Geocoder",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding"
   }
 }

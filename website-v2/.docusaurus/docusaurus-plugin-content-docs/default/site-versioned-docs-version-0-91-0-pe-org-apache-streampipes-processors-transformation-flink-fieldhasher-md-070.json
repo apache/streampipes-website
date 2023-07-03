@@ -18,5 +18,14 @@
     "title": "Field Hasher",
     "sidebar_label": "Field Hasher",
     "original_id": "org.apache.streampipes.processors.transformation.flink.fieldhasher"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Field Converter",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.flink.field-converter"
+  },
+  "next": {
+    "title": "Field Mapper",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.flink.field-mapper"
   }
 }

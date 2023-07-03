@@ -19,5 +19,14 @@
     "title": "SDK Guide: Output Strategies",
     "sidebar_label": "SDK: Output Strategies",
     "original_id": "extend-sdk-output-strategies"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "SDK: Static Properties",
+    "permalink": "/docs/0.90.0/extend-sdk-static-properties"
+  },
+  "next": {
+    "title": "Migration Guide: 0.69.0",
+    "permalink": "/docs/0.90.0/extend-sdk-migration-service-discovery"
   }
 }

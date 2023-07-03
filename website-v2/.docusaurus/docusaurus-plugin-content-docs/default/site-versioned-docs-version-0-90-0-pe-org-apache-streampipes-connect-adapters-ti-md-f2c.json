@@ -1,0 +1,31 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.connect.adapters.ti",
+  "id": "version-0.90.0/pe/org.apache.streampipes.connect.adapters.ti",
+  "title": "TI Sensor Tag",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.90.0/pe/org.apache.streampipes.connect.adapters.ti.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.connect.adapters.ti",
+  "permalink": "/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.ti",
+  "draft": false,
+  "tags": [],
+  "version": "0.90.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.connect.adapters.ti",
+    "title": "TI Sensor Tag",
+    "sidebar_label": "TI Sensor Tag",
+    "original_id": "org.apache.streampipes.connect.adapters.ti"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Slack",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.slack"
+  },
+  "next": {
+    "title": "Wikipedia Edits",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.connect.adapters.wikipedia.edit"
+  }
+}

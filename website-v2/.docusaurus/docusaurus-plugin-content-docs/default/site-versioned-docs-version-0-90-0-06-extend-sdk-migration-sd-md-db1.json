@@ -19,5 +19,14 @@
     "title": "Migration Guide: New Service Discovery in 0.69.0",
     "sidebar_label": "Migration Guide: 0.69.0",
     "original_id": "extend-sdk-migration-service-discovery"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "SDK: Output Strategies",
+    "permalink": "/docs/0.90.0/extend-sdk-output-strategies"
+  },
+  "next": {
+    "title": "Architecture",
+    "permalink": "/docs/0.90.0/technicals-architecture"
   }
 }

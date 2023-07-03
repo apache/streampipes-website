@@ -18,5 +18,14 @@
     "title": "Signal Edge Filter",
     "sidebar_label": "Signal Edge Filter",
     "original_id": "org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Sequence Detection",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processors.siddhi.sequence"
+  },
+  "next": {
+    "title": "Single Trajectory Creator",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory"
   }
 }

@@ -18,5 +18,14 @@
     "title": "PLC4X MODBUS",
     "sidebar_label": "PLC4X MODBUS",
     "original_id": "org.apache.streampipes.connect.adapters.plc4x.modbus"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "OPC UA",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.opcua"
+  },
+  "next": {
+    "title": "PLC4X S7",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.plc4x.s7"
   }
 }

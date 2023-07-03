@@ -18,5 +18,14 @@
     "title": "Peak Detection",
     "sidebar_label": "Peak Detection",
     "original_id": "org.apache.streampipes.processors.pattern-detection.flink.peak-detection"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Part of Speech (English)",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.textmining.jvm.partofspeech"
+  },
+  "next": {
+    "title": "Projection",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.project"
   }
 }

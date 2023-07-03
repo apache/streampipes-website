@@ -18,5 +18,14 @@
     "title": "Static Google Maps Geocoder",
     "sidebar_label": "Static Google Maps Geocoder",
     "original_id": "org.apache.streampipes.processor.geo.jvm.staticgeocoding"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Static Distance Calculator",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator"
+  },
+  "next": {
+    "title": "Static Math",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop"
   }
 }

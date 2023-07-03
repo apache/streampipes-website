@@ -18,5 +18,14 @@
     "title": "QR Code Reader",
     "sidebar_label": "QR Code Reader",
     "original_id": "org.apache.streampipes.processor.imageclassification.qrcode"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Projection",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.project"
+  },
+  "next": {
+    "title": "Rate Limit",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.limit"
   }
 }

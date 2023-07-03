@@ -18,5 +18,14 @@
     "title": "Number Labeler",
     "sidebar_label": "Number Labeler",
     "original_id": "org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Name Finder",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processors.textmining.jvm.namefinder"
+  },
+  "next": {
+    "title": "Numerical Filter",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.numericalfilter"
   }
 }

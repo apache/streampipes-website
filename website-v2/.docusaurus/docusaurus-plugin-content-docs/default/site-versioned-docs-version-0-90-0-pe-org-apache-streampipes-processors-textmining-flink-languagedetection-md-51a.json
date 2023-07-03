@@ -18,5 +18,14 @@
     "title": "Language Detection",
     "sidebar_label": "Language Detection",
     "original_id": "org.apache.streampipes.processors.textmining.flink.languagedetection"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Image Enricher",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher"
+  },
+  "next": {
+    "title": "Language Detection",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processors.textmining.jvm.languagedetection"
   }
 }

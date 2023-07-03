@@ -18,5 +18,14 @@
     "title": "Telegram Publisher",
     "sidebar_label": "Telegram Publisher",
     "original_id": "org.apache.streampipes.sinks.notifications.jvm.telegram"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Slack Notification",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.sinks.notifications.jvm.slack"
+  },
+  "next": {
+    "title": "Docker Deployment",
+    "permalink": "/docs/0.90.0/deploy-docker"
   }
 }

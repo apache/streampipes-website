@@ -1219,10 +1219,25 @@
       "description": "This page explains how SSL Certificates can be used to provide transport layer security between your Browser and the Streampipes Backend.",
       "sidebar": "documentation"
     },
+    "dev-guide-archetype": {
+      "id": "dev-guide-archetype",
+      "title": "Start Developing",
+      "description": ""
+    },
     "dev-guide-introduction": {
       "id": "dev-guide-introduction",
       "title": "Introduction",
       "description": "StreamPipes is an open platform which can be easily extended at runtime by adding new data streams, data processors and data sinks."
+    },
+    "dev-guide-sdk-guide-processors": {
+      "id": "dev-guide-sdk-guide-processors",
+      "title": "SDK Guide: Data Processors",
+      "description": "Project Setup"
+    },
+    "dev-guide-sdk-guide-sinks": {
+      "id": "dev-guide-sdk-guide-sinks",
+      "title": "SDK Guide: Data Sinks",
+      "description": "Project Setup"
     },
     "extend-archetypes": {
       "id": "extend-archetypes",
@@ -2014,6 +2029,11 @@
       "title": "Kafka Publisher",
       "description": "<!--",
       "sidebar": "documentation"
+    },
+    "pe/org.apache.streampipes.sinks.brokers.jvm.mqtt": {
+      "id": "pe/org.apache.streampipes.sinks.brokers.jvm.mqtt",
+      "title": "MQTT Publisher",
+      "description": "<!--"
     },
     "pe/org.apache.streampipes.sinks.brokers.jvm.nats": {
       "id": "pe/org.apache.streampipes.sinks.brokers.jvm.nats",

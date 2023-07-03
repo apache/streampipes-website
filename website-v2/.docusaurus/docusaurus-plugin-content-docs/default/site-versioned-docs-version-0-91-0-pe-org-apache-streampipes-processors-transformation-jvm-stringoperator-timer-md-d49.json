@@ -18,5 +18,14 @@
     "title": "String Timer",
     "sidebar_label": "String Timer",
     "original_id": "org.apache.streampipes.processors.transformation.jvm.stringoperator.timer"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "String Counter",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter"
+  },
+  "next": {
+    "title": "String To State",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state"
   }
 }

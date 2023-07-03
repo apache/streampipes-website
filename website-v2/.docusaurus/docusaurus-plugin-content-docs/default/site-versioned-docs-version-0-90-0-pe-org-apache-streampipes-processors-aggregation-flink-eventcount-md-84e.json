@@ -18,5 +18,14 @@
     "title": "Event Counter",
     "sidebar_label": "Event Counter",
     "original_id": "org.apache.streampipes.processors.aggregation.flink.eventcount"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "EPSG Code",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG"
+  },
+  "next": {
+    "title": "Event Rate",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processors.aggregation.flink.rate"
   }
 }

@@ -18,5 +18,14 @@
     "title": "Measurement Unit Converter",
     "sidebar_label": "Measurement Unit Converter",
     "original_id": "org.apache.streampipes.processors.transformation.flink.measurement-unit-converter"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Measure Time Between Two Sensors",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping"
+  },
+  "next": {
+    "title": "Merge By Enrich",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.enrich"
   }
 }

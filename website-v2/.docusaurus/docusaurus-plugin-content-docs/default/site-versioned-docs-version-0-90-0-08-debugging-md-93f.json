@@ -1,0 +1,23 @@
+{
+  "unversionedId": "debugging-debugging",
+  "id": "version-0.90.0/debugging-debugging",
+  "title": "Debugging",
+  "description": "tbd",
+  "source": "@site/versioned_docs/version-0.90.0/08_debugging.md",
+  "sourceDirName": ".",
+  "slug": "/debugging-debugging",
+  "permalink": "/docs/0.90.0/debugging-debugging",
+  "draft": false,
+  "tags": [],
+  "version": "0.90.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "id": "debugging-debugging",
+    "title": "Debugging",
+    "sidebar_label": "Debugging",
+    "original_id": "debugging-debugging"
+  }
+}

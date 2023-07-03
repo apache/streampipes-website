@@ -18,5 +18,14 @@
     "title": "Distance Calculator",
     "sidebar_label": "Distance Calculator",
     "original_id": "org.apache.streampipes.processors.geo.jvm.processor.distancecalculator"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Cusum",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.changedetection.jvm.cusum"
+  },
+  "next": {
+    "title": "EPSG Code",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG"
   }
 }

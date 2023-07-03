@@ -18,5 +18,14 @@
     "title": "Eclipse Ditto",
     "sidebar_label": "Eclipse Ditto",
     "original_id": "org.apache.streampipes.sinks.databases.ditto"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Data Lake",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.sinks.internal.jvm.datalake"
+  },
+  "next": {
+    "title": "Elasticsearch",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.sinks.databases.flink.elasticsearch"
   }
 }

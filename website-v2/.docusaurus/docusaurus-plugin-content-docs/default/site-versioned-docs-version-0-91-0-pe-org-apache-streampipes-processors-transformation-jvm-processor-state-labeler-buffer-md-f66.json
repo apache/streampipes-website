@@ -18,5 +18,14 @@
     "title": "State Buffer Labeler",
     "sidebar_label": "State Buffer Labeler",
     "original_id": "org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "State Buffer",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.buffer"
+  },
+  "next": {
+    "title": "Static Distance Calculator",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator"
   }
 }

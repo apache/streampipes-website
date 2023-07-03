@@ -18,5 +18,14 @@
     "title": "Frequency Change",
     "sidebar_label": "Frequency Change",
     "original_id": "org.apache.streampipes.processors.siddhi.frequencychange"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Frequency Calculation",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.siddhi.frequency"
+  },
+  "next": {
+    "title": "Generic Image Classification",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification"
   }
 }

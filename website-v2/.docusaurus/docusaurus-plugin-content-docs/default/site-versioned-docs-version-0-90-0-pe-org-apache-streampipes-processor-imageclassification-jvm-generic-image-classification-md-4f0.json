@@ -18,5 +18,14 @@
     "title": "Generic Image Classification",
     "sidebar_label": "Generic Image Classification",
     "original_id": "org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Frequency Change",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processors.siddhi.frequencychange"
+  },
+  "next": {
+    "title": "Google Maps Geocoder",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processor.geo.jvm.geocoding"
   }
 }

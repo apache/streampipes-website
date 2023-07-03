@@ -18,5 +18,14 @@
     "title": "Machine Data Simulator",
     "sidebar_label": "Machine Data Simulator",
     "original_id": "org.apache.streampipes.connect.adapters.simulator.machine"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "MQTT",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.connect.protocol.stream.mqtt"
+  },
+  "next": {
+    "title": "MySQL Set Adapter",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.mysql.set"
   }
 }

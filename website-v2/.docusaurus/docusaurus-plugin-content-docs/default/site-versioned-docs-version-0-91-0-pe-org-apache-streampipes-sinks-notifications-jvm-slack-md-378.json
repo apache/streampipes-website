@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.sinks.notifications.jvm.slack",
     "title": "Slack Notification",
     "sidebar_label": "Slack Notification"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "RabbitMQ Publisher",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq"
+  },
+  "next": {
+    "title": "Telegram Publisher",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.sinks.notifications.jvm.telegram"
   }
 }

@@ -18,5 +18,14 @@
     "title": "Cusum",
     "sidebar_label": "Cusum",
     "original_id": "org.apache.streampipes.processors.changedetection.jvm.cusum"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Creates JTS Point",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo"
+  },
+  "next": {
+    "title": "Distance Calculator",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator"
   }
 }

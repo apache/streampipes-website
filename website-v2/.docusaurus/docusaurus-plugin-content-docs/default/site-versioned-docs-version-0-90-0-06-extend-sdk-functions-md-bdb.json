@@ -19,5 +19,14 @@
     "title": "SDK Guide: Functions",
     "sidebar_label": "SDK: Functions",
     "original_id": "extend-sdk-functions"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Tutorial: Data Sinks",
+    "permalink": "/docs/0.90.0/extend-tutorial-data-sinks"
+  },
+  "next": {
+    "title": "SDK: Event Model",
+    "permalink": "/docs/0.90.0/extend-sdk-event-model"
   }
 }

@@ -18,5 +18,14 @@
     "title": "Absence",
     "sidebar_label": "Absence",
     "original_id": "org.apache.streampipes.processors.pattern-detection.flink.absence"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Wikipedia New Articles",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.connect.adapters.wikipedia.new"
+  },
+  "next": {
+    "title": "Aggregation",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.aggregation.flink.aggregation"
   }
 }

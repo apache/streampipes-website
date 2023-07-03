@@ -18,5 +18,14 @@
     "title": "Boolean Counter",
     "sidebar_label": "Boolean Counter",
     "original_id": "org.apache.streampipes.processors.transformation.jvm.booloperator.counter"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Boilerplate Removal",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.flink.processor.boilerplate"
+  },
+  "next": {
+    "title": "Boolean Inverter",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter"
   }
 }

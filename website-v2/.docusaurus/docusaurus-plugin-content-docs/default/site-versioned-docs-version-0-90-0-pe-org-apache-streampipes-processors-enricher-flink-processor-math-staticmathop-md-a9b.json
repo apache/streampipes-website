@@ -1,0 +1,31 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop",
+  "id": "version-0.90.0/pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop",
+  "title": "Static Math",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.90.0/pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop",
+  "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop",
+  "draft": false,
+  "tags": [],
+  "version": "0.90.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop",
+    "title": "Static Math",
+    "sidebar_label": "Static Math",
+    "original_id": "org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Static Google Maps Geocoder",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding"
+  },
+  "next": {
+    "title": "Statistics Summary",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processors.statistics.flink.statistics-summary"
+  }
+}

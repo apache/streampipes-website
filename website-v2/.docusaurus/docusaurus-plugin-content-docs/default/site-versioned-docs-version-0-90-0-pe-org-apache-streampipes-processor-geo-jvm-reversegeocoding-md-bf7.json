@@ -18,5 +18,14 @@
     "title": "Reverse Geocoder",
     "sidebar_label": "Reverse Geocoder",
     "original_id": "org.apache.streampipes.processor.geo.jvm.reversegeocoding"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Rate Limit",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.limit"
+  },
+  "next": {
+    "title": "Sentence Detection (English)",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processors.textmining.jvm.sentencedetection"
   }
 }

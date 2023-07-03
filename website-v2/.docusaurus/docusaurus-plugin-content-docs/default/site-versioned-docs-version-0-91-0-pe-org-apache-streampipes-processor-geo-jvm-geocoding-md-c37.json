@@ -18,5 +18,14 @@
     "title": "Google Maps Geocoder",
     "sidebar_label": "Google Maps Geocoder",
     "original_id": "org.apache.streampipes.processor.geo.jvm.geocoding"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Generic Image Classification",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification"
+  },
+  "next": {
+    "title": "Image Cropper",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper"
   }
 }

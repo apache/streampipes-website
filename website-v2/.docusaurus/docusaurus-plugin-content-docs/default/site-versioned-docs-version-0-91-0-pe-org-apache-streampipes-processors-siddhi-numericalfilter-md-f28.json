@@ -18,5 +18,14 @@
     "title": "Numerical Filter (Siddhi)",
     "sidebar_label": "Numerical Filter (Siddhi)",
     "original_id": "org.apache.streampipes.processors.siddhi.numericalfilter"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Numerical Filter",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.numericalfilter"
+  },
+  "next": {
+    "title": "Numerical Text Filter",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.filters.jvm.numericaltextfilter"
   }
 }

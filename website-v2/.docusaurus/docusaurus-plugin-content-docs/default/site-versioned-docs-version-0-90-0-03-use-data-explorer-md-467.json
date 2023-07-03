@@ -1,0 +1,32 @@
+{
+  "unversionedId": "use-data-explorer",
+  "id": "version-0.90.0/use-data-explorer",
+  "title": "Data Explorer",
+  "description": "The data explorer can be used to visualize and explore data streams that are persisted by using the Data Lake sink.",
+  "source": "@site/versioned_docs/version-0.90.0/03_use-data-explorer.md",
+  "sourceDirName": ".",
+  "slug": "/use-data-explorer",
+  "permalink": "/docs/0.90.0/use-data-explorer",
+  "draft": false,
+  "tags": [],
+  "version": "0.90.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "use-data-explorer",
+    "title": "Data Explorer",
+    "sidebar_label": "Data Explorer",
+    "original_id": "use-data-explorer"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Live Dashboard",
+    "permalink": "/docs/0.90.0/use-dashboard"
+  },
+  "next": {
+    "title": "Notifications",
+    "permalink": "/docs/0.90.0/use-notifications"
+  }
+}

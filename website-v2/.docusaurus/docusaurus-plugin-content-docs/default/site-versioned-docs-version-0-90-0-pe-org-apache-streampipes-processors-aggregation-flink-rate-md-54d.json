@@ -18,5 +18,14 @@
     "title": "Event Rate",
     "sidebar_label": "Event Rate",
     "original_id": "org.apache.streampipes.processors.aggregation.flink.rate"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Event Counter",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processors.aggregation.flink.eventcount"
+  },
+  "next": {
+    "title": "Field Converter",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.flink.field-converter"
   }
 }

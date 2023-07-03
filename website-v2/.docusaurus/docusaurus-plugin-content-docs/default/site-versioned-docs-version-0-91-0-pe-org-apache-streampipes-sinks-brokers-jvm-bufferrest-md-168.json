@@ -1,0 +1,31 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest",
+  "id": "version-0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest",
+  "title": "Buffered REST Publisher",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest",
+  "permalink": "/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest",
+  "draft": false,
+  "tags": [],
+  "version": "0.91.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.sinks.brokers.jvm.bufferrest",
+    "title": "Buffered REST Publisher",
+    "sidebar_label": "Buffered REST Publisher",
+    "original_id": "org.apache.streampipes.sinks.brokers.jvm.bufferrest"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Word Count",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.textmining.flink.wordcount"
+  },
+  "next": {
+    "title": "CouchDB",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.sinks.databases.jvm.couchdb"
+  }
+}

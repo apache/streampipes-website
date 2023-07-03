@@ -18,5 +18,14 @@
     "title": "Count Aggregation",
     "sidebar_label": "Count Aggregation",
     "original_id": "org.apache.streampipes.processors.aggregation.flink.count"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Compose",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processors.filters.jvm.compose"
+  },
+  "next": {
+    "title": "Count Array",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.count-array"
   }
 }

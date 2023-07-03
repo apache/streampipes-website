@@ -18,5 +18,14 @@
     "title": "Static Distance Calculator",
     "sidebar_label": "Static Distance Calculator",
     "original_id": "org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "State Buffer Labeler",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer"
+  },
+  "next": {
+    "title": "Static Google Maps Geocoder",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding"
   }
 }

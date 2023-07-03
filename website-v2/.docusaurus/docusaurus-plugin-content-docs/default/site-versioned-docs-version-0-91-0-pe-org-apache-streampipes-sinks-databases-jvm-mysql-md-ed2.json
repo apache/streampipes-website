@@ -18,5 +18,14 @@
     "title": "MySQL Database",
     "sidebar_label": "MySQL Database",
     "original_id": "org.apache.streampipes.sinks.databases.jvm.mysql"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Kafka Publisher",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.kafka"
+  },
+  "next": {
+    "title": "NATS Publisher",
+    "permalink": "/docs/0.91.0/pe/org.apache.streampipes.sinks.brokers.jvm.nats"
   }
 }

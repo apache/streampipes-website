@@ -18,5 +18,14 @@
     "title": "Word Count",
     "sidebar_label": "Word Count",
     "original_id": "org.apache.streampipes.processors.textmining.flink.wordcount"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Value Changed",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.processors.transformation.jvm.changed-value"
+  },
+  "next": {
+    "title": "Buffered REST Publisher",
+    "permalink": "/docs/0.90.0/pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest"
   }
 }

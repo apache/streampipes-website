@@ -19,5 +19,14 @@
     "title": "SDK Guide: Static Properties",
     "sidebar_label": "SDK: Static Properties",
     "original_id": "extend-sdk-static-properties"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "SDK: Stream Requirements",
+    "permalink": "/docs/0.90.0/extend-sdk-stream-requirements"
+  },
+  "next": {
+    "title": "SDK: Output Strategies",
+    "permalink": "/docs/0.90.0/extend-sdk-output-strategies"
   }
 }
