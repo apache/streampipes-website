@@ -6,20 +6,20 @@
   "date": "2019-09-19T00:00:00.000Z",
   "formattedDate": "September 19, 2019",
   "tags": [],
-  "readingTime": 2.105,
+  "readingTime": 2.115,
   "hasTruncateMarker": true,
   "authors": [
     {
       "name": "Dominik Riemer",
       "url": "https://twitter.com/dominikjriemer",
-      "imageURL": "/docs/img/riemer.png"
+      "imageURL": "/img/riemer.png"
     }
   ],
   "frontMatter": {
     "title": "StreamPipes release 0.64.0",
     "author": "Dominik Riemer",
     "authorURL": "https://twitter.com/dominikjriemer",
-    "authorImageURL": "/docs/img/riemer.png"
+    "authorImageURL": "/img/riemer.png"
   },
   "prevItem": {
     "title": "StreamPipes release 0.65.0",

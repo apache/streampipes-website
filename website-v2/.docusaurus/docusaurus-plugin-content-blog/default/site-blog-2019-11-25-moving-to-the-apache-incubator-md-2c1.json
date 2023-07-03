@@ -6,20 +6,20 @@
   "date": "2019-11-25T00:00:00.000Z",
   "formattedDate": "November 25, 2019",
   "tags": [],
-  "readingTime": 3.68,
+  "readingTime": 3.695,
   "hasTruncateMarker": true,
   "authors": [
     {
       "name": "Dominik Riemer",
       "url": "https://twitter.com/dominikjriemer",
-      "imageURL": "/docs/img/riemer.png"
+      "imageURL": "/img/riemer.png"
     }
   ],
   "frontMatter": {
     "title": "Moving to the Apache Incubator",
     "author": "Dominik Riemer",
     "authorURL": "https://twitter.com/dominikjriemer",
-    "authorImageURL": "/docs/img/riemer.png"
+    "authorImageURL": "/img/riemer.png"
   },
   "prevItem": {
     "title": "StreamPi(pes) - Running StreamPipes on Raspberry Pi",

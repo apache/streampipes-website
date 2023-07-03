@@ -2,9 +2,9 @@
 title: "ContainerCLI: A CLI tool for your Docker Application"
 author: Philipp Zehnder
 authorURL: "http://twitter.com/philipp10der"
-authorImageURL: "/docs/img/zehnder.png"
+authorImageURL: "/img/zehnder.png"
 ---
-**<div style="float: left; padding-right: 40px;">6 minutes to read</div>**
+**<div style={{float: 'left', paddingRight: '40px'}}>6 minutes to read</div>**
 <br/>
 
 In this blog post, we show how we developed a CLI tool to install and manage StreamPipes.
@@ -20,7 +20,7 @@ In the figure below, you can see different configurations that are used by diffe
 All services are running in docker, except for the ones the developer is currently working on.
 As a result, we had many different docker-compose.yml files and when we made changes, we had to synchronize them all.
 
-<img class="blog-image" style="max-width:60%;" src="/docs/blog/assets/2018-11-24/roles.png" alt="Three different developer roles"/>
+<img class="blog-image" style={{maxWidth: '60%'}} src="/img/blog/2018-11-24/roles.png" alt="Three different developer roles"/>
 
 Therefore, our goal was to speed up the setup of a development environment, so that developers can focus on their specific programming task.
 That’s why we developed a command line tool that automates the setup of different environments.
@@ -54,7 +54,7 @@ By running **“container-cli set-template ui_developer”**, you can select the
 With this command, all services defined in the template are written to the active-services file. (e.g. the ui_developer template contains just the database and backend and the e2e-test template contains the backend, ui, and test-database).
 
 
-<img class="blog-image" style="max-width:30%;" src="/docs/blog/assets/2018-11-24/files.png" alt="Structure of the containter cli project"/>
+<img class="blog-image" style={{maxWidth: '30%'}} src="/img/blog/2018-11-24/files.png" alt="Structure of the containter cli project"/>
 
 
 The last file is the tmpl_env file.
@@ -64,7 +64,7 @@ We use the configuration for example to dynamically set the IP Address of the ho
 To use a variable in a docker-compose file just write it in braces, as shown below.
 
 
-<img class="blog-image" style="max-width:90%;" src="/docs/blog/assets/2018-11-24/variables.png" alt="How to use Environment Variables"/>
+<img className="blog-image" style={{maxWidth: '90%'}} src="/img/blog/2018-11-24/variables.png" alt="How to use Environment Variables"/>
 
 We hope this tool is helpful for your use case.
 When you have any problems, feedback, or ideas for improvements, contact us or open an issue on [GitHub](https://github.com/streampipes/container-cli).

@@ -6,20 +6,20 @@
   "date": "2020-05-27T00:00:00.000Z",
   "formattedDate": "May 27, 2020",
   "tags": [],
-  "readingTime": 11.865,
+  "readingTime": 11.89,
   "hasTruncateMarker": true,
   "authors": [
     {
       "name": "Patrick Wiener",
       "url": "https://twitter.com/patrickwiener",
-      "imageURL": "/docs/img/wiener.png"
+      "imageURL": "/img/wiener.png"
     }
   ],
   "frontMatter": {
     "title": "Running StreamPipes the Kubernetes-Way using k3s",
     "author": "Patrick Wiener",
     "authorURL": "https://twitter.com/patrickwiener",
-    "authorImageURL": "/docs/img/wiener.png"
+    "authorImageURL": "/img/wiener.png"
   },
   "prevItem": {
     "title": "Apache StreamPipes release 0.68.0",

@@ -2,10 +2,10 @@
 title: Moving to the Apache Incubator
 author: Dominik Riemer
 authorURL: "https://twitter.com/dominikjriemer"
-authorImageURL: "/docs/img/riemer.png"
+authorImageURL: "/img/riemer.png"
 ---
 
-**<div style="float: left; padding-right: 40px;">8 minutes to read</div>**
+**<div style={{float: 'left', paddingRight: '40px'}}>8 minutes to read</div>**
 <br/>
 Great news: StreamPipes is moving to the Apache Incubator!
 
@@ -23,8 +23,8 @@ Since then, we presented and showcased StreamPipes at various events: fairs, mee
 instance, in 2019 we attended over 20 events where we gave demos or talked about StreamPipes.
 It is great to see that the solution is now steadily getting increased traction in the Industrial IoT space.
 
-<img class="blog-image" style="max-width:90%;margin-bottom:20px;" src="/blog/assets/2019-11-25/2019-11_StreamPipes-v0.png" alt="1st prototype of the StreamPipes UI"/>
-<img class="blog-image" style="max-width:90%;" src="/blog/assets/2019-11-25/2019-11_StreamPipes-now.png" alt="1st prototype of the StreamPipes UI"/>
+<img class="blog-image" style={{maxWidth: '90%', marginBottom:'20px'}} src="/img/blog/2019-11-25/2019-11_StreamPipes-v0.png" alt="1st prototype of the StreamPipes UI"/>
+<img className="blog-image" style={{maxWidth: '90%'}} src="/img/blog/2019-11-25/2019-11_StreamPipes-now.png" alt="1st prototype of the StreamPipes UI"/>
 
 ## Moving to the Apache Incubator
 

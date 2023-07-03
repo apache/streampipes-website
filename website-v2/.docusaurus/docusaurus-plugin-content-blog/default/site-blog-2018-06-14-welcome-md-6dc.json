@@ -12,14 +12,14 @@
     {
       "name": "Dominik Riemer",
       "url": "http://twitter.com/dominikjriemer",
-      "imageURL": "/docs/img/riemer.png"
+      "imageURL": "/img/riemer.png"
     }
   ],
   "frontMatter": {
     "title": "Welcome to StreamPipes!",
     "author": "Dominik Riemer",
     "authorURL": "http://twitter.com/dominikjriemer",
-    "authorImageURL": "/docs/img/riemer.png"
+    "authorImageURL": "/img/riemer.png"
   },
   "prevItem": {
     "title": "How to understand your machine data?",

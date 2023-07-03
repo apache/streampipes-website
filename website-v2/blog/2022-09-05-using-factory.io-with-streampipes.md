@@ -3,14 +3,14 @@ title: "Using Factory I/O with StreamPipes"
 author: Sven Oehler
 ---
 
-**<div style="float: left; padding-right: 40px;">10 minutes to read</div>**<br/>
+**<div style={{float: 'left', paddingRight: '40px'}}>10 minutes to read</div>**<br/>
 
 This tutorial shows how you can stream sensor data into StreamPipes from a simulation environment (Factory I/O). The
 simulation environment is controlled by a "Siemens S7-1200" PLC and shows a conveyor belt which sorts packages by their
 height. The tutorial is based on the upcoming version 0.70.0 and teaches you how to load the sensor data, build a
 pipeline, preprocess the data and create visualizations.
 
-<img class="blog-image" style="max-width:75%;" src="/docs/blog/assets/2022-09-05/plc.jpg" alt="plc"/><br/>
+<img class="blog-image" style={{maxWidth: '75%'}} src="/img/blog/2022-09-05/plc.jpg" alt="plc"/><br/>
 
 <!--truncate-->
 
@@ -22,7 +22,7 @@ a PLC training platform. We will need it to simulate the live data.
 - Set up Factory I/O and make sure that the <a href="https://docs.factoryio.com/tutorials/siemens/sample-s7-1200-1500/">
   *Sorting by Height (Basic)*</a> simulation works.
 
-<img class="blog-image" style="max-width:90%;" src="/docs/blog/assets/2022-09-05/factory.io.png" alt="dataView"/><br/>
+<img className="blog-image" style={{maxWidth: '90%'}} src="/img/blog/2022-09-05/factory.io.png" alt="dataView"/><br/>
 
 ## 2. Adapter
 
@@ -33,18 +33,18 @@ The next step is to connect the PLC to StreamPipes. To achieve this we need to c
 - Select the **PLC4X S7** adapter, insert the **IP-address** of your PLC and **import the file** with the PLC tags (see
   below). Then click **NEXT** on the bottom right.
 
-<img class="blog-image" style="max-width:90%;" src="/docs/blog/assets/2022-09-05/adapter1.png" alt="adapter1"/>
+<img className="blog-image" style={{maxWidth: '90%'}} src="/img/blog/2022-09-05/adapter1.png" alt="adapter1"/>
 
 - If the warning "MISSING TIMESTAMP" appears, press **ADD TIMESTAMP** and then **NEXT**. This warning occurs because
   some data sources don't provide a timestamp.
 
-<img class="blog-image" style="max-width:90%;" src="/docs/blog/assets/2022-09-05/adapter2.png" alt="adapter2"/>
+<img className="blog-image" style={{maxWidth: '90%'}} src="/img/blog/2022-09-05/adapter2.png" alt="adapter2"/>
 
 - You can name the adapter "S7_sorting" and select the option **PERSIST EVENTS** to make sure the data is persisted. The
   adapter is now ready to **START**. (You can check if the adapter is working by pressing the **`?`** symbol in the
   connect menu and clicking on **VALUES** to see a live preview).
 
-<img class="blog-image" style="max-width:90%;" src="/docs/blog/assets/2022-09-05/adapter3.png" alt="adapter3"/><br/>
+<img className="blog-image" style={{maxWidth: '90%'}} src="/img/blog/2022-09-05/adapter3.png" alt="adapter3"/><br/>
 
 ## 3. Dashboard for raw data
 
@@ -58,7 +58,7 @@ updated when the simulation runs.
 - Change the size of the table as you like and **SAVE** the dashboard.
 - The values should now update every 5 seconds. Test it by starting the simulation in Factory I/O.
 
-<img class="blog-image" style="max-width:90%;" src="/docs/blog/assets/2022-09-05/dashboard1.png" alt="dashboard1"/><br/>
+<img className="blog-image" style={{maxWidth: '90%'}} src="/img/blog/2022-09-05/dashboard1.png" alt="dashboard1"/><br/>
 
 ## 4. Creating a Data View
 
@@ -70,7 +70,7 @@ sensor.
 - Select the "Persist S7_sorting" pipeline at the **NEW WIDGET** menu, **SELECT ALL** fields and press **NEXT**.
 - Select the **TABLE** visualization. Click **SELECT ALL** and **CREATE**.
 
-<img class="blog-image" style="max-width:90%;" src="/docs/blog/assets/2022-09-05/dataView1.png" alt="dataView1"/>
+<img className="blog-image" style={{maxWidth: '90%'}} src="/img/blog/2022-09-05/dataView1.png" alt="dataView1"/>
 
 - Now we want to look closer at a single sensor value. Therefore click on the **`+`** symbol on the top left to add a
   new widget.
@@ -78,7 +78,7 @@ sensor.
   field. Now select  **DISTRIBUTION** as visualization and press **CREATE**. This chart shows how often the sensor
   returned true or false (package in front of it or not).
 
-<img class="blog-image" style="max-width:90%;" src="/docs/blog/assets/2022-09-05/dataView2.png" alt="dataView2"/>
+<img className="blog-image" style={{maxWidth: '90%'}} src="/img/blog/2022-09-05/dataView2.png" alt="dataView2"/>
 
 ## 5. Modifying the Pipeline
 
@@ -94,7 +94,7 @@ which get transported to the right side and we want to measure the time between 
   *BOOLEAN TIMER** to it. Use "Boolean_Timer" as identifier.
 - **SAVE** the pipeline and click the checkbox **START PIPELINE IMMEDIATELY**.
 
-<img class="blog-image" style="max-width:90%;" src="/docs/blog/assets/2022-09-05/pipeline.png" alt="pipeline"/>
+<img className="blog-image" style={{maxWidth: '90%'}} src="/img/blog/2022-09-05/pipeline.png" alt="pipeline"/>
 
 ## 6. Dashboard for preprocessed data
 
@@ -107,7 +107,7 @@ After we created two new data field in the last step, we will monitor them in th
 - Test your pipeline by starting the simulation again. The counter should now count up when a package passes the sensor
   on the right side and the "measured_time" should show the time since the last package arrived.
 
-<img class="blog-image" style="max-width:90%;" src="/docs/blog/assets/2022-09-05/dashboard2.png" alt="dashboard2"/><br/>
+<img className="blog-image" style={{maxWidth: '90%'}} src="/img/blog/2022-09-05/dashboard2.png" alt="dashboard2"/><br/>
 
 ## 7. Final Data View
 
@@ -120,7 +120,7 @@ series to verify when a new package arrived and a heat map to check the time bet
 - Create another widget. Choose the "Persist S7_sorting: BooleanCounter" pipeline and select the **measured_time**
   field. Then select the **HEATMAP** and use "measured_time" as **HEAT VALUE**
 
-<img class="blog-image" style="max-width:90%;" src="/docs/blog/assets/2022-09-05/dataView3.png" alt="dataView3"/><br/>
+<img className="blog-image" style={{maxWidth: '90%'}} src="/img/blog/2022-09-05/dataView3.png" alt="dataView3"/><br/>
 
 ## Summary
 

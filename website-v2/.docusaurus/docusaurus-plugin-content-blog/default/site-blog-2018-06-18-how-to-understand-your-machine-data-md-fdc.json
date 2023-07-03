@@ -6,20 +6,20 @@
   "date": "2018-06-18T00:00:00.000Z",
   "formattedDate": "June 18, 2018",
   "tags": [],
-  "readingTime": 6.69,
+  "readingTime": 6.7,
   "hasTruncateMarker": true,
   "authors": [
     {
       "name": "Philipp Zehnder",
       "url": "http://twitter.com/philipp10der",
-      "imageURL": "/docs/img/zehnder.png"
+      "imageURL": "/img/zehnder.png"
     }
   ],
   "frontMatter": {
     "title": "How to understand your machine data?",
     "author": "Philipp Zehnder",
     "authorURL": "http://twitter.com/philipp10der",
-    "authorImageURL": "/docs/img/zehnder.png"
+    "authorImageURL": "/img/zehnder.png"
   },
   "prevItem": {
     "title": "Preview: StreamPipes release 0.60.0",

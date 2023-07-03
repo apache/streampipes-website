@@ -6,20 +6,20 @@
   "date": "2022-10-13T00:00:00.000Z",
   "formattedDate": "October 13, 2022",
   "tags": [],
-  "readingTime": 4.375,
+  "readingTime": 4.38,
   "hasTruncateMarker": true,
   "authors": [
     {
       "name": "Tim Bossenmaier",
       "url": "https://github.com/bossenti",
-      "imageURL": "/docs/img/bossenmaier.png"
+      "imageURL": "/img/bossenmaier.png"
     }
   ],
   "frontMatter": {
     "title": "Apache StreamPipes release 0.70.0",
     "author": "Tim Bossenmaier",
     "authorURL": "https://github.com/bossenti",
-    "authorImageURL": "/docs/img/bossenmaier.png"
+    "authorImageURL": "/img/bossenmaier.png"
   },
   "prevItem": {
     "title": "Apache StreamPipes release 0.90.0",

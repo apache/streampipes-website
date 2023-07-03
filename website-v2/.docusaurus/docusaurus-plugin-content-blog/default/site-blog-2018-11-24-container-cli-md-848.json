@@ -6,20 +6,20 @@
   "date": "2018-11-24T00:00:00.000Z",
   "formattedDate": "November 24, 2018",
   "tags": [],
-  "readingTime": 3.895,
+  "readingTime": 3.91,
   "hasTruncateMarker": true,
   "authors": [
     {
       "name": "Philipp Zehnder",
       "url": "http://twitter.com/philipp10der",
-      "imageURL": "/docs/img/zehnder.png"
+      "imageURL": "/img/zehnder.png"
     }
   ],
   "frontMatter": {
     "title": "ContainerCLI: A CLI tool for your Docker Application",
     "author": "Philipp Zehnder",
     "authorURL": "http://twitter.com/philipp10der",
-    "authorImageURL": "/docs/img/zehnder.png"
+    "authorImageURL": "/img/zehnder.png"
   },
   "prevItem": {
     "title": "StreamPipes release 0.61.0",

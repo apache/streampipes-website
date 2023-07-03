@@ -2,10 +2,10 @@
 title: Running StreamPipes the Kubernetes-Way using k3s
 author: Patrick Wiener
 authorURL: "https://twitter.com/patrickwiener"
-authorImageURL: "/docs/img/wiener.png"
+authorImageURL: "/img/wiener.png"
 ---
-<img class="blog-image" style="max-width:100%;" src="/docs/blog/assets/2020-05-27/streampipes_k3s.png" alt="StreamPipes on k3s"/>
-**<div style="float: left; padding-right: 40px;">15 minutes to read</div>**
+<img class="blog-image" style={{maxWidth: '100%'}} src="/img/blog/2020-05-27/streampipes_k3s.png" alt="StreamPipes on k3s"/>
+**<div style={{float: 'left', paddingRight: '40px'}}>15 minutes to read</div>**
 <br/>
 
 
@@ -16,7 +16,7 @@ This blog post is the second part of a series on how we want to bring StreamPipe
 
 **With new advancements that came in the last StreamPipes release, we managed to reduce the required resources (mainly memory) drastically. To this extent, we cross-compiled StreamPipes Docker images for ARM support and deployed our lite version on a Raspberry Pi (Model 4). We showcase, that it is feasible to run analytical pipelines with ease and operate StreamPipes at moderate load. Additionally, we demonstrate how to deploy StreamPipes over a two-node k3s cluster using our StreamPipes helm chart.**
 
-<img class="blog-image" style="max-width:80%;" src="/docs/blog/assets/2020-05-27/k3s.png" alt="K3s"/>
+<img class="blog-image" style={{maxWidth: '80%'}} src="/img/blog/2020-05-27/k3s.png" alt="K3s"/>
 
 ## Introduction
 
@@ -72,7 +72,7 @@ As pointed out in the first part of the series, we have gained valueable insight
 As shown in the following figure, starting from the multiarch images hosted on [Dockerhub](https://hub.docker.com/search?q=apachestreampipes&type=image), we first provisioned the two Pi's with Docker, install and setup K3s and finally deploy our StreamPipes helm chart in order for users to connect, analyze and exploit their IIoT data with StreamPipes.
 
 
-<img class="blog-image" style="max-width:100%;" src="/docs/blog/assets/2020-05-27/deployment.png" alt="Deployment"/>
+<img class="blog-image" style={{maxWidth: '100%'}} src="/img/blog/2020-05-27/deployment.png" alt="Deployment"/>
 
 In the remainder, we cover how we installed Helm and K3s to form our almighty StreamPi K3s cluster. At the time of writing, we tested our deployment using the latest version of the Docker, Helm as well as K3s in the following setup
 
@@ -245,14 +245,14 @@ spec:
 
 That means, you can go and check the StreamPipes UI either on `http://streampi-01/` or `http://streampi-02/` - K8s service handles the routing to the nginx pod containing the UI - just to name one nice feature.
 
-<img class="blog-image" style="max-width:100%;" src="/docs/blog/assets/2020-05-27/streampi_installation.png" alt="Installation"/>
+<img class="blog-image" style={{maxWidth: '100%'}} src="/img/blog/2020-05-27/streampi_installation.png" alt="Installation"/>
 
 ## Sum up & Where to go from here?
 Starting out as a simple hack session on a late afternoon, we build multi-archicture StreamPipes Docker images and deployed them on a Raspberry Pi in the first part of the series. Though, this is was feasible StreamPipes architectural microservice design provides a natural fit for a distributed cluster deployment. To this extent, we provide a StreamPipes Helm chart that lets you easily deploy StreamPipes in a one-liner in a Kubernetes cluster as showcased using a testbed of two Raspberry Pi's and lightweight K3s.
 
 As of now, we let K8s handle the scheduling of containers for us in a random fashion. From here, we can further explore K8s feature such as `nodeSelector` or `nodeAffinity` that helps you use labels (`key=value` pairs) for pod to node assignment.
 
-<img class="blog-image" style="max-width:60%;" src="/docs/blog/assets/2020-05-27/helm_k3s.png" alt="HelmK3s"/>
+<img class="blog-image" style={{maxWidth: '60%'}} src="/img/blog/2020-05-27/helm_k3s.png" alt="HelmK3s"/>
 
 - [Part 1: StreamPi(pes) - Running StreamPipes on Raspberry Pi](/docs/blog/2020/01/23/streampipes_on_rpi)
 - **[Part 2: Running StreamPipes the Kubernetes-Way using K3s](/docs/blog/2020/05/27/streampipes_on_k3s)**

@@ -12,14 +12,14 @@
     {
       "name": "Philipp Zehnder",
       "url": "https://github.com/tenthe",
-      "imageURL": "/docs/img/zehnder.png"
+      "imageURL": "/img/zehnder.png"
     }
   ],
   "frontMatter": {
     "title": "Apache StreamPipes release 0.92.0",
     "author": "Philipp Zehnder",
     "authorURL": "https://github.com/tenthe",
-    "authorImageURL": "/docs/img/zehnder.png"
+    "authorImageURL": "/img/zehnder.png"
   },
   "nextItem": {
     "title": "Apache StreamPipes release 0.91.0",
