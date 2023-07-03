@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.enricher.flink.timestamp",
     "title": "Timestamp Enricher",
     "sidebar_label": "Timestamp Enricher"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Threshold Detector",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.threshold"
+  },
+  "next": {
+    "title": "Timestamp Extractor",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor"
   }
 }

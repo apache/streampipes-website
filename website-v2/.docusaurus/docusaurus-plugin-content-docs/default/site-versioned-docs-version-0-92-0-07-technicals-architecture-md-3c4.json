@@ -18,5 +18,14 @@
     "id": "technicals-architecture",
     "title": "Architecture",
     "sidebar_label": "Architecture"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Migration Guide: 0.69.0",
+    "permalink": "/docs/extend-sdk-migration-service-discovery"
+  },
+  "next": {
+    "title": "User Guidance",
+    "permalink": "/docs/technicals-user-guidance"
   }
 }

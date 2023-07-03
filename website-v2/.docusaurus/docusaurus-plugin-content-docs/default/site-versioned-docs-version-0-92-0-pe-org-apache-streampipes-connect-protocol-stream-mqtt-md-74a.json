@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.protocol.stream.mqtt",
     "title": "MQTT",
     "sidebar_label": "MQTT"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "InfluxDB Stream Adapter",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.influxdb.stream"
+  },
+  "next": {
+    "title": "Machine Data Simulator",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.simulator.machine"
   }
 }

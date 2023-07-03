@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.adapters.coindesk",
     "title": "Coindesk Bitcoin Price",
     "sidebar_label": "Coindesk Bitcoin Price"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Apache Pulsar",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.pulsar"
+  },
+  "next": {
+    "title": "File Stream",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.file"
   }
 }

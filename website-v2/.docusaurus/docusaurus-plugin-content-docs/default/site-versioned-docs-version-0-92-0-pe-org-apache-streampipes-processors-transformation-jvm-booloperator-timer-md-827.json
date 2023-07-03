@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.transformation.jvm.booloperator.timer",
     "title": "Boolean Timer",
     "sidebar_label": "Boolean Timer"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Boolean Inverter",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter"
+  },
+  "next": {
+    "title": "Boolean To State",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state"
   }
 }

@@ -18,5 +18,14 @@
     "id": "extend-tutorial-data-sources",
     "title": "Tutorial: Data Sources",
     "sidebar_label": "Tutorial: Data Sources"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Your first data processor",
+    "permalink": "/docs/extend-first-processor"
+  },
+  "next": {
+    "title": "Tutorial: Data Processors",
+    "permalink": "/docs/extend-tutorial-data-processors"
   }
 }

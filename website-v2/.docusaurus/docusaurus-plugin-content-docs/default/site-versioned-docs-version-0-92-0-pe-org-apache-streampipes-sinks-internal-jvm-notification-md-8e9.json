@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.sinks.internal.jvm.notification",
     "title": "Notification",
     "sidebar_label": "Notification"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "NATS Publisher",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.nats"
+  },
+  "next": {
+    "title": "OPC-UA",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.opcua"
   }
 }

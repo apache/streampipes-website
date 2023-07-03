@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.transformation.flink.processor.boilerplate",
     "title": "Boilerplate Removal",
     "sidebar_label": "Boilerplate Removal"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "And",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.pattern-detection.flink.and"
+  },
+  "next": {
+    "title": "Boolean Counter",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter"
   }
 }

@@ -18,5 +18,14 @@
     "id": "extend-cli",
     "title": "StreamPipes CLI",
     "sidebar_label": "StreamPipes CLI"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Development Setup",
+    "permalink": "/docs/extend-setup"
+  },
+  "next": {
+    "title": "Maven Archetypes",
+    "permalink": "/docs/extend-archetypes"
   }
 }

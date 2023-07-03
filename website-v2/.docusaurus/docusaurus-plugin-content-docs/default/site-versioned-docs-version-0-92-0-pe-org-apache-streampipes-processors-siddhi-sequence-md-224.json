@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.siddhi.sequence",
     "title": "Sequence Detection",
     "sidebar_label": "Sequence Detection"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Sequence",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.pattern-detection.flink.sequence"
+  },
+  "next": {
+    "title": "Signal Edge Filter",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge"
   }
 }

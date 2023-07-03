@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.enricher.flink.processor.urldereferencing",
     "title": "URL Dereferencing",
     "sidebar_label": "URL Dereferencing"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Trigonometry Functions",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.flink.processor.trigonometry"
+  },
+  "next": {
+    "title": "Value Changed",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.changed-value"
   }
 }

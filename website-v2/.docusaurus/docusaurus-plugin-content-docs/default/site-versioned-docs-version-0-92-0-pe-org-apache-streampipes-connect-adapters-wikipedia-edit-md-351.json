@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.adapters.wikipedia.edit",
     "title": "Wikipedia Edits",
     "sidebar_label": "Wikipedia Edits"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "TI Sensor Tag",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.ti"
+  },
+  "next": {
+    "title": "Wikipedia New Articles",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.wikipedia.new"
   }
 }

@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.sinks.notifications.jvm.onesignal",
     "title": "OneSignal",
     "sidebar_label": "OneSignal"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "OPC-UA",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.opcua"
+  },
+  "next": {
+    "title": "PostgreSQL",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.postgresql"
   }
 }

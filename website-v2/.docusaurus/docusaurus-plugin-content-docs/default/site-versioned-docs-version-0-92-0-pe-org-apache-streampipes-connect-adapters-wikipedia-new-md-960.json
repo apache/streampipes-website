@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.adapters.wikipedia.new",
     "title": "Wikipedia New Articles",
     "sidebar_label": "Wikipedia New Articles"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Wikipedia Edits",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.wikipedia.edit"
+  },
+  "next": {
+    "title": "Absence",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.pattern-detection.flink.absence"
   }
 }

@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.adapters.ti",
     "title": "TI Sensor Tag",
     "sidebar_label": "TI Sensor Tag"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Slack",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.slack"
+  },
+  "next": {
+    "title": "Wikipedia Edits",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.wikipedia.edit"
   }
 }

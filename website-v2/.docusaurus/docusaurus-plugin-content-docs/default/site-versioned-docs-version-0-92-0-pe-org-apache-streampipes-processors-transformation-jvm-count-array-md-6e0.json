@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.transformation.jvm.count-array",
     "title": "Count Array",
     "sidebar_label": "Count Array"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Count Aggregation",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.aggregation.flink.count"
+  },
+  "next": {
+    "title": "Creates JTS Point",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo"
   }
 }

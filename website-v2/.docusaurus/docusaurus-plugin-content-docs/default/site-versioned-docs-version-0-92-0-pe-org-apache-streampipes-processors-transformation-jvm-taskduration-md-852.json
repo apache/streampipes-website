@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.transformation.jvm.taskduration",
     "title": "Task Duration",
     "sidebar_label": "Task Duration"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Synchronize Two Streams",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.merge"
+  },
+  "next": {
+    "title": "Text Filter",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.textfilter"
   }
 }

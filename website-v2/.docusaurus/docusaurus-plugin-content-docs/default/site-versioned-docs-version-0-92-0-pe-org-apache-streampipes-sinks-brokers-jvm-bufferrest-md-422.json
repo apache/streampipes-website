@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.sinks.brokers.jvm.bufferrest",
     "title": "Buffered REST Publisher",
     "sidebar_label": "Buffered REST Publisher"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Word Count",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.flink.wordcount"
+  },
+  "next": {
+    "title": "CouchDB",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.couchdb"
   }
 }

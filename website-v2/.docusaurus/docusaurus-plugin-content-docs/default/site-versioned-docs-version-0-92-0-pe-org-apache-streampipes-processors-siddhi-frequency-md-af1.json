@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.siddhi.frequency",
     "title": "Frequency Calculation",
     "sidebar_label": "Frequency Calculation"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Field Renamer",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.flink.field-renamer"
+  },
+  "next": {
+    "title": "Frequency Change",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.siddhi.frequencychange"
   }
 }

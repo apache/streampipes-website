@@ -18,5 +18,14 @@
     "id": "extend-archetypes",
     "title": "Maven Archetypes",
     "sidebar_label": "Maven Archetypes"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "StreamPipes CLI",
+    "permalink": "/docs/extend-cli"
+  },
+  "next": {
+    "title": "Your first data processor",
+    "permalink": "/docs/extend-first-processor"
   }
 }

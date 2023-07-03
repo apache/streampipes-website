@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.filters.jvm.numericaltextfilter",
     "title": "Numerical Text Filter",
     "sidebar_label": "Numerical Text Filter"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Numerical Filter (Siddhi)",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.siddhi.numericalfilter"
+  },
+  "next": {
+    "title": "Part of Speech (English)",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.jvm.partofspeech"
   }
 }

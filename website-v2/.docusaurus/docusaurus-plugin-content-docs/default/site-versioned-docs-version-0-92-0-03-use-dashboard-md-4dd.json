@@ -18,5 +18,14 @@
     "id": "use-dashboard",
     "title": "Live Dashboard",
     "sidebar_label": "Live Dashboard"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Managing Pipelines",
+    "permalink": "/docs/use-managing-pipelines"
+  },
+  "next": {
+    "title": "Data Explorer",
+    "permalink": "/docs/use-data-explorer"
   }
 }

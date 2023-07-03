@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.protocol.set.http",
     "title": "HTTP Set",
     "sidebar_label": "HTTP Set"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "HTTP Server",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.httpserver"
+  },
+  "next": {
+    "title": "HTTP Stream",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.http"
   }
 }

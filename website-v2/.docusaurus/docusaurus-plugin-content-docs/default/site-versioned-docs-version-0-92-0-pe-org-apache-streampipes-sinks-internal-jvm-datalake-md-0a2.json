@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.sinks.internal.jvm.datalake",
     "title": "Data Lake",
     "sidebar_label": "Data Lake"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Dashboard Sink",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.internal.jvm.dashboard"
+  },
+  "next": {
+    "title": "Eclipse Ditto",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.ditto"
   }
 }

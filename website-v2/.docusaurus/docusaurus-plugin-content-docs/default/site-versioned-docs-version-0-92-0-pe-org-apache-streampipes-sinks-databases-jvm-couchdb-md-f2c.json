@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.sinks.databases.jvm.couchdb",
     "title": "CouchDB",
     "sidebar_label": "CouchDB"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Buffered REST Publisher",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest"
+  },
+  "next": {
+    "title": "Dashboard Sink",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.internal.jvm.dashboard"
   }
 }

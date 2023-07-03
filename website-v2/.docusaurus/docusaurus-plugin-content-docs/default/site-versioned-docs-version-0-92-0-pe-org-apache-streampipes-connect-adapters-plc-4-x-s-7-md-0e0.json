@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.adapters.plc4x.s7",
     "title": "PLC4X S7",
     "sidebar_label": "PLC4X S7"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "PLC4X MODBUS",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.plc4x.modbus"
+  },
+  "next": {
+    "title": "ROS Bridge",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.ros"
   }
 }

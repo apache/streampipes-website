@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.sinks.internal.jvm.dashboard",
     "title": "Dashboard Sink",
     "sidebar_label": "Dashboard Sink"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "CouchDB",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.couchdb"
+  },
+  "next": {
+    "title": "Data Lake",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.internal.jvm.datalake"
   }
 }

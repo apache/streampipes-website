@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.textmining.jvm.partofspeech",
     "title": "Part of Speech (English)",
     "sidebar_label": "Part of Speech (English)"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Numerical Text Filter",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.numericaltextfilter"
+  },
+  "next": {
+    "title": "Peak Detection",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection"
   }
 }

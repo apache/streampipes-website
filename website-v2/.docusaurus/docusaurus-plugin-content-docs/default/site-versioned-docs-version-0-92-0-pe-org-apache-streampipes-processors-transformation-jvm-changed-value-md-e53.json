@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.transformation.jvm.changed-value",
     "title": "Value Changed",
     "sidebar_label": "Value Changed"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "URL Dereferencing",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing"
+  },
+  "next": {
+    "title": "Word Count",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.flink.wordcount"
   }
 }

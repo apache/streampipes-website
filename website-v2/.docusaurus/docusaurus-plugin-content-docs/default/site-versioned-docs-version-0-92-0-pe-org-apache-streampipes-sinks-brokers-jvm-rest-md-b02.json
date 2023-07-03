@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.sinks.brokers.jvm.rest",
     "title": "REST Publisher",
     "sidebar_label": "REST Publisher"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Pulsar Publisher",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.pulsar"
+  },
+  "next": {
+    "title": "RabbitMQ Publisher",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq"
   }
 }

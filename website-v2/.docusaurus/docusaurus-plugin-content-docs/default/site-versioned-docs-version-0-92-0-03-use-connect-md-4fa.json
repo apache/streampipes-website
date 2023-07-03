@@ -18,5 +18,14 @@
     "id": "use-connect",
     "title": "StreamPipes Connect",
     "sidebar_label": "StreamPipes Connect"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/docs/concepts-overview"
+  },
+  "next": {
+    "title": "Pipeline Editor",
+    "permalink": "/docs/use-pipeline-editor"
   }
 }

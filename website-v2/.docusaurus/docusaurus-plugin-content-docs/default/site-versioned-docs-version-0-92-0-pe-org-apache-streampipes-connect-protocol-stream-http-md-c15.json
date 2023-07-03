@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.protocol.stream.http",
     "title": "HTTP Stream",
     "sidebar_label": "HTTP Stream"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "HTTP Set",
+    "permalink": "/docs/pe/org.apache.streampipes.protocol.set.http"
+  },
+  "next": {
+    "title": "IEX Cloud News",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.iex.news"
   }
 }

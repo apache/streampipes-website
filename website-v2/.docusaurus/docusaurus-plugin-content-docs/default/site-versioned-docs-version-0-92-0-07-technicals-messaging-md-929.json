@@ -18,5 +18,14 @@
     "id": "technicals-messaging",
     "title": "Messaging",
     "sidebar_label": "Messaging"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Runtime Wrappers",
+    "permalink": "/docs/technicals-runtime-wrappers"
+  },
+  "next": {
+    "title": "Configuration",
+    "permalink": "/docs/technicals-configuration"
   }
 }

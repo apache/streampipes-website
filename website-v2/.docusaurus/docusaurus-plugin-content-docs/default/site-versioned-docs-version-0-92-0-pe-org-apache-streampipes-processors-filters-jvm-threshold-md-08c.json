@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.filters.jvm.threshold",
     "title": "Threshold Detector",
     "sidebar_label": "Threshold Detector"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Text Filter",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.textfilter"
+  },
+  "next": {
+    "title": "Timestamp Enricher",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.flink.timestamp"
   }
 }

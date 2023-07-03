@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.filters.jvm.numericalfilter",
     "title": "Numerical Filter",
     "sidebar_label": "Numerical Filter"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Number Labeler",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number"
+  },
+  "next": {
+    "title": "Numerical Filter (Siddhi)",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.siddhi.numericalfilter"
   }
 }

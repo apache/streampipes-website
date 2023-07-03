@@ -18,5 +18,14 @@
     "id": "extend-first-processor",
     "title": "Your first data processor",
     "sidebar_label": "Your first data processor"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Maven Archetypes",
+    "permalink": "/docs/extend-archetypes"
+  },
+  "next": {
+    "title": "Tutorial: Data Sources",
+    "permalink": "/docs/extend-tutorial-data-sources"
   }
 }

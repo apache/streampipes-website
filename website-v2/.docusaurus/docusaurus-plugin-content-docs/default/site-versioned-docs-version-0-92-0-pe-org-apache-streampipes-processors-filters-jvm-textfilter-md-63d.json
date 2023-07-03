@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.filters.jvm.textfilter",
     "title": "Text Filter",
     "sidebar_label": "Text Filter"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Task Duration",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.taskduration"
+  },
+  "next": {
+    "title": "Threshold Detector",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.threshold"
   }
 }

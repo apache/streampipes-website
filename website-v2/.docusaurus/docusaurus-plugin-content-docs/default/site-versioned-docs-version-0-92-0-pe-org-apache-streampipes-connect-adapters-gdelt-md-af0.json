@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.adapters.gdelt",
     "title": "GDELT",
     "sidebar_label": "GDELT"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Flic MQTT",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.flic.mqtt"
+  },
+  "next": {
+    "title": "HTTP Server",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.httpserver"
   }
 }

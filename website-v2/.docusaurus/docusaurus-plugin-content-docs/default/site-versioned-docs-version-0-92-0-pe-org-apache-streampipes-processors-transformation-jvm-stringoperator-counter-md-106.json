@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.transformation.jvm.stringoperator.counter",
     "title": "String Counter",
     "sidebar_label": "String Counter"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Stream Stop Detection",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.siddhi.stop"
+  },
+  "next": {
+    "title": "String Timer",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer"
   }
 }

@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.filters.jvm.enrich",
     "title": "Merge Two Streams",
     "sidebar_label": "Merge Two Streams"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Measurement Unit Converter",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter"
+  },
+  "next": {
+    "title": "Name Finder",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.jvm.namefinder"
   }
 }

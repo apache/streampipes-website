@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.transformation.jvm.transform-to-boolean",
     "title": "Transform to boolean",
     "sidebar_label": "Transform to boolean"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Tokenizer (English)",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.jvm.tokenizer"
+  },
+  "next": {
+    "title": "Trend",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.siddhi.increase"
   }
 }

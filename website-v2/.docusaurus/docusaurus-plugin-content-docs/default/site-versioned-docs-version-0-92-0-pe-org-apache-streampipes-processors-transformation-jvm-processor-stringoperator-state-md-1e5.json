@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state",
     "title": "String To State",
     "sidebar_label": "String To State"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "String Timer",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer"
+  },
+  "next": {
+    "title": "Synchronize Two Streams",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.merge"
   }
 }

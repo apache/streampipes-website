@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.sinks.notifications.jvm.email",
     "title": "Email Notification",
     "sidebar_label": "Email Notification"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Elasticsearch",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.flink.elasticsearch"
+  },
+  "next": {
+    "title": "InfluxDB",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.influxdb"
   }
 }

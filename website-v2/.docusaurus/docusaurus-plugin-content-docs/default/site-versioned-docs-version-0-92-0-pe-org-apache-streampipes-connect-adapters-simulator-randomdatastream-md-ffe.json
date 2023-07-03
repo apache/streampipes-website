@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.adapters.simulator.randomdatastream",
     "title": "Random Data Simulator (Stream)",
     "sidebar_label": "Random Data Simulator (Stream)"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Random Data Simulator (Set)",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.simulator.randomdataset"
+  },
+  "next": {
+    "title": "Slack",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.slack"
   }
 }

@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processor.geo.flink",
     "title": "Spatial Grid Enrichment",
     "sidebar_label": "Spatial Grid Enrichment"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Size Measure",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.jvm.sizemeasure"
+  },
+  "next": {
+    "title": "Speed Calculator",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.geo.jvm.processor.speed"
   }
 }

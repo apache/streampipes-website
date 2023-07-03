@@ -19,5 +19,14 @@
     "title": "Installation",
     "sidebar_label": "Installation",
     "original_id": "try-installation"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/docs/user-guide-introduction"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/introduction"
   }
 }

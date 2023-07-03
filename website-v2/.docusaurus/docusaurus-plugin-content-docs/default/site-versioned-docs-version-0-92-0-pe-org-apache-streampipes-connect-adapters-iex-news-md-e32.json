@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.adapters.iex.news",
     "title": "IEX Cloud News",
     "sidebar_label": "IEX Cloud News"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "HTTP Stream",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.http"
+  },
+  "next": {
+    "title": "IEX Cloud Stock Quotes",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.iex.stocks"
   }
 }

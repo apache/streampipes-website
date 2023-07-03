@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.pattern-detection.flink.absence",
     "title": "Absence",
     "sidebar_label": "Absence"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Wikipedia New Articles",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.wikipedia.new"
+  },
+  "next": {
+    "title": "Aggregation",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.aggregation.flink.aggregation"
   }
 }

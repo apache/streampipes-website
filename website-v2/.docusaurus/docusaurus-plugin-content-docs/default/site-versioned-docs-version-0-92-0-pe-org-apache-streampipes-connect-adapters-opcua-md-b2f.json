@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.adapters.opcua",
     "title": "OPC UA",
     "sidebar_label": "OPC UA"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "NSW Traffic Cameras",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera"
+  },
+  "next": {
+    "title": "PLC4X MODBUS",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.plc4x.modbus"
   }
 }

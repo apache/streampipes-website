@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.protocol.stream.file",
     "title": "File Stream",
     "sidebar_label": "File Stream"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Coindesk Bitcoin Price",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.coindesk"
+  },
+  "next": {
+    "title": "File Set",
+    "permalink": "/docs/pe/org.apache.streampipes.protocol.set.file"
   }
 }

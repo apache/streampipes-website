@@ -18,5 +18,10 @@
     "id": "community-contribute",
     "title": "Contribute",
     "sidebar_label": "Contribute"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Get Help",
+    "permalink": "/docs/community-get-help"
   }
 }

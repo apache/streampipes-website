@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.sinks.brokers.jvm.rabbitmq",
     "title": "RabbitMQ Publisher",
     "sidebar_label": "RabbitMQ Publisher"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "REST Publisher",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.rest"
+  },
+  "next": {
+    "title": "Slack Notification",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.notifications.jvm.slack"
   }
 }

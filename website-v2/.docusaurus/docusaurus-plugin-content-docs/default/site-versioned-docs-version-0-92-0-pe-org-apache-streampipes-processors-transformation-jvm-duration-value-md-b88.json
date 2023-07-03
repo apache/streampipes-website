@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.transformation.jvm.duration-value",
     "title": "Calculate Duration",
     "sidebar_label": "Calculate Duration"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "CSV Metadata Enricher",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata"
+  },
+  "next": {
+    "title": "Chunker (English)",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.jvm.chunker"
   }
 }

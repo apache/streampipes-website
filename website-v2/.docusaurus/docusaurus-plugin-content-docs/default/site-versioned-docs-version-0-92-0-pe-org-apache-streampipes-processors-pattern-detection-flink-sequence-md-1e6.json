@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.pattern-detection.flink.sequence",
     "title": "Sequence",
     "sidebar_label": "Sequence"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Sentence Detection (English)",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.jvm.sentencedetection"
+  },
+  "next": {
+    "title": "Sequence Detection",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.siddhi.sequence"
   }
 }

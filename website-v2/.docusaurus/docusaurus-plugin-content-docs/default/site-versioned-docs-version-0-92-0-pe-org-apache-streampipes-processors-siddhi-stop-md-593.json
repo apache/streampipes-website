@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.siddhi.stop",
     "title": "Stream Stop Detection",
     "sidebar_label": "Stream Stop Detection"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Statistics Summary",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.statistics.flink.statistics-summary"
+  },
+  "next": {
+    "title": "String Counter",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter"
   }
 }

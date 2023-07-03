@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.adapters.influxdb.stream",
     "title": "InfluxDB Stream Adapter",
     "sidebar_label": "InfluxDB Stream Adapter"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "InfluxDB Set Adapter",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.influxdb.set"
+  },
+  "next": {
+    "title": "MQTT",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.mqtt"
   }
 }

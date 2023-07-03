@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.sinks.databases.jvm.opcua",
     "title": "OPC-UA",
     "sidebar_label": "OPC-UA"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Notification",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.internal.jvm.notification"
+  },
+  "next": {
+    "title": "OneSignal",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.notifications.jvm.onesignal"
   }
 }

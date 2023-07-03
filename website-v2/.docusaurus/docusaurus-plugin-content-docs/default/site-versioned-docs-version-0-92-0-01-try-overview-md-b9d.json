@@ -18,5 +18,10 @@
     "id": "user-guide-introduction",
     "title": "Apache StreamPipes Documentation",
     "sidebar_label": "Overview"
+  },
+  "sidebar": "documentation",
+  "next": {
+    "title": "Installation",
+    "permalink": "/docs/try-installation"
   }
 }

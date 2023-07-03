@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.aggregation.flink.aggregation",
     "title": "Aggregation",
     "sidebar_label": "Aggregation"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Absence",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.pattern-detection.flink.absence"
+  },
+  "next": {
+    "title": "And",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.pattern-detection.flink.and"
   }
 }

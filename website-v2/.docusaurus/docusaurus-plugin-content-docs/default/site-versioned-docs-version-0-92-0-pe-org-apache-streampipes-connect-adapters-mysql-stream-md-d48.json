@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.adapters.mysql.stream",
     "title": "MySql Stream Adapter",
     "sidebar_label": "MySql Stream Adapter"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "MySQL Set Adapter",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.mysql.set"
+  },
+  "next": {
+    "title": "NETIO MQTT M2M",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.netio.mqtt"
   }
 }

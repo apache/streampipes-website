@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.siddhi.increase",
     "title": "Trend",
     "sidebar_label": "Trend"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Transform to boolean",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean"
+  },
+  "next": {
+    "title": "Trigonometry Functions",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.flink.processor.trigonometry"
   }
 }

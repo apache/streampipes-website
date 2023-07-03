@@ -18,5 +18,14 @@
     "id": "use-data-explorer",
     "title": "Data Explorer",
     "sidebar_label": "Data Explorer"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Live Dashboard",
+    "permalink": "/docs/use-dashboard"
+  },
+  "next": {
+    "title": "Notifications",
+    "permalink": "/docs/use-notifications"
   }
 }

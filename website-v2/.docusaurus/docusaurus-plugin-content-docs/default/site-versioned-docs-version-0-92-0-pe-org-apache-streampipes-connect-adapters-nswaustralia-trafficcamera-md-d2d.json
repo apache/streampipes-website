@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera",
     "title": "NSW Traffic Cameras",
     "sidebar_label": "NSW Traffic Cameras"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "NETIO http JSON",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.netio.rest"
+  },
+  "next": {
+    "title": "OPC UA",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.opcua"
   }
 }

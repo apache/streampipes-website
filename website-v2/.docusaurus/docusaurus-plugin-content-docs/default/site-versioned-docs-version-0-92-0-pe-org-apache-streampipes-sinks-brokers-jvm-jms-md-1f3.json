@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.sinks.brokers.jvm.jms",
     "title": "JMS Publisher",
     "sidebar_label": "JMS Publisher"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "IoTDB",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.iotdb"
+  },
+  "next": {
+    "title": "Kafka Publisher",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.kafka"
   }
 }

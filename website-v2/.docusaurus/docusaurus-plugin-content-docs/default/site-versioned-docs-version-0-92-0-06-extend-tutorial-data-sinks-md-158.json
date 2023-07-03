@@ -18,5 +18,14 @@
     "id": "extend-tutorial-data-sinks",
     "title": "Tutorial: Data Sinks",
     "sidebar_label": "Tutorial: Data Sinks"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Tutorial: Data Processors",
+    "permalink": "/docs/extend-tutorial-data-processors"
+  },
+  "next": {
+    "title": "SDK: Functions",
+    "permalink": "/docs/extend-sdk-functions"
   }
 }

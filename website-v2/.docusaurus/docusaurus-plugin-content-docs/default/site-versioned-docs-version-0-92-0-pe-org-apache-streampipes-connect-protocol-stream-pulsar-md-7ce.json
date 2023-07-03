@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.protocol.stream.pulsar",
     "title": "Apache Pulsar",
     "sidebar_label": "Apache Pulsar"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Apache Kafka",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.kafka"
+  },
+  "next": {
+    "title": "Coindesk Bitcoin Price",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.coindesk"
   }
 }

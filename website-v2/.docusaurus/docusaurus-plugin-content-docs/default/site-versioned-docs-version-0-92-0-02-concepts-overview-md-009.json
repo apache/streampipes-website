@@ -18,5 +18,14 @@
     "id": "concepts-overview",
     "title": "StreamPipes Concepts",
     "sidebar_label": "Overview"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/introduction"
+  },
+  "next": {
+    "title": "StreamPipes Connect",
+    "permalink": "/docs/use-connect"
   }
 }

@@ -6339,6 +6339,11 @@
                 "id": "community-contribute",
                 "title": "Contribute",
                 "sidebar_label": "Contribute"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Get Help",
+                "permalink": "/docs/community-get-help"
               }
             },
             {
@@ -6361,6 +6366,15 @@
                 "id": "community-get-help",
                 "title": "Get Help",
                 "sidebar_label": "Get Help"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Configuration",
+                "permalink": "/docs/technicals-configuration"
+              },
+              "next": {
+                "title": "Contribute",
+                "permalink": "/docs/community-contribute"
               }
             },
             {
@@ -6449,6 +6463,15 @@
                 "id": "concepts-overview",
                 "title": "StreamPipes Concepts",
                 "sidebar_label": "Overview"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Introduction",
+                "permalink": "/docs/introduction"
+              },
+              "next": {
+                "title": "StreamPipes Connect",
+                "permalink": "/docs/use-connect"
               }
             },
             {
@@ -6537,6 +6560,15 @@
                 "id": "deploy-docker",
                 "title": "Docker Deployment",
                 "sidebar_label": "Docker Deployment"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Telegram Publisher",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.notifications.jvm.telegram"
+              },
+              "next": {
+                "title": "Kubernetes Deployment",
+                "permalink": "/docs/deploy-kubernetes"
               }
             },
             {
@@ -6577,6 +6609,15 @@
                 "id": "deploy-kubernetes",
                 "title": "Kubernetes Deployment",
                 "sidebar_label": "Kubernetes Deployment"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Docker Deployment",
+                "permalink": "/docs/deploy-docker"
+              },
+              "next": {
+                "title": "Use SSL",
+                "permalink": "/docs/deploy-use-ssl"
               }
             },
             {
@@ -6599,6 +6640,15 @@
                 "id": "deploy-security",
                 "title": "Security",
                 "sidebar_label": "Security"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Use SSL",
+                "permalink": "/docs/deploy-use-ssl"
+              },
+              "next": {
+                "title": "Development Setup",
+                "permalink": "/docs/extend-setup"
               }
             },
             {
@@ -6621,6 +6671,15 @@
                 "id": "deploy-use-ssl",
                 "title": "Use SSL",
                 "sidebar_label": "Use SSL"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Kubernetes Deployment",
+                "permalink": "/docs/deploy-kubernetes"
+              },
+              "next": {
+                "title": "Security",
+                "permalink": "/docs/deploy-security"
               }
             },
             {
@@ -6664,6 +6723,15 @@
                 "id": "extend-archetypes",
                 "title": "Maven Archetypes",
                 "sidebar_label": "Maven Archetypes"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "StreamPipes CLI",
+                "permalink": "/docs/extend-cli"
+              },
+              "next": {
+                "title": "Your first data processor",
+                "permalink": "/docs/extend-first-processor"
               }
             },
             {
@@ -6686,6 +6754,15 @@
                 "id": "extend-cli",
                 "title": "StreamPipes CLI",
                 "sidebar_label": "StreamPipes CLI"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Development Setup",
+                "permalink": "/docs/extend-setup"
+              },
+              "next": {
+                "title": "Maven Archetypes",
+                "permalink": "/docs/extend-archetypes"
               }
             },
             {
@@ -6708,6 +6785,15 @@
                 "id": "extend-first-processor",
                 "title": "Your first data processor",
                 "sidebar_label": "Your first data processor"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Maven Archetypes",
+                "permalink": "/docs/extend-archetypes"
+              },
+              "next": {
+                "title": "Tutorial: Data Sources",
+                "permalink": "/docs/extend-tutorial-data-sources"
               }
             },
             {
@@ -6730,6 +6816,15 @@
                 "id": "extend-sdk-event-model",
                 "title": "SDK Guide: Event Model",
                 "sidebar_label": "SDK: Event Model"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "SDK: Functions",
+                "permalink": "/docs/extend-sdk-functions"
+              },
+              "next": {
+                "title": "SDK: Stream Requirements",
+                "permalink": "/docs/extend-sdk-stream-requirements"
               }
             },
             {
@@ -6752,6 +6847,15 @@
                 "id": "extend-sdk-functions",
                 "title": "SDK Guide: Functions",
                 "sidebar_label": "SDK: Functions"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Tutorial: Data Sinks",
+                "permalink": "/docs/extend-tutorial-data-sinks"
+              },
+              "next": {
+                "title": "SDK: Event Model",
+                "permalink": "/docs/extend-sdk-event-model"
               }
             },
             {
@@ -6774,6 +6878,15 @@
                 "id": "extend-sdk-migration-service-discovery",
                 "title": "Migration Guide: New Service Discovery in 0.69.0",
                 "sidebar_label": "Migration Guide: 0.69.0"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "SDK: Output Strategies",
+                "permalink": "/docs/extend-sdk-output-strategies"
+              },
+              "next": {
+                "title": "Architecture",
+                "permalink": "/docs/technicals-architecture"
               }
             },
             {
@@ -6796,6 +6909,15 @@
                 "id": "extend-sdk-output-strategies",
                 "title": "SDK Guide: Output Strategies",
                 "sidebar_label": "SDK: Output Strategies"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "SDK: Static Properties",
+                "permalink": "/docs/extend-sdk-static-properties"
+              },
+              "next": {
+                "title": "Migration Guide: 0.69.0",
+                "permalink": "/docs/extend-sdk-migration-service-discovery"
               }
             },
             {
@@ -6818,6 +6940,15 @@
                 "id": "extend-sdk-static-properties",
                 "title": "SDK Guide: Static Properties",
                 "sidebar_label": "SDK: Static Properties"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "SDK: Stream Requirements",
+                "permalink": "/docs/extend-sdk-stream-requirements"
+              },
+              "next": {
+                "title": "SDK: Output Strategies",
+                "permalink": "/docs/extend-sdk-output-strategies"
               }
             },
             {
@@ -6840,6 +6971,15 @@
                 "id": "extend-sdk-stream-requirements",
                 "title": "SDK Guide: Stream Requirements",
                 "sidebar_label": "SDK: Stream Requirements"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "SDK: Event Model",
+                "permalink": "/docs/extend-sdk-event-model"
+              },
+              "next": {
+                "title": "SDK: Static Properties",
+                "permalink": "/docs/extend-sdk-static-properties"
               }
             },
             {
@@ -6863,6 +7003,15 @@
                 "title": "Development Setup",
                 "sidebar_label": "Development Setup",
                 "original_id": "extend-setup"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Security",
+                "permalink": "/docs/deploy-security"
+              },
+              "next": {
+                "title": "StreamPipes CLI",
+                "permalink": "/docs/extend-cli"
               }
             },
             {
@@ -6885,6 +7034,15 @@
                 "id": "extend-tutorial-data-processors",
                 "title": "Tutorial: Data Processors",
                 "sidebar_label": "Tutorial: Data Processors"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Tutorial: Data Sources",
+                "permalink": "/docs/extend-tutorial-data-sources"
+              },
+              "next": {
+                "title": "Tutorial: Data Sinks",
+                "permalink": "/docs/extend-tutorial-data-sinks"
               }
             },
             {
@@ -6907,6 +7065,15 @@
                 "id": "extend-tutorial-data-sinks",
                 "title": "Tutorial: Data Sinks",
                 "sidebar_label": "Tutorial: Data Sinks"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Tutorial: Data Processors",
+                "permalink": "/docs/extend-tutorial-data-processors"
+              },
+              "next": {
+                "title": "SDK: Functions",
+                "permalink": "/docs/extend-sdk-functions"
               }
             },
             {
@@ -6929,6 +7096,15 @@
                 "id": "extend-tutorial-data-sources",
                 "title": "Tutorial: Data Sources",
                 "sidebar_label": "Tutorial: Data Sources"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Your first data processor",
+                "permalink": "/docs/extend-first-processor"
+              },
+              "next": {
+                "title": "Tutorial: Data Processors",
+                "permalink": "/docs/extend-tutorial-data-processors"
               }
             },
             {
@@ -6950,7 +7126,8 @@
                 "id": "faq-common-problems",
                 "title": "Common Problems",
                 "sidebar_label": "Common Problems"
-              }
+              },
+              "sidebar": "faq"
             },
             {
               "unversionedId": "introduction",
@@ -6972,6 +7149,15 @@
                 "id": "introduction",
                 "title": "Introduction",
                 "sidebar_label": "Introduction"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Installation",
+                "permalink": "/docs/try-installation"
+              },
+              "next": {
+                "title": "Overview",
+                "permalink": "/docs/concepts-overview"
               }
             },
             {
@@ -7010,6 +7196,15 @@
                 "id": "org.apache.streampipes.connect.adapters.coindesk",
                 "title": "Coindesk Bitcoin Price",
                 "sidebar_label": "Coindesk Bitcoin Price"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Apache Pulsar",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.pulsar"
+              },
+              "next": {
+                "title": "File Stream",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.file"
               }
             },
             {
@@ -7031,6 +7226,15 @@
                 "id": "org.apache.streampipes.connect.adapters.flic.mqtt",
                 "title": "Flic MQTT",
                 "sidebar_label": "Flic MQTT"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "File Set",
+                "permalink": "/docs/pe/org.apache.streampipes.protocol.set.file"
+              },
+              "next": {
+                "title": "GDELT",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.gdelt"
               }
             },
             {
@@ -7052,6 +7256,15 @@
                 "id": "org.apache.streampipes.connect.adapters.gdelt",
                 "title": "GDELT",
                 "sidebar_label": "GDELT"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Flic MQTT",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.flic.mqtt"
+              },
+              "next": {
+                "title": "HTTP Server",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.httpserver"
               }
             },
             {
@@ -7073,6 +7286,15 @@
                 "id": "org.apache.streampipes.connect.adapters.iex.news",
                 "title": "IEX Cloud News",
                 "sidebar_label": "IEX Cloud News"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "HTTP Stream",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.http"
+              },
+              "next": {
+                "title": "IEX Cloud Stock Quotes",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.iex.stocks"
               }
             },
             {
@@ -7094,6 +7316,15 @@
                 "id": "org.apache.streampipes.connect.adapters.iex.stocks",
                 "title": "IEX Cloud Stock Quotes",
                 "sidebar_label": "IEX Cloud Stock Quotes"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "IEX Cloud News",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.iex.news"
+              },
+              "next": {
+                "title": "ISS Location",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.iss"
               }
             },
             {
@@ -7115,6 +7346,15 @@
                 "id": "org.apache.streampipes.connect.adapters.image.set",
                 "title": "Image Upload (Set)",
                 "sidebar_label": "Image Upload (Set)"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "ISS Location",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.iss"
+              },
+              "next": {
+                "title": "Image Upload (Stream)",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.image.stream"
               }
             },
             {
@@ -7136,6 +7376,15 @@
                 "id": "org.apache.streampipes.connect.adapters.image.stream",
                 "title": "Image Upload (Stream)",
                 "sidebar_label": "Image Upload (Stream)"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Image Upload (Set)",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.image.set"
+              },
+              "next": {
+                "title": "InfluxDB Set Adapter",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.influxdb.set"
               }
             },
             {
@@ -7157,6 +7406,15 @@
                 "id": "org.apache.streampipes.connect.adapters.influxdb.set",
                 "title": "InfluxDB Set Adapter",
                 "sidebar_label": "InfluxDB Set Adapter"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Image Upload (Stream)",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.image.stream"
+              },
+              "next": {
+                "title": "InfluxDB Stream Adapter",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.influxdb.stream"
               }
             },
             {
@@ -7178,6 +7436,15 @@
                 "id": "org.apache.streampipes.connect.adapters.influxdb.stream",
                 "title": "InfluxDB Stream Adapter",
                 "sidebar_label": "InfluxDB Stream Adapter"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "InfluxDB Set Adapter",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.influxdb.set"
+              },
+              "next": {
+                "title": "MQTT",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.mqtt"
               }
             },
             {
@@ -7199,6 +7466,15 @@
                 "id": "org.apache.streampipes.connect.adapters.iss",
                 "title": "ISS Location",
                 "sidebar_label": "ISS Location"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "IEX Cloud Stock Quotes",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.iex.stocks"
+              },
+              "next": {
+                "title": "Image Upload (Set)",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.image.set"
               }
             },
             {
@@ -7220,6 +7496,15 @@
                 "id": "org.apache.streampipes.connect.adapters.mysql.set",
                 "title": "MySQL Set Adapter",
                 "sidebar_label": "MySQL Set Adapter"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Machine Data Simulator",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.simulator.machine"
+              },
+              "next": {
+                "title": "MySql Stream Adapter",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.mysql.stream"
               }
             },
             {
@@ -7241,6 +7526,15 @@
                 "id": "org.apache.streampipes.connect.adapters.mysql.stream",
                 "title": "MySql Stream Adapter",
                 "sidebar_label": "MySql Stream Adapter"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "MySQL Set Adapter",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.mysql.set"
+              },
+              "next": {
+                "title": "NETIO MQTT M2M",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.netio.mqtt"
               }
             },
             {
@@ -7262,6 +7556,15 @@
                 "id": "org.apache.streampipes.connect.adapters.netio.mqtt",
                 "title": "NETIO MQTT M2M",
                 "sidebar_label": "NETIO MQTT M2M"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "MySql Stream Adapter",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.mysql.stream"
+              },
+              "next": {
+                "title": "NETIO http JSON",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.netio.rest"
               }
             },
             {
@@ -7283,6 +7586,15 @@
                 "id": "org.apache.streampipes.connect.adapters.netio.rest",
                 "title": "NETIO http JSON",
                 "sidebar_label": "NETIO http JSON"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "NETIO MQTT M2M",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.netio.mqtt"
+              },
+              "next": {
+                "title": "NSW Traffic Cameras",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera"
               }
             },
             {
@@ -7304,6 +7616,15 @@
                 "id": "org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera",
                 "title": "NSW Traffic Cameras",
                 "sidebar_label": "NSW Traffic Cameras"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "NETIO http JSON",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.netio.rest"
+              },
+              "next": {
+                "title": "OPC UA",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.opcua"
               }
             },
             {
@@ -7325,6 +7646,15 @@
                 "id": "org.apache.streampipes.connect.adapters.opcua",
                 "title": "OPC UA",
                 "sidebar_label": "OPC UA"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "NSW Traffic Cameras",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera"
+              },
+              "next": {
+                "title": "PLC4X MODBUS",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.plc4x.modbus"
               }
             },
             {
@@ -7346,6 +7676,15 @@
                 "id": "org.apache.streampipes.connect.adapters.plc4x.modbus",
                 "title": "PLC4X MODBUS",
                 "sidebar_label": "PLC4X MODBUS"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "OPC UA",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.opcua"
+              },
+              "next": {
+                "title": "PLC4X S7",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.plc4x.s7"
               }
             },
             {
@@ -7367,6 +7706,15 @@
                 "id": "org.apache.streampipes.connect.adapters.plc4x.s7",
                 "title": "PLC4X S7",
                 "sidebar_label": "PLC4X S7"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "PLC4X MODBUS",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.plc4x.modbus"
+              },
+              "next": {
+                "title": "ROS Bridge",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.ros"
               }
             },
             {
@@ -7388,6 +7736,15 @@
                 "id": "org.apache.streampipes.connect.adapters.ros",
                 "title": "ROS Bridge",
                 "sidebar_label": "ROS Bridge"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "PLC4X S7",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.plc4x.s7"
+              },
+              "next": {
+                "title": "Random Data Simulator (Set)",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.simulator.randomdataset"
               }
             },
             {
@@ -7409,6 +7766,15 @@
                 "id": "org.apache.streampipes.connect.adapters.simulator.machine",
                 "title": "Machine Data Simulator",
                 "sidebar_label": "Machine Data Simulator"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "MQTT",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.mqtt"
+              },
+              "next": {
+                "title": "MySQL Set Adapter",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.mysql.set"
               }
             },
             {
@@ -7430,6 +7796,15 @@
                 "id": "org.apache.streampipes.connect.adapters.simulator.randomdataset",
                 "title": "Random Data Simulator (Set)",
                 "sidebar_label": "Random Data Simulator (Set)"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "ROS Bridge",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.ros"
+              },
+              "next": {
+                "title": "Random Data Simulator (Stream)",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.simulator.randomdatastream"
               }
             },
             {
@@ -7451,6 +7826,15 @@
                 "id": "org.apache.streampipes.connect.adapters.simulator.randomdatastream",
                 "title": "Random Data Simulator (Stream)",
                 "sidebar_label": "Random Data Simulator (Stream)"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Random Data Simulator (Set)",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.simulator.randomdataset"
+              },
+              "next": {
+                "title": "Slack",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.slack"
               }
             },
             {
@@ -7472,6 +7856,15 @@
                 "id": "org.apache.streampipes.connect.adapters.slack",
                 "title": "Slack",
                 "sidebar_label": "Slack"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Random Data Simulator (Stream)",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.simulator.randomdatastream"
+              },
+              "next": {
+                "title": "TI Sensor Tag",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.ti"
               }
             },
             {
@@ -7493,6 +7886,15 @@
                 "id": "org.apache.streampipes.connect.adapters.ti",
                 "title": "TI Sensor Tag",
                 "sidebar_label": "TI Sensor Tag"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Slack",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.slack"
+              },
+              "next": {
+                "title": "Wikipedia Edits",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.wikipedia.edit"
               }
             },
             {
@@ -7514,6 +7916,15 @@
                 "id": "org.apache.streampipes.connect.adapters.wikipedia.edit",
                 "title": "Wikipedia Edits",
                 "sidebar_label": "Wikipedia Edits"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "TI Sensor Tag",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.ti"
+              },
+              "next": {
+                "title": "Wikipedia New Articles",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.wikipedia.new"
               }
             },
             {
@@ -7535,6 +7946,15 @@
                 "id": "org.apache.streampipes.connect.adapters.wikipedia.new",
                 "title": "Wikipedia New Articles",
                 "sidebar_label": "Wikipedia New Articles"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Wikipedia Edits",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.wikipedia.edit"
+              },
+              "next": {
+                "title": "Absence",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.pattern-detection.flink.absence"
               }
             },
             {
@@ -7556,6 +7976,15 @@
                 "id": "org.apache.streampipes.connect.protocol.stream.file",
                 "title": "File Stream",
                 "sidebar_label": "File Stream"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Coindesk Bitcoin Price",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.coindesk"
+              },
+              "next": {
+                "title": "File Set",
+                "permalink": "/docs/pe/org.apache.streampipes.protocol.set.file"
               }
             },
             {
@@ -7577,6 +8006,15 @@
                 "id": "org.apache.streampipes.connect.protocol.stream.http",
                 "title": "HTTP Stream",
                 "sidebar_label": "HTTP Stream"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "HTTP Set",
+                "permalink": "/docs/pe/org.apache.streampipes.protocol.set.http"
+              },
+              "next": {
+                "title": "IEX Cloud News",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.iex.news"
               }
             },
             {
@@ -7598,6 +8036,15 @@
                 "id": "org.apache.streampipes.connect.protocol.stream.httpserver",
                 "title": "HTTP Server",
                 "sidebar_label": "HTTP Server"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "GDELT",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.gdelt"
+              },
+              "next": {
+                "title": "HTTP Set",
+                "permalink": "/docs/pe/org.apache.streampipes.protocol.set.http"
               }
             },
             {
@@ -7619,6 +8066,15 @@
                 "id": "org.apache.streampipes.connect.protocol.stream.kafka",
                 "title": "Apache Kafka",
                 "sidebar_label": "Apache Kafka"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Configurations",
+                "permalink": "/docs/use-configurations"
+              },
+              "next": {
+                "title": "Apache Pulsar",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.pulsar"
               }
             },
             {
@@ -7640,6 +8096,15 @@
                 "id": "org.apache.streampipes.connect.protocol.stream.mqtt",
                 "title": "MQTT",
                 "sidebar_label": "MQTT"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "InfluxDB Stream Adapter",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.influxdb.stream"
+              },
+              "next": {
+                "title": "Machine Data Simulator",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.simulator.machine"
               }
             },
             {
@@ -7661,6 +8126,15 @@
                 "id": "org.apache.streampipes.connect.protocol.stream.pulsar",
                 "title": "Apache Pulsar",
                 "sidebar_label": "Apache Pulsar"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Apache Kafka",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.kafka"
+              },
+              "next": {
+                "title": "Coindesk Bitcoin Price",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.coindesk"
               }
             },
             {
@@ -7682,6 +8156,15 @@
                 "id": "org.apache.streampipes.processor.geo.flink",
                 "title": "Spatial Grid Enrichment",
                 "sidebar_label": "Spatial Grid Enrichment"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Size Measure",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.jvm.sizemeasure"
+              },
+              "next": {
+                "title": "Speed Calculator",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.geo.jvm.processor.speed"
               }
             },
             {
@@ -7703,6 +8186,15 @@
                 "id": "org.apache.streampipes.processor.geo.jvm.geocoding",
                 "title": "Google Maps Geocoder",
                 "sidebar_label": "Google Maps Geocoder"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Generic Image Classification",
+                "permalink": "/docs/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification"
+              },
+              "next": {
+                "title": "Image Cropper",
+                "permalink": "/docs/pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper"
               }
             },
             {
@@ -7724,6 +8216,15 @@
                 "id": "org.apache.streampipes.processor.geo.jvm.reversegeocoding",
                 "title": "Reverse Geocoder",
                 "sidebar_label": "Reverse Geocoder"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Rate Limit",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.limit"
+              },
+              "next": {
+                "title": "Sentence Detection (English)",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.jvm.sentencedetection"
               }
             },
             {
@@ -7745,6 +8246,15 @@
                 "id": "org.apache.streampipes.processor.geo.jvm.staticgeocoding",
                 "title": "Static Google Maps Geocoder",
                 "sidebar_label": "Static Google Maps Geocoder"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Static Distance Calculator",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator"
+              },
+              "next": {
+                "title": "Static Math",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop"
               }
             },
             {
@@ -7766,6 +8276,15 @@
                 "id": "org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification",
                 "title": "Generic Image Classification",
                 "sidebar_label": "Generic Image Classification"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Frequency Change",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.siddhi.frequencychange"
+              },
+              "next": {
+                "title": "Google Maps Geocoder",
+                "permalink": "/docs/pe/org.apache.streampipes.processor.geo.jvm.geocoding"
               }
             },
             {
@@ -7787,6 +8306,15 @@
                 "id": "org.apache.streampipes.processor.imageclassification.jvm.image-cropper",
                 "title": "Image Cropper",
                 "sidebar_label": "Image Cropper"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Google Maps Geocoder",
+                "permalink": "/docs/pe/org.apache.streampipes.processor.geo.jvm.geocoding"
+              },
+              "next": {
+                "title": "Image Enricher",
+                "permalink": "/docs/pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher"
               }
             },
             {
@@ -7808,6 +8336,15 @@
                 "id": "org.apache.streampipes.processor.imageclassification.jvm.image-enricher",
                 "title": "Image Enricher",
                 "sidebar_label": "Image Enricher"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Image Cropper",
+                "permalink": "/docs/pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper"
+              },
+              "next": {
+                "title": "Language Detection",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.flink.languagedetection"
               }
             },
             {
@@ -7829,6 +8366,15 @@
                 "id": "org.apache.streampipes.processor.imageclassification.qrcode",
                 "title": "QR Code Reader",
                 "sidebar_label": "QR Code Reader"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Projection",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.project"
+              },
+              "next": {
+                "title": "Rate Limit",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.limit"
               }
             },
             {
@@ -7850,6 +8396,15 @@
                 "id": "org.apache.streampipes.processors.aggregation.flink.aggregation",
                 "title": "Aggregation",
                 "sidebar_label": "Aggregation"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Absence",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.pattern-detection.flink.absence"
+              },
+              "next": {
+                "title": "And",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.pattern-detection.flink.and"
               }
             },
             {
@@ -7871,6 +8426,15 @@
                 "id": "org.apache.streampipes.processors.aggregation.flink.count",
                 "title": "Count Aggregation",
                 "sidebar_label": "Count Aggregation"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Compose",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.compose"
+              },
+              "next": {
+                "title": "Count Array",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.count-array"
               }
             },
             {
@@ -7892,6 +8456,15 @@
                 "id": "org.apache.streampipes.processors.aggregation.flink.eventcount",
                 "title": "Event Counter",
                 "sidebar_label": "Event Counter"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "EPSG Code",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG"
+              },
+              "next": {
+                "title": "Event Rate",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.aggregation.flink.rate"
               }
             },
             {
@@ -7913,6 +8486,15 @@
                 "id": "org.apache.streampipes.processors.aggregation.flink.rate",
                 "title": "Event Rate",
                 "sidebar_label": "Event Rate"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Event Counter",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.aggregation.flink.eventcount"
+              },
+              "next": {
+                "title": "Field Converter",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.flink.field-converter"
               }
             },
             {
@@ -7934,6 +8516,15 @@
                 "id": "org.apache.streampipes.processors.changedetection.jvm.cusum",
                 "title": "Cusum",
                 "sidebar_label": "Cusum"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Creates JTS Point",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo"
+              },
+              "next": {
+                "title": "Distance Calculator",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator"
               }
             },
             {
@@ -7955,6 +8546,15 @@
                 "id": "org.apache.streampipes.processors.enricher.flink.processor.math.mathop",
                 "title": "Math",
                 "sidebar_label": "Math"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Language Detection",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.jvm.languagedetection"
+              },
+              "next": {
+                "title": "Measure Time Between Two Sensors",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping"
               }
             },
             {
@@ -7976,6 +8576,15 @@
                 "id": "org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop",
                 "title": "Static Math",
                 "sidebar_label": "Static Math"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Static Google Maps Geocoder",
+                "permalink": "/docs/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding"
+              },
+              "next": {
+                "title": "Statistics Summary",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.statistics.flink.statistics-summary"
               }
             },
             {
@@ -7997,6 +8606,15 @@
                 "id": "org.apache.streampipes.processors.enricher.flink.processor.trigonometry",
                 "title": "Trigonometry Functions",
                 "sidebar_label": "Trigonometry Functions"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Trend",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.siddhi.increase"
+              },
+              "next": {
+                "title": "URL Dereferencing",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing"
               }
             },
             {
@@ -8018,6 +8636,15 @@
                 "id": "org.apache.streampipes.processors.enricher.flink.processor.urldereferencing",
                 "title": "URL Dereferencing",
                 "sidebar_label": "URL Dereferencing"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Trigonometry Functions",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.flink.processor.trigonometry"
+              },
+              "next": {
+                "title": "Value Changed",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.changed-value"
               }
             },
             {
@@ -8039,6 +8666,15 @@
                 "id": "org.apache.streampipes.processors.enricher.flink.timestamp",
                 "title": "Timestamp Enricher",
                 "sidebar_label": "Timestamp Enricher"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Threshold Detector",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.threshold"
+              },
+              "next": {
+                "title": "Timestamp Extractor",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor"
               }
             },
             {
@@ -8060,6 +8696,15 @@
                 "id": "org.apache.streampipes.processors.enricher.jvm.sizemeasure",
                 "title": "Size Measure",
                 "sidebar_label": "Size Measure"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Single Trajectory Creator",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory"
+              },
+              "next": {
+                "title": "Spatial Grid Enrichment",
+                "permalink": "/docs/pe/org.apache.streampipes.processor.geo.flink"
               }
             },
             {
@@ -8081,6 +8726,15 @@
                 "id": "org.apache.streampipes.processors.filters.jvm.compose",
                 "title": "Compose",
                 "sidebar_label": "Compose"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Chunker (English)",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.jvm.chunker"
+              },
+              "next": {
+                "title": "Count Aggregation",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.aggregation.flink.count"
               }
             },
             {
@@ -8102,6 +8756,15 @@
                 "id": "org.apache.streampipes.processors.filters.jvm.enrich",
                 "title": "Merge Two Streams",
                 "sidebar_label": "Merge Two Streams"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Measurement Unit Converter",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter"
+              },
+              "next": {
+                "title": "Name Finder",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.jvm.namefinder"
               }
             },
             {
@@ -8123,6 +8786,15 @@
                 "id": "org.apache.streampipes.processors.filters.jvm.limit",
                 "title": "Rate Limit",
                 "sidebar_label": "Rate Limit"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "QR Code Reader",
+                "permalink": "/docs/pe/org.apache.streampipes.processor.imageclassification.qrcode"
+              },
+              "next": {
+                "title": "Reverse Geocoder",
+                "permalink": "/docs/pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding"
               }
             },
             {
@@ -8144,6 +8816,15 @@
                 "id": "org.apache.streampipes.processors.filters.jvm.merge",
                 "title": "Synchronize Two Streams",
                 "sidebar_label": "Synchronize Two Streams"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "String To State",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state"
+              },
+              "next": {
+                "title": "Task Duration",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.taskduration"
               }
             },
             {
@@ -8165,6 +8846,15 @@
                 "id": "org.apache.streampipes.processors.filters.jvm.numericalfilter",
                 "title": "Numerical Filter",
                 "sidebar_label": "Numerical Filter"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Number Labeler",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number"
+              },
+              "next": {
+                "title": "Numerical Filter (Siddhi)",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.siddhi.numericalfilter"
               }
             },
             {
@@ -8186,6 +8876,15 @@
                 "id": "org.apache.streampipes.processors.filters.jvm.numericaltextfilter",
                 "title": "Numerical Text Filter",
                 "sidebar_label": "Numerical Text Filter"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Numerical Filter (Siddhi)",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.siddhi.numericalfilter"
+              },
+              "next": {
+                "title": "Part of Speech (English)",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.jvm.partofspeech"
               }
             },
             {
@@ -8207,6 +8906,15 @@
                 "id": "org.apache.streampipes.processors.filters.jvm.project",
                 "title": "Projection",
                 "sidebar_label": "Projection"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Peak Detection",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection"
+              },
+              "next": {
+                "title": "QR Code Reader",
+                "permalink": "/docs/pe/org.apache.streampipes.processor.imageclassification.qrcode"
               }
             },
             {
@@ -8228,6 +8936,15 @@
                 "id": "org.apache.streampipes.processors.filters.jvm.textfilter",
                 "title": "Text Filter",
                 "sidebar_label": "Text Filter"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Task Duration",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.taskduration"
+              },
+              "next": {
+                "title": "Threshold Detector",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.threshold"
               }
             },
             {
@@ -8249,6 +8966,15 @@
                 "id": "org.apache.streampipes.processors.filters.jvm.threshold",
                 "title": "Threshold Detector",
                 "sidebar_label": "Threshold Detector"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Text Filter",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.textfilter"
+              },
+              "next": {
+                "title": "Timestamp Enricher",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.flink.timestamp"
               }
             },
             {
@@ -8270,6 +8996,15 @@
                 "id": "org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo",
                 "title": "Creates JTS Point",
                 "sidebar_label": "Creates JTS Point"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Count Array",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.count-array"
+              },
+              "next": {
+                "title": "Cusum",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.changedetection.jvm.cusum"
               }
             },
             {
@@ -8291,6 +9026,15 @@
                 "id": "org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG",
                 "title": "EPSG Code",
                 "sidebar_label": "EPSG Code"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Distance Calculator",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator"
+              },
+              "next": {
+                "title": "Event Counter",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.aggregation.flink.eventcount"
               }
             },
             {
@@ -8312,6 +9056,15 @@
                 "id": "org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory",
                 "title": "Single Trajectory Creator",
                 "sidebar_label": "Single Trajectory Creator"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Signal Edge Filter",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge"
+              },
+              "next": {
+                "title": "Size Measure",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.jvm.sizemeasure"
               }
             },
             {
@@ -8333,6 +9086,15 @@
                 "id": "org.apache.streampipes.processors.geo.jvm.processor.distancecalculator",
                 "title": "Distance Calculator",
                 "sidebar_label": "Distance Calculator"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Cusum",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.changedetection.jvm.cusum"
+              },
+              "next": {
+                "title": "EPSG Code",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG"
               }
             },
             {
@@ -8354,6 +9116,15 @@
                 "id": "org.apache.streampipes.processors.geo.jvm.processor.speed",
                 "title": "Speed Calculator",
                 "sidebar_label": "Speed Calculator"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Spatial Grid Enrichment",
+                "permalink": "/docs/pe/org.apache.streampipes.processor.geo.flink"
+              },
+              "next": {
+                "title": "Split Array",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.split-array"
               }
             },
             {
@@ -8375,6 +9146,15 @@
                 "id": "org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator",
                 "title": "Static Distance Calculator",
                 "sidebar_label": "Static Distance Calculator"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "State Buffer Labeler",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer"
+              },
+              "next": {
+                "title": "Static Google Maps Geocoder",
+                "permalink": "/docs/pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding"
               }
             },
             {
@@ -8396,6 +9176,15 @@
                 "id": "org.apache.streampipes.processors.pattern-detection.flink.absence",
                 "title": "Absence",
                 "sidebar_label": "Absence"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Wikipedia New Articles",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.wikipedia.new"
+              },
+              "next": {
+                "title": "Aggregation",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.aggregation.flink.aggregation"
               }
             },
             {
@@ -8417,6 +9206,15 @@
                 "id": "org.apache.streampipes.processors.pattern-detection.flink.and",
                 "title": "And",
                 "sidebar_label": "And"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Aggregation",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.aggregation.flink.aggregation"
+              },
+              "next": {
+                "title": "Boilerplate Removal",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.flink.processor.boilerplate"
               }
             },
             {
@@ -8438,6 +9236,15 @@
                 "id": "org.apache.streampipes.processors.pattern-detection.flink.peak-detection",
                 "title": "Peak Detection",
                 "sidebar_label": "Peak Detection"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Part of Speech (English)",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.jvm.partofspeech"
+              },
+              "next": {
+                "title": "Projection",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.project"
               }
             },
             {
@@ -8459,6 +9266,15 @@
                 "id": "org.apache.streampipes.processors.pattern-detection.flink.sequence",
                 "title": "Sequence",
                 "sidebar_label": "Sequence"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Sentence Detection (English)",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.jvm.sentencedetection"
+              },
+              "next": {
+                "title": "Sequence Detection",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.siddhi.sequence"
               }
             },
             {
@@ -8480,6 +9296,15 @@
                 "id": "org.apache.streampipes.processors.siddhi.frequency",
                 "title": "Frequency Calculation",
                 "sidebar_label": "Frequency Calculation"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Field Renamer",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.flink.field-renamer"
+              },
+              "next": {
+                "title": "Frequency Change",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.siddhi.frequencychange"
               }
             },
             {
@@ -8501,6 +9326,15 @@
                 "id": "org.apache.streampipes.processors.siddhi.frequencychange",
                 "title": "Frequency Change",
                 "sidebar_label": "Frequency Change"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Frequency Calculation",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.siddhi.frequency"
+              },
+              "next": {
+                "title": "Generic Image Classification",
+                "permalink": "/docs/pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification"
               }
             },
             {
@@ -8522,6 +9356,15 @@
                 "id": "org.apache.streampipes.processors.siddhi.increase",
                 "title": "Trend",
                 "sidebar_label": "Trend"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Transform to boolean",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean"
+              },
+              "next": {
+                "title": "Trigonometry Functions",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.flink.processor.trigonometry"
               }
             },
             {
@@ -8543,6 +9386,15 @@
                 "id": "org.apache.streampipes.processors.siddhi.numericalfilter",
                 "title": "Numerical Filter (Siddhi)",
                 "sidebar_label": "Numerical Filter (Siddhi)"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Numerical Filter",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.numericalfilter"
+              },
+              "next": {
+                "title": "Numerical Text Filter",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.numericaltextfilter"
               }
             },
             {
@@ -8564,6 +9416,15 @@
                 "id": "org.apache.streampipes.processors.siddhi.sequence",
                 "title": "Sequence Detection",
                 "sidebar_label": "Sequence Detection"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Sequence",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.pattern-detection.flink.sequence"
+              },
+              "next": {
+                "title": "Signal Edge Filter",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge"
               }
             },
             {
@@ -8585,6 +9446,15 @@
                 "id": "org.apache.streampipes.processors.siddhi.stop",
                 "title": "Stream Stop Detection",
                 "sidebar_label": "Stream Stop Detection"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Statistics Summary",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.statistics.flink.statistics-summary"
+              },
+              "next": {
+                "title": "String Counter",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter"
               }
             },
             {
@@ -8606,6 +9476,15 @@
                 "id": "org.apache.streampipes.processors.statistics.flink.statistics-summary",
                 "title": "Statistics Summary",
                 "sidebar_label": "Statistics Summary"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Static Math",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop"
+              },
+              "next": {
+                "title": "Stream Stop Detection",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.siddhi.stop"
               }
             },
             {
@@ -8627,6 +9506,15 @@
                 "id": "org.apache.streampipes.processors.textmining.flink.languagedetection",
                 "title": "Language Detection",
                 "sidebar_label": "Language Detection"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Image Enricher",
+                "permalink": "/docs/pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher"
+              },
+              "next": {
+                "title": "Language Detection",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.jvm.languagedetection"
               }
             },
             {
@@ -8648,6 +9536,15 @@
                 "id": "org.apache.streampipes.processors.textmining.flink.wordcount",
                 "title": "Word Count",
                 "sidebar_label": "Word Count"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Value Changed",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.changed-value"
+              },
+              "next": {
+                "title": "Buffered REST Publisher",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest"
               }
             },
             {
@@ -8669,6 +9566,15 @@
                 "id": "org.apache.streampipes.processors.textmining.jvm.chunker",
                 "title": "Chunker (English)",
                 "sidebar_label": "Chunker (English)"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Calculate Duration",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.duration-value"
+              },
+              "next": {
+                "title": "Compose",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.compose"
               }
             },
             {
@@ -8690,6 +9596,15 @@
                 "id": "org.apache.streampipes.processors.textmining.jvm.languagedetection",
                 "title": "Language Detection",
                 "sidebar_label": "Language Detection"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Language Detection",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.flink.languagedetection"
+              },
+              "next": {
+                "title": "Math",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.flink.processor.math.mathop"
               }
             },
             {
@@ -8711,6 +9626,15 @@
                 "id": "org.apache.streampipes.processors.textmining.jvm.namefinder",
                 "title": "Name Finder",
                 "sidebar_label": "Name Finder"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Merge Two Streams",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.enrich"
+              },
+              "next": {
+                "title": "Number Labeler",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number"
               }
             },
             {
@@ -8732,6 +9656,15 @@
                 "id": "org.apache.streampipes.processors.textmining.jvm.partofspeech",
                 "title": "Part of Speech (English)",
                 "sidebar_label": "Part of Speech (English)"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Numerical Text Filter",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.numericaltextfilter"
+              },
+              "next": {
+                "title": "Peak Detection",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection"
               }
             },
             {
@@ -8753,6 +9686,15 @@
                 "id": "org.apache.streampipes.processors.textmining.jvm.sentencedetection",
                 "title": "Sentence Detection (English)",
                 "sidebar_label": "Sentence Detection (English)"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Reverse Geocoder",
+                "permalink": "/docs/pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding"
+              },
+              "next": {
+                "title": "Sequence",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.pattern-detection.flink.sequence"
               }
             },
             {
@@ -8774,6 +9716,15 @@
                 "id": "org.apache.streampipes.processors.textmining.jvm.tokenizer",
                 "title": "Tokenizer (English)",
                 "sidebar_label": "Tokenizer (English)"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Timestamp Extractor",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor"
+              },
+              "next": {
+                "title": "Transform to boolean",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean"
               }
             },
             {
@@ -8795,6 +9746,15 @@
                 "id": "org.apache.streampipes.processors.transformation.flink.field-converter",
                 "title": "Field Converter",
                 "sidebar_label": "Field Converter"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Event Rate",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.aggregation.flink.rate"
+              },
+              "next": {
+                "title": "Field Hasher",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher"
               }
             },
             {
@@ -8816,6 +9776,15 @@
                 "id": "org.apache.streampipes.processors.transformation.flink.field-mapper",
                 "title": "Field Mapper",
                 "sidebar_label": "Field Mapper"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Field Hasher",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher"
+              },
+              "next": {
+                "title": "Field Renamer",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.flink.field-renamer"
               }
             },
             {
@@ -8837,6 +9806,15 @@
                 "id": "org.apache.streampipes.processors.transformation.flink.field-renamer",
                 "title": "Field Renamer",
                 "sidebar_label": "Field Renamer"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Field Mapper",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.flink.field-mapper"
+              },
+              "next": {
+                "title": "Frequency Calculation",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.siddhi.frequency"
               }
             },
             {
@@ -8858,6 +9836,15 @@
                 "id": "org.apache.streampipes.processors.transformation.flink.fieldhasher",
                 "title": "Field Hasher",
                 "sidebar_label": "Field Hasher"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Field Converter",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.flink.field-converter"
+              },
+              "next": {
+                "title": "Field Mapper",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.flink.field-mapper"
               }
             },
             {
@@ -8879,6 +9866,15 @@
                 "id": "org.apache.streampipes.processors.transformation.flink.measurement-unit-converter",
                 "title": "Measurement Unit Converter",
                 "sidebar_label": "Measurement Unit Converter"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Measure Time Between Two Sensors",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping"
+              },
+              "next": {
+                "title": "Merge Two Streams",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.enrich"
               }
             },
             {
@@ -8900,6 +9896,15 @@
                 "id": "org.apache.streampipes.processors.transformation.flink.processor.boilerplate",
                 "title": "Boilerplate Removal",
                 "sidebar_label": "Boilerplate Removal"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "And",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.pattern-detection.flink.and"
+              },
+              "next": {
+                "title": "Boolean Counter",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter"
               }
             },
             {
@@ -8921,6 +9926,15 @@
                 "id": "org.apache.streampipes.processors.transformation.jvm.booloperator.counter",
                 "title": "Boolean Counter",
                 "sidebar_label": "Boolean Counter"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Boilerplate Removal",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.flink.processor.boilerplate"
+              },
+              "next": {
+                "title": "Boolean Inverter",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter"
               }
             },
             {
@@ -8942,6 +9956,15 @@
                 "id": "org.apache.streampipes.processors.transformation.jvm.booloperator.inverter",
                 "title": "Boolean Inverter",
                 "sidebar_label": "Boolean Inverter"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Boolean Counter",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter"
+              },
+              "next": {
+                "title": "Boolean Timer",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timer"
               }
             },
             {
@@ -8963,6 +9986,15 @@
                 "id": "org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping",
                 "title": "Measure Time Between Two Sensors",
                 "sidebar_label": "Measure Time Between Two Sensors"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Math",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.flink.processor.math.mathop"
+              },
+              "next": {
+                "title": "Measurement Unit Converter",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter"
               }
             },
             {
@@ -8984,6 +10016,15 @@
                 "id": "org.apache.streampipes.processors.transformation.jvm.booloperator.timer",
                 "title": "Boolean Timer",
                 "sidebar_label": "Boolean Timer"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Boolean Inverter",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter"
+              },
+              "next": {
+                "title": "Boolean To State",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state"
               }
             },
             {
@@ -9005,6 +10046,15 @@
                 "id": "org.apache.streampipes.processors.transformation.jvm.changed-value",
                 "title": "Value Changed",
                 "sidebar_label": "Value Changed"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "URL Dereferencing",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing"
+              },
+              "next": {
+                "title": "Word Count",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.flink.wordcount"
               }
             },
             {
@@ -9026,6 +10076,15 @@
                 "id": "org.apache.streampipes.processors.transformation.jvm.count-array",
                 "title": "Count Array",
                 "sidebar_label": "Count Array"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Count Aggregation",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.aggregation.flink.count"
+              },
+              "next": {
+                "title": "Creates JTS Point",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo"
               }
             },
             {
@@ -9047,6 +10106,15 @@
                 "id": "org.apache.streampipes.processors.transformation.jvm.csvmetadata",
                 "title": "CSV Metadata Enricher",
                 "sidebar_label": "CSV Metadata Enricher"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Boolean To State",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state"
+              },
+              "next": {
+                "title": "Calculate Duration",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.duration-value"
               }
             },
             {
@@ -9068,6 +10136,15 @@
                 "id": "org.apache.streampipes.processors.transformation.jvm.duration-value",
                 "title": "Calculate Duration",
                 "sidebar_label": "Calculate Duration"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "CSV Metadata Enricher",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata"
+              },
+              "next": {
+                "title": "Chunker (English)",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.jvm.chunker"
               }
             },
             {
@@ -9089,6 +10166,15 @@
                 "id": "org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge",
                 "title": "Signal Edge Filter",
                 "sidebar_label": "Signal Edge Filter"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Sequence Detection",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.siddhi.sequence"
+              },
+              "next": {
+                "title": "Single Trajectory Creator",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory"
               }
             },
             {
@@ -9110,6 +10196,15 @@
                 "id": "org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state",
                 "title": "Boolean To State",
                 "sidebar_label": "Boolean To State"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Boolean Timer",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timer"
+              },
+              "next": {
+                "title": "CSV Metadata Enricher",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata"
               }
             },
             {
@@ -9131,6 +10226,15 @@
                 "id": "org.apache.streampipes.processors.transformation.jvm.processor.state.buffer",
                 "title": "State Buffer",
                 "sidebar_label": "State Buffer"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Split Array",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.split-array"
+              },
+              "next": {
+                "title": "State Buffer Labeler",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer"
               }
             },
             {
@@ -9152,6 +10256,15 @@
                 "id": "org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer",
                 "title": "State Buffer Labeler",
                 "sidebar_label": "State Buffer Labeler"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "State Buffer",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.buffer"
+              },
+              "next": {
+                "title": "Static Distance Calculator",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator"
               }
             },
             {
@@ -9173,6 +10286,15 @@
                 "id": "org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number",
                 "title": "Number Labeler",
                 "sidebar_label": "Number Labeler"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Name Finder",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.jvm.namefinder"
+              },
+              "next": {
+                "title": "Numerical Filter",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.numericalfilter"
               }
             },
             {
@@ -9194,6 +10316,15 @@
                 "id": "org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state",
                 "title": "String To State",
                 "sidebar_label": "String To State"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "String Timer",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer"
+              },
+              "next": {
+                "title": "Synchronize Two Streams",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.merge"
               }
             },
             {
@@ -9215,6 +10346,15 @@
                 "id": "org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor",
                 "title": "Timestamp Extractor",
                 "sidebar_label": "Timestamp Extractor"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Timestamp Enricher",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.flink.timestamp"
+              },
+              "next": {
+                "title": "Tokenizer (English)",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.jvm.tokenizer"
               }
             },
             {
@@ -9236,6 +10376,15 @@
                 "id": "org.apache.streampipes.processors.transformation.jvm.split-array",
                 "title": "Split Array",
                 "sidebar_label": "Split Array"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Speed Calculator",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.geo.jvm.processor.speed"
+              },
+              "next": {
+                "title": "State Buffer",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.buffer"
               }
             },
             {
@@ -9257,6 +10406,15 @@
                 "id": "org.apache.streampipes.processors.transformation.jvm.stringoperator.counter",
                 "title": "String Counter",
                 "sidebar_label": "String Counter"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Stream Stop Detection",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.siddhi.stop"
+              },
+              "next": {
+                "title": "String Timer",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer"
               }
             },
             {
@@ -9278,6 +10436,15 @@
                 "id": "org.apache.streampipes.processors.transformation.jvm.stringoperator.timer",
                 "title": "String Timer",
                 "sidebar_label": "String Timer"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "String Counter",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter"
+              },
+              "next": {
+                "title": "String To State",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state"
               }
             },
             {
@@ -9299,6 +10466,15 @@
                 "id": "org.apache.streampipes.processors.transformation.jvm.taskduration",
                 "title": "Task Duration",
                 "sidebar_label": "Task Duration"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Synchronize Two Streams",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.merge"
+              },
+              "next": {
+                "title": "Text Filter",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.textfilter"
               }
             },
             {
@@ -9320,6 +10496,15 @@
                 "id": "org.apache.streampipes.processors.transformation.jvm.transform-to-boolean",
                 "title": "Transform to boolean",
                 "sidebar_label": "Transform to boolean"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Tokenizer (English)",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.jvm.tokenizer"
+              },
+              "next": {
+                "title": "Trend",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.siddhi.increase"
               }
             },
             {
@@ -9341,6 +10526,15 @@
                 "id": "org.apache.streampipes.protocol.set.file",
                 "title": "File Set",
                 "sidebar_label": "File Set"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "File Stream",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.file"
+              },
+              "next": {
+                "title": "Flic MQTT",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.flic.mqtt"
               }
             },
             {
@@ -9362,6 +10556,15 @@
                 "id": "org.apache.streampipes.protocol.set.http",
                 "title": "HTTP Set",
                 "sidebar_label": "HTTP Set"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "HTTP Server",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.httpserver"
+              },
+              "next": {
+                "title": "HTTP Stream",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.http"
               }
             },
             {
@@ -9383,6 +10586,15 @@
                 "id": "org.apache.streampipes.sinks.brokers.jvm.bufferrest",
                 "title": "Buffered REST Publisher",
                 "sidebar_label": "Buffered REST Publisher"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Word Count",
+                "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.flink.wordcount"
+              },
+              "next": {
+                "title": "CouchDB",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.couchdb"
               }
             },
             {
@@ -9404,6 +10616,15 @@
                 "id": "org.apache.streampipes.sinks.brokers.jvm.jms",
                 "title": "JMS Publisher",
                 "sidebar_label": "JMS Publisher"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "IoTDB",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.iotdb"
+              },
+              "next": {
+                "title": "Kafka Publisher",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.kafka"
               }
             },
             {
@@ -9425,6 +10646,15 @@
                 "id": "org.apache.streampipes.sinks.brokers.jvm.kafka",
                 "title": "Kafka Publisher",
                 "sidebar_label": "Kafka Publisher"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "JMS Publisher",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.jms"
+              },
+              "next": {
+                "title": "MySQL Database",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.mysql"
               }
             },
             {
@@ -9446,6 +10676,15 @@
                 "id": "org.apache.streampipes.sinks.brokers.jvm.nats",
                 "title": "NATS Publisher",
                 "sidebar_label": "NATS Publisher"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "MySQL Database",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.mysql"
+              },
+              "next": {
+                "title": "Notification",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.internal.jvm.notification"
               }
             },
             {
@@ -9467,6 +10706,15 @@
                 "id": "org.apache.streampipes.sinks.brokers.jvm.pulsar",
                 "title": "Pulsar Publisher",
                 "sidebar_label": "Pulsar Publisher"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "PostgreSQL",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.postgresql"
+              },
+              "next": {
+                "title": "REST Publisher",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.rest"
               }
             },
             {
@@ -9488,6 +10736,15 @@
                 "id": "org.apache.streampipes.sinks.brokers.jvm.rabbitmq",
                 "title": "RabbitMQ Publisher",
                 "sidebar_label": "RabbitMQ Publisher"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "REST Publisher",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.rest"
+              },
+              "next": {
+                "title": "Slack Notification",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.notifications.jvm.slack"
               }
             },
             {
@@ -9509,6 +10766,15 @@
                 "id": "org.apache.streampipes.sinks.brokers.jvm.rest",
                 "title": "REST Publisher",
                 "sidebar_label": "REST Publisher"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Pulsar Publisher",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.pulsar"
+              },
+              "next": {
+                "title": "RabbitMQ Publisher",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq"
               }
             },
             {
@@ -9530,6 +10796,15 @@
                 "id": "org.apache.streampipes.sinks.databases.ditto",
                 "title": "Eclipse Ditto",
                 "sidebar_label": "Eclipse Ditto"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Data Lake",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.internal.jvm.datalake"
+              },
+              "next": {
+                "title": "Elasticsearch",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.flink.elasticsearch"
               }
             },
             {
@@ -9551,6 +10826,15 @@
                 "id": "org.apache.streampipes.sinks.databases.flink.elasticsearch",
                 "title": "Elasticsearch",
                 "sidebar_label": "Elasticsearch"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Eclipse Ditto",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.ditto"
+              },
+              "next": {
+                "title": "Email Notification",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.notifications.jvm.email"
               }
             },
             {
@@ -9572,6 +10856,15 @@
                 "id": "org.apache.streampipes.sinks.databases.jvm.couchdb",
                 "title": "CouchDB",
                 "sidebar_label": "CouchDB"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Buffered REST Publisher",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest"
+              },
+              "next": {
+                "title": "Dashboard Sink",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.internal.jvm.dashboard"
               }
             },
             {
@@ -9593,6 +10886,15 @@
                 "id": "org.apache.streampipes.sinks.databases.jvm.influxdb",
                 "title": "InfluxDB",
                 "sidebar_label": "InfluxDB"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Email Notification",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.notifications.jvm.email"
+              },
+              "next": {
+                "title": "IoTDB",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.iotdb"
               }
             },
             {
@@ -9614,6 +10916,15 @@
                 "id": "org.apache.streampipes.sinks.databases.jvm.iotdb",
                 "title": "IoTDB",
                 "sidebar_label": "IoTDB"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "InfluxDB",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.influxdb"
+              },
+              "next": {
+                "title": "JMS Publisher",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.jms"
               }
             },
             {
@@ -9635,6 +10946,15 @@
                 "id": "org.apache.streampipes.sinks.databases.jvm.mysql",
                 "title": "MySQL Database",
                 "sidebar_label": "MySQL Database"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Kafka Publisher",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.kafka"
+              },
+              "next": {
+                "title": "NATS Publisher",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.nats"
               }
             },
             {
@@ -9656,6 +10976,15 @@
                 "id": "org.apache.streampipes.sinks.databases.jvm.opcua",
                 "title": "OPC-UA",
                 "sidebar_label": "OPC-UA"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Notification",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.internal.jvm.notification"
+              },
+              "next": {
+                "title": "OneSignal",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.notifications.jvm.onesignal"
               }
             },
             {
@@ -9677,6 +11006,15 @@
                 "id": "org.apache.streampipes.sinks.databases.jvm.postgresql",
                 "title": "PostgreSQL",
                 "sidebar_label": "PostgreSQL"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "OneSignal",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.notifications.jvm.onesignal"
+              },
+              "next": {
+                "title": "Pulsar Publisher",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.pulsar"
               }
             },
             {
@@ -9698,6 +11036,15 @@
                 "id": "org.apache.streampipes.sinks.internal.jvm.dashboard",
                 "title": "Dashboard Sink",
                 "sidebar_label": "Dashboard Sink"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "CouchDB",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.couchdb"
+              },
+              "next": {
+                "title": "Data Lake",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.internal.jvm.datalake"
               }
             },
             {
@@ -9719,6 +11066,15 @@
                 "id": "org.apache.streampipes.sinks.internal.jvm.datalake",
                 "title": "Data Lake",
                 "sidebar_label": "Data Lake"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Dashboard Sink",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.internal.jvm.dashboard"
+              },
+              "next": {
+                "title": "Eclipse Ditto",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.ditto"
               }
             },
             {
@@ -9740,6 +11096,15 @@
                 "id": "org.apache.streampipes.sinks.internal.jvm.notification",
                 "title": "Notification",
                 "sidebar_label": "Notification"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "NATS Publisher",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.nats"
+              },
+              "next": {
+                "title": "OPC-UA",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.opcua"
               }
             },
             {
@@ -9761,6 +11126,15 @@
                 "id": "org.apache.streampipes.sinks.notifications.jvm.email",
                 "title": "Email Notification",
                 "sidebar_label": "Email Notification"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Elasticsearch",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.flink.elasticsearch"
+              },
+              "next": {
+                "title": "InfluxDB",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.influxdb"
               }
             },
             {
@@ -9782,6 +11156,15 @@
                 "id": "org.apache.streampipes.sinks.notifications.jvm.onesignal",
                 "title": "OneSignal",
                 "sidebar_label": "OneSignal"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "OPC-UA",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.opcua"
+              },
+              "next": {
+                "title": "PostgreSQL",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.postgresql"
               }
             },
             {
@@ -9803,6 +11186,15 @@
                 "id": "org.apache.streampipes.sinks.notifications.jvm.slack",
                 "title": "Slack Notification",
                 "sidebar_label": "Slack Notification"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "RabbitMQ Publisher",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq"
+              },
+              "next": {
+                "title": "Telegram Publisher",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.notifications.jvm.telegram"
               }
             },
             {
@@ -9824,6 +11216,15 @@
                 "id": "org.apache.streampipes.sinks.notifications.jvm.telegram",
                 "title": "Telegram Publisher",
                 "sidebar_label": "Telegram Publisher"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Slack Notification",
+                "permalink": "/docs/pe/org.apache.streampipes.sinks.notifications.jvm.slack"
+              },
+              "next": {
+                "title": "Docker Deployment",
+                "permalink": "/docs/deploy-docker"
               }
             },
             {
@@ -9867,6 +11268,15 @@
                 "id": "technicals-architecture",
                 "title": "Architecture",
                 "sidebar_label": "Architecture"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Migration Guide: 0.69.0",
+                "permalink": "/docs/extend-sdk-migration-service-discovery"
+              },
+              "next": {
+                "title": "User Guidance",
+                "permalink": "/docs/technicals-user-guidance"
               }
             },
             {
@@ -9889,6 +11299,15 @@
                 "id": "technicals-configuration",
                 "title": "Configuration",
                 "sidebar_label": "Configuration"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Messaging",
+                "permalink": "/docs/technicals-messaging"
+              },
+              "next": {
+                "title": "Get Help",
+                "permalink": "/docs/community-get-help"
               }
             },
             {
@@ -9911,6 +11330,15 @@
                 "id": "technicals-messaging",
                 "title": "Messaging",
                 "sidebar_label": "Messaging"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Runtime Wrappers",
+                "permalink": "/docs/technicals-runtime-wrappers"
+              },
+              "next": {
+                "title": "Configuration",
+                "permalink": "/docs/technicals-configuration"
               }
             },
             {
@@ -9933,6 +11361,15 @@
                 "id": "technicals-runtime-wrappers",
                 "title": "Runtime Wrappers",
                 "sidebar_label": "Runtime Wrappers"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "User Guidance",
+                "permalink": "/docs/technicals-user-guidance"
+              },
+              "next": {
+                "title": "Messaging",
+                "permalink": "/docs/technicals-messaging"
               }
             },
             {
@@ -9955,6 +11392,15 @@
                 "id": "technicals-user-guidance",
                 "title": "User Guidance",
                 "sidebar_label": "User Guidance"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Architecture",
+                "permalink": "/docs/technicals-architecture"
+              },
+              "next": {
+                "title": "Runtime Wrappers",
+                "permalink": "/docs/technicals-runtime-wrappers"
               }
             },
             {
@@ -9978,6 +11424,15 @@
                 "title": "Installation",
                 "sidebar_label": "Installation",
                 "original_id": "try-installation"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Overview",
+                "permalink": "/docs/user-guide-introduction"
+              },
+              "next": {
+                "title": "Introduction",
+                "permalink": "/docs/introduction"
               }
             },
             {
@@ -10022,6 +11477,15 @@
                 "id": "use-configurations",
                 "title": "Configurations",
                 "sidebar_label": "Configurations"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Install Pipeline Elements",
+                "permalink": "/docs/use-install-pipeline-elements"
+              },
+              "next": {
+                "title": "Apache Kafka",
+                "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.kafka"
               }
             },
             {
@@ -10044,6 +11508,15 @@
                 "id": "use-connect",
                 "title": "StreamPipes Connect",
                 "sidebar_label": "StreamPipes Connect"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Overview",
+                "permalink": "/docs/concepts-overview"
+              },
+              "next": {
+                "title": "Pipeline Editor",
+                "permalink": "/docs/use-pipeline-editor"
               }
             },
             {
@@ -10066,6 +11539,15 @@
                 "id": "use-dashboard",
                 "title": "Live Dashboard",
                 "sidebar_label": "Live Dashboard"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Managing Pipelines",
+                "permalink": "/docs/use-managing-pipelines"
+              },
+              "next": {
+                "title": "Data Explorer",
+                "permalink": "/docs/use-data-explorer"
               }
             },
             {
@@ -10088,6 +11570,15 @@
                 "id": "use-data-explorer",
                 "title": "Data Explorer",
                 "sidebar_label": "Data Explorer"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Live Dashboard",
+                "permalink": "/docs/use-dashboard"
+              },
+              "next": {
+                "title": "Notifications",
+                "permalink": "/docs/use-notifications"
               }
             },
             {
@@ -10110,6 +11601,15 @@
                 "id": "use-install-pipeline-elements",
                 "title": "Install Pipeline Elements",
                 "sidebar_label": "Install Pipeline Elements"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Notifications",
+                "permalink": "/docs/use-notifications"
+              },
+              "next": {
+                "title": "Configurations",
+                "permalink": "/docs/use-configurations"
               }
             },
             {
@@ -10132,6 +11632,15 @@
                 "id": "use-managing-pipelines",
                 "title": "Managing Pipelines",
                 "sidebar_label": "Managing Pipelines"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Pipeline Editor",
+                "permalink": "/docs/use-pipeline-editor"
+              },
+              "next": {
+                "title": "Live Dashboard",
+                "permalink": "/docs/use-dashboard"
               }
             },
             {
@@ -10154,6 +11663,15 @@
                 "id": "use-notifications",
                 "title": "Notifications",
                 "sidebar_label": "Notifications"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "Data Explorer",
+                "permalink": "/docs/use-data-explorer"
+              },
+              "next": {
+                "title": "Install Pipeline Elements",
+                "permalink": "/docs/use-install-pipeline-elements"
               }
             },
             {
@@ -10176,6 +11694,15 @@
                 "id": "use-pipeline-editor",
                 "title": "Pipeline Editor",
                 "sidebar_label": "Pipeline Editor"
+              },
+              "sidebar": "documentation",
+              "previous": {
+                "title": "StreamPipes Connect",
+                "permalink": "/docs/use-connect"
+              },
+              "next": {
+                "title": "Managing Pipelines",
+                "permalink": "/docs/use-managing-pipelines"
               }
             },
             {
@@ -10240,6 +11767,11 @@
                 "id": "user-guide-introduction",
                 "title": "Apache StreamPipes Documentation",
                 "sidebar_label": "Overview"
+              },
+              "sidebar": "documentation",
+              "next": {
+                "title": "Installation",
+                "permalink": "/docs/try-installation"
               }
             },
             {
@@ -10307,7 +11839,796 @@
             }
           ],
           "drafts": [],
-          "sidebars": {}
+          "sidebars": {
+            "documentation": [
+              {
+                "type": "category",
+                "label": "🚀 Try StreamPipes",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "user-guide-introduction"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "try-installation"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Concepts",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "introduction"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "concepts-overview"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "🎓 Use StreamPipes",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "use-connect"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "use-pipeline-editor"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "use-managing-pipelines"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "use-dashboard"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "use-data-explorer"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "use-notifications"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "use-install-pipeline-elements"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "use-configurations"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "📚 Pipeline Elements",
+                "items": [
+                  {
+                    "type": "category",
+                    "label": "Adapters",
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.protocol.stream.kafka"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.protocol.stream.pulsar"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.coindesk"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.protocol.stream.file"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.protocol.set.file"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.flic.mqtt"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.gdelt"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.protocol.stream.httpserver"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.protocol.set.http"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.protocol.stream.http"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.iex.news"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.iex.stocks"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.iss"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.image.set"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.image.stream"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.influxdb.set"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.influxdb.stream"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.protocol.stream.mqtt"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.simulator.machine"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.mysql.set"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.mysql.stream"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.netio.mqtt"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.netio.rest"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.nswaustralia.trafficcamera"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.opcua"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.plc4x.modbus"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.plc4x.s7"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.ros"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.simulator.randomdataset"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.simulator.randomdatastream"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.slack"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.ti"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.wikipedia.edit"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.connect.adapters.wikipedia.new"
+                      }
+                    ],
+                    "collapsed": true,
+                    "collapsible": true
+                  },
+                  {
+                    "type": "category",
+                    "label": "Data Processors",
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.pattern-detection.flink.absence"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.aggregation.flink.aggregation"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.pattern-detection.flink.and"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.flink.processor.boilerplate"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timer"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.jvm.duration-value"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.textmining.jvm.chunker"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.filters.jvm.compose"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.aggregation.flink.count"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.jvm.count-array"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.changedetection.jvm.cusum"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.aggregation.flink.eventcount"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.aggregation.flink.rate"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.flink.field-converter"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.flink.fieldhasher"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.flink.field-mapper"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.flink.field-renamer"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.siddhi.frequency"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.siddhi.frequencychange"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processor.geo.jvm.geocoding"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processor.imageclassification.jvm.image-enricher"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.textmining.flink.languagedetection"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.textmining.jvm.languagedetection"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.enricher.flink.processor.math.mathop"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.filters.jvm.enrich"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.textmining.jvm.namefinder"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.filters.jvm.numericalfilter"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.siddhi.numericalfilter"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.filters.jvm.numericaltextfilter"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.textmining.jvm.partofspeech"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.filters.jvm.project"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processor.imageclassification.qrcode"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.filters.jvm.limit"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processor.geo.jvm.reversegeocoding"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.textmining.jvm.sentencedetection"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.pattern-detection.flink.sequence"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.siddhi.sequence"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.enricher.jvm.sizemeasure"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processor.geo.flink"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.geo.jvm.processor.speed"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.jvm.split-array"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.jvm.processor.state.buffer"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.buffer"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.geo.jvm.processor.staticdistancecalculator"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processor.geo.jvm.staticgeocoding"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.enricher.flink.processor.math.staticmathop"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.statistics.flink.statistics-summary"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.siddhi.stop"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.filters.jvm.merge"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.jvm.taskduration"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.filters.jvm.textfilter"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.filters.jvm.threshold"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.enricher.flink.timestamp"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.textmining.jvm.tokenizer"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.siddhi.increase"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.enricher.flink.processor.trigonometry"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.transformation.jvm.changed-value"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.processors.textmining.flink.wordcount"
+                      }
+                    ],
+                    "collapsed": true,
+                    "collapsible": true
+                  },
+                  {
+                    "type": "category",
+                    "label": "Data Sinks",
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.brokers.jvm.bufferrest"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.databases.jvm.couchdb"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.internal.jvm.dashboard"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.internal.jvm.datalake"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.databases.ditto"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.databases.flink.elasticsearch"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.notifications.jvm.email"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.databases.jvm.influxdb"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.databases.jvm.iotdb"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.brokers.jvm.jms"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.brokers.jvm.kafka"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.databases.jvm.mysql"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.brokers.jvm.nats"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.internal.jvm.notification"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.databases.jvm.opcua"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.notifications.jvm.onesignal"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.databases.jvm.postgresql"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.brokers.jvm.pulsar"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.brokers.jvm.rest"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.notifications.jvm.slack"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "pe/org.apache.streampipes.sinks.notifications.jvm.telegram"
+                      }
+                    ],
+                    "collapsed": true,
+                    "collapsible": true
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "⚡ Deploy StreamPipes",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "deploy-docker"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "deploy-kubernetes"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "deploy-use-ssl"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "deploy-security"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "💻 Extend StreamPipes",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "extend-setup"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "extend-cli"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "extend-archetypes"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "extend-first-processor"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "extend-tutorial-data-sources"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "extend-tutorial-data-processors"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "extend-tutorial-data-sinks"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "extend-sdk-functions"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "extend-sdk-event-model"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "extend-sdk-stream-requirements"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "extend-sdk-static-properties"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "extend-sdk-output-strategies"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "extend-sdk-migration-service-discovery"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "🔧 Technicals",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "technicals-architecture"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "technicals-user-guidance"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "technicals-runtime-wrappers"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "technicals-messaging"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "technicals-configuration"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "👪 Community",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "community-get-help"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "community-contribute"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              }
+            ],
+            "faq": [
+              {
+                "type": "category",
+                "label": "FAQ",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "faq-common-problems"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              }
+            ]
+          }
         },
         {
           "versionName": "0.91.0",

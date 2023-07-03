@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.adapters.slack",
     "title": "Slack",
     "sidebar_label": "Slack"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Random Data Simulator (Stream)",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.simulator.randomdatastream"
+  },
+  "next": {
+    "title": "TI Sensor Tag",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.ti"
   }
 }

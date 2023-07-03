@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor",
     "title": "Timestamp Extractor",
     "sidebar_label": "Timestamp Extractor"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Timestamp Enricher",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.flink.timestamp"
+  },
+  "next": {
+    "title": "Tokenizer (English)",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.jvm.tokenizer"
   }
 }

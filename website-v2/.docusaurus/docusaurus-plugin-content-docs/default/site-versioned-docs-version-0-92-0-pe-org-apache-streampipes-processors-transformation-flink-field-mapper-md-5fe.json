@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.transformation.flink.field-mapper",
     "title": "Field Mapper",
     "sidebar_label": "Field Mapper"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Field Hasher",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher"
+  },
+  "next": {
+    "title": "Field Renamer",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.flink.field-renamer"
   }
 }

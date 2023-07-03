@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.sinks.databases.jvm.postgresql",
     "title": "PostgreSQL",
     "sidebar_label": "PostgreSQL"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "OneSignal",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.notifications.jvm.onesignal"
+  },
+  "next": {
+    "title": "Pulsar Publisher",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.pulsar"
   }
 }

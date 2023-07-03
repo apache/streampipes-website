@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.textmining.jvm.namefinder",
     "title": "Name Finder",
     "sidebar_label": "Name Finder"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Merge Two Streams",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.enrich"
+  },
+  "next": {
+    "title": "Number Labeler",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number"
   }
 }

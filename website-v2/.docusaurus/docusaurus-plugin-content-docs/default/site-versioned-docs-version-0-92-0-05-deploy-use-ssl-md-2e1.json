@@ -18,5 +18,14 @@
     "id": "deploy-use-ssl",
     "title": "Use SSL",
     "sidebar_label": "Use SSL"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Kubernetes Deployment",
+    "permalink": "/docs/deploy-kubernetes"
+  },
+  "next": {
+    "title": "Security",
+    "permalink": "/docs/deploy-security"
   }
 }

@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.transformation.jvm.split-array",
     "title": "Split Array",
     "sidebar_label": "Split Array"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Speed Calculator",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.geo.jvm.processor.speed"
+  },
+  "next": {
+    "title": "State Buffer",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.state.buffer"
   }
 }

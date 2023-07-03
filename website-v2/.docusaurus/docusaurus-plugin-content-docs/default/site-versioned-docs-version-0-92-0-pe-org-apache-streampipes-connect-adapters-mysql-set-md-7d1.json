@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.adapters.mysql.set",
     "title": "MySQL Set Adapter",
     "sidebar_label": "MySQL Set Adapter"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Machine Data Simulator",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.simulator.machine"
+  },
+  "next": {
+    "title": "MySql Stream Adapter",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.mysql.stream"
   }
 }

@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.textmining.jvm.tokenizer",
     "title": "Tokenizer (English)",
     "sidebar_label": "Tokenizer (English)"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Timestamp Extractor",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor"
+  },
+  "next": {
+    "title": "Transform to boolean",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean"
   }
 }

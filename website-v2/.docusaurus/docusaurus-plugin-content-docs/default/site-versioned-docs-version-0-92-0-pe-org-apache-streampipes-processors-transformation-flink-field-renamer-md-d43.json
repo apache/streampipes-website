@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.transformation.flink.field-renamer",
     "title": "Field Renamer",
     "sidebar_label": "Field Renamer"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Field Mapper",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.flink.field-mapper"
+  },
+  "next": {
+    "title": "Frequency Calculation",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.siddhi.frequency"
   }
 }

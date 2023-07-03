@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory",
     "title": "Single Trajectory Creator",
     "sidebar_label": "Single Trajectory Creator"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Signal Edge Filter",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge"
+  },
+  "next": {
+    "title": "Size Measure",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.jvm.sizemeasure"
   }
 }

@@ -18,5 +18,14 @@
     "id": "introduction",
     "title": "Introduction",
     "sidebar_label": "Introduction"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Installation",
+    "permalink": "/docs/try-installation"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/docs/concepts-overview"
   }
 }

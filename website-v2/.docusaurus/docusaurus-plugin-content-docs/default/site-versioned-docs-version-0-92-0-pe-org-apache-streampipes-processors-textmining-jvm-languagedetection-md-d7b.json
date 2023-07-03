@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.textmining.jvm.languagedetection",
     "title": "Language Detection",
     "sidebar_label": "Language Detection"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Language Detection",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.flink.languagedetection"
+  },
+  "next": {
+    "title": "Math",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.flink.processor.math.mathop"
   }
 }

@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.sinks.brokers.jvm.kafka",
     "title": "Kafka Publisher",
     "sidebar_label": "Kafka Publisher"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "JMS Publisher",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.jms"
+  },
+  "next": {
+    "title": "MySQL Database",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.mysql"
   }
 }

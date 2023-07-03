@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.geo.jvm.jts.processor.latLngToGeo",
     "title": "Creates JTS Point",
     "sidebar_label": "Creates JTS Point"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Count Array",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.count-array"
+  },
+  "next": {
+    "title": "Cusum",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.changedetection.jvm.cusum"
   }
 }

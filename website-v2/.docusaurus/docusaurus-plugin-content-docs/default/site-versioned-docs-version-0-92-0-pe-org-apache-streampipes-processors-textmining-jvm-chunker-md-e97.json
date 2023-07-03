@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.textmining.jvm.chunker",
     "title": "Chunker (English)",
     "sidebar_label": "Chunker (English)"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Calculate Duration",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.duration-value"
+  },
+  "next": {
+    "title": "Compose",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.filters.jvm.compose"
   }
 }

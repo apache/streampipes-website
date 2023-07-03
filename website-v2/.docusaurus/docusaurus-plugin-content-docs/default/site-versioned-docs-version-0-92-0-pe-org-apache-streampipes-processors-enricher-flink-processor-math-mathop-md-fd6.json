@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.enricher.flink.processor.math.mathop",
     "title": "Math",
     "sidebar_label": "Math"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Language Detection",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.jvm.languagedetection"
+  },
+  "next": {
+    "title": "Measure Time Between Two Sensors",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping"
   }
 }

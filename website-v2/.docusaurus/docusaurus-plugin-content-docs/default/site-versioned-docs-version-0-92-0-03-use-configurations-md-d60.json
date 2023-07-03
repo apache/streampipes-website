@@ -18,5 +18,14 @@
     "id": "use-configurations",
     "title": "Configurations",
     "sidebar_label": "Configurations"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Install Pipeline Elements",
+    "permalink": "/docs/use-install-pipeline-elements"
+  },
+  "next": {
+    "title": "Apache Kafka",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.kafka"
   }
 }

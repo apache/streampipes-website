@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.adapters.image.stream",
     "title": "Image Upload (Stream)",
     "sidebar_label": "Image Upload (Stream)"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Image Upload (Set)",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.image.set"
+  },
+  "next": {
+    "title": "InfluxDB Set Adapter",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.influxdb.set"
   }
 }

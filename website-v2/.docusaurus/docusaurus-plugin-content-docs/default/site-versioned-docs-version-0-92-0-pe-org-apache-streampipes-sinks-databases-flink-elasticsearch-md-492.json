@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.sinks.databases.flink.elasticsearch",
     "title": "Elasticsearch",
     "sidebar_label": "Elasticsearch"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Eclipse Ditto",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.ditto"
+  },
+  "next": {
+    "title": "Email Notification",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.notifications.jvm.email"
   }
 }

@@ -18,5 +18,14 @@
     "id": "use-notifications",
     "title": "Notifications",
     "sidebar_label": "Notifications"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Data Explorer",
+    "permalink": "/docs/use-data-explorer"
+  },
+  "next": {
+    "title": "Install Pipeline Elements",
+    "permalink": "/docs/use-install-pipeline-elements"
   }
 }

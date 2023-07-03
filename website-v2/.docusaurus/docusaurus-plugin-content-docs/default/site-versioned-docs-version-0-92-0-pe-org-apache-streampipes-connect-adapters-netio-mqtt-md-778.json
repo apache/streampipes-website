@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.adapters.netio.mqtt",
     "title": "NETIO MQTT M2M",
     "sidebar_label": "NETIO MQTT M2M"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "MySql Stream Adapter",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.mysql.stream"
+  },
+  "next": {
+    "title": "NETIO http JSON",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.netio.rest"
   }
 }

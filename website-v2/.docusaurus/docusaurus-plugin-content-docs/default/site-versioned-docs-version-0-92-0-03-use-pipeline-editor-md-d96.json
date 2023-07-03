@@ -18,5 +18,14 @@
     "id": "use-pipeline-editor",
     "title": "Pipeline Editor",
     "sidebar_label": "Pipeline Editor"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "StreamPipes Connect",
+    "permalink": "/docs/use-connect"
+  },
+  "next": {
+    "title": "Managing Pipelines",
+    "permalink": "/docs/use-managing-pipelines"
   }
 }

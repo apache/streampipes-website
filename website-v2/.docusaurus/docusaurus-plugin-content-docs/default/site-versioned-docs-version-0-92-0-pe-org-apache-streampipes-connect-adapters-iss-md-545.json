@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.adapters.iss",
     "title": "ISS Location",
     "sidebar_label": "ISS Location"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "IEX Cloud Stock Quotes",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.iex.stocks"
+  },
+  "next": {
+    "title": "Image Upload (Set)",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.image.set"
   }
 }

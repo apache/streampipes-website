@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processor.imageclassification.jvm.image-enricher",
     "title": "Image Enricher",
     "sidebar_label": "Image Enricher"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Image Cropper",
+    "permalink": "/docs/pe/org.apache.streampipes.processor.imageclassification.jvm.image-cropper"
+  },
+  "next": {
+    "title": "Language Detection",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.flink.languagedetection"
   }
 }

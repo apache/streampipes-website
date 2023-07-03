@@ -18,5 +18,14 @@
     "id": "technicals-user-guidance",
     "title": "User Guidance",
     "sidebar_label": "User Guidance"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Architecture",
+    "permalink": "/docs/technicals-architecture"
+  },
+  "next": {
+    "title": "Runtime Wrappers",
+    "permalink": "/docs/technicals-runtime-wrappers"
   }
 }

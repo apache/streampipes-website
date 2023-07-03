@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.protocol.stream.kafka",
     "title": "Apache Kafka",
     "sidebar_label": "Apache Kafka"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Configurations",
+    "permalink": "/docs/use-configurations"
+  },
+  "next": {
+    "title": "Apache Pulsar",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.protocol.stream.pulsar"
   }
 }

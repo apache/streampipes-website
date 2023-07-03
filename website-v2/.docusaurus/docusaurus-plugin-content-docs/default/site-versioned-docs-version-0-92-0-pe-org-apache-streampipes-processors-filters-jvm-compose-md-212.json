@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.filters.jvm.compose",
     "title": "Compose",
     "sidebar_label": "Compose"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Chunker (English)",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.textmining.jvm.chunker"
+  },
+  "next": {
+    "title": "Count Aggregation",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.aggregation.flink.count"
   }
 }

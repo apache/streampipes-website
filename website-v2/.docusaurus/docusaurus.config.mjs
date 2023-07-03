@@ -11,22 +11,22 @@ export default {
   "organizationName": "apache",
   "projectName": "streampipes-docs",
   "scripts": [
-    "/docs/js/matomo.js",
-    "/docs/js/jquery-3.3.1.min.js",
-    "/docs/js/buttons.js",
-    "/docs/js/slick.min.js",
-    "/docs/js/custom.js",
-    "/docs/js/clipboard.min.js",
-    "/docs/js/code-block-buttons.js"
+    "/js/matomo.js",
+    "/js/jquery-3.3.1.min.js",
+    "/js/buttons.js",
+    "/js/slick.min.js",
+    "/js/custom.js",
+    "/js/clipboard.min.js",
+    "/js/code-block-buttons.js"
   ],
   "stylesheets": [
-    "/docs/css/slick.min.css",
-    "/docs/css/slick-theme.min.css",
-    "/docs/css/fonts.css",
-    "/docs/css/admonition.css",
-    "/docs/css/custom.css",
-    "/docs/css/code-block-buttons.css",
-    "/docs/css/all.min.css"
+    "/css/slick.min.css",
+    "/css/slick-theme.min.css",
+    "/css/fonts.css",
+    "/css/admonition.css",
+    "/css/custom.css",
+    "/css/code-block-buttons.css",
+    "/css/all.min.css"
   ],
   "favicon": "img/favicon.png",
   "customFields": {
@@ -74,6 +74,11 @@ export default {
         {
           "to": "docs/user-guide-introduction",
           "label": "Documentation",
+          "position": "left"
+        },
+        {
+          "to": "blog",
+          "label": "Blog",
           "position": "left"
         },
         {

@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.sinks.databases.jvm.iotdb",
     "title": "IoTDB",
     "sidebar_label": "IoTDB"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "InfluxDB",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.influxdb"
+  },
+  "next": {
+    "title": "JMS Publisher",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.brokers.jvm.jms"
   }
 }

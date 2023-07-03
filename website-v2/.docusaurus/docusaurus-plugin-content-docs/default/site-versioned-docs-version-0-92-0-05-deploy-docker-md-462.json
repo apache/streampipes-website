@@ -18,5 +18,14 @@
     "id": "deploy-docker",
     "title": "Docker Deployment",
     "sidebar_label": "Docker Deployment"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Telegram Publisher",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.notifications.jvm.telegram"
+  },
+  "next": {
+    "title": "Kubernetes Deployment",
+    "permalink": "/docs/deploy-kubernetes"
   }
 }

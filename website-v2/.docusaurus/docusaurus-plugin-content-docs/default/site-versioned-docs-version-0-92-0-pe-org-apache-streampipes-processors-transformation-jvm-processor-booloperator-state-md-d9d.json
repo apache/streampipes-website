@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state",
     "title": "Boolean To State",
     "sidebar_label": "Boolean To State"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Boolean Timer",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.booloperator.timer"
+  },
+  "next": {
+    "title": "CSV Metadata Enricher",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata"
   }
 }

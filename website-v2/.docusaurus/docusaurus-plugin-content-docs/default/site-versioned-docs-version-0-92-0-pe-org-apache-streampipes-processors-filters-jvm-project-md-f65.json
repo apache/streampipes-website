@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.filters.jvm.project",
     "title": "Projection",
     "sidebar_label": "Projection"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Peak Detection",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.pattern-detection.flink.peak-detection"
+  },
+  "next": {
+    "title": "QR Code Reader",
+    "permalink": "/docs/pe/org.apache.streampipes.processor.imageclassification.qrcode"
   }
 }

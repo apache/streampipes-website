@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping",
     "title": "Measure Time Between Two Sensors",
     "sidebar_label": "Measure Time Between Two Sensors"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Math",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.flink.processor.math.mathop"
+  },
+  "next": {
+    "title": "Measurement Unit Converter",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.flink.measurement-unit-converter"
   }
 }

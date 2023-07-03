@@ -17,5 +17,6 @@
     "id": "faq-common-problems",
     "title": "Common Problems",
     "sidebar_label": "Common Problems"
-  }
+  },
+  "sidebar": "faq"
 }

@@ -18,5 +18,14 @@
     "id": "community-get-help",
     "title": "Get Help",
     "sidebar_label": "Get Help"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Configuration",
+    "permalink": "/docs/technicals-configuration"
+  },
+  "next": {
+    "title": "Contribute",
+    "permalink": "/docs/community-contribute"
   }
 }

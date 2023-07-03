@@ -18,5 +18,14 @@
     "id": "technicals-runtime-wrappers",
     "title": "Runtime Wrappers",
     "sidebar_label": "Runtime Wrappers"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "User Guidance",
+    "permalink": "/docs/technicals-user-guidance"
+  },
+  "next": {
+    "title": "Messaging",
+    "permalink": "/docs/technicals-messaging"
   }
 }

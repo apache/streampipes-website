@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.sinks.databases.jvm.influxdb",
     "title": "InfluxDB",
     "sidebar_label": "InfluxDB"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Email Notification",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.notifications.jvm.email"
+  },
+  "next": {
+    "title": "IoTDB",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.iotdb"
   }
 }

@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.filters.jvm.merge",
     "title": "Synchronize Two Streams",
     "sidebar_label": "Synchronize Two Streams"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "String To State",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state"
+  },
+  "next": {
+    "title": "Task Duration",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.jvm.taskduration"
   }
 }

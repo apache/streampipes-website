@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.geo.jvm.jts.processor.setEPSG",
     "title": "EPSG Code",
     "sidebar_label": "EPSG Code"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Distance Calculator",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.geo.jvm.processor.distancecalculator"
+  },
+  "next": {
+    "title": "Event Counter",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.aggregation.flink.eventcount"
   }
 }

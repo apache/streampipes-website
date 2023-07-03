@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.sinks.brokers.jvm.nats",
     "title": "NATS Publisher",
     "sidebar_label": "NATS Publisher"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "MySQL Database",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.databases.jvm.mysql"
+  },
+  "next": {
+    "title": "Notification",
+    "permalink": "/docs/pe/org.apache.streampipes.sinks.internal.jvm.notification"
   }
 }

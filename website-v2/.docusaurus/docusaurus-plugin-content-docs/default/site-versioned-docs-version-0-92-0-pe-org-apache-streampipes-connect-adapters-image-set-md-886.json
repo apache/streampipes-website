@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.adapters.image.set",
     "title": "Image Upload (Set)",
     "sidebar_label": "Image Upload (Set)"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "ISS Location",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.iss"
+  },
+  "next": {
+    "title": "Image Upload (Stream)",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.image.stream"
   }
 }

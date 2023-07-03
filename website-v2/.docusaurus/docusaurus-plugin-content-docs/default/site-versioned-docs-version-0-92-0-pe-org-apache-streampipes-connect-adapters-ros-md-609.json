@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.connect.adapters.ros",
     "title": "ROS Bridge",
     "sidebar_label": "ROS Bridge"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "PLC4X S7",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.plc4x.s7"
+  },
+  "next": {
+    "title": "Random Data Simulator (Set)",
+    "permalink": "/docs/pe/org.apache.streampipes.connect.adapters.simulator.randomdataset"
   }
 }

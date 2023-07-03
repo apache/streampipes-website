@@ -18,5 +18,14 @@
     "id": "deploy-kubernetes",
     "title": "Kubernetes Deployment",
     "sidebar_label": "Kubernetes Deployment"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Docker Deployment",
+    "permalink": "/docs/deploy-docker"
+  },
+  "next": {
+    "title": "Use SSL",
+    "permalink": "/docs/deploy-use-ssl"
   }
 }

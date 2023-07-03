@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.transformation.flink.field-converter",
     "title": "Field Converter",
     "sidebar_label": "Field Converter"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Event Rate",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.aggregation.flink.rate"
+  },
+  "next": {
+    "title": "Field Hasher",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher"
   }
 }

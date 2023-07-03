@@ -17,5 +17,14 @@
     "id": "org.apache.streampipes.processors.enricher.flink.processor.trigonometry",
     "title": "Trigonometry Functions",
     "sidebar_label": "Trigonometry Functions"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Trend",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.siddhi.increase"
+  },
+  "next": {
+    "title": "URL Dereferencing",
+    "permalink": "/docs/pe/org.apache.streampipes.processors.enricher.flink.processor.urldereferencing"
   }
 }

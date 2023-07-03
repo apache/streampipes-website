@@ -18,5 +18,14 @@
     "id": "extend-sdk-event-model",
     "title": "SDK Guide: Event Model",
     "sidebar_label": "SDK: Event Model"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "SDK: Functions",
+    "permalink": "/docs/extend-sdk-functions"
+  },
+  "next": {
+    "title": "SDK: Stream Requirements",
+    "permalink": "/docs/extend-sdk-stream-requirements"
   }
 }
