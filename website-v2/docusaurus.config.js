@@ -1,4 +1,4 @@
-module.exports={
+module.exports = {
   "title": "Apache StreamPipes",
   "tagline": "Self-Service Data Analytics",
   "url": "https://streampipes.apache.org",
@@ -21,12 +21,20 @@ module.exports={
     "/css/admonition.css",
     "/css/custom.css",
     "/css/code-block-buttons.css",
-    "/css/all.min.css"
+    "/css/all.min.css",
+
+    "/css/bootstrap.min.css",
+    "/css/button.css",
+    "/css/responsive.css",
+    "/css/team.css",
+    "/css/custom-website.css",
+    "/css/page-banner.css"
   ],
   "favicon": "img/favicon.png",
   "customFields": {
     "disableHeaderTitle": true,
-    "repoUrl": "https://github.com/apache/streampipes"
+    "repoUrl": "https://github.com/apache/streampipes",
+    team: require('./src/config/team.js'),
   },
   "onBrokenLinks": "log",
   "onBrokenMarkdownLinks": "log",
@@ -75,6 +83,7 @@ module.exports={
       id: 'query',
       backgroundColor: 'var(--color-accent)',
       textColor: 'white',
+      isCloseable: false,
       content:
           '\u{1F914} Apache StreamPipes 0.92.0 is available! ⭐️',
     },

@@ -10,6 +10,8 @@
   --color-primary: rgb(27, 20, 100);
   --color-accent: rgb(57,181,74);
 
+  --color-primary-light: rgb(244, 244, 255);
+
   --ifm-navbar-height: 4.5rem;
 
 
@@ -18,4 +20,22 @@
 .navbar__logo {
   height: 3rem;
   margin-left: 0.25rem;
+}
+
+.background-primary {
+  background: var(--color-primary);
+}
+
+.background-accent {
+  background: var(--color-accent);
+}
+
+.background-primary-light {
+  background: var(--color-primary-light);
+}
+
+.table {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
 }
