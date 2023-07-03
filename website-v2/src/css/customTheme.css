@@ -6,4 +6,16 @@
   --ifm-color-primary-dark: #18125A;
   --ifm-color-primary-darker: #171155;
   --ifm-color-primary-darkest: #130E46;
+
+  --color-primary: rgb(27, 20, 100);
+  --color-accent: rgb(57,181,74);
+
+  --ifm-navbar-height: 4.5rem;
+
+
+}
+
+.navbar__logo {
+  height: 3rem;
+  margin-left: 0.25rem;
 }

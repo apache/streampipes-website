@@ -61,38 +61,19 @@ module.exports={
     ]
   ],
   "themeConfig": {
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: true
+    },
     "navbar": {
-      "title": "Apache StreamPipes",
       "logo": {
-        "src": "img/sp-logo-color-docs.png"
+        "src": "img/sp-logo-color.png"
       },
-      "items": [
-        {
-          "to": "docs/user-guide-introduction",
-          "label": "Documentation",
-          "position": "left"
-        },
-        {
-          "to": "blog",
-          "label": "Blog",
-          "position": "left"
-        },
-        {
-          "to": "docs/faq-common-problems",
-          "label": "FAQ",
-          "position": "left"
-        },
-        {
-          type: 'docsVersionDropdown',
-          position: 'left',
-          dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
-          dropdownActiveClassDisabled: true,
-        },
-      ]
+      "items": require('./src/navbar/navbar.js')
     },
     announcementBar: {
       id: 'query',
-      backgroundColor: 'var(--color-primary)',
+      backgroundColor: 'var(--color-accent)',
       textColor: 'white',
       content:
           '\u{1F914} Apache StreamPipes 0.92.0 is available! ⭐️',
