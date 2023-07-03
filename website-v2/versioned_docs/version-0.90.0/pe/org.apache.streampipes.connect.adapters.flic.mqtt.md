@@ -2,7 +2,6 @@
 id: org.apache.streampipes.connect.adapters.flic.mqtt
 title: Flic MQTT
 sidebar_label: Flic MQTT
-original_id: org.apache.streampipes.connect.adapters.flic.mqtt
 ---
 
 <!--

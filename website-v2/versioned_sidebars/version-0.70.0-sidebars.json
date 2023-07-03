@@ -198,38 +198,11 @@
       "technicals-user-guidance",
       "technicals-runtime-wrappers",
       "technicals-messaging",
-      "technical-configuration"
+      "technicals-configuration"
     ],
     "👪 Community": [
       "community-get-help",
       "community-contribute"
-    ]
-  },
-  "developer-guide": {
-    "Basics": [
-      "dev-guide-introduction",
-      "dev-guide-architecture",
-      "dev-guide-development-environment",
-      "dev-guide-archetype",
-      "dev-guide-migration"
-    ],
-    "Tutorials": [
-      "dev-guide-tutorial-sources",
-      "dev-guide-tutorial-processors",
-      "dev-guide-tutorial-sinks"
-    ],
-    "SDK Reference": [
-      "dev-guide-sdk-guide-sources",
-      "dev-guide-sdk-guide-processors",
-      "dev-guide-sdk-guide-sinks",
-      "dev-guide-stream-requirements",
-      "dev-guide-static-properties",
-      "dev-guide-output-strategies",
-      "dev-guide-event-model"
-    ],
-    "Configuration": [
-      "dev-guide-ssl",
-      "dev-guide-configuration"
     ]
   },
   "faq": {

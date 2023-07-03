@@ -1,0 +1,32 @@
+{
+  "unversionedId": "use-managing-pipelines",
+  "id": "version-0.70.0/use-managing-pipelines",
+  "title": "Managing Pipelines",
+  "description": "The pipeline view lists all created pipelines and provides several views and actions to manage the lifecycle of pipelines.",
+  "source": "@site/versioned_docs/version-0.70.0/03_use-managing-pipelines.md",
+  "sourceDirName": ".",
+  "slug": "/use-managing-pipelines",
+  "permalink": "/docs/0.70.0/use-managing-pipelines",
+  "draft": false,
+  "tags": [],
+  "version": "0.70.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "use-managing-pipelines",
+    "title": "Managing Pipelines",
+    "sidebar_label": "Managing Pipelines",
+    "original_id": "use-managing-pipelines"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Pipeline Editor",
+    "permalink": "/docs/0.70.0/use-pipeline-editor"
+  },
+  "next": {
+    "title": "Live Dashboard",
+    "permalink": "/docs/0.70.0/use-dashboard"
+  }
+}

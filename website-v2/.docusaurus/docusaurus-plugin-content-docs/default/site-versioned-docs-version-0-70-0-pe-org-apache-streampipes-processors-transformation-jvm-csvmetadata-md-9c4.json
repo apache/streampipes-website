@@ -1,0 +1,31 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata",
+  "id": "version-0.70.0/pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata",
+  "title": "CSV Metadata Enricher",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.70.0/pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata",
+  "permalink": "/docs/0.70.0/pe/org.apache.streampipes.processors.transformation.jvm.csvmetadata",
+  "draft": false,
+  "tags": [],
+  "version": "0.70.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processors.transformation.jvm.csvmetadata",
+    "title": "CSV Metadata Enricher",
+    "sidebar_label": "CSV Metadata Enricher",
+    "original_id": "org.apache.streampipes.processors.transformation.jvm.csvmetadata"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Boolean To State",
+    "permalink": "/docs/0.70.0/pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state"
+  },
+  "next": {
+    "title": "Calculate Duration",
+    "permalink": "/docs/0.70.0/pe/org.apache.streampipes.processors.transformation.jvm.duration-value"
+  }
+}

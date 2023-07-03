@@ -19,5 +19,14 @@
     "title": "Configuration",
     "sidebar_label": "Configuration",
     "original_id": "technicals-configuration"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Messaging",
+    "permalink": "/docs/0.70.0/technicals-messaging"
+  },
+  "next": {
+    "title": "Get Help",
+    "permalink": "/docs/0.70.0/community-get-help"
   }
 }

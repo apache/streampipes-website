@@ -19,5 +19,14 @@
     "title": "Tutorial: Data Processors",
     "sidebar_label": "Tutorial: Data Processors",
     "original_id": "extend-tutorial-data-processors"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Tutorial: Data Sources",
+    "permalink": "/docs/0.70.0/extend-tutorial-data-sources"
+  },
+  "next": {
+    "title": "Tutorial: Data Sinks",
+    "permalink": "/docs/0.70.0/extend-tutorial-data-sinks"
   }
 }

@@ -19,5 +19,14 @@
     "title": "SDK Guide: Stream Requirements",
     "sidebar_label": "SDK: Stream Requirements",
     "original_id": "extend-sdk-stream-requirements"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "SDK: Event Model",
+    "permalink": "/docs/0.70.0/extend-sdk-event-model"
+  },
+  "next": {
+    "title": "SDK: Static Properties",
+    "permalink": "/docs/0.70.0/extend-sdk-static-properties"
   }
 }

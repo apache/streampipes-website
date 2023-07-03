@@ -1,0 +1,22 @@
+{
+  "unversionedId": "dev-guide-sdk-guide-processors",
+  "id": "version-0.70.0/dev-guide-sdk-guide-processors",
+  "title": "SDK Guide: Data Processors",
+  "description": "Project Setup",
+  "source": "@site/versioned_docs/version-0.70.0/dev-guide-processor-sdk.md",
+  "sourceDirName": ".",
+  "slug": "/dev-guide-sdk-guide-processors",
+  "permalink": "/docs/0.70.0/dev-guide-sdk-guide-processors",
+  "draft": false,
+  "tags": [],
+  "version": "0.70.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "dev-guide-sdk-guide-processors",
+    "title": "SDK Guide: Data Processors",
+    "sidebar_label": "SDK Guide: Data Processors",
+    "original_id": "dev-guide-sdk-guide-processors"
+  }
+}

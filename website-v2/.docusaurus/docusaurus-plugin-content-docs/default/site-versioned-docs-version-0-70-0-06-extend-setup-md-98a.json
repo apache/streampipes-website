@@ -19,5 +19,14 @@
     "title": "Development Setup",
     "sidebar_label": "Development Setup",
     "original_id": "extend-setup"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Security",
+    "permalink": "/docs/0.70.0/deploy-security"
+  },
+  "next": {
+    "title": "StreamPipes CLI",
+    "permalink": "/docs/0.70.0/extend-cli"
   }
 }

@@ -85,9 +85,28 @@ export default {
           "to": "docs/faq-common-problems",
           "label": "FAQ",
           "position": "left"
+        },
+        {
+          "type": "docsVersionDropdown",
+          "position": "left",
+          "dropdownItemsAfter": [
+            {
+              "to": "/versions",
+              "label": "All versions"
+            }
+          ],
+          "dropdownActiveClassDisabled": true,
+          "dropdownItemsBefore": []
         }
       ],
       "hideOnScroll": false
+    },
+    "announcementBar": {
+      "id": "query",
+      "backgroundColor": "var(--color-primary)",
+      "textColor": "white",
+      "content": "🤔 Apache StreamPipes 0.92.0 is available! ⭐️",
+      "isCloseable": true
     },
     "image": "img/favicon.png",
     "footer": {

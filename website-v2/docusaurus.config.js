@@ -81,7 +81,13 @@ module.exports={
           "to": "docs/faq-common-problems",
           "label": "FAQ",
           "position": "left"
-        }
+        },
+        {
+          type: 'docsVersionDropdown',
+          position: 'left',
+          dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
+          dropdownActiveClassDisabled: true,
+        },
       ]
     },
     announcementBar: {

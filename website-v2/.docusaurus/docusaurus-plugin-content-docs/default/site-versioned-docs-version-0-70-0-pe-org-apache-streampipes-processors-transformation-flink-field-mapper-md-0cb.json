@@ -1,0 +1,31 @@
+{
+  "unversionedId": "pe/org.apache.streampipes.processors.transformation.flink.field-mapper",
+  "id": "version-0.70.0/pe/org.apache.streampipes.processors.transformation.flink.field-mapper",
+  "title": "Field Mapper",
+  "description": "<!--",
+  "source": "@site/versioned_docs/version-0.70.0/pe/org.apache.streampipes.processors.transformation.flink.field-mapper.md",
+  "sourceDirName": "pe",
+  "slug": "/pe/org.apache.streampipes.processors.transformation.flink.field-mapper",
+  "permalink": "/docs/0.70.0/pe/org.apache.streampipes.processors.transformation.flink.field-mapper",
+  "draft": false,
+  "tags": [],
+  "version": "0.70.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "org.apache.streampipes.processors.transformation.flink.field-mapper",
+    "title": "Field Mapper",
+    "sidebar_label": "Field Mapper",
+    "original_id": "org.apache.streampipes.processors.transformation.flink.field-mapper"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Field Hasher",
+    "permalink": "/docs/0.70.0/pe/org.apache.streampipes.processors.transformation.flink.fieldhasher"
+  },
+  "next": {
+    "title": "Field Renamer",
+    "permalink": "/docs/0.70.0/pe/org.apache.streampipes.processors.transformation.flink.field-renamer"
+  }
+}

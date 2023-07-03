@@ -1,0 +1,32 @@
+{
+  "unversionedId": "use-notifications",
+  "id": "version-0.70.0/use-notifications",
+  "title": "Notifications",
+  "description": "The notification module can be used to create internal notifications.",
+  "source": "@site/versioned_docs/version-0.70.0/03_use-notifications.md",
+  "sourceDirName": ".",
+  "slug": "/use-notifications",
+  "permalink": "/docs/0.70.0/use-notifications",
+  "draft": false,
+  "tags": [],
+  "version": "0.70.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "use-notifications",
+    "title": "Notifications",
+    "sidebar_label": "Notifications",
+    "original_id": "use-notifications"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Data Explorer",
+    "permalink": "/docs/0.70.0/use-data-explorer"
+  },
+  "next": {
+    "title": "Install Pipeline Elements",
+    "permalink": "/docs/0.70.0/use-install-pipeline-elements"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "unversionedId": "deploy-security",
+  "id": "version-0.70.0/deploy-security",
+  "title": "Security",
+  "description": "Overriding default settings",
+  "source": "@site/versioned_docs/version-0.70.0/05_deploy-security.md",
+  "sourceDirName": ".",
+  "slug": "/deploy-security",
+  "permalink": "/docs/0.70.0/deploy-security",
+  "draft": false,
+  "tags": [],
+  "version": "0.70.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "id": "deploy-security",
+    "title": "Security",
+    "sidebar_label": "Security",
+    "original_id": "deploy-security"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Use SSL",
+    "permalink": "/docs/0.70.0/deploy-use-ssl"
+  },
+  "next": {
+    "title": "Development Setup",
+    "permalink": "/docs/0.70.0/extend-setup"
+  }
+}

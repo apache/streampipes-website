@@ -1,0 +1,32 @@
+{
+  "unversionedId": "deploy-use-ssl",
+  "id": "version-0.70.0/deploy-use-ssl",
+  "title": "Use SSL",
+  "description": "This page explains how SSL Certificates can be used to provide transport layer security between your Browser and the Streampipes Backend.",
+  "source": "@site/versioned_docs/version-0.70.0/05_deploy-use-ssl.md",
+  "sourceDirName": ".",
+  "slug": "/deploy-use-ssl",
+  "permalink": "/docs/0.70.0/deploy-use-ssl",
+  "draft": false,
+  "tags": [],
+  "version": "0.70.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "id": "deploy-use-ssl",
+    "title": "Use SSL",
+    "sidebar_label": "Use SSL",
+    "original_id": "deploy-use-ssl"
+  },
+  "sidebar": "documentation",
+  "previous": {
+    "title": "Kubernetes Deployment",
+    "permalink": "/docs/0.70.0/deploy-kubernetes"
+  },
+  "next": {
+    "title": "Security",
+    "permalink": "/docs/0.70.0/deploy-security"
+  }
+}
