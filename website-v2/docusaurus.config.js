@@ -24,7 +24,7 @@ module.exports = {
     "/css/all.min.css",
 
     "/css/bootstrap.min.css",
-    "/css/button.css",
+    "/css/buttons.css",
     "/css/responsive.css",
     "/css/team.css",
     "/css/custom-website.css",

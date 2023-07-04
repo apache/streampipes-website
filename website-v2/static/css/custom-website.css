@@ -276,13 +276,13 @@ img {
 }
 
 .sp-button-margin {
-	margin-bottom:10px;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
 .container-header {
-    padding-left:80px;
-    padding-right:20px;
-    width:100%;
+	margin: 4rem;
+	border-radius: 15px;
 }
 
 .header-apache-text {
@@ -298,25 +298,32 @@ img {
 }
 
 .feature-highlights {
-	margin-top: 16px;
-    margin-bottom: 16px;
 	font-size:18pt;
 	width:100%;
+	background: rgba(255, 255, 255, 0.85);
+	height: 250px;
+	border-radius: 10px;
+	text-align: center;
+	padding: 15px;
 }
 
 .feature-highlights-icon {
     margin-right:10px;
+	color: var(--color-accent);
+	font-size: 3rem;
 }
 
-.feature-highlights-text {
-    border-bottom: 1px solid rgb(204, 217, 223);
-    padding-bottom: 10px;
+.feature-highlights-title {
+    font-weight: 800;
+	color: var(--color-accent);
+	font-size: 2rem;
 }
 
-.feature-highlights-bg {
-	background: rgb(57,181,74);
-	color:white;
+.feature-highlights-subtitle {
+	color:var(--color-primary);
 	padding:3px;
+	font-weight: 500;
+	font-size: 1.25rem;
 }
 
 .sp-blue {
@@ -328,12 +335,10 @@ img {
 }
 
 .apache-teaser {
-	position: relative;
-	padding-left: 1em;
-	border-left: 0.2em solid rgb(57,181,74);
+	text-align: center;
 	font-family: 'Roboto', serif;
 	font-size: 16pt;
-	font-weight: 100;
+	font-weight: 500;
 }
 
 .apache-teaser:before, .apache-teaser:after {
@@ -375,7 +380,100 @@ img {
 	font-weight: 500;
 }
 
+.h-100 {
+	height: 100%;
+}
 
+.teaser-image {
+	background-image:url('/img/bg-img/bg-index-color.png');
+	//background:linear-gradient(0deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('/img/bg-img/bg-index-color.png');
+	background-size:cover;
+	border-radius: 10px;
+	max-width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+}
+
+.teaser-text-area {
+	background:rgba(255, 255, 255, 0.95);
+	margin-top:50px;
+	margin-bottom:50px;
+	padding:35px;
+	border-radius:15px;
+	display:inline-block;
+	max-width:750px;
+}
+
+.ml-0 {
+	margin-left: 0;
+}
+
+.mb-20 {
+	margin-bottom: 20px;
+}
+
+.mt-10 {
+	margin-top: 10px;
+}
+
+.mr-0 {
+	margin-right: 0;
+}
+
+.event-image {
+	position:absolute;
+	bottom:50px;
+	float:right;
+	margin-left:20px;
+	margin-right:-10px;
+	margin-top:50px;
+}
+
+.top-claim-area {
+	margin-top: 3rem;
+	text-align: center;
+}
+
+.top-claim-area-subtitle {
+
+}
+
+.top-claim-area-subtitle-text {
+	text-transform: uppercase;
+	color: var(--color-accent);
+	font-weight: 800;
+	font-size: 2rem;
+	padding: 10px;
+}
+
+.top-claim-area-main-title {
+	font-weight: 800;
+	font-size: 6rem;
+	color: var(--color-primary);
+}
+
+.top-claim-area-main-title:after {
+	content: '';
+	width: 125px;
+	border-bottom: var(--color-accent) 8px solid;
+	display: block;
+	margin: 12px auto;
+	left: 50%;
+}
+
+.after-apache-teaser:before {
+	content: '';
+	width: 125px;
+	border-bottom: var(--color-accent) 8px solid;
+	display: block;
+	margin: 12px auto;
+	left: 50%;
+}
+
+.teaser-actions {
+	margin-top: 25px;
+}
 
 
 
