@@ -300,7 +300,8 @@ img {
 .feature-highlights {
 	font-size:18pt;
 	width:100%;
-	background: rgba(255, 255, 255, 0.85);
+	//background: rgba(255, 255, 255, 0.85);
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 	height: 250px;
 	border-radius: 10px;
 	text-align: center;
@@ -385,7 +386,7 @@ img {
 }
 
 .teaser-image {
-	background-image:url('/img/bg-img/bg-index-color.png');
+	//background-image:url('/img/bg-img/bg-index-color.png');
 	//background:linear-gradient(0deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('/img/bg-img/bg-index-color.png');
 	background-size:cover;
 	border-radius: 10px;
