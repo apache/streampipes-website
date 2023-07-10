@@ -1800,16 +1800,7 @@
 <p><img alt="StreamPipes Logo with Python" src="img/streampipes-python.png#only-light" />
 <img alt="StreamPipes Logo with Python" src="img/streampipes-python-dark.png#only-dark" /></p>
 <h4 align="center"><a href="https://github.com/apache/streampipes">StreamPipes</a> is a self-service (Industrial) IoT toolbox to enable non-technical users to connect, analyze and explore IoT data streams.</h4>
-<p><br></p>
-<div class="admonition danger">
-<p class="admonition-title">Dependency issue with StreamPipes Python 0.92.0</p>
-<p>In StreamPipes Python <code>0.92.0</code> there is a problem with the required dependencies.<br>
-Pydantic has recently released the new version <code>2.0</code> with many exciting improvements, but also some breaking changes. 
-Unfortunately, we didn't limit our requirements strictly enough, so yydantic <code>2.0</code> is installed together with streampipes, which is not (yet) compatible.<br>
-To fix this bug, simply run the following command after installing streampipes, or adjust your dependencies accordingly:</p>
-<div class="language-python highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;pydantic&lt;2.0&quot;</span> <span class="s2">&quot;pydantic_core&lt;2.0&quot;</span>
-</code></pre></div>
-</div>
+
 <p><br></p>
 <h3 align="center">Apache StreamPipes for Python 🐍</h3>
 
@@ -1819,11 +1810,9 @@ and the amazing universe of data analytics libraries in Python. </p>
 
 <hr />
 <p><br></p>
-<div class="admonition warning">
-<p class="admonition-title">StreamPipes Python is in beta</p>
-<p>The current version of this Python library is still a beta version.<br>
-This means that it is still heavily under development, which may result in frequent and extensive API changes, unstable behavior, etc.</p>
-</div>
+<p align="center"><b>💡 The current version of this Python library is still a beta version.<br>
+This means that it is still heavily under development, which may result in frequent and extensive API changes, unstable behavior, etc.</b>
+</p>
 <hr />
 <h2 id="quickstart">⚡️ Quickstart<a class="headerlink" href="#quickstart" title="Permanent link">&para;</a></h2>
 <p>As a quick example, we demonstrate how to set up and configure a StreamPipes client.
@@ -1867,17 +1856,12 @@ Alternatively, you can provide your credentials via environment variables.
 Simply define your credential provider as follows:</p>
 <p><div class="language-python highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">streampipes.client.credential_provider</span> <span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
 
-<span class="n">StreamPipesApiKeyCredentials</span><span class="p">()</span>
+<span class="n">StreamPipesApiKeyCredentials</span><span class="o">.</span><span class="n">from_env</span><span class="p">(</span><span class="n">username_env</span><span class="o">=</span><span class="s2">&quot;USER&quot;</span><span class="p">,</span> <span class="n">api_key_env</span><span class="o">=</span><span class="s2">&quot;API-KEY&quot;</span><span class="p">)</span>
 </code></pre></div>
-This requires to set the following environment variables: <code>SP_API_KEY</code> and <code>SP_USERNAME</code>
 <br></p>
-<p><code>username</code> is always the username that is used to log in into StreamPipes. <br></p>
-<details class="tip">
-<summary>How to get your StreamPipes API key</summary>
-<p>The <code>api_key</code> can be generated within the UI as demonstrated below:
-<br></p>
+<p><code>username</code> is always the username that is used to log in into StreamPipes. <br>
+The <code>api_key</code> can be generated within the UI as demonstrated below:</p>
 <p><img alt="Howto API Key" src="img/how-to-get-api-key.gif" /></p>
-</details>
 
 
   
