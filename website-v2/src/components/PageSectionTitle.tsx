@@ -11,7 +11,7 @@ const PageSectionTitle = (props) => {
   return (
     <div className={`section-title ${largeSectionClass} ${alignClass}`}>
       {
-        props.subtitle ? (<span className="sub-title">{props.subtitle}</span>) : (<span></span>)
+        props.sectionSubtitle ? (<span className="sub-title">{props.sectionSubtitle}</span>) : (<span></span>)
       }
       {
         props.title ? (<h2 className={`${titleClass} mb-4`}>{props.title}</h2>)

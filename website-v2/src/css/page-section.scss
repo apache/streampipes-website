@@ -15,9 +15,9 @@
     text-transform: uppercase;
     margin-bottom: 15px;
     color: var(--color-accent);
-
+    letter-spacing: .1rem;
     font: {
-      weight: 700;
+      weight: 800;
       size: 15px;
     };
 
@@ -37,6 +37,8 @@
     margin-bottom: 0;
     position: relative;
     display: inline-block;
+    color: var(--color-primary);
+    font-weight: 800;
 
     font: {
       size: 44px;
