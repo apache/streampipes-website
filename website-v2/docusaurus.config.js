@@ -38,6 +38,7 @@ module.exports = {
   },
   "onBrokenLinks": "log",
   "onBrokenMarkdownLinks": "log",
+  noIndex: false,
   "presets": [
     [
       "@docusaurus/preset-classic",
