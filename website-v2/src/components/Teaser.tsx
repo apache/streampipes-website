@@ -4,7 +4,7 @@ import CircleContainer from './CircleContainer';
 
 const Teaser = (props) => (
   <>
-    <section className="elements-area">
+    <section className="elements-area" style={{borderBottom: '1px solid #cecece'}}>
       <div className={"row"}>
         <div className={"col-9 container-lg d-flex align-items-center justify-content-center"}>
           <div className={"left-claim-section"}>
@@ -69,9 +69,6 @@ const Teaser = (props) => (
         <div className={"col-3 teaser-image"}>
         </div>
       </div>
-
-
-
     </section>
   </>
 )

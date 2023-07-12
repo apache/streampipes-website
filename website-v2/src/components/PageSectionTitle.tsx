@@ -9,7 +9,7 @@ const PageSectionTitle = (props) => {
   const largeSectionClass = props.largeSection ? 'section-title-large' : '';
 
   return (
-    <div className={`section-title ${largeSectionClass} ${alignClass}`}>
+    <div className={`section-title ${largeSectionClass} ${alignClass}`} style={{marginBottom: props.marginBottom}}>
       {
         props.sectionSubtitle ? (<span className="sub-title">{props.sectionSubtitle}</span>) : (<span></span>)
       }

@@ -8,6 +8,7 @@ const PageSection = (props) => {
   const alignContentCenter = props.alignContentCenter ? 'text-center justify-content-center' : '';
 
   const lightModeClass = props.lightMode ? 'text-light' : '';
+  const marginBottom = props.marginBottom ? props.marginBottom : '55px';
 
   return (
     <>
@@ -15,7 +16,10 @@ const PageSection = (props) => {
         <div className="container">
           <div className={`row align-items-center ${alignCenter}`}>
             <div className={"col-12"}>
-              <PageSectionTitle title={props.sectionTitle} sectionSubtitle={props.sectionSubtitle} lightMode={props.lightMode}></PageSectionTitle>
+              <PageSectionTitle title={props.sectionTitle}
+                                marginBottom={marginBottom}
+                                sectionSubtitle={props.sectionSubtitle}
+                                lightMode={props.lightMode}></PageSectionTitle>
               <div className={`col-lg-12 col-md-12 order-md-0 ${alignContentCenter} ${lightModeClass}`}>
                 {props.children}
               </div>
