@@ -34,7 +34,7 @@ module.exports = {
   "customFields": {
     "disableHeaderTitle": true,
     "repoUrl": "https://github.com/apache/streampipes",
-    team: require('./src/config/team.js'),
+    team: require('./src/team/team.js'),
   },
   "onBrokenLinks": "log",
   "onBrokenMarkdownLinks": "log",

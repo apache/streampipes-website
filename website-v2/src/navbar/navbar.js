@@ -13,7 +13,7 @@ module.exports = [
         "label": "Apache StreamPipes - User Guide",
       },
       {
-        "to": "docs/user-guide-introduction",
+        "to": "docs/python",
         "label": "Apache StreamPipes - Python",
       },
       {
