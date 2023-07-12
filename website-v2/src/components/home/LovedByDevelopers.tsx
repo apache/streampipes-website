@@ -24,6 +24,10 @@ const LovedByDevelopers = (props) => (
               With its microservice architecture at its core, you can install your extensions at any time without the
               need to restart the whole system.
             </p>
+            <div>
+            <a href="/docs/extend-tutorial-data-processors" className="sp-button sp-button-medium sp-button-blue"><i
+              className="fas fa-hand-point-right"></i> Tutorial: SDK</a>
+            </div>
           </Subsection>
           <div>
             <img className="d-block w-100 mt-2 mb-2" src={"/img/screenshots/sdk-data-processor.png"} alt={"Online ML"}/>
@@ -45,6 +49,11 @@ const LovedByDevelopers = (props) => (
             </p>
 
             <p className={"text-left"}>And of course, you can also just use the provided REST interface!</p>
+
+            <div>
+              <a href="/docs/python" className="sp-button sp-button-medium sp-button-blue"><i
+                className="fas fa-hand-point-right"></i> Python Client</a>
+            </div>
           </Subsection>
         </TwoColumnFeatureSection>
         <TwoColumnFeatureSection>
@@ -57,6 +66,10 @@ const LovedByDevelopers = (props) => (
               But you can also integrate other ML models, and play back the results in form of a new data stream to
               StreamPipes.
             </p>
+            <div>
+              <a href="/docs/python/latest/tutorials/4-using-online-machine-learning-on-a-streampipes-data-stream" className="sp-button sp-button-medium sp-button-blue"><i
+                className="fas fa-hand-point-right"></i> Online ML with StreamPipes</a>
+            </div>
           </Subsection>
           <div>
             <img className="d-block w-100 mt-2 mb-2" src={"/img/screenshots/python-onlineml.png"} alt={"Online ML"}/>

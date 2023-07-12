@@ -40,8 +40,9 @@
 }
 
 .sp-button-medium {
-    font-size: 1.0em;
+    font-size: 1rem;
     padding: 0.75em 0.75em;
+    text-transform: none;
 }
 
 
