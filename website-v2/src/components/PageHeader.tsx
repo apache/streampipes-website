@@ -7,7 +7,7 @@ const PageHeader = (props) => (
         <div className="row h-100 align-items-center">
           <div className="col-12">
             <div className="page-banner-content">
-              <h2>
+              <h2 className={"thick-border-left"}>
                 {props.title}
               </h2>
             </div>

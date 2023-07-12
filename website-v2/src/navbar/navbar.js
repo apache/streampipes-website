@@ -108,11 +108,5 @@ module.exports = [
         label: "Thanks"
       }
     ]
-  },
-  {
-    type: 'docsVersionDropdown',
-    position: 'left',
-    dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
-    dropdownActiveClassDisabled: true,
   }
 ];

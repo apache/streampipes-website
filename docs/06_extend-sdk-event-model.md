@@ -10,11 +10,11 @@ This guide explains the usage of the event model to manipulate runtime events fo
 
 ## Prerequisites
 
-This guide assumes that you are already familiar with the basic setup of [data processors](dev-guide-processor-sdk.md) and [data sinks](dev-guide-sink-sdk.md).
+This guide assumes that you are already familiar with the basic setup of [data processors](06_extend-first-processor.md).
 
 ### Property Selectors
 
-In most cases, fields that are subject to be transformed by pipeline elements are provided by the assigned ``MappingProperty`` (see the guide on [static properties](dev-guide-static-properties.md)).
+In most cases, fields that are subject to be transformed by pipeline elements are provided by the assigned ``MappingProperty`` (see the guide on [static properties](extend-sdk-static-properties)).
 
 Mapping properties return a ``PropertySelector`` that identifies a field based on (i) the **streamIndex** and (ii) the runtime name of the field.
 Let's assume we have an event with the following structure:
@@ -41,7 +41,7 @@ s0::temperature
 
 ``s0`` identifies the stream (in this case, only one input streams exist, but as data processors might require more than one input stream, a stream identifier is required), while the appendix identifies the runtime name.
 
-Note: If you add a new field to an input event, you don't need to provide the selector, you can just assign the runtime name as defined by the [output strategy](dev-guide-output-strategies.md).
+Note: If you add a new field to an input event, you don't need to provide the selector, you can just assign the runtime name as defined by the [output strategy](extend-sdk-output-strategies).
 
 ### Reading Fields
 

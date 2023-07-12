@@ -23,6 +23,8 @@
     z-index: 1;
     //background: linear-gradient(0deg,rgba(57, 181, 74, 0.8),rgba(57, 181, 74, 0.8)), url('/img/bg-img/bg-index.jpg');
     background-size:cover;
+    background: #fcfcfc;
+    border-bottom: 1px solid #cecece;
     color:var(--color-accent);
 }
 

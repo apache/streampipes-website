@@ -44,3 +44,34 @@
     width: auto;
     display: inline-block;
 }
+
+/*
+ *  Styling Sidebar's Version dropdown
+ */
+
+#sidebarCssSelector > div {
+    padding-top: 0 !important;
+}
+aside div div:has(nav.menu) {
+    padding-top: 0 !important;
+}
+aside .custom-sidebar-version {
+    margin-top: var(--ifm-navbar-height);
+    padding: 0.5rem 0 0 0.5rem;
+}
+
+aside .custom-sidebar-inner {
+    align-items: center;
+    border: 1px solid #eee;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.03);
+    display: flex;
+    margin: 1rem;
+    padding: 4px 1rem;
+}
+
+aside .custom-sidebar-version p {
+    margin-bottom: 0;
+    font-size: var(--fbc-font-size: 13px;);
+    padding: var(--ifm-menu-link-padding-vertical) var(--ifm-menu-link-padding-horizontal);
+}
