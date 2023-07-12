@@ -5,7 +5,6 @@ import DocsVersionDropdownNavbarItem from '@theme-original/NavbarItem/DocsVersio
 export default function DocSidebarWrapper(props) {
   return (
       <>
-
         <div className="custom-sidebar-version">
           <div className={"custom-sidebar-inner"}><span style={{ "display": "inline-block" }}>Version</span> <DocsVersionDropdownNavbarItem dropdownItemsBefore={[]} dropdownItemsAfter={[]} /></div>
         </div>
