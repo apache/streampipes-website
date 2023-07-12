@@ -6,7 +6,7 @@ const Teaser = (props) => (
   <>
     <section className="elements-area" style={{borderBottom: '1px solid #cecece'}}>
       <div className={"row"}>
-        <div className={"col-9 container-lg d-flex align-items-center justify-content-center"}>
+        <div className={"col-lg-9 col-12 container-lg d-flex align-items-center justify-content-center"}>
           <div className={"left-claim-section"}>
             <div className={"top-claim-area"}>
               <div className={"top-claim-area-subtitle"}>
@@ -66,7 +66,7 @@ const Teaser = (props) => (
             </div>
           </div>
         </div>
-        <div className={"col-3 teaser-image"}>
+        <div className={"col-lg-3 d-none d-lg-block teaser-image"}>
         </div>
       </div>
     </section>

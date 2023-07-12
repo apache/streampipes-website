@@ -1,14 +1,8 @@
 import type { FC } from 'react';
 import React from 'react';
 import Layout from '@theme/Layout';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { translate } from '@docusaurus/Translate';
 import PageHeader from '../components/PageHeader';
 import PageSection from '../components/PageSection';
-import DownloadBox from '../components/download/DownloadBox';
-import DownloadFolder from '../components/download/DownloadFolder';
-import DownloadBrowser from '../components/download/DownloadBrowser';
-import DownloadMoreInfo from '../components/download/DownloadMoreInfo';
 import DownloadSection from '../components/download/DownloadSection';
 
 
@@ -55,7 +49,7 @@ const Downloads: FC = () => (
                                                     </span>
               </div>
               <div className="col-md-11 col-9">
-                Check the <a href="https://streampipes.apache.org/docs/docs/user-guide-introduction.html"> user
+                Check the <a href="/docs/user-guide-introduction"> user
                 guide</a> and learn how to make your first steps with StreamPipes!
               </div>
             </div>

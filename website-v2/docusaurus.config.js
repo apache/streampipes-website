@@ -25,10 +25,10 @@ module.exports = {
 
     "/css/bootstrap.min.css",
     "/css/buttons.css",
-    "/css/responsive.css",
     "/css/team.css",
     "/css/custom-website.css",
-    "/css/page-banner.css"
+    "/css/page-banner.css",
+    "/css/responsive.css",
   ],
   "favicon": "img/favicon.png",
   "customFields": {
