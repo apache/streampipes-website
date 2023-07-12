@@ -10,12 +10,12 @@ As the exact input schema of a processor is usually not yet known at development
 
 The following reference describes how output strategies can be defined using the SDK.
 
-<div class="admonition tip">
-<div class="admonition-title">Code on Github</div>
-<p>For all examples, the code can be found on <a href="https://www.github.com/apache/streampipes-examples
-/tree/dev/streampipes-pipeline-elements-examples-processors-jvm/src/main/java/org/apache/streampipes/pe/examples/jvm
-/outputstrategy/">Github</a>.</p>
-</div>
+:::tip Code on Github
+
+For all examples, the code can be found on [Github](https://www.github.com/apache/streampipes-examples/tree/dev/streampipes-pipeline-elements-examples-processors-jvm/src/main/java/org/apache/streampipes/pe/examples/jvm/outputstrategy/)
+
+:::
+
 
 ## Reference
 

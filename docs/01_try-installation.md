@@ -14,12 +14,11 @@ recommend looking at our Kubernetes support, which is also part of the installat
 The Docker-based installation requires **Docker** and **Docker Compose** to be installed on the target machine.
 Installation instructions can be found below.
 
-<div class="admonition info">
-    <div class="admonition-title">Install Docker</div>
-    <p>Go to https://docs.docker.com/installation/ and follow the instructions to install Docker for your OS. Make sure
-        docker can be started as a non-root user (described in the installation manual, don’t forget to log out and in
-        again) and check that Docker is installed correctly by executing docker-run hello-world</p>
-</div>
+:::info Install Docker
+Go to https://docs.docker.com/installation/ and follow the instructions to install Docker for your OS. Make sure
+docker can be started as a non-root user (described in the installation manual, don’t forget to log out and in
+again) and check that Docker is installed correctly by executing docker-run hello-world
+:::
 
 ### Supported operating systems
 
@@ -51,13 +50,12 @@ Congratulations! You've successfully managed to install StreamPipes. Now we're r
     <img src="/img/01_try-installation/04_home.png" alt="Home page"/>
 </div>
 
-<div class="admonition error">
-    <div class="admonition-title">Errors during the installation process</div>
-    <p>In most cases, errors during the installation are due to an under-powered system.<br/>
-        If there is a problem with any of the components, please restart the whole system (<code>docker-compose
-            down</code> and eventually also delete the volumes).
-        Please also make sure that you've assigned enough memory available to Docker.</p>
-</div>
+:::danger Errors during the installation process
+In most cases, errors during the installation are due to an under-powered system.
+If there is a problem with any of the components, please restart the whole system (`docker-compose
+down` and eventually also delete the volumes).
+Please also make sure that you've assigned enough memory available to Docker.
+:::
 
 ## Next Steps
 

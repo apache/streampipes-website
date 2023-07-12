@@ -26,22 +26,19 @@ Once you start an extensions service, you will see the chosen IP in printed in t
 If you see such an IP or the extensions service complains that it cannot resolve the IP, you can manually set the IP address of the extensions service. You can do so by providing an <code>SP_HOST</code> environment variable.
 
 
-To check if the service is up and running, open the browser on *'localhost:8090'* (or the port defined in the service definition). The machine-readable description of the processor should be visible as shown below.
-
 <img src="/img/archetype/endpoint.png" width="90%" alt="Project Structure"/>
 
+To check if the service is up and running, open the browser on *'localhost:8090'* (or the port defined in the service definition). The machine-readable description of the processor should be visible as shown below.
 
-<div class="admonition error">
-<div class="admonition-title">Common Problems</div>
-<p>
+
+:::caution Common Problems
 If the service description is not shown on 'localhost:8090', you might have to change the port address.
 This needs to be done in the configuration of your service, further explained in the configurations part of the developer guide.
 
 If the service does not show up in the StreamPipes installation menu, click on 'MANAGE ENDPOINTS' and add 'http://<span></span>YOUR_IP_OR_DNS_NAME:8090'.
 Use the IP or DNS name you provided as the SP_HOST variable or the IP (if resolvable) found by the auto-discovery service printed in the console.
 After adding the endpoint, a new processor with the name *Example* should show up.
-</p>
-</div>
+:::
 
 Now you can go to StreamPipes.
 Your new processor *'Example'* should now show up in the installation menu ("Install Pipeline Elements" in the left navigation bar).

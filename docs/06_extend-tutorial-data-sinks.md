@@ -6,19 +6,22 @@ sidebar_label: "Tutorial: Data Sinks"
 
 In this tutorial, we will add a new data sink using the standalone wrapper.
 
-From an architectural point of view, we will create a self-contained service that includes the description of the data sink and a corresponding implementation.
+From an architectural point of view, we will create a self-contained service that includes the description of the data
+sink and a corresponding implementation.
 
 ## Objective
 
 We are going to create a new data sink that calls an external HTTP endpoint to forward data to an external service.
 
-For each incoming event, an external service is invoked using an HTTP POST request. In this example, we'll call an endpoint provided by [RequestBin](https://requestbin.com/).
-To setup your own endpoint, go to [https://requestbin.com/](https://requestbin.com/) and click "Create a request bin". Copy the URL of the newly created endpoint.
-
+For each incoming event, an external service is invoked using an HTTP POST request. In this example, we'll call an
+endpoint provided by [RequestBin](https://requestbin.com/).
+To setup your own endpoint, go to [https://requestbin.com/](https://requestbin.com/) and click "Create a request bin".
+Copy the URL of the newly created endpoint.
 
 ## Project setup
 
-Instead of creating a new project from scratch, we recommend to use the Maven archetype to create a new project skeleton (streampipes-archetype-extensions-jvm).
+Instead of creating a new project from scratch, we recommend to use the Maven archetype to create a new project
+skeleton (streampipes-archetype-extensions-jvm).
 Enter the following command in a command line of your choice (Apache Maven needs to be installed):
 
 ```
@@ -29,10 +32,12 @@ mvn archetype:generate -DarchetypeGroupId=org.apache.streampipes \
 
 You will see a project structure similar to the structure shown in the [archetypes](06_extend-archetypes.md) section.
 
-<div class="admonition tip">
-<div class="admonition-title">Tip</div>
-<p>Besides the basic project skeleton, the sample project also includes an example Dockerfile you can use to package your application into a Docker container.</p>
-</div>
+:::tip
+
+Besides the basic project skeleton, the sample project also includes an example Dockerfile you can use to package your
+application into a Docker container.
+
+:::
 
 Now you're ready to create your first data sink for StreamPipes!
 
@@ -68,10 +73,10 @@ public class RestSink extends StreamPipesDataSink {
         .withAssets(Assets.DOCUMENTATION, Assets.ICON)
         .withLocales(Locales.EN)
         .requiredStream(StreamRequirementsBuilder
-                .create()
-                .requiredPropertyWithNaryMapping(EpRequirements.anyProperty(), Labels.withId(
-                        "fields-to-send"), PropertyScope.NONE)
-                .build())
+            .create()
+            .requiredPropertyWithNaryMapping(EpRequirements.anyProperty(), Labels.withId(
+                "fields-to-send"), PropertyScope.NONE)
+            .build())
         .build();
   }
 
@@ -94,22 +99,33 @@ public class RestSink extends StreamPipesDataSink {
 
 ```
 
-In this class, we need to implement three methods: The `declareModel` method is used to define abstract stream requirements such as event properties that must be present in any input stream that is later connected to the element using the StreamPipes UI.
-The second method, `onInvocation` is called once a pipeline using this sink is started. The third method, `onEvent`, is called for every incoming event.
+In this class, we need to implement three methods: The `declareModel` method is used to define abstract stream
+requirements such as event properties that must be present in any input stream that is later connected to the element
+using the StreamPipes UI.
+The second method, `onInvocation` is called once a pipeline using this sink is started. The third method, `onEvent`, is
+called for every incoming event.
 
 The ``declareModel`` method describes the properties of our data sink:
-* ``category`` defines a category for this sink.
-* ``withAssets`` denotes that we will provide an external documentation file and an icon, which can be found in the ``resources`` folder
-* ``withLocales`` defines that we will provide an external language file, also available in the ``resources`` folder
-* ``requiredStream`` defines requirements any input stream connected to this sink must provide. In this case, we do not have any specific requirements, we just forward all incoming events to the REST sink. However, we want to let the user display a list of available fields from the connected input event, where users can select a subset. This is defined by defining a Mapping from the empty requirement. This will later on render a selection dialog in the pipeline editor.
 
-The ``onInvocation`` method is called when a pipeline containing the sink is started. Once a pipeline is started, we would like to extract user-defined parameters.
-In this example, we simply extract the fields selected by users that should be forwarded to the REST sink. Finally, we return a new configured event sink containing the parameters.
+* ``category`` defines a category for this sink.
+* ``withAssets`` denotes that we will provide an external documentation file and an icon, which can be found in
+  the ``resources`` folder
+* ``withLocales`` defines that we will provide an external language file, also available in the ``resources`` folder
+* ``requiredStream`` defines requirements any input stream connected to this sink must provide. In this case, we do not
+  have any specific requirements, we just forward all incoming events to the REST sink. However, we want to let the user
+  display a list of available fields from the connected input event, where users can select a subset. This is defined by
+  defining a Mapping from the empty requirement. This will later on render a selection dialog in the pipeline editor.
+
+The ``onInvocation`` method is called when a pipeline containing the sink is started. Once a pipeline is started, we
+would like to extract user-defined parameters.
+In this example, we simply extract the fields selected by users that should be forwarded to the REST sink. Finally, we
+return a new configured event sink containing the parameters.
 
 ## Pipeline element invocation
 
-Once users start a pipeline that uses our geofencing component, the _onInvocation_ method in our class is called. The class `SinkParams` includes a graph that contains information on the configuration parameters a users has selected in the pipeline editor and information on the acutal streams that are connected to the pipeline element.
-
+Once users start a pipeline that uses our geofencing component, the _onInvocation_ method in our class is called. The
+class `SinkParams` includes a graph that contains information on the configuration parameters a users has selected in
+the pipeline editor and information on the acutal streams that are connected to the pipeline element.
 
 ## Adding an implementation
 
@@ -123,6 +139,7 @@ package org.apache.streampipes.pe.example;
 import com.google.common.base.Charsets;
 import org.apache.http.client.fluent.Request;
 import org.apache.http.entity.StringEntity;
+
 import org.apache.streampipes.commons.exceptions.SpRuntimeException;
 import org.apache.streampipes.dataformat.SpDataFormatDefinition;
 import org.apache.streampipes.dataformat.json.JsonDataFormatDefinition;
@@ -139,6 +156,7 @@ import org.apache.streampipes.sdk.utils.Assets;
 import org.apache.streampipes.wrapper.context.EventSinkRuntimeContext;
 import org.apache.streampipes.wrapper.standalone.SinkParams;
 import org.apache.streampipes.wrapper.standalone.StreamPipesDataSink;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -186,42 +204,51 @@ public class RestSink extends StreamPipesDataSink {
 }
 
 ```
-The only class variable you need to change right now is the REST_ENDPOINT_URL. Change this url to the URL provided by your request bin.
+
+The only class variable you need to change right now is the REST_ENDPOINT_URL. Change this url to the URL provided by
+your request bin.
 In the ``ònEvent`` method, we use a helper method to get a subset of the incoming event.
 Finally, we convert the resulting ``Map`` to a JSON string and call the endpoint.
 
-
 ## Preparing the service
+
 The final step is to register the sink as a pipeline element.
 
 Go to the class `Init` and register the sink:
+
 ```java
 .registerPipelineElement(new RestSink())
 ```
 
 ## Starting the service
-<div class="admonition tip">
-<div class="admonition-title">Tip</div>
-<p>Once you start the service, it will register in StreamPipes with the hostname. The hostname will be auto-discovered and should work out-of-the-box.
-In some cases, the detected hostname is not resolvable from within a container (where the core is running). In this case, provide a SP_HOST environment variable to override the auto-discovery.
-</p>
-</div>
 
+:::tip
 
-<div class="admonition tip">
-<div class="admonition-title">Tip</div>
-<p> The default port of all pipeline element services as defined in the `create` method is port 8090.
-       If you'd like to run multiple services at the same time on your development machine, change the port here. As an alternative, you can also provide an env variable `SP_PORT` which overrides the port settings. This is useful to use different configs for dev and prod environments.
-</p>
-</div>
+Once you start the service, it will register in StreamPipes with the hostname. The hostname will be auto-discovered and
+should work out-of-the-box.
+In some cases, the detected hostname is not resolvable from within a container (where the core is running). In this
+case, provide a SP_HOST environment variable to override the auto-discovery.
+
+:::
+
+:::tip
+
+The default port of all pipeline element services as defined in the `create` method is port 8090.
+If you'd like to run multiple services at the same time on your development machine, change the port here. As an
+alternative, you can also provide an env variable `SP_PORT` which overrides the port settings. This is useful to use
+different configs for dev and prod environments.
+
+:::
 
 Now we are ready to start our service!
 
 Configure your IDE to provide an environment variable called ``SP_DEBUG`` with value ``true`` when starting the project.
 
-Execute the main method in the class `Init` we've just created. The service automatically registers itself in StreamPipes.
+Execute the main method in the class `Init` we've just created. The service automatically registers itself in
+StreamPipes.
 
-To install the created element, open the StreamPipes UI and follow the manual provided in the [user guide](03_use-install-pipeline-elements.md).
+To install the created element, open the StreamPipes UI and follow the manual provided in
+the [user guide](03_use-install-pipeline-elements.md).
 
 ## Read more
 

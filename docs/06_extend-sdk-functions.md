@@ -24,11 +24,13 @@ and run until the service is stopped.
 
 ## Writing a function
 
-<div class="admonition warning">
-    <div class="admonition-title">Work in Progress</div>
-    <p>Functions are currently in preview mode and are not yet recommended for production usage. 
-APIs are subject to change in a future version.</p>
-</div>
+:::caution Work in Progress
+
+Functions are currently in preview mode and are not yet recommended for production usage. 
+APIs are subject to change in a future version.
+
+:::
+
 
 To define a function, create a new extensions service using the [Maven Archetypes](06_extend-archetypes.md) or use an already existing service.
 

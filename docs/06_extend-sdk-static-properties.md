@@ -10,12 +10,11 @@ Processing elements can specify required static properties, which will render di
 
 The following reference describes how static properties can be defined using the SDK.
 
-<div class="admonition tip">
-<div class="admonition-title">Code on Github</div>
-<p>For all examples, the code can be found on <a href="https://github.com/apache/streampipes-examples/tree
-/dev/streampipes-pipeline-elements-examples-processors-jvm/src/main/java/org/apache/streampipes/pe/examples/jvm
-/staticproperty">Github</a>.</p>
-</div>
+:::tip Code on Github
+
+For all examples, the code can be found on [Github](https://github.com/apache/streampipes-examples/tree/dev/streampipes-pipeline-elements-examples-processors-jvm/src/main/java/org/apache/streampipes/pe/examples/jvm/staticproperty).
+
+:::
 
 ## Reference
 
@@ -169,12 +168,12 @@ To extract the selected value, use the following method from the parameter extra
 String selectedSingleValue = extractor.selectedSingleValue("id", String.class);
 ```
 
-<div class="admonition tip">
-<div class="admonition-title">Declaring options</div>
-<p>Sometimes, you may want to use an internal name that differs from the display name of an option.
-For that, you can use the method Options.from(Tuple2{'<'}String, String{'>'}) and the extractor method selectedSingleValueInternalName.</p>
-</div>
+:::tip Declaring options
 
+Sometimes, you may want to use an internal name that differs from the display name of an option.
+For that, you can use the method Options.from(Tuple2{'<'}String, String{'>'}) and the extractor method selectedSingleValueInternalName.
+
+:::tip
 
 
 ### Multi-Value Selections
@@ -258,9 +257,11 @@ The UI will render a single-value parameter based on the options provided at run
 
 The parameter extraction does not differ from the extraction of static single-value parameters.
 
-<div class="admonition info">
-<div class="admonition-title">Multi-value selections</div>
-<p>Although this example shows the usage of runtime-resolvable selections using single value selections, the same also works for multi-value selections!</p>
-</div>
+
+:::info Multi-value selections
+
+Although this example shows the usage of runtime-resolvable selections using single value selections, the same also works for multi-value selections!
+
+:::
 
 

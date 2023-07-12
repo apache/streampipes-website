@@ -12,10 +12,13 @@ By using this feature, StreamPipes ensures that only pipeline elements can be co
 
 This guide covers the creation of stream requirements. Before reading this section, we recommend that you make yourself familiar with the SDK guide on [data processors](dev-guide-processor-sdk.md) and [data sinks](dev-guide-sink-sdk.md).
 
-<div class="admonition tip">
-<div class="admonition-title">Code on Github</div>
-<p>For all examples, the code can be found on <a href="https://www.github.com/apache/streampipes-examples/tree/dev/streampipes-pipeline-elements-examples-processors-jvm/src/main/java/org/apache/streampipes/pe/examples/jvm/requirements/">Github</a>.</p>
-</div>
+
+:::tip Code on Github
+
+For all examples, the code can be found on [Github](https://www.github.com/apache/streampipes-examples/tree/dev/streampipes-pipeline-elements-examples-processors-jvm/src/main/java/org/apache/streampipes/pe/examples/jvm/requirements/).
+
+:::
+
 
 ## The StreamRequirementsBuilder
 

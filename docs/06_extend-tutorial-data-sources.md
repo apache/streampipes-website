@@ -38,11 +38,11 @@ mvn archetype:generate \
 
 You will see a project structure similar to the structure shown in the [archetypes](06_extend-archetypes.md) section.
 
-<div class="admonition tip">
-<div class="admonition-title">Tip</div>
-<p>Besides the basic project skeleton, the sample project also includes an example Dockerfile you can use to package your application into a Docker container.
-</p>
-</div>
+:::tip
+
+Besides the basic project skeleton, the sample project also includes an example Dockerfile you can use to package your application into a Docker container.
+
+:::
 
 ## Adding a data stream description
 
@@ -181,12 +181,12 @@ You can remove the other two example classes if you want.
 
 ## Starting the service
 
-<div class="admonition tip">
-<div class="admonition-title">Tip</div>
-<p>Once you start the service, it will register in StreamPipes with the hostname. The hostname will be auto-discovered and should work out-of-the-box.
+:::tip
+
+Once you start the service, it will register in StreamPipes with the hostname. The hostname will be auto-discovered and should work out-of-the-box.
 In some cases, the detected hostname is not resolvable from within a container (where the core is running). In this case, provide a SP_HOST environment variable to override the auto-discovery.
-</p>
-</div>
+
+:::
 
 Now we are ready to start our first container!
 
