@@ -87,7 +87,7 @@ In many cases, you'll want to let the user select a specific field from a data s
   }
 ```
 
-See also the developer guide on [static properties](dev-guide-static-properties.md) to better understand the usage of ``MappingProperties``.
+See also the developer guide on [static properties](extend-sdk-static-properties) to better understand the usage of ``MappingProperties``.
 
 Requirements on primitive fields can be specified for all common datatypes:
 

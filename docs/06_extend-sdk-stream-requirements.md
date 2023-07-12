@@ -10,7 +10,7 @@ Data processors and data sinks can define ``StreamRequirements``. Stream require
 Once users create pipelines in the StreamPipes Pipeline Editor, these requirements are verified against the connected event stream.
 By using this feature, StreamPipes ensures that only pipeline elements can be connected that are syntactically and semantically valid.
 
-This guide covers the creation of stream requirements. Before reading this section, we recommend that you make yourself familiar with the SDK guide on [data processors](dev-guide-processor-sdk.md) and [data sinks](dev-guide-sink-sdk.md).
+This guide covers the creation of stream requirements. Before reading this section, we recommend that you make yourself familiar with the SDK guide on [data processors](extend-first-processor).
 
 
 :::tip Code on Github
@@ -90,7 +90,7 @@ In many cases, you'll want to let the user select a specific field from a data s
   }
 ```
 
-See also the developer guide on [static properties](dev-guide-static-properties.md) to better understand the usage of ``MappingProperties``.
+See also the developer guide on [static properties](extend-sdk-static-properties) to better understand the usage of ``MappingProperties``.
 
 Requirements on primitive fields can be specified for all common datatypes:
 

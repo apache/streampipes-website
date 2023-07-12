@@ -28,7 +28,6 @@ module.exports = [
     "position": "right"
   },
   {
-    "to": "/resources",
     "label": "Resources",
     "position": "right",
     items: [
@@ -56,7 +55,6 @@ module.exports = [
     "position": "right"
   },
   {
-    "to": "/community",
     "label": "Community",
     "position": "right",
     items: [
@@ -79,7 +77,6 @@ module.exports = [
     ]
   },
   {
-    "to": "/apache",
     "label": "Apache",
     "position": "right",
     items: [

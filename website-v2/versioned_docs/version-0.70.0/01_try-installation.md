@@ -41,9 +41,7 @@ best experience), Firefox or Edge.
 
 ## Install StreamPipes
 
-<ul style="padding-left:0">
-  <DownloadSection version={'0.70.0'}></DownloadSection>
-</ul>
+<DownloadSection version={'0.70.0'}></DownloadSection>
 
 ## Setup StreamPipes
 
@@ -70,4 +68,4 @@ If there is a problem with any of the components, please restart the whole syste
 
 ## Next Steps
 
-That's it! To ease your first steps with StreamPipes, we've created an [interactive tutorial](01_try-tutorial.md).
+That's it! To ease your first steps with StreamPipes, we've created an [interactive tutorial](try-tutorial).
