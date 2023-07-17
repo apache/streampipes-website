@@ -1920,15 +1920,15 @@ This endpoint allows to consume data stored in StreamPipes' data lake.</p>
 
 
 <h2 id="streampipes.endpoint.api.data_lake_measure.DataLakeMeasureEndpoint" class="doc doc-heading">
-        <code>DataLakeMeasureEndpoint</code>
+          <code>DataLakeMeasureEndpoint</code>
 
 
 <a href="#streampipes.endpoint.api.data_lake_measure.DataLakeMeasureEndpoint" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="streampipes.endpoint.endpoint.APIEndpoint" href="../../endpoint/#streampipes.endpoint.endpoint.APIEndpoint">APIEndpoint</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="streampipes.endpoint.endpoint.APIEndpoint" href="../../endpoint/#streampipes.endpoint.endpoint.APIEndpoint">APIEndpoint</a></code></p>
 
   
       <p>Implementation of the DataLakeMeasure endpoint.</p>
@@ -1937,6 +1937,8 @@ This endpoint allows to consume data stored in StreamPipes' data lake.</p>
 The metadata is returned as an instance of <a class="autorefs autorefs-internal" href="../../../model/container/data_lake_measures/#streampipes.model.container.data_lake_measures.DataLakeMeasures"><code>DataLakeMeasures</code></a>.</p>
 <p>In addition, the endpoint provides direct access to the data stored in the data laka by querying a
 specific data lake measure using the <code>get()</code> method.</p>
+
+
 
 <p><strong>Examples:</strong></p>
     <div class="language-python highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">streampipes.client</span> <span class="kn">import</span> <span class="n">StreamPipesClient</span>
@@ -1997,10 +1999,10 @@ We can modify this behavior by passing the <code>limit</code> paramter.
 find them at <a class="autorefs autorefs-internal" href="#streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig">MeasurementGetQueryConfig</a>.</p>
 
 
-
   
 
   <div class="doc doc-children">
+
 
 
 
@@ -2027,11 +2029,13 @@ find them at <a class="autorefs autorefs-internal" href="#streampipes.endpoint.a
 This behaviour can be influenced by passing the parameter <code>limit</code> with a different value
 (see <a class="autorefs autorefs-internal" href="#streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig">MeasurementGetQueryConfig</a>).</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
@@ -2072,6 +2076,8 @@ The available query parameters are defined by the
     </tbody>
   </table>
 
+
+
   <table>
     <thead>
       <tr>
@@ -2099,6 +2105,8 @@ The available query parameters are defined by the
     </tbody>
   </table>
 
+
+
 <p><strong>Examples:</strong></p>
     <p>see directly at <a class="autorefs autorefs-internal" href="#streampipes.endpoint.api.data_lake_measure.DataLakeMeasureEndpoint">DataLakeMeasureEndpoint</a>.</p>
 
@@ -2119,15 +2127,15 @@ The available query parameters are defined by the
 
 
 <h2 id="streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig" class="doc doc-heading">
-        <code>MeasurementGetQueryConfig</code>
+          <code>MeasurementGetQueryConfig</code>
 
 
 <a href="#streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
 
   
       <p>Config class describing the parameters of the <code>get()</code> method for measurements.</p>
@@ -2135,6 +2143,8 @@ The available query parameters are defined by the
 Additionally, it takes care of the conversion to a proper HTTP query string.
 Thereby, parameter names are adapted to the naming of the StreamPipes API,
 for which <a href="https://docs.pydantic.dev/usage/model_config/#options">Pydantic aliases</a> are used.</p>
+
+
 
   <table>
     <thead>
@@ -2155,7 +2165,7 @@ Please be aware that the column <code>time</code> as an index is always included
             <p>
                 <span class="doc-attribute-annotation">
                   <b>TYPE:</b>
-                    <code><span title="typing.Optional">Optional</span>[str]</code>
+                    <code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[str]]</code>
                 </span>
             </p>
           </td>
@@ -2252,7 +2262,6 @@ This needs to be at least <code>1</code></p>
   </table>
 
 
-
   
 
   <div class="doc doc-children">
@@ -2269,7 +2278,7 @@ This needs to be at least <code>1</code></p>
 
 
 <h3 id="streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig.Config" class="doc doc-heading">
-        <code>Config</code>
+          <code>Config</code>
 
 
 <a href="#streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig.Config" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -2279,7 +2288,6 @@ This needs to be at least <code>1</code></p>
 
   
       <p>Pydantic Config class</p>
-
 
 
   
@@ -2303,6 +2311,7 @@ This needs to be at least <code>1</code></p>
 </div>
 
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -2319,6 +2328,8 @@ This needs to be at least <code>1</code></p>
 <p>This method returns an HTTP query string for the invoking config.
 It follows the following structure <code>?param1=value1&amp;param2=value2...</code>.
 This query string is not an entire URL, instead it needs to appended to an API path.</p>
+
+
 
   <table>
     <thead>
@@ -2364,20 +2375,19 @@ This query string is not an entire URL, instead it needs to appended to an API p
 
 
 <h2 id="streampipes.endpoint.api.data_lake_measure.StreamPipesQueryValidationError" class="doc doc-heading">
-        <code>StreamPipesQueryValidationError</code>
+          <code>StreamPipesQueryValidationError</code>
 
 
 <a href="#streampipes.endpoint.api.data_lake_measure.StreamPipesQueryValidationError" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code>Exception</code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code>Exception</code></p>
 
   
       <p>A custom exception to be raised when the validation of query parameter
 causes an error.</p>
-
 
 
   </div>
