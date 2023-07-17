@@ -1891,25 +1891,25 @@ The headers are then used by the client to connect to StreamPipes.</p>
 
 
 <h2 id="streampipes.client.credential_provider.CredentialProvider" class="doc doc-heading">
-        <code>CredentialProvider</code>
+          <code>CredentialProvider</code>
 
 
 <a href="#streampipes.client.credential_provider.CredentialProvider" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="abc.ABC">ABC</span></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="abc.ABC">ABC</span></code></p>
 
   
       <p>Abstract implementation of a credential provider.
 Must be inherited by all credential providers.</p>
 
 
-
   
 
   <div class="doc doc-children">
+
 
 
 
@@ -1934,11 +1934,13 @@ Must be inherited by all credential providers.</p>
       <p>Creates the HTTP headers for the specific credential provider.</p>
 <p>Concrete authentication headers must be defined in the implementation of a credential provider.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
@@ -1962,6 +1964,8 @@ Must be inherited by all credential providers.</p>
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -2015,8 +2019,8 @@ determined by the credential provider.</p>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="streampipes.client.credential_provider.CredentialProvider" href="#streampipes.client.credential_provider.CredentialProvider">CredentialProvider</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="streampipes.client.credential_provider.CredentialProvider" href="#streampipes.client.credential_provider.CredentialProvider">CredentialProvider</a></code></p>
 
   
       <p>A credential provider that allows authentication via a StreamPipes API Token.</p>
@@ -2028,11 +2032,13 @@ If they are not passed, they are retrieved from environment variables:</p>
 <li><code>SP_API_KEY</code> is expected to contain the API key</li>
 </ul>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
@@ -2077,14 +2083,16 @@ If not passed, the api key is retrieved from environment variable <code>SP_API_K
     </tbody>
   </table>
 
+
+
 <p><strong>Examples:</strong></p>
     <p>see <a class="autorefs autorefs-internal" href="../client/#streampipes.client.client.StreamPipesClient">StreamPipesClient</a></p>
-
 
 
   
 
   <div class="doc doc-children">
+
 
 
 
@@ -2113,11 +2121,13 @@ If not passed, the api key is retrieved from environment variable <code>SP_API_K
       <p>DEPRECATED - use the class constructor instead</p>
 <p>Returns an api key provider parameterized via environment variables.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
@@ -2152,6 +2162,8 @@ If not passed, the api key is retrieved from environment variable <code>SP_API_K
     </tbody>
   </table>
 
+
+
   <table>
     <thead>
       <tr>
@@ -2174,6 +2186,8 @@ If not passed, the api key is retrieved from environment variable <code>SP_API_K
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>

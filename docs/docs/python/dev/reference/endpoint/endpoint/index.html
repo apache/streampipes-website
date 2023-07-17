@@ -1961,15 +1961,15 @@ An endpoint provides all options to communicate with ad dedicated part of Stream
 
 
 <h2 id="streampipes.endpoint.endpoint.APIEndpoint" class="doc doc-heading">
-        <code>APIEndpoint</code>
+          <code>APIEndpoint</code>
 
 
 <a href="#streampipes.endpoint.endpoint.APIEndpoint" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="streampipes.endpoint.endpoint.Endpoint" href="#streampipes.endpoint.endpoint.Endpoint">Endpoint</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="streampipes.endpoint.endpoint.Endpoint" href="#streampipes.endpoint.endpoint.Endpoint">Endpoint</a></code></p>
 
   
       <p>Abstract implementation of an API endpoint.</p>
@@ -1977,10 +1977,10 @@ An endpoint provides all options to communicate with ad dedicated part of Stream
 By design, endpoints are only instantiated within the <code>__init__</code> method of the StreamPipesClient.</p>
 
 
-
   
 
   <div class="doc doc-children">
+
 
 
 
@@ -2005,6 +2005,8 @@ By design, endpoints are only instantiated within the <code>__init__</code> meth
       <p>Get all resources of this endpoint provided by the StreamPipes API.</p>
 <p>Results are provided as an instance of a <code>ResourceContainer</code> that
 allows to handle the returned resources in a comfortable and pythonic way.</p>
+
+
 
   <table>
     <thead>
@@ -2037,6 +2039,7 @@ allows to handle the returned resources in a comfortable and pythonic way.</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -2050,6 +2053,8 @@ allows to handle the returned resources in a comfortable and pythonic way.</p>
   <div class="doc doc-contents ">
   
       <p>Builds the endpoint's URL of the API path.</p>
+
+
 
   <table>
     <thead>
@@ -2082,6 +2087,7 @@ allows to handle the returned resources in a comfortable and pythonic way.</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -2096,11 +2102,13 @@ allows to handle the returned resources in a comfortable and pythonic way.</p>
   
       <p>Queries the specified resource from the API endpoint.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
@@ -2120,6 +2128,8 @@ allows to handle the returned resources in a comfortable and pythonic way.</p>
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -2152,6 +2162,7 @@ allows to handle the returned resources in a comfortable and pythonic way.</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -2166,11 +2177,13 @@ allows to handle the returned resources in a comfortable and pythonic way.</p>
   
       <p>Allows to post a resource to the StreamPipes API.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
@@ -2190,6 +2203,8 @@ allows to handle the returned resources in a comfortable and pythonic way.</p>
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -2237,19 +2252,21 @@ allows to handle the returned resources in a comfortable and pythonic way.</p>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="abc.ABC">ABC</span></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="abc.ABC">ABC</span></code></p>
 
   
       <p>Abstract implementation of a StreamPipes endpoint.</p>
 <p>Serves as template for all endpoints used for interaction with a StreamPipes instance.
 By design, endpoints are only instantiated within the <code>__init__</code> method of the StreamPipesClient.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
@@ -2269,7 +2286,6 @@ By design, endpoints are only instantiated within the <code>__init__</code> meth
         </tr>
     </tbody>
   </table>
-
 
 
   
@@ -2303,15 +2319,14 @@ By design, endpoints are only instantiated within the <code>__init__</code> meth
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="streampipes.endpoint.endpoint.Endpoint" href="#streampipes.endpoint.endpoint.Endpoint">Endpoint</a></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="streampipes.endpoint.endpoint.Endpoint" href="#streampipes.endpoint.endpoint.Endpoint">Endpoint</a></code></p>
 
   
       <p>Abstract implementation of a StreamPipes messaging endpoint.</p>
 <p>Serves as template for all endpoints used for interacting with the StreamPipes messaging layer directly.
 Therefore, they need to provide the functionality to talk with the broker system running in StreamPipes.
 By design, endpoints are only instantiated within the <code>__init__</code> method of the StreamPipesClient.</p>
-
 
 
   
@@ -2345,6 +2360,8 @@ By design, endpoints are only instantiated within the <code>__init__</code> meth
 <p>This instance enables the client to authenticate to the broker used in the target StreamPipes instance,
 to consume messages from and to write messages to the broker.</p>
 
+
+
   <table>
     <thead>
       <tr>
@@ -2367,6 +2384,8 @@ to consume messages from and to write messages to the broker.</p>
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -2400,6 +2419,7 @@ to consume messages from and to write messages to the broker.</p>
 
 
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -2416,11 +2436,13 @@ to consume messages from and to write messages to the broker.</p>
 <p>This configuration step is required before the endpoint can be actually used.
 The based <code>broker</code> instance is passed to an internal property</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
@@ -2440,6 +2462,8 @@ The based <code>broker</code> instance is passed to an internal property</p>
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
