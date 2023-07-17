@@ -13,7 +13,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 14.1.0
+          node-version: 18.16.1
       - name: Copy asf yaml
         run: |
           cp .asf.yaml build/
