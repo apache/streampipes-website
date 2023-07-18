@@ -49,14 +49,20 @@
  *  Styling Sidebar's Version dropdown
  */
 
+.scroll-custom {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: var(--ifm-navbar-height);
+}
+
 #sidebarCssSelector > div {
     padding-top: 0 !important;
 }
 aside div div:has(nav.menu) {
-    padding-top: 0 !important;
+    /*padding-top: 0 !important;*/
 }
 aside .custom-sidebar-version {
-    margin-top: var(--ifm-navbar-height);
     padding: 0.5rem 0 0 0.5rem;
 }
 
