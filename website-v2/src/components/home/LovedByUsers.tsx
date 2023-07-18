@@ -8,8 +8,9 @@ const LovedByUsers = (props) => (
       <PageSection sectionTitle={"A single user interface for everything."}
                    sectionSubtitle={"No more application wiring"} backgroundClass={"background-white"}>
         <FeatureItemHorizontal featureNumber={"01."} title={"IIoT Connectivity"}
-                               images={[{src: "/img/screenshots/streampipes-connect-overview.png", alt: "StreamPipes Connect"},
+                               images={[
                                  {src: "/img/screenshots/streampipes-connect-opcua.png", alt: "StreamPipes Connect OPC-UA Browser"},
+                                 {src: "/img/screenshots/streampipes-connect-overview.png", alt: "StreamPipes Connect"},
                                  {src: "/img/screenshots/streampipes-connect-schema-editor.png", alt: "StreamPipes Connect Schema Editor"}]}>
           <p className={"text-left"}>Integrate data streams using the built-in StreamPipes Connect library
             with support many industrial protoocls such as S7, MQTT, Modbus, OPC-UA and many other IT protocols such as Apache Kafka and Apache Pulsar.</p>
@@ -45,7 +46,7 @@ const LovedByUsers = (props) => (
           <a href="/docs/use-pipeline-editor" className="sp-button sp-button-medium sp-button-blue"><i
             className="fas fa-hand-point-right"></i> Learn more</a>
         </FeatureItemHorizontal>
-        <FeatureItemHorizontal featureNumber={"03."} title={"Exploit"} images={[{src: "/img/screenshots/sp-explorer-ts.png", alt: "StreamPipes Data Explorer Time Series Chart"}, {src: "/img/screenshots/sp-data-explorer-config.png", alt: "Data Explorer Widgets"}, {src: "/img/screenshots/sp-dashboard.png", alt: "Live Dashboard"}]}>
+        <FeatureItemHorizontal featureNumber={"03."} title={"Exploit"} images={[{src: "/img/screenshots/sp-data-explorer-config.png", alt: "Data Explorer Widgets"}, {src: "/img/screenshots/sp-explorer-ts.png", alt: "StreamPipes Data Explorer Time Series Chart"}, {src: "/img/screenshots/sp-dashboard.png", alt: "Live Dashboard"}]}>
           <p className={"text-left"}>Trigger notifications, configure your real-time dashboard or send data to third-party systems such as databases (e.g., Kafka or Elasticsearch), external services (e.g., Slack) or IoT actuators.</p>
           <hr/>
           <p className={"text-left"}><b>Some included data sinks:</b></p>

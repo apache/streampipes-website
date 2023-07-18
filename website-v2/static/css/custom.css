@@ -472,3 +472,7 @@ p {
     text-decoration-style: solid;
     text-underline-offset: 15px;
 }
+
+.slide-thumb-active {
+    border: 2px solid var(--color-primary);
+}

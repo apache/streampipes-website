@@ -19,6 +19,7 @@
     "@iconify/icons-akar-icons": "^1.2.8",
     "@iconify/react": "^3.2.2",
     "react-lazy-load-image-component": "^1.5.4",
+    "swiper": "^10.0.0",
     "clsx": "^1.1.1",
     "docusaurus-plugin-sass": "^0.2.4",
     "react": "^17.0.2",
