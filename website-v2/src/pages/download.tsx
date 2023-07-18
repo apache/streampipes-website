@@ -17,10 +17,10 @@ const Downloads: FC = () => (
         <h5 className="feature-item-margin"><span className="feature-highlights-bg">Prerequisites</span></h5>
         <h6></h6>
         <ul>
-          <li><i className="fas fa-check sp-color-green"></i>The Docker-based installation works with Linux, MacOS and
+          <li className={"no-list-style"}><i className="fas fa-check sp-color-green"></i>The Docker-based installation works with Linux, MacOS and
             Windows 10.
           </li>
-          <li><i className="fas fa-check sp-color-green"></i> Install <a
+          <li className={"no-list-style"}><i className="fas fa-check sp-color-green"></i> Install <a
             href="https://docs.docker.com/install/" target="_blank">Docker</a> and <a
             href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose</a>
           </li>

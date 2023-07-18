@@ -53,7 +53,7 @@ a:active {
 	transition-duration: 400ms;
 }
 
-li {
+.no-list-style {
 	list-style: none;
 }
 

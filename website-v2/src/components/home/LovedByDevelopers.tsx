@@ -8,11 +8,11 @@ const LovedByDevelopers = (props) => (
     <>
       <PageSection sectionTitle={"First-class developer support"} sectionSubtitle={"Easy to customize & extend"}
                    backgroundClass={"background-primary-light"}>
-        <div className={"text-center"}>Apache StreamPipes is a great platform for developers: Implement custom adapters,
+        <p className={"text-center"}>Apache StreamPipes is a great platform for developers: Implement custom adapters,
           data processors or sinks and install them at runtime.<br/> Use StreamPipes Functions to define processing
           logic based on real-time IIoT data.<br/> Or use the client libraries, available in Java and Python, to
           interact with live and historical data in an easy way.
-        </div>
+        </p>
         <TwoColumnFeatureSection>
           <Subsection title={"Add your own extensions with the Software Development Kit"}>
             <p className={"text-left"}>It is easy to extend StreamPipes. Whether you need connectivity to a proprietary
