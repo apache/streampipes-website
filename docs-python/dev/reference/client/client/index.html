@@ -1909,11 +1909,13 @@ an endpoint of the StreamPipes API, e.g. <code>.dataLakeMeasureApi</code>.
 An <a class="autorefs autorefs-internal" href="../../endpoint/endpoint/#streampipes.endpoint.endpoint">endpoint</a> provides the actual methods to interact with StreamPipes
 API.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
@@ -1944,13 +1946,15 @@ API.</p>
                 </span>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
-                    <code>logging.INFO</code>
+                    <code>logging.<span title="logging.INFO">INFO</span></code>
                 </span>
             </p>
           </td>
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -1991,6 +1995,8 @@ API.</p>
     </tbody>
   </table>
 
+
+
 <p><strong>Examples:</strong></p>
     <div class="language-python highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">streampipes.client</span> <span class="kn">import</span> <span class="n">StreamPipesClient</span>
 <span class="kn">from</span> <span class="nn">streampipes.client.config</span> <span class="kn">import</span> <span class="n">StreamPipesClientConfig</span>
@@ -2024,7 +2030,6 @@ intended to be consistent with the StreamPipes Java client.
 </code></pre></div></p>
 
 
-
   
 
   <div class="doc doc-children">
@@ -2052,6 +2057,8 @@ intended to be consistent with the StreamPipes Java client.
   <div class="doc doc-contents ">
   
       <p>Constructs the basic API URL from the given <code>client_config</code>.</p>
+
+
 
   <table>
     <thead>
@@ -2103,6 +2110,8 @@ intended to be consistent with the StreamPipes Java client.
 <p>The HTTP headers are composed of the authentication headers supplied by the credential
 provider and additional required headers (currently this is only the application header).</p>
 
+
+
   <table>
     <thead>
       <tr>
@@ -2135,6 +2144,7 @@ provider and additional required headers (currently this is only the application
 
 
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -2154,11 +2164,13 @@ provider and additional required headers (currently this is only the application
       <p>Returns an instance of the <code>StreamPipesPythonClient</code>.</p>
 <p>Provides consistency to the StreamPipes Java client.</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
@@ -2189,13 +2201,15 @@ provider and additional required headers (currently this is only the application
                 </span>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
-                    <code>logging.INFO</code>
+                    <code>logging.<span title="logging.INFO">INFO</span></code>
                 </span>
             </p>
           </td>
         </tr>
     </tbody>
   </table>
+
+
 
   <table>
     <thead>
@@ -2224,6 +2238,7 @@ provider and additional required headers (currently this is only the application
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -2237,6 +2252,8 @@ provider and additional required headers (currently this is only the application
   <div class="doc doc-contents ">
   
       <p>Prints a short description of the connected StreamPipes instance and the available resources to the console.</p>
+
+
 
   <table>
     <thead>
@@ -2260,6 +2277,8 @@ provider and additional required headers (currently this is only the application
         </tr>
     </tbody>
   </table>
+
+
 
 <p><strong>Examples:</strong></p>
     <p><div class="language-python highlight"><pre><span></span><code><span class="n">client</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
