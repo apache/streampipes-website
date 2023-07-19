@@ -16,3 +16,7 @@ website/i18n/*
 
 build/
 documentation/website/build/
+
+website/.docusaurus
+website-v2/.docusaurus/**
+website-v2/.docusaurus

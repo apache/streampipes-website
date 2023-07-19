@@ -1,0 +1,29 @@
+{
+  "scripts": {
+    "examples": "docusaurus-examples",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "serve": "docusaurus serve",
+    "publish-gh-pages": "docusaurus-publish",
+    "write-translations": "docusaurus-write-translations",
+    "ds-version": "docusaurus-version",
+    "rename-version": "docusaurus-rename-version",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "docusaurus": "docusaurus"
+  },
+  "dependencies": {
+    "@docusaurus/core": "2.4.1",
+    "@docusaurus/plugin-client-redirects": "2.4.1",
+    "@docusaurus/preset-classic": "2.4.1",
+    "@iconify/icons-akar-icons": "^1.2.8",
+    "@iconify/react": "^3.2.2",
+    "react-lazy-load-image-component": "^1.5.4",
+    "swiper": "^10.0.0",
+    "clsx": "^1.1.1",
+    "docusaurus-plugin-sass": "^0.2.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.63.6"
+  }
+}

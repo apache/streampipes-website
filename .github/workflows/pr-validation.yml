@@ -13,15 +13,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '14.x'
-
-      - name: Build website
-        run: |
-          npm install
-          npm run build-website
+          node-version: '18.16.1'
 
       - name: Build documentation
         run: |
-          cd documentation/website
+          cd website-v2
           npm install
           npm run build

@@ -1,0 +1,83 @@
+:root {
+    --ifm-color-primary-lightest: #231A82;
+    --ifm-color-primary-lighter: #1F1773;
+    --ifm-color-primary-light: #1E166E;
+    --ifm-color-primary: #1B1464;
+    --ifm-color-primary-dark: #18125A;
+    --ifm-color-primary-darker: #171155;
+    --ifm-color-primary-darkest: #130E46;
+
+    --color-primary: rgb(27, 20, 100);
+    --color-accent: rgb(57, 181, 74);
+
+    --color-primary-light: rgb(246, 246, 255);
+
+    --ifm-navbar-height: 4.5rem;
+
+    --ifm-heading-font-family: 'Roboto';
+}
+
+.navbar__logo {
+    height: 3rem;
+    margin-left: 0.25rem;
+}
+
+.background-primary {
+    background: var(--color-primary);
+}
+
+.background-accent {
+    background: var(--color-accent);
+}
+
+.background-primary-light {
+    background: var(--color-primary-light);
+}
+
+.text-light {
+    color: #fcfcfc;
+}
+
+.table {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    display: inline-block;
+}
+
+/*
+ *  Styling Sidebar's Version dropdown
+ */
+
+.scroll-custom {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: var(--ifm-navbar-height);
+}
+
+#sidebarCssSelector > div {
+    padding-top: 0 !important;
+}
+aside div div:has(nav.menu) {
+    /*padding-top: 0 !important;*/
+}
+aside .custom-sidebar-version {
+    padding: 0.5rem 0 0 0.5rem;
+}
+
+aside .custom-sidebar-inner {
+    align-items: center;
+    border: 1px solid #eee;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.03);
+    display: flex;
+    margin: 1rem;
+    padding: 4px 1rem;
+}
+
+aside .custom-sidebar-version p {
+    margin-bottom: 0;
+    font-size: var(--fbc-font-size: 13px;);
+    padding: var(--ifm-menu-link-padding-vertical) var(--ifm-menu-link-padding-horizontal);
+}
