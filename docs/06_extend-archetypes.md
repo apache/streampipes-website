@@ -20,7 +20,10 @@ First, the ``groupId`` of the resulting Maven artifact must be set.
 We use ``groupId``: ``org.example`` and ``artifactId``: ``ExampleProcessor``.
 You can keep the default values for the other settings, confirm them by hitting enter.
 
-The current {sp.version} is 0.69.0 (for a pre-release version, use the SNAPSHOT appendix, e.g. 0.69.0-SNAPSHOT)
+:::info Choosing the right version
+Make sure that the version used to create your archetype matches your running Apache StreamPipes version.
+In the example below, replace `{sp.version}` with the proper version, e.g., `0.92.0`.
+:::
 
 ```bash
 mvn archetype:generate                              	 	     \
@@ -28,25 +31,6 @@ mvn archetype:generate                              	 	     \
   -DarchetypeArtifactId=streampipes-archetype-extensions-jvm  \
   -DarchetypeVersion={sp.version}
 ```
-<details class="info">
-    <summary>Other archetypes</summary>
-
-## Processors Flink
-```bash
-mvn archetype:generate                              	 	     \
-  -DarchetypeGroupId=org.apache.streampipes          			         \
-  -DarchetypeArtifactId=streampipes-archetype-pe-processors-flink  \
-  -DarchetypeVersion={sp.version}
-```
-
-## Sinks Flink
-```bash
-mvn archetype:generate                              	 	     \
-  -DarchetypeGroupId=org.apache.streampipes          			         \
-  -DarchetypeArtifactId=streampipes-archetype-pe-sinks-flink  \
-  -DarchetypeVersion={sp.version}
-```
-</details>
 
 
 ## Project structure
@@ -60,5 +44,3 @@ For details, have a look at the other parts of the Developer Guide, where these 
 ## Next steps
 
 Click [here](06_extend-first-processor.md) to learn how to create your first data processor.
-
-

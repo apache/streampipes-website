@@ -78,6 +78,9 @@ module.exports = {
       defaultMode: 'light',
       disableSwitch: true
     },
+    prism: {
+      additionalLanguages: ['java']
+    },
     "navbar": {
       "logo": {
         "src": "img/sp-logo-color.png"

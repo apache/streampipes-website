@@ -4,7 +4,7 @@
       "user-guide-introduction",
       "try-installation"
     ],
-    "Concepts": [
+    "\uD83D\uDCA1 Concepts": [
       "introduction",
       "concepts-overview"
     ],
@@ -179,7 +179,7 @@
       "deploy-use-ssl",
       "deploy-security"
     ],
-    "\uD83D\uDCBB Extend StreamPipes": [
+    "\uD83D\uDCBB Customize StreamPipes": [
       "extend-setup",
       "extend-cli",
       "extend-archetypes",
@@ -187,6 +187,7 @@
       "extend-tutorial-data-sources",
       "extend-tutorial-data-processors",
       "extend-tutorial-data-sinks",
+      "extend-client",
       "extend-sdk-functions",
       "extend-sdk-event-model",
       "extend-sdk-stream-requirements",
