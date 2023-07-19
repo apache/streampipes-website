@@ -20,7 +20,7 @@
     display: inline-block ;
     vertical-align: middle;
     border: 0;
-    border-radius: 3px;
+    border-radius: 25px;
     cursor: pointer;
     font-family: inherit;
     font-weight: bold;
@@ -40,8 +40,9 @@
 }
 
 .sp-button-medium {
-    font-size: 1.0em;
+    font-size: 1rem;
     padding: 0.75em 0.75em;
+    text-transform: none;
 }
 
 

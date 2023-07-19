@@ -1,0 +1,508 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body,
+html {
+	font-family: 'Heebo', sans-serif;
+	overflow-x: hidden;
+}
+
+.mt-10 {
+	margin-top: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Heebo', sans-serif;
+	font-weight: 700;
+	color: #404551;
+	line-height: 1.2;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+	font-weight: 700;
+	text-decoration: none;
+	-webkit-transition-duration: 400ms;
+	transition-duration: 400ms;
+}
+
+.no-list-style {
+	list-style: none;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+	color: #44444e;
+	margin-top: 0;
+	line-height: 1.6;
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.section-padding-100 {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.section-padding-100-0 {
+	padding-top: 100px;
+	padding-bottom: 0;
+}
+
+.section-padding-50 {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.margin-top-50 {
+	margin-top: 50px;
+}
+
+.margin-top-20 {
+	margin-top: 20px;
+}
+
+.margin-right-50 {
+	margin-right: 15px;
+}
+
+.main-section-area {
+	background-color: #1b1464;
+	position: relative;
+	z-index: 1;
+}
+
+.main-section-area .section-heading {
+	margin-bottom: 60px;
+}
+
+.main-section-area .section-heading h2 {
+	color: #fff;
+}
+
+.support-links-area {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 20%;
+	flex: 0 0 20%;
+	max-width: 16.5%;
+	padding: 20px 20px;
+	position: relative;
+	z-index: 1;
+	-webkit-transition-duration: 750ms;
+	transition-duration: 750ms;
+}
+
+.support-links-area:hover {
+	box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-list ul {
+
+}
+
+.banner-link {
+	color:white;
+	text-decoration: underline;
+}
+
+.banner-link:hover {
+	color:#1b1464;
+	text-decoration: underline;
+}
+
+.header-banner {
+	background: white;
+	z-index: 999;
+	color:white;
+	text-align: center;
+	height:40px;
+	width:100%;
+	position:absolute;
+	top:0px;
+}
+
+.header-banner-news {
+	background:rgb(57,181,74);
+	border-radius:0% 100% 6% 94% / 100% 0% 100% 0%;
+	width:90%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:40px;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+}
+
+.header-banner.sticky {
+	position:fixed;
+}
+
+.event-list ul li {
+	font-size: 18px;
+	margin-left: 10px;
+	display:list-item;
+	list-style-type: square;
+}
+
+.feature-item-margin {
+	margin-bottom:25px;
+	line-height: 1.4;
+	font-size: 1.1rem;
+}
+
+.installation-manual-part {
+	margin-bottom:30px;
+}
+
+.installation-step {
+	margin-top:15px;
+	margin-bottom:15px;
+}
+
+.section-subtitle {
+	font-size: 22px;
+	color: #abadbe;
+	line-height: 1.8;
+	font-weight: 500;
+	text-align:center;
+	margin-bottom:30px;
+}
+
+.usecases-applications-item {
+	text-align:justify;
+	border-left:2px solid rgb(57,181,74);
+	padding:10px;
+}
+
+.sp-color-green {
+	color: rgb(57,181,74);
+}
+
+.sp-background-green {
+	background: rgb(57,181,74);
+}
+
+.margin-top {
+	margin-top:40px;
+}
+
+.pe-icon-container {
+	box-shadow: 0 0 2px #555;
+	width: 75px;
+	height: 75px;
+	display: inline;
+	float: left;
+	padding: 10px;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+
+.pe-icon-processor {
+	border: 2px solid #009688;
+}
+
+.pe-icon-sink {
+	border: 2px solid #3f51b5;
+}
+
+.pe-icon {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	max-height: 100%;
+	width: 100%;
+}
+
+.feature-section-gray {
+	background: #e6e6e6;
+}
+
+.page-section-title {
+	text-align:center;
+	margin: 10px 0 80px 0;
+}
+
+.page-section-title::after {
+	content: '';
+	width: 125px;
+	border-bottom: #1b1464 8px solid;
+	margin: 24px 0;
+	display: block;
+	transform: translateX(-50%);
+	left: 50%;
+	position: absolute
+}
+
+.header-area {
+	padding: 0px;
+}
+
+.sp-button-margin {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.container-header {
+	margin: 4rem;
+	border-radius: 15px;
+}
+
+.header-apache-text {
+	line-height:1.2;
+	font-family: 'Heebo', sans-serif;
+	font-size:32pt;
+	margin-bottom:20px;
+}
+
+.feature-highlights-section {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.feature-highlights {
+	font-size:18pt;
+	width:100%;
+	//background: rgba(255, 255, 255, 0.85);
+	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+	height: 250px;
+	border-radius: 10px;
+	text-align: center;
+	padding: 15px;
+}
+
+.feature-highlights-icon {
+    margin-right:10px;
+	color: var(--color-accent);
+	font-size: 3rem;
+}
+
+.feature-highlights-title {
+    font-weight: 800;
+	color: var(--color-accent);
+	font-size: 1.5rem;
+}
+
+.feature-highlights-subtitle {
+	color:var(--color-primary);
+	padding:3px;
+	font-weight: 500;
+	font-size: 1rem;
+}
+
+.sp-blue {
+	color: #1b1464;
+}
+
+.sp-green {
+	color: rgb(57,181,74);
+}
+
+.apache-teaser {
+	text-align: left;
+	font-family: 'Roboto', serif;
+	font-size: 15pt;
+	font-weight: 500;
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.apache-teaser:before, .apache-teaser:after {
+	content: '\201C';
+	font-family: 'Sanchez';
+	color: rgb(27, 20, 100);
+}
+
+.apache-teaser:after {
+	content: '\201D';
+}
+
+.form-group.position-relative input {
+	padding-right: 32px;
+}
+
+.form-clear {
+	align-items: center;
+	background: #cecece;
+	border-radius: 50%;
+	bottom: 8px;
+	color: rgba(0, 0, 0, .54);
+	cursor: pointer;
+	display: flex;
+	height: 24px;
+	justify-content: center;
+	position: absolute;
+	right: 0;
+	width: 24px;
+	z-index: 10;
+}
+
+.form-text+.form-clear {
+	bottom: calc(1rem + 18px);
+}
+
+.form-clear .material-icons {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.h-100 {
+	height: 100%;
+}
+
+.teaser-image {
+	background-image:url('/img/bg-img/sp.png');
+	//background:linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('/img/bg-img/bg-index-color.png');
+	background-size:cover;
+	border-radius: 20px;
+	margin: 30px auto;
+	height: calc(100vh - 72px);
+}
+
+.teaser-text-area {
+	background:rgba(255, 255, 255, 0.95);
+	margin-top:50px;
+	margin-bottom:50px;
+	padding:35px;
+	border-radius:15px;
+	display:inline-block;
+	max-width:750px;
+}
+
+.ml-0 {
+	margin-left: 0;
+}
+
+.mb-20 {
+	margin-bottom: 20px;
+}
+
+.mt-10 {
+	margin-top: 10px;
+}
+
+.mr-0 {
+	margin-right: 0;
+}
+
+.event-image {
+	position:absolute;
+	bottom:50px;
+	float:right;
+	margin-left:20px;
+	margin-right:-10px;
+	margin-top:50px;
+}
+
+.top-claim-area {
+	margin-top: 3rem;
+	text-align: center;
+}
+
+.top-claim-area-subtitle {
+
+}
+
+.top-claim-area-subtitle-text {
+	text-transform: uppercase;
+	color: var(--color-accent);
+	font-weight: 800;
+	font-size: 1.75rem;
+	padding: 10px;
+}
+
+.top-claim-area-main-title {
+	font-weight: 800;
+	font-size: 5.25rem;
+	color: var(--color-primary);
+}
+
+.top-claim-area-main-title:after {
+	content: '';
+	width: 125px;
+	border-bottom: var(--color-accent) 8px solid;
+	display: block;
+	margin: 12px auto;
+	left: 50%;
+}
+
+.after-apache-teaser:before {
+	content: '';
+	width: 125px;
+	border-bottom: var(--color-accent) 8px solid;
+	display: block;
+	margin: 12px auto;
+	left: 50%;
+}
+
+.teaser-actions {
+	margin-top: 2rem;
+}
+
+.left-claim-section {
+	margin-top: -20px;
+}
+
+.feature-hz-title {
+	font-family: 'Heebo', sans-serif;
+	font-weight: 800;
+	color: var(--color-accent);
+	line-height: 1.2;
+	font-size: 1.5rem;
+}
+
+.feature-hz-number {
+	font-family: 'Heebo', sans-serif;
+	font-weight: 700;
+	line-height: 1.2;
+	color: var(--color-accent);
+	font-size: 2rem;
+}
+
+.architecture-image {
+	max-width: 850px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+

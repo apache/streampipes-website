@@ -16,6 +16,26 @@
  *
  */
 
+
+@media (max-width: 1199px) {
+
+    .sp-button {
+        margin-bottom: 10px;
+    }
+
+    .architecture-image {
+        width: 100%;
+    }
+
+    .feature-highlights {
+        margin-bottom: 10px;
+    }
+
+    .top-claim-area-main-title {
+        font-size: 3.25rem;
+    }
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
     .menu-area #nav .nav-link {
         padding: 0 10px;
@@ -55,7 +75,6 @@
         -webkit-box-flex: 0;
             -ms-flex: 0 0 50%;
                 flex: 0 0 50%;
-        max-width: 50%;
     }
 
 }
