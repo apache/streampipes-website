@@ -14,17 +14,17 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 18.16.1
+      - name: Build Docs
+        run: |
+          cd website-v2
+          npm install
+          npm run build
       - name: Copy asf yaml
         run: |
           cp .asf.yaml website-v2/build/
       - name: Copy htaccess
         run: |
           cp .htaccess website-v2/build/
-      - name: Build Docs
-        run: |
-          cd website-v2
-          npm install
-          npm run build
       - name: Copy Python docs
         run: |
           mkdir -p ./website-v2/build/docs/docs/python
