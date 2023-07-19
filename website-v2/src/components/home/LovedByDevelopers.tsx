@@ -51,7 +51,7 @@ const LovedByDevelopers = (props) => (
             <p className={"text-left"}>And of course, you can also just use the provided REST interface!</p>
 
             <div>
-              <a href="/docs/python" className="sp-button sp-button-medium sp-button-blue"><i
+              <a href="/docs/docs/python" className="sp-button sp-button-medium sp-button-blue"><i
                 className="fas fa-hand-point-right"></i> Python Client</a>
             </div>
           </Subsection>
@@ -67,7 +67,7 @@ const LovedByDevelopers = (props) => (
               StreamPipes.
             </p>
             <div>
-              <a href="/docs/python/latest/tutorials/4-using-online-machine-learning-on-a-streampipes-data-stream" className="sp-button sp-button-medium sp-button-blue"><i
+              <a href="/docs/docs/python/latest/tutorials/4-using-online-machine-learning-on-a-streampipes-data-stream" className="sp-button sp-button-medium sp-button-blue"><i
                 className="fas fa-hand-point-right"></i> Online ML with StreamPipes</a>
             </div>
           </Subsection>
