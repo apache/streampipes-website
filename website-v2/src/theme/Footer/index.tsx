@@ -58,7 +58,7 @@ const footer = {
         {
           icon: githubIcon,
           label: 'Github Discussions',
-          to: 'https://github.com/apache/streampipes/issues',
+          to: 'https://github.com/apache/streampipes/discussions',
         },
         {
           icon: twitterIcon,

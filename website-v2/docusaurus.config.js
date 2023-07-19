@@ -6,7 +6,6 @@ module.exports = {
   "organizationName": "apache",
   "projectName": "streampipes-docs",
   "scripts": [
-    "/js/matomo.js",
     "/js/jquery-3.3.1.min.js",
     "/js/buttons.js",
     "/js/slick.min.js",
@@ -63,6 +62,7 @@ module.exports = {
     ]
   ],
   "plugins": [
+    "./src/plugins/matomo",
     "docusaurus-plugin-sass",
     [
       "@docusaurus/plugin-client-redirects",
@@ -80,6 +80,12 @@ module.exports = {
     },
     prism: {
       additionalLanguages: ['java']
+    },
+    matomo: {
+      matomoUrl: '//analytics.apache.org/',
+      siteId: '35',
+      phpLoader: 'matomo.php',
+      jsLoader: 'matomo.js',
     },
     "navbar": {
       "logo": {
