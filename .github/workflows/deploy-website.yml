@@ -16,19 +16,18 @@ jobs:
           node-version: 18.16.1
       - name: Copy asf yaml
         run: |
-          cp .asf.yaml build/
+          cp .asf.yaml website-v2/build/
       - name: Copy htaccess
         run: |
-          cp .htaccess build/
+          cp .htaccess website-v2/build/
       - name: Build Docs
         run: |
-          mkdir build/docs
           cd website-v2
           npm install
           npm run build
       - name: Copy Python docs
         run: |
-          mkdir -p ./website-v2/build/python
+          mkdir -p ./website-v2/build/docs/docs/python
           cp -r docs-python/* ./website-v2/build/docs/docs/python
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v2.4.0
