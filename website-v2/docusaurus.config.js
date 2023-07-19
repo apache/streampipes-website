@@ -99,7 +99,7 @@ module.exports = {
       textColor: 'white',
       isCloseable: false,
       content:
-          '\u{1F914} Apache StreamPipes 0.92.0 is available! ⭐️',
+          'Apache StreamPipes 0.92.0 is available! ⭐️',
     },
     "image": "img/favicon.png",
     "footer": {

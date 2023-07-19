@@ -109,19 +109,19 @@ module.exports = [
   {
     href: "https://github.com/apache/streampipes",
     position: "right",
-    className: "header-github-link",
+    className: "header-link h-github",
     "aria-label": "Apache StreamPipes Github",
   },
   {
     href: "https://linkedin.com/company/apache-streampipes",
     position: "right",
-    className: "header-github-link",
+    className: "header-link h-linkedin",
     "aria-label": "Apache StreamPipes LinkedIn",
   },
   {
     href: "https://twitter.com/streampipes",
     position: "right",
-    className: "header-github-link",
+    className: "header-link h-twitter",
     "aria-label": "Apache StreamPipes Twitter",
   },
 ];
