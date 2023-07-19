@@ -28,10 +28,16 @@ Tested on: **macOS, Linux, Windows 10** (CMD, PowerShell, GitBash)
 > **NOTE**: On purpose, we disabled all port mappings except of http port **80** to access the StreamPipes UI to provide minimal surface for conflicting ports.
 
 ## Usage
-We provide two options to get you going:
+We provide several options to get you going:
 
-- **default**: a light-weight option with few pipeline elements, needs less memory
-- **full**:  contains more pipeline elements, requires **>16 GB RAM** (recommended)
+- **default**: Default docker-compose file, called `docker-compose.yml`.
+
+:::info
+
+Other options include configurations for the internally used message broker. The current default is `Kafka`, but you can also start StreamPipes with `Nats`, `MQTT` or `Apache Pulsar`.
+Use one of the other provided docker-compose files.
+
+:::
 
 **Starting** the **default** option is as easy as simply running:
 > **NOTE**: Starting might take a while since `docker-compose up` also initially pulls all Docker images from Dockerhub.
@@ -49,22 +55,21 @@ docker-compose down
 # docker-compose down -v
 ```
 
-Starting the **full** option is almost the same, just specify the `docker-compose.full.yml` file:
+Starting the **nats** option is almost the same, just specify the `docker-compose.nats.yml` file:
 ```bash
-docker-compose -f docker-compose.full.yml up -d
+docker-compose -f docker-compose.nats.yml up -d
 # go to after all services are started http://localhost
 ```
 Stopping the **full** option:
 ```bash
-docker-compose -f docker-compose.full.yml down
-#docker-compose -f docker-compose.full.yml down -v
+docker-compose -f docker-compose.nats.yml down
+#docker-compose -f docker-compose.nats.yml down -v
 ```
 
 ## Update services
 To actively pull the latest available Docker images use:
 ```bash
 docker-compose pull
-# docker-compose -f docker-compose.full.yml pull
 ```
 
 ## Upgrade
