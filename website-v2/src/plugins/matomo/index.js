@@ -46,13 +46,11 @@ module.exports = function (context) {
             tagName: 'script',
             innerHTML: `
               var _paq = window._paq = window._paq || [];
-              _paq.push(['setRequestMethod', 'POST']);
+              _paq.push(['disableCookies']);
               _paq.push(['trackPageView']);
               _paq.push(['enableLinkTracking']);
-              _paq.push(['enableHeartBeatTimer']);
               (function() {
                 var u="${matomoUrl}";
-                _paq.push(['setRequestMethod', 'POST']);
                 _paq.push(['setTrackerUrl', u+'${phpLoader}']);
                 _paq.push(['setSiteId', '${siteId}']);
                 var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];

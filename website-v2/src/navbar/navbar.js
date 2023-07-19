@@ -13,7 +13,7 @@ module.exports = [
         "label": "Apache StreamPipes - User Guide",
       },
       {
-        "to": "docs/python",
+        "to": "docs/docs/python",
         "label": "Apache StreamPipes - Python",
       },
       {
@@ -105,5 +105,23 @@ module.exports = [
         label: "Thanks"
       }
     ]
-  }
+  },
+  {
+    href: "https://github.com/apache/streampipes",
+    position: "right",
+    className: "header-github-link",
+    "aria-label": "Apache StreamPipes Github",
+  },
+  {
+    href: "https://linkedin.com/company/apache-streampipes",
+    position: "right",
+    className: "header-github-link",
+    "aria-label": "Apache StreamPipes LinkedIn",
+  },
+  {
+    href: "https://twitter.com/streampipes",
+    position: "right",
+    className: "header-github-link",
+    "aria-label": "Apache StreamPipes Twitter",
+  },
 ];
