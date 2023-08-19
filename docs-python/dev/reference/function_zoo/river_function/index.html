@@ -1943,7 +1943,7 @@
 
 
 <h2 id="streampipes.function_zoo.river_function.OnlineML" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">OnlineML</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">stream_ids</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">prediction_type</span><span class="o">=</span><span class="n">RuntimeType</span><span class="o">.</span><span class="n">STRING</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">supervised</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">target_label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">on_start</span><span class="o">=</span><span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="n">on_event</span><span class="o">=</span><span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">streamId</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="n">on_stop</span><span class="o">=</span><span class="k">lambda</span> <span class="bp">self</span><span class="p">:</span> <span class="kc">None</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">OnlineML</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">stream_ids</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">prediction_type</span><span class="o">=</span><span class="n">RuntimeType</span><span class="o">.</span><span class="n">STRING</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">supervised</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">target_label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">on_start</span><span class="o">=</span><span class="k">lambda</span> <span class="p">,</span> <span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="n">on_event</span><span class="o">=</span><span class="k">lambda</span> <span class="p">,</span> <span class="p">,</span> <span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="n">on_stop</span><span class="o">=</span><span class="k">lambda</span> <span class="p">:</span> <span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#streampipes.function_zoo.river_function.OnlineML" class="headerlink" title="Permanent link">&para;</a></h2>
 
@@ -2022,7 +2022,7 @@ Is only needed when you continue to work with the prediction in StreamPipes.</p>
                 </span>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
-                    <code><a class="autorefs autorefs-internal" title="streampipes.functions.utils.data_stream_generator.RuntimeType" href="../../functions/utils/data_stream_generator/#streampipes.functions.utils.data_stream_generator.RuntimeType">RuntimeType</a>.<span title="streampipes.functions.utils.data_stream_generator.RuntimeType.STRING">STRING</span>.<span title="streampipes.functions.utils.data_stream_generator.RuntimeType.STRING.value">value</span></code>
+                    <code><span title="streampipes.functions.utils.data_stream_generator.RuntimeType.STRING.value">value</span></code>
                 </span>
             </p>
           </td>
@@ -2076,7 +2076,7 @@ Is only needed when you continue to work with the prediction in StreamPipes.</p>
                 </span>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
-                    <code>lambda self, context: None</code>
+                    <code>lambda , : None</code>
                 </span>
             </p>
           </td>
@@ -2094,7 +2094,7 @@ Is only needed when you continue to work with the prediction in StreamPipes.</p>
                 </span>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
-                    <code>lambda self, event, streamId: None</code>
+                    <code>lambda , , : None</code>
                 </span>
             </p>
           </td>
@@ -2112,7 +2112,7 @@ Is only needed when you continue to work with the prediction in StreamPipes.</p>
                 </span>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
-                    <code>lambda self: None</code>
+                    <code>lambda : None</code>
                 </span>
             </p>
           </td>
