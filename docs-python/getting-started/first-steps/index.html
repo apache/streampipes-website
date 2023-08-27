@@ -31,25 +31,27 @@
         <meta name="author" content="Apache Software Foundation (ASF)">
       
       
-        <link rel="canonical" href="https://streampipes.apache.org/docs/docs/python/latest/latest/">
+        <link rel="canonical" href="https://streampipes.apache.org/docs/docs/python/latest/latest/getting-started/first-steps/">
       
       
+        <link rel="prev" href="../..">
       
-        <link rel="next" href="getting-started/first-steps/">
+      
+        <link rel="next" href="../developing/">
       
       <link rel="icon" href="https://streampipes.apache.org/img/favicon/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.3">
     
     
       
-        <title>Apache StreamPipes Python</title>
+        <title>First Steps - Apache StreamPipes Python</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.c4a75a56.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c4a75a56.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -59,11 +61,11 @@
       
     
     
-      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -134,7 +136,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#quickstart" class="md-skip">
+        <a href="#installation" class="md-skip">
           Skip to content
         </a>
       
@@ -172,7 +174,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🏡 Home
+              First Steps
             
           </span>
         </div>
@@ -258,12 +260,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="." class="md-tabs__link md-tabs__link--active">
+    <a href="../.." class="md-tabs__link">
       🏡 Home
     </a>
   </li>
@@ -272,13 +272,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="getting-started/first-steps/" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         🚀 Getting Started
       </a>
     </li>
@@ -294,7 +296,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="tutorials/1-introduction-to-streampipes-python-client/" class="md-tabs__link">
+      <a href="../../tutorials/1-introduction-to-streampipes-python-client/" class="md-tabs__link">
         🤓 Tutorials
       </a>
     </li>
@@ -315,7 +317,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="reference/client/client/" class="md-tabs__link">
+      <a href="../../reference/client/client/" class="md-tabs__link">
         📚 Reference
       </a>
     </li>
@@ -379,48 +381,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          🏡 Home
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         🏡 Home
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#quickstart" class="md-nav__link">
-    ⚡️ Quickstart
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -431,14 +396,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
         
@@ -455,7 +422,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           🚀 Getting Started
@@ -466,11 +433,68 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="getting-started/first-steps/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          First Steps
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         First Steps
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    📚 Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-streampipes" class="md-nav__link">
+    ⬆️ Setting up StreamPipes
+  </a>
+  
+    <nav class="md-nav" aria-label="⬆️ Setting up StreamPipes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-streampipes-via-docker-compose" class="md-nav__link">
+    🐳 Start StreamPipes via Docker Compose
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -482,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/developing/" class="md-nav__link">
+      <a href="../developing/" class="md-nav__link">
         Developing & Contributing
       </a>
     </li>
@@ -496,7 +520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/quickstart/" class="md-nav__link">
+      <a href="../quickstart/" class="md-nav__link">
         Quickstart
       </a>
     </li>
@@ -555,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/1-introduction-to-streampipes-python-client/" class="md-nav__link">
+      <a href="../../tutorials/1-introduction-to-streampipes-python-client/" class="md-nav__link">
         Introduction to StreamPipes Python
       </a>
     </li>
@@ -569,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/2-extracting-data-from-the-streampipes-data-lake/" class="md-nav__link">
+      <a href="../../tutorials/2-extracting-data-from-the-streampipes-data-lake/" class="md-nav__link">
         Extracting Data from the StreamPipes data lake
       </a>
     </li>
@@ -583,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/3-getting-live-data-from-the-streampipes-data-stream/" class="md-nav__link">
+      <a href="../../tutorials/3-getting-live-data-from-the-streampipes-data-stream/" class="md-nav__link">
         Getting live data from the StreamPipes data stream
       </a>
     </li>
@@ -597,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/4-using-online-machine-learning-on-a-streampipes-data-stream/" class="md-nav__link">
+      <a href="../../tutorials/4-using-online-machine-learning-on-a-streampipes-data-stream/" class="md-nav__link">
         Using Online Machine Learning on a StreamPipes data stream
       </a>
     </li>
@@ -693,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/client/client/" class="md-nav__link">
+      <a href="../../reference/client/client/" class="md-nav__link">
         Client
       </a>
     </li>
@@ -707,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/client/config/" class="md-nav__link">
+      <a href="../../reference/client/config/" class="md-nav__link">
         Config
       </a>
     </li>
@@ -721,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/client/credential_provider/" class="md-nav__link">
+      <a href="../../reference/client/credential_provider/" class="md-nav__link">
         Credential provider
       </a>
     </li>
@@ -777,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/endpoint/endpoint/" class="md-nav__link">
+      <a href="../../reference/endpoint/endpoint/" class="md-nav__link">
         Endpoint
       </a>
     </li>
@@ -791,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/endpoint/exceptions/" class="md-nav__link">
+      <a href="../../reference/endpoint/exceptions/" class="md-nav__link">
         Exceptions
       </a>
     </li>
@@ -840,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/endpoint/api/data_lake_measure/" class="md-nav__link">
+      <a href="../../reference/endpoint/api/data_lake_measure/" class="md-nav__link">
         Data lake measure
       </a>
     </li>
@@ -854,7 +878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/endpoint/api/data_stream/" class="md-nav__link">
+      <a href="../../reference/endpoint/api/data_stream/" class="md-nav__link">
         Data stream
       </a>
     </li>
@@ -868,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/endpoint/api/version/" class="md-nav__link">
+      <a href="../../reference/endpoint/api/version/" class="md-nav__link">
         Version
       </a>
     </li>
@@ -927,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/function_zoo/river_function/" class="md-nav__link">
+      <a href="../../reference/function_zoo/river_function/" class="md-nav__link">
         River function
       </a>
     </li>
@@ -987,7 +1011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/functions/function_handler/" class="md-nav__link">
+      <a href="../../reference/functions/function_handler/" class="md-nav__link">
         Function handler
       </a>
     </li>
@@ -1001,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/functions/registration/" class="md-nav__link">
+      <a href="../../reference/functions/registration/" class="md-nav__link">
         Registration
       </a>
     </li>
@@ -1015,7 +1039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/functions/streampipes_function/" class="md-nav__link">
+      <a href="../../reference/functions/streampipes_function/" class="md-nav__link">
         Streampipes function
       </a>
     </li>
@@ -1072,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/functions/broker/broker/" class="md-nav__link">
+      <a href="../../reference/functions/broker/broker/" class="md-nav__link">
         Broker
       </a>
     </li>
@@ -1086,7 +1110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/functions/broker/broker_handler/" class="md-nav__link">
+      <a href="../../reference/functions/broker/broker_handler/" class="md-nav__link">
         Broker handler
       </a>
     </li>
@@ -1100,7 +1124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/functions/broker/consumer/" class="md-nav__link">
+      <a href="../../reference/functions/broker/consumer/" class="md-nav__link">
         Consumer
       </a>
     </li>
@@ -1114,7 +1138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/functions/broker/output_collector/" class="md-nav__link">
+      <a href="../../reference/functions/broker/output_collector/" class="md-nav__link">
         Output collector
       </a>
     </li>
@@ -1128,7 +1152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/functions/broker/publisher/" class="md-nav__link">
+      <a href="../../reference/functions/broker/publisher/" class="md-nav__link">
         Publisher
       </a>
     </li>
@@ -1177,7 +1201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/functions/broker/kafka/kafka_consumer/" class="md-nav__link">
+      <a href="../../reference/functions/broker/kafka/kafka_consumer/" class="md-nav__link">
         Kafka consumer
       </a>
     </li>
@@ -1191,7 +1215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/functions/broker/kafka/kafka_message_fetcher/" class="md-nav__link">
+      <a href="../../reference/functions/broker/kafka/kafka_message_fetcher/" class="md-nav__link">
         Kafka message fetcher
       </a>
     </li>
@@ -1205,7 +1229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/functions/broker/kafka/kafka_publisher/" class="md-nav__link">
+      <a href="../../reference/functions/broker/kafka/kafka_publisher/" class="md-nav__link">
         Kafka publisher
       </a>
     </li>
@@ -1259,7 +1283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/functions/broker/nats/nats_consumer/" class="md-nav__link">
+      <a href="../../reference/functions/broker/nats/nats_consumer/" class="md-nav__link">
         Nats consumer
       </a>
     </li>
@@ -1273,7 +1297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/functions/broker/nats/nats_publisher/" class="md-nav__link">
+      <a href="../../reference/functions/broker/nats/nats_publisher/" class="md-nav__link">
         Nats publisher
       </a>
     </li>
@@ -1338,7 +1362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/functions/utils/async_iter_handler/" class="md-nav__link">
+      <a href="../../reference/functions/utils/async_iter_handler/" class="md-nav__link">
         Async iter handler
       </a>
     </li>
@@ -1352,7 +1376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/functions/utils/data_stream_context/" class="md-nav__link">
+      <a href="../../reference/functions/utils/data_stream_context/" class="md-nav__link">
         Data stream context
       </a>
     </li>
@@ -1366,7 +1390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/functions/utils/data_stream_generator/" class="md-nav__link">
+      <a href="../../reference/functions/utils/data_stream_generator/" class="md-nav__link">
         Data stream generator
       </a>
     </li>
@@ -1380,7 +1404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/functions/utils/function_context/" class="md-nav__link">
+      <a href="../../reference/functions/utils/function_context/" class="md-nav__link">
         Function context
       </a>
     </li>
@@ -1443,7 +1467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/model/common/" class="md-nav__link">
+      <a href="../../reference/model/common/" class="md-nav__link">
         Common
       </a>
     </li>
@@ -1494,7 +1518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/model/container/data_lake_measures/" class="md-nav__link">
+      <a href="../../reference/model/container/data_lake_measures/" class="md-nav__link">
         Data lake measures
       </a>
     </li>
@@ -1508,7 +1532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/model/container/data_streams/" class="md-nav__link">
+      <a href="../../reference/model/container/data_streams/" class="md-nav__link">
         Data streams
       </a>
     </li>
@@ -1522,7 +1546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/model/container/resource_container/" class="md-nav__link">
+      <a href="../../reference/model/container/resource_container/" class="md-nav__link">
         Resource container
       </a>
     </li>
@@ -1536,7 +1560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/model/container/versions/" class="md-nav__link">
+      <a href="../../reference/model/container/versions/" class="md-nav__link">
         Versions
       </a>
     </li>
@@ -1602,7 +1626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/model/resource/data_lake_measure/" class="md-nav__link">
+      <a href="../../reference/model/resource/data_lake_measure/" class="md-nav__link">
         Data lake measure
       </a>
     </li>
@@ -1616,7 +1640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/model/resource/data_series/" class="md-nav__link">
+      <a href="../../reference/model/resource/data_series/" class="md-nav__link">
         Data series
       </a>
     </li>
@@ -1630,7 +1654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/model/resource/data_stream/" class="md-nav__link">
+      <a href="../../reference/model/resource/data_stream/" class="md-nav__link">
         Data stream
       </a>
     </li>
@@ -1644,7 +1668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/model/resource/exceptions/" class="md-nav__link">
+      <a href="../../reference/model/resource/exceptions/" class="md-nav__link">
         Exceptions
       </a>
     </li>
@@ -1658,7 +1682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/model/resource/function_definition/" class="md-nav__link">
+      <a href="../../reference/model/resource/function_definition/" class="md-nav__link">
         Function definition
       </a>
     </li>
@@ -1672,7 +1696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/model/resource/query_result/" class="md-nav__link">
+      <a href="../../reference/model/resource/query_result/" class="md-nav__link">
         Query result
       </a>
     </li>
@@ -1686,7 +1710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/model/resource/resource/" class="md-nav__link">
+      <a href="../../reference/model/resource/resource/" class="md-nav__link">
         Resource
       </a>
     </li>
@@ -1700,7 +1724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/model/resource/version/" class="md-nav__link">
+      <a href="../../reference/model/resource/version/" class="md-nav__link">
         Version
       </a>
     </li>
@@ -1753,9 +1777,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#quickstart" class="md-nav__link">
-    ⚡️ Quickstart
+  <a href="#installation" class="md-nav__link">
+    📚 Installation
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-streampipes" class="md-nav__link">
+    ⬆️ Setting up StreamPipes
+  </a>
+  
+    <nav class="md-nav" aria-label="⬆️ Setting up StreamPipes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-streampipes-via-docker-compose" class="md-nav__link">
+    🐳 Start StreamPipes via Docker Compose
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1777,7 +1821,7 @@
   
 
 
-  <h1>🏡 Home</h1>
+  <h1>First Steps</h1>
 
 <!--
   ~ Licensed to the Apache Software Foundation (ASF) under one or more
@@ -1797,87 +1841,60 @@
   ~
 -->
 
-<p><img alt="StreamPipes Logo with Python" src="img/streampipes-python.png#only-light" />
-<img alt="StreamPipes Logo with Python" src="img/streampipes-python-dark.png#only-dark" /></p>
-<h4 align="center"><a href="https://github.com/apache/streampipes">StreamPipes</a> is a self-service (Industrial) IoT toolbox to enable non-technical users to connect, analyze and explore IoT data streams.</h4>
-<p><br></p>
-<div class="admonition danger">
-<p class="admonition-title">Dependency issue with StreamPipes Python 0.92.0</p>
-<p>In StreamPipes Python <code>0.92.0</code> there is a problem with the required dependencies.<br>
-Pydantic has recently released the new version <code>2.0</code> with many exciting improvements, but also some breaking changes. 
-Unfortunately, we didn't limit our requirements strictly enough, so yydantic <code>2.0</code> is installed together with streampipes, which is not (yet) compatible.<br>
-To fix this bug, simply run the following command after installing streampipes, or adjust your dependencies accordingly:</p>
-<div class="language-python highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;pydantic&lt;2.0&quot;</span> <span class="s2">&quot;pydantic_core&lt;2.0&quot;</span>
+<h2 id="installation">📚 Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p>The StreamPipes Python library is meant to work with Python 3.8 and above. Installation can be done via <code>pip</code>:
+You can install the latest development version from GitHub, as so:</p>
+<div class="language-bash highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>streampipes
+
+<span class="c1"># if you want to have the current development state you can also execute</span>
+pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/apache/streampipes.git#subdirectory<span class="o">=</span>streampipes-client-python
+<span class="c1"># the corresponding documentation can be found here: https://streampipes.apache.org/docs/docs/python/dev/</span>
 </code></pre></div>
-</div>
-<p><br></p>
-<h3 align="center">Apache StreamPipes for Python 🐍</h3>
-
-<p align="center"> Apache StreamPipes meets Python! We are working highly motivated on a Python library to interact with StreamPipes.
-In this way, we would like to unite the power of StreamPipes to easily connect to and read from different data sources, especially in the IoT domain,
-and the amazing universe of data analytics libraries in Python. </p>
-
-<hr />
-<p><br></p>
-<div class="admonition warning">
-<p class="admonition-title">StreamPipes Python is in beta</p>
-<p>The current version of this Python library is still a beta version.<br>
-This means that it is still heavily under development, which may result in frequent and extensive API changes, unstable behavior, etc.</p>
-</div>
-<hr />
-<h2 id="quickstart">⚡️ Quickstart<a class="headerlink" href="#quickstart" title="Permanent link">&para;</a></h2>
-<p>As a quick example, we demonstrate how to set up and configure a StreamPipes client.
-In addition, we will get the available data lake measures out of StreamPipes.</p>
-<p><div class="language-python highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">streampipes.client</span> <span class="kn">import</span> <span class="n">StreamPipesClient</span>
-<span class="kn">from</span> <span class="nn">streampipes.client.config</span> <span class="kn">import</span> <span class="n">StreamPipesClientConfig</span>
-<span class="kn">from</span> <span class="nn">streampipes.client.credential_provider</span> <span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
-
-<span class="n">config</span> <span class="o">=</span> <span class="n">StreamPipesClientConfig</span><span class="p">(</span>
-    <span class="n">credential_provider</span> <span class="o">=</span> <span class="n">StreamPipesApiKeyCredentials</span><span class="p">(</span>
-        <span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;test@streampipes.apache.org&quot;</span><span class="p">,</span>
-        <span class="n">api_key</span> <span class="o">=</span> <span class="s2">&quot;DEMO-KEY&quot;</span><span class="p">,</span>
-        <span class="p">),</span>
-    <span class="n">host_address</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
-    <span class="n">https_disabled</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-    <span class="n">port</span> <span class="o">=</span> <span class="mi">80</span>
-<span class="p">)</span>
-
-<span class="n">client</span> <span class="o">=</span> <span class="n">StreamPipesClient</span><span class="p">(</span><span class="n">client_config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
-
-<span class="c1"># get all available datat lake measures</span>
-<span class="n">measures</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">dataLakeMeasureApi</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
-
-<span class="c1"># get amount of retrieved measures</span>
-<span class="nb">len</span><span class="p">(</span><span class="n">measures</span><span class="p">)</span>
-</code></pre></div>
-Output:
-<div class="language-text highlight"><pre><span></span><code>1
-</code></pre></div>
+<h2 id="setting-up-streampipes">⬆️ Setting up StreamPipes<a class="headerlink" href="#setting-up-streampipes" title="Permanent link">&para;</a></h2>
+<p>When working with the StreamPipes Python library it is inevitable to have a running StreamPipes instance to connect and interact with.
+In case you don't have a running instance at hand, you can easily set up one on your local machine.
+Hereby you need to consider that StreamPipes supports different message broker (e.g., Kafka, NATS).
+We will demonstrate below how you can easily set up StreamPipes for both supported message brokers.
 <br></p>
-<div class="language-text highlight"><pre><span></span><code># inspect the data lake measures as pandas dataframe
-measures.to_pandas()
+<h3 id="start-streampipes-via-docker-compose">🐳 Start StreamPipes via Docker Compose<a class="headerlink" href="#start-streampipes-via-docker-compose" title="Permanent link">&para;</a></h3>
+<p>The easiest and therefore recommend way to get StreamPipes started is by using <a href="https://docs.docker.com/compose/">docker compose</a>.
+Therefore, you need Docker running. You can check if Docker is ready on your machine by executing.
+<div class="language-bash highlight"><pre><span></span><code>docker<span class="w"> </span>ps
 </code></pre></div>
-<p>Output:
-<div class="language-text highlight"><pre><span></span><code>measure_name timestamp_field ... pipeline_is_running num_event_properties
-0 test s0::timestamp ... False 2
-[1 rows x 6 columns]
+If this results in an output similar to the following, Docker is ready to continue.
+<div class="language-text highlight"><pre><span></span><code>CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+...            ...       ...       ...       ...       ...       ...
 </code></pre></div>
-<br>
-Alternatively, you can provide your credentials via environment variables.
-Simply define your credential provider as follows:</p>
-<p><div class="language-python highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">streampipes.client.credential_provider</span> <span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
-
-<span class="n">StreamPipesApiKeyCredentials</span><span class="p">()</span>
+Otherwise, you need to start docker first.
+Please read the full guide on how to start StreamPipes with <code>docker compose</code> <a href="https://streampipes.apache.org/docs/docs/deploy-docker.html">here</a>.</p>
+<h4 id="setup-streampipes-with-nats-as-message-broker">Setup StreamPipes with NATS as message broker<a class="headerlink" href="#setup-streampipes-with-nats-as-message-broker" title="Permanent link">&para;</a></h4>
+<p>The following shows how you can set up a StreamPipes instance that uses <a href="https://docs.nats.io/">NATS</a> as messaging layer.
+So in this scenario, we will go with <code>docker-compose.nats.yml</code>. 
+Thereby, when running locally, we need to add the following port mapping entry to <code>services.nats.ports</code>:
+<div class="language-yaml highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4222:4222</span>
+</code></pre></div></p>
+<p>After this modification is applied, StreamPipes can simply be started with this command:
+<div class="language-bash highlight"><pre><span></span><code>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.nats.yml<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div></p>
+<p>Once all services are started, you can access StreamPipes via <code>http://localhost</code>.</p>
+<h4 id="setup-streampipes-with-kafka-as-message-broker">Setup StreamPipes with Kafka as message broker<a class="headerlink" href="#setup-streampipes-with-kafka-as-message-broker" title="Permanent link">&para;</a></h4>
+<p>Alternatively, you can use <code>docker-compose.yml</code> to start StreamPipes with Kafka as messaging layer.
+When running locally we have to modify <code>services.kafka.environment</code> and add the ports to <code>services.kafka.ports</code>:
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">environment</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">KAFKA_LISTENER_SECURITY_PROTOCOL_MAP</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PLAINTEXT:PLAINTEXT,OUTSIDE:PLAINTEXT</span>
+<span class="w">  </span><span class="nt">KAFKA_ADVERTISED_LISTENERS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PLAINTEXT://:9092,OUTSIDE://localhost:9094</span>
+<span class="w">  </span><span class="nt">KAFKA_LISTENERS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PLAINTEXT://:9092,OUTSIDE://:9094</span>
+<span class="nn">...</span>
+<span class="nt">ports</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9094:9094</span>
 </code></pre></div>
-This requires to set the following environment variables: <code>SP_API_KEY</code> and <code>SP_USERNAME</code>
-<br></p>
-<p><code>username</code> is always the username that is used to log in into StreamPipes. <br></p>
-<details class="tip">
-<summary>How to get your StreamPipes API key</summary>
-<p>The <code>api_key</code> can be generated within the UI as demonstrated below:
-<br></p>
-<p><img alt="Howto API Key" src="img/how-to-get-api-key.gif" /></p>
-</details>
+Then, you need to execute the following command:
+<div class="language-bash highlight"><pre><span></span><code>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div></p>
+<p>Once all services are started, you can access StreamPipes via <code>http://localhost</code>.</p>
+<p>In case you want to have more control over your StreamPipes setup,
+you might take a look at our <a href="https://streampipes.apache.org/docs/docs/extend-cli.html">deployment CLI</a>.</p>
+<p>Have fun discovering StreamPipes and our Python library 🚀</p>
 
 
   
@@ -1936,10 +1953,10 @@ This requires to set the following environment variables: <code>SP_API_KEY</code
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.indexes", "navigation.tracking"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.indexes", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="assets/javascripts/bundle.efa0ade1.min.js"></script>
+      <script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
       
     
   </body>
