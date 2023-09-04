@@ -39,9 +39,9 @@ const DownloadBox = (props) => {
                   <td>{props.releaseDate}</td>
                   <td>
                     <a
-                      href={`https://downloads.apache.org/streampipes/${props.version}/apache-streampipes-${props.version}-source-release.zip.sha512`}>SHA</a>
+                      href={`https://downloads.apache.org/streampipes/${props.version}/apache-streampipes-${props.version}-source-release.zip.sha512`}>SHA</a>,&nbsp;
                     <a
-                      href={`https://downloads.apache.org/streampipes${props.version}/apache-streampipes-${props.version}-source-release.zip.asc`}>PGP</a>
+                      href={`https://downloads.apache.org/streampipes/${props.version}/apache-streampipes-${props.version}-source-release.zip.asc`}>PGP</a>
                   </td>
                 </tr>
                 </tbody>
