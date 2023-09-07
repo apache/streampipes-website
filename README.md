@@ -9,11 +9,11 @@ Two different technologies are used to create both sites:
 
 Both parts are merged to a single directory during the CI process.
 
-Node.js and npm are required to build the documentation.
+Node.js(v14 - v16) and npm are required to build the documentation.
 
 ## Build Website & Documentation
 
-* Run ``npm install`` from the ``website-v2`` directory.
+* Run ``npm install`` from the ``website-v2`` directory by first running ``cd ./website-v2``.
 * Run ``npm run start`` to start the documentation for debugging purposes. The content will be served on ``http://localhost:3000``
 * Run ``npm run build`` to build the documentation This will create a folder ``website-v2/build`` that includes all required static files.
 * Run ``npm run ds-version NEW_VERSION`` to release a new docs version.
