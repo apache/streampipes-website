@@ -9,7 +9,7 @@ Two different technologies are used to create both sites:
 
 Both parts are merged to a single directory during the CI process.
 
-Node.js(v14 - v16) and npm are required to build the documentation.
+Node.js(at most v18) and npm are required to build the documentation.
 
 ## Build Website & Documentation
 
