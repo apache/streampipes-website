@@ -1,0 +1,102 @@
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+
+name: update-extensions-docs
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 4 * * 6"  # runs every saturday at 04:00:00
+
+jobs:
+  fetch-python-docs-from-core-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone
+        uses: actions/checkout@v3
+
+      - name: Publish Extensions imge assets as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: streampipes-extensions-docs-image-assets
+          path: |
+            streampipes-extensions/streampipes-extensions-all-jvm/target/docs/img/
+          retention-days: 5
+
+      - name: Delete pipeline element and image directory
+        run: |
+          rm -r ./docs/pe
+
+      - name: fetch extensions docs from artifact
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          workflow_conclusion: success
+          name: streampipes-extensions-docs
+          repo: apache/streampipes
+          check_artifacts: true
+          search_artifacts: true
+          skip_unpack: false
+          if_no_artifact_found: fail
+          branch: dev
+          workflow: extensions-docs.yml
+          path: ./docs/pe
+
+      - name: fetch extensions image assets from artifact
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          workflow_conclusion: success
+          name: streampipes-extensions-docs-image-assets
+          repo: apache/streampipes
+          check_artifacts: true
+          search_artifacts: true
+          skip_unpack: false
+          if_no_artifact_found: fail
+          branch: dev
+          workflow: extensions-docs.yml
+          path: ./website-v2/static/img/pipeline-elements
+
+      - name: fetch extensions sidebar.xml from artifact
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          workflow_conclusion: success
+          name: streampipes-extensions-docs-sidebar
+          repo: apache/streampipes
+          check_artifacts: true
+          search_artifacts: true
+          skip_unpack: false
+          if_no_artifact_found: fail
+          branch: dev
+          workflow: extensions-docs.yml
+          path: ./website-v2
+
+      - name: create PR to update extensions docs
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: "chore(extensions-docs): update extensions doc assets to recent development state"
+          committer: GitHub <noreply@github.com>
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          signoff: false
+          branch: "chore/update-extensions-docs"
+          delete-branch: true
+          title: 'chore(extensions-docs): update extensions doc assets'
+          body: |
+            Update extensions doc assets.
+            Automatically created.
+          draft: false
+          base: dev
