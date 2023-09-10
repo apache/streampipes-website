@@ -22,7 +22,7 @@ on:
     - cron: "0 4 * * 6"  # runs every saturday at 04:00:00
 
 jobs:
-  fetch-python-docs-from-core-repo:
+  fetch-extensions-docs-from-core-repo:
     runs-on: ubuntu-latest
     steps:
       - name: clone
