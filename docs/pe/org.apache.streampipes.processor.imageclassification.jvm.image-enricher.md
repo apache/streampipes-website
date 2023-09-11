@@ -24,7 +24,7 @@ sidebar_label: Image Enricher
 
 
 
-<p align="center"> 
+<p align="center">
     <img src="/img/pipeline-elements/org.apache.streampipes.processor.imageclassification.jvm.image-enricher/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
@@ -32,12 +32,12 @@ sidebar_label: Image Enricher
 
 ## Description
 
-Image Enrichment: Enriches an  + image with  + given bounding box coordinates
+Image Enrichment: Enriches an + image with + given bounding box coordinates
 
 ## Required input
+
 An image and an array with bounding boxes, an array with scores and an array with labels.
 A box consists of the x and y coordinates in the image as well as the height and width, and the classindex with score
 
-
 ## Output
-A new event containing the image with bounding boxes rendered according to the boxes of the input event 
+A new event containing the image with bounding boxes rendered according to the boxes of the input event

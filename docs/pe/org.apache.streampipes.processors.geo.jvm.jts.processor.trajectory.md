@@ -1,7 +1,7 @@
 ---
 id: org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory
-title: Single Trajectory Creator
-sidebar_label: Single Trajectory Creator
+title: Geo Single Trajectory Creator
+sidebar_label: Geo Single Trajectory Creator
 ---
 
 <!--
@@ -35,7 +35,7 @@ sidebar_label: Single Trajectory Creator
 This processor creates a JTS LineString geometry from  JTS Points events, represent a trajectory. A trajectory is defined  as the path that a moving object follows through space as a function of time. Each sub-point of this LineString represents a single event. The latest sub-point represents the latest geo-event. For each Point event it is also possible to store an additional m-value representing for example actually speed, distance, duration or direction of this event. A trajectory consists of at least two sub-point and can't be infinitive, so a threshold of maximum allowed sub-points is required. When the sub-point threshold is exceeded, the oldest point is removed from the LineString.
 ***
 
-## Required input
+## Required inputs
 
 *  WKT String of a JTS Point Geometry
 *  Integer value representing EPSG code
@@ -74,7 +74,7 @@ Adds a LineString geometry in the Well Known Text to the event, representing a t
 Creating a LineString with a threshold of 2 allowed sub-points:
 
 * First Event:
-  * Point(8.12 41.23) --> LineString (empty)
+  * Point(8.12 41.23) --> LineString <empty>
 * Second Event:
   * Point(8.56 41.25) --> LineString(8.12 41.23, 8.56 41.25)
 * Second Event:
