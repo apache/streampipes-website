@@ -24,7 +24,7 @@ sidebar_label: Calculate Duration
 
 
 
-<p align="center"> 
+<p align="center">
     <img src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.duration-value/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 

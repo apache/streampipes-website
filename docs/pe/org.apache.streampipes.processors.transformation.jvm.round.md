@@ -22,10 +22,10 @@ sidebar_label: Numeric Rounding
   ~
   -->
 
-## Number Rounder
+
 
 <p align="center">
-    <img src="icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.round/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***
@@ -56,7 +56,7 @@ the result will be 2.894.
 
 ### Mode of Rounding
 
-Specify the mode of rounding.
+Specify the mode of rounding. 
 Supported rounding modes:
 * `UP`: Rounding mode to round away from zero. Always increments the digit prior to a non-zero discarded fraction. Note that this rounding mode never decreases the magnitude of the calculated value.
 * `DOWN`: Rounding mode to round towards zero. Never increments the digit prior to a discarded fraction (i.e., truncates). Note that this rounding mode never increases the magnitude of the calculated value.

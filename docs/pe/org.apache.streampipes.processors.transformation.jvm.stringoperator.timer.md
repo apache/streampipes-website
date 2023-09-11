@@ -24,7 +24,7 @@ sidebar_label: String Timer
 
 
 
-<p align="center"> 
+<p align="center">
     <img src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
@@ -32,7 +32,8 @@ sidebar_label: String Timer
 
 ## Description
 
-This processor measures how long a value of a string field does not change. Once the value is changes the event with the measured time and the corresponding string value is emitted.
+This processor measures how long a value of a string field does not change.
+Once the value is changes the event with the measured time and the corresponding string value is emitted.
 
 
 ***
@@ -50,14 +51,16 @@ The string field which is monitored for any value changes.
 
 ## Configuration
 
-### Output Frequency 
+### Output Frequency
 
 Define when an event should be emitted, either on each input event or just when the string value changes.
 
 ## Output
+
 The following two fields are appended to the event:
+
 * [measured_time] the measured time for the string value to not change
-* [field_value] the corresponding string value 
+* [field_value] the corresponding string value
 
 The event is emitted whenever the value of the string field changes.
 
