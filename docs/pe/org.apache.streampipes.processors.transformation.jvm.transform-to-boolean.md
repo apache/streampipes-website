@@ -24,19 +24,21 @@ sidebar_label: Transform to boolean
 
 
 
-<p align="center"> 
+<p align="center">
     <img src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.transform-to-boolean/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***
 
 ## Description
+
 This processors transforms numbers and strings to boolean values.
 
 
 ***
 
 ## Required input
+
 A string with the values "true", "True", "false", "False" or a number with value 1.0, 1, 0, or 0.0
 
 ***
@@ -46,5 +48,6 @@ A string with the values "true", "True", "false", "False" or a number with value
 Select fields that should be converted to boolean.
 
 ## Output
+
 Selected properties of input events are transformed to booleans.
 When the value is not valid an error message is logged and the event is discarde.

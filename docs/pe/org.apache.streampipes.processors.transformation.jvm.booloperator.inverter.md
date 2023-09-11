@@ -24,7 +24,7 @@ sidebar_label: Boolean Inverter
 
 
 
-<p align="center"> 
+<p align="center">
     <img src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.booloperator.inverter/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 

@@ -24,7 +24,7 @@ sidebar_label: RabbitMQ Publisher
 
 
 
-<p align="center"> 
+<p align="center">
     <img src="/img/pipeline-elements/org.apache.streampipes.sinks.brokers.jvm.rabbitmq/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 

@@ -24,7 +24,7 @@ sidebar_label: String Counter
 
 
 
-<p align="center"> 
+<p align="center">
     <img src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
@@ -32,8 +32,10 @@ sidebar_label: String Counter
 
 ## Description
 
-This processor monitors a string field and counts how often the value of the string changes. Hereby, a change is characterized by 
-the value of the field before and the value after the change, combined forming a pair. The processor keeps track of the counter for each pair. 
+This processor monitors a string field and counts how often the value of the string changes.
+Hereby, a change is characterized by
+the value of the field before and the value after the change, combined forming a pair.
+The processor keeps track of the counter for each pair.
 
 ***
 
@@ -52,10 +54,12 @@ The string field to be monitored.
 (no further configuration required)
 
 ## Output
+
 The following three fields are appended to the event:
+
 * [counter] numerical field with the current count value for the given value pair
 * [change_from] the value of the string before the change
-* [change_to] the value of the string after the change 
+* [change_to] the value of the string after the change
 
 The event is emitted whenever the value of the string field changes.
 
