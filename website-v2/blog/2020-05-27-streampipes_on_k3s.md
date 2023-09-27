@@ -9,7 +9,7 @@ authorImageURL: "/img/wiener.png"
 <br/>
 
 
-This blog post is the second part of a series on how we want to bring StreamPipes closer to the edge. The [first part](/docs/blog/2020/01/23/streampipes_on_rpi) describes how we managed to build and deploy StreamPipes on one Raspberry Pi (Model 4), while the [second part](/docs/blog/2020/05/27/streampipes_on_k3s) further covers how to deploy StreamPipes over a Kubernetes cluster of two Raspberry Pi's via k3s using our StreamPipes helm chart.
+This blog post is the second part of a series on how we want to bring StreamPipes closer to the edge. The [first part](/blog/2020/01/23/streampipes_on_rpi) describes how we managed to build and deploy StreamPipes on one Raspberry Pi (Model 4), while the [second part](/blog/2020/05/27/streampipes_on_k3s) further covers how to deploy StreamPipes over a Kubernetes cluster of two Raspberry Pi's via k3s using our StreamPipes helm chart.
 <!--truncate-->
 
 **<TL;DR>**
@@ -254,8 +254,8 @@ As of now, we let K8s handle the scheduling of containers for us in a random fas
 
 <img class="blog-image" style={{maxWidth: '60%'}} src="/img/blog/2020-05-27/helm_k3s.png" alt="HelmK3s"/>
 
-- [Part 1: StreamPi(pes) - Running StreamPipes on Raspberry Pi](/docs/blog/2020/01/23/streampipes_on_rpi)
-- **[Part 2: Running StreamPipes the Kubernetes-Way using K3s](/docs/blog/2020/05/27/streampipes_on_k3s)**
+- [Part 1: StreamPi(pes) - Running StreamPipes on Raspberry Pi](/blog/2020/01/23/streampipes_on_rpi)
+- **[Part 2: Running StreamPipes the Kubernetes-Way using K3s](/blog/2020/05/27/streampipes_on_k3s)**
 
 
 ### Useful links

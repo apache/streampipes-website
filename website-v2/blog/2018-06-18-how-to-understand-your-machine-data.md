@@ -97,7 +97,7 @@ With that layer, our system is capable of understanding the meaning and further 
 In this first blog post of our series, we gave a first introduction how data produced by machines and systems can be analyzed and value can be generated out of it.
 In the following blog posts we explain the individual parts in more detail to provide you with enough knowledge to start analyzing your own data.
 
-* **[Part 1: Overview](/docs/blog/2018/06/18/how-to-understand-your-machine-data)**
+* **[Part 1: Overview](/blog/2018/06/18/how-to-understand-your-machine-data)**
 * Part 2: Data Sources
 * Part 3: Data Processing Elements
 * Part 4: Data Sinks
