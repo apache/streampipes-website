@@ -3,6 +3,7 @@ module.exports = {
   "tagline": "Self-Service Data Analytics",
   "url": "https://streampipes.apache.org",
   "baseUrl": "/",
+  "trailingSlash": true,
   "organizationName": "apache",
   "projectName": "streampipes-docs",
   "scripts": [

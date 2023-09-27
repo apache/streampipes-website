@@ -25,7 +25,7 @@ const LovedByDevelopers = (props) => (
               need to restart the whole system.
             </p>
             <div>
-            <a href="/docs/extend-tutorial-data-processors" className="sp-button sp-button-medium sp-button-blue"><i
+            <a href="/docs/extend-tutorial-data-processors/" className="sp-button sp-button-medium sp-button-blue"><i
               className="fas fa-hand-point-right"></i> Tutorial: SDK</a>
             </div>
           </Subsection>

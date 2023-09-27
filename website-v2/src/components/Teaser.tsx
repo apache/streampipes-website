@@ -23,9 +23,9 @@ const Teaser = (props) => (
             </div>
             <div className={"after-apache-teaser"}></div>
             <div className={"teaser-actions text-center"}>
-              <a href="/download" className="sp-button sp-button-large sp-button-blue sp-button-margin"><i
+              <a href="/download/" className="sp-button sp-button-large sp-button-blue sp-button-margin"><i
                 className="fas fa-download"></i> Download</a>
-              <a href="/docs/user-guide-introduction"
+              <a href="/docs/user-guide-introduction/"
                  className="sp-button sp-button-large sp-button-gray sp-button-margin"><i
                 className="fas fa-book"></i> Documentation
               </a>
