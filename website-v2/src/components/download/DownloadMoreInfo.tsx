@@ -12,9 +12,9 @@ const DownloadMoreInfo = (props) => (
         </div>
         <div className="col-md-11 col-9">
           For a detailed description of the installer and migration guides, read the <a
-          href="https://streampipes.apache.org/docs/docs/try-installation.html">installation guide</a>
-          or learn about advanced <a href="https://streampipes.apache.org/docs/docs/deploy-docker.html">Docker</a> or <a
-          href="https://streampipes.apache.org/docs/docs/deploy-kubernetes.html">K8s</a> deployment setups.
+          href="/docs/try-installation/"> installation guide</a>
+          or learn about advanced <a href="/docs/deploy-docker/">Docker</a> or <a
+          href="/docs/deploy-kubernetes/">K8s</a> deployment setups.
         </div>
       </div>
     </li>

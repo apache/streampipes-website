@@ -47,8 +47,8 @@ After saving and starting the pipeline, we built our dashboard based on the resu
 ### So, what's next?
 Starting out as a simple hack session on a late afternoon, trying to test where we could potentially run StreamPipes on and push it to it's limits, we gained valueable insights on how to build and run it on various architectures. Even though we do not recommend deploying StreamPipes in it's full glory on single low-resourced devices such as Raspberry Pi's, we aim to bring certain algorithms closer to where data is generated - on the edge. Consequently - apart from x86 images - we plan on providing our StreamPipes Docker images for ARM based architectures in the future. As a sneak peak - we also plan on deploying StreamPipes over a K3s [[3](https://k3s.io/)] cluster, a lightweight Kubernetes distro especially suited for IoT and edge scenarios.
 
-- **[Part 1: StreamPi(pes) - Running StreamPipes on Raspberry Pi](/docs/blog/2020/01/23/streampipes_on_rpi)**
-- [Part 2: Running StreamPipes the Kubernetes-Way using K3s](/docs/blog/2020/05/27/streampipes_on_k3s)
+- **[Part 1: StreamPi(pes) - Running StreamPipes on Raspberry Pi](/blog/2020/01/23/streampipes_on_rpi)**
+- [Part 2: Running StreamPipes the Kubernetes-Way using K3s](/blog/2020/05/27/streampipes_on_k3s)
 
 
 ### Useful links

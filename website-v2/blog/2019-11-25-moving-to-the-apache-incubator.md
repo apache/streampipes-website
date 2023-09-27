@@ -68,7 +68,7 @@ to the ASF, which will continue during the next week:
 * Issues can be created in the new [Jira](https://issues.apache.org/jira/projects/STREAMPIPES).
 * All previous releases will be marked as non-ASF-releases to clearly indicate that previous releases do not follow the
   Apache release policy. Yesterday, we released the final pre-Apache
-  version [0.65.0](/docs/blog/2019/11/23/release-0650), the next release will be our first Apache release.
+  version [0.65.0](/blog/2019/11/23/release-0650), the next release will be our first Apache release.
 
 ## Thanks
 

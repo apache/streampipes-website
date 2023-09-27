@@ -30,7 +30,7 @@ const LovedByUsers = (props) => (
           <p className={"text-left"}>Pre-processing rules can be added to harmonize data before ingestion, e.g.,
             transformation of
             measurement units.</p>
-          <a href="/docs/use-connect" className="sp-button sp-button-medium sp-button-blue"><i
+          <a href="/docs/use-connect/" className="sp-button sp-button-medium sp-button-blue"><i
             className="fas fa-hand-point-right"></i> Learn more</a>
         </FeatureItemHorizontal>
         <FeatureItemHorizontal featureNumber={"02."} title={"Analyze"} images={[{src: "/img/screenshots/sp-editor-pipeline.png", alt: "StreamPipes Pipeline Editor"}, {src: "/img/screenshots/sp-editor-config-trend.png", alt: "Pipeline Editor Configuration"}]}>
@@ -43,7 +43,7 @@ const LovedByUsers = (props) => (
           </p>
           <hr/>
           <p>Our pipeline elements focus on analyzing industrial IoT data - for instance, we provide many operators to transform process data from PLC systems.</p>
-          <a href="/docs/use-pipeline-editor" className="sp-button sp-button-medium sp-button-blue"><i
+          <a href="/docs/use-pipeline-editor/" className="sp-button sp-button-medium sp-button-blue"><i
             className="fas fa-hand-point-right"></i> Learn more</a>
         </FeatureItemHorizontal>
         <FeatureItemHorizontal featureNumber={"03."} title={"Exploit"} images={[{src: "/img/screenshots/sp-data-explorer-config.png", alt: "Data Explorer Widgets"}, {src: "/img/screenshots/sp-explorer-ts.png", alt: "StreamPipes Data Explorer Time Series Chart"}, {src: "/img/screenshots/sp-dashboard.png", alt: "Live Dashboard"}]}>
@@ -61,9 +61,9 @@ const LovedByUsers = (props) => (
           <p className={"text-left"}>The brand-new data explorer gives you an intuitive and feature-rich component to visually analyze persisted time-series data and comes with ready-to-use visualizations such as heatmaps, value distribution charts or time-series charts.</p>
           <hr/>
           <p className={"text-left"}>Use the live dashboard to visualize data in real-time, e.g., show critical values directly on the shopfloor.</p>
-          <a href="/docs/use-data-explorer" className="sp-button sp-button-medium sp-button-blue"><i
-            className="fas fa-hand-point-right"></i> Data Explorer</a>
-          <a href="/docs/use-dashboard" className="sp-button sp-button-medium sp-button-blue"><i
+          <a href="/docs/use-data-explorer/" className="sp-button sp-button-medium sp-button-blue"><i
+            className="fas fa-hand-point-right/"></i> Data Explorer</a>
+          <a href="/docs/use-dashboard/" className="sp-button sp-button-medium sp-button-blue"><i
             className="fas fa-hand-point-right"></i> Live Dashboard</a>
         </FeatureItemHorizontal>
       </PageSection>

@@ -12,7 +12,7 @@ Subscribe to our user mailing list to ask a question.
 
 [Mailing Lists](https://streampipes.apache.org/mailinglists.html)
 
-To subscribe to the user list, send an email to [users-subscribe@streampipes.apache.org](users-subscribe@streampipes.apache.org)
+To subscribe to the user list, send an email to [users-subscribe@streampipes.apache.org](mailto:users-subscribe@streampipes.apache.org)
 
 You can also ask questions on our Github discussions page:
 [Github Discussions](https://github.com/apache/streampipes/discussions)
