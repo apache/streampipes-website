@@ -31,7 +31,9 @@ Tested on: **macOS, Linux, Windows 10** (CMD, PowerShell, GitBash)
 We provide several options to get you going:
 
 - **default**: Default docker-compose file, called `docker-compose.yml`.
-
+- **nats**: The standard installation which uses Nats as message broker,called `docker-compose.nats.yml`.
+- **full**: Contains experimental Flink wrappers, called `docker-compose.full.yml`.
+- **quickstart**: Contains predefined assets, called `docker-compose.quickstart.yml`.
 :::info
 
 Other options include configurations for the internally used message broker. The current default is `Kafka`, but you can also start StreamPipes with `Nats`, `MQTT` or `Apache Pulsar`.
@@ -60,10 +62,33 @@ Starting the **nats** option is almost the same, just specify the `docker-compos
 docker-compose -f docker-compose.nats.yml up -d
 # go to after all services are started http://localhost
 ```
+**Stopping** the **nats** option:
+```bash
+docker-compose -f docker-compose.nats.yml down
+#docker-compose -f docker-compose.nats.yml down
+```
+
+
+Starting the **full** option is almost the same, just specify the `docker-compose.full.yml` file:
+```bash
+docker-compose -f docker-compose.full.yml up -d
+# go to after all services are started http://localhost
+```
 Stopping the **full** option:
 ```bash
 docker-compose -f docker-compose.nats.yml down
 #docker-compose -f docker-compose.nats.yml down -v
+```
+Starting the **quickstart** option:
+```bash
+docker-compose -f docker-compose.quickstart.yml build script-runner
+docker-compose -f docker-compose.quickstart.yml up -d
+# go to after all services are started http://localhost
+```
+Stopping the **quickstart** option:
+```bash
+docker-compose -f docker-compose.quickstart.yml down
+#docker-compose -f docker-compose.quickstart.yml down
 ```
 
 ## Update services
