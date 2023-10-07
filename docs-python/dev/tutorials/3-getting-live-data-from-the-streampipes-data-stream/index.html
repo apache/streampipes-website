@@ -3301,7 +3301,7 @@ from streampipes.client.credential_provider import StreamPipesApiKeyCredentials<
 
 <span class="c1"># Use this if you work locally:</span>
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"BROKER-HOST"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"localhost"</span>  
-<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"KAFKA-PORT"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"9094"</span> <span class="c1"># When using Kafka as message broker</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"KAFKA-PORT"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"9094"</span> <span class="c1"># When using Kafka as message broker. If Kafka is not running on localhost, KAFKA_ADVERTISED_LISTENERS should be adjusted to the external address</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-3">import os
 
@@ -3310,7 +3310,7 @@ os.environ["SP_API_KEY"] = "XXX"
 
 # Use this if you work locally:
 os.environ["BROKER-HOST"] = "localhost"  
-os.environ["KAFKA-PORT"] = "9094" # When using Kafka as message broker</div>
+os.environ["KAFKA-PORT"] = "9094" # When using Kafka as message broker. If Kafka is not running on localhost, KAFKA_ADVERTISED_LISTENERS should be adjusted to the external address</div>
 </div>
 </div>
 </div>
