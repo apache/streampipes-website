@@ -1,7 +1,7 @@
 ---
-id: extend-tutorial-data-sources
-title: "Tutorial: Data Sources"
-sidebar_label: "Tutorial: Data Sources"
+id: extend-tutorial-adapters
+title: "Tutorial: Adapters"
+sidebar_label: "Tutorial: Adapters"
 ---
 
 In this tutorial, we will add a new data source consisting of a single data stream. The source will be provided as a standalone component (i.e., the description will be accessible through an integrated web server).

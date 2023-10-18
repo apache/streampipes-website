@@ -164,7 +164,7 @@
       "extend-cli",
       "extend-archetypes",
       "extend-first-processor",
-      "extend-tutorial-data-sources",
+      "extend-tutorial-adapters",
       "extend-tutorial-data-processors",
       "extend-tutorial-data-sinks",
       "extend-client",
