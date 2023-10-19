@@ -1,6 +1,6 @@
 ---
 id: extend-tutorial-adapters
-title: "Tutorial: Adapters"
+title: "Tutorial: Build Custom Adapters"
 sidebar_label: "Tutorial: Adapters"
 ---
 
