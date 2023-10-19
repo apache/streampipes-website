@@ -53,7 +53,7 @@ that [Apache Maven](https://maven.apache.org/install.html) isinstalled):
 mvn archetype:generate \
 -DarchetypeGroupId=org.apache.streampipes -DarchetypeArtifactId=streampipes-archetype-extensions-jvm \
 -DarchetypeVersion=0.93.0-SNAPSHOT -DgroupId=org.apache.streampipes \
--DartifactId=streampipes-archetype-extensions-jvm -DclassNamePrefix=ParcelControlStation -DpackageName=parcel-control
+-DartifactId=streampipes-archetype-extensions-jvm -DclassNamePrefix=ParcelControlStation -DpackageName=parcelcontrol
 ```
 
 This command will ask you for input twice, you can just skip both of them by hitting *enter*.
@@ -82,26 +82,26 @@ Note that you can customize the parameters of the mvn command to affect the file
 |-- src
 |   |-- main
 |   |   |-- java.org.apache.streampipes  # name after .java. is determined by '-DgroupId'
-|   |   |   |-- pe.parcel-control  # name after .pe. is determined by '-DpackageName'
+|   |   |   |-- pe.parcelcontrol  # name after .pe. is determined by '-DpackageName'
 |   |   |   |   |-- ParcelControlStationDataProcessor.java  # class name is determined by '-DclassNamePrefix'
 |   |   |   |   |-- ParcelControlStationDataSink.java
 |   |   |   |   |-- ParcelControlStationGenericAdapter.java
 |   |   |   |   |-- ParcelControlStationSpecificAdapter.java
 |   |   |   |-- Init.java
 |   |   |-- resources
-|   |   |   |-- org.apache.streampipes.pe.parcel-control.genericadapter
+|   |   |   |-- org.apache.streampipes.pe.parcelcontrol.genericadapter
 |   |   |   |   |-- documentation.md
 |   |   |   |   |-- icon.png
 |   |   |   |   |-- strings.en
-|   |   |   |-- org.apache.streampipes.pe.parcel-control.processor
+|   |   |   |-- org.apache.streampipes.pe.parcelcontrol.processor
 |   |   |   |   |-- documentation.md
 |   |   |   |   |-- icon.png
 |   |   |   |   |-- strings.en
-|   |   |   |-- org.apache.streampipes.pe.parcel-control.sink
+|   |   |   |-- org.apache.streampipes.pe.parcelcontrol.sink
 |   |   |   |   |-- documentation.md
 |   |   |   |   |-- icon.png
 |   |   |   |   |-- strings.en
-|   |   |   |-- org.apache.streampipes.pe.parcel-control.specificadapter
+|   |   |   |-- org.apache.streampipes.pe.parcelcontrol.specificadapter
 |   |   |   |   |-- documentation.md
 |   |   |   |   |-- icon.png
 |   |   |   |   |-- strings.en
@@ -131,7 +131,7 @@ First, let us take a look at the `ParcelControlStationSpecificAdapter.java` file
 archetype.
 
 ```java jsx showLineNumbers
-package org.apache.streampipes.pe.parcel-control;
+package org.apache.streampipes.pe.parcelcontrol;
 
 import org.apache.streampipes.commons.exceptions.connect.AdapterException;
 import org.apache.streampipes.extensions.api.connect.IAdapterConfiguration;
@@ -160,7 +160,7 @@ public class ParcelControlStationSpecificAdapter implements StreamPipesAdapter {
   @Override
   public IAdapterConfiguration declareConfig() {
     return AdapterConfigurationBuilder.create(
-        "org.apache.streampipes.pe.parcel-control.specificadapter",
+        "org.apache.streampipes.pe.parcelcontrol.specificadapter",
         ParcelControlStationSpecificAdapter::new
       )
       .withAssets(Assets.DOCUMENTATION, Assets.ICON)
@@ -238,7 +238,7 @@ So let's have a quick look at the important aspects:
   @Override
   public IAdapterConfiguration declareConfig() {
     return AdapterConfigurationBuilder.create(
-        "org.apache.streampipes.pe.parcel-control.specificadapter",
+        "org.apache.streampipes.pe.parcelcontrol.specificadapter",
         ParcelControlStationSpecificAdapter::new
       )
       .withAssets(Assets.DOCUMENTATION, Assets.ICON)
@@ -252,8 +252,8 @@ Before we continue, let's quickly have a look at the `strings.en` file that defi
 Here we can define a meaningful and human-readable adapter tile in the first line and a short description:
 
 ```text
-org.apache.streampipes.pe.parcel-control.specificadapter.title=Parcel Control Station (simple)
-org.apache.streampipes.pe.parcel-control.specificadapter.description=This adapter simulates data coming from a parcel control station in a logistics center.
+org.apache.streampipes.pe.parcelcontrol.specificadapter.title=Parcel Control Station (simple)
+org.apache.streampipes.pe.parcelcontrol.specificadapter.description=This adapter simulates data coming from a parcel control station in a logistics center.
 ```
 
 Now we have successfully configured our adapter and prepared all descriptive elements, we can focus on the actual logic.
@@ -362,7 +362,11 @@ more in the [Advanced section](#advanced)).
 But in our case, we already know the event schema, and it never changes, so we can just define it:
 
 ```java jsx {3,13-20} showLineNumbers
-public static GuessSchema getFlowrateSchema() {
+@Override
+public GuessSchema onSchemaRequested(IAdapterParameterExtractor extractor,
+                                     IAdapterGuessSchemaContext adapterGuessSchemaContext) throws AdapterException {
+
+  // build the schema by adding properties to the schema builder and a preview if possible
   return GuessSchemaBuilder.create()
           .property(timestampProperty("timestamp"))
           .sample("timestamp", System.currentTimeMillis())
