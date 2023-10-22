@@ -4,59 +4,107 @@ title: Architecture
 sidebar_label: Architecture
 ---
 
+## Architecture
 
-The following picture illustrates the high-level architecture of StreamPipes:
+<img className="docs-image" src="/img/07_technicals/architecture.png" alt="StreamPipes Architecture"/>
 
-<img src="/img/architecture/high-level-architecture.png" alt="High Level Architecture of StreamPipes"/>
+Apache StreamPipes implements a microservice architecture as shown in the figure above.
 
-Users mainly interact (besides other UI components) with the _Pipeline Editor_ to create stream processing pipelines based on data streams, data processors and data sinks.
-These reusable pipeline elements are provided by self-contained _pipeline element containers_, each of them having a semantic description that specifies their characteristics (e.g., input, output and required user input for data processors).
-Each pipeline element container has a REST endpoint that provides these characteristics as a JSON-LD document.
+## StreamPipes Core
 
-Pipeline element containers are built using one of several provided _wrappers_.
-Wrappers abstract from the underlying runtime stream processing framework.
-Currently, the StreamPipes framework provides wrappers for Apache Flink, Esper and algorithms running directly on the JVM.
+The StreamPipes Core is the central component to manage all StreamPipes resources. 
+It delegates the management of adapters, pipeline elements, pipelines and functions to registered extensions services (see below) and monitors the execution of extensions.
+The Core also provides internal REST interfaces to communicate with the user interface, as well as public REST interfaces that can be used by external applications and StreamPipes clients.
 
-The _pipeline manager_ manages the definition and execution of pipelines.
-When creating pipelines, the manager continuously matches the pipeline against its semantic description and provides user guidance in form of recommendations.
-Once a pipeline is started, the pipeline manager invokes the corresponding pipeline element containers.
-The container prepares the actual execution logic and submits the program to the underlying execution engine, e.g., the program is deployed in the Apache Flink cluster.
+Configuration and user data are stored in an Apache CouchDB database.
 
-Pipeline elements exchange data using one or more message brokers and protocols (e.g., Kafka or MQTT).
-StreamPipes does not rely on a specific broker or message format, but negotiates suitable brokers based on the capabilities of connected pipeline elements.
+## StreamPipes Extensions
 
-Thus, StreamPipes provides a higher-level abstraction of existing stream processing technology by leveraging domain experts to create streaming analytics pipelines in a self-service manner.
+An Apache StreamPipes extensions service is a microservice which contains the implementation of specific adapters, data streams, data processors, data sinks and functions.
+Multiple extension services can be part of a single StreamPipes installation.
+Each service might provide its own set of extensions. Extensions services register at the StreamPipes Core at startup. Users are able to install all or a subset of extensions of each service. 
+This allows StreamPipes to be extended at runtime by starting a new service with additional extensions.
 
-## Semantic description
-Pipeline elements in StreamPipes are meant to be reusable:
+Extensions can be built using the SDK (see [Extending StreamPipes](06_extend-setup.md)).
+Extensions services can be provided either in Java or in Python.
 
-* Data processors and data sink are generic (or domain-specific) elements that express their requirements and are able to operate on any stream that satisfies these requirements.
-* Data processors and data sinks can be manually configured by offering possible configuration parameters which users can individually define when creating pipelines.
-* Data streams can be connected to any data processor or data sink that matches the capabilities of the stream.
+:::info
 
-When users create pipelines by connecting a data stream with a data processor (or further processors), the pipeline manager _matches_ the input stream of a data processor against its requirements.
-This matching is performed based on the _semantic description of each element.
-The semantic description (technically an RDF graph serialized as JSON-LD) can be best understood by seeing it as an envelope around a pipeline element.
-It only provides metadata information, while we don't rely on any RDF at runtime for exchanging events between pipeline elements.
-While RDF-based metadata ensures good understanding of stream capabilities, lightweight event formats at runtime (such as JSON or Thrift) ensure fast processing of events.
+As of version 0.93.0, the Python SDK supports functions only. If you would like to develop pipeline elements in Python as well, let us know in a [Github discussions](https://github.com/apache/streampipes/discussions) comment, so that we can better prioritize development.
 
-Let's look at an example stream that produces a continuous stream of vehicle positions as illustrated below:
+:::
 
-<img src="/img/architecture/semantic-description-stream.png" alt="Semantic description of data streams"/>
 
-While the runtime layer produces plain JSON by submitting actual values of the position and the vehicle's plate number, the description layer describes various characteristics of the stream:
-For instance, it defines the event schema (including, besides the data type and the runtime name of each property also a more fine-grained meaning of the property), quality aspects (e.g., the measurement unit of a property or the frequency) and the grounding (e.g., the format used at runtime and the communication protocol used for transmitting events).
+An extensions service interacts with the core by receiving control messages to invoke or detach an extension. 
+In addition, the core regularly fetches monitoring and log data from each registered extensions service.
 
-The same accounts for data processors and data sinks:
 
-<img src="/img/architecture/semantic-description-processor.png" alt="Semantic description of data processor"/>
+## StreamPipes Client
 
-Data processors (and, with some differences, data sinks) are annotated by providing metadata information on their required input and output.
-For instance, we can define minimum schema requirements (such as geospatial coordinates that need to be provided by any stream that is connected to a processor), but also required (minimum or maximum) quality levels and supported transport protocols and formats.
-In addition, required configuration parameters users can define during the pipeline definition process are provided by the semantic description.
+The Apache StreamPipes Client is a lightweight library for Java and Python which can be used to interact with StreamPipes resources programmatically. 
+For instance, users use the client to influence the control flow of pipelines, to download raw data from the data lake APIs or to realize custom applications with live data.
 
-Once new pipeline elements are imported into StreamPipes, we store all information provided by the description layer in a central repository and use this information to guide useres through the pipeline definition process.
 
-Don't worry - you will never be required to model RDF by yourself.
-Our SDK provides convenience methods that help creating the description automatically.
+## Third-party systems
+
+In addition to the core components, an Apache StreamPipes version uses several third-party services, which are part of the standard installation.
+
+* Configurations and user data is stored in an [Apache CouchDB](https://couchdb.apache.org) database.
+* Time-series data is stored in an [InfluxDB](https://github.com/influxdata/influxdb) database.
+* Events are exchanged over a messaging system. Users can choose from various messaging systems that StreamPipes supports. Currently, we support [Apache Kafka](https://kafka.apache.org), [Apache Pulsar](https://pulsar.apache.org), [MQTT](https://mqtt.org/) and [NATS](https://nats.io/). The selection of the right messaging system depends on the use case. See [Messaging](07_technicals-messaging.md) for more information.
+
+:::info
+
+Versions prior to 0.93.0 included Consul for service discovery and registration. Starting from 0.93.0 onwards, we switched to an internal service discovery mechanism.
+
+:::
+
+All mentioned third-party services are part of the default installation and are auto-configured during the installation process.
+
+## Programming Languages
+
+Apache StreamPipes is mainly written in Java. 
+Services are based on Spring Boot. 
+The included [Python integration](https://streampipes.apache.org/docs/docs/python/latest/) is written in Python.
+
+The user interface is mainly written in TypeScript using the Angular framework.
+
+
+## Data Model
+
+Internally, Apache StreamPipes realizes a stream processing layer where events are continuously exchanged over a messaging system.
+When building a pipeline, data processors consume data from a topic assigned by the core and publish data back to another topic, which is also assigned by the core.
+
+At runtime, events have a flat and easily understandable data structure, consisting of key/value pairs. Events are serialized in JSON, although StreamPipes can be configured to use other (binary) message formats.
+
+This allows for easy integration with other systems which want to consume data from Streampipes, since an event could look as simple as this:
+
+```json
+{
+  "timestamp": 1234556,
+  "deviceId": "ABC",
+  "temperature": 37.5
+}
+```
+
+However, this wouldn't be very expressive, right? To [assist users](07_technicals-user-guidance.md), StreamPipes provides a rich description layer for events. So under the hood, for the `temperature` field shown above StreamPipes can also store the following:
+
+```json
+{
+  "label": "Temperature",
+  "description": "Measures the temperature during leakage tests",
+  "measurementUnit": "https://qudt.org/vocab/unit/DEG_C",
+  "runtimeName": "temperature",
+  "runtimeType": "xsd:float",
+  "semanticType": "https://my-company-vocabulary/leakage-test-temperature"
+}
+```
+
+By dividing the description layer from the runtime representation, we get a good trade-off between expressivity, readability for humans and lightweight runtime message formats.
+The schema is stored in an internal schema registry and available to the client APIs and user interface views to improve validation and user guidance.
+
+StreamPipes also supports arrays and nested structures, although we recommend using flat events where possible to ease integration with downstream systems (such as time-series storage).
+
+
+
 
