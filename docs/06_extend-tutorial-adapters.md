@@ -153,9 +153,6 @@ import java.util.Map;
 public class ParcelControlStationSpecificAdapter implements StreamPipesAdapter {
 
   private boolean running = false;
-  private String exampleText;
-
-  private static final String EXAMPLE_KEY = "example-key";
 
   @Override
   public IAdapterConfiguration declareConfig() {
