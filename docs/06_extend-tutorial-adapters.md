@@ -387,7 +387,7 @@ public GuessSchema onSchemaRequested(IAdapterParameterExtractor extractor,
 ```
 
 An attribute of an Event is referred to as `property` in StreamPipes.
-So we in our case we have three properties.
+So in our case we have three properties.
 Since StreamPipes creates a sample event in the UI when configuring the adapter (
 see [here](./03_use-connect.md#schema-editor)),
 providing a meaningful sample value for every property allows StreamPipes to demonstrate its full potential.
