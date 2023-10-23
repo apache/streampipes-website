@@ -89,7 +89,7 @@ const footer = {
   ],
   logo: {
     alt: 'Apache Software Foundation',
-    src: '/img/asf_logo_wide_small.avif',
+    src: '/img/asf_logo_wide.svg',
     href: 'https://www.apache.org/',
   },
 
