@@ -27,13 +27,13 @@ process should be capable of smoothly transitioning all affected instances from 
 The migration itself is automatically managed and executed by StreamPipes. Developers are only responsible for two key
 aspects:
 
-* **Implementing the Concrete Migration**: Developers need to craft the specific migration logic that facilitates the
+* **Implementing the concrete migration**: Developers need to craft the specific migration logic that facilitates the
   seamless transition of configuration options.
-* **Registering the Migration**: Developers should register their migration procedures at the extensions service,
+* **Registering the migration**: Developers should register their migration procedures at the extensions service,
   allowing StreamPipes to identify and apply the necessary updates to affected instances.
 
 By adhering to these two essential tasks, developers can ensure a hassle-free evolution of pipeline elements while
-StreamPipes efficiently handles the orchestration of the migration process.
+StreamPipes handles the orchestration of the migration process.
 
 The following gives a concrete example of creating a migration for
 the [S7 adapter](./pe/org.apache.streampipes.connect.iiot.adapters.plc4x.s7.md).
@@ -44,8 +44,8 @@ This is represented by a simple boolean that is visualized as a toggle button in
 ### Implementing a Concrete Migration
 
 StreamPipes offers three distinct migration mechanisms tailored to specific types of pipeline
-elements: `AdapterMigrator`, `DataProcessorMigrator`, and `DataSinkMigrator`.
-These migration mechanisms are presented as abstract classes and require the implementation of two fundamental methods:
+elements: `IAdapterMigrator`, `IDataProcessorMigrator`, and `IDataSinkMigrator`.
+These migration mechanisms are presented as interfaces and require the implementation of two fundamental methods:
 
 * `config()`: This method defines the configuration for the migration, encompassing all essential metadata related to
   the migration process.
