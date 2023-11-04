@@ -1,7 +1,7 @@
 ---
-id: org.apache.streampipes.processors.enricher.jvm.sizemeasure
-title: Size Measure
-sidebar_label: Size Measure
+id: org.apache.streampipes.connect.adapters.coindesk
+title: Coindesk Bitcoin Price
+sidebar_label: Coindesk Bitcoin Price
 ---
 
 <!--
@@ -25,25 +25,20 @@ sidebar_label: Size Measure
 
 
 <p align="center"> 
-    <img src="/img/pipeline-elements/org.apache.streampipes.processors.enricher.jvm.sizemeasure/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.connect.adapters.coindesk/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***
 
 ## Description
-
-Measures the size of an incoming event and appends this number to the event by serializing it.
-
-***
-
-## Required input
-The size measure processor does not have any specific input requirements.
-
-***
+This adapter continuously provides the current bitcoin price from the Coindesk API.
 
 ## Configuration
 
-You can specify if the size should be in Bytes, Kilobytes (1024 Bytes) or in Megabytes (1024 Kilobytes).
+### Currency
 
-## Output
-The size measure processor appends the size of the event (without the field, which is getting added) as a double. The rest of the event stays the same.
+The current in which the price should be provided.
+
+
+***
+
