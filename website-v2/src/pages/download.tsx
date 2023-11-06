@@ -18,7 +18,7 @@ const Downloads: FC = () => (
         <h6></h6>
         <ul>
           <li className={"no-list-style"}><i className="fas fa-check sp-color-green"></i>The Docker-based installation works with Linux, MacOS and
-            Windows 10.
+            Windows upwards.
           </li>
           <li className={"no-list-style"}><i className="fas fa-check sp-color-green"></i> Install <a
             href="https://docs.docker.com/install/" target="_blank">Docker</a> and <a

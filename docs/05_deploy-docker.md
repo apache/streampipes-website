@@ -21,9 +21,9 @@ Go to http://localhost to finish the installation in the browser. Once finished,
 * Docker-Compose >= 1.17.0 (Compose file format: 3.4)
 * Google Chrome (recommended), Mozilla Firefox, Microsoft Edge
 
-Tested on: **macOS, Linux, Windows 10** (CMD, PowerShell, GitBash)
+Tested on: **macOS, Linux, Windows 10 upwards** (CMD, PowerShell, GitBash)
 
-**macOS** and **Windows 10** (Pro, Enterprise, Education) users can easily get Docker and Docker-Compose on their systems by installing **Docker for Mac/Windows** (recommended).
+**macOS** and **Windows** users can easily get Docker and Docker-Compose on their systems by installing **Docker for Mac/Windows** (recommended).
 
 > **NOTE**: On purpose, we disabled all port mappings except of http port **80** to access the StreamPipes UI to provide minimal surface for conflicting ports.
 

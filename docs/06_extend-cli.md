@@ -183,7 +183,7 @@ For **macOS**, or **Linux**:
 export PATH="/path/to/streampipes-installer/installer/cli:$PATH"
 ```
 
-For **Windows 10** add `installer\cli` to environment variables, e.g. check this [documentation](https://helpdeskgeek.com/windows-10/add-windows-path-environment-variable/).
+For **Windows** add `installer\cli` to environment variables, e.g. check this [documentation](https://helpdeskgeek.com/windows-10/add-windows-path-environment-variable/).
 
 
 ## Upgrade to new version
