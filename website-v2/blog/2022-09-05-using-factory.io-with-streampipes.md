@@ -28,7 +28,7 @@ a PLC training platform. We will need it to simulate the live data.
 
 The next step is to connect the PLC to StreamPipes. To achieve this we need to create an adapter.
 
-- Start <a href="https://streampipes.apache.org/docs/docs/user-guide-introduction.html">*StreamPipes*</a>, go to the *
+- Start <a href="https://streampipes.apache.org/docs/docs/">*StreamPipes*</a>, go to the *
   *CONNECT** menu and create a **NEW ADAPTER**.
 - Select the **PLC4X S7** adapter, insert the **IP-address** of your PLC and **import the file** with the PLC tags (see
   below). Then click **NEXT** on the bottom right.

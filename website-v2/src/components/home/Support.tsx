@@ -9,7 +9,7 @@ const Support = (props) => (
       <section className="d-sm-flex clearfix align-items-center justify-content-center">
         <SupportLink imageSrc={"/img/open_source/icon-github.png"} href={"https://www.github.com/apache/streampipes"}
                      label={"Github"}></SupportLink>
-        <SupportLink imageSrc={"/img/open_source/icon-docs.png"} href={"/docs/user-guide-introduction/"}
+        <SupportLink imageSrc={"/img/open_source/icon-docs.png"} href={"/docs/"}
                      label={"Documentation"}></SupportLink>
         <SupportLink imageSrc={"/img/open_source/icon-docker.png"} href={"https://hub.docker.com/u/apachestreampipes"}
                      label={"Docker Hub"}></SupportLink>
