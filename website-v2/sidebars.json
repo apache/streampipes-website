@@ -192,6 +192,7 @@
       "extend-client",
       "extend-sdk-functions",
       "extend-sdk-event-model",
+      "extend-sdk-migration",
       "extend-sdk-stream-requirements",
       "extend-sdk-static-properties",
       "extend-sdk-output-strategies",
