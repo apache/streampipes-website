@@ -3558,11 +3558,14 @@ This can be done like following:</p>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="o">%</span><span class="n">export</span> <span class="n">SP_USERNAME</span><span class="o">=</span><span class="s2">"&lt;USERNAME&gt;"</span>
-<span class="o">%</span><span class="n">export</span> <span class="n">SP_API_KEY</span><span class="o">=</span><span class="s2">"&lt;API-KEY&gt;"</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"SP_USERNAME"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"admin@streampipes.apache.org"</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"SP_API_KEY"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"XXX"</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-6">%export SP_USERNAME="<username>"
-%export SP_API_KEY="<api-key>"</api-key></username></div>
+<div class="clipboard-copy-txt" id="cell-6">import os
+os.environ["SP_USERNAME"] = "admin@streampipes.apache.org"
+os.environ["SP_API_KEY"] = "XXX"
+</div>
 </div>
 </div>
 </div>
