@@ -9,7 +9,7 @@ module.exports = [
     "position": "right",
     items: [
       {
-        "to": "docs/user-guide-introduction",
+        "to": "docs/",
         "label": "Apache StreamPipes - User Guide",
       },
       {

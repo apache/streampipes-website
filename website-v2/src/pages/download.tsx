@@ -49,7 +49,7 @@ const Downloads: FC = () => (
                                                     </span>
               </div>
               <div className="col-md-11 col-9">
-                Check the <a href="/docs/user-guide-introduction/"> user
+                Check the <a href="/docs/"> user
                 guide</a> and learn how to make your first steps with StreamPipes!
               </div>
             </div>
