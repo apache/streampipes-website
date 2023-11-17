@@ -176,10 +176,12 @@
       }
     ],
     "⚡ Deploy StreamPipes": [
+      "choosing-the-right-flavor",
       "deploy-docker",
       "deploy-kubernetes",
       "deploy-use-ssl",
-      "deploy-security"
+      "deploy-security",
+      "deploy-environment-variables"
     ],
     "💻 Customize StreamPipes": [
       "extend-setup",
@@ -196,11 +198,11 @@
       "extend-sdk-stream-requirements",
       "extend-sdk-static-properties",
       "extend-sdk-output-strategies",
-      "extend-sdk-migration-service-discovery"
+      "extend-sdk-migration-service-discovery",
+      "extend-customize-ui"
     ],
     "🔧 Technicals": [
       "technicals-architecture",
-      "technicals-user-guidance",
       "technicals-runtime-wrappers",
       "technicals-messaging"
     ],

@@ -40,3 +40,26 @@ To select a protocol when multiple protocols are supported by two pipeline eleme
 StreamPipes ensures that only pipeline elements which have a commonly supported protocol can be connected.
 
 Note that you might need to change the installation files. For the `Docker-Compose` based installation, we provide various compose file for different messaging setups. For the `Kubernetes` installation, we provide variables which can be set in the helm chart's `values.yaml` file.
+
+### Configure broker addresses
+
+By default, StreamPipes assumes that the messaging system is started from its own environment, e.g., the system configured in the selected `Docker-Compose` file.
+
+Besides that, it is also possible to let StreamPipes connect to an externally provided messaging system. For this purpose, various environment variables exist.
+
+* `SP_PRIORITIZED_PROTOCOL` to set the prioritized protocol to either `kafka`, `mqtt`, `nats` or `pulsar`
+
+* `SP_KAFKA_HOST`, `SP_KAFKA_PORT` to configure Kafka access
+* `SP_MQTT_HOST`, `SP_MQTT_PORT` to configure MQTT access
+* `SP_NATS_HOST`, `SP_NATS_PORT` to configure NATS access
+* `SP_PULSAR_URL` to configure Pulsar access
+
+
+Most settings can also be set in the UI under `Settings->Messaging`.
+
+:::warning Installation-time configurations
+Although it is currently possible to change messaging settings in the user interface, we do not support dynamic modification of messaging systems.
+Choosing a proper system is considered an installation-time setting which should not be changed afterwards.
+Already existing Adapters and pipeline elements are not properly updated after changes of the messaging layer.
+:::
+
