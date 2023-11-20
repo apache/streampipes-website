@@ -26,7 +26,7 @@ Enter the following command in a command line of your choice (Apache Maven needs
 
 ```
 mvn archetype:generate -DarchetypeGroupId=org.apache.streampipes \
--DarchetypeArtifactId=streampipes-archetype-extensions-jvm -DarchetypeVersion=0.70.0 \
+-DarchetypeArtifactId=streampipes-archetype-extensions-jvm -DarchetypeVersion=0.93.0 \
 -DgroupId=org.streampipes.tutorial -DartifactId=sink-tutorial -DclassNamePrefix=Rest -DpackageName=mypackage
 ```
 
@@ -49,63 +49,66 @@ Create a class `RestSink` which should look as follows:
 ```java
 package org.apache.streampipes.pe.example;
 
-import org.apache.streampipes.commons.exceptions.SpRuntimeException;
+import org.apache.streampipes.extensions.api.pe.IStreamPipesDataSink;
+import org.apache.streampipes.extensions.api.pe.config.IDataSinkConfiguration;
+import org.apache.streampipes.extensions.api.pe.context.EventSinkRuntimeContext;
+import org.apache.streampipes.extensions.api.pe.param.IDataSinkParameters;
 import org.apache.streampipes.model.DataSinkType;
-import org.apache.streampipes.model.graph.DataSinkDescription;
 import org.apache.streampipes.model.runtime.Event;
 import org.apache.streampipes.model.schema.PropertyScope;
 import org.apache.streampipes.sdk.builder.DataSinkBuilder;
 import org.apache.streampipes.sdk.builder.StreamRequirementsBuilder;
+import org.apache.streampipes.sdk.builder.sink.DataSinkConfiguration;
 import org.apache.streampipes.sdk.helpers.EpRequirements;
 import org.apache.streampipes.sdk.helpers.Labels;
 import org.apache.streampipes.sdk.helpers.Locales;
 import org.apache.streampipes.sdk.utils.Assets;
-import org.apache.streampipes.wrapper.context.EventSinkRuntimeContext;
-import org.apache.streampipes.wrapper.standalone.SinkParams;
-import org.apache.streampipes.wrapper.standalone.StreamPipesDataSink;
 
-public class RestSink extends StreamPipesDataSink {
+public class RestSink implements IStreamPipesDataSink {
 
   @Override
-  public DataSinkDescription declareModel() {
-    return DataSinkBuilder.create("org.apache.streampipes.tutorial.pe.sink.rest")
-        .category(DataSinkType.NOTIFICATION)
-        .withAssets(Assets.DOCUMENTATION, Assets.ICON)
-        .withLocales(Locales.EN)
-        .requiredStream(StreamRequirementsBuilder
-            .create()
-            .requiredPropertyWithNaryMapping(EpRequirements.anyProperty(), Labels.withId(
-                "fields-to-send"), PropertyScope.NONE)
-            .build())
-        .build();
+  public IDataSinkConfiguration declareConfig() {
+    return DataSinkConfiguration.create(
+            RestSink::new,
+            DataSinkBuilder.create("org.apache.streampipes.tutorial.pe.sink.rest")
+                    .category(DataSinkType.NOTIFICATION)
+                    .withAssets(Assets.DOCUMENTATION, Assets.ICON)
+                    .withLocales(Locales.EN)
+                    .requiredStream(StreamRequirementsBuilder
+                            .create()
+                            .requiredPropertyWithNaryMapping(EpRequirements.anyProperty(), Labels.withId(
+                                    "fields-to-send"), PropertyScope.NONE)
+                            .build())
+                    .build()
+    );
   }
 
   @Override
-  public void onInvocation(SinkParams parameters, EventSinkRuntimeContext runtimeContext) throws SpRuntimeException {
-
-  }
-
-  @Override
-  public void onEvent(Event event) throws SpRuntimeException {
+  public void onPipelineStarted(IDataSinkParameters params,
+                                EventSinkRuntimeContext eventSinkRuntimeContext) {
 
   }
 
   @Override
-  public void onDetach() throws SpRuntimeException {
+  public void onEvent(Event event) {
 
   }
-}
+
+  @Override
+  public void onPipelineStopped() {
+
+  }
 
 
 ```
 
-In this class, we need to implement three methods: The `declareModel` method is used to define abstract stream
+In this class, we need to implement three methods: The `declareConfig` method is used to define abstract stream
 requirements such as event properties that must be present in any input stream that is later connected to the element
 using the StreamPipes UI.
-The second method, `onInvocation` is called once a pipeline using this sink is started. The third method, `onEvent`, is
+The second method, `onPipelineStarted` is called once a pipeline using this sink is started. The third method, `onEvent`, is
 called for every incoming event.
 
-The ``declareModel`` method describes the properties of our data sink:
+The `DataSinkBuilder` within the ``declareConfig`` method describes the properties of our data sink:
 
 * ``category`` defines a category for this sink.
 * ``withAssets`` denotes that we will provide an external documentation file and an icon, which can be found in
@@ -116,7 +119,7 @@ The ``declareModel`` method describes the properties of our data sink:
   display a list of available fields from the connected input event, where users can select a subset. This is defined by
   defining a Mapping from the empty requirement. This will later on render a selection dialog in the pipeline editor.
 
-The ``onInvocation`` method is called when a pipeline containing the sink is started. Once a pipeline is started, we
+The ``onPipelineStarted`` method is called when a pipeline containing the sink is started. Once a pipeline is started, we
 would like to extract user-defined parameters.
 In this example, we simply extract the fields selected by users that should be forwarded to the REST sink. Finally, we
 return a new configured event sink containing the parameters.
@@ -124,8 +127,8 @@ return a new configured event sink containing the parameters.
 ## Pipeline element invocation
 
 Once users start a pipeline that uses our geofencing component, the _onInvocation_ method in our class is called. The
-class `SinkParams` includes a graph that contains information on the configuration parameters a users has selected in
-the pipeline editor and information on the acutal streams that are connected to the pipeline element.
+interface `IDataSinkParameters` includes methods to extract the configuration parameters a user has selected in
+the pipeline editor and information on the actual streams that are connected to the pipeline element.
 
 ## Adding an implementation
 
@@ -136,27 +139,27 @@ Our final class should look as follows:
 ```java
 package org.apache.streampipes.pe.example;
 
-import com.google.common.base.Charsets;
-import org.apache.http.client.fluent.Request;
-import org.apache.http.entity.StringEntity;
-
 import org.apache.streampipes.commons.exceptions.SpRuntimeException;
 import org.apache.streampipes.dataformat.SpDataFormatDefinition;
 import org.apache.streampipes.dataformat.json.JsonDataFormatDefinition;
+import org.apache.streampipes.extensions.api.pe.IStreamPipesDataSink;
+import org.apache.streampipes.extensions.api.pe.config.IDataSinkConfiguration;
+import org.apache.streampipes.extensions.api.pe.context.EventSinkRuntimeContext;
+import org.apache.streampipes.extensions.api.pe.param.IDataSinkParameters;
 import org.apache.streampipes.model.DataSinkType;
-import org.apache.streampipes.model.graph.DataSinkDescription;
 import org.apache.streampipes.model.runtime.Event;
 import org.apache.streampipes.model.schema.PropertyScope;
 import org.apache.streampipes.sdk.builder.DataSinkBuilder;
 import org.apache.streampipes.sdk.builder.StreamRequirementsBuilder;
+import org.apache.streampipes.sdk.builder.sink.DataSinkConfiguration;
 import org.apache.streampipes.sdk.helpers.EpRequirements;
 import org.apache.streampipes.sdk.helpers.Labels;
 import org.apache.streampipes.sdk.helpers.Locales;
 import org.apache.streampipes.sdk.utils.Assets;
-import org.apache.streampipes.wrapper.context.EventSinkRuntimeContext;
-import org.apache.streampipes.wrapper.standalone.SinkParams;
-import org.apache.streampipes.wrapper.standalone.StreamPipesDataSink;
 
+import com.google.common.base.Charsets;
+import org.apache.http.client.fluent.Request;
+import org.apache.http.entity.StringEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -164,7 +167,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-public class RestSink extends StreamPipesDataSink {
+public class RestSink implements IStreamPipesDataSink {
 
   private static final Logger LOG = LoggerFactory.getLogger(RestSink.class);
 
@@ -173,19 +176,31 @@ public class RestSink extends StreamPipesDataSink {
   private SpDataFormatDefinition dataFormatDefinition;
 
   @Override
-  public DataSinkDescription declareModel() {
-    ...
+  public IDataSinkConfiguration declareConfig() {
+    return DataSinkConfiguration.create(
+            RestSink::new,
+            DataSinkBuilder.create("org.apache.streampipes.tutorial.pe.sink.rest")
+                    .category(DataSinkType.NOTIFICATION)
+                    .withAssets(Assets.DOCUMENTATION, Assets.ICON)
+                    .withLocales(Locales.EN)
+                    .requiredStream(StreamRequirementsBuilder
+                            .create()
+                            .requiredPropertyWithNaryMapping(EpRequirements.anyProperty(), Labels.withId(
+                                    "fields-to-send"), PropertyScope.NONE)
+                            .build())
+                    .build()
+    );
   }
 
   @Override
-  public void onInvocation(SinkParams parameters, EventSinkRuntimeContext runtimeContext) throws SpRuntimeException {
+  public void onPipelineStarted(IDataSinkParameters params,
+                                EventSinkRuntimeContext eventSinkRuntimeContext) {
     this.dataFormatDefinition = new JsonDataFormatDefinition();
-    this.fieldsToSend = parameters.extractor().mappingPropertyValues("fields-to-send");
-
+    this.fieldsToSend = params.extractor().mappingPropertyValues("fields-to-send");
   }
 
   @Override
-  public void onEvent(Event event) throws SpRuntimeException {
+  public void onEvent(Event event) {
     Map<String, Object> outEventMap = event.getSubset(fieldsToSend).getRaw();
     try {
       String json = new String(dataFormatDefinition.fromMap(outEventMap));
@@ -198,7 +213,7 @@ public class RestSink extends StreamPipesDataSink {
   }
 
   @Override
-  public void onDetach() throws SpRuntimeException {
+  public void onPipelineStopped() {
 
   }
 }
