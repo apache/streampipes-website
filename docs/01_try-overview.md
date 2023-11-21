@@ -2,7 +2,6 @@
 id: user-guide-introduction
 title: Apache StreamPipes Documentation
 sidebar_label: Overview
-slug: /
 ---
 
 This is the documentation of Apache StreamPipes.
