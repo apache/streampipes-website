@@ -597,7 +597,7 @@ If this is of interest to you, the [advanced section](#advanced) will satisfy yo
 If anything within this tutorial did not work for you or you had problems following it,
 please feel free to provide some feedback by opening an [issue on GitHub](https://github.com/apache/streampipes/issues/new?assignees=&labels=bug%2Cdocumentation%2Cwebsite&projects=&template=doc_website_issue_report.yml).
 
-## Advanced
+<!-- ## Advanced
 
 There is more to come about advanced features of our adapters. Stay tuned!
 
@@ -609,4 +609,4 @@ There is more to come about advanced features of our adapters. Stay tuned!
 
 ### Extend the Existing Pool of Parsers by Your Own Parser
 
-### Introduce a Vew Version of an Adapter and Ensure Migration of Existing Adapters
+### Introduce a Vew Version of an Adapter and Ensure Migration of Existing Adapters -->
