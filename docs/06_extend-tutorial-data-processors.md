@@ -38,7 +38,7 @@ Enter the following command in a command line of your choice (Apache Maven needs
 ```
 mvn archetype:generate \
 -DarchetypeGroupId=org.apache.streampipes -DarchetypeArtifactId=streampipes-archetype-extensions-jvm \
--DarchetypeVersion=0.70.0 -DgroupId=my.groupId \
+-DarchetypeVersion=0.93.0 -DgroupId=my.groupId \
 -DartifactId=my-example -DclassNamePrefix=MyExample -DpackageName=mypackagename
 ```
 
@@ -61,47 +61,55 @@ Create a new class `GeofencingProcessor` which should look as follows:
 ```java
 package org.apache.streampipes.pe.example;
 
-import org.apache.streampipes.commons.exceptions.SpRuntimeException;
-import org.apache.streampipes.model.DataProcessorType;
-import org.apache.streampipes.model.graph.DataProcessorDescription;
+import org.apache.streampipes.extensions.api.pe.IStreamPipesDataProcessor;
+import org.apache.streampipes.extensions.api.pe.config.IDataProcessorConfiguration;
+import org.apache.streampipes.extensions.api.pe.context.EventProcessorRuntimeContext;
+import org.apache.streampipes.extensions.api.pe.param.IDataProcessorParameters;
+import org.apache.streampipes.extensions.api.pe.routing.SpOutputCollector;
 import org.apache.streampipes.model.runtime.Event;
 import org.apache.streampipes.sdk.builder.ProcessingElementBuilder;
 import org.apache.streampipes.sdk.builder.StreamRequirementsBuilder;
+import org.apache.streampipes.sdk.builder.processor.DataProcessorConfiguration;
+import org.apache.streampipes.sdk.helpers.EpProperties;
 import org.apache.streampipes.sdk.helpers.EpRequirements;
 import org.apache.streampipes.sdk.helpers.Labels;
-import org.apache.streampipes.sdk.helpers.Locales;
 import org.apache.streampipes.sdk.helpers.OutputStrategies;
-import org.apache.streampipes.sdk.utils.Assets;
-import org.apache.streampipes.wrapper.context.EventProcessorRuntimeContext;
-import org.apache.streampipes.wrapper.routing.SpOutputCollector;
-import org.apache.streampipes.wrapper.standalone.ProcessorParams;
-import org.apache.streampipes.wrapper.standalone.StreamPipesDataProcessor;
+import org.apache.streampipes.sdk.helpers.SupportedFormats;
+import org.apache.streampipes.sdk.helpers.SupportedProtocols;
+import org.apache.streampipes.vocabulary.SO;
 
-public class GeofencingProcessor extends StreamPipesDataProcessor {
+public class GeofencingProcessor implements IStreamPipesDataProcessor {
 
   private static final String LATITUDE_CENTER = "latitude-center";
   private static final String LONGITUDE_CENTER = "longitude-center";
 
-  @Override
-  public DataProcessorDescription declareModel() {
-    return ProcessingElementBuilder.create("org.apache.streampipes.tutorial-geofencing")
-        .category(DataProcessorType.ENRICH)
-        .withAssets(Assets.DOCUMENTATION, Assets.ICON)
-        .build();
+
+  public IDataProcessorConfiguration declareConfig() {
+    return DataProcessorConfiguration.create(
+        GeofencingProcessor::new,
+        ProcessingElementBuilder.create(
+              "org.apache.streampipes.tutorial-geofencing"
+            )
+            .category(DataProcessorType.ENRICH)
+            .withAssets(Assets.DOCUMENTATION, Assets.ICON)
+            .build());
   }
 
   @Override
-  public void onInvocation(ProcessorParams parameters, SpOutputCollector spOutputCollector, EventProcessorRuntimeContext runtimeContext) throws SpRuntimeException {
+  public void onPipelineStarted(IDataProcessorParameters params, 
+                                SpOutputCollector collector, 
+                                EventProcessorRuntimeContext runtimeContext) {
 
   }
 
   @Override
-  public void onEvent(Event event, SpOutputCollector collector) throws SpRuntimeException {
+  public void onEvent(Event event, 
+                      SpOutputCollector collector) {
 
   }
 
   @Override
-  public void onDetach() throws SpRuntimeException {
+  public void onPipelineStopped() {
 
   }
 }
@@ -109,31 +117,33 @@ public class GeofencingProcessor extends StreamPipesDataProcessor {
 
 ```
 
-In this class, we need to implement three methods: The `declareModel` method is used to define abstract stream
+In this class, we need to implement three methods: The `declareConfig` method is used to define abstract stream
 requirements such as event properties that must be present in any input stream that is later connected to the element
 using the StreamPipes UI.
-The second method, `onInvocation` is triggered once a pipeline is started. Finally, the `onEvent` method
+The second method, `onPipelineStarted` is triggered once a pipeline is started. 
+The `onEvent` method is called for every incoming event. 
+Finally, the `onPipelineStopped` method is called once the pipeline is stopped.
 
 Similar to data sources, the SDK provides a builder class to generate the description for data processors.
-Delete the content within the ``declareModel`` method and add the following lines to the `declareModel` method:
 
-```java
-return ProcessingElementBuilder.create("org.apache.streampipes.tutorial.geofencing","Geofencing","A simple geofencing data processor")
-```
-
-This creates a new data processor with the ID, title and description assigned to the element builder.
-Next, we add some _stream requirements_ to the description. As we'd like to develop a generic pipeline element that
+The current code within the `declareConfig` method  creates a new data processor with the ID. 
+The ID is used as the internal ID of the data processor, but also used to reference additional assets in the `resources` folder, such as a `strings.en` file, used to configure labels and description, and a `documentation.md` file, which will later servce as a markdown documentation in the UI.
+But first, we will add some _stream requirements_ to the description. As we'd like to develop a generic pipeline element that
 works with any event that provides a lat/lng pair, we define two stream requirements as stated below:
 
 ```java
 .requiredStream(StreamRequirementsBuilder
     .create()
-    .requiredPropertyWithUnaryMapping(EpRequirements.domainPropertyReq(Geo.lat),
-    Labels.from("latitude-field","Latitude","The event "+
-    "property containing the latitude value"),PropertyScope.MEASUREMENT_PROPERTY)
-    .requiredPropertyWithUnaryMapping(EpRequirements.domainPropertyReq(Geo.lng),
-    Labels.from("longitude-field","Longitude","The event "+
-    "property containing the longitude value"),PropertyScope.MEASUREMENT_PROPERTY)
+    .requiredPropertyWithUnaryMapping(
+        EpRequirements.domainPropertyReq(Geo.LAT),
+        Labels.from("latitude-field","Latitude","The event property containing the latitude value"),
+        PropertyScope.MEASUREMENT_PROPERTY
+    )
+    .requiredPropertyWithUnaryMapping(
+        EpRequirements.domainPropertyReq(Geo.LNG),
+        Labels.from("longitude-field","Longitude","The event property containing the longitude value"),
+        PropertyScope.MEASUREMENT_PROPERTY
+    )
     .build())
 ```
 
@@ -142,11 +152,11 @@ stream requirements would create elements with multiple input connectors in Stre
 Stream requirements can be assigned by using the `StreamRequirementsBuilder` class.
 In our example, we define two requirements, so-called _domain property requirements_. In contrast to _data type
 requirements_ where we'd expect an event property with a field of a specific data type (e.g., float), domain property
-requirements expect a specific domain property, e.g., from a vocabulary such as the WGS84 Geo vocab.
+requirements expect a specific semantic type (called domain property), e.g., from a vocabulary such as the WGS84 Geo vocab.
 
 Once a pipeline is deployed, we are interested in the actual field (and its field name) that contains the latitude and
 longitude values.
-In some cases, there might me more than one field that satisfies a property requirement and we would like users to
+In some cases, there might be more than one field that satisfies a property requirement, and we would like users to
 select the property the geofencing component should operate on.
 Therefore, our example uses the method `requiredPropertyWithUnaryMapping`, which will map a requirement to a real event
 property of an input stream and let the user choose the appropriate field in the StreamPipes UI when pipelines are
@@ -154,6 +164,50 @@ defined.
 
 Finally, the `PropertyScope` indicates that the required property is a measurement value (in contrast to a dimension
 value). This allows us later to provide improved user guidance in the pipeline editor.
+
+Similar to mapping properties, text parameters have an internalId (radius), a label and a description.
+In addition, we can assign a _value specification_ to the parameter indicating the value range we support.
+Our example supports a radius value between 0 and 1000 with a granularity of 1.
+In the StreamPipes UI, a required text parameter is rendered as a text input field, in case we provide an optional value
+specification, a slider input is automatically generated.
+
+For now, we've assigned parameters with an internal ID, a label and a description. 
+To decouple human-readable labels and description from the actual data processor description, it is possible to extract the strings to a properties file.
+In the `resources` folder, switch to a folder with the same name as the data processor's ID. If you've used the Maven archetype to build our project, there should be a `strings.en` file.
+In this file, we can configure labels and descriptions. For instance, instead of writing
+
+```java
+
+.requiredPropertyWithUnaryMapping(
+        EpRequirements.domainPropertyReq(Geo.LAT),
+        Labels.from("latitude-field","Latitude","The event property containing the latitude value"),
+        PropertyScope.MEASUREMENT_PROPERTY
+    )
+
+```
+
+it is recommended to write
+
+```java
+
+.requiredPropertyWithUnaryMapping(
+        EpRequirements.domainPropertyReq(Geo.LAT),
+        Labels.withId("latitude-field"), 
+        PropertyScope.MEASUREMENT_PROPERTY
+    )
+
+```
+
+and add the following line to the `strings.en` file:
+
+```properties
+
+latitude-field.title=Latitude
+latitute-field.description=The event property containing the latitude value
+
+```
+
+This feature will also ease future internationalization efforts.
 
 Besides requirements, users should be able to define the center coordinate of the Geofence and the size of the fence
 defined as a radius around the center in meters.
@@ -163,19 +217,13 @@ The radius can be defined by adding a simple required text field to the descript
 .requiredIntegerParameter("radius","Geofence Size","The size of the circular geofence in meters.",0,1000,1)
 ```
 
-Similar to mapping properties, text parameters have an internalId (radius), a label and a description.
-In addition, we can assign a _value specification_ to the parameter indicating the value range we support.
-Our example supports a radius value between 0 and 1000 with a granularity of 1.
-In the StreamPipes UI, a required text parameter is rendered as a text input field, in case we provide an optional value
-specification, a slider input is automatically generated.
-
 Such user-defined parameters are called _static properties_. There are many different types of static properties (see
-the [Processor SDK](06_extend-sdk-static-properties.md) for an overview).
+the [Processor SDK](06_extend-sdk-static-properties.md) for an overview). Similar to stream requirements, it is also recommended to type `Labels.withId("radius")` and move labels and descriptions to the resource file.
 
 In this example, we'll further add two very simple input fields to let users provide latitude and longitude of the
 geofence center.
 
-Add the following line to the `declareModel` method:
+Add the following line to the `declareConfig` method:
 
 ```java
    .requiredFloatParameter(Labels.from(LATITUDE_KEY,"Latitude","The latitude value"))
@@ -205,16 +253,16 @@ pipeline was created.
 
 ## Pipeline element invocation
 
-Once users start a pipeline that uses our geofencing component, the _onInvocation_ method in our class is called. The
-class `ProcessorParams` includes convenient access to user-configured parameters a users has selected in the pipeline
-editor and information on the acutal streams that are connected to the pipeline element.
+Once users start a pipeline that uses our geofencing component, the _onPipelineStarted_ method in our class is called. The
+interface `IDataProcessorParameters` includes convenient access to user-configured parameters a users has selected in the pipeline
+editor and information on the actual streams that are connected to the pipeline element.
 
 Next, we are interested in the fields of the input event stream that contains the latitude and longitude value we would
 like to compute against the geofence center location as follows:
 
 ```java
-String latitudeFieldName=parameters.extractor().mappingPropertyValue("latitude-field");
-    String longitudeFieldName=parameters.extractor().mappingPropertyValue("longitude-field");
+  String latitudeFieldName = params.extractor().mappingPropertyValue("latitude-field");
+  String longitudeFieldName = params.extractor().mappingPropertyValue("longitude-field");
 ```
 
 We use the same `internalId` we've used to define the mapping property requirements in the `declareModel` method.
@@ -223,41 +271,41 @@ Next, for extracting the geofence center coordinates, add to class variables cen
 assign the selected values using the following statements:
 
 ```java
-this.centerLatitude=parameters.extractor().singleValueParameter(LATITUDE_CENTER,Float.class);
-    this.centerLongitude=parameters.extractor().singleValueParameter(LONGITUDE_CENTER,Float.class);
+  this.centerLatitude = params.extractor().singleValueParameter(LATITUDE_CENTER,Float.class);
+  this.centerLongitude = params.extractor().singleValueParameter(LONGITUDE_CENTER,Float.class);
 ```
 
 The radius value can be extracted as follows:
 
 ```java
-int radius=parameters.extractor().singleValueParameter("radius",Float.class);
+  int radius = params.extractor().singleValueParameter("radius",Float.class);
 ```
 
 Great! That's all we need to describe a data processor for usage in StreamPipes. Your processor class should look as
 follows:
 
 ```java
+
 package org.apache.streampipes.pe.example;
 
-import org.apache.streampipes.commons.exceptions.SpRuntimeException;
-import org.apache.streampipes.model.DataProcessorType;
-import org.apache.streampipes.model.graph.DataProcessorDescription;
+import org.apache.streampipes.extensions.api.pe.IStreamPipesDataProcessor;
+import org.apache.streampipes.extensions.api.pe.config.IDataProcessorConfiguration;
+import org.apache.streampipes.extensions.api.pe.context.EventProcessorRuntimeContext;
+import org.apache.streampipes.extensions.api.pe.param.IDataProcessorParameters;
+import org.apache.streampipes.extensions.api.pe.routing.SpOutputCollector;
 import org.apache.streampipes.model.runtime.Event;
-import org.apache.streampipes.model.schema.PropertyScope;
 import org.apache.streampipes.sdk.builder.ProcessingElementBuilder;
 import org.apache.streampipes.sdk.builder.StreamRequirementsBuilder;
+import org.apache.streampipes.sdk.builder.processor.DataProcessorConfiguration;
+import org.apache.streampipes.sdk.helpers.EpProperties;
 import org.apache.streampipes.sdk.helpers.EpRequirements;
 import org.apache.streampipes.sdk.helpers.Labels;
-import org.apache.streampipes.sdk.helpers.Locales;
 import org.apache.streampipes.sdk.helpers.OutputStrategies;
-import org.apache.streampipes.sdk.utils.Assets;
-import org.apache.streampipes.vocabulary.Geo;
-import org.apache.streampipes.wrapper.context.EventProcessorRuntimeContext;
-import org.apache.streampipes.wrapper.routing.SpOutputCollector;
-import org.apache.streampipes.wrapper.standalone.ProcessorParams;
-import org.apache.streampipes.wrapper.standalone.StreamPipesDataProcessor;
+import org.apache.streampipes.sdk.helpers.SupportedFormats;
+import org.apache.streampipes.sdk.helpers.SupportedProtocols;
+import org.apache.streampipes.vocabulary.SO;
 
-public class GeofencingProcessor extends StreamPipesDataProcessor {
+public class GeofencingProcessor implements IStreamPipesDataProcessor {
 
   private static final String LATITUDE_CENTER = "latitude-center";
   private static final String LONGITUDE_CENTER = "longitude-center";
@@ -269,50 +317,52 @@ public class GeofencingProcessor extends StreamPipesDataProcessor {
 
   private int radius;
 
-  @Override
-  public DataProcessorDescription declareModel() {
-    return ProcessingElementBuilder.create("org.streampipes.tutorial-geofencing")
-        .category(DataProcessorType.ENRICH)
-        .withAssets(Assets.DOCUMENTATION, Assets.ICON)
-        .withLocales(Locales.EN)
-        .requiredStream(StreamRequirementsBuilder
-            .create()
-            .requiredPropertyWithUnaryMapping(EpRequirements.domainPropertyReq(Geo.lat),
-                Labels.from("latitude-field", "Latitude", "The event " +
-                    "property containing the latitude value"), PropertyScope.MEASUREMENT_PROPERTY)
-            .requiredPropertyWithUnaryMapping(EpRequirements.domainPropertyReq(Geo.lng),
-                Labels.from("longitude-field", "Longitude", "The event " +
-                    "property containing the longitude value"), PropertyScope.MEASUREMENT_PROPERTY)
-            .build())
-        .outputStrategy(OutputStrategies.keep())
-        .requiredIntegerParameter("radius", "Geofence Size", "The size of the circular geofence in meters.", 0, 1000, 1)
-        .requiredFloatParameter(Labels.from(LATITUDE_CENTER, "Latitude", "The latitude value"))
-        .requiredFloatParameter(Labels.from(LONGITUDE_CENTER, "Longitude", "The longitude value"))
-        .build();
+  public IDataProcessorConfiguration declareConfig() {
+    return DataProcessorConfiguration.create(
+        GeofencingProcessor::new,
+        ProcessingElementBuilder.create("org.streampipes.tutorial-geofencing")
+            .category(DataProcessorType.ENRICH)
+            .withAssets(Assets.DOCUMENTATION, Assets.ICON)
+            .withLocales(Locales.EN)
+            .requiredStream(StreamRequirementsBuilder
+                .create()
+                .requiredPropertyWithUnaryMapping(EpRequirements.domainPropertyReq(Geo.lat),
+                    Labels.from("latitude-field", "Latitude", "The event " +
+                        "property containing the latitude value"), PropertyScope.MEASUREMENT_PROPERTY)
+                .requiredPropertyWithUnaryMapping(EpRequirements.domainPropertyReq(Geo.lng),
+                    Labels.from("longitude-field", "Longitude", "The event " +
+                        "property containing the longitude value"), PropertyScope.MEASUREMENT_PROPERTY)
+                .build())
+            .outputStrategy(OutputStrategies.keep())
+            .requiredIntegerParameter("radius", "Geofence Size", "The size of the circular geofence in meters.", 0, 1000, 1)
+            .requiredFloatParameter(Labels.from(LATITUDE_CENTER, "Latitude", "The latitude value"))
+            .requiredFloatParameter(Labels.from(LONGITUDE_CENTER, "Longitude", "The longitude value"))
+            .build()
+    );
   }
 
   @Override
-  public void onInvocation(ProcessorParams parameters,
-                           SpOutputCollector spOutputCollector,
-                           EventProcessorRuntimeContext runtimeContext) throws SpRuntimeException {
-    this.centerLatitude = parameters.extractor().singleValueParameter(LATITUDE_CENTER, Float.class);
-    this.centerLongitude = parameters.extractor().singleValueParameter(LONGITUDE_CENTER, Float.class);
-    this.latitudeFieldName = parameters.extractor().mappingPropertyValue("latitude-field");
-    this.longitudeFieldName = parameters.extractor().mappingPropertyValue("longitude-field");
-    this.radius = parameters.extractor().singleValueParameter("radius", Integer.class);
+  public void onPipelineStarted(IDataProcessorParameters params,
+                                SpOutputCollector collector,
+                                EventProcessorRuntimeContext runtimeContext) {
+    this.centerLatitude = params.extractor().singleValueParameter(LATITUDE_CENTER, Float.class);
+    this.centerLongitude = params.extractor().singleValueParameter(LONGITUDE_CENTER, Float.class);
+    this.latitudeFieldName = params.extractor().mappingPropertyValue("latitude-field");
+    this.longitudeFieldName = params.extractor().mappingPropertyValue("longitude-field");
+    this.radius = params.extractor().singleValueParameter("radius", Integer.class);
   }
 
   @Override
-  public void onEvent(Event event, SpOutputCollector collector) throws SpRuntimeException {
+  public void onEvent(Event event,
+                      SpOutputCollector collector) {
 
   }
 
   @Override
-  public void onDetach() throws SpRuntimeException {
+  public void onPipelineStopped() {
 
   }
 }
-
 
 ```
 
@@ -324,29 +374,30 @@ Add the following piece of code to the onEvent method, which realizes the Geofen
 
 ```java
 
-@Override
-public void onEvent(Event event,SpOutputCollector collector)throws SpRuntimeException{
-    float latitude=event.getFieldBySelector(latitudeFieldName).getAsPrimitive().getAsFloat();
-    float longitude=event.getFieldBySelector(longitudeFieldName).getAsPrimitive().getAsFloat();
-
-    float distance=distFrom(latitude,longitude,centerLatitude,centerLongitude);
-
-    if(distance<=radius){
-    collector.collect(event);
+    @Override
+    public void onEvent(Event event, 
+                        SpOutputCollector collector) {
+        float latitude = event.getFieldBySelector(latitudeFieldName).getAsPrimitive().getAsFloat();
+        float longitude = event.getFieldBySelector(longitudeFieldName).getAsPrimitive().getAsFloat();
+    
+        float distance = distFrom(latitude,longitude, centerLatitude, centerLongitude);
+    
+        if(distance <= radius){
+          collector.collect(event);
+        }
     }
-    }
-
-public static float distFrom(float lat1,float lng1,float lat2,float lng2){
-    double earthRadius=6371000;
-    double dLat=Math.toRadians(lat2-lat1);
-    double dLng=Math.toRadians(lng2-lng1);
-    double a=Math.sin(dLat/2)*Math.sin(dLat/2)+
-    Math.cos(Math.toRadians(lat1))*Math.cos(Math.toRadians(lat2))*
-    Math.sin(dLng/2)*Math.sin(dLng/2);
-    double c=2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
-    return(float)(earthRadius*c);
-    }
-
+    
+    public static float distFrom(float lat1, float lng1, float lat2, float lng2) {
+        double earthRadius = 6371000;
+        double dLat = Math.toRadians(lat2-lat1);
+        double dLng = Math.toRadians(lng2-lng1);
+        double a = Math.sin(dLat/2)*Math.sin(dLat/2) +
+        Math.cos(Math.toRadians(lat1))*Math.cos(Math.toRadians(lat2)) *
+        Math.sin(dLng/2)*Math.sin(dLng/2);
+        
+        double c = 2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
+        
+        return(float)(earthRadius*c);
     }
 ```
 
