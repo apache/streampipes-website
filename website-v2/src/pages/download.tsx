@@ -29,7 +29,7 @@ const Downloads: FC = () => (
       <div className="installation-manual-part">
         <h5 className="feature-item-margin"><span className="feature-highlights-bg">Installation</span></h5>
         <ul>
-          <DownloadSection version={'0.92.0'} showMoreInfo={true} releaseDate={'2023-06-16'}></DownloadSection>
+          <DownloadSection version={'0.93.0'} showMoreInfo={true} releaseDate={'2023-11-27'}></DownloadSection>
           <hr/>
         </ul>
       </div>
@@ -49,7 +49,7 @@ const Downloads: FC = () => (
                                                     </span>
               </div>
               <div className="col-md-11 col-9">
-                Check the <a href="/docs/"> user
+                Check the <a href="/docs/user-guide-introduction/"> user
                 guide</a> and learn how to make your first steps with StreamPipes!
               </div>
             </div>
