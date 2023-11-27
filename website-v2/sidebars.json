@@ -2,7 +2,8 @@
   "documentation": {
     "🚀 Try StreamPipes": [
       "user-guide-introduction",
-      "try-installation"
+      "try-installation",
+      "user-guide-for-quickstart"
     ],
     "💡 Concepts": [
       "introduction",
@@ -198,7 +199,6 @@
       "extend-sdk-stream-requirements",
       "extend-sdk-static-properties",
       "extend-sdk-output-strategies",
-      "extend-sdk-migration-service-discovery",
       "extend-customize-ui"
     ],
     "🔧 Technicals": [

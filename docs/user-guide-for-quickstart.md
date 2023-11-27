@@ -1,7 +1,7 @@
 ---
 id: user-guide-for-quickstart
 title: Quickstart Tour
-sidebar_label: Tour
+sidebar_label: Quickstart Tour
 ---
 
 Apache StreamPipes is a self-service Industrial IoT toolbox to enable non-technical users to connect, analyze and explore IoT data streams.
