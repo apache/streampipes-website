@@ -22,7 +22,7 @@ again) and check that Docker is installed correctly by executing docker-run hell
 
 ### Supported operating systems
 
-The Docker-based installation supports the operating systems **Linux**, **Mac OS X** and **Windows 10**. Older windows
+The Docker-based installation supports the operating systems **Linux**, **Mac OS X** and **Windows 10 upwards**. Older windows
 versions are not fully compatible with Docker. Linux VMs running under Windows might cause network problems with Docker,
 therefore some manual work might be needed to make StreamPipes run properly.
 

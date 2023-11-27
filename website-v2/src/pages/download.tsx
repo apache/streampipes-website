@@ -18,7 +18,7 @@ const Downloads: FC = () => (
         <h6></h6>
         <ul>
           <li className={"no-list-style"}><i className="fas fa-check sp-color-green"></i>The Docker-based installation works with Linux, MacOS and
-            Windows 10.
+            Windows upwards.
           </li>
           <li className={"no-list-style"}><i className="fas fa-check sp-color-green"></i> Install <a
             href="https://docs.docker.com/install/" target="_blank">Docker</a> and <a
@@ -29,7 +29,7 @@ const Downloads: FC = () => (
       <div className="installation-manual-part">
         <h5 className="feature-item-margin"><span className="feature-highlights-bg">Installation</span></h5>
         <ul>
-          <DownloadSection version={'0.92.0'} showMoreInfo={true} releaseDate={'2023-06-16'}></DownloadSection>
+          <DownloadSection version={'0.93.0'} showMoreInfo={true} releaseDate={'2023-11-27'}></DownloadSection>
           <hr/>
         </ul>
       </div>

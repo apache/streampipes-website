@@ -6,6 +6,9 @@
     --ifm-color-primary-dark: #18125A;
     --ifm-color-primary-darker: #171155;
     --ifm-color-primary-darkest: #130E46;
+    --ifm-code-background: var(--color-primary-light);
+    --ifm-code-padding-horizontal: 0.2rem;
+    --ifm-code-padding-vertical: 0.12rem;
 
     --color-primary: rgb(27, 20, 100);
     --color-accent: rgb(57, 181, 74);
@@ -15,6 +18,10 @@
     --ifm-navbar-height: 4.5rem;
 
     --ifm-heading-font-family: 'Roboto';
+}
+
+code {
+    color: var(--color-accent);
 }
 
 .navbar__logo {

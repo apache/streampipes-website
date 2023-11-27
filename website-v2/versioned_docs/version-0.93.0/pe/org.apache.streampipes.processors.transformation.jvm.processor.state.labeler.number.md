@@ -1,7 +1,7 @@
 ---
-id: org.apache.streampipes.processors.enricher.jvm.sizemeasure
-title: Size Measure
-sidebar_label: Size Measure
+id: org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number
+title: Number Labeler
+sidebar_label: Number Labeler
 ---
 
 <!--
@@ -24,26 +24,35 @@ sidebar_label: Size Measure
 
 
 
-<p align="center"> 
-    <img src="/img/pipeline-elements/org.apache.streampipes.processors.enricher.jvm.sizemeasure/icon.png" width="150px;" class="pe-image-documentation"/>
+<p align="center">
+    <img src="/img/pipeline-elements/org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***
 
 ## Description
 
-Measures the size of an incoming event and appends this number to the event by serializing it.
+Apply a rule to a value of a field. (E.g. when minimum value is lower then 10, add label `not ok` else add label `ok`)
 
 ***
 
 ## Required input
-The size measure processor does not have any specific input requirements.
+
+Requires a sensor value
+
+### Sensor value
+
+A number representing the current sensor value.
 
 ***
 
 ## Configuration
 
-You can specify if the size should be in Bytes, Kilobytes (1024 Bytes) or in Megabytes (1024 Kilobytes).
+### Condition
+Define a rule which label to add. Example: `<;5;nok` means when the calculated value is smaller then 5 add label ok.
+The default label can be defined with `*;nok`.
+The first rule that is true defines the label. Rules are applied in the same order as defined here.
+
 
 ## Output
-The size measure processor appends the size of the event (without the field, which is getting added) as a double. The rest of the event stays the same.
+Appends a new field  with the label defined in the Condition Configuration

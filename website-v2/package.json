@@ -6,7 +6,7 @@
     "serve": "docusaurus serve",
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
-    "ds-version": "docusaurus-version",
+    "ds-version": "docusaurus docs:version",
     "rename-version": "docusaurus-rename-version",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
