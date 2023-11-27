@@ -52,7 +52,7 @@ that [Apache Maven](https://maven.apache.org/install.html) isinstalled):
 ```bash
 mvn archetype:generate \
 -DarchetypeGroupId=org.apache.streampipes -DarchetypeArtifactId=streampipes-archetype-extensions-jvm \
--DarchetypeVersion=0.93.0-SNAPSHOT -DgroupId=org.apache.streampipes \
+-DarchetypeVersion=0.93.0 -DgroupId=org.apache.streampipes \
 -DartifactId=streampipes-archetype-extensions-jvm -DclassNamePrefix=ParcelControlStation -DpackageName=parcelcontrol
 ```
 
