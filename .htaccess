@@ -18,3 +18,6 @@
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteRule ^docs\/*$ docs/user-guide-introduction/ [L]  # forward base path of docs to introduction page
+RewriteRule "/docs/0.92.0/concepts-overview/06_extend-tutorial-adapters.md/" "docs/0.92.0/extend-tutorial-data-sources/"  # forward wrong link definition to correct target
