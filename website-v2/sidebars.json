@@ -159,6 +159,7 @@
           "pe/org.apache.streampipes.sinks.brokers.jvm.jms",
           "pe/org.apache.streampipes.sinks.brokers.jvm.kafka",
           "pe/org.apache.streampipes.sinks.brokers.jvm.mqtt",
+          "pe/org.apache.streampipes.sinks.notifications.jvm.msteams",
           "pe/org.apache.streampipes.sinks.brokers.jvm.nats",
           "pe/org.apache.streampipes.sinks.internal.jvm.notification",
           "pe/org.apache.streampipes.sinks.databases.jvm.opcua",
