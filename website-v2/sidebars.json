@@ -70,6 +70,7 @@
           "pe/org.apache.streampipes.processors.filters.jvm.compose",
           "pe/org.apache.streampipes.processors.transformation.jvm.count-array",
           "pe/org.apache.streampipes.processors.siddhi.count",
+          "pe/org.apache.streampipes.processors.transformation.jvm.datetime",
           "pe/org.apache.streampipes.processors.transformation.jvm.fieldhasher",
           "pe/org.apache.streampipes.processors.transformation.jvm.field-mapper",
           "pe/org.apache.streampipes.processors.transformation.jvm.fieldrename",
