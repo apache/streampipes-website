@@ -61,7 +61,6 @@ The channel type, should be "User" or "Channel"
 
 The message that should be sent.
 
-
 ## Output
 
 (not applicable for data sinks)
