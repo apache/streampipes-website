@@ -30,9 +30,23 @@ sidebar_label: HTTP Server
 
 ***
 
+
 ## Description
 
-Continuously fetched events from an HTTP REST endpoint.
+This adapter provides an HTTP endpoint for ingesting events.  
+Data sent to this endpoint via POST requests is transformed into StreamPipes events.
+
+### Configuration
+
+#### Endpoint Appendix
+   Specify the name of the endpoint resource. The endpoint can be accessed at {host of StreamPipes UI}/endpoints/{endpointName}
+
+#### Configuration
+##### Manual
+Provides an option to define the event schema manually.
+
+##### Import from file
+Use a file with example data to automatically detect a first event schema
 
 ***
 
