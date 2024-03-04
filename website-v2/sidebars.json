@@ -121,6 +121,7 @@
           "pe/org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge",
           "pe/org.apache.streampipes.processors.transformation.jvm.split-array",
           "pe/org.apache.streampipes.processors.enricher.jvm.processor.math.staticmathop",
+          "pe/org.apache.streampipes.processors.transformation.jvm.processor.staticmetadata",
           "pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.counter",
           "pe/org.apache.streampipes.processors.transformation.jvm.stringoperator.timer",
           "pe/org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state",
