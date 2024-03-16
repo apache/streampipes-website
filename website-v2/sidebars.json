@@ -41,6 +41,7 @@
           "pe/org.apache.streampipes.connect.iiot.protocol.stream.nats",
           "pe/org.apache.streampipes.connect.iiot.adapters.netio.mqtt",
           "pe/org.apache.streampipes.connect.iiot.adapters.netio.rest",
+          "pe/org.apache.streampipes.connect.iiot.adapters.oi4",
           "pe/org.apache.streampipes.connect.iiot.adapters.opcua",
           "pe/org.apache.streampipes.connect.iiot.adapters.plc4x.modbus",
           "pe/org.apache.streampipes.connect.iiot.adapters.plc4x.s7",
