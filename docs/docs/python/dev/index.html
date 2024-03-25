@@ -2235,17 +2235,7 @@
 <p><img alt="StreamPipes Logo with Python" src="img/streampipes-python.png#only-light" />
 <img alt="StreamPipes Logo with Python" src="img/streampipes-python-dark.png#only-dark" /></p>
 <h4 align="center"><a href="https://github.com/apache/streampipes">StreamPipes</a> is a self-service (Industrial) IoT toolbox to enable non-technical users to connect, analyze and explore IoT data streams.</h4>
-<p><br></p>
-<div class="admonition danger">
-<p class="admonition-title">Dependency issue with StreamPipes Python 0.92.0</p>
-<p>In StreamPipes Python <code>0.92.0</code> there is a problem with the required dependencies.<br>
-Pydantic has recently released the new version <code>2.0</code> with many exciting improvements, but also some breaking changes. 
-Unfortunately, we didn't limit our requirements strictly enough, so yydantic <code>2.0</code> is installed together with streampipes, which is not (yet) compatible.<br>
-To fix this bug, simply run the following command after installing streampipes, or adjust your dependencies accordingly:</p>
-<div class="language-python highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;pydantic&lt;2.0&quot;</span> <span class="s2">&quot;pydantic_core&lt;2.0&quot;</span>
-</code></pre></div>
-</div>
-<p><br></p>
+
 <h3 align="center">Apache StreamPipes for Python 🐍</h3>
 
 <p align="center"> Apache StreamPipes meets Python! We are working highly motivated on a Python library to interact with StreamPipes.

@@ -1006,7 +1006,7 @@
       
         <li class="md-nav__item">
   <a href="#streampipes.endpoint.api.data_lake_measure" class="md-nav__link">
-    streampipes.endpoint.api.data_lake_measure
+    data_lake_measure
   </a>
   
 </li>
@@ -1021,7 +1021,7 @@
         
           <li class="md-nav__item">
   <a href="#streampipes.endpoint.api.data_lake_measure.DataLakeMeasureEndpoint.get" class="md-nav__link">
-    get()
+    get
   </a>
   
 </li>
@@ -1048,7 +1048,7 @@
         
           <li class="md-nav__item">
   <a href="#streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig.build_query_string" class="md-nav__link">
-    build_query_string()
+    build_query_string
   </a>
   
 </li>
@@ -2253,7 +2253,7 @@
       
         <li class="md-nav__item">
   <a href="#streampipes.endpoint.api.data_lake_measure" class="md-nav__link">
-    streampipes.endpoint.api.data_lake_measure
+    data_lake_measure
   </a>
   
 </li>
@@ -2268,7 +2268,7 @@
         
           <li class="md-nav__item">
   <a href="#streampipes.endpoint.api.data_lake_measure.DataLakeMeasureEndpoint.get" class="md-nav__link">
-    get()
+    get
   </a>
   
 </li>
@@ -2295,7 +2295,7 @@
         
           <li class="md-nav__item">
   <a href="#streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig.build_query_string" class="md-nav__link">
-    build_query_string()
+    build_query_string
   </a>
   
 </li>
@@ -2335,6 +2335,7 @@
 <div class="doc doc-object doc-module">
 
 
+
 <a id="streampipes.endpoint.api.data_lake_measure"></a>
   <div class="doc doc-contents first">
   
@@ -2357,8 +2358,7 @@ This endpoint allows to consume data stored in StreamPipes' data lake.</p>
 
 
 <h2 id="streampipes.endpoint.api.data_lake_measure.DataLakeMeasureEndpoint" class="doc doc-heading">
-          <code>DataLakeMeasureEndpoint</code>
-
+            <code class="highlight language-python"><span class="n">DataLakeMeasureEndpoint</span><span class="p">(</span><span class="n">parent_client</span><span class="p">)</span></code>
 
 <a href="#streampipes.endpoint.api.data_lake_measure.DataLakeMeasureEndpoint" class="headerlink" title="Permanent link">&para;</a></h2>
 
@@ -2454,7 +2454,7 @@ find them at <a class="autorefs autorefs-internal" href="#streampipes.endpoint.a
 
 
 <h3 id="streampipes.endpoint.api.data_lake_measure.DataLakeMeasureEndpoint.get" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">identifier</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">identifier</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#streampipes.endpoint.api.data_lake_measure.DataLakeMeasureEndpoint.get" class="headerlink" title="Permanent link">&para;</a></h3>
 
@@ -2557,6 +2557,7 @@ The available query parameters are defined by the
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -2572,7 +2573,7 @@ The available query parameters are defined by the
 
   <div class="doc doc-contents ">
           <p class="doc doc-class-bases">
-            Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+            Bases: <code><span title="pydantic.v1.BaseModel">BaseModel</span></code></p>
 
   
       <p>Config class describing the parameters of the <code>get()</code> method for measurements.</p>
@@ -2592,7 +2593,7 @@ for which <a href="https://docs.pydantic.dev/usage/model_config/#options">Pydant
     </thead>
     <tbody>
         <tr>
-          <td><code>columns</code></td>
+          <td><code><span title="streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig.columns">columns</span></code></td>
           <td class="doc-attribute-details">
             <div class="doc-md-description">
               <p>A comma separated list of column names (e.g., <code>time,value</code>)<br>
@@ -2608,7 +2609,7 @@ Please be aware that the column <code>time</code> as an index is always included
           </td>
         </tr>
         <tr>
-          <td><code>end_date</code></td>
+          <td><code><span title="streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig.end_date">end_date</span></code></td>
           <td class="doc-attribute-details">
             <div class="doc-md-description">
               <p>Restricts queried data to be younger than the specified time.</p>
@@ -2622,7 +2623,7 @@ Please be aware that the column <code>time</code> as an index is always included
           </td>
         </tr>
         <tr>
-          <td><code>limit</code></td>
+          <td><code><span title="streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig.limit">limit</span></code></td>
           <td class="doc-attribute-details">
             <div class="doc-md-description">
               <p>Amount of records returned at maximum (default: <code>1000</code>) <br>
@@ -2637,7 +2638,7 @@ This needs to be at least <code>1</code></p>
           </td>
         </tr>
         <tr>
-          <td><code>offset</code></td>
+          <td><code><span title="streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig.offset">offset</span></code></td>
           <td class="doc-attribute-details">
             <div class="doc-md-description">
               <p>Offset to be applied to returned data <br>
@@ -2652,7 +2653,7 @@ This needs to be at least <code>0</code></p>
           </td>
         </tr>
         <tr>
-          <td><code>order</code></td>
+          <td><code><span title="streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig.order">order</span></code></td>
           <td class="doc-attribute-details">
             <div class="doc-md-description">
               <p>Ordering of query results <br>
@@ -2667,7 +2668,7 @@ Allowed values: <code>ASC</code> and <code>DESC</code> (default: <code>ASC</code
           </td>
         </tr>
         <tr>
-          <td><code>page_no</code></td>
+          <td><code><span title="streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig.page_no">page_no</span></code></td>
           <td class="doc-attribute-details">
             <div class="doc-md-description">
               <p>Page number used for paging operation <br>
@@ -2682,7 +2683,7 @@ This needs to be at least <code>1</code></p>
           </td>
         </tr>
         <tr>
-          <td><code>start_date</code></td>
+          <td><code><span title="streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig.start_date">start_date</span></code></td>
           <td class="doc-attribute-details">
             <div class="doc-md-description">
               <p>Restricts queried data to be older than the specified time</p>
@@ -2745,6 +2746,7 @@ This needs to be at least <code>1</code></p>
 
   </div>
 
+
 </div>
 
 
@@ -2754,7 +2756,7 @@ This needs to be at least <code>1</code></p>
 
 
 <h3 id="streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig.build_query_string" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">build_query_string</span><span class="p">()</span></code>
+          <code class="highlight language-python"><span class="n">build_query_string</span><span class="p">()</span></code>
 
 <a href="#streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig.build_query_string" class="headerlink" title="Permanent link">&para;</a></h3>
 
@@ -2805,6 +2807,7 @@ This query string is not an entire URL, instead it needs to appended to an API p
 
   </div>
 
+
 </div>
 
 <div class="doc doc-object doc-class">
@@ -2828,6 +2831,7 @@ causes an error.</p>
 
 
   </div>
+
 
 </div>
 
