@@ -28,9 +28,7 @@
           "pe/org.apache.streampipes.connect.iiot.protocol.stream.pulsar",
           "pe/org.apache.streampipes.connect.iiot.protocol.stream.rocketmq",
           "pe/org.apache.streampipes.connect.iiot.protocol.stream.tubemq",
-          "pe/org.apache.streampipes.connect.adapters.coindesk",
           "pe/org.apache.streampipes.connect.iiot.protocol.stream.file",
-          "pe/org.apache.streampipes.connect.adapters.flic.mqtt",
           "pe/org.apache.streampipes.connect.iiot.protocol.stream.httpserver",
           "pe/org.apache.streampipes.connect.iiot.protocol.stream.http",
           "pe/org.apache.streampipes.connect.adapters.iss",
@@ -46,10 +44,6 @@
           "pe/org.apache.streampipes.connect.iiot.adapters.plc4x.modbus",
           "pe/org.apache.streampipes.connect.iiot.adapters.plc4x.s7",
           "pe/org.apache.streampipes.connect.iiot.adapters.ros",
-          "pe/org.apache.streampipes.connect.adapters.slack",
-          "pe/org.apache.streampipes.connect.adapters.ti",
-          "pe/org.apache.streampipes.connect.adapters.wikipedia.edit",
-          "pe/org.apache.streampipes.connect.adapters.wikipedia.new",
           "pe/org.apache.streampipes.connect.iiot.adapters.iolink"
         ]
       },
