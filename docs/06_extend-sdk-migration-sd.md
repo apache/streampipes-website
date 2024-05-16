@@ -98,15 +98,16 @@ Configs can be easily accessed from the ``EventProcessorRuntimeContext`` (or ``E
 
 
 ### Service Discovery
-An extensions service can be started by executing the Init class. StreamPipes will now automatically select the proper service IP address and register the service in Consul.
+An extensions service can be started by executing the Init class. 
+StreamPipes will now automatically select the proper service IP address and register the service at the backend.
 You can inspect the selected IP address in the console:
 
 ```
-16:41:58.342 SP [main] INFO  o.a.s.commons.networking.Networking - Using auto-discovered IP: 172.30.80.1
-16:41:58.364 SP [main] INFO  o.a.s.commons.networking.Networking - Using port from provided environment variable SP_PORT: 6025
-16:41:58.367 SP [main] INFO  o.a.s.c.init.DeclarersSingleton - Registering 0 configs in key/value store
-16:41:58.400 SP [main] INFO  o.a.s.s.consul.ConsulProvider - Checking if consul is available...
-16:41:58.419 SP [main] INFO  o.a.s.s.consul.ConsulProvider - Successfully connected to Consul
+2024-05-16T11:03:37.158+02:00  INFO   --- [           main] o.a.s.commons.networking.Networking      : Using auto-discovered IP: 192.168.178.22
+2024-05-16T11:03:37.158+02:00  INFO   --- [           main] o.a.s.commons.networking.Networking      : Using port from provided environment variable SP_PORT: 7023
+2024-05-16T11:03:37.372+02:00  INFO   --- [           main] a.s.s.e.StreamPipesExtensionsServiceBase : Registering service org.apache.streampipes.extensions.all.jvm with id org.apache.streampipes.extensions.all.jvm-FUt84Y at core
+2024-05-16T11:03:37.814+02:00  INFO   --- [           main] o.a.s.s.extensions.CoreRequestSubmitter  : Successfully registered service at core.
+2024-05-16T11:03:37.814+02:00  INFO   --- [           main] a.s.s.e.StreamPipesExtensionsServiceBase : Registering 1 service configs for service org.apache.streampipes.extensions.all.jvm
 ```
 
 In some (rare) cases, a non-resolvable IP will be selected. In this case, you can manually override the IP by providing a ``SP_HOST`` environment variable. This falls back to a similar behaviour as in pre-0.69.0-versions and will use the manually provided IP.
