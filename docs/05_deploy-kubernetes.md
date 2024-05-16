@@ -99,22 +99,6 @@ Here is an overview of the supported parameters to configure StreamPipes.
 
 ### External common parameters
 
-#### Consul common parameters
-
-| Parameter Name                                  | Description                                              | Value                                    |
-|-------------------------------------------------|----------------------------------------------------------|------------------------------------------|
-| external.consul.appName                         | Consul application name                                  | "consul"                                 |
-| external.consul.version                         | Consul version                                           | 1.14.3                                   |
-| external.consul.webPort                         | Port number for the Consul web interface                 | 8500                                     |
-| external.consul.dnsPort                         | Port number for the Consul DNS interface                 | 8600                                     |
-| external.consul.persistence.storageClassName    | Storage class name for Consul PVs                        | "hostpath"                               |
-| external.consul.persistence.storageSize         | Size of the Consul PV                                    | "1Gi"                                    |
-| external.consul.persistence.claimName           | Name of the Consul PersistentVolumeClaim                 | "consul-pvc"                             |
-| external.consul.persistence.pvName              | Name of the Consul PersistentVolume                      | "consul-pv"                              |
-| external.consul.service.name                    | Name of the Consul service                               | "consul"                                 |
-| external.consul.service.webPort                 | TargetPort of the Consul service for web interface       | 8500                                     |
-| external.consul.service.dnsPort                 | TargetPort of the Consul service for DNS interface       | 8600                                     |
-
 #### Couchdb common parameters
 
 | Parameter Name                                  | Description                                              | Value                                    |
