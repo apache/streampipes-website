@@ -2132,8 +2132,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#streampipes.model.resource.query_result.QueryResult.Config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#streampipes.model.resource.query_result.QueryResult.convert_to_pandas_representation" class="md-nav__link">
     convert_to_pandas_representation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streampipes.model.resource.query_result.QueryResult.to_dict" class="md-nav__link">
+    to_dict
   </a>
   
 </li>
@@ -2262,8 +2276,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#streampipes.model.resource.query_result.QueryResult.Config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#streampipes.model.resource.query_result.QueryResult.convert_to_pandas_representation" class="md-nav__link">
     convert_to_pandas_representation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streampipes.model.resource.query_result.QueryResult.to_dict" class="md-nav__link">
+    to_dict
   </a>
   
 </li>
@@ -2352,6 +2380,45 @@ the Python representation (both serialized and deserialized) and Java representa
 
 
 
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="streampipes.model.resource.query_result.QueryResult.Config" class="doc doc-heading">
+          <code>Config</code>
+
+
+<a href="#streampipes.model.resource.query_result.QueryResult.Config" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>Configuration class for Pydantic.
+Defines alias generator to convert field names from camelCase (API) to snake_case (Python codebase).</p>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+
+</div>
+
 
 
 <div class="doc doc-object doc-function">
@@ -2415,6 +2482,82 @@ to be used when creating a pandas Dataframe.</p>
             <div class="doc-md-description">
               <p>If the query result returned by the StreamPipes API cannot be converted to the pandas representation</p>
             </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="streampipes.model.resource.query_result.QueryResult.to_dict" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">to_dict</span><span class="p">(</span><span class="n">use_source_names</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+<a href="#streampipes.model.resource.query_result.QueryResult.to_dict" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Returns the resource in dictionary representation.</p>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b> DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>use_source_names</code></td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Indicates if the dictionary keys are in python representation or
+equally named to the StreamPipes backend</p>
+            </div>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>True</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>resource</code>
+          </td>
+          <td class="doc-returns-details">
+            <div class="doc-md-description">
+              <p>The resource as dictionary representation</p>
+            </div>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code><span title="typing.Dict">Dict</span>[str, Any]</code>
+                </span>
+              </p>
           </td>
         </tr>
     </tbody>
