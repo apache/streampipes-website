@@ -914,6 +914,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#streampipes.client.credential_provider.StreamPipesApiKeyCredentials.make_headers" class="md-nav__link">
+    make_headers
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2299,6 +2306,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#streampipes.client.credential_provider.StreamPipesApiKeyCredentials.make_headers" class="md-nav__link">
+    make_headers
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2668,6 +2682,88 @@ If not passed, the api key is retrieved from environment variable <code>SP_API_K
             <div class="doc-md-description">
               <p>If one of the environment variables is not defined</p>
             </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="streampipes.client.credential_provider.StreamPipesApiKeyCredentials.make_headers" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">make_headers</span><span class="p">(</span><span class="n">http_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#streampipes.client.credential_provider.StreamPipesApiKeyCredentials.make_headers" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Creates the HTTP headers for the specific credential provider.</p>
+<p>Concrete authentication headers must be defined in the implementation of a credential provider.</p>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b> DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>http_headers</code></td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Additional HTTP headers the generated headers are extended by.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>[str, str]]</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>https_headers</code>
+          </td>
+          <td class="doc-returns-details">
+            <div class="doc-md-description">
+              <p>Dictionary with header information as string key-value pairs. <br>
+Contains all pairs given as parameter plus the header pairs for authentication
+determined by the credential provider.</p>
+            </div>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code><span title="typing.Dict">Dict</span>[str, str]</code>
+                </span>
+              </p>
           </td>
         </tr>
     </tbody>
