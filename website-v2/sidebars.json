@@ -164,6 +164,7 @@
           "pe/org.apache.streampipes.sinks.databases.jvm.postgresql",
           "pe/org.apache.streampipes.sinks.brokers.jvm.pulsar",
           "pe/org.apache.streampipes.sinks.brokers.jvm.rest",
+          "pe/org.apache.streampipes.connectors.ros.sink",
           "pe/org.apache.streampipes.sinks.brokers.jvm.rabbitmq",
           "pe/org.apache.streampipes.sinks.databases.jvm.redis",
           "pe/org.apache.streampipes.sinks.brokers.jvm.rocketmq",
