@@ -40,7 +40,7 @@
         <link rel="next" href="../version/">
       
       
-      <link rel="icon" href="https://streampipes.apache.org/img/favicon/favicon.png">
+      <link rel="icon" href="https://streampipes.apache.org/img/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.2">
     
     
@@ -236,6 +236,8 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -1057,6 +1059,40 @@
   <a href="#streampipes.endpoint.api.data_stream.DataStreamEndpoint" class="md-nav__link">
     DataStreamEndpoint
   </a>
+  
+    <nav class="md-nav" aria-label="DataStreamEndpoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#streampipes.endpoint.api.data_stream.DataStreamEndpoint.all" class="md-nav__link">
+    all
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streampipes.endpoint.api.data_stream.DataStreamEndpoint.build_url" class="md-nav__link">
+    build_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streampipes.endpoint.api.data_stream.DataStreamEndpoint.get" class="md-nav__link">
+    get
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streampipes.endpoint.api.data_stream.DataStreamEndpoint.post" class="md-nav__link">
+    post
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2238,6 +2274,40 @@
     DataStreamEndpoint
   </a>
   
+    <nav class="md-nav" aria-label="DataStreamEndpoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#streampipes.endpoint.api.data_stream.DataStreamEndpoint.all" class="md-nav__link">
+    all
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streampipes.endpoint.api.data_stream.DataStreamEndpoint.build_url" class="md-nav__link">
+    build_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streampipes.endpoint.api.data_stream.DataStreamEndpoint.get" class="md-nav__link">
+    get
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streampipes.endpoint.api.data_stream.DataStreamEndpoint.post" class="md-nav__link">
+    post
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2254,6 +2324,11 @@
                 
                   
 
+  
+    <a href="https://github.com/apache/streampipes/blob/dev/streampipes-client-python/docs/streampipes/endpoint/api/data_stream.py" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
   
   
 
@@ -2335,6 +2410,250 @@ The metadata is returned as an instance of <a class="autorefs autorefs-internal"
 
 
 
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="streampipes.endpoint.api.data_stream.DataStreamEndpoint.all" class="doc doc-heading">
+          <code class="highlight language-python"><span class="nb">all</span><span class="p">()</span></code>
+
+<a href="#streampipes.endpoint.api.data_stream.DataStreamEndpoint.all" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get all resources of this endpoint provided by the StreamPipes API.</p>
+<p>Results are provided as an instance of a <code>ResourceContainer</code> that
+allows to handle the returned resources in a comfortable and pythonic way.</p>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>container</code>
+          </td>
+          <td class="doc-returns-details">
+            <div class="doc-md-description">
+              <p>container element that bundles the returned resources</p>
+            </div>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="streampipes.model.container.resource_container.ResourceContainer" href="../../../model/container/resource_container/#streampipes.model.container.resource_container.ResourceContainer">ResourceContainer</a></code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="streampipes.endpoint.api.data_stream.DataStreamEndpoint.build_url" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">build_url</span><span class="p">()</span></code>
+
+<a href="#streampipes.endpoint.api.data_stream.DataStreamEndpoint.build_url" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Builds the endpoint's URL of the API path.</p>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>url</code>
+          </td>
+          <td class="doc-returns-details">
+            <div class="doc-md-description">
+              <p>The URL of the endpoint</p>
+            </div>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code>str</code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="streampipes.endpoint.api.data_stream.DataStreamEndpoint.get" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">identifier</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#streampipes.endpoint.api.data_stream.DataStreamEndpoint.get" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Queries the specified resource from the API endpoint.</p>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b> DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>identifier</code></td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>The identifier of the resource to be queried.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>str</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>resource</code>
+          </td>
+          <td class="doc-returns-details">
+            <div class="doc-md-description">
+              <p>The specified resource as an instance of the corresponding model class.</p>
+            </div>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="streampipes.model.resource.resource.Resource" href="../../../model/resource/resource/#streampipes.model.resource.resource.Resource">Resource</a></code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="streampipes.endpoint.api.data_stream.DataStreamEndpoint.post" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">post</span><span class="p">(</span><span class="n">resource</span><span class="p">)</span></code>
+
+<a href="#streampipes.endpoint.api.data_stream.DataStreamEndpoint.post" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Allows to post a resource to the StreamPipes API.</p>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b> DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>resource</code></td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>The resource to be posted.</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><a class="autorefs autorefs-internal" title="streampipes.model.resource.resource.Resource" href="../../../model/resource/resource/#streampipes.model.resource.resource.Resource">Resource</a></code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <span class="doc-returns-annotation">
+                  <code>None</code>
+              </span>
+          </td>
+          <td class="doc-returns-details">
+            <div class="doc-md-description">
+              
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
 
   </div>
 
@@ -2409,7 +2728,7 @@ The metadata is returned as an instance of <a class="autorefs autorefs-internal"
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.indexes", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.action.edit", "content.code.copy", "navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.indexes", "navigation.tracking", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
