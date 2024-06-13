@@ -40,7 +40,7 @@
         <link rel="next" href="../../../function_zoo/river_function/">
       
       
-      <link rel="icon" href="https://streampipes.apache.org/img/favicon/favicon.png">
+      <link rel="icon" href="https://streampipes.apache.org/img/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.2">
     
     
@@ -236,6 +236,8 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -1084,6 +1086,13 @@
           <li class="md-nav__item">
   <a href="#streampipes.endpoint.api.version.VersionEndpoint.all" class="md-nav__link">
     all
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streampipes.endpoint.api.version.VersionEndpoint.build_url" class="md-nav__link">
+    build_url
   </a>
   
 </li>
@@ -2276,6 +2285,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#streampipes.endpoint.api.version.VersionEndpoint.build_url" class="md-nav__link">
+    build_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#streampipes.endpoint.api.version.VersionEndpoint.get" class="md-nav__link">
     get
   </a>
@@ -2308,6 +2324,11 @@
                 
                   
 
+  
+    <a href="https://github.com/apache/streampipes/blob/dev/streampipes-client-python/docs/streampipes/endpoint/api/version.py" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
   
   
 
@@ -2463,6 +2484,54 @@ However, this endpoint does not support this kind of operation.</p>
 
 
 
+<h3 id="streampipes.endpoint.api.version.VersionEndpoint.build_url" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">build_url</span><span class="p">()</span></code>
+
+<a href="#streampipes.endpoint.api.version.VersionEndpoint.build_url" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Builds the endpoint's URL of the API path.</p>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+              <code>url</code>
+          </td>
+          <td class="doc-returns-details">
+            <div class="doc-md-description">
+              <p>The URL of the endpoint</p>
+            </div>
+              <p>
+                <span class="doc-returns-annotation">
+                  <b>TYPE:</b>
+                    <code>str</code>
+                </span>
+              </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
 <h3 id="streampipes.endpoint.api.version.VersionEndpoint.get" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">identifier</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
@@ -2506,6 +2575,31 @@ However, this endpoint does not support this kind of operation.</p>
   <table>
     <thead>
       <tr>
+        <th><b>RAISES</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+            <span class="doc-raises-annotation">
+                <code>ValueError</code>
+            </span>
+          </td>
+          <td class="doc-raises-details">
+            <div class="doc-md-description">
+              <p>Non-empty <code>identifier</code> is not supported by this endpoint. Please set <code>identifier</code> to an empty string or <code>None</code>.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <table>
+    <thead>
+      <tr>
         <th><b>RETURNS</b></th>
         <th><b>DESCRIPTION</b></th>
       </tr>
@@ -2522,7 +2616,7 @@ However, this endpoint does not support this kind of operation.</p>
               <p>
                 <span class="doc-returns-annotation">
                   <b>TYPE:</b>
-                    <code>Version</code>
+                    <code><a class="autorefs autorefs-internal" title="streampipes.model.resource.Version" href="../../../model/resource/version/#streampipes.model.resource.version.Version">Version</a></code>
                 </span>
               </p>
           </td>
@@ -2654,7 +2748,7 @@ Since the data represented by this endpoint is immutable, it does not support th
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.indexes", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.action.edit", "content.code.copy", "navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.indexes", "navigation.tracking", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
