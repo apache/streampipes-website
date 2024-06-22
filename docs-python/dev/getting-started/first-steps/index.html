@@ -2330,10 +2330,10 @@ If this results in an output similar to the following, Docker is ready to contin
 ...            ...       ...       ...       ...       ...       ...
 </code></pre></div>
 Otherwise, you need to start docker first.
-Please read the full guide on how to start StreamPipes with <code>docker compose</code> <a href="https://streampipes.apache.org/docs/docs/deploy-docker.html">here</a>.</p>
+Please read the full guide on how to start StreamPipes with <code>docker compose</code> <a href="https://streampipes.apache.org/docs/deploy-docker/">here</a>.</p>
 <h4 id="setup-streampipes-with-nats-as-message-broker">Setup StreamPipes with NATS as message broker<a class="headerlink" href="#setup-streampipes-with-nats-as-message-broker" title="Permanent link">&para;</a></h4>
 <p>The following shows how you can set up a StreamPipes instance that uses <a href="https://docs.nats.io/">NATS</a> as messaging layer.
-So in this scenario, we will go with <code>docker-compose.nats.yml</code>. 
+So in this scenario, we will go with <code>docker-compose.nats.yml</code>.
 Thereby, when running locally, we need to add the following port mapping entry to <code>services.nats.ports</code>:
 <div class="language-yaml highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4222:4222</span>
 </code></pre></div></p>
@@ -2357,8 +2357,19 @@ Then, you need to execute the following command:
 </code></pre></div></p>
 <p>Once all services are started, you can access StreamPipes via <code>http://localhost</code>.</p>
 <p>In case you want to have more control over your StreamPipes setup,
-you might take a look at our <a href="https://streampipes.apache.org/docs/docs/extend-cli.html">deployment CLI</a>.</p>
+you might take a look at our <a href="https://streampipes.apache.org/docs/extend-cli/">deployment CLI</a>.</p>
 <p>Have fun discovering StreamPipes and our Python library 🚀</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 20, 2024</span>
+      
+    
+  </small>
+</div>
 
 
   
