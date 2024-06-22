@@ -2552,7 +2552,7 @@ allows to handle the returned resources in a comfortable and pythonic way.</p>
           </td>
           <td class="doc-returns-details">
             <div class="doc-md-description">
-              <p>container element that bundles the returned resources</p>
+              <p>Container element that bundles the returned resources</p>
             </div>
               <p>
                 <span class="doc-returns-annotation">
@@ -2663,7 +2663,7 @@ This behaviour can be influenced by passing the parameter <code>limit</code> wit
           <td><code>**kwargs</code></td>
           <td class="doc-param-details">
             <div class="doc-md-description">
-              <p>keyword arguments can be used to provide additional query parameters.
+              <p>Keyword arguments can be used to provide additional query parameters.
 The available query parameters are defined by the
 <a class="autorefs autorefs-internal" href="#streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig">MeasurementGetQueryConfig</a>.</p>
             </div>
@@ -2698,7 +2698,7 @@ The available query parameters are defined by the
           </td>
           <td class="doc-returns-details">
             <div class="doc-md-description">
-              <p>the specified data lake measure</p>
+              <p>The specified data lake measure</p>
             </div>
               <p>
                 <span class="doc-returns-annotation">
@@ -2852,7 +2852,7 @@ Please be aware that the column <code>time</code> as an index is always included
           <td><code><span title="streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig.end_date">end_date</span></code></td>
           <td class="doc-attribute-details">
             <div class="doc-md-description">
-              <p>Restricts queried data to be younger than the specified time.</p>
+              <p>Limits the queried data to only include data that is older than the specified time. In other words, any data that occurred after the end_date will not be included in the query results.</p>
             </div>
             <p>
                 <span class="doc-attribute-annotation">
@@ -2926,7 +2926,7 @@ This needs to be at least <code>1</code></p>
           <td><code><span title="streampipes.endpoint.api.data_lake_measure.MeasurementGetQueryConfig.start_date">start_date</span></code></td>
           <td class="doc-attribute-details">
             <div class="doc-md-description">
-              <p>Restricts queried data to be older than the specified time</p>
+              <p>Limits the queried data to only include data that is newer than the specified time. In other words, any data that occurred before the start_date will not be included in the query results.</p>
             </div>
             <p>
                 <span class="doc-attribute-annotation">
@@ -3082,6 +3082,17 @@ causes an error.</p>
 
   </div>
 
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 22, 2024</span>
+      
+    
+  </small>
 </div>
 
 
