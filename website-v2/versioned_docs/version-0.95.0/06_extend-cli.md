@@ -91,7 +91,7 @@ streampipes up -d
 ```
 Now you're good to go to write your new pipeline element :tada: :tada: :tada:
 
-> **HINT for extensions**: Use our [Maven archetypes](https://streampipes.apache.org/docs/docs/extend-archetypes/) to set up a project skeleton and use your IDE of choice for development. However, we do recommend using IntelliJ.
+> **HINT for extensions**: Use our [Maven archetypes](https://streampipes.apache.org/docs/extend-archetypes/) to set up a project skeleton and use your IDE of choice for development. However, we do recommend using IntelliJ.
 
 > **HINT for core**: To work on `backend` or `ui` features you need to set the template to `backend` and clone the core repository [streampipes](https://github.com/apache/streampipes) - check the prerequisites there for more information.
 
@@ -149,7 +149,7 @@ As of now, this step has to be done **manually**. All environments are located i
 ├── backend               # developing core backend features
 ├── basic                 # wanna run core, UI, connect etc from the IDE?
 ├── full                  # full version containing more pipeline elements
-├── lite                  # few pipeline elements, less memory  
+├── lite                  # few pipeline elements, less memory
 ├── pipeline-element      # developing new pipeline-elements
 └── ui                    # developing UI features
 ```
