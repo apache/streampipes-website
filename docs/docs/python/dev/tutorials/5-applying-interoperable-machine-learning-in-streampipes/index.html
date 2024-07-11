@@ -4294,7 +4294,7 @@ class ONNXFunction(StreamPipesFunction):
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Let's dive a little deeper into the different parts of the function</p>
 <ul>
-<li><p><strong><code>__init__</code></strong>: First, we need to take care about the data stream that is required to send the predictions from our function to StreamPipes. Thus, we create a dedicated output data stream which we need to provide with the attributes our event will consist of (a timestamp attribute is always added automatically). This output data stream needs to be registered at the function definition which is to be passed to the parent class. Lastly, we need to define some instance variables that are mainly required for the ONNX runtime.</p>
+<li><p><strong><code>__init__</code></strong>: First, we need to take care of the data stream that is required to send the predictions from our function to StreamPipes. Thus, we create a dedicated output data stream which we need to provide with the attributes our event will consist of (a timestamp attribute is always added automatically). This output data stream needs to be registered at the function definition which is to be passed to the parent class. Lastly, we need to define some instance variables that are mainly required for the ONNX runtime.</p>
 </li>
 <li><p><strong><code>onServiceStarted</code></strong>: Here we prepare the ONNX runtime session by creating an <code>InferenceSession</code> and retrieving the corresponding configuration parameters.</p>
 </li>
@@ -4434,6 +4434,17 @@ function_handler.initializeFunctions()</div>
 </div>
 </div>
 
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 18, 2024</span>
+      
+    
+  </small>
+</div>
 
 
   
