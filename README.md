@@ -1,4 +1,4 @@
-[![Github Actions](https://img.shields.io/github/workflow/status/apache/streampipes-website/Build%20and%20Deploy)](https://github.com/apache/streampipes-website/actions/)
+[![Github Actions](https://img.shields.io/github/actions/workflow/status/apache/streampipes-website/deploy-website.yml?label=Build%20and%20Deploy)](https://github.com/apache/streampipes-website/actions/)
 # Apache StreamPipes Website + Docs
 
 ## Intro
@@ -23,5 +23,5 @@ Node.js(at most v18) and npm are required to build the documentation.
 * First, build the website and documentation as explained above.
 * Copy the content from the `docs-python` to the ``website-v2/build`` folder into a subdirectory named ``python``.
 
-The deployment step is done automatically using the asf.yaml process. 
+The deployment step is done automatically using the asf.yaml process.
 Code must be merged into the `master` branch in order to trigger an update of the website.
