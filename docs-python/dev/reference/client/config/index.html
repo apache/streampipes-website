@@ -2290,7 +2290,7 @@
 
 
 <h2 id="streampipes.client.config.StreamPipesClientConfig" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">StreamPipesClientConfig</span><span class="p">(</span><span class="n">credential_provider</span><span class="p">,</span> <span class="n">host_address</span><span class="p">,</span> <span class="n">https_disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">StreamPipesClientConfig</span><span class="p">(</span><span class="n">credential_provider</span><span class="p">,</span> <span class="n">host_address</span><span class="p">,</span> <span class="n">https_disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">additional_headers</span><span class="o">=</span><span class="nb">dict</span><span class="p">())</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
@@ -2381,6 +2381,24 @@ e.g., <code>80</code> (with http) or <code>443</code> (with https)</p>
             </p>
           </td>
         </tr>
+        <tr>
+          <td><code>additional_headers</code></td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>Specifies additional HTTP headers that should be sent with each request, e.g., proxy headers</p>
+            </div>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>[str, str]]</code>
+                </span>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>dict()</code>
+                </span>
+            </p>
+          </td>
+        </tr>
     </tbody>
   </table>
 
@@ -2425,7 +2443,7 @@ e.g., <code>80</code> (with http) or <code>443</code> (with https)</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 6, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 27, 2024</span>
       
     
   </small>

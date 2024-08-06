@@ -9,7 +9,7 @@ The Apache StreamPipes community is happy to help with any questions or problems
 ## Questions
 Subscribe to our user mailing list to ask a question.
 
-[Mailing Lists](https://streampipes.apache.org/mailinglists.html)
+[Mailing Lists](https://streampipes.apache.org/community/mailing-lists/)
 
 To subscribe to the user list, send an email to [users-subscribe@streampipes.apache.org](users-subscribe@streampipes.apache.org)
 
