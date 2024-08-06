@@ -70,6 +70,109 @@ Permissions can only be changed by admin users currently.
 In the overview section of each resource (e.g., pipelines and dashboards), a permission dialog is available to users with role ROLE_ADMIN. The dialog allows to assign users and groups to the individual resource.
 
 
+## OAuth configuration
 
+It is possible to connect StreamPipes to an external authentication provider such as Keycloak, Azure AD or GitHub.
+Multiple providers can be configured.
 
+To enable login over OAuth, several environment variables are available 
+
+### General settings
+
+* `SP_OAUTH_ENABLED` set to `true` to enable OAuth
+* `SP_OAUTH_REDIRECT_URI` set to the base URI where StreamPipes is running, e.g., `http://localhost:80`
+
+### Provider-specific settings
+
+For each configured provider, individual settings can be provided. The scheme for environment variables is `SP_OAUTH_{PROVIDER_ID}.*`.
+FOr instance, if you want to define two providers Azure and GitHub, you can add an individual block `SP_OAUTH_PROVIDER_AZURE.*` and `SP_OAUTH_PROVIDER_GITHUB` to provide the individual authentication settings for each provider.
+
+The following provider-specific settings are available:
+
+* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_AUTHORIZATION_URI`, the authorization URI
+* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_CLIENT_ID`, the OAuth client id
+* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_CLIENT_NAME`, the OAuth client name
+* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_CLIENT_SECRET`, the OAuth client secret
+* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_EMAIL_ATTRIBUTE_NAME`, the JWT attribute name for the email field, e.g., `email`
+* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_FULL_NAME_ATTRIBUTE_NAME`, the JWT attribute name for the full username, e.g., `name`(optional)
+* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_ISSUER_URI`, the OAuth issuer URI
+* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_JWK_SET_URI`, the OAuth JWK Set URI
+* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_NAME`, The provider name (used to display the login button in the UI), e.g. `Azure`
+* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_SCOPES`, the requested OAuth scopes, comma-separated, e.g., `openid,profile,email`
+* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_TOKEN_URI`, the OAuth token URI
+* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_USER_ID_ATTRIBUTE_NAME`, the JWT attribute name for the user ID field, e.g. `sub`
+* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_USER_INFO_URI`, the OIDC user info endpoint, e.g., `https://graph.microsoft.com/oidc/userinfo`
+
+### Example: Authentication with Azure AD
+
+This example shows how to configure Azure AD as an authentication backend. The example is provided as an IntelliJ env file as used by the StreamPipes core:
+Replace the placeholders and the `SP_OAUTH_REDIRECT_URI` with your individual settings.
+
+```xml
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="core" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <envs>
+        <env name="SP_OAUTH_PROVIDER_AZURE_AUTHORIZATION_URI" value="https://login.microsoftonline.com/{TENANT_ID}/oauth2/v2.0/authorize" />
+        <env name="SP_OAUTH_PROVIDER_AZURE_CLIENT_ID" value="{CLIENT_ID}" />
+        <env name="SP_OAUTH_PROVIDER_AZURE_CLIENT_NAME" value="{CLIENT_NAME}" />
+        <env name="SP_OAUTH_PROVIDER_AZURE_CLIENT_SECRET" value="{CLIENT_SECRET}" />
+        <env name="SP_OAUTH_PROVIDER_AZURE_EMAIL_ATTRIBUTE_NAME" value="email" />
+        <env name="SP_OAUTH_PROVIDER_AZURE_FULL_NAME_ATTRIBUTE_NAME" value="name" />
+        <env name="SP_OAUTH_PROVIDER_AZURE_ISSUER_URI" value="https://login.microsoftonline.com/{TENANT_ID}/v2.0" />
+        <env name="SP_OAUTH_PROVIDER_AZURE_JWK_SET_URI" value="https://login.microsoftonline.com/{TENANT_ID}/discovery/v2.0/keys" />
+        <env name="SP_OAUTH_PROVIDER_AZURE_NAME" value="Azure" />
+        <env name="SP_OAUTH_PROVIDER_AZURE_SCOPES" value="openid,profile,email" />
+        <env name="SP_OAUTH_PROVIDER_AZURE_TOKEN_URI" value="https://login.microsoftonline.com/{TENANT_ID}/oauth2/v2.0/token" />
+        <env name="SP_OAUTH_PROVIDER_AZURE_USER_ID_ATTRIBUTE_NAME" value="sub" />
+        <env name="SP_OAUTH_PROVIDER_AZURE_USER_INFO_URI" value="https://graph.microsoft.com/oidc/userinfo" />
+        <env name="SP_OAUTH_REDIRECT_URI" value="http://localhost:8082" />
+        <env name="SP_OAUTH_ENABLED" value="true" />
+    </envs>
+    <module name="streampipes-service-core" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="org.apache.streampipes.service.core.StreamPipesCoreApplication" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
+```
+
+### Example: Authentication with GitHub
+
+Note that you need to provide the environment variables `SP_OAUTH_REDIRECT_URI` and `SP_OAUTH_ENABLED` only once in case you configure more than one provider.
+
+```xml
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="core" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <envs>
+        <env name="SP_OAUTH_PROVIDER_GITHUB_AUTHORIZATION_URI" value="https://github.com/login/oauth/authorize" />
+        <env name="SP_OAUTH_PROVIDER_GITHUB_CLIENT_ID" value="{CLIENT_ID}" />
+        <env name="SP_OAUTH_PROVIDER_GITHUB_CLIENT_NAME" value="{CLIENT_NAME}" />
+        <env name="SP_OAUTH_PROVIDER_GITHUB_CLIENT_SECRET" value="{CLIENT_SECRET}" />
+        <env name="SP_OAUTH_PROVIDER_GITHUB_EMAIL_ATTRIBUTE_NAME" value="email" />
+        <env name="SP_OAUTH_PROVIDER_GITHUB_NAME" value="Github" />
+        <env name="SP_OAUTH_PROVIDER_GITHUB_SCOPES" value="read:email" />
+        <env name="SP_OAUTH_PROVIDER_GITHUB_TOKEN_URI" value="https://github.com/login/oauth/access_token" />
+        <env name="SP_OAUTH_PROVIDER_GITHUB_USER_ID_ATTRIBUTE_NAME" value="id" />
+        <env name="SP_OAUTH_PROVIDER_GITHUB_USER_INFO_URI" value="https://api.github.com/user" />
+        <env name="SP_OAUTH_REDIRECT_URI" value="http://localhost:8082" />
+        <env name="SP_OAUTH_ENABLED" value="true" />
+    </envs>
+    <module name="streampipes-service-core" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="org.apache.streampipes.service.core.StreamPipesCoreApplication" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
+```
+
+### Notes
+
+:::warning
+This feature should be considered experimental. Currently, there is no mapping between external users and StreamPipes roles and all newly registered users will be assigned the role `ROLE_ADMIN`.
+:::
+
+Roles can be assigned to users in the same way as default users. In the `Security` settings (see above), for each user the provider is shown. For local users (tagged with the `local` provider), all user settings can be changed.
+For other providers, only roles can be changed and it is not possible to modify the username or email, since these are managed by the external system.
 
