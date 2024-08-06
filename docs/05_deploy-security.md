@@ -85,7 +85,7 @@ To enable login over OAuth, several environment variables are available
 ### Provider-specific settings
 
 For each configured provider, individual settings can be provided. The scheme for environment variables is `SP_OAUTH_{PROVIDER_ID}.*`.
-FOr instance, if you want to define two providers Azure and GitHub, you can add an individual block `SP_OAUTH_PROVIDER_AZURE.*` and `SP_OAUTH_PROVIDER_GITHUB` to provide the individual authentication settings for each provider.
+For instance, if you want to define two providers Azure and GitHub, you can add an individual block `SP_OAUTH_PROVIDER_AZURE.*` and `SP_OAUTH_PROVIDER_GITHUB` to provide the individual authentication settings for each provider.
 
 The following provider-specific settings are available:
 
