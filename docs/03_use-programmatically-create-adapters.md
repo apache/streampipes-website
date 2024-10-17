@@ -5,7 +5,7 @@ sidebar_label: Adapters as Code
 ---
 
 In Apache StreamPipes, adapters are typically created via the web interface. 
-However, it is possible to create adapters programmatically using a compact YAML format and the treamPipes REST API. 
+However, it is possible to create adapters programmatically using a compact YAML format and the StreamPipes REST API. 
 Programmatic creation of adapters can be a useful feature in cases where many similar adapters have to be created. 
 In this case, an externally managed YAMl file containing the full adapter configuration can be used and modified.
 
@@ -73,7 +73,7 @@ Here is a walkthrough to create an adapter programmatically over the API:
 
 ### Background: Internal adapter generation process
 
-The YAML definition file is a more compact notation of StreamPipes' internal data format to represent an adapter.
+The YAML definition file is a more compact notation of StreamPipes internal data format to represent an adapter.
 When creating an adapter over the user interface, StreamPipes requires some basic, adapter-specific settings.
 Afterwards, a `Guess Schema` step is executed. In this step, StreamPipes connects to the underlying data sources, receives some samples of live data, determines the exact schema of the data stream and provides user with the source schema.
 This schema can be further refined using `Transformation Rules`. 
