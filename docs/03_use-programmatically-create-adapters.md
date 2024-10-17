@@ -134,7 +134,7 @@ Currently, two settings can be provided in the `CreateOptions` section:
 To create a new adapter, call the StreamPipes API as follows:
 
 ```
-POST /streampipes-backend/api/v2/compact-adapters
+POST /streampipes-backend/api/v2/connect/compact-adapters
 Content-type: application/yml
 Accept: application/yml
 ```
