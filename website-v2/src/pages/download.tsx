@@ -29,7 +29,7 @@ const Downloads: FC = () => (
       <div className="installation-manual-part">
         <h5 className="feature-item-margin"><span className="feature-highlights-bg">Installation</span></h5>
         <ul>
-          <DownloadSection version={'0.95.1'} showMoreInfo={true} releaseDate={'2024-07-08'}></DownloadSection>
+          <DownloadSection version={'0.97.0'} showMoreInfo={true} releaseDate={'2025-02-17'}></DownloadSection>
           <hr/>
         </ul>
       </div>
