@@ -33,7 +33,7 @@ best experience), Firefox or Edge.
 
 ## Install StreamPipes
 
-<DownloadSection version={'0.95.1'} releaseDate={'2024-07-08'}></DownloadSection>
+<DownloadSection version={'0.97.0'} releaseDate={'2025-02-17'}></DownloadSection>
 
 ## Setup StreamPipes
 
