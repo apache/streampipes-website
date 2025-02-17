@@ -33,8 +33,6 @@ We provide several options to get you going:
 - **default**: Default docker-compose file, called `docker-compose.yml`.
 - **nats**: The standard installation which uses Nats as message broker,called `docker-compose.nats.yml`.
 - **full**: Contains experimental Flink wrappers, called `docker-compose.full.yml`.
-- **quickstart**: Contains predefined example assets, called `docker-compose.quickstart.yml`. The Quickstart mode is a user-friendly feature which comes with predefined example assets like pipelines, dashboards, and data views. These ready-to-use components allow first-time users to get a feel of StreamPipes in IIoT with ease, serving as a practical demonstration of how StreamPipes can be utilized for efficient monitoring and analysis. We highly recommend first-time users to begin with the Quickstart mode to understand the simplicity and convenience that StreamPipes brings to the IIoT platform. Please follow the [User Guide for Quickstart Mode](user-guide-for-quickstart.md) if you want to explore it.
-
 
 :::info
 

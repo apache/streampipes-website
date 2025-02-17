@@ -105,7 +105,7 @@ module.exports = {
     "image": "img/favicon.png",
     "footer": {
       "links": [],
-      "copyright": "Copyright © 2019 - 2023 The Apache Software Foundation",
+      "copyright": "Copyright © 2019 - 2025 The Apache Software Foundation",
       "logo": {
         "src": "img/sp-logo-color.png"
       }
