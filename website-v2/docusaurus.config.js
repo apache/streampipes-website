@@ -100,12 +100,12 @@ module.exports = {
       textColor: 'white',
       isCloseable: false,
       content:
-          'Apache StreamPipes 0.95.1 is available! ⭐️',
+          'Apache StreamPipes 0.97.0 is available! ⭐️',
     },
     "image": "img/favicon.png",
     "footer": {
       "links": [],
-      "copyright": "Copyright © 2019 - 2023 The Apache Software Foundation",
+      "copyright": "Copyright © 2019 - 2025 The Apache Software Foundation",
       "logo": {
         "src": "img/sp-logo-color.png"
       }
