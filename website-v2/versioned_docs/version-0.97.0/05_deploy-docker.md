@@ -78,22 +78,6 @@ Stopping the **full** option:
 docker-compose -f docker-compose.nats.yml down
 #docker-compose -f docker-compose.nats.yml down -v
 ```
-Starting the **quickstart** option:
-```bash
-docker-compose -f docker-compose.quickstart.yml build script-runner
-docker-compose -f docker-compose.quickstart.yml up -d
-#go to `http://localhost` after all services are started
-```
-Stopping the **quickstart** option:
-```bash
-docker-compose -f docker-compose.quickstart.yml down
-```
-
-## Update services
-To actively pull the latest available Docker images use:
-```bash
-docker-compose pull
-```
 
 ## Upgrade
 To upgrade to another StreamPipes version, simply edit the `SP_VERSION` in the `.env` file.
