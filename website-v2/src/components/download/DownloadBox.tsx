@@ -49,11 +49,16 @@ const DownloadBox = (props) => {
             </div>
             <div className="row">
               <div className="alert alert-info" role="alert" style={{marginLeft: '20px', marginRight: '20px'}}>
+                <p>
                 The above release file should be verified using the PGP signatures and the <a
                 href="https://downloads.apache.org/streampipes/KEYS">project release KEYS</a>. See the official ASF <a
                 target="asf" href="https://www.apache.org/dyn/closer.cgi#verify">verification instructions</a> for a
                 description of using the PGP and KEYS files for verification. A SHA512 checksum is also provided as an
                 additional verification method.
+                </p>
+                <p>
+                Find the latest release notes here: <a href={`https://github.com/apache/streampipes/blob/dev/RELEASE_NOTES.md`}>Release notes</a>
+                </p>
               </div>
             </div>
           </div>

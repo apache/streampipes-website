@@ -12,7 +12,7 @@ const DownloadMoreInfo = (props) => (
         </div>
         <div className="col-md-11 col-9">
           For a detailed description of the installer and migration guides, read the <a
-          href="/docs/try-installation/"> installation guide</a>
+          href="/docs/try-installation/"> installation guide </a>
           or learn about advanced <a href="/docs/deploy-docker/">Docker</a> or <a
           href="/docs/deploy-kubernetes/">K8s</a> deployment setups.
         </div>
