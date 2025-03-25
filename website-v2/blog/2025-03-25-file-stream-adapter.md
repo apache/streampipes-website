@@ -24,7 +24,7 @@ The adapter supports any type of data as long as it contains a **valid timestamp
 
 Let's break down the configuration options for the **File Stream Adapter:**
 
-<img src="/img/blog/2024-07-15/adapter_configuration.png" alt="Adapter Configuration"/>
+<img src="/img/blog/2025-03-25/adapter_configuration.png" alt="Adapter Configuration"/>
 
 #### Configuration Options Explained
 1. **File:** Choose an existing file or upload a new one.
@@ -70,7 +70,7 @@ To set up the adapter, follow these steps:
 
 Once configured, you should see the following preview:
 
-<img src="/img/blog/2024-07-15/adapter_started.png" alt="Adapter Preview"/>
+<img src="/img/blog/2025-03-25/adapter_started.png" alt="Adapter Preview"/>
 
 ### Use Case: Persist CSV File to Data Lake
 
