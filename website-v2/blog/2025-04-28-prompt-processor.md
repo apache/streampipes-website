@@ -2,7 +2,7 @@
 title: Bringing LLM Power to Every Pipeline – The Multi-Model Prompt Processor
 author: Grainier Perera
 authorURL: "https://github.com/grainier"
-authorImageURL: "img/about/grainier.png"
+authorImageURL: "/img/about/grainier.png"
 ---
 
 # The Multi-Model Prompt Processor
