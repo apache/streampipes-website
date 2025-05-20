@@ -12,6 +12,8 @@ Don’t worry—we’ve got just the thing for you.
 
 The **JavaScript Evaluator Processor** in Apache StreamPipes allows you to define custom event logic with just a few lines of JavaScript. Whether you want to modify values, filter events, or even add stateful logic, this processor empowers you to do just that—without writing a full processing element in Java.
 
+<!--truncate-->
+
 Let’s take a closer look at how it works, what the configuration options are, and how you can use it in three different ways.
 
 

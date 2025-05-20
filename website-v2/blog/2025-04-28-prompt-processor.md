@@ -13,6 +13,8 @@ Need a quick sentiment check, a rolling summary, or a safety rule that’s just 
 With the **Multi-Model Prompt Processor** you can drop the full might of OpenAI, Anthropic, or your own Llama into any
 Apache StreamPipes pipeline—no extra code required.
 
+<!--truncate-->
+
 Below you’ll find:
 
 * A quick tour of the options
