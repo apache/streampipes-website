@@ -11,6 +11,8 @@ Are you excited to explore Apache StreamPipes but find yourself without any sens
 Or maybe you're looking to validate StreamPipes for your use case and kick off a Proof of Concept (PoC) but the hardware is not yet available? 
 No worries—the **File Stream Adapter** is here to save the day!
 
+<!--truncate-->
+
 With the File Stream Adapter, you can upload a file containing sensor data in various formats (JSON, CSV, XML) and replay this data, giving you a hands-on way to dive into StreamPipes. 
 It's not meant for production use, but it's perfect for experimenting with StreamPipes using your own data.
 
