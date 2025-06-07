@@ -3323,6 +3323,7 @@ Licensed under the Apache License, Version 2.0.
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -3365,9 +3366,9 @@ Licensed under the Apache License, Version 2.0.
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">streampipes.client</span> <span class="kn">import</span> <span class="n">StreamPipesClient</span>
-<span class="kn">from</span> <span class="nn">streampipes.client.config</span> <span class="kn">import</span> <span class="n">StreamPipesClientConfig</span>
-<span class="kn">from</span> <span class="nn">streampipes.client.credential_provider</span> <span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.client</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamPipesClient</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.client.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamPipesClientConfig</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.client.credential_provider</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-1">from streampipes.client import StreamPipesClient
 from streampipes.client.config import StreamPipesClientConfig
@@ -3425,7 +3426,7 @@ from streampipes.client.credential_provider import StreamPipesApiKeyCredentials<
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"SP_USERNAME"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"admin@streampipes.apache.org"</span>
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"SP_API_KEY"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"XXX"</span>
@@ -3688,9 +3689,9 @@ You can also stop and start the training with the method <code>set_learning</cod
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">river</span> <span class="kn">import</span> <span class="n">cluster</span><span class="p">,</span> <span class="n">compose</span><span class="p">,</span> <span class="n">preprocessing</span>
-<span class="kn">from</span> <span class="nn">streampipes.function_zoo.river_function</span> <span class="kn">import</span> <span class="n">OnlineML</span>
-<span class="kn">from</span> <span class="nn">streampipes.functions.utils.data_stream_generator</span> <span class="kn">import</span> <span class="n">RuntimeType</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">river</span><span class="w"> </span><span class="kn">import</span> <span class="n">cluster</span><span class="p">,</span> <span class="n">compose</span><span class="p">,</span> <span class="n">preprocessing</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.function_zoo.river_function</span><span class="w"> </span><span class="kn">import</span> <span class="n">OnlineML</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.functions.utils.data_stream_generator</span><span class="w"> </span><span class="kn">import</span> <span class="n">RuntimeType</span>
 
 <span class="n">k_means</span> <span class="o">=</span> <span class="n">compose</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span>
     <span class="p">(</span><span class="s2">"drop_features"</span><span class="p">,</span> <span class="n">compose</span><span class="o">.</span><span class="n">Discard</span><span class="p">(</span><span class="s2">"sensorId"</span><span class="p">,</span> <span class="s2">"timestamp"</span><span class="p">)),</span>
@@ -3845,10 +3846,10 @@ clustering.start()</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
-<span class="kn">from</span> <span class="nn">river</span> <span class="kn">import</span> <span class="n">compose</span><span class="p">,</span> <span class="n">tree</span>
-<span class="kn">from</span> <span class="nn">streampipes.function_zoo.river_function</span> <span class="kn">import</span> <span class="n">OnlineML</span>
-<span class="kn">from</span> <span class="nn">streampipes.functions.utils.data_stream_generator</span> <span class="kn">import</span> <span class="n">RuntimeType</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pickle</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">river</span><span class="w"> </span><span class="kn">import</span> <span class="n">compose</span><span class="p">,</span> <span class="n">tree</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.function_zoo.river_function</span><span class="w"> </span><span class="kn">import</span> <span class="n">OnlineML</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.functions.utils.data_stream_generator</span><span class="w"> </span><span class="kn">import</span> <span class="n">RuntimeType</span>
 
 <span class="n">hoeffding_tree</span> <span class="o">=</span> <span class="n">compose</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span>
     <span class="p">(</span><span class="s2">"drop_features"</span><span class="p">,</span> <span class="n">compose</span><span class="o">.</span><span class="n">Discard</span><span class="p">(</span><span class="s2">"sensorId"</span><span class="p">,</span> <span class="s2">"timestamp"</span><span class="p">)),</span>
@@ -3856,14 +3857,14 @@ clustering.start()</div>
 <span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">draw_tree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">streamId</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw_tree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">streamId</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Draw the tree and save the image."""</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">learning</span><span class="p">:</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">n_nodes</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">"hoeffding_tree"</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">"png"</span><span class="p">,</span> <span class="n">cleanup</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">save_model</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">save_model</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Save the trained model."""</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"hoeffding_tree.pkl"</span><span class="p">,</span> <span class="s2">"wb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
@@ -4005,10 +4006,10 @@ regressor.start()</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
-<span class="kn">from</span> <span class="nn">river</span> <span class="kn">import</span> <span class="n">compose</span><span class="p">,</span> <span class="n">tree</span>
-<span class="kn">from</span> <span class="nn">streampipes.function_zoo.river_function</span> <span class="kn">import</span> <span class="n">OnlineML</span>
-<span class="kn">from</span> <span class="nn">streampipes.functions.utils.data_stream_generator</span> <span class="kn">import</span> <span class="n">RuntimeType</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pickle</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">river</span><span class="w"> </span><span class="kn">import</span> <span class="n">compose</span><span class="p">,</span> <span class="n">tree</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.function_zoo.river_function</span><span class="w"> </span><span class="kn">import</span> <span class="n">OnlineML</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.functions.utils.data_stream_generator</span><span class="w"> </span><span class="kn">import</span> <span class="n">RuntimeType</span>
 
 <span class="n">decision_tree</span> <span class="o">=</span> <span class="n">compose</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span>
     <span class="p">(</span><span class="s2">"drop_features"</span><span class="p">,</span> <span class="n">compose</span><span class="o">.</span><span class="n">Discard</span><span class="p">(</span><span class="s2">"sensorId"</span><span class="p">,</span> <span class="s2">"timestamp"</span><span class="p">)),</span>
@@ -4016,14 +4017,14 @@ regressor.start()</div>
 <span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">draw_tree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">streamId</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw_tree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">streamId</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Draw the tree and save the image."""</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">learning</span><span class="p">:</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">n_nodes</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">"decicion_tree"</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">"png"</span><span class="p">,</span> <span class="n">cleanup</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">save_model</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">save_model</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Save the trained model."""</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"decision_tree.pkl"</span><span class="p">,</span> <span class="s2">"wb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
@@ -4190,7 +4191,7 @@ We'll read and react to them all, we promise!</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 3, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 3, 2024 07:17:12">April 3, 2024</span>
       
     
   </small>
