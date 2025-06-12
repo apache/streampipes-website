@@ -7,11 +7,12 @@ authorImageURL: "/img/zehnder.png"
 
 # Usage-Based Maintenance with Apache StreamPipes
 
-## Introduction
 
 In many manufacturing settings, maintenance is still scheduled at fixed time intervals — often based on past experience rather than actual machine usage. 
 This approach can lead to unnecessary servicing or, worse, unexpected breakdowns. 
 A common limitation is that many machines, especially older ones, offer only minimal sensor data, making advanced maintenance strategies seem out of reach.
+
+<!--truncate-->
 
 However, with Apache StreamPipes, even limited data — such as a simple boolean signal indicating activity — can be leveraged to implement usage-based maintenance. 
 In this blog post, we demonstrate how this is achieved using a real-world example: a packaging machine that processes goods at high throughput. 
