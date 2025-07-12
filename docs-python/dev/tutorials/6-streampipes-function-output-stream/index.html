@@ -3323,6 +3323,7 @@ Licensed under the Apache License, Version 2.0.
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -3391,7 +3392,7 @@ ports:
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"BROKER-HOST"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"localhost"</span>
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"KAFKA-PORT"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"9094"</span>
@@ -3426,9 +3427,9 @@ api_key = os.environ.get("TOKEN")</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">streampipes.client</span> <span class="kn">import</span> <span class="n">StreamPipesClient</span>
-<span class="kn">from</span> <span class="nn">streampipes.client.config</span> <span class="kn">import</span> <span class="n">StreamPipesClientConfig</span>
-<span class="kn">from</span> <span class="nn">streampipes.client.credential_provider</span> <span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.client</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamPipesClient</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.client.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamPipesClientConfig</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.client.credential_provider</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
 
 <span class="n">client_config</span> <span class="o">=</span> <span class="n">StreamPipesClientConfig</span><span class="p">(</span>
     <span class="n">credential_provider</span><span class="o">=</span><span class="n">StreamPipesApiKeyCredentials</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s2">"admin@streampipes.apache.org"</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">),</span>
@@ -3499,7 +3500,7 @@ client = StreamPipesClient(client_config=client_config)</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_stream</span><span class="p">:</span> <span class="n">DataStream</span><span class="p">):</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_stream</span><span class="p">:</span> <span class="n">DataStream</span><span class="p">):</span>
     <span class="n">output_stream</span> <span class="o">=</span> <span class="n">create_data_stream</span><span class="p">(</span>
                 <span class="n">name</span><span class="o">=</span><span class="s2">"example-stream"</span><span class="p">,</span>
                 <span class="n">stream_id</span><span class="o">=</span><span class="s2">"example-stream"</span><span class="p">,</span>
@@ -3651,18 +3652,18 @@ self.add_output(
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Any</span>
-<span class="kn">from</span> <span class="nn">streampipes.functions.streampipes_function</span> <span class="kn">import</span> <span class="n">StreamPipesFunction</span>
-<span class="kn">from</span> <span class="nn">streampipes.functions.utils.data_stream_generator</span> <span class="kn">import</span> <span class="n">create_data_stream</span><span class="p">,</span> <span class="n">RuntimeType</span>
-<span class="kn">from</span> <span class="nn">streampipes.functions.broker.broker_handler</span> <span class="kn">import</span> <span class="n">get_broker_description</span>
-<span class="kn">from</span> <span class="nn">streampipes.model.resource</span> <span class="kn">import</span> <span class="n">FunctionDefinition</span><span class="p">,</span> <span class="n">DataStream</span>
-<span class="kn">from</span> <span class="nn">streampipes.functions.utils.function_context</span> <span class="kn">import</span> <span class="n">FunctionContext</span>
-<span class="kn">from</span> <span class="nn">streampipes.functions.function_handler</span> <span class="kn">import</span> <span class="n">FunctionHandler</span>
-<span class="kn">from</span> <span class="nn">streampipes.functions.registration</span> <span class="kn">import</span> <span class="n">Registration</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Any</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.functions.streampipes_function</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamPipesFunction</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.functions.utils.data_stream_generator</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_data_stream</span><span class="p">,</span> <span class="n">RuntimeType</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.functions.broker.broker_handler</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_broker_description</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.model.resource</span><span class="w"> </span><span class="kn">import</span> <span class="n">FunctionDefinition</span><span class="p">,</span> <span class="n">DataStream</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.functions.utils.function_context</span><span class="w"> </span><span class="kn">import</span> <span class="n">FunctionContext</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.functions.function_handler</span><span class="w"> </span><span class="kn">import</span> <span class="n">FunctionHandler</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.functions.registration</span><span class="w"> </span><span class="kn">import</span> <span class="n">Registration</span>
 
-<span class="k">class</span> <span class="nc">SimpleFunction</span><span class="p">(</span><span class="n">StreamPipesFunction</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_stream</span><span class="p">:</span> <span class="n">DataStream</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">SimpleFunction</span><span class="p">(</span><span class="n">StreamPipesFunction</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_stream</span><span class="p">:</span> <span class="n">DataStream</span><span class="p">):</span>
         <span class="n">output_stream</span> <span class="o">=</span> <span class="n">create_data_stream</span><span class="p">(</span>
             <span class="n">name</span><span class="o">=</span><span class="s2">"example-stream"</span><span class="p">,</span>
             <span class="n">stream_id</span><span class="o">=</span><span class="s2">"example-stream"</span><span class="p">,</span>
@@ -3678,10 +3679,10 @@ self.add_output(
 
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">function_definition</span><span class="o">=</span><span class="n">function_definition</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">onServiceStarted</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">FunctionContext</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">onServiceStarted</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">FunctionContext</span><span class="p">):</span>
         <span class="k">pass</span>
 
-    <span class="k">def</span> <span class="nf">onEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">streamId</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">onEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">streamId</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
         <span class="n">output</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s2">"number"</span><span class="p">:</span> <span class="mi">1</span>
         <span class="p">}</span>
@@ -3691,7 +3692,7 @@ self.add_output(
             <span class="n">event</span><span class="o">=</span><span class="n">output</span>
         <span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">onServiceStopped</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">onServiceStopped</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">pass</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-6">import pandas as pd
@@ -3906,7 +3907,7 @@ We hope you found this tutorial helpful and would appreciate your feedback. Plea
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 31, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 31, 2024 11:47:45">July 31, 2024</span>
       
     
   </small>
