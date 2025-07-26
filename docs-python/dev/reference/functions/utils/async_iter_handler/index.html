@@ -2334,9 +2334,9 @@
 
 
 <a id="streampipes.functions.utils.async_iter_handler"></a>
-  <div class="doc doc-contents first">
+    <div class="doc doc-contents first">
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2352,19 +2352,19 @@
 
 
 <h2 id="streampipes.functions.utils.async_iter_handler.AsyncIterHandler" class="doc doc-heading">
-          <code>AsyncIterHandler</code>
+            <code>AsyncIterHandler</code>
 
 
 <a href="#streampipes.functions.utils.async_iter_handler.AsyncIterHandler" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>Handles asynchronous iterators to get every message after another in parallel.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2376,14 +2376,12 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.functions.utils.async_iter_handler.AsyncIterHandler.anext" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">anext</span><span class="p">(</span><span class="n">stream_id</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">anext</span><span class="p">(</span><span class="n">stream_id</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-async"><code>async</code></small>
       <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
@@ -2392,92 +2390,88 @@
 <a href="#streampipes.functions.utils.async_iter_handler.AsyncIterHandler.anext" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Gets the next message from an AsyncIterator.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>stream_id</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The id of the data stream which the message belongs to.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code>str</code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr>
-          <td><code>message</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>An asynchronous iterator that contains the messages.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.AsyncIterator">AsyncIterator</span></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-              <code>result</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>Tuple of the stream id und next message or <code>("stop", None)</code> if no message is left.</p>
-            </div>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>stream_id</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The id of the data stream which the message belongs to.</p>
+              </div>
               <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Tuple">Tuple</span>[str, Optional[<span title="typing.Any">Any</span>]]</code>
-                </span>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
               </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>message</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>An asynchronous iterator that contains the messages.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.AsyncIterator">AsyncIterator</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>result</code>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>Tuple of the stream id und next message or <code>("stop", None)</code> if no message is left.</p>
+              </div>
+                <p>
+                  <span class="doc-returns-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Tuple">Tuple</span>[<span title="str">str</span>, <span title="Optional">Optional</span>[<span title="typing.Any">Any</span>]]</code>
+                  </span>
+                </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.functions.utils.async_iter_handler.AsyncIterHandler.combine_async_messages" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">combine_async_messages</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">combine_async_messages</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-async"><code>async</code></small>
       <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
@@ -2486,67 +2480,65 @@
 <a href="#streampipes.functions.utils.async_iter_handler.AsyncIterHandler.combine_async_messages" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Continuously gets the next published message from multiple AsyncIterators in parallel.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>messages</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>A dictionary with an asynchronous iterator for every stream id.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Dict">Dict</span>[str, <span title="typing.AsyncIterator">AsyncIterator</span>]</code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
-
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>YIELDS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-              <code>message</code>
-          </td>
-          <td class="doc-yields-details">
-            <div class="doc-md-description">
-              <p>Description of the anonymous integer return value.</p>
-            </div>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>messages</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>A dictionary with an asynchronous iterator for every stream id.</p>
+              </div>
               <p>
-                <span class="doc-yields-annotation">
-                  <b>TYPE::</b>
-                    <code><span title="typing.Tuple">Tuple</span>[str, <span title="typing.Any">Any</span>]</code>
-                </span>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="typing.AsyncIterator">AsyncIterator</span>]</code>
+                  </span>
               </p>
-          </td>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">YIELDS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>message</code>
+            </td>
+            <td class="doc-yields-details">
+              <div class="doc-md-description">
+                <p>Description of the anonymous integer return value.</p>
+              </div>
+                <p>
+                  <span class="doc-yields-annotation">
+                    <b>TYPE::</b>
+                      <code><span title="typing.Tuple">Tuple</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+                  </span>
+                </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2554,8 +2546,7 @@
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -2564,7 +2555,7 @@
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2573,7 +2564,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 7, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2025 02:35:20">July 26, 2025</span>
       
     
   </small>
