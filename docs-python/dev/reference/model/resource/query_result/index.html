@@ -2362,9 +2362,9 @@
 
 
 <a id="streampipes.model.resource.query_result"></a>
-  <div class="doc doc-contents first">
+    <div class="doc doc-contents first">
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2380,17 +2380,17 @@
 
 
 <h2 id="streampipes.model.resource.query_result.QueryResult" class="doc doc-heading">
-          <code>QueryResult</code>
+            <code>QueryResult</code>
 
 
 <a href="#streampipes.model.resource.query_result.QueryResult" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="streampipes.model.resource.resource.Resource" href="../resource/#streampipes.model.resource.resource.Resource">Resource</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="Resource (streampipes.model.resource.resource.Resource)" href="../resource/#streampipes.model.resource.resource.Resource">Resource</a></code></p>
 
-  
+
       <p>Implementation of a resource for query result.
 This resource defines the data model used by its resource container(<code>model.container.DataLakeMeasures</code>).
 It inherits from Pydantic's BaseModel to get all its superpowers,
@@ -2398,7 +2398,7 @@ which are used to parse, validate the API response and to easily switch between
 the Python representation (both serialized and deserialized) and Java representation (serialized only).</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2414,20 +2414,20 @@ the Python representation (both serialized and deserialized) and Java representa
 
 
 <h3 id="streampipes.model.resource.query_result.QueryResult.Config" class="doc doc-heading">
-          <code>Config</code>
+            <code>Config</code>
 
 
 <a href="#streampipes.model.resource.query_result.QueryResult.Config" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>Configuration class for Pydantic.
 Defines alias generator to convert field names from camelCase (API) to snake_case (Python codebase).</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2443,204 +2443,192 @@ Defines alias generator to convert field names from camelCase (API) to snake_cas
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.model.resource.query_result.QueryResult.convert_to_pandas_representation" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">convert_to_pandas_representation</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">convert_to_pandas_representation</span><span class="p">()</span></code>
 
 <a href="#streampipes.model.resource.query_result.QueryResult.convert_to_pandas_representation" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns the dictionary representation of a data lake series
 to be used when creating a pandas Dataframe.</p>
 <p>It contains only the "header rows" (the column names) and "rows" that contain the actual data.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code>dict</code>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code><span title="dict">dict</span></code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>Dictionary with the keys <code>headers</code> and <code>rows</code></p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RAISES</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+              <span class="doc-raises-annotation">
+                  <code><span title="StreamPipesUnsupportedDataLakeSeries">StreamPipesUnsupportedDataLakeSeries</span></code>
               </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>Dictionary with the keys <code>headers</code> and <code>rows</code></p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+            </td>
+            <td class="doc-raises-details">
+              <div class="doc-md-description">
+                <p>If the query result returned by the StreamPipes API cannot be converted to the pandas representation</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RAISES</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-            <span class="doc-raises-annotation">
-                <code>StreamPipesUnsupportedDataLakeSeries</code>
-            </span>
-          </td>
-          <td class="doc-raises-details">
-            <div class="doc-md-description">
-              <p>If the query result returned by the StreamPipes API cannot be converted to the pandas representation</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.model.resource.query_result.QueryResult.to_dict" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_dict</span><span class="p">(</span><span class="n">use_source_names</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">to_dict</span><span class="p">(</span><span class="n">use_source_names</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#streampipes.model.resource.query_result.QueryResult.to_dict" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns the resource in dictionary representation.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>use_source_names</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Indicates if the dictionary keys are in python representation or
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>use_source_names</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Indicates if the dictionary keys are in python representation or
 equally named to the StreamPipes backend</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-              <code>resource</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>The resource as dictionary representation</p>
-            </div>
+              </div>
               <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Dict">Dict</span>[str, Any]</code>
-                </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
               </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>resource</code>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>The resource as dictionary representation</p>
+              </div>
+                <p>
+                  <span class="doc-returns-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="Any">Any</span>]</code>
+                  </span>
+                </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.model.resource.query_result.QueryResult.to_pandas" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_pandas</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">to_pandas</span><span class="p">()</span></code>
 
 <a href="#streampipes.model.resource.query_result.QueryResult.to_pandas" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns the data lake series in representation of a Pandas Dataframe.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-              <code>df</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>Pandas df containing the query result</p>
-            </div>
-              <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="pandas.DataFrame">DataFrame</span></code>
-                </span>
-              </p>
-          </td>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>df</code>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>Pandas df containing the query result</p>
+              </div>
+                <p>
+                  <span class="doc-returns-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="pandas.DataFrame">DataFrame</span></code>
+                  </span>
+                </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2648,8 +2636,7 @@ equally named to the StreamPipes backend</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -2658,7 +2645,7 @@ equally named to the StreamPipes backend</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2667,7 +2654,7 @@ equally named to the StreamPipes backend</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 7, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2025 02:35:20">July 26, 2025</span>
       
     
   </small>

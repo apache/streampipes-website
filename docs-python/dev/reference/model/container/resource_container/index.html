@@ -2390,14 +2390,14 @@
 
 
 <a id="streampipes.model.container.resource_container"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>General and abstract implementation for a resource container.</p>
 <p>A resource container is a collection of resources returned by the StreamPipes API.
 It is capable of parsing the response content directly into a list of queried resources.
 Furthermore, the resource container makes them accessible in a pythonic manner.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2413,50 +2413,49 @@ Furthermore, the resource container makes them accessible in a pythonic manner.<
 
 
 <h2 id="streampipes.model.container.resource_container.ResourceContainer" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">ResourceContainer</span><span class="p">(</span><span class="n">resources</span><span class="p">)</span></code>
+              <code class="highlight language-python"><span class="n">ResourceContainer</span><span class="p">(</span><span class="n">resources</span><span class="p">)</span></code>
 
 <a href="#streampipes.model.container.resource_container.ResourceContainer" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="abc.ABC">ABC</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="abc.ABC">ABC</span></code></p>
 
-  
+
       <p>General and abstract implementation for a resource container.</p>
 <p>A resource container is a collection of resources returned by the StreamPipes API.
 It is capable of parsing the response content directly into a list of queried resources.
 Furthermore, the resource container makes them accessible in a pythonic manner.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>resources</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>A list of resources to be contained in the <code>ResourceContainer</code>.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.List">List</span>[<a class="autorefs autorefs-internal" title="streampipes.model.resource.resource.Resource" href="../../resource/resource/#streampipes.model.resource.resource.Resource">Resource</a>]</code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>resources</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>A list of resources to be contained in the <code>ResourceContainer</code>.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.List">List</span>[<a class="autorefs autorefs-internal" title="Resource (streampipes.model.resource.resource.Resource)" href="../../resource/resource/#streampipes.model.resource.resource.Resource">Resource</a>]</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2468,14 +2467,12 @@ Furthermore, the resource container makes them accessible in a pythonic manner.<
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.model.container.resource_container.ResourceContainer.from_json" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">from_json</span><span class="p">(</span><span class="n">json_string</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">from_json</span><span class="p">(</span><span class="n">json_string</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
   </span>
@@ -2483,278 +2480,265 @@ Furthermore, the resource container makes them accessible in a pythonic manner.<
 <a href="#streampipes.model.container.resource_container.ResourceContainer.from_json" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Creates a <code>ResourceContainer</code> from the given JSON string.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>json_string</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The JSON string returned from the StreamPipes API.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code>str</code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
-
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-              <code>container</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>Instance of the container derived from the JSON definition</p>
-            </div>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>json_string</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The JSON string returned from the StreamPipes API.</p>
+              </div>
               <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.model.container.resource_container.ResourceContainer" href="#streampipes.model.container.resource_container.ResourceContainer">ResourceContainer</a></code>
-                </span>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
               </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RAISES</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-            <span class="doc-raises-annotation">
-                <code><a class="autorefs autorefs-internal" title="streampipes.model.container.resource_container.StreamPipesDataModelError" href="#streampipes.model.container.resource_container.StreamPipesDataModelError">StreamPipesDataModelError</a></code>
-            </span>
-          </td>
-          <td class="doc-raises-details">
-            <div class="doc-md-description">
-              <p>If a resource cannot be mapped to the corresponding Python data model.</p>
-            </div>
-          </td>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr>
-          <td>
-            <span class="doc-raises-annotation">
-                <code><a class="autorefs autorefs-internal" title="streampipes.model.container.resource_container.StreamPipesResourceContainerJSONError" href="#streampipes.model.container.resource_container.StreamPipesResourceContainerJSONError">StreamPipesResourceContainerJSONError</a></code>
-            </span>
-          </td>
-          <td class="doc-raises-details">
-            <div class="doc-md-description">
-              <p>If JSON response cannot be parsed to a <code>ResourceContainer</code>.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>container</code>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>Instance of the container derived from the JSON definition</p>
+              </div>
+                <p>
+                  <span class="doc-returns-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="ResourceContainer (streampipes.model.container.resource_container.ResourceContainer)" href="#streampipes.model.container.resource_container.ResourceContainer">ResourceContainer</a></code>
+                  </span>
+                </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RAISES</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+              <span class="doc-raises-annotation">
+                  <code><a class="autorefs autorefs-internal" title="StreamPipesDataModelError (streampipes.model.container.resource_container.StreamPipesDataModelError)" href="#streampipes.model.container.resource_container.StreamPipesDataModelError">StreamPipesDataModelError</a></code>
+              </span>
+            </td>
+            <td class="doc-raises-details">
+              <div class="doc-md-description">
+                <p>If a resource cannot be mapped to the corresponding Python data model.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+              <span class="doc-raises-annotation">
+                  <code><a class="autorefs autorefs-internal" title="StreamPipesResourceContainerJSONError (streampipes.model.container.resource_container.StreamPipesResourceContainerJSONError)" href="#streampipes.model.container.resource_container.StreamPipesResourceContainerJSONError">StreamPipesResourceContainerJSONError</a></code>
+              </span>
+            </td>
+            <td class="doc-raises-details">
+              <div class="doc-md-description">
+                <p>If JSON response cannot be parsed to a <code>ResourceContainer</code>.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.model.container.resource_container.ResourceContainer.to_dicts" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_dicts</span><span class="p">(</span><span class="n">use_source_names</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">to_dicts</span><span class="p">(</span><span class="n">use_source_names</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#streampipes.model.container.resource_container.ResourceContainer.to_dicts" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns the contained resources as list of dictionaries.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>use_source_names</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Determines whether the field names are named in Python style (=<code>False</code>) or
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>use_source_names</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Determines whether the field names are named in Python style (=<code>False</code>) or
 as originally named by StreamPipes (=<code>True</code>).</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code>bool</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-              <code>dictionary_list</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>List of resources in dictionary representation.
-If <code>use_source_names</code> equals <code>True</code> the keys are named as in the StreamPipes backend.</p>
-            </div>
+              </div>
               <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.List">List</span>[<span title="typing.Dict">Dict</span>[str, Any]]</code>
-                </span>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="bool">bool</span></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
               </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>dictionary_list</code>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>List of resources in dictionary representation.
+If <code>use_source_names</code> equals <code>True</code> the keys are named as in the StreamPipes backend.</p>
+              </div>
+                <p>
+                  <span class="doc-returns-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.List">List</span>[<span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="Any">Any</span>]]</code>
+                  </span>
+                </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.model.container.resource_container.ResourceContainer.to_json" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_json</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">to_json</span><span class="p">()</span></code>
 
 <a href="#streampipes.model.container.resource_container.ResourceContainer.to_json" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns the resource container in the StreamPipes JSON representation.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code> json_string: str</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>JSON representation of the resource container where key names are equal to
-keys used in the StreamPipes backend</p>
-            </div>
-          </td>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code> json_string: str</code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>JSON representation of the resource container where key names are equal to
+keys used in the StreamPipes backend</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.model.container.resource_container.ResourceContainer.to_pandas" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_pandas</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">to_pandas</span><span class="p">()</span></code>
 
 <a href="#streampipes.model.container.resource_container.ResourceContainer.to_pandas" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns the resource container in representation of a Pandas Dataframe.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-              <code>resource_container_df</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>Representation of the resource container as pandas DataFrame</p>
-            </div>
-              <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="pandas.DataFrame">DataFrame</span></code>
-                </span>
-              </p>
-          </td>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>resource_container_df</code>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>Representation of the resource container as pandas DataFrame</p>
+              </div>
+                <p>
+                  <span class="doc-returns-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="pandas.DataFrame">DataFrame</span></code>
+                  </span>
+                </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2762,8 +2746,7 @@ keys used in the StreamPipes backend</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -2772,48 +2755,47 @@ keys used in the StreamPipes backend</p>
 
 
 <h2 id="streampipes.model.container.resource_container.StreamPipesDataModelError" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">StreamPipesDataModelError</span><span class="p">(</span><span class="n">validation_error</span><span class="p">)</span></code>
+              <code class="highlight language-python"><span class="n">StreamPipesDataModelError</span><span class="p">(</span><span class="n">validation_error</span><span class="p">)</span></code>
 
 <a href="#streampipes.model.container.resource_container.StreamPipesDataModelError" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>Exception</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="Exception">Exception</span></code></p>
 
-  
+
       <p>A custom exception to be raised when a validation error occurs
 during the parsing of StreamPipes API responses.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>validation_error</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The validation error thrown by Pydantic during parsing.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="pydantic.v1.ValidationError">ValidationError</span></code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>validation_error</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The validation error thrown by Pydantic during parsing.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="pydantic.v1.ValidationError">ValidationError</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2829,8 +2811,7 @@ during the parsing of StreamPipes API responses.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -2839,62 +2820,61 @@ during the parsing of StreamPipes API responses.</p>
 
 
 <h2 id="streampipes.model.container.resource_container.StreamPipesResourceContainerJSONError" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">StreamPipesResourceContainerJSONError</span><span class="p">(</span><span class="n">container_name</span><span class="p">,</span> <span class="n">json_string</span><span class="p">)</span></code>
+              <code class="highlight language-python"><span class="n">StreamPipesResourceContainerJSONError</span><span class="p">(</span><span class="n">container_name</span><span class="p">,</span> <span class="n">json_string</span><span class="p">)</span></code>
 
 <a href="#streampipes.model.container.resource_container.StreamPipesResourceContainerJSONError" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>Exception</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="Exception">Exception</span></code></p>
 
-  
+
       <p>A custom exception to be raised when the returned JSON string
 does not suit to the structure of resource container.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>container_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The class name of the resource container where the invalid data structure was detected.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code>str</code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr>
-          <td><code>json_string</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The JSON string that has been tried to parse.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code>str</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>container_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The class name of the resource container where the invalid data structure was detected.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>json_string</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The JSON string that has been tried to parse.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2910,8 +2890,7 @@ does not suit to the structure of resource container.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -2920,7 +2899,7 @@ does not suit to the structure of resource container.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2929,7 +2908,7 @@ does not suit to the structure of resource container.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 7, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2025 02:35:20">July 26, 2025</span>
       
     
   </small>
