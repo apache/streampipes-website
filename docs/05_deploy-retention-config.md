@@ -37,7 +37,40 @@ When using local file storage, you can specify the storage directory via the `SP
 [...]
 ```
 
-### Setting a retention config
+### Configure Retention for a Measure
+
+The retention configuration must be set individually for each desired DataLake. To configure retention settings:
+
+1. Navigate to **Configuration > DataLake**.
+2. Click on the **Retention Rate** icon in the corresponding column.
+3. A dialog will appear, allowing you to configure the following options:
+    - **Data to Retain**: Select which data should be retained.
+    - **Retention Action**: Choose the retention action:
+      - **Delete**
+      - **Save**
+      - **Save and Delete**
+
+If **Save** is selected, you can also configure:
+
+- **Export Format**: Specify the format in which the data will be exported.
+- **Export Destination**: Choose the destination for the saved data:
+  - **Folder**: No further configuration needed.
+  - **S3**: Requires an existing Export Provider to be set up (see the section below for details).
+
+
+#### Generate a new Export Provider
+
+To create a new export provider go to `Configuration > DataLake`, click on `+` and provide the access key, secret, endpoint, bucket name, and region.
+
+<img className="docs-image" src="/img/05_deploy-retention-config/NewExportProvider.png" alt="New Export Provider"/>
+
+For the Test Setting below this might be: 
+- **Access Key**: test
+- **Access Secret**: test 
+- **Endpoint**: http://0.0.0.0:4566
+- **Bucket**: random 
+- **Region**: us-east-1
+
 
 
 
