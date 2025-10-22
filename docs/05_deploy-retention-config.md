@@ -57,9 +57,6 @@ If **Save** is selected, you can also configure:
   - **Folder**: No further configuration needed.
   - **S3**: Requires an existing Export Provider to be set up (see the section below for details).
 
-
-#### Generate a new Export Provider
-
 To create a new export provider go to `Configuration > DataLake`, click on `+` and provide the access key, secret, endpoint, bucket name, and region.
 
 <img className="docs-image" src="/img/05_deploy-retention-config/NewExportProvider.png" alt="New Export Provider"/>
