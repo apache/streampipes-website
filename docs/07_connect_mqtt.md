@@ -4,13 +4,15 @@ title: MQTT
 sidebar_label: MQTT
 ---
 
+This document provides an overview of the MQTT connection and security configuration options available in StreamPipes. It covers how to configure broker connections, authentication modes, and TLS/SSL security settings — including guidance on keystore and truststore management for secure communication.
+
 ## Notes on MQTT Settings
 
 * **Broker URL** : The URL of the MQTT broker. Specify the protocol and port, for example:
     * `tcp://test-server.com:1883` — for unencrypted connections
     * `ssl://test-server.com:8883` — for secure (TLS) connections
 
-Both the protocol (tcp:// or ssl://) and port number are required.
+    Both the protocol (tcp:// or ssl://) and port number are required.
 * **Access Mode**: Choose between:
   * **Unauthenticated**: No authentication required, can be used with or without TLS 
   * **Username/Password**: Basic authentication with username and password, can be used with or without TLS 
