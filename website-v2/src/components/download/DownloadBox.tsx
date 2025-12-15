@@ -1,5 +1,4 @@
-import React, { FC } from 'react';
-
+import * as React from 'react';
 
 const DownloadBox = (props) => {
   return (
@@ -47,6 +46,29 @@ const DownloadBox = (props) => {
                 </tbody>
               </table>
             </div>
+
+            <div className="row">
+              <div className="col-12" style={{paddingLeft: '20px', paddingRight: '20px'}}>
+                <div
+                  className="alert alert-danger"
+                  role="alert"
+                  aria-live="polite"
+                  style={{
+                    backgroundColor: '#f8d7da',
+                    color: '#721c24',
+                    border: '1px solid #f5c6cb',
+                    padding: '15px',
+                    marginTop: '20px',
+                    marginBottom: '20px',
+                    borderRadius: '4px'
+                  }}
+                >
+                  <i className="fas fa-exclamation-triangle" style={{marginRight: '8px'}} aria-hidden="true"></i>
+                  <strong>Important:</strong>&nbsp;If you update from 0.97.0 to 0.98.0 and have been using the Kafka broker, you must use <strong>docker-compose.kafka.yml</strong> to run StreamPipes. The default docker-compose now uses NATS as the broker. Existing Kafka-based instances cannot be migrated automatically and cannot simply be switched to the default compose file.
+                </div>
+              </div>
+            </div>
+
             <div className="row">
               <div className="alert alert-info" role="alert" style={{marginLeft: '20px', marginRight: '20px'}}>
                 <p>
@@ -69,4 +91,3 @@ const DownloadBox = (props) => {
 }
 
 export default DownloadBox;
-
