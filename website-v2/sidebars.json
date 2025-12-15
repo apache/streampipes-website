@@ -172,7 +172,8 @@
       "deploy-kubernetes",
       "deploy-use-ssl",
       "deploy-security",
-      "deploy-environment-variables"
+      "deploy-environment-variables",
+      "deploy-retention-config"
     ],
     "💻 Customize StreamPipes": [
       "extend-setup",
@@ -191,6 +192,10 @@
       "extend-sdk-output-strategies",
       "extend-customize-ui"
     ],
+    "🔗 Connectivity Guide": [
+      "connect-mqtt"
+    ],
+
     "🔧 Technicals": [
       "technicals-architecture",
       "technicals-runtime-wrappers",
