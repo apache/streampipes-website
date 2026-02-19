@@ -25,6 +25,12 @@ The following lists describe available environment variables along with a descri
 | SP_JWT_PRIVATE_KEY_LOC         | Empty                                                   | Required id SP_JWT_SIGNING_MODE=RSA, path to the private key, can be generated in the UI (Settings->Security->Generate Key Pair) |
 | SP_ENCRYPTION_PASSCODE         | eGgemyGBoILAu3xckolp for Docker, Auto-generated for K8s | Encryption passcode for `SecretStaticProperties`                                                                                 |
 | SP_PRIORITIZED_PROTOCOL        | kafka                                                   | Messaging layer for data exchange between extensions                                                                             |
+| SP_RETENTION_LOCAL_DIR         | `./ArchivedData`                                        | Local directory used to store archived data files created by the retention mechanism.                                            |
+| SP_DATALAKE_SCHEDULER_CRON     | `0 1 0 * * 6`                                           | Cron expression defining when the datalake retention scheduler runs (default: every Saturday at 00:01).                          |
+| SP_RETENTION_LOG_LENGTH        | `10`                                                    | Number of recent retention job log entries to keep for retention-related logging and monitoring.                                 |
+| SP_CERTIFICATE_EXPIRY_CRON     | `0 2 0 * * *`                                             | Cron expression defining when the certificate expiry notification job runs (default: once every night).                          |
+| SP_CERTIFICATE_EXPIRY_EMAIL_DAYS | Empty (disabled)                                      | Comma-separated list of days before certificate expiration when reminder emails are sent (e.g. `7,14,30`).                       |
+
 
 
 ### Third-party services
