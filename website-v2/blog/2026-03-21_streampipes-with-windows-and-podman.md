@@ -184,7 +184,7 @@ services:
   ui:
     image: "${SP_DOCKER_REGISTRY}/ui:${SP_VERSION}"
     ports:
-      - "108:8088"
+      - "80:8088"
     depends_on:
       - couchdb
       - backend
