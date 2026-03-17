@@ -263,7 +263,7 @@ Create a 'nginx_config' directory
 ```bash
 mkdir nginx_config
 ```
-In that directort you add a 'default.conf' with the help of Nano.
+In that directory you add a 'default.conf' with the help of Nano.
 ```bash
 cd nginx_config
 nano default.conf
