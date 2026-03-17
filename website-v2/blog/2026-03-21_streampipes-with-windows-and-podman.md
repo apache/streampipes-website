@@ -261,11 +261,11 @@ networks:
 
 Create a 'nginx_config' directory 
 ```bash
-mkdir nginx_conf
+mkdir nginx_config
 ```
 In that directort you add a 'default.conf' with the help of Nano.
 ```bash
-cd nginx_conf
+cd nginx_config
 nano default.conf
 ```
 And again copy paste from Windows into nano
@@ -316,24 +316,7 @@ server {
     proxy_redirect off;
 
   }
- 
-  # Dynamic Endpoint Proxy
-
-  location ~/endpoints/(?<endpointName>.*)$ {
-
-    proxy_set_header X-Real-IP $remote_addr;
-
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-
-    proxy_set_header X-NginX-Proxy true;
-
-    proxy_pass http://48.209.91.59:8090/api/v1/worker/live/$endpointName;
-
-    proxy_ssl_session_reuse off;
-
-    proxy_set_header Host $http_host;
-
-  }
+  
 }
 ```
 Now we are almost there, and you are getting good at this terminal thing, so is there a use for Podman Desktop, you ask yourself?
