@@ -130,7 +130,7 @@ And add the following.
 Looking like this.
 <img src="/img/blog/2026-03-21/nano-docker-compose.jpg" alt="Edit compose"/>
 
-Also remove this part, which is not compatible with Podman.
+Remove this line since it is not relevant for this setup.  
 
 ```yml
 environment:
@@ -268,9 +268,7 @@ In that directory you add a 'default.conf' with the help of Nano.
 cd nginx_config
 nano default.conf
 ```
-And again copy paste from Windows into nano
-Use CRTL + x to quit, and answer ‘y’ to save the file.
-Here is how the default.conf should look   
+The following nginx.conf is almost identical to the default Docker-based setup, with the only change being that the resolve parameter is removed as it doesn't work reliably with Podman's networking. 
 
 ```config
 server {
