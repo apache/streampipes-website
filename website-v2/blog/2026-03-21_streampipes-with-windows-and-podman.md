@@ -272,49 +272,30 @@ The following nginx.conf is almost identical to the default Docker-based setup, 
 
 ```config
 server {
-
   listen       8088 default_server;
- 
   root /usr/share/nginx/html;
  
   # Enable gzip compression
-
   gzip on;
-
   gzip_static on;
-
   gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
-
   gzip_proxied  any;
-
   gzip_vary on;
-
   gzip_comp_level 6;
-
   gzip_buffers 16 8k;
-
   gzip_http_version 1.1;
  
   # StreamPipes Backend Proxy
 
   location /streampipes-backend {
-
     proxy_set_header X-Real-IP $remote_addr;
-
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-
     proxy_set_header X-NginX-Proxy true;
-
     proxy_pass http://backend:8030;
-
     proxy_ssl_session_reuse off;
-
     proxy_set_header Host $http_host;
-
     proxy_redirect off;
-
   }
-  
 }
 ```
 Now we are almost there, and you are getting good at this terminal thing, so is there a use for Podman Desktop, you ask yourself?
