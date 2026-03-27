@@ -18,7 +18,8 @@
       "use-install-pipeline-elements",
       "use-configurations",
       "use-programmatically-create-adapters",
-      "use-programmatically-create-pipelines"
+      "use-programmatically-create-pipelines",
+      "use-shortcuts"
     ],
     "📚 Extensions": [
       {
