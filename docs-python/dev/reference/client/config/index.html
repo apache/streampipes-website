@@ -2292,11 +2292,11 @@
 
 
 <a id="streampipes.client.config"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Configuration class for the StreamPipes client.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2312,8 +2312,8 @@
 
 
 <h2 id="streampipes.client.config.StreamPipesClientConfig" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">StreamPipesClientConfig</span><span class="p">(</span><span class="n">credential_provider</span><span class="p">,</span> <span class="n">host_address</span><span class="p">,</span> <span class="n">https_disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">additional_headers</span><span class="o">=</span><span class="nb">dict</span><span class="p">())</span></code>
-  
+              <code class="highlight language-python"><span class="n">StreamPipesClientConfig</span><span class="p">(</span><span class="n">credential_provider</span><span class="p">,</span> <span class="n">host_address</span><span class="p">,</span> <span class="n">https_disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">additional_headers</span><span class="o">=</span><span class="nb">dict</span><span class="p">())</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
   </span>
@@ -2321,116 +2321,114 @@
 <a href="#streampipes.client.config.StreamPipesClientConfig" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>Configure the StreamPipes client in accordance to the actual StreamPipes instance to connect to.</p>
 <p>An instance is provided to the <code>StreamPipesClient</code> to configure it properly.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>credential_provider</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Provides the credentials to authenticate with the StreamPipes API.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.client.credential_provider.CredentialProvider" href="../credential_provider/#streampipes.client.credential_provider.CredentialProvider">CredentialProvider</a></code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr>
-          <td><code>host_address</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Host address of the StreamPipes instance to connect to.
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>credential_provider</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Provides the credentials to authenticate with the StreamPipes API.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="CredentialProvider (streampipes.client.credential_provider.CredentialProvider)" href="../credential_provider/#streampipes.client.credential_provider.CredentialProvider">CredentialProvider</a></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>host_address</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Host address of the StreamPipes instance to connect to.
 Should be provided without the protocol/scheme, e.g. as <code>localhost</code> or <code>streampipes.xyz</code>.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code>str</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>https_disabled</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Determines whether https is used to connect to StreamPipes.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Optional">Optional</span>[bool]</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>port</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Specifies the port under which the StreamPipes API is available,
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>https_disabled</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Determines whether https is used to connect to StreamPipes.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Optional">Optional</span>[<span title="bool">bool</span>]</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>port</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Specifies the port under which the StreamPipes API is available,
 e.g., <code>80</code> (with http) or <code>443</code> (with https)</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Optional">Optional</span>[int]</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>80</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>additional_headers</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Specifies additional HTTP headers that should be sent with each request, e.g., proxy headers</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>[str, str]]</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>dict()</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Optional">Optional</span>[<span title="int">int</span>]</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>80</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>additional_headers</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Specifies additional HTTP headers that should be sent with each request, e.g., proxy headers</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="str">str</span>]]</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code><span title="dict">dict</span>()</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <p>see <a class="autorefs autorefs-internal" href="../client/#streampipes.client.client.StreamPipesClient">StreamPipesClient</a></p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2446,8 +2444,7 @@ e.g., <code>80</code> (with http) or <code>443</code> (with https)</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -2456,7 +2453,7 @@ e.g., <code>80</code> (with http) or <code>443</code> (with https)</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2465,7 +2462,7 @@ e.g., <code>80</code> (with http) or <code>443</code> (with https)</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 7, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2025 02:35:19">July 26, 2025</span>
       
     
   </small>

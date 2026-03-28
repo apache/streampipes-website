@@ -2320,9 +2320,9 @@
 
 
 <a id="streampipes.functions.utils.function_context"></a>
-  <div class="doc doc-contents first">
+    <div class="doc doc-contents first">
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2338,90 +2338,88 @@
 
 
 <h2 id="streampipes.functions.utils.function_context.FunctionContext" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">FunctionContext</span><span class="p">(</span><span class="n">function_id</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">streams</span><span class="p">)</span></code>
+              <code class="highlight language-python"><span class="n">FunctionContext</span><span class="p">(</span><span class="n">function_id</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">streams</span><span class="p">)</span></code>
 
 <a href="#streampipes.functions.utils.function_context.FunctionContext" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>Container for the context of a StreamPipesFunction.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>function_id</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The id of this function.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>schema</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>A dictionary which contains the schema of a data stream for each stream id.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Dict">Dict</span>[<span title="str">str</span>, <a class="autorefs autorefs-internal" title="DataStream (streampipes.model.resource.data_stream.DataStream)" href="../../../model/resource/data_stream/#streampipes.model.resource.data_stream.DataStream">DataStream</a>]</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>client</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The client to interact with the API.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="StreamPipesClient (streampipes.client.client.StreamPipesClient)" href="../../../client/client/#streampipes.client.client.StreamPipesClient">StreamPipesClient</a></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>streams</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The ids of the streams needed by this function.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.List">List</span>[<span title="str">str</span>]</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>function_id</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The id of this function.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code>str</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>schema</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>A dictionary which contains the schema of a data stream for each stream id.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Dict">Dict</span>[str, <a class="autorefs autorefs-internal" title="streampipes.model.resource.data_stream.DataStream" href="../../../model/resource/data_stream/#streampipes.model.resource.data_stream.DataStream">DataStream</a>]</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>client</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The client to interact with the API.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.client.client.StreamPipesClient" href="../../../client/client/#streampipes.client.client.StreamPipesClient">StreamPipesClient</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>streams</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The ids of the streams needed by this function.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.List">List</span>[str]</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
 
 
-  
 
   <div class="doc doc-children">
-
 
 
 
@@ -2434,84 +2432,81 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.functions.utils.function_context.FunctionContext.add_data_stream_schema" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">add_data_stream_schema</span><span class="p">(</span><span class="n">stream_id</span><span class="p">,</span> <span class="n">data_stream</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">add_data_stream_schema</span><span class="p">(</span><span class="n">stream_id</span><span class="p">,</span> <span class="n">data_stream</span><span class="p">)</span></code>
 
 <a href="#streampipes.functions.utils.function_context.FunctionContext.add_data_stream_schema" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Adds a new data stream for a new stream id.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>stream_id</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The id of the data stream.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code>str</code>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>stream_id</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The id of the data stream.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>data_stream</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The schema of the data stream.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="DataStream (streampipes.model.resource.data_stream.DataStream)" href="../../../model/resource/data_stream/#streampipes.model.resource.data_stream.DataStream">DataStream</a></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code>None</code>
                 </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>data_stream</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The schema of the data stream.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.model.resource.data_stream.DataStream" href="../../../model/resource/data_stream/#streampipes.model.resource.data_stream.DataStream">DataStream</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code>None</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
 
@@ -2519,8 +2514,7 @@
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -2529,7 +2523,7 @@
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2538,7 +2532,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 7, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2025 02:35:20">July 26, 2025</span>
       
     
   </small>
