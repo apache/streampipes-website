@@ -2334,9 +2334,9 @@
 
 
 <a id="streampipes.functions.broker.output_collector"></a>
-  <div class="doc doc-contents first">
+    <div class="doc doc-contents first">
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2352,73 +2352,71 @@
 
 
 <h2 id="streampipes.functions.broker.output_collector.OutputCollector" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">OutputCollector</span><span class="p">(</span><span class="n">data_stream</span><span class="p">)</span></code>
+              <code class="highlight language-python"><span class="n">OutputCollector</span><span class="p">(</span><span class="n">data_stream</span><span class="p">)</span></code>
 
 <a href="#streampipes.functions.broker.output_collector.OutputCollector" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>Collector for output events. The events are published to an output data stream.
 Therefore, the output collector establishes a connection to the broker.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>data_stream</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The output data stream that will receive the events.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.model.resource.data_stream.DataStream" href="../../../model/resource/data_stream/#streampipes.model.resource.data_stream.DataStream">DataStream</a></code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>data_stream</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The output data stream that will receive the events.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="DataStream (streampipes.model.resource.data_stream.DataStream)" href="../../../model/resource/data_stream/#streampipes.model.resource.data_stream.DataStream">DataStream</a></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>ATTRIBUTE</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code><span title="streampipes.functions.broker.output_collector.OutputCollector.publisher">publisher</span></code></td>
-          <td class="doc-attribute-details">
-            <div class="doc-md-description">
-              <p>The publisher instance that sends the data to StreamPipes</p>
-            </div>
-            <p>
-                <span class="doc-attribute-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.functions.broker.Publisher" href="../publisher/#streampipes.functions.broker.publisher.Publisher">Publisher</a></code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">ATTRIBUTE</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="streampipes.functions.broker.output_collector.OutputCollector.publisher">publisher</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>The publisher instance that sends the data to StreamPipes</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="Publisher (streampipes.functions.broker.Publisher)" href="../publisher/#streampipes.functions.broker.publisher.Publisher">Publisher</a></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2430,118 +2428,111 @@ Therefore, the output collector establishes a connection to the broker.</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.functions.broker.output_collector.OutputCollector.collect" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">collect</span><span class="p">(</span><span class="n">event</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">collect</span><span class="p">(</span><span class="n">event</span><span class="p">)</span></code>
 
 <a href="#streampipes.functions.broker.output_collector.OutputCollector.collect" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Publishes an event to the output stream.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>event</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The event to be published.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]</code>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>event</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The event to be published.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code>None</code>
                 </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code>None</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.functions.broker.output_collector.OutputCollector.disconnect" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">disconnect</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">disconnect</span><span class="p">()</span></code>
 
 <a href="#streampipes.functions.broker.output_collector.OutputCollector.disconnect" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Disconnects the broker of the output collector.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code>None</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              
-            </div>
-          </td>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code>None</code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2549,8 +2540,7 @@ Therefore, the output collector establishes a connection to the broker.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -2559,7 +2549,7 @@ Therefore, the output collector establishes a connection to the broker.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2568,7 +2558,7 @@ Therefore, the output collector establishes a connection to the broker.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 7, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2025 02:35:20">July 26, 2025</span>
       
     
   </small>

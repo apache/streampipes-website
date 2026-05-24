@@ -2428,13 +2428,13 @@
 
 
 <a id="streampipes.endpoint.endpoint"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>General implementation for an endpoint.
 Provided classes and assets are aimed to be used for developing endpoints.
 An endpoint provides all options to communicate with a dedicated part of StreamPipes in a handy way.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2450,22 +2450,22 @@ An endpoint provides all options to communicate with a dedicated part of StreamP
 
 
 <h2 id="streampipes.endpoint.endpoint.APIEndpoint" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">APIEndpoint</span><span class="p">(</span><span class="n">parent_client</span><span class="p">)</span></code>
+              <code class="highlight language-python"><span class="n">APIEndpoint</span><span class="p">(</span><span class="n">parent_client</span><span class="p">)</span></code>
 
 <a href="#streampipes.endpoint.endpoint.APIEndpoint" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="streampipes.endpoint.endpoint.Endpoint" href="#streampipes.endpoint.endpoint.Endpoint">Endpoint</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="Endpoint (streampipes.endpoint.endpoint.Endpoint)" href="#streampipes.endpoint.endpoint.Endpoint">Endpoint</a></code></p>
 
-  
+
       <p>Abstract implementation of an API endpoint.</p>
 <p>Serves as template for all endpoints of the StreamPipes API.
 By design, endpoints are only instantiated within the <code>__init__</code> method of the StreamPipesClient.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2477,247 +2477,233 @@ By design, endpoints are only instantiated within the <code>__init__</code> meth
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.endpoint.endpoint.APIEndpoint.all" class="doc doc-heading">
-          <code class="highlight language-python"><span class="nb">all</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="nb">all</span><span class="p">()</span></code>
 
 <a href="#streampipes.endpoint.endpoint.APIEndpoint.all" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get all resources of this endpoint provided by the StreamPipes API.</p>
 <p>Results are provided as an instance of a <code>ResourceContainer</code> that
 allows to handle the returned resources in a comfortable and pythonic way.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-              <code>container</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>Container element that bundles the returned resources</p>
-            </div>
-              <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.model.container.resource_container.ResourceContainer" href="../../model/container/resource_container/#streampipes.model.container.resource_container.ResourceContainer">ResourceContainer</a></code>
-                </span>
-              </p>
-          </td>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>container</code>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>Container element that bundles the returned resources</p>
+              </div>
+                <p>
+                  <span class="doc-returns-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="ResourceContainer (streampipes.model.container.resource_container.ResourceContainer)" href="../../model/container/resource_container/#streampipes.model.container.resource_container.ResourceContainer">ResourceContainer</a></code>
+                  </span>
+                </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.endpoint.endpoint.APIEndpoint.build_url" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">build_url</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">build_url</span><span class="p">()</span></code>
 
 <a href="#streampipes.endpoint.endpoint.APIEndpoint.build_url" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Builds the endpoint's URL of the API path.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-              <code>url</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>The URL of the endpoint</p>
-            </div>
-              <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code>str</code>
-                </span>
-              </p>
-          </td>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>url</code>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>The URL of the endpoint</p>
+              </div>
+                <p>
+                  <span class="doc-returns-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
+                </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.endpoint.endpoint.APIEndpoint.get" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">identifier</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">identifier</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#streampipes.endpoint.endpoint.APIEndpoint.get" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Queries the specified resource from the API endpoint.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>identifier</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The identifier of the resource to be queried.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code>str</code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
-
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-              <code>resource</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>The specified resource as an instance of the corresponding model class.</p>
-            </div>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>identifier</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The identifier of the resource to be queried.</p>
+              </div>
               <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.model.resource.resource.Resource" href="../../model/resource/resource/#streampipes.model.resource.resource.Resource">Resource</a></code>
-                </span>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
               </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>resource</code>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>The specified resource as an instance of the corresponding model class.</p>
+              </div>
+                <p>
+                  <span class="doc-returns-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="Resource (streampipes.model.resource.resource.Resource)" href="../../model/resource/resource/#streampipes.model.resource.resource.Resource">Resource</a></code>
+                  </span>
+                </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.endpoint.endpoint.APIEndpoint.post" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">post</span><span class="p">(</span><span class="n">resource</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">post</span><span class="p">(</span><span class="n">resource</span><span class="p">)</span></code>
 
 <a href="#streampipes.endpoint.endpoint.APIEndpoint.post" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Allows to post a resource to the StreamPipes API.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>resource</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The resource to be posted.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.model.resource.resource.Resource" href="../../model/resource/resource/#streampipes.model.resource.resource.Resource">Resource</a></code>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>resource</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The resource to be posted.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="Resource (streampipes.model.resource.resource.Resource)" href="../../model/resource/resource/#streampipes.model.resource.resource.Resource">Resource</a></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code>None</code>
                 </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code>None</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
 
@@ -2725,8 +2711,7 @@ allows to handle the returned resources in a comfortable and pythonic way.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -2735,49 +2720,48 @@ allows to handle the returned resources in a comfortable and pythonic way.</p>
 
 
 <h2 id="streampipes.endpoint.endpoint.Endpoint" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">Endpoint</span><span class="p">(</span><span class="n">parent_client</span><span class="p">)</span></code>
+              <code class="highlight language-python"><span class="n">Endpoint</span><span class="p">(</span><span class="n">parent_client</span><span class="p">)</span></code>
 
 <a href="#streampipes.endpoint.endpoint.Endpoint" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="abc.ABC">ABC</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="abc.ABC">ABC</span></code></p>
 
-  
+
       <p>Abstract implementation of a StreamPipes endpoint.</p>
 <p>Serves as template for all endpoints used for interaction with a StreamPipes instance.
 By design, endpoints are only instantiated within the <code>__init__</code> method of the StreamPipesClient.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>parent_client</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>This parameter expects the instance of <code>StreamPipesClient</code> the endpoint is attached to.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code>StreamPipesClient</code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>parent_client</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>This parameter expects the instance of <code>StreamPipesClient</code> the endpoint is attached to.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="StreamPipesClient">StreamPipesClient</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2793,8 +2777,7 @@ By design, endpoints are only instantiated within the <code>__init__</code> meth
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -2803,23 +2786,23 @@ By design, endpoints are only instantiated within the <code>__init__</code> meth
 
 
 <h2 id="streampipes.endpoint.endpoint.MessagingEndpoint" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">MessagingEndpoint</span><span class="p">(</span><span class="n">parent_client</span><span class="p">)</span></code>
+              <code class="highlight language-python"><span class="n">MessagingEndpoint</span><span class="p">(</span><span class="n">parent_client</span><span class="p">)</span></code>
 
 <a href="#streampipes.endpoint.endpoint.MessagingEndpoint" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="streampipes.endpoint.endpoint.Endpoint" href="#streampipes.endpoint.endpoint.Endpoint">Endpoint</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="Endpoint (streampipes.endpoint.endpoint.Endpoint)" href="#streampipes.endpoint.endpoint.Endpoint">Endpoint</a></code></p>
 
-  
+
       <p>Abstract implementation of a StreamPipes messaging endpoint.</p>
 <p>Serves as template for all endpoints used for interacting with the StreamPipes messaging layer directly.
 Therefore, they need to provide the functionality to talk with the broker system running in StreamPipes.
 By design, endpoints are only instantiated within the <code>__init__</code> method of the StreamPipesClient.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2834,8 +2817,8 @@ By design, endpoints are only instantiated within the <code>__init__</code> meth
 
 
 <h3 id="streampipes.endpoint.endpoint.MessagingEndpoint.broker" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">broker</span><span class="p">:</span> <span class="n">Broker</span></code>
-  
+            <code class="highlight language-python"><span class="n">broker</span><span class="p">:</span> <span class="n">Broker</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
       <small class="doc doc-label doc-label-writable"><code>writable</code></small>
@@ -2844,141 +2827,135 @@ By design, endpoints are only instantiated within the <code>__init__</code> meth
 <a href="#streampipes.endpoint.endpoint.MessagingEndpoint.broker" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Defines the broker instance that is used to connect to StreamPipes' messaging layer.</p>
 <p>This instance enables the client to authenticate to the broker used in the target StreamPipes instance,
 to consume messages from and to write messages to the broker.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RAISES</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-            <span class="doc-raises-annotation">
-                <code><a class="autorefs autorefs-internal" title="streampipes.endpoint.exceptions.MessagingEndpointNotConfiguredError" href="../exceptions/#streampipes.endpoint.exceptions.MessagingEndpointNotConfiguredError">MessagingEndpointNotConfiguredError</a></code>
-            </span>
-          </td>
-          <td class="doc-raises-details">
-            <div class="doc-md-description">
-              <p>If the endpoint is used before the broker instance is set via <code>configure()</code></p>
-            </div>
-          </td>
+          <th><span class="doc-section-title">RAISES</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+              <span class="doc-raises-annotation">
+                  <code><a class="autorefs autorefs-internal" title="MessagingEndpointNotConfiguredError (streampipes.endpoint.exceptions.MessagingEndpointNotConfiguredError)" href="../exceptions/#streampipes.endpoint.exceptions.MessagingEndpointNotConfiguredError">MessagingEndpointNotConfiguredError</a></code>
+              </span>
+            </td>
+            <td class="doc-raises-details">
+              <div class="doc-md-description">
+                <p>If the endpoint is used before the broker instance is set via <code>configure()</code></p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-              <code>broker</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>The broker instance to be used to communicate with StreamPipes' messaging layer.</p>
-            </div>
-              <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.functions.broker.broker.Broker" href="../../functions/broker/broker/#streampipes.functions.broker.broker.Broker">Broker</a></code>
-                </span>
-              </p>
-          </td>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
-  </div>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>broker</code>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>The broker instance to be used to communicate with StreamPipes' messaging layer.</p>
+              </div>
+                <p>
+                  <span class="doc-returns-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="Broker (streampipes.functions.broker.broker.Broker)" href="../../functions/broker/broker/#streampipes.functions.broker.broker.Broker">Broker</a></code>
+                  </span>
+                </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+    </div>
 
 </div>
-
 
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.endpoint.endpoint.MessagingEndpoint.configure" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">configure</span><span class="p">(</span><span class="n">broker</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">configure</span><span class="p">(</span><span class="n">broker</span><span class="p">)</span></code>
 
 <a href="#streampipes.endpoint.endpoint.MessagingEndpoint.configure" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Configures the message endpoint by setting the broker instance to be used.</p>
 <p>This configuration step is required before the endpoint can be actually used.
 The based <code>broker</code> instance is passed to an internal property.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>broker</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Broker instance that should be used for this endpoint</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.functions.broker.broker.Broker" href="../../functions/broker/broker/#streampipes.functions.broker.broker.Broker">Broker</a></code>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>broker</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Broker instance that should be used for this endpoint</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="Broker (streampipes.functions.broker.broker.Broker)" href="../../functions/broker/broker/#streampipes.functions.broker.broker.Broker">Broker</a></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code>None</code>
                 </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code>None</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
 
@@ -2986,8 +2963,7 @@ The based <code>broker</code> instance is passed to an internal property.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -2996,7 +2972,7 @@ The based <code>broker</code> instance is passed to an internal property.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -3005,7 +2981,7 @@ The based <code>broker</code> instance is passed to an internal property.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 7, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2025 02:35:19">July 26, 2025</span>
       
     
   </small>

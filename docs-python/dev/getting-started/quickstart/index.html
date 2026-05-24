@@ -2242,9 +2242,9 @@
 <h1 id="quickstart">⚡️ Quickstart<a class="headerlink" href="#quickstart" title="Permanent link">&para;</a></h1>
 <p>As a quick example, we demonstrate how to set up and configure a StreamPipes client.
 In addition, we will get the available data lake measures out of StreamPipes.</p>
-<p><div class="language-python highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">streampipes.client</span> <span class="kn">import</span> <span class="n">StreamPipesClient</span>
-<span class="kn">from</span> <span class="nn">streampipes.client.config</span> <span class="kn">import</span> <span class="n">StreamPipesClientConfig</span>
-<span class="kn">from</span> <span class="nn">streampipes.client.credential_provider</span> <span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
+<p><div class="language-python highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.client</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamPipesClient</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.client.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamPipesClientConfig</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.client.credential_provider</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
 
 <span class="n">config</span> <span class="o">=</span> <span class="n">StreamPipesClientConfig</span><span class="p">(</span>
     <span class="n">credential_provider</span> <span class="o">=</span> <span class="n">StreamPipesApiKeyCredentials</span><span class="p">(</span>
@@ -2279,7 +2279,7 @@ measures.to_pandas()
 <br>
 Alternatively, you can provide your credentials via environment variables.
 Simply define your credential provider as follows:</p>
-<p><div class="language-python highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">streampipes.client.credential_provider</span> <span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
+<p><div class="language-python highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.client.credential_provider</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
 
 <span class="n">StreamPipesApiKeyCredentials</span><span class="p">()</span>
 </code></pre></div>
@@ -2294,7 +2294,7 @@ The <code>api_key</code> can be generated within the UI as demonstrated below:</
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 31, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 31, 2023 18:12:58">May 31, 2023</span>
       
     
   </small>

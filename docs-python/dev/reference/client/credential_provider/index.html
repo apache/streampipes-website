@@ -2372,13 +2372,13 @@
 
 
 <a id="streampipes.client.credential_provider"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Implementation of credential providers.
 A credential provider supplies the specified sort of credentials in the appropriate HTTP header format.
 The headers are then used by the client to connect to StreamPipes.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2394,25 +2394,24 @@ The headers are then used by the client to connect to StreamPipes.</p>
 
 
 <h2 id="streampipes.client.credential_provider.CredentialProvider" class="doc doc-heading">
-          <code>CredentialProvider</code>
+            <code>CredentialProvider</code>
 
 
 <a href="#streampipes.client.credential_provider.CredentialProvider" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="abc.ABC">ABC</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="abc.ABC">ABC</span></code></p>
 
-  
+
       <p>Abstract implementation of a credential provider.
 Must be inherited by all credential providers.</p>
 
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -2425,81 +2424,78 @@ Must be inherited by all credential providers.</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.client.credential_provider.CredentialProvider.make_headers" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">make_headers</span><span class="p">(</span><span class="n">http_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">make_headers</span><span class="p">(</span><span class="n">http_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#streampipes.client.credential_provider.CredentialProvider.make_headers" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Creates the HTTP headers for the specific credential provider.</p>
 <p>Concrete authentication headers must be defined in the implementation of a credential provider.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>http_headers</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Additional HTTP headers the generated headers are extended by.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>[str, str]]</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>http_headers</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Additional HTTP headers the generated headers are extended by.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="str">str</span>]]</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-              <code>https_headers</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>Dictionary with header information as string key-value pairs. <br>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>https_headers</code>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>Dictionary with header information as string key-value pairs. <br>
 Contains all pairs given as parameter plus the header pairs for authentication
 determined by the credential provider.</p>
-            </div>
-              <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Dict">Dict</span>[str, str]</code>
-                </span>
-              </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+                <p>
+                  <span class="doc-returns-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="str">str</span>]</code>
+                  </span>
+                </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2507,8 +2503,7 @@ determined by the credential provider.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -2517,16 +2512,16 @@ determined by the credential provider.</p>
 
 
 <h2 id="streampipes.client.credential_provider.StreamPipesApiKeyCredentials" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">StreamPipesApiKeyCredentials</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+              <code class="highlight language-python"><span class="n">StreamPipesApiKeyCredentials</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#streampipes.client.credential_provider.StreamPipesApiKeyCredentials" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="streampipes.client.credential_provider.CredentialProvider" href="#streampipes.client.credential_provider.CredentialProvider">CredentialProvider</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CredentialProvider (streampipes.client.credential_provider.CredentialProvider)" href="#streampipes.client.credential_provider.CredentialProvider">CredentialProvider</a></code></p>
 
-  
+
       <p>A credential provider that allows authentication via a StreamPipes API Token.</p>
 <p>The required token can be generated via the StreamPipes UI (see the description on our <a href="../../../">start-page</a>.</p>
 <p>Both parameters can either be passed as arguments or remain unset.
@@ -2537,63 +2532,61 @@ If they are not passed, they are retrieved from environment variables:</p>
 </ul>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>username</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The username to which the API token is granted, e.g., <code>demo-user@streampipes.apche.org</code>.<br>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>username</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The username to which the API token is granted, e.g., <code>demo-user@streampipes.apche.org</code>.<br>
 If not passed, the username is retrieved from environment variable <code>SP_USERNAME</code>.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Optional">Optional</span>[str]</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>api_key</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The StreamPipes API key as it is displayed in the UI.<br>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>api_key</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The StreamPipes API key as it is displayed in the UI.<br>
 If not passed, the api key is retrieved from environment variable <code>SP_API_KEY</code></p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Optional">Optional</span>[str]</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <p>see <a class="autorefs autorefs-internal" href="../client/#streampipes.client.client.StreamPipesClient">StreamPipesClient</a></p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2605,14 +2598,12 @@ If not passed, the api key is retrieved from environment variable <code>SP_API_K
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.client.credential_provider.StreamPipesApiKeyCredentials.from_env" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">from_env</span><span class="p">(</span><span class="n">username_env</span><span class="p">,</span> <span class="n">api_key_env</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">from_env</span><span class="p">(</span><span class="n">username_env</span><span class="p">,</span> <span class="n">api_key_env</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
   </span>
@@ -2620,203 +2611,195 @@ If not passed, the api key is retrieved from environment variable <code>SP_API_K
 <a href="#streampipes.client.credential_provider.StreamPipesApiKeyCredentials.from_env" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>DEPRECATED - use the class constructor instead</p>
 <p>Returns an API key provider parameterized via environment variables.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>username_env</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Name of the environment variable that contains the username</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code>str</code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>username_env</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Name of the environment variable that contains the username</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>api_key_env</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Name of the environment variable that contains the API key</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
         <tr>
-          <td><code>api_key_env</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Name of the environment variable that contains the API key</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code>str</code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code><a class="autorefs autorefs-internal" title="StreamPipesApiKeyCredentials (streampipes.client.credential_provider.StreamPipesApiKeyCredentials)" href="#streampipes.client.credential_provider.StreamPipesApiKeyCredentials">StreamPipesApiKeyCredentials</a></code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="streampipes.client.credential_provider.StreamPipesApiKeyCredentials" href="#streampipes.client.credential_provider.StreamPipesApiKeyCredentials">StreamPipesApiKeyCredentials</a></code>
+          <th><span class="doc-section-title">RAISES</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+              <span class="doc-raises-annotation">
+                  <code><span title="KeyError">KeyError</span></code>
               </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+            </td>
+            <td class="doc-raises-details">
+              <div class="doc-md-description">
+                <p>If one of the environment variables is not defined</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RAISES</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-            <span class="doc-raises-annotation">
-                <code>KeyError</code>
-            </span>
-          </td>
-          <td class="doc-raises-details">
-            <div class="doc-md-description">
-              <p>If one of the environment variables is not defined</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.client.credential_provider.StreamPipesApiKeyCredentials.make_headers" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">make_headers</span><span class="p">(</span><span class="n">http_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">make_headers</span><span class="p">(</span><span class="n">http_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#streampipes.client.credential_provider.StreamPipesApiKeyCredentials.make_headers" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Creates the HTTP headers for the specific credential provider.</p>
 <p>Concrete authentication headers must be defined in the implementation of a credential provider.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>http_headers</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Additional HTTP headers the generated headers are extended by.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>[str, str]]</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>http_headers</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Additional HTTP headers the generated headers are extended by.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="str">str</span>]]</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-              <code>https_headers</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>Dictionary with header information as string key-value pairs. <br>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>https_headers</code>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>Dictionary with header information as string key-value pairs. <br>
 Contains all pairs given as parameter plus the header pairs for authentication
 determined by the credential provider.</p>
-            </div>
-              <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Dict">Dict</span>[str, str]</code>
-                </span>
-              </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+                <p>
+                  <span class="doc-returns-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="str">str</span>]</code>
+                  </span>
+                </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
-
-</div>
-
-
-
-  </div>
-
-  </div>
-
+    </div>
 
 </div>
 
 
 
+  </div>
+
+    </div>
+
+</div>
+
+
+
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2825,7 +2808,7 @@ determined by the credential provider.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 7, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2025 02:35:19">July 26, 2025</span>
       
     
   </small>

@@ -3323,6 +3323,7 @@ Licensed under the Apache License, Version 2.0.
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -3405,10 +3406,10 @@ Licensed under the Apache License, Version 2.0.
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">streampipes.client</span> <span class="kn">import</span> <span class="n">StreamPipesClient</span>
-<span class="kn">from</span> <span class="nn">streampipes.client.config</span> <span class="kn">import</span> <span class="n">StreamPipesClientConfig</span>
-<span class="kn">from</span> <span class="nn">streampipes.client.credential_provider</span> <span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.client</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamPipesClient</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.client.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamPipesClientConfig</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.client.credential_provider</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
 
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"BROKER-HOST"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"localhost"</span>
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"KAFKA-PORT"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"9094"</span>  <span class="c1"># When using Kafka as message broker</span>
@@ -3576,7 +3577,7 @@ X = flowrate_df["volume_flow"].values.reshape(-1, 1).astype("float32")</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">IsolationForest</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.ensemble</span><span class="w"> </span><span class="kn">import</span> <span class="n">IsolationForest</span>
 
 <span class="n">model</span> <span class="o">=</span> <span class="n">IsolationForest</span><span class="p">(</span><span class="n">contamination</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -4047,7 +4048,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="n">flowrate_df</span><span class="p">[</span><span class="s2">"anomaly"</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 
@@ -4115,8 +4116,8 @@ plt.show()</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">onnxconverter_common</span> <span class="kn">import</span> <span class="n">FloatTensorType</span>
-<span class="kn">from</span> <span class="nn">skl2onnx</span> <span class="kn">import</span> <span class="n">to_onnx</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">onnxconverter_common</span><span class="w"> </span><span class="kn">import</span> <span class="n">FloatTensorType</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">skl2onnx</span><span class="w"> </span><span class="kn">import</span> <span class="n">to_onnx</span>
 
 <span class="n">model_onnx</span> <span class="o">=</span> <span class="n">to_onnx</span><span class="p">(</span>
     <span class="n">model</span><span class="p">,</span>
@@ -4175,21 +4176,21 @@ with open("isolation_forest.onnx", "wb") as f:
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">onnxruntime</span> <span class="k">as</span> <span class="nn">rt</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">onnxruntime</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">rt</span>
 
-<span class="kn">from</span> <span class="nn">streampipes.functions.broker.broker_handler</span> <span class="kn">import</span> <span class="n">get_broker_description</span>
-<span class="kn">from</span> <span class="nn">streampipes.functions.streampipes_function</span> <span class="kn">import</span> <span class="n">StreamPipesFunction</span>
-<span class="kn">from</span> <span class="nn">streampipes.functions.utils.data_stream_generator</span> <span class="kn">import</span> <span class="n">create_data_stream</span><span class="p">,</span> <span class="n">RuntimeType</span>
-<span class="kn">from</span> <span class="nn">streampipes.functions.utils.function_context</span> <span class="kn">import</span> <span class="n">FunctionContext</span>
-<span class="kn">from</span> <span class="nn">streampipes.model.resource</span> <span class="kn">import</span> <span class="n">FunctionDefinition</span><span class="p">,</span> <span class="n">DataStream</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.functions.broker.broker_handler</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_broker_description</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.functions.streampipes_function</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamPipesFunction</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.functions.utils.data_stream_generator</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_data_stream</span><span class="p">,</span> <span class="n">RuntimeType</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.functions.utils.function_context</span><span class="w"> </span><span class="kn">import</span> <span class="n">FunctionContext</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.model.resource</span><span class="w"> </span><span class="kn">import</span> <span class="n">FunctionDefinition</span><span class="p">,</span> <span class="n">DataStream</span>
 
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">List</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">List</span>
 
 
-<span class="k">class</span> <span class="nc">ONNXFunction</span><span class="p">(</span><span class="n">StreamPipesFunction</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ONNXFunction</span><span class="p">(</span><span class="n">StreamPipesFunction</span><span class="p">):</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature_names</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">input_stream</span><span class="p">:</span> <span class="n">DataStream</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature_names</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">input_stream</span><span class="p">:</span> <span class="n">DataStream</span><span class="p">):</span>
         <span class="n">output_stream</span> <span class="o">=</span> <span class="n">create_data_stream</span><span class="p">(</span>
             <span class="n">name</span><span class="o">=</span><span class="s2">"flowrate-prediction"</span><span class="p">,</span>
             <span class="n">attributes</span><span class="o">=</span><span class="p">{</span>
@@ -4209,7 +4210,7 @@ with open("isolation_forest.onnx", "wb") as f:
 
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">function_definition</span><span class="o">=</span><span class="n">function_definition</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">onServiceStarted</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">FunctionContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">onServiceStarted</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">FunctionContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">rt</span><span class="o">.</span><span class="n">InferenceSession</span><span class="p">(</span>
             <span class="n">path_or_bytes</span><span class="o">=</span><span class="s2">"isolation_forest.onnx"</span><span class="p">,</span>
             <span class="n">providers</span><span class="o">=</span><span class="n">rt</span><span class="o">.</span><span class="n">get_available_providers</span><span class="p">(),</span>
@@ -4217,7 +4218,7 @@ with open("isolation_forest.onnx", "wb") as f:
         <span class="bp">self</span><span class="o">.</span><span class="n">input_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">get_inputs</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">output_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">get_outputs</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
 
-    <span class="k">def</span> <span class="nf">onEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">streamId</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">onEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">streamId</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">feature_vector</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">feature_names</span><span class="p">:</span>
             <span class="n">feature_vector</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">event</span><span class="p">[</span><span class="n">feature</span><span class="p">])</span>
@@ -4236,7 +4237,7 @@ with open("isolation_forest.onnx", "wb") as f:
             <span class="n">event</span><span class="o">=</span><span class="n">output</span>
         <span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">onServiceStopped</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">onServiceStopped</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">pass</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-7">import numpy as np
@@ -4346,8 +4347,8 @@ class ONNXFunction(StreamPipesFunction):
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">streampipes.functions.registration</span> <span class="kn">import</span> <span class="n">Registration</span>
-<span class="kn">from</span> <span class="nn">streampipes.functions.function_handler</span> <span class="kn">import</span> <span class="n">FunctionHandler</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.functions.registration</span><span class="w"> </span><span class="kn">import</span> <span class="n">Registration</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.functions.function_handler</span><span class="w"> </span><span class="kn">import</span> <span class="n">FunctionHandler</span>
 
 <span class="n">stream</span> <span class="o">=</span> <span class="p">[</span>
     <span class="n">stream</span>
@@ -4462,7 +4463,7 @@ function_handler.initializeFunctions()</div>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 18, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2024 20:36:12">June 18, 2024</span>
       
     
   </small>
