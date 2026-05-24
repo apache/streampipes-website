@@ -41,7 +41,7 @@ jobs:
           rm -r ./docs/pe
 
       - name: fetch extensions docs from artifact
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
           workflow_conclusion: success
@@ -56,7 +56,7 @@ jobs:
           path: ./docs/pe
 
       - name: fetch extensions image assets from artifact
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
           workflow_conclusion: success
@@ -71,7 +71,7 @@ jobs:
           path: ./website-v2/static/img/pipeline-elements
 
       - name: fetch extensions sidebar.xml from artifact
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
           workflow_conclusion: success
