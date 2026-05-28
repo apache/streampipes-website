@@ -38,7 +38,7 @@ Data sent to this endpoint via POST requests is transformed into StreamPipes eve
 ### Configuration
 
 #### Endpoint Appendix
-   Specify the name of the endpoint resource. The endpoint can be accessed at {host of StreamPipes UI}/endpoints/{endpointName}
+   Specify the name of the endpoint resource. The endpoint can be accessed at `{host of StreamPipes UI}/endpoints/{endpointName}`
 
 #### Configuration
 ##### Manual
@@ -48,4 +48,3 @@ Provides an option to define the event schema manually.
 Use a file with example data to automatically detect a first event schema.
 
 ***
-

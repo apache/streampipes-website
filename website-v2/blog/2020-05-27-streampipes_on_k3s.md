@@ -12,7 +12,7 @@ authorImageURL: "/img/wiener.png"
 This blog post is the second part of a series on how we want to bring StreamPipes closer to the edge. The [first part](/blog/2020/01/23/streampipes_on_rpi) describes how we managed to build and deploy StreamPipes on one Raspberry Pi (Model 4), while the [second part](/blog/2020/05/27/streampipes_on_k3s) further covers how to deploy StreamPipes over a Kubernetes cluster of two Raspberry Pi's via k3s using our StreamPipes helm chart.
 <!--truncate-->
 
-**<TL;DR>**
+**TL;DR**
 
 **With new advancements that came in the last StreamPipes release, we managed to reduce the required resources (mainly memory) drastically. To this extent, we cross-compiled StreamPipes Docker images for ARM support and deployed our lite version on a Raspberry Pi (Model 4). We showcase, that it is feasible to run analytical pipelines with ease and operate StreamPipes at moderate load. Additionally, we demonstrate how to deploy StreamPipes over a two-node k3s cluster using our StreamPipes helm chart.**
 
@@ -33,7 +33,7 @@ Fortunately, there exists a few solutions in the container ecosystem with the op
 On the other hand, there exists [K3s](https://k3s.io/), a lightweight Kubernetes distro by Rancher that was introduced early 2019 and has since then gained huge popularity. As it is stated on their website:
 
 * **Perfect for Edge**: _K3s is a highly available, certified Kubernetes distribution designed for production workloads in unattended, resource-constrained, remote locations or inside IoT appliances_
-* **Simplified & Secure**: _K3s is packaged as a single <40MB binary that reduces the dependencies and steps needed to install, run and auto-update a production Kubernetes cluster._
+* **Simplified & Secure**: _K3s is packaged as a single less-than-40MB binary that reduces the dependencies and steps needed to install, run and auto-update a production Kubernetes cluster._
 * **Optimized for ARM**: _Both ARM64 and ARMv7 are supported with binaries and multiarch images available for both. K3s works great from something as small as a Raspberry Pi to an AWS a1.4xlarge 32GiB server._
 
 Thus, this lead us to the point to say, hey why not use K3s to manage StreamPipes in all its glory. The containerized microservice design in addition to the newly available multiarch images are a great fit.

@@ -103,7 +103,7 @@ Now lets start!
 * Use the **NF** (Numerical Filter) from the processing elements tab and connect it to the **FRS1** source
 * Configure the **Numerical Filter**:
     * Field name for filter operator: **mass_flow**
-    * Filter Operation: **<**
+    * Filter Operation: `<`
     * Threshold value: **1**
 
 <div class="my-carousel">
@@ -206,4 +206,3 @@ It is recommended to stop the last pipeline, because it will keep creating notif
 We hope we gave you an easy quick start into StreamPipes.
 If you have any questions or suggestions, just send us an email.
 From here on you can explore all features in the [User Guide](user-guide-introduction) or go to the [Developer Guide](extend-setup) to learn how to write your own StreamPipes processing elements.
-
