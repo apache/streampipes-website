@@ -4,131 +4,205 @@ title: Apache StreamPipes Documentation
 sidebar_label: Overview
 ---
 
-This is the documentation of Apache StreamPipes.
+import StepFlow from '@site/src/components/docs/StepFlow.tsx';
+import FeatureList from '@site/src/components/docs/FeatureList.tsx';
+import UseCaseExample from '@site/src/components/docs/UseCaseExample.tsx';
+import DocVisualPlaceholder from '@site/src/components/docs/DocVisualPlaceholder.tsx';
 
-<img class="docs-image docs-image-small docs-image-no-shadow" style={{padding: '10px'}} src="
-/img/01_try-overview/01_streampipes-overview.png" alt="StreamPipes Overview"/>
+Apache StreamPipes is an open-source IoT and industrial data platform for building complete data infrastructure on your own terms.
+It helps teams set up an on-premise, extensible environment for connecting machines and software systems, turning incoming events into reusable data streams, processing those streams in real time, persisting historical data, and building charts and dashboards on top.
 
+This page is the entry point to the documentation.
+It helps you understand what StreamPipes does, what the documentation covers, and where to start depending on your goal.
 
-<div class="container grid col-3">
-    <div class="column">
-        <div class="toc-box">
-            <div class="toc-header border-thin">
-                🚀 Try
-            </div>
-            <div class="toc-content">
-                <div class="toc-section-header"><b>Your first steps with Apache StreamPipes:</b></div>
-               <a href="../try-installation/">Install StreamPipes 🔗</a>
-            </div>
-        </div>
-    </div>
-    <div class="column">
-        <div class="toc-box">
-            <div class="toc-header border-thin">
-                💡 Concepts
-            </div>
-            <div class="toc-content">
-                <div class="toc-section-header"><b>Learn about some general concepts of StreamPipes:</b></div>
-                <a href="../concepts-overview/">Overview 🔗</a>
-            </div>
-        </div>
-    </div>
-    <div class="column">
-        <div class="toc-box">
-            <div class="toc-header border-thin">
-                🎓 Use
-            </div>
-            <div class="toc-content">
-                <div class="toc-section-header"><b>Learn how to use the various modules of StreamPipes:</b></div>
-                <a href="../use-connect/">StreamPipes Connect 🔗</a>, 
-                <a href="../use-pipeline-editor/">Pipeline Editor 🔗</a>, 
-                <a href="../use-managing-pipelines/">Managing Pipelines 🔗</a>, 
-                <a href="../use-live-dashboard/">Live Dashboard 🔗</a>, 
-                <a href="../use-data-explorer/">Data Explorer 🔗</a>, 
-                <a href="../use-notifications/">Notifications 🔗</a>
-            </div>
-        </div>
-    </div>
-    <div class="column">
-        <div class="toc-box">
-            <div class="toc-header border-thin">
-                📚 Pipeline Elements
-            </div>
-            <div class="toc-content">
-                <div class="toc-section-header"><b>Available pipeline elements in StreamPipes:</b></div>
-                <a href="../pe/org.apache.streampipes.connect.iiot.protocol.stream.kafka/">Adapters 🔗</a>, 
-                <a href="../pe/org.apache.streampipes.processors.transformation.jvm.booloperator.counter/">Data Processors 🔗</a>, 
-                <a href="../pe/org.apache.streampipes.sinks.databases.jvm.couchdb/">Data Sinks 🔗</a> 
-            </div>
-        </div>
-    </div>
-    <div class="column">
-        <div class="toc-box">
-            <div class="toc-header border-thin">
-                ⚡ Deploy 
-            </div>
-            <div class="toc-content">
-                <div class="toc-section-header"><b>How to set up StreamPipes in test and production environments:</b></div>
-                <a href="../deploy-docker/">Docker 🔗</a>, 
-                <a href="../deploy-kubernetes/">Kubernetes 🔗</a>, 
-                <a href="../deploy-use-ssl/">Use SSL 🔗</a>
-            </div>
-        </div>
-    </div>
-    <div class="column">
-        <div class="toc-box">
-            <div class="toc-header border-thin">
-                💻 Extend
-            </div>
-            <div class="toc-content">
-                <div class="toc-section-header"><b>Write your own pipeline elements for StreamPipes:</b></div>
-                <a href="../extend-setup/">Development Setup 🔗</a>, <a href="../extend-cli/">CLI 🔗</a>, <a href="../extend-archetypes/">Maven Archetypes 🔗</a>,
-                <a href="../extend-tutorial-data-sources/">Tutorial Data Sources 🔗</a>, 
-                <a href="../extend-tutorial-data-processors">Tutorial Data Processors 🔗</a>, 
-                <a href="../extend-tutorial-data-sinks/">Tutorial Data Sinks 🔗</a>,
-                <a href="../extend-sdk-event-model.html/">Event Model 🔗</a>, 
-                <a href="../extend-sdk-stream-requirements/">Stream Requirements 🔗</a>, 
-                <a href="../extend-sdk-static-properties/">Static Properties 🔗</a>,
-                <a href="../extend-sdk-output-strategies/">Output Strategies 🔗</a>
-            </div>
-        </div>
-    </div>
-    <div class="column">
-        <div class="toc-box">
-            <div class="toc-header border-thin">
-                🔧 Technicals
-            </div>
-            <div class="toc-content">
-                <div class="toc-section-header"><b>Learn about technical concepts behind the curtain:</b></div>
-                <a href="../technicals-architecture/">Architecture 🔗</a>, 
-                <a href="../technicals-user-guidance/">User Guidance 🔗 </a>, 
-                <a href="../technicals-runtime-wrappers/">Runtime Wrappers 🔗</a>,
-                <a href="../technicals-messaging/">Messaging 🔗</a>, 
-                <a href="../technicals-configuration/">Configuration 🔗</a>
-            </div>
-        </div>
-    </div>
-    <div class="column">
-        <div class="toc-box">
-            <div class="toc-header border-thin">
-                👪 Community
-            </div>
-            <div class="toc-content">
-                <div class="toc-section-header"><b>Get support and learn how to contribute to StreamPipes:</b></div>
-                <a href="../community-get-help/">Get Help 🔗</a>, 
-                <a href="../community-contribute/">Contribute 🔗</a>
-            </div>
-        </div>
-    </div>
-    <div class="column">
-        <div class="toc-box">
-            <div class="toc-header border-thin">
-                🐍 StreamPipes Python
-            </div>
-            <div class="toc-content">
-                <div class="toc-section-header"><b>Discover what we offer for the Python world:</b></div>
-                <a href="/docs/docs/python/latest/">Python Documentation 🔗</a>
-            </div>
-        </div>
-    </div>
-</div>
+## The most important facts
+
+<FeatureList
+  items={[
+    {
+      title: 'StreamPipes is an industrial data platform',
+      text: 'It is not only a pipeline editor. It is a complete IoT and industrial data platform that covers ingestion, stream processing, historical data, visualization, context modeling, and platform administration.',
+    },
+    {
+      title: 'It can serve as your open-source IoT data infrastructure',
+      text: 'StreamPipes is designed so teams can build and operate their own on-premise industrial data stack instead of stitching together separate proprietary tools for ingestion, storage, processing, and visualization.',
+    },
+    {
+      title: 'The main user flow starts with connected data',
+      text: 'In most cases, users begin in Connect, create or refine streams, optionally persist them as datasets, and then use them in pipelines, charts, dashboards, and assets.',
+    },
+    {
+      title: 'Live and historical data work together',
+      text: 'StreamPipes supports both data in motion and data at rest. A stream can drive live processing while also becoming a dataset for later exploration and visualization.',
+    },
+    {
+      title: 'The platform is built for industrial reuse',
+      text: 'Adapters, pipelines, datasets, charts, dashboards, assets, and extensions are managed as reusable platform resources rather than one-off scripts or isolated views.',
+    },
+    {
+      title: 'The platform is intentionally extensible',
+      text: 'You can start with the built-in capabilities and extend the platform later with custom adapters, processors, sinks, and UI modules when your infrastructure or domain requires it.',
+    },
+    {
+      title: 'The documentation is organized by task',
+      text: 'Use the Quick Start for first success, Concepts for the mental model, Features for day-to-day usage, Configure & Operate for administration, and Extend for development.',
+    },
+  ]}
+/>
+
+<DocVisualPlaceholder
+  title="Product overview"
+  purpose="Show the main StreamPipes modules such as Connect, Pipelines, Datasets, Charts, Dashboards, and Assets in one current product view."
+/>
+
+## What you can do with StreamPipes
+
+In practice, StreamPipes combines several jobs that are often spread across separate tools:
+
+<StepFlow
+  steps={[
+    {
+      title: 'Connect industrial and software sources',
+      body: 'Use adapters to bring machine data, broker data, file-based data, and other source events into the platform.',
+    },
+    {
+      title: 'Refine and govern event structures',
+      body: 'Inspect sample events, shape schemas, enrich field metadata, and normalize streams before other users rely on them.',
+    },
+    {
+      title: 'Process streams in real time',
+      body: 'Build pipelines with processors and sinks for filtering, enrichment, routing, notification, storage, and analytics.',
+    },
+    {
+      title: 'Store and explore historical data',
+      body: 'Persist streams as datasets so they can be inspected later, downloaded, governed, and reused in charts and dashboards.',
+    },
+    {
+      title: 'Build operational views',
+      body: 'Create charts from datasets and combine saved charts into dashboards for monitoring, analysis, and communication.',
+    },
+  ]}
+/>
+
+<UseCaseExample title="A typical StreamPipes workflow">
+  A team connects a machine source, refines the schema so the fields are meaningful, persists the stream as a dataset, creates a chart to validate the data, and then adds that chart to a dashboard used by operators and engineers.
+</UseCaseExample>
+
+## StreamPipes as infrastructure
+
+One of the most important points to understand is that StreamPipes is not only a convenient UI for selected data tasks.
+It can be used as the foundation of an open-source IoT and industrial data infrastructure that teams run themselves.
+
+This is especially relevant when you want to:
+
+- keep industrial data on-premise
+- control how ingestion, processing, storage, and visualization are combined
+- avoid building a fragmented toolchain around many separate products
+- establish one reusable platform for multiple plants, teams, or use cases
+
+In that role, StreamPipes provides a coherent operating model across:
+
+- source onboarding
+- real-time processing
+- historical persistence
+- visualization and monitoring
+- industrial context modeling
+- extension and administration
+
+The platform is also intentionally extensible.
+Teams can start with built-in functionality and later add custom adapters, processors, sinks, or user interface extensions when company-specific infrastructure or domain logic requires it.
+
+## How the documentation is organized
+
+The documentation is structured around the main stages of using and operating the platform.
+
+### Start here if you are new
+
+- [Quick Start Guide](02_quick-start-guide.md): install StreamPipes and get one complete first workflow running
+- [Introduction](03_concepts-introduction.md): understand what StreamPipes is and where it fits
+- [Terms](03_concepts-terms.md): learn the core platform objects such as adapters, streams, processors, sinks, assets, and datasets
+
+### Read these pages to use the product
+
+- [Connect IoT Data](04_use-connect.md): onboard and operate data sources
+- [Pipelines](04_use-pipelines.md): process live streams in real time
+- [Datasets](04_use-datasets.md): work with persisted historical data
+- [Charts](04_use-charts.md): query datasets and build visualizations
+- [Dashboards](04_use-dashboards.md): assemble saved charts into monitoring views
+- [Assets & Sites](04_use-assets.md): attach data to industrial structure and context
+
+### Read these pages to operate the platform
+
+- [General Settings](06_configure-operate-general-settings.md): configure instance-wide behavior
+- [Manage Extensions](06_configure-operate-extensions.md): install and manage adapters, processors, and sinks
+- [Extension Services](06_configure-operate-extension-services.md): inspect services, update service configuration, and manage certificates
+- [Security](06_configure-operate-security.md): manage access and security-related configuration
+
+### Read these pages to extend StreamPipes
+
+- [Setup](07_extend-setup.md): prepare a development environment
+- [CLI](07_extend-cli.md): scaffold and manage extension work
+- [First Processor](07_extend-first-processor.md): build a first extension step by step
+- [Customize UI](07_extend-customize-ui.md): extend the user interface
+
+## Where most users should begin
+
+If you are using StreamPipes for the first time, this is the recommended reading path:
+
+1. [Quick Start Guide](02_quick-start-guide.md)
+2. [Introduction](03_concepts-introduction.md)
+3. [Connect IoT Data](04_use-connect.md)
+4. [Datasets](04_use-datasets.md)
+5. [Charts](04_use-charts.md)
+6. [Dashboards](04_use-dashboards.md)
+7. [Pipelines](04_use-pipelines.md)
+
+This order works well because it follows the platform from ingestion to reuse instead of starting with the most complex modeling features first.
+
+## Who this documentation is for
+
+Different readers usually come to StreamPipes with different goals.
+
+<FeatureList
+  items={[
+    {
+      title: 'Operators and process experts',
+      text: 'You usually want to connect data, inspect it, and turn it into operational views without building a custom data stack from scratch.',
+      example: 'Start with Quick Start, Connect, Datasets, Charts, Dashboards, and Assets.',
+    },
+    {
+      title: 'Data and analytics teams',
+      text: 'You usually care about clean event structures, reusable historical data, and a governed path from raw machine signals to analysis-ready datasets.',
+      example: 'Start with Concepts, Connect, Datasets, Charts, and Pipelines.',
+    },
+    {
+      title: 'Platform and integration engineers',
+      text: 'You usually need to understand extension installation, service configuration, security, deployment, and how the platform fits into the broader OT and IT landscape.',
+      example: 'Start with Architecture, Configure & Operate, Extensions, and Extension Services.',
+    },
+    {
+      title: 'Developers extending the platform',
+      text: 'You usually need to understand the event model, extension points, SDK structure, and how custom adapters, processors, sinks, or UI modules fit into the system.',
+      example: 'Start with Extend and then use the SDK-related pages as reference.',
+    },
+  ]}
+/>
+
+## What StreamPipes is not
+
+It also helps to set expectations correctly.
+
+StreamPipes is not:
+
+- only a dashboard tool
+- only a pipeline editor
+- only a protocol adapter collection
+- only a storage layer for time-series data
+
+It becomes most useful when you use it as one connected platform for industrial data onboarding, processing, persistence, visualization, and governance.
+
+## Recommended next step
+
+If you want the fastest path to a first result, continue with the [Quick Start Guide](02_quick-start-guide.md).
+
+If you want the mental model first, continue with [Introduction](03_concepts-introduction.md).

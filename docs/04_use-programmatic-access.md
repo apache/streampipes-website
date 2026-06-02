@@ -4,201 +4,143 @@ title: Programmatic Access
 sidebar_label: Programmatic Access
 ---
 
+import UseCaseExample from '@site/src/components/docs/UseCaseExample.tsx';
 
-:::info Looking for Python support?
+Programmatic access is the right choice when StreamPipes should be controlled or queried from an external application instead of only from the web interface. Typical examples include lifecycle automation for pipelines, inventory or metadata queries, and live consumption of data streams from another service.
 
-This section explains how to use the Apache StreamPipes Java Client. Please read the Python docs to find out how to use
-the client for Python.
+This page focuses on the Java client. If you are looking for Python support, use the dedicated Python documentation instead.
 
-:::
+## When programmatic access makes sense
 
-## About the StreamPipes client
+Not every integration with StreamPipes needs a custom extension. Sometimes the easier and more maintainable option is to keep StreamPipes as the platform and let an external application interact with it over the client API.
 
-Sometimes you don't want to write your own extensions to StreamPipes, but want to interact with StreamPipes from
-external application.
-One example is to influence the lifecycle of pipelines - think of a feature which automatically starts or stops specific
-pipelines that monitor the production of a specific product.
+<UseCaseExample title="A practical automation scenario">
+  A manufacturing application knows which product is currently being produced and starts or stops the corresponding monitoring pipelines automatically. The application does not need to implement StreamPipes functionality itself. It only needs to interact with the platform programmatically.
+</UseCaseExample>
 
-Another example is to gather live data from Apache StreamPipes, e.g., to consume data that has been previously connected
-by an external, standalone application.
+Other common scenarios are collecting live data from a stream inside another service, listing available streams or pipelines, or reusing platform metadata such as templates and sink definitions.
 
-For such use cases, we provide the StreamPipes client, which is currently available in Python and Java. This section
-covers the usage of the Java client.
+## Start with the correct client version
 
-## Using the StreamPipes client
-
-:::info Choosing the right version
-
-Your client library version should match the installed Apache StreamPipes version. Replace `${streampipes.version}` with
-the version of your installation, e.g., `0.92.0`.
-
-:::
-
-In your Java project, add the following dependency to your pom file:
+The client library version should match the installed StreamPipes version. When you add the Java dependency, replace `${streampipes.version}` with the version of the StreamPipes installation you are working against.
 
 ```xml
-
 <dependency>
     <groupId>org.apache.streampipes</groupId>
     <artifactId>streampipes-client</artifactId>
     <version>${streampipes.version}</version>
 </dependency>
-
 ```
 
-## Obtaining an API token
+This version alignment matters because the client and the server should agree on the available API surface and data structures.
 
-<img className="docs-image" src="/img/screenshots/streampipes-profile-token.png" alt="Overview StreamPipes Architecture"/>
+## Decide how the client should authenticate
 
-To communicate with Apache StreamPipes, you need to provide proper credentials. There are two ways to obtain
-credentials:
+To communicate with StreamPipes, the client needs valid credentials. In practice, there are two common choices.
 
-* An API token, which is bound to a user. The API token can be generate from the UI clicking on the user icon and then
-  navigate to `Profile/API`.
-* A service user, which can be created by users with role `Admin`.
+An API token is tied to one user account and inherits that user’s permissions. A service account is separate from a person and is usually the better choice for automation or long-running integrations because it can be governed independently.
 
-Service users can have their own permissions, while API tokens inherit all permissions from the corresponding user.
+To obtain an API token in the UI, open the user menu and navigate to `Profile/API`. Administrators can create service accounts in the `Security` section.
 
-## Connecting to StreamPipes
+The rule of thumb is simple: if the integration is personal and temporary, an API token may be acceptable. If the integration is operational and should outlive individual users, a service account is usually the better design.
 
-Once you have your API token and configured your dependencies, you can connect to an Apache StreamPipes instance as
-follows:
+## Connect the client to StreamPipes
+
+Once the dependency and credentials are in place, the Java client can be created directly:
 
 ```java
+CredentialsProvider credentials = StreamPipesCredentials
+    .withApiKey("admin@streampipes.apache.org", "YOUR_API_KEY");
 
-CredentialsProvider credentials=StreamPipesCredentials
-    .withApiKey("admin@streampipes.apache.org","YOUR_API_KEY");
-
-// Create an instance of the StreamPipes client
-    StreamPipesClient client=StreamPipesClient
-    .create("localhost",8082,credentials,true);
-
+StreamPipesClient client = StreamPipesClient
+    .create("localhost", 8082, credentials, true);
 ```
 
-The following configurations are required:
+The credentials block can also be created with a service token instead of an API key. The client itself needs the host, the port, the credentials object, and the HTTPS flag. StreamPipes also provides convenience creation options, but the important point is that the client should connect to the same public address and protocol configuration your users would use in the browser.
 
-* The `withApiKey` method expects the username and the API key. Alternatively, use the `withServiceToken` method to
-  authenticate as a service user.
-* The client instance requires the hostname or IP address of your running StreamPipes instance. In addition, you need to
-  provide the port, the credentials object and a flag which needs to be set in case the StreamPipes instance is not
-  served over HTTPS.
-* There are short-hand convenience options to create a client instance.
+## Use the client for metadata and lifecycle work
 
-## Working with the client
-
-Here are some examples how you can work with the StreamPipes client:
+Once connected, the client can inspect streams, pipelines, sinks, and templates, and it can also trigger lifecycle operations such as starting or stopping pipelines.
 
 ```java
+List<SpDataStream> streams = client.streams().all();
 
-// Get streams
-List<SpDataStream> streams=client.streams().all();
+Optional<SpDataStream> stream = client.streams().get("STREAM_ID");
+EventSchema schema = stream.get().getEventSchema();
+List<EventProperty> fields = schema.getEventProperties();
 
-// Get a specific stream
-    Optional<SpDataStream> stream=client.streams().get("STREAM_ID");
+List<Pipeline> pipelines = client.pipelines().all();
+PipelineOperationStatus startStatus = client.pipelines().start(pipelines.get(0));
+PipelineOperationStatus stopStatus = client.pipelines().stop("PIPELINE_ID");
 
-// see the schema of a data stream
-    EventSchema schema=stream.get().getEventSchema();
-
-// print the list of fields of this stream
-    List<EventProperty> fields=schema.getEventProperties();
-
-// Get all pipelines
-    List<Pipeline> pipelines=client.pipelines().all();
-
-// Start a pipeline
-    PipelineOperationStatus status=client.pipelines().start(pipelines.get(0));
-
-// Stop a pipeline with providing a pipeline Id
-    PipelineOperationStatus status=client.pipelines().stop("PIPELINE_ID");
-
-// Get all pipeline element templates
-    List<PipelineElementTemplate> templates=client.pipelineElementTemplates().all();
-
-// Get all data sinks
-    List<DataSinkInvocation> dataSinks=client.sinks().all();
-
-
+List<PipelineElementTemplate> templates = client.pipelineElementTemplates().all();
+List<DataSinkInvocation> dataSinks = client.sinks().all();
 ```
 
-## Consuming live data
+The most useful way to think about these calls is not as isolated snippets, but as a client-side view into the same platform objects users see in the UI. Streams expose schema, pipelines expose lifecycle, templates expose reusable configuration, and sinks expose available targets.
 
-StreamPipes supports a variety of messaging protocols to internally handle data streams. If you plan to gather live data
-from the client library, you also need to add one or more of the supported messaging
-protocols to the pom file. The default protocol depends on the StreamPipes configuration and is set in the `.env` file
-in your installation folder.
+## Consume live data from streams
+
+If the goal is not only to query metadata but also to consume live stream data, the client needs support for the messaging protocol used inside the StreamPipes installation.
+
+Depending on the installation, that can mean adding support for Kafka, NATS, or MQTT:
 
 ```xml
-
-<!-- For Kafka support -->
 <dependency>
     <groupId>org.apache.streampipes</groupId>
     <artifactId>streampipes-messaging-kafka</artifactId>
     <version>${streampipes.version}</version>
 </dependency>
 
-        <!-- For Nats support -->
 <dependency>
-<groupId>org.apache.streampipes</groupId>
-<artifactId>streampipes-messaging-nats</artifactId>
-<version>${streampipes.version}</version>
+    <groupId>org.apache.streampipes</groupId>
+    <artifactId>streampipes-messaging-nats</artifactId>
+    <version>${streampipes.version}</version>
 </dependency>
 
-
-        <!-- For MQTT support -->
 <dependency>
-<groupId>org.apache.streampipes</groupId>
-<artifactId>streampipes-messaging-mqtt</artifactId>
-<version>${streampipes.version}</version>
+    <groupId>org.apache.streampipes</groupId>
+    <artifactId>streampipes-messaging-mqtt</artifactId>
+    <version>${streampipes.version}</version>
 </dependency>
-
 ```
 
-In addition, add the message format that is used internally by StreamPipes. The default message format used by
-StreamPipes is JSON, so let's include the dependency as well:
+The client also needs the matching internal data format. JSON is the standard default:
 
 ```xml
-
-<!-- For JSON support -->
 <dependency>
     <groupId>org.apache.streampipes</groupId>
     <artifactId>streampipes-dataformat-json</artifactId>
     <version>${streampipes.version}</version>
 </dependency>
-
 ```
 
-Once you've imported the dependencies, it is easy to consume live data. First, register the protocols and formats in
-your client instance:
+After that, register the protocol and data format in the client:
 
 ```java
-
 client.registerProtocol(new SpKafkaProtocolFactory());
 
-// or Nats:
-    client.registerProtocol(new SpNatsProtocolFactory());
+// or NATS:
+client.registerProtocol(new SpNatsProtocolFactory());
 
-// data format:
-    client.registerDataFormat(new JsonDataFormatFactory());
-
+client.registerDataFormat(new JsonDataFormatFactory());
 ```
 
-Then, you are ready to consume data:
+Then you can subscribe to a stream:
 
 ```java
-
-client.streams().subscribe(dataStreams.get(0),new EventProcessor() {
-@Override
-public void onEvent(Event event) {
-    // example
-    MapUtils.debugPrint(System.out,"event",event.getRaw());
-    }
-    });
-
+client.streams().subscribe(dataStreams.get(0), new EventProcessor() {
+  @Override
+  public void onEvent(Event event) {
+    MapUtils.debugPrint(System.out, "event", event.getRaw());
+  }
+});
 ```
 
-:::tip
+This is the point where the client moves from platform automation into live stream consumption. The important operational question is therefore not only “does the Java code compile?” but also “does the chosen protocol match the actual StreamPipes installation?”
 
-There are many more options to work with the StreamPipes Client - e.g., you can trigger emails directly from the API.
-Just explore the various classes and interfaces provided by the client!
+## How to work well with the client
 
-:::
+The most reliable pattern is to use the client for clearly scoped tasks: read platform metadata, automate lifecycle operations, or consume live stream data in a controlled way. A service account with appropriately limited permissions is usually the best basis for that work.
+
+It is also worth keeping the responsibilities clear. The client is a way to interact with StreamPipes, not to reimplement it. If your application needs the platform’s stream, pipeline, or dataset behavior, it is usually better to let StreamPipes remain the owner of that logic and use the client as the integration surface.

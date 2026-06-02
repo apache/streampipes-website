@@ -1,0 +1,380 @@
+.stepFlow {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.stepCard {
+  background: #ffffff;
+  border: 1px solid #dde7f0;
+  border-left: 4px solid #1b1464;
+  border-radius: 12px;
+  padding: 1rem 1.05rem 0.95rem;
+  position: relative;
+}
+
+.stepHeader {
+  align-items: center;
+  display: flex;
+  gap: 0.85rem;
+  margin-bottom: 0.6rem;
+}
+
+.stepIndex {
+  align-items: center;
+  background: #eef2f7;
+  border: 1px solid #d4dce6;
+  border-radius: 999px;
+  color: #1b1464;
+  display: inline-flex;
+  flex: 0 0 2rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  height: 2rem;
+  justify-content: center;
+  width: 2rem;
+}
+
+.stepEyebrow {
+  color: #557085;
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.18rem;
+  text-transform: uppercase;
+}
+
+.stepTitle {
+  color: #102a43;
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.stepBody {
+  color: #334e68;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.featureList {
+  display: grid;
+  gap: 0.9rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.featureItem {
+  border-bottom: 1px solid #e6edf5;
+  padding-bottom: 0.95rem;
+}
+
+.featureItem:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.featureTitle {
+  color: #102a43;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.45rem;
+}
+
+.featureText {
+  color: #334e68;
+  font-size: 0.94rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.featureExample {
+  color: #486581;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-top: 0.45rem;
+}
+
+.exampleBox {
+  background: #fafcfe;
+  border: 1px solid #dbe7f2;
+  border-left: 4px solid #39b54a;
+  border-radius: 12px;
+  margin: 1.5rem 0 2rem;
+  padding: 1rem 1.1rem;
+}
+
+.exampleLabel {
+  color: #116530;
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+
+.exampleTitle {
+  color: #102a43;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+}
+
+.exampleBody {
+  color: #2f4858;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.visualPlaceholder {
+  background: #fbfcfe;
+  border: 1px dashed #c7d3e0;
+  border-radius: 14px;
+  margin: 1.5rem 0 2rem;
+  overflow: hidden;
+}
+
+.visualHeader {
+  align-items: center;
+  background: #ffffff;
+  border-bottom: 1px dashed #d8e1ea;
+  display: flex;
+  gap: 0.7rem;
+  padding: 0.8rem 1rem;
+}
+
+.visualIcon {
+  align-items: center;
+  background: #eef2f7;
+  border: 1px solid #d4dce6;
+  border-radius: 10px;
+  color: #1b1464;
+  display: inline-flex;
+  flex: 0 0 2.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 2.25rem;
+  justify-content: center;
+  width: 2.25rem;
+}
+
+.visualTitle {
+  color: #102a43;
+  font-size: 0.98rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.visualBody {
+  color: #486581;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  padding: 0.95rem 1rem 1rem;
+}
+
+.visualPurpose {
+  color: #334e68;
+  display: block;
+  margin-top: 0.45rem;
+}
+
+.screenshotFrame {
+  background: #ffffff;
+  border: 1px solid #dbe7f2;
+  border-radius: 16px;
+  box-shadow: 0 16px 36px rgba(16, 42, 67, 0.08);
+  margin: 1.5rem 0 2rem;
+  overflow: hidden;
+}
+
+.screenshotHeader {
+  align-items: flex-start;
+  background: #ffffff;
+  border-bottom: 1px solid #e6edf5;
+  display: flex;
+  gap: 0.9rem;
+  justify-content: space-between;
+  padding: 0.95rem 1rem 0.85rem;
+}
+
+.screenshotHeaderMain {
+  min-width: 0;
+}
+
+.screenshotEyebrow {
+  color: #557085;
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.screenshotTitle {
+  color: #102a43;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.screenshotBadge {
+  background: #e8f1fb;
+  border: 1px solid #c7dcf5;
+  border-radius: 999px;
+  color: #1b5fa7;
+  flex: 0 0 auto;
+  font-size: 0.74rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.42rem 0.7rem;
+  text-transform: uppercase;
+}
+
+.screenshotMedia {
+  display: block;
+  padding: 1rem;
+}
+
+.screenshotMediaLink {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+}
+
+.screenshotImage {
+  border: 1px solid #d8e4ef;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(16, 42, 67, 0.12);
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.screenshotCaption {
+  color: #486581;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  padding: 0 1rem 1rem;
+}
+
+.comparisonGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 1rem;
+}
+
+.comparisonStacked {
+  grid-template-columns: 1fr;
+}
+
+.comparisonItem {
+  background: #ffffff;
+  border: 1px solid #e6edf5;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.comparisonItemHeader {
+  background: #fbfcfe;
+  border-bottom: 1px solid #e6edf5;
+  padding: 0.8rem 0.9rem;
+}
+
+.comparisonItemTitle {
+  color: #102a43;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.comparisonItemCaption {
+  color: #486581;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin-top: 0.35rem;
+}
+
+.comparisonSummary {
+  border-top: 1px solid #e6edf5;
+  color: #334e68;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  padding: 0.9rem 1rem 1rem;
+}
+
+.slideshowMain {
+  padding: 1rem 1rem 0.75rem;
+}
+
+.slideshowSwiper {
+  --swiper-navigation-color: #1b1464;
+  --swiper-pagination-color: #1b1464;
+}
+
+.slideshowSlide {
+  background:
+    linear-gradient(135deg, rgba(215, 228, 241, 0.7), rgba(248, 251, 255, 0.95));
+  border-radius: 14px;
+  padding: 0.9rem;
+}
+
+.slideshowThumbs {
+  padding: 0 1rem 1rem;
+}
+
+.slideshowThumbSlide {
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.72;
+  overflow: hidden;
+  transition:
+    border-color 0.2s ease,
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.slideshowThumbSlide:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+:global(.swiper-slide-thumb-active).slideshowThumbSlide {
+  border-color: #1b1464;
+  opacity: 1;
+}
+
+.slideshowMeta {
+  border-top: 1px solid #e6edf5;
+  padding: 0.95rem 1rem 1rem;
+}
+
+.slideshowMetaTitle {
+  color: #102a43;
+  font-size: 0.96rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+}
+
+.slideshowMetaCaption {
+  color: #486581;
+  font-size: 0.93rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 996px) {
+  .comparisonGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .comparisonStacked {
+    grid-template-columns: 1fr;
+  }
+}

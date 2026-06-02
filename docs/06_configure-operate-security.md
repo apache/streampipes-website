@@ -4,175 +4,403 @@ title: Security & User Management
 sidebar_label: Security & User Management
 ---
 
-## Overriding default settings
+## Introduction
 
-At installation time, StreamPipes checks for available environment variables relevant for the securing the system. If they are not set, it will use the default values.
+The `Security` section in StreamPipes is where administrators manage who can access the platform, which roles they receive, and how platform resources are shared. It combines account management, role-based access control, group assignment, service accounts, and JWT signing support in one place.
 
-The following variables are checked by the core at installation time:
+Use this page together with:
 
-* SP_INITIAL_ADMIN_EMAIL The email address of the initial administrator.
-* SP_INITIAL_ADMIN_PASSWORD The password of the initial administrator.
-* SP_INITIAL_CLIENT_USER The initial client user, used by the extensions modules to make authenticated API requests to the core.
-* SP_INITIAL_CLIENT_SECRET The default password of the initial client user.
-* SP_SETUP_INSTALL_PIPELINE_ELEMENTS Indicates whether pipeline elements should be installed.
-* SP_ENCRYPTION_PASSCODE The encryption passcode, used for securely storing secrets (e.g., database connection strings).
-* SP_JWT_SECRET The JWT secret, used for signing JWT tokens.
+- [General Settings](./06_configure-operate-general-settings.md) for self-registration, password recovery, and default roles for new users
+- [Environment Variables](./06_configure-operate-environment-variables.md) for installation-time security settings
 
-In addition, all extensions services that perform requests to the core will need to have the following environment variables set:
+## What the Security page contains
 
-* SP_CLIENT_USER The client user, used by the extensions modules to make authenticated API requests to the core.
-* SP_CLIENT_SECRET The password of the client user.
+The current `Security` page is organized into five sections:
 
-Note that there are default values for all environment variables that are set at installation time - make sure to change these settings when moving to production!
+- `User Accounts`
+- `Service Accounts`
+- `Groups`
+- `Roles`
+- `Authentication`
 
-## Configuration
+Each section supports a different part of the security model.
 
-Most security-related settings can be set in the configuration section of StreamPipes. The *General* section allows to set self-service registration and password recovery (both are disabled by default and require a valid email configuration).
-In the *Security* section, users, service accounts, roles and groups can be configured.
+## Security model at a glance
 
+In practice, StreamPipes combines three layers:
 
-## User types
+1. `Accounts` identify users or services.
+2. `Roles` define what those accounts are allowed to do.
+3. `Resource permissions` define who can access a specific pipeline, adapter, chart, dashboard, dataset, asset, or extension.
 
-StreamPipes distinguishes between User Accounts (real users that interact with StreamPipes over the UI or an API) and Service Accounts (user-independent accounts which solely use StreamPipes over the API).
+That means a user does not only need the right global role, but may also need access to the individual resource.
 
-User accounts are typically used by extensions service that require API access to the core (e.g., to get a list of running pipelines).
+## Installation-time security settings
 
-## Permissions
+Before you start managing users in the UI, review the security-related environment variables of the installation. The most important installation-time settings are:
 
-StreamPipes v0.69.0 comes with more advanced mechanisms to manage permissions.
-For each major resource (pipeline elements, pipelines, StreamPipes Connect adapters, dashboards, data explorer views), permissions can be assigned individually to users and groups.
+- `SP_INITIAL_ADMIN_EMAIL`
+- `SP_INITIAL_ADMIN_PASSWORD`
+- `SP_INITIAL_SERVICE_USER`
+- `SP_INITIAL_SERVICE_USER_SECRET`
+- `SP_ENCRYPTION_PASSCODE`
+- `SP_JWT_SECRET`
+- `SP_JWT_SIGNING_MODE`
+- `SP_JWT_PRIVATE_KEY_LOC`
 
-To ease permission handling, StreamPipes comes with a default number of roles with pre-assigned privileges:
+For extension services that authenticate against the core, the relevant settings are:
 
-### Roles
+- `SP_CLIENT_USER`
+- `SP_CLIENT_SECRET`
 
-* Admin The administrator role has full access to all resources.
-* Service Admin The service administrator role has full access to all resources, but has no access to the UI.
-* Pipeline Admin has full control of pipelines (create, edit, delete, start, stop, pause, resume, etc.).
-* Pipeline User has limited control of pipelines (read only).
-* Dashboard Admin has full control of dashboards (create, edit, delete, etc.).
-* Dashboard User has limited control of dashboards (read only).
-* Data Explorer Admin has full control of data explorer views (create, edit, delete, etc.).
-* Data Explorer User has limited control of data explorer views (read only).
-* Connect Admin has full control of StreamPipes Connect adapters (create, edit, delete, etc.).
+For production systems, you should change the default credentials and secrets before exposing the installation to real users or connecting external systems.
 
-### Groups
+## User accounts
 
-Roles can be either assigned to specific users or groups. Any group can contain several members. 
-The permissions of a user are the union of the permissions of all roles assigned to the user and the groups to which the user belongs.
+`User Accounts` are interactive identities for people who sign in to StreamPipes through the UI or use the API as named users.
 
-### Changing permissions
+The user table shows:
 
-Any resource has a resource owner, which is the authority that created the resource. Resources can be either public or private. Public resources are available to all users, while the user role determines what the user can do with the resource.
-E.g., a public pipeline created by a user of role ROLE_ADMIN can be edited by all users with role PIPELINE_ADMIN, while the same pipeline can be read by all users with role PIPELINE_USER.
+- email address
+- provider type
+- full name
+- creation time
+- last login
 
-Permissions can only be changed by admin users currently.
-In the overview section of each resource (e.g., pipelines and dashboards), a permission dialog is available to users with role ROLE_ADMIN. The dialog allows to assign users and groups to the individual resource.
+### Create a user account
 
+To create a local user:
 
-## OAuth configuration
+1. Open `Configuration` > `Security`.
+2. In `User Accounts`, click `New`.
+3. Enter the user's email address and full name.
+4. In `Password`, either enter an initial password or, if email is configured, enable `Auto-create password and send to user`.
+5. Assign groups and roles.
+6. Decide whether the account should be `Enabled` and whether it should be `Locked`.
+7. Click `Save`.
 
-It is possible to connect StreamPipes to an external authentication provider such as Keycloak, Azure AD or GitHub.
-Multiple providers can be configured.
+### Edit a user account
 
-To enable login over OAuth, several environment variables are available 
+When you edit a local user, you can change:
 
-### General settings
+- email address
+- full name
+- assigned groups
+- assigned roles
+- enabled state
+- locked state
 
-* `SP_OAUTH_ENABLED` set to `true` to enable OAuth
-* `SP_OAUTH_REDIRECT_URI` set to the base URI where StreamPipes is running, e.g., `http://localhost:80`
+If you change the email address of the currently signed-in user, StreamPipes requires a new login afterwards.
+
+### External users
+
+StreamPipes can also show users that come from an external identity provider. In the table, these users are marked by their provider instead of `local`.
+
+For externally managed users:
+
+- identity fields are managed by the external system
+- some settings in StreamPipes are read-only
+- role assignments may also be externally managed, depending on the provider configuration
+
+The UI explicitly warns when externally managed user settings cannot be changed.
+
+## Service accounts
+
+`Service Accounts` are non-human accounts for automated communication with the core API. They are typically used by extension services and other technical integrations.
+
+Use a service account when:
+
+- an extension service needs to authenticate to the core
+- an automated integration should call the StreamPipes API
+- access should not be tied to an individual person
+
+### Create a service account
+
+To create a service account:
+
+1. Open `Configuration` > `Security`.
+2. In `Service Accounts`, click `New`.
+3. Enter the username.
+4. Enter a `Client Secret`.
+5. Assign the required groups and roles.
+6. Click `Save`.
+
+The client secret must meet the minimum length requirement enforced by the UI. In practice, service accounts should receive only the roles they actually need.
+
+## Groups
+
+`Groups` are a practical way to assign the same role set to multiple users. Instead of assigning every role to every user individually, you assign roles to a group and then assign users to that group.
+
+### Create a group
+
+1. Open `Configuration` > `Security`.
+2. In `Groups`, click `New`.
+3. Enter a group name.
+4. Select one or more roles for the group.
+5. Click `Save`.
+
+After that, edit users and enable the group checkboxes you want to assign.
+
+### Alternate IDs for groups
+
+Groups also support `Alternate IDs`. These are useful when you want to map externally defined groups to a StreamPipes group. This is especially relevant in setups with external identity providers.
+
+In practice:
+
+- the StreamPipes group keeps the local role definition
+- the alternate ID stores the external group identifier
+- external identities can then be aligned with the local authorization model
+
+## Roles
+
+`Roles` are the central access-control building block in StreamPipes. A role contains a set of privileges, and users or groups receive those privileges by assignment.
+
+The role overview distinguishes between:
+
+- `Default roles`, which are built into the platform
+- custom roles, which administrators create for their own operating model
+
+Default roles cannot be deleted.
+
+### Create a custom role
+
+1. Open `Configuration` > `Security`.
+2. In `Roles`, click `New`.
+3. Enter a `Role ID`.
+4. Enter a `Role Name`.
+5. Add the required privileges from `Available Privileges` to `Selected Privileges`.
+6. Optionally add `Alternate IDs` if the role should map to externally defined roles.
+7. Click `Save`.
+
+The role ID must start with `ROLE_` and use only uppercase letters and underscores.
+
+### Alternate IDs for roles
+
+Like groups, roles can also contain `Alternate IDs`. These are used to map externally defined roles to a StreamPipes role. This makes it possible to keep a stable local authorization model even when role names in the external system differ from the StreamPipes role ID.
+
+## How users, groups, and roles work together
+
+The effective permissions of a user are the combination of:
+
+- roles assigned directly to the user
+- roles inherited from assigned groups
+
+This means groups are not a separate permission system. They are a role-assignment mechanism.
+
+A practical pattern is:
+
+- create a small number of business-oriented groups such as `Operations`, `Data Engineering`, or `Plant Supervisors`
+- assign the relevant roles to those groups
+- assign users to groups instead of distributing many direct role assignments
+
+## Resource permissions
+
+Roles control what a user is allowed to do in general. Resource permissions control which concrete objects a user or group can access.
+
+StreamPipes supports permissions dialogs for major resource types, including:
+
+- adapters
+- pipelines
+- datasets
+- charts
+- dashboards
+- assets
+- extensions
+
+### How resource permissions work
+
+Each resource has:
+
+- an owner
+- a visibility model such as private or shared access
+- explicit user and group assignments in the permissions dialog
+
+In practice, this allows you to separate:
+
+- who may generally manage pipelines or dashboards
+- who may access one specific pipeline or dashboard
+
+### Change permissions for a resource
+
+To change permissions, open the overview page of the corresponding resource type and use the permissions action for the item you want to manage. The exact button placement differs by feature, but the workflow is the same:
+
+1. Open the resource overview.
+2. Locate the item.
+3. Open the permissions dialog.
+4. Assign the required users or groups.
+5. Save the changes.
+
+This is the mechanism to use when one team should see or edit a specific object without making it broadly available to everyone with the same global role.
+
+## Authentication and JWT signing
+
+The `Authentication` section currently focuses on `JWT Signature`.
+
+In the UI, administrators can:
+
+- generate a new public/private key pair
+- download the generated files
+
+This is useful in setups where signed tokens and authenticated service communication should rely on an explicit key pair instead of only a shared secret.
+
+### Generate a key pair
+
+1. Open `Configuration` > `Security`.
+2. Scroll to `Authentication`.
+3. Click `Generate and download new key pair`.
+4. Store the downloaded files securely.
+5. Update the deployment configuration so the core and dependent services use the generated keys.
+
+The downloaded files are:
+
+- `public.key`
+- `private.pem`
+
+If you configure RSA-based JWT signing, make sure the deployment references the matching key locations through the appropriate environment variables.
+
+## Self-registration and default roles
+
+User self-registration is not configured in the `Security` page itself. It is configured in `General Settings`.
+
+There you can define:
+
+- whether self-registration is allowed
+- whether password recovery is allowed
+- which default roles newly registered users receive
+
+This distinction matters:
+
+- `Security` is where you manage concrete accounts, groups, roles, and technical authentication assets
+- `General Settings` is where you control how new users enter the system
+
+## OAuth and external identity providers
+
+StreamPipes can be connected to external authentication providers such as Keycloak, Azure AD, or GitHub. Provider configuration is done through environment variables, not through a full provider wizard in the UI.
+
+### Enable OAuth
+
+At minimum, enable OAuth with:
+
+- `SP_OAUTH_ENABLED`
+- `SP_OAUTH_REDIRECT_URI`
+
+`SP_OAUTH_REDIRECT_URI` must point to the public base URL of your StreamPipes installation.
+
+### Provider configuration pattern
+
+Every provider is configured with variables that follow this pattern:
+
+```text
+SP_OAUTH_PROVIDER_{PROVIDER_ID}_{SETTING}
+```
+
+Examples:
+
+- `SP_OAUTH_PROVIDER_AZURE_CLIENT_ID`
+- `SP_OAUTH_PROVIDER_GITHUB_CLIENT_SECRET`
+- `SP_OAUTH_PROVIDER_KEYCLOAK_ISSUER_URI`
+
+The `PROVIDER_ID` identifies one configured provider. You can define multiple providers side by side by using different IDs.
 
 ### Provider-specific settings
 
-For each configured provider, individual settings can be provided. The scheme for environment variables is `SP_OAUTH_{PROVIDER_ID}.*`.
-For instance, if you want to define two providers Azure and GitHub, you can add an individual block `SP_OAUTH_PROVIDER_AZURE.*` and `SP_OAUTH_PROVIDER_GITHUB` to provide the individual authentication settings for each provider.
+The current OAuth configuration parser supports the following provider settings:
 
-The following provider-specific settings are available:
+- `AUTHORIZATION_URI`
+- `CLIENT_NAME`
+- `CLIENT_ID`
+- `CLIENT_SECRET`
+- `FULL_NAME_ATTRIBUTE_NAME`
+- `ISSUER_URI`
+- `JWK_SET_URI`
+- `SCOPES`
+- `TOKEN_URI`
+- `USER_INFO_URI`
+- `EMAIL_ATTRIBUTE_NAME`
+- `USER_ID_ATTRIBUTE_NAME`
+- `ROLE_ATTRIBUTE_NAME`
+- `NAME`
+- `DEFAULT_ROLES`
 
-* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_AUTHORIZATION_URI`, the authorization URI
-* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_CLIENT_ID`, the OAuth client id
-* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_CLIENT_NAME`, the OAuth client name
-* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_CLIENT_SECRET`, the OAuth client secret
-* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_EMAIL_ATTRIBUTE_NAME`, the JWT attribute name for the email field, e.g., `email`
-* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_FULL_NAME_ATTRIBUTE_NAME`, the JWT attribute name for the full username, e.g., `name`(optional)
-* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_ISSUER_URI`, the OAuth issuer URI
-* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_JWK_SET_URI`, the OAuth JWK Set URI
-* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_NAME`, The provider name (used to display the login button in the UI), e.g. `Azure`
-* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_SCOPES`, the requested OAuth scopes, comma-separated, e.g., `openid,profile,email`
-* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_TOKEN_URI`, the OAuth token URI
-* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_USER_ID_ATTRIBUTE_NAME`, the JWT attribute name for the user ID field, e.g. `sub`
-* `SP_OAUTH_PROVIDER_{PROVIDER_ID}_USER_INFO_URI`, the OIDC user info endpoint, e.g., `https://graph.microsoft.com/oidc/userinfo`
+In practice, the most important ones are:
 
-### Example: Authentication with Azure AD
+- connection details such as `AUTHORIZATION_URI`, `TOKEN_URI`, `USER_INFO_URI`, `ISSUER_URI`, and `JWK_SET_URI`
+- client credentials such as `CLIENT_ID` and `CLIENT_SECRET`
+- user-attribute mapping such as `EMAIL_ATTRIBUTE_NAME`, `FULL_NAME_ATTRIBUTE_NAME`, and `USER_ID_ATTRIBUTE_NAME`
+- optional role mapping through `ROLE_ATTRIBUTE_NAME`
+- optional default role assignment through `DEFAULT_ROLES`
 
-This example shows how to configure Azure AD as an authentication backend. The example is provided as an IntelliJ env file as used by the StreamPipes core:
-Replace the placeholders and the `SP_OAUTH_REDIRECT_URI` with your individual settings.
+### What the provider settings mean
 
-```xml
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="core" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-    <envs>
-        <env name="SP_OAUTH_PROVIDER_AZURE_AUTHORIZATION_URI" value="https://login.microsoftonline.com/{TENANT_ID}/oauth2/v2.0/authorize" />
-        <env name="SP_OAUTH_PROVIDER_AZURE_CLIENT_ID" value="{CLIENT_ID}" />
-        <env name="SP_OAUTH_PROVIDER_AZURE_CLIENT_NAME" value="{CLIENT_NAME}" />
-        <env name="SP_OAUTH_PROVIDER_AZURE_CLIENT_SECRET" value="{CLIENT_SECRET}" />
-        <env name="SP_OAUTH_PROVIDER_AZURE_EMAIL_ATTRIBUTE_NAME" value="email" />
-        <env name="SP_OAUTH_PROVIDER_AZURE_FULL_NAME_ATTRIBUTE_NAME" value="name" />
-        <env name="SP_OAUTH_PROVIDER_AZURE_ISSUER_URI" value="https://login.microsoftonline.com/{TENANT_ID}/v2.0" />
-        <env name="SP_OAUTH_PROVIDER_AZURE_JWK_SET_URI" value="https://login.microsoftonline.com/{TENANT_ID}/discovery/v2.0/keys" />
-        <env name="SP_OAUTH_PROVIDER_AZURE_NAME" value="Azure" />
-        <env name="SP_OAUTH_PROVIDER_AZURE_SCOPES" value="openid,profile,email" />
-        <env name="SP_OAUTH_PROVIDER_AZURE_TOKEN_URI" value="https://login.microsoftonline.com/{TENANT_ID}/oauth2/v2.0/token" />
-        <env name="SP_OAUTH_PROVIDER_AZURE_USER_ID_ATTRIBUTE_NAME" value="sub" />
-        <env name="SP_OAUTH_PROVIDER_AZURE_USER_INFO_URI" value="https://graph.microsoft.com/oidc/userinfo" />
-        <env name="SP_OAUTH_REDIRECT_URI" value="http://localhost:8082" />
-        <env name="SP_OAUTH_ENABLED" value="true" />
-    </envs>
-    <module name="streampipes-service-core" />
-    <option name="SPRING_BOOT_MAIN_CLASS" value="org.apache.streampipes.service.core.StreamPipesCoreApplication" />
-    <method v="2">
-      <option name="Make" enabled="true" />
-    </method>
-  </configuration>
-</component>
+Use the settings as follows:
+
+- `NAME` is the display name shown for the login provider.
+- `CLIENT_NAME` is the client name used in the OAuth configuration.
+- `SCOPES` is a comma-separated list of requested scopes.
+- `EMAIL_ATTRIBUTE_NAME` maps the email claim from the provider to the StreamPipes user.
+- `FULL_NAME_ATTRIBUTE_NAME` maps the full-name claim.
+- `USER_ID_ATTRIBUTE_NAME` maps the external user identifier.
+- `ROLE_ATTRIBUTE_NAME` defines which claim contains externally provided role information.
+- `DEFAULT_ROLES` assigns StreamPipes roles to users from that provider if no explicit external mapping is used.
+
+### Example structure
+
+The following example shows the structure of a provider configuration:
+
+```bash
+SP_OAUTH_ENABLED=true
+SP_OAUTH_REDIRECT_URI=https://streampipes.example.com
+
+SP_OAUTH_PROVIDER_AZURE_NAME=Azure
+SP_OAUTH_PROVIDER_AZURE_CLIENT_NAME=streampipes
+SP_OAUTH_PROVIDER_AZURE_CLIENT_ID=<client-id>
+SP_OAUTH_PROVIDER_AZURE_CLIENT_SECRET=<client-secret>
+SP_OAUTH_PROVIDER_AZURE_AUTHORIZATION_URI=https://login.microsoftonline.com/<tenant>/oauth2/v2.0/authorize
+SP_OAUTH_PROVIDER_AZURE_TOKEN_URI=https://login.microsoftonline.com/<tenant>/oauth2/v2.0/token
+SP_OAUTH_PROVIDER_AZURE_ISSUER_URI=https://login.microsoftonline.com/<tenant>/v2.0
+SP_OAUTH_PROVIDER_AZURE_JWK_SET_URI=https://login.microsoftonline.com/<tenant>/discovery/v2.0/keys
+SP_OAUTH_PROVIDER_AZURE_USER_INFO_URI=https://graph.microsoft.com/oidc/userinfo
+SP_OAUTH_PROVIDER_AZURE_SCOPES=openid,profile,email
+SP_OAUTH_PROVIDER_AZURE_EMAIL_ATTRIBUTE_NAME=email
+SP_OAUTH_PROVIDER_AZURE_FULL_NAME_ATTRIBUTE_NAME=name
+SP_OAUTH_PROVIDER_AZURE_USER_ID_ATTRIBUTE_NAME=sub
 ```
 
-### Example: Authentication with GitHub
+If you define more than one provider, keep `SP_OAUTH_ENABLED` and `SP_OAUTH_REDIRECT_URI` once, and add one provider block per identity provider.
 
-Note that you need to provide the environment variables `SP_OAUTH_REDIRECT_URI` and `SP_OAUTH_ENABLED` only once in case you configure more than one provider.
+### Role mapping in OAuth-based setups
 
-```xml
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="core" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-    <envs>
-        <env name="SP_OAUTH_PROVIDER_GITHUB_AUTHORIZATION_URI" value="https://github.com/login/oauth/authorize" />
-        <env name="SP_OAUTH_PROVIDER_GITHUB_CLIENT_ID" value="{CLIENT_ID}" />
-        <env name="SP_OAUTH_PROVIDER_GITHUB_CLIENT_NAME" value="{CLIENT_NAME}" />
-        <env name="SP_OAUTH_PROVIDER_GITHUB_CLIENT_SECRET" value="{CLIENT_SECRET}" />
-        <env name="SP_OAUTH_PROVIDER_GITHUB_EMAIL_ATTRIBUTE_NAME" value="email" />
-        <env name="SP_OAUTH_PROVIDER_GITHUB_NAME" value="Github" />
-        <env name="SP_OAUTH_PROVIDER_GITHUB_SCOPES" value="read:email" />
-        <env name="SP_OAUTH_PROVIDER_GITHUB_TOKEN_URI" value="https://github.com/login/oauth/access_token" />
-        <env name="SP_OAUTH_PROVIDER_GITHUB_USER_ID_ATTRIBUTE_NAME" value="id" />
-        <env name="SP_OAUTH_PROVIDER_GITHUB_USER_INFO_URI" value="https://api.github.com/user" />
-        <env name="SP_OAUTH_REDIRECT_URI" value="http://localhost:8082" />
-        <env name="SP_OAUTH_ENABLED" value="true" />
-    </envs>
-    <module name="streampipes-service-core" />
-    <option name="SPRING_BOOT_MAIN_CLASS" value="org.apache.streampipes.service.core.StreamPipesCoreApplication" />
-    <method v="2">
-      <option name="Make" enabled="true" />
-    </method>
-  </configuration>
-</component>
-```
+OAuth-based installations can combine several mechanisms:
 
-### Notes
+- `DEFAULT_ROLES` in the provider configuration
+- `ROLE_ATTRIBUTE_NAME` if the provider sends role claims
+- `Alternate IDs` on roles and groups in the Security page
 
-:::warning
-This feature should be considered experimental. Currently, there is no mapping between external users and StreamPipes roles and all newly registered users will be assigned the role `ROLE_ADMIN`.
-:::
+This is the recommended mental model:
 
-Roles can be assigned to users in the same way as default users. In the `Security` settings (see above), for each user the provider is shown. For local users (tagged with the `local` provider), all user settings can be changed.
-For other providers, only roles can be changed and it is not possible to modify the username or email, since these are managed by the external system.
+- use provider configuration to establish authentication and basic claim mapping
+- use StreamPipes roles and groups to keep the local authorization model understandable
+- use alternate IDs when external role or group names should map to existing StreamPipes objects
 
+In external-login setups, the Security page remains important because it still shows the resulting users, role assignments, and externally managed status.
+
+## Recommended operating pattern
+
+For most teams, the following model works well:
+
+1. Set secure initial credentials and secrets during deployment.
+2. Create a dedicated service account for every technical integration or extension deployment.
+3. Use groups for team-level access management.
+4. Keep custom roles small and purpose-specific.
+5. Use resource permissions to share individual adapters, pipelines, charts, dashboards, datasets, assets, and extensions.
+6. Review externally managed users and role mappings carefully in OAuth-based installations.
+
+## Image placeholders
+
+`[Image placeholder: Security settings overview with the five sections User Accounts, Service Accounts, Groups, Roles, and Authentication]`
+
+`[Image placeholder: Edit user dialog showing local user fields, group assignment, role assignment, and account status]`
+
+`[Image placeholder: Role editor with available privileges, selected privileges, and alternate IDs]`
+
+`[Image placeholder: Permissions dialog for a resource such as a pipeline or dashboard]`

@@ -4,102 +4,711 @@ title: Connect IoT Data
 sidebar_label: Connect IoT Data
 ---
 
-StreamPipes Connect is the module to connect external data sources with Apache StreamPipes directly from the user interface. 
-StreamPipes Connect offers various adapters for common communication protocols and some specific sensors. Besides connecting data, StreamPipes Connect offers ways to pre-process data without the need to build pipelines and integrates a schema guesser that listens for incoming data and recommends the recognized event schema.
+import FeatureList from '@site/src/components/docs/FeatureList.tsx';
+import DocVisualPlaceholder from '@site/src/components/docs/DocVisualPlaceholder.tsx';
+import UseCaseExample from '@site/src/components/docs/UseCaseExample.tsx';
 
-The screenshot below illustrates the data marketplace, which shown after navigating to "StreamPipes Connect" and then clicking the "New adapter" button at the top.
+Apache StreamPipes Connect is the entry point for bringing industrial and IoT data into the platform.
+It lets users create adapters from the web interface, inspect incoming events, refine schemas, and publish the resulting data streams for reuse across pipelines, dashboards, charts, assets, and datasets.
 
-<img className="docs-image" src="/img/03_use-connect/01_connect-overview.png" alt="StreamPipes Connect Overview"/>
+This page explains the capabilities of StreamPipes Connect and the general workflow for connecting data.
+It intentionally does not cover protocol-specific configuration details. Those belong in the how-to section.
 
-## Connecting new data sources
+## What StreamPipes Connect does
 
-### Data Marketplace
-The data marketplace shows a list of all adapters that are currently installed in Apache StreamPipes. Each adapter offers various configuration options which depend on the specifics of the adapter.
-Adapters are distinguished a) by the data source concept they provide (data set or data stream) and b) the adapter type, where we distinguish between _generic adapters_, which usually implement a generic communication protocol such as MQTT or Apache Kafka or a specific sensor interface (e.g., for Netio power sockets).
-Several filter options are available to find a suitable adapter. The configuration of a new adapter starts with selecting one of the available adapters, which starts an assistant that supports the adapter generation.
+StreamPipes Connect turns external machine and software interfaces into structured StreamPipes data streams.
+Instead of building custom ingestion services for every source, users can configure adapters directly in the UI and publish the result into the platform.
 
-### Protocol/Basic Settings
-In the first step, basic configurations need to be provided. For instance, for an Apache PLC4X adapter, the IP address of the PLC needs to be provided. In this example, we provide basic settings for connecting to an Apache Kafka broker. After all values are provided, the "Next" button opens the next step. 
+<FeatureList
+  items={[
+    {
+      title: 'Select the right adapter',
+      text: 'Choose an integration that matches the source type instead of building custom ingestion logic from scratch.',
+    },
+    {
+      title: 'Validate live input',
+      text: 'Check that the source is reachable and inspect sample events before committing to a final stream.',
+    },
+    {
+      title: 'Refine schema and transformations',
+      text: 'Shape raw payloads into a cleaner StreamPipes event model with field metadata and optional scripts.',
+    },
+    {
+      title: 'Create an operated platform resource',
+      text: 'Turn the connection into a reusable source that can be started, edited, persisted, linked, and governed over time.',
+    },
+  ]}
+/>
 
-<img className="docs-image" src="/img/03_use-connect/06_connect-create.png" alt="StreamPipes Connect Basic Settings"/>
+This makes Connect more than a connection dialog.
+It is the ingestion layer of the StreamPipes data platform.
 
-### Format Specification
-The next step, format generation, is only available for generic adapters which support different message formats to be sent over the corresponding protocol. Think of a message broker that is able to consume messages in both JSON format or binary format.
-Currently supported formats include XML, various JSON representations, images and CSV. After a format has been selected, further format configurations can be provided (depending on the selected format) to further customize the incoming message format.
+<DocVisualPlaceholder
+  title="Connect overview"
+  purpose="Show the adapter list, status indicators, and create action so Connect reads as an operational ingestion workspace."
+/>
 
-<img className="docs-image" src="/img/03_use-connect/02_customize-format.png" alt="StreamPipes Connect Format Selection"/>
+## Key features
 
-### Schema Editor
-In the next step, based on the previously provided protocol and format settings, the system will either provide the fixed/pre-defined schema of the adapter or, in case of specific adapters, will connect to the underlying system and try to listen for incoming data. After a few seconds, the schema editor will appear that provides a list of detected fields from the incoming events (the schema).
+The current Connect experience provides a broader feature set than simply "configure source, then start adapter".
+The most important capabilities are easiest to understand through typical usage scenarios:
 
-<img className="docs-image" src="/img/03_use-connect/03_schema-editor.png" alt="StreamPipes Connect Schema Editor"/>
+<FeatureList
+  items={[
+    {
+      title: 'Adapter catalog',
+      text: 'Start from a matching source type instead of building a custom ingestion service.',
+      example: 'A team wants to connect a new machine simulator, file-based source, or broker feed and starts by selecting the closest matching adapter.',
+    },
+    {
+      title: 'Guided four-step configuration',
+      text: 'Keep onboarding repeatable and understandable for non-developers.',
+      example: 'A process engineer moves from connection settings to schema validation without switching tools or writing code.',
+    },
+    {
+      title: 'Live sample preview',
+      text: 'Confirm that the source is really sending the fields and timestamp shape you expect.',
+      example: 'Before creating an adapter, a user checks whether the payload contains temperature, pressure, and a usable time field.',
+    },
+    {
+      title: 'Schema refresh',
+      text: 'Adjust when source-side fields change instead of recreating the adapter from scratch.',
+      example: 'After a source update adds a new field, the user refreshes the schema and continues refining it.',
+    },
+    {
+      title: 'Field refinement',
+      text: 'Turn technically valid fields into stream definitions that are understandable downstream.',
+      example: 'Mark machine_id as a dimension, temperature as a measurement, and add a unit before the stream appears in charts or pipelines.',
+    },
+    {
+      title: 'Transformation logic',
+      text: 'Clean up or normalize raw events before they become part of the platform model.',
+      example: 'Parse a source timestamp, rename fields, or derive a cleaner output event from a noisy message payload.',
+    },
+    {
+      title: 'Templates',
+      text: 'Reuse recurring configuration and preprocessing patterns across similar sources.',
+      example: 'A team stores a shared broker setup as a configuration template and reuses one timestamp-parsing script as a transformation template.',
+    },
+    {
+      title: 'Persistence and asset linking',
+      text: 'Decide whether the source should become historical data and whether it belongs to a specific machine context.',
+      example: 'Persist raw machine events for later analysis and link the adapter to a specific filling machine asset.',
+    },
+    {
+      title: 'Lifecycle management and code export',
+      text: 'Operate adapters over time and turn validated UI setups into repeatable automation.',
+      example: 'A team edits a running adapter after a schema change and exports the working definition for another environment.',
+    },
+  ]}
+/>
 
-In the toolbar, several configuration options are available which transform the original schema:
+## How connecting data works
 
-* **Add Nested Property**. This option allows to modify the structure of the event by creating a nested structure. The schema can be simply changed by dragging and dropping fields into the nested structure.
-* **Add Static Value**. This option allows to add a field containing a static value (e.g., an identifier) to the event.
-* **Add Timestamp**. This options appends the current timestamp to each incoming event, useful in case the timestamp is not provided by the origin.
-* **Refresh**. Re-triggers the schema guessing.
-* **Delete field**. Select one or more fields by clicking the checkbox on the right and trigger the delete button.
-* **Property scope**. For each field, a property scope can be defined which is either _Measurement_, _Dimension_ or _Header_. These values are later be used in the pipeline editor to assist in configuring pipeline elements and do not have any functional consequence. 
-Use _Measurement_ to indicate the field measures a value (e.g., a temperature value from a sensor), use _Dimension_ for any identifier (e.g., the sensor ID) and use _Header_ for any other metadata such as timestamps.
+Connecting data in StreamPipes follows a consistent workflow, independent of the underlying protocol or source type.
 
-For each field (also called event property) of the schema, additional configuration options are available by clicking the _Edit_ button:
+### 1. Select an adapter
 
-* **Label**. Used to provide a human-readable label for the field, which will ease the identification of fields when building pipelines.
-* **Runtime Name.** This is the identifier of the field in the underlying message representation format (e.g., the JSON key). Renaming the runtime name will trigger a so-called _transformation rule_ which renames the incoming field name to the new field name before forwarding it to StreamPipes.
-* **Domain Property/Semantic Type**. To help StreamPipes better understand the value which is represented by the field, semantic type information can be given. Up from StreamPipes 0.68.0, the semantic type can be selected from a wide range of available options. Additionally, an URL can be manually provided that indicates the meaning of the value (e.g., http://schema.org/Temperature).
-* **Mark as Timestamp**. Indicates that the selected value represents a timestamp. When selected, a _timestamp converter_ can be configured which will convert incoming timestamps to the UNIX timestamp.
-* **Runtime Type**. Here, the data type can be changed  
-* **Unit**. Allows to specify the unit in which the value is measured. Once selected, you can also automatically convert the unit to a target unit, which will then be inserted into the data stream produced by the adapter (see screenshot below). 
+The process starts in the adapter catalog.
+This view lists the adapters that are currently available in the installation and lets users filter for the right source type.
 
-<img className="docs-image" src="/img/03_use-connect/04_schema-editor-conversion.png" alt="StreamPipes Connect Unit Conversion"/>
+An adapter represents the integration logic for a certain class of source system.
+Some adapters target common transport layers or message-based interfaces, while others target more specific machine or device integrations.
 
-Assigning a timestamp is mandatory and can be either done by adding a timestamp from the menu, or by choosing an existing field and marking it as timestamp.
+The goal of this step is simple: choose the adapter that best matches the source you want to connect.
 
-### Adapter Generation
-Finally, the adapter is ready to be started. In the _Adapter Generation_ page, a name and description for the resulting data stream must be provided.
-Once started, StreamPipes creates your new adapter and displays a preview of the connected data, which refreshes about once per second.
-Afterwards, the newly created data stream is available in the pipeline editor for further usage.
+<UseCaseExample title="A typical first decision">
+  A team wants to onboard one new machine feed. They do not start by thinking about downstream pipelines yet. They start by choosing the adapter that best matches the source they already have, because that determines the configuration options and the sample data StreamPipes can inspect next.
+</UseCaseExample>
 
-<img className="docs-image" src="/img/03_use-connect/05_adapter-generation.png" alt="StreamPipes Connect Adapter Generation"/>
+<img className="docs-image" src="/img/03_use-connect/01_connect-overview.png" alt="StreamPipes Connect adapter catalog"/>
 
-## Managing adapters
+### 2. Configure source settings
 
-Currently running adapters are available in the "Running adapters" section of StreamPipes Connect. Existing adapters can be stopped and deleted. Currently, there is no mechanism to edit an existing adapter or to stop the adapter without deleting it.
+After selecting an adapter, StreamPipes opens a guided configuration flow.
+The first step is **Settings**.
 
-### Adapter Templates
-For frequently used configurations, adapter templates can be created. An adapter template is a pre-configured adapter which can be further customized by users. Created adapter templates are available in the marketplace similar to standard adapters.
+Here, you provide the source-specific connection parameters required by the selected adapter.
+Depending on the adapter, this can include endpoint details, authentication information, polling behavior, file settings, or format-specific options.
 
+For adapters that support multiple payload formats, StreamPipes also includes the format-related configuration as part of this stage.
+The exact fields differ by adapter, but the purpose stays the same: define how StreamPipes should connect to the source and read events from it.
 
-In Apache StreamPipes, adapters are typically created via the web interface.
-However, it is possible to create adapters programmatically using a compact YAML format and the StreamPipes REST API.
-Programmatic creation of adapters can be a useful feature in cases where many similar adapters have to be created.
-In this case, an externally managed YAMl file containing the full adapter configuration can be used and modified.
+Example: imagine a team receives machine events from a broker in CSV format.
+In this step, they would define where the source is located, how StreamPipes should access it, and how the incoming payload should be interpreted before any schema work begins.
 
-## Introduction
+<img className="docs-image" src="/img/03_use-connect/06_connect-create.png" alt="StreamPipes Connect adapter settings"/>
 
-In StreamPipes, adapters are responsible for collecting data from various industrial data sources.
-While the UI simplifies this process, you can also manage adapters programmatically for better automation, integration with CI/CD pipelines, or infrastructure-as-code practices.
+<DocVisualPlaceholder
+  title="Adapter settings step"
+  purpose="Show current adapter-specific configuration fields together with the stepper to make the guided setup flow visible."
+/>
 
-This guide demonstrates how to define and create adapters using a YAML format and StreamPipes REST API, offering more flexibility to manage adapters programmatically.
+### 3. Inspect and shape the incoming event structure
 
-## Adapter YAML Structure
+The second step is **Configure schema**.
+At this point, StreamPipes uses the provided adapter settings to work with sample events from the source.
 
-An adapter in StreamPipes can be defined using a YAML file, which contains a compact description of the adapter configuration.
-The basic structure of the YAML format for an adapter definition includes:
+This step supports several important tasks:
 
-- **Name**: The name of the adapter.
-- **ID**: A unique ID for the adapter
-- **Description**: An additional description of the adapter
-- **AppID**: The adapter type
-- **Configuration**: Configuration details such as connection details, polling intervals, data format, and more
-- **Schema**: Schema refinements, e.g., additional label, description, semantic type and property scope
-- **Enrich**: Enrichment rules. Currently, only timestamp enrichment rules are supported in the YAML specification
-- **Transform**: Transformation rules. Currently, rename and measurement unit transforms are supported.
-- **CreateOptions**: Additional operations that are executed upon adapter generation.
+* loading or refreshing a sample event
+* previewing the raw incoming payload
+* uploading a sample event when needed
+* running optional transformation scripts on the sample
+* comparing input and transformed output before the adapter is created
 
-Here’s a sample structure to define an OPC-UA adapter:
+This is where StreamPipes starts turning source-specific payloads into platform-ready event structures.
+Instead of blindly ingesting data, users can validate whether the input looks correct before continuing.
+
+Example: if a machine emits timestamps in a custom field such as `input_timestamp`, users can inspect a sample event, test a transformation script, and verify the output before the stream is created.
+
+<img className="docs-image" src="/img/03_use-connect/02_customize-format.png" alt="StreamPipes Connect schema configuration"/>
+
+#### Using script-based transformations
+
+The transformation editor is the place where users can modify incoming events before they are turned into the final StreamPipes event structure.
+This is useful when the source payload is close to what you need, but not yet ready for reuse.
+
+Typical reasons to use the editor include:
+
+* parsing timestamps from custom source fields
+* renaming or dropping fields before they appear in the final schema
+* reshaping payloads into a cleaner output structure
+* deriving calculated values from raw source data
+
+The editor can be enabled directly in the schema step.
+Once enabled, StreamPipes shows:
+
+* a source preview with the incoming event
+* a code editor for the transformation script
+* a result preview with the transformed event
+
+This setup is designed for iterative work: inspect a sample, edit the script, run it, and compare input and output until the structure looks correct.
+
+##### Supported languages
+
+The available script languages depend on the transformation engines installed in the StreamPipes environment.
+In the current StreamPipes source code, the transformation layer supports at least:
+
+* **JavaScript**
+* **Groovy**
+
+If multiple languages are available in your installation, the editor lets you switch between them from the language menu.
+When you switch languages, StreamPipes loads the default template for that language.
+
+##### JavaScript skeleton
+
+For JavaScript, the default script looks like this:
+
+```javascript
+function transform(event, out, ctx) {
+  // You can use utils like utils.addTimestamp(event) for basic transformations
+  // To access the StreamPipesClient use ctx.client()
+  out.collect(event);
+}
+```
+
+The parts of this skeleton are:
+
+* `event`: the current input event as key/value data
+* `out`: the output collector used to emit transformed events
+* `ctx`: a context object that provides access to the StreamPipes client
+* `out.collect(event)`: emits the event that should become the transformation result
+
+If you keep the script unchanged, the event is passed through as-is.
+If you modify the event or construct a new object before calling `out.collect(...)`, the output preview and final schema will reflect those changes.
+
+##### Groovy syntax
+
+If Groovy is available, the default script is more compact:
+
+```groovy
+out.collect(input)
+```
+
+In Groovy, the current event is available as `input`.
+The same basic idea applies: modify the input or construct a new output object, then emit it through `out.collect(...)`.
+
+##### What users typically change in the script
+
+Most transformation scripts are short and focused.
+Typical patterns include:
+
+* **pass through the original event**
+
+```javascript
+function transform(event, out, ctx) {
+  out.collect(event);
+}
+```
+
+* **emit a cleaned-up event with renamed fields**
+
+```javascript
+function transform(event, out, ctx) {
+  out.collect({
+    machineId: event.machine,
+    temperature: event.sensor_value,
+    timestamp: event.ts,
+  });
+}
+```
+
+* **parse a timestamp before continuing**
+
+```javascript
+function transform(event, out, ctx) {
+  utils.parseTimestamp(event, "input_timestamp", "timestamp");
+  out.collect(event);
+}
+```
+
+* **derive new values**
+
+```javascript
+function transform(event, out, ctx) {
+  out.collect({
+    sensor: event.sensor,
+    temperatureF: (event.temperatureC * 9 / 5) + 32,
+  });
+}
+```
+
+##### Built-in helpers and editor support
+
+The transformation editor includes built-in documentation and helper functionality.
+From the current UI and source code, users can rely on:
+
+* **editor autocomplete** for available event field names
+* **`utils.addTimestamp(...)`** to add a timestamp field
+* **`utils.rename(...)`** to rename a field
+* **`utils.remove(...)`** to remove a field
+* **`utils.parseTimestamp(...)`** to convert source date fields into epoch timestamps
+* **`ctx.client()`** to access StreamPipes client APIs from inside the script
+
+This means the script editor is not only a raw code field.
+It is a supported transformation environment for practical preprocessing tasks.
+
+##### When to use scripts vs. field configuration
+
+Use the transformation script when the payload itself must change before StreamPipes derives the final schema.
+Use field configuration in the next step when the payload shape is already correct and you mainly want to improve metadata.
+
+As a rule of thumb:
+
+* use **scripts** for structural changes, renaming, parsing, calculated values, and event cleanup
+* use **field configuration** for labels, property scopes, timestamp marking, data types, units, and semantic enrichment
+
+##### Transformation templates
+
+The schema step also supports reusable **transformation templates**.
+These are useful when the same logic is applied to multiple adapters.
+
+A typical workflow is:
+
+1. write and test a script against a sample event
+2. save it as a transformation template
+3. apply that template in other adapters that need the same preprocessing
+
+Example: if several CSV exports from different production cells all contain the same custom timestamp field and naming scheme, a shared transformation template avoids rewriting the same script each time.
+
+### 4. Refine fields and metadata
+
+The third step is **Configure fields**.
+Here, StreamPipes exposes the resulting event schema and lets users enrich it field by field.
+At this point, the structural transformation work should already be done.
+This step is about making the resulting fields understandable and reusable across the platform.
+
+Typical refinement tasks include:
+
+* reviewing discovered event properties
+* changing data types where needed
+* marking a field as the timestamp
+* assigning labels and descriptions
+* defining property scopes such as measurement, dimension, or header
+* enriching fields with semantic meaning and units
+
+This step is critical because it determines how reusable the resulting data stream will be in the rest of the platform.
+A well-defined schema improves discoverability, validation, pipeline configuration, and downstream analytics.
+
+Assigning a timestamp is especially important, since time-aware storage, charts, and stream processing depend on it.
+
+Example: after a script has already normalized the payload, a stream might contain `temperature`, `machineId`, and `timestamp`.
+In this step, a user can mark `temperature` as a measurement, classify `machineId` as a dimension, mark `timestamp` as the event time, and attach the correct unit so later users do not have to guess what the fields mean.
+
+#### What this step is for
+
+The configure-fields step is the semantic cleanup stage of onboarding.
+The source payload already exists and the transformation script has already shaped it into the structure you want.
+Now the task is to make every field meaningful to other users and other parts of StreamPipes.
+
+This matters because the same stream will later appear in:
+
+* pipeline element configuration dialogs
+* charts and dashboards
+* historical storage and query results
+* asset-linked views and other user-facing features
+
+If the field definitions are clear here, the rest of the platform becomes easier to use later.
+
+#### Measurement, dimension, and header
+
+One of the most important decisions in this step is the **property scope** of a field.
+Property scopes help StreamPipes understand what role a field plays.
+
+In practice, the most important scopes are:
+
+* **Measurement** for actual observed or calculated values
+* **Dimension** for identifiers and contextual attributes
+* **Header** for technical or auxiliary metadata
+
+Use **Measurement** when a field represents the value you want to analyze.
+Typical examples are:
+
+* temperature
+* pressure
+* vibration
+* energy consumption
+* calculated KPIs such as average cycle time
+
+Use **Dimension** when a field helps describe where the event belongs, not what was measured.
+Typical examples are:
+
+* machine ID
+* line name
+* site
+* product type
+* batch number
+
+Use **Header** for technical metadata that is relevant for event handling, but usually not the primary subject of analysis.
+Typical examples are:
+
+* protocol metadata
+* transport-specific identifiers
+* helper timestamps that should stay available but are not the business event time
+
+This distinction mainly improves usability.
+For example, configuration and exploration views can guide users better when StreamPipes knows which fields are likely measurements and which are identifiers.
+
+To assign a property scope in the UI:
+
+1. open the **Configure fields** step
+2. locate the field you want to refine in the field list
+3. open the field editor for that property
+4. choose the appropriate property scope, such as `Measurement`, `Dimension`, or `Header`
+5. save the field configuration and verify the updated preview
+
+#### Units and unit conversion
+
+The field editor also lets users assign a unit to measurement fields and, where needed, convert it into another target unit.
+
+This is useful when:
+
+* the source already contains a physical unit, but it is not yet documented in the schema
+* different source systems report the same signal in different units
+* downstream users should work with one normalized unit across plants or machine types
+
+Example: one source reports temperature in degrees Celsius, while another team expects Fahrenheit for downstream reporting.
+Instead of forcing every downstream pipeline or dashboard to handle that conversion manually, StreamPipes can convert the field during onboarding so the resulting stream is already normalized.
+
+The practical workflow is:
+
+1. identify the field as a measurement
+2. open the field editor dialog for that property
+3. assign the source unit
+4. optionally define the target unit for conversion
+5. save the field configuration and review the resulting preview/schema
+
+This improves consistency across streams and reduces repeated conversion logic in later pipelines.
+
+In other words, unit conversion is configured per field, inside the field dialog.
+Users do not configure it globally for the whole adapter.
+
+#### Timestamp handling in this step
+
+This is also the step where a field is marked as the event timestamp if it was not already created in a transformation script.
+The timestamp field should represent the business time of the event whenever possible, not only the ingestion time.
+
+For example:
+
+* use the machine-provided event time when the source contains one
+* use an added timestamp during onboarding when the source has no reliable timestamp of its own
+
+This distinction becomes important for historical storage, charts, and any analysis that depends on the real event order.
+
+To mark a field as the timestamp in the UI:
+
+1. open the field editor for the field that represents event time
+2. enable the timestamp option for that field
+3. if needed, configure timestamp parsing or conversion so the value is stored in the expected format
+4. save the field and confirm that the stream now has a valid timestamp before moving on
+
+<img className="docs-image" src="/img/03_use-connect/03_schema-editor.png" alt="StreamPipes Connect field configuration"/>
+
+<img className="docs-image" src="/img/03_use-connect/04_schema-editor-conversion.png" alt="StreamPipes Connect field metadata and unit conversion"/>
+
+### 5. Create and start the adapter
+
+The final step is **Start adapter**.
+This is where the configured ingestion setup becomes a managed platform resource.
+
+At this stage, the connection details, transformation logic, and field definitions are already in place.
+The remaining task is to decide how the adapter should appear and behave once it becomes part of the running platform.
+
+In this step, users can:
+
+* define the adapter name and description
+* choose whether the adapter should start immediately
+* optionally link the adapter to one or more assets
+* optionally persist incoming events in the internal data store
+* enable event-rate reduction or duplicate filtering
+* inspect the generated adapter definition as code
+
+Once created, the adapter starts producing a data stream that becomes available throughout StreamPipes.
+From there, the stream can be used in pipelines, dashboards, charts, or other downstream workflows.
+
+Example: a production engineer may start the adapter immediately for live monitoring, while a data team may also enable persistence so the same source is available later for historical analysis.
+
+#### Name and description
+
+Every adapter should be given a clear name and, ideally, a short description.
+This matters because adapters become long-lived platform resources that appear in operational views and may later be edited, linked to assets, or reused by other teams.
+
+A good name usually identifies:
+
+* the source or machine
+* the signal or purpose
+* optionally the location or environment
+
+Example: `Filling Line 2 - Temperature Stream` is more useful than `Adapter 1`.
+
+#### Start adapter now
+
+The **Start adapter now** option determines whether the adapter should begin consuming data immediately after creation.
+
+Use this option when:
+
+* the source is ready and reachable
+* you want to validate live operation right away
+* downstream users or pipelines should consume the stream immediately
+
+Leave it disabled when:
+
+* the adapter is being prepared ahead of a go-live
+* source access is not yet available
+* you want to finish organizational steps, such as asset linking or permissions, before starting ingestion
+
+In practice, this option lets users decide whether the current task is “define the adapter” or “define and activate the adapter”.
+
+#### Add to Asset
+
+If asset management is used in the installation, the adapter can be linked directly to one or more assets in this step.
+This is useful when the source belongs to a known machine, line, site, or other operational object.
+
+Use asset linking when you want to:
+
+* make the source easier to discover from the asset view
+* connect machine context and data source management
+* help users navigate from operational structure to the related adapters and streams
+
+Example: when onboarding a vibration source for a motor, link the adapter directly to that motor asset so users can find the source from the operational context instead of only from the adapter list.
+
+#### Persist events
+
+The **Persist events** option stores all incoming events of this source in the internal data store.
+This is one of the most important decisions in the start step because it affects whether the source is used only for live processing or also for historical analysis.
+
+Use persistence when:
+
+* the source should be available in charts later
+* historical inspection or trend analysis is required
+* teams want to reuse the stream beyond live processing only
+
+When persistence is enabled, users also select the time field that should be used for storage.
+In most cases, this should be the business event timestamp that was defined earlier in the onboarding flow.
+
+Example: persist a machine status or process-value stream when quality or maintenance teams need to inspect past behavior, not only live events.
+
+#### Remove duplicates
+
+The **Remove duplicates** option helps when a source sends the same event repeatedly within a short interval.
+In this case, StreamPipes can suppress duplicate events inside a configured time window.
+
+Use this option when:
+
+* a device republishes unchanged values frequently
+* identical events would create unnecessary load in downstream systems
+* duplicates would make charts or event-driven logic harder to interpret
+
+The time window is configured in milliseconds.
+Within that interval, repeated identical events can be filtered before they are emitted further into the platform.
+
+Example: if a device sends the same machine status message many times in a few seconds, duplicate filtering can reduce noise before the data reaches storage or alerting logic.
+
+#### Reduce event rate
+
+The **Reduce event rate** option helps when the source sends events much faster than downstream users actually need.
+Instead of forwarding every event, StreamPipes can limit the emitted rate based on a configured time window.
+
+Use this option when:
+
+* a source publishes high-frequency values but dashboards only need a coarser stream
+* downstream systems should be protected from unnecessary volume
+* the live stream is useful, but not every raw event must be preserved in real time
+
+The time window is configured in milliseconds.
+This is especially useful for visualization-heavy scenarios where the source frequency is technically valid but operationally excessive.
+
+Example: a sensor may publish updates several times per second, while a dashboard only needs one representative event every few seconds.
+
+#### Show code
+
+The **Show code** option exposes the generated adapter definition in a programmatic form.
+This is useful for teams that want to move from interactive setup to repeatable deployment.
+
+Use this option when:
+
+* you want to inspect how the current adapter is represented internally
+* you want to reuse the configuration in another environment
+* the adapter should later be created through the API or automation
+
+In practice, this option bridges interactive onboarding and infrastructure-style reuse.
+
+#### How to use this step in the UI
+
+A common workflow in the final step is:
+
+1. enter a clear adapter name and description
+2. decide whether the adapter should start immediately
+3. optionally link it to the relevant asset
+4. decide whether the stream should also be persisted historically
+5. optionally enable duplicate filtering or event-rate reduction if the source behavior requires it
+6. optionally inspect the generated code before finishing
+7. create or update the adapter
+
+This is the point where StreamPipes turns a tested source configuration into an operational data source.
+
+<img className="docs-image" src="/img/03_use-connect/05_adapter-generation.png" alt="StreamPipes Connect start adapter configuration"/>
+
+:::info Suggested image placeholder
+**Image idea:** Current final step screenshot showing name, start option, persistence option, asset linking, and show-code option.  
+**Purpose:** Show that adapter creation includes operational decisions, not just connection details.
+:::
+
+## Transformation and schema features
+
+One of the most important strengths of StreamPipes Connect is that source onboarding does not stop at connectivity.
+Before an adapter is created, users can actively shape the incoming data so that it fits the platform better.
+
+The current feature set includes:
+
+* **script-based transformations** for custom event reshaping
+* **template-based script reuse** for recurring transformation logic
+* **schema refresh** when the source configuration changes
+* **event preview before and after transformation**
+* **timestamp selection and conversion**
+* **unit and metadata refinement** at field level
+
+This makes Connect useful even when the incoming source format is technically valid but not yet ready for reuse across teams or use cases.
+
+Two common examples are:
+
+* a source provides timestamps in a custom text format, so a transformation script parses the original field and writes a normalized event time before the data enters StreamPipes
+* a source provides temperatures in degrees Celsius, but a downstream team expects Fahrenheit, so the field configuration applies a unit conversion before the stream is used elsewhere
+
+In addition, templates help in two different places:
+
+* **configuration templates** in the settings step help you reuse adapter setup values
+* **transformation templates** in the schema step help you reuse tested preprocessing scripts
+
+This distinction is useful in practice:
+
+* save a **configuration template** when many sources share the same connection shape
+* save a **transformation template** when many sources share the same payload cleanup logic
+
+## Managing adapters after creation
+
+Connect is also the operational workspace for adapters after they have been created.
+The adapter overview shows all configured adapters and provides lifecycle and monitoring features.
+
+Users can:
+
+* start and stop adapters
+* inspect adapter details
+* edit adapter configurations
+* update schemas after configuration changes
+* migrate dependent pipelines when an edited adapter affects downstream logic
+* delete adapters
+* manage permissions
+* run bulk actions on multiple adapters
+* review basic runtime indicators such as message counts and last message timestamps
+
+This is important because data ingestion is rarely static.
+Machine interfaces change, schemas evolve, and downstream consumers need a controlled way to adapt.
+Connect therefore supports not only initial onboarding, but also ongoing maintenance.
+
+Example: if a source system adds or renames fields, the adapter can be edited, the schema can be refreshed, and dependent pipelines can be migrated instead of being manually rebuilt from scratch.
+
+:::info Suggested image placeholder
+**Image idea:** Screenshot of the adapter table with status, message count, last message, and action menu.  
+**Purpose:** Show that Connect includes runtime operations and governance after setup.
+:::
+
+## How Connect fits into the broader platform
+
+Once an adapter is running, the resulting data stream becomes a reusable platform resource.
+That means connected data can immediately be used in other areas of StreamPipes:
+
+* in **Pipelines** for filtering, enrichment, analytics, and routing
+* in **Charts** and dashboards for visualization
+* in **Assets** to tie machine data to operational context
+* in the internal data store for historical access
+
+This is why Connect should be understood as the ingestion layer of the overall StreamPipes data platform.
+Its role is not only to establish connectivity, but to create well-structured, governed, and reusable industrial data sources.
+
+Example: a vibration stream connected in Connect can later be persisted for trend analysis, linked to a specific motor asset, visualized in a dashboard, and reused in a pipeline that detects threshold violations.
+
+## Adapters as code
+
+Although adapters are usually created through the UI, StreamPipes also supports a compact programmatic representation for API-based deployment.
+This is useful when adapter creation should be automated or repeated across environments.
+
+Typical use cases include:
+
+* creating many similar adapters from managed configuration files
+* promoting tested adapter definitions from development to production
+* integrating adapter deployment into CI/CD or infrastructure automation
+
+### How the UI and code workflow fit together
+
+The easiest way to produce a valid adapter definition is the UI itself.
+In the final **Start adapter** step, the **Show code** option exposes the generated adapter definition in a compact form.
+
+This is the recommended workflow:
+
+1. configure and validate the adapter interactively in the UI
+2. use **Show code** to inspect the generated definition
+3. export or copy that definition
+4. reuse it through the API in another environment or deployment workflow
+
+This works well because the UI already performs the difficult parts of onboarding: connection setup, schema inspection, field refinement, and transformation testing.
+
+### What the compact adapter definition contains
+
+The compact representation describes the adapter in a way that is easier to manage programmatically than the full internal model.
+It typically contains:
+
+* adapter identity such as `name`, `id`, and `appId`
+* source-specific `configuration`
+* `schema` refinements for fields
+* `transform` logic such as renaming or unit conversion
+* `enrich` options such as adding timestamps
+* `createOptions` such as whether the adapter should start immediately or persist data
+
+In practice, it captures the same decisions users make in the UI, but in a portable text format.
+
+### Example adapter definition
 
 ```yaml
 name: My OPC Adapter
@@ -113,8 +722,8 @@ configuration:
     pulling_interval: 1000
   - access_mode: UNAUTHENTICATED
   - available_nodes:
-    - "ns=2;s=Leakage Test Station/temperature"
-    - "ns=2;s=Leakage Test Station/pressure"
+      - "ns=2;s=Leakage Test Station/temperature"
+      - "ns=2;s=Leakage Test Station/pressure"
 
 schema:
   temperature:
@@ -135,88 +744,42 @@ createOptions:
   start: true
 ```
 
-## Programmatically creating adapters
+This example shows the general structure, not a recommended protocol-specific setup for every case.
+The exact configuration keys depend on the selected adapter type.
 
-Here is a walkthrough to create an adapter programmatically over the API:
+### API endpoint
 
-### Background: Internal adapter generation process
+To create a compact adapter over the API, send the definition to:
 
-The YAML definition file is a more compact notation of StreamPipes internal data format to represent an adapter.
-When creating an adapter over the user interface, StreamPipes requires some basic, adapter-specific settings.
-Afterwards, a `Guess Schema` step is executed. In this step, StreamPipes connects to the underlying data sources, receives some samples of live data, determines the exact schema of the data stream and provides user with the source schema.
-This schema can be further refined using `Transformation Rules`.
-
-When an adapter is created using the more compact YAML notation, the same process is applied. Based on the provided configuration, the API connects to the given data source and determines the schema.
-The transformation rules provided in the YAMl definition are then applied on the original schema.
-Therefore, it is important that the provided schema refinement and transformation steps fit the original schema.
-
-### Getting a valid definition file
-
-The easiest way to create a valid YAML file is the user interface. Within the StreamPipes Connect view, it is possible to export the YAML definition for all existing adapters.
-In addition, the adapter generation wizard also offers the option to view the adapter configuration before creating the adapter by clicking the `Code` checkbox:
-
-<img className="docs-image" src="/img/03_use-programmatically-create-adapters/01_adapter-generation-code.png" alt="StreamPipes Adapter Code View"/>
-
-Another option is to open the adapter details view:
-
-<img className="docs-image" src="/img/03_use-programmatically-create-adapters/02_adapter-details-view-code.png" alt="StreamPipes Adapter Details Code View"/>
-
-You can copy this definition and modify it according to your needs.
-
-#### Configuration
-
-For each configuration option in the user interface, there is a mapping to the YAMl definition.
-
-A configuration value is a key/value pair, where the key corresponds to the internal name of the configuration and the value depends on the configuration type.
-
-#### Schema
-
-Schema definitions enhance the metadata of each field from the input stream.
-The following configurations are supported:
-
-* `label` to add an additional (human-readable) label to the field
-* `description` for an additional description
-* `propertyScope` to determine the type of the field (HEADER_PROPERTY, DIMENSION_PROPERTY or MEASUREMENT_PROPERTY)
-* `semanticType` to provide the semantic type of the field (e.g., `https://schema.org/temperature`)
-
-#### Enrich
-
-* `timestamp` defines that an additional field named timestamp is added to each incoming event containing the ingestion time as a UNIX timestamp.
-
-#### Transform
-
-Currently, the following transforms are supported:
-
-* `rename` defines renaming of individual fields from the input stream. A valid configuration consists of a key/value pair, where the key indicates the original field name and the value the target field name.
-* `measurementUnit` defines a value transformation between measurement units. A valid configuration consists of a key/value pair, where the key indicates the field name and the value the target measurement unit.
-
-#### CreateOptions
-
-Currently, two settings can be provided in the `CreateOptions` section:
-
-* `persist` indicates whether the data stream produced by the adapter should also be stored. In this case, a `Persist Pipeline` is automatically created.
-* `start` indicates whether the adapter should be immediately started after creation.
-
-### API
-
-To create a new adapter, call the StreamPipes API as follows:
-
-```
+```text
 POST /streampipes-backend/api/v2/connect/compact-adapters
-Content-type: application/yml
+Content-Type: application/yml
 Accept: application/yml
 ```
 
-You must provide valid credentials by either adding a Bearer token or an API key:
+You can also provide the specification as JSON by using `application/json`.
 
-```
+Authentication can be provided with an API user and API key:
+
+```text
 X-API-USER: your username
 X-API-KEY: your api key
 ```
 
-The body of the request should contain the YAML definition.
+### Practical advice
 
-:::info
-It is also possible to provide the adapter specification as a JSON document. In this case, change the `Content-type` to `application/json`.
+In most cases, do not write compact adapter definitions from scratch unless you already know the exact structure.
+A better approach is:
 
+* create and verify the adapter in the UI first
+* export or inspect the generated code
+* adapt only the parts that need to vary, such as names, endpoints, or source-specific identifiers
 
+This keeps the programmatic workflow grounded in a configuration that is already known to work.
+
+## What this page does not cover
+
+This page focuses on the general Connect workflow and feature set.
+It does not explain how to configure specific adapters or industrial protocols.
+
+For protocol-specific instructions, continue with the how-to guides for the relevant source type.

@@ -4,429 +4,467 @@ title: Deployment options
 sidebar_label: Deployment options
 ---
 
-
 ## Introduction
 
-StreamPipes comes with many different options to customize a deployment. This section introduces the various options you can choose from when installing StreamPipes.
+StreamPipes supports several deployment models, from a simple single-host installation to distributed industrial setups with extension services running close to machines. This page explains how to deploy StreamPipes with Docker Compose or Kubernetes, how broker and transport choices affect the setup, and which configuration options are available in the current Helm chart.
 
-You can choose between various **deployment modes**, choose from two different core packages and several extension packages, wich are described below.
+At a high level, every deployment contains the same main parts:
 
-## Deployment Mode
+- `Core` and `UI` provide the central platform services and browser interface.
+- `CouchDB` stores metadata, configuration, users, pipelines, adapters, dashboards, assets, and other platform objects.
+- `InfluxDB` stores persisted event data and datasets.
+- One or more `extension services` provide adapters, processors, and sinks.
+- A broker such as `NATS`, `Kafka`, or `Pulsar` transports events between runtime components.
 
-For the deployment model, you choose between a standard multi-container `Docker-Compose` installation and the `Kubernetes` installation.
-we provide several `Docker-Compose` files for the various options shown here and a `helm chart`. 
-See [Docker Deployment](06_deploy-docker.md) and [Kubernetes Deployment](06_deploy-kubernetes.md) for more details.
+## Deployment models
 
-### Running StreamPipes in a non-containerized environment
+Choose the deployment model based on where StreamPipes runs and how much operational control you need:
 
-Of course, it is also possible to launch StreamPipes in a non-containerized environment. 
-You will need to build your own executable binaries by running `mvn package`.
-In addition, it is required to install the required 3rd party services (see [Architecture](07_technicals-architecture.md)) and configure the environment variables as described in [Environment Variables](06_configure-operate-environment-variables.md).
+- `Docker Compose` is the fastest way to install StreamPipes on one host. It is a good fit for evaluation, demos, local environments, and smaller installations.
+- `Kubernetes` is the right option when you need cluster-level operations, service management, persistent storage classes, ingress control, and more explicit infrastructure configuration.
+- `Distributed deployments` are useful when extension services should run outside the central data center, for example in the OT network or on edge systems close to industrial machines.
 
-## Core Service
+## Docker Compose deployment
 
-We provide two different pre-packaged versions of core services. The default `streampipes-service-core` is a packaged JAR file which includes client libraries for the various messaging systems StreamPipes supports at the cost of a larger file size.
-In case you plan to run StreamPipes on less resource-intensive hardware, we recommend to switch to the `streampipes-service-core-minimal` package, which only includes support for MQTT and NATS, but has a smaller file size and slightly improved startup performance.
+The repository contains several ready-to-run Compose presets in the StreamPipes source tree:
 
-## Extension Services
+- [docker-compose.yml](https://github.com/apache/streampipes/blob/dev/installer/compose/docker-compose.yml)
+- [docker-compose.kafka.yml](https://github.com/apache/streampipes/blob/dev/installer/compose/docker-compose.kafka.yml)
+- [docker-compose.minimal.yml](https://github.com/apache/streampipes/blob/dev/installer/compose/docker-compose.minimal.yml)
+- [docker-compose.nats-auth.yml](https://github.com/apache/streampipes/blob/dev/installer/compose/docker-compose.nats-auth.yml)
+- [docker-compose.minimal.nats-auth.yml](https://github.com/apache/streampipes/blob/dev/installer/compose/docker-compose.minimal.nats-auth.yml)
+- [Compose README](https://github.com/apache/streampipes/blob/dev/installer/compose/README.md)
 
-Similar to the core, we provide several pre-packaged extension services which differ mainly by their file size, number of supported adapters and pipeline elements and messaging systems.
+### Default Compose setup
 
-The following packages exist:
+The default preset is [`docker-compose.yml`](https://github.com/apache/streampipes/blob/dev/installer/compose/docker-compose.yml). It installs:
 
-* `streampipes-extensions-all-jvm` is the largest package and includes all official StreamPipes adapters and pipeline elements. It also includes support for all messaging systems Streampipes currently supports.
-* `streampipes-extensions-all-iiot` is a subset of the aforementioned package and excludes adapters and pipeline elements which are often not relevant for IIoT use cases. For instance, the package excludes text mining-related pipeline elements.
-* `streampipes-extensions-iiot-minimal` is a subset of the aforementioned package and includes only support for the lightweight messaging systems MQTT and NATS.
+- `backend`
+- `ui`
+- `couchdb`
+- `influxdb`
+- `nats`
+- `extensions-all-iiot`
 
-Generally said, in cases where you plan to deploy StreamPipes on a resource-limited edge device, we recommend a combination of the `streampipes-service-core-minimal` and `streampipes-extensions-iiot-minimal` package. This could, for instance, be a device with less than 4GB memory.
-In other cases, it depends on the use case and if you need all adapters and pipeline elements or are ok with the IIoT-related extensions.
+This is the recommended starting point for new installations. It uses `NATS` as the internal event broker and the standard IIoT-focused extension package.
 
-## Messaging System
-
-StreamPipes can be configured to use different messaging systems for exchanging events between adapters and pipeline elements.
-The section [Messaging](07_technicals-messaging.md) includes detailed information on the configuration of messaging systems. 
-
-
-StreamPipes Compose is a simple collection of user-friendly `docker-compose` files that easily lets gain first-hand experience with Apache StreamPipes.
-
-> **NOTE**: We recommend StreamPipes Compose to only use for initial try-out and testing. If you are a developer and
-> want to develop new pipeline elements or core feature, use the [StreamPipes CLI](07_extend-cli.md).
-
-#### TL;DR: A one-liner to rule them all :-)
+Start it with:
 
 ```bash
 docker-compose up -d
 ```
-Go to http://localhost to finish the installation in the browser. Once finished, switch to the pipeline editor and start the interactive tour or check the [online tour](https://streampipes.apache.org/docs/user-guide-tour/) to learn how to create your first pipeline!
 
-## Prerequisites
-* Docker >= 17.06.0
-* Docker-Compose >= 1.17.0 (Compose file format: 3.4)
-* Google Chrome (recommended), Mozilla Firefox, Microsoft Edge
+Stop it with:
 
-Tested on: **macOS, Linux, Windows 10 upwards** (CMD, PowerShell, GitBash)
-
-**macOS** and **Windows** users can easily get Docker and Docker-Compose on their systems by installing **Docker for Mac/Windows** (recommended).
-
-> **NOTE**: On purpose, we disabled all port mappings except of http port **80** to access the StreamPipes UI to provide minimal surface for conflicting ports.
-
-## Usage
-We provide several options to get you going:
-
-- **default**: Default docker-compose file, called `docker-compose.yml`.
-- **nats**: The standard installation which uses Nats as message broker,called `docker-compose.nats.yml`.
-- **full**: Contains experimental Flink wrappers, called `docker-compose.full.yml`.
-
-:::info
-
-Other options include configurations for the internally used message broker. The current default is `Kafka`, but you can also start StreamPipes with `Nats`, `MQTT` or `Apache Pulsar`.
-Use one of the other provided docker-compose files.
-
-:::
-
-**Starting** the **default** option is as easy as simply running:
-> **NOTE**: Starting might take a while since `docker-compose up` also initially pulls all Docker images from Dockerhub.
-
-```bash
-docker-compose up -d
-# go to `http://localhost` after all services are started
-```
-After all containers are successfully started just got to your browser and visit http://localhost to finish the installation. Once finished, switch to the pipeline editor and start the interactive tour or check the [online tour](https://streampipes.apache.org/docs/user-guide-tour/) to learn how to create your first pipeline!
-
-**Stopping** the **default** option is similarly easy:
 ```bash
 docker-compose down
-# if you want to remove mapped data volumes, run:
-# docker-compose down -v
 ```
 
-Starting the **nats** option is almost the same, just specify the `docker-compose.nats.yml` file:
+Remove the persisted volumes as well:
+
 ```bash
-docker-compose -f docker-compose.nats.yml up -d
-# go to `http://localhost` after all services are started
+docker-compose down -v
 ```
-**Stopping** the **nats** option:
+
+### Kafka-based Compose setup
+
+If your environment already standardizes on Kafka, use [`docker-compose.kafka.yml`](https://github.com/apache/streampipes/blob/dev/installer/compose/docker-compose.kafka.yml). This variant replaces NATS with Kafka and configures StreamPipes accordingly.
+
+Start it with:
+
 ```bash
-docker-compose -f docker-compose.nats.yml down
+docker-compose -f docker-compose.kafka.yml up -d
 ```
 
+### Minimal Compose setup
 
-Starting the **full** option is almost the same, just specify the `docker-compose.full.yml` file:
+[`docker-compose.minimal.yml`](https://github.com/apache/streampipes/blob/dev/installer/compose/docker-compose.minimal.yml) is the leanest preset. It uses the minimal IIoT extension service and is useful when you want a smaller footprint and do not need the full catalog of adapters and pipeline elements.
+
+Start it with:
+
 ```bash
-docker-compose -f docker-compose.full.yml up -d
-#go to `http://localhost` after all services are started
+docker-compose -f docker-compose.minimal.yml up -d
 ```
-Stopping the **full** option:
+
+### Token-based NATS authentication
+
+If you want to protect internal NATS communication with a token, set `SP_NATS_TOKEN` and add the auth override file:
+
 ```bash
-docker-compose -f docker-compose.nats.yml down
-#docker-compose -f docker-compose.nats.yml down -v
+docker-compose -f docker-compose.yml -f docker-compose.nats-auth.yml up -d
 ```
 
-## Update services
-To actively pull the latest available Docker images use:
+For the minimal setup:
+
 ```bash
-docker-compose pull
+docker-compose -f docker-compose.minimal.yml -f docker-compose.minimal.nats-auth.yml up -d
 ```
 
-## Upgrade
-To upgrade to another StreamPipes version, simply edit the `SP_VERSION` in the `.env` file.
-```
-SP_VERSION=<VERSION>
-```
+### When to use Compose
 
+Use Compose when you want:
 
-## Prerequisites
-Requires Helm (https://helm.sh/) and an actively running Kubernetes cluster.
+- a fast installation on one machine
+- a documented reference setup
+- a simple way to compare the `default`, `kafka`, and `minimal` variants
+- a development or test environment that closely matches the official installer
 
-## Usage
-We provide helm chart options to get you going in the `installer/k8s`folder.
+## Kubernetes deployment
 
-**Starting** the default helm chart option is as easy as simply running the following command from the root of this folder:
-> **NOTE**: Starting might take a while since we also initially pull all Docker images from Dockerhub.
+The Kubernetes deployment is provided as a Helm chart in the StreamPipes source repository. The central configuration file is:
+
+- [installer/k8s/values.yaml](https://github.com/apache/streampipes/blob/dev/installer/k8s/values.yaml)
+
+Install the chart from the `installer/k8s` directory:
 
 ```bash
 helm install streampipes ./
 ```
-After a while, all containers should successfully started, indicated by the `Running` status.
 
-The `values.yaml` file contains several configuration options to customize your StreamPipes installation. See the section below for all configuration options.
+Remove it again with:
 
-## Ingress
-
-The helm chart provides several options to configure an Ingress or to define an Ingressroute that directly integrates with Traefik.
-
-## Dynamic Volume Provisioning
-
-You can override the `storageClassName` variable to configure StreamPipes for dynamic volume provisioning.
-
-## Parameters
-
-Here is an overview of the supported parameters to configure StreamPipes.
-
-### Common parameters
-
-| Parameter Name                                   | Description                                             | Value                                   |
-|--------------------------------------------------|---------------------------------------------------------|-----------------------------------------|
-| deployment                                       | Deployment type (lite or full)                          | lite                                    |
-| preferredBroker                                  | Preferred broker for deployment                         | "nats"                                  |
-| monitoringSystem                                 | Enable monitoring system (true/false)                   | false                                   |
-| pullPolicy                                       | Image pull policy                                       | "Always"                                |
-| restartPolicy                                    | Restart policy for the container                        | Always                                  |
-| persistentVolumeReclaimPolicy                    | Reclaim policy for persistent volumes                   | "Delete"                                |
-| persistentVolumeAccessModes                      | Access mode for persistent volumes                      | "ReadWriteOnce"                         |
-| initialDelaySeconds                              | Initial delay for liveness and readiness probes         | 60                                      |
-| periodSeconds                                    | Interval between liveness and readiness probes          | 30                                      |
-| failureThreshold                                 | Number of consecutive failures for readiness probes     | 30                                      |
-| hostPath                                         | Host path for the application                           | ""                                      |
-
-### StreamPipes common parameters
-
-| Parameter Name                                  | Description                                             | Value                                    |
-|-------------------------------------------------|---------------------------------------------------------|------------------------------------------|
-| streampipes.version                             | StreamPipes version                                     | "0.93.0-SNAPSHOT"                        |
-| streampipes.registry                            | StreamPipes registry URL                                | "apachestreampipes"                      |
-| streampipes.auth.secretName                     | The secret name for storing secrets                     | "sp-secrets"                             |
-| streampipes.auth.users.admin.user               | The initial admin user                                  | "admin@streampipes.apache.org"           |
-| streampipes.auth.users.admin.password           | The initial admin password (leave empty for autogen)    | "admin"                                  |
-| streampipes.auth.users.service.user             | The initial service account user                        | "sp-service-client"                      |
-| streampipes.auth.users.service.secret           | The initial service account secret                      | empty (auto-generated)                   |
-| streampipes.auth.encryption.passcode            | Passcode for value encryption                           | empty (auto-generated)                   |
-| streampipes.core.appName                        | StreamPipes backend application name                    | "backend"                                |
-| streampipes.core.port                           | StreamPipes backend port                                | 8030                                     |
-| streampipes.core.persistence.storageClassName   | Storage class name for backend PVs                      | "hostpath"                               |
-| streampipes.core.persistence.storageSize        | Size of the backend PV                                  | "1Gi"                                    |
-| streampipes.core.persistence.claimName          | Name of the backend PersistentVolumeClaim               | "backend-pvc"                            |
-| streampipes.core.persistence.pvName             | Name of the backend PersistentVolume                    | "backend-pv"                             |
-| streampipes.core.service.name                   | Name of the backend service                             | "backend"                                |
-| streampipes.core.service.port                   | TargetPort of the StreamPipes backend service           | 8030                                     |
-| streampipes.ui.appName                          | StreamPipes UI application name                         | "ui"                                     |
-| streampipes.ui.resolverActive                   | Flag for enabling DNS resolver for Nginx proxy          | true                                     |
-| streampipes.ui.port                             | StreamPipes UI port                                     | 8088                                     |
-| streampipes.ui.resolver                         | DNS resolver for Nginx proxy                            | "kube-dns.kube-system.svc.cluster.local" |
-| streampipes.ui.service.name                     | Name of the UI service                                  | "ui"                                     |
-| streampipes.ui.service.type                     | Type of the UI service                                  | "ClusterIP"                              |
-| streampipes.ui.service.nodePort                 | Node port for the UI service                            | 8088                                     |
-| streampipes.ui.service.port                     | TargetPort of the StreamPipes UI service                | 8088                                     |
-| streampipes.ingress.active                      | Flag for enabling Ingress for StreamPipes               | false                                    |
-| streampipes.ingress.annotations                 | Annotations for Ingress                                 | {}                                       |
-| streampipes.ingress.host                        | Hostname for Ingress                                    | ""                                       |
-| streampipes.ingressroute.active                 | Flag for enabling IngressRoute for StreamPipes          | true                                     |
-| streampipes.ingressroute.annotations            | Annotations for IngressRoute                            | {}                                       |
-| streampipes.ingressroute.entryPoints            | Entry points for IngressRoute                           | ["web", "websecure"]                     |
-| streampipes.ingressroute.host                   | Hostname for IngressRoute                               | ""                                       |
-| streampipes.ingressroute.certResolverActive     | Flag for enabling certificate resolver for IngressRoute | true                                     |
-| streampipes.ingressroute.certResolver           | Certificate resolver for IngressRoute                   | ""                                       |
-
-
-### Extensions common parameters
-
-| Parameter Name                                  | Description                                             | Value                                    |
-|-------------------------------------------------|---------------------------------------------------------|------------------------------------------|
-| extensions.iiot.appName                         | IIoT extensions application name                        | extensions-all-iiot                      |
-| extensions.iiot.port                            | Port for the IIoT extensions application                | 8090                                     |
-| extensions.iiot.service.name                    | Name of the IIoT extensions service                     | extensions-all-iiot                      |
-| extensions.iiot.service.port                    | TargetPort of the IIoT extensions service               | 8090                                     |
-
-
-### External common parameters
-
-#### Couchdb common parameters
-
-| Parameter Name                                  | Description                                              | Value                                    |
-|-------------------------------------------------|----------------------------------------------------------|------------------------------------------|
-| external.couchdb.appName                        | CouchDB application name                                 | "couchdb"                                |
-| external.couchdb.version                        | CouchDB version                                          | 3.3.1                                    |
-| external.couchdb.user                           | CouchDB admin username                                   | "admin"                                  |
-| external.couchdb.password                       | CouchDB admin password                                   | empty (auto-generated)                   |
-| external.couchdb.port                           | Port for the CouchDB service                             | 5984                                     |
-| external.couchdb.service.name                   | Name of the CouchDB service                              | "couchdb"                                |
-| external.couchdb.service.port                   | TargetPort of the CouchDB service                        | 5984                                     |
-| external.couchdb.persistence.storageClassName   | Storage class name for CouchDB PVs                       | "hostpath"                               |
-| external.couchdb.persistence.storageSize        | Size of the CouchDB PV                                   | "1Gi"                                    |
-| external.couchdb.persistence.claimName          | Name of the CouchDB PersistentVolumeClaim                | "couchdb-pvc"                            |
-| external.couchdb.persistence.pvName             | Name of the CouchDB PersistentVolume                     | "couchdb-pv"                             |
-
-#### Influxdb common parameters
-
-| Parameter Name                                  | Description                                              | Value                                    |
-|-------------------------------------------------|----------------------------------------------------------|------------------------------------------|
-| external.influxdb.appName                       | InfluxDB application name                                | "influxdb"                               |
-| external.influxdb.version                       | InfluxDB version                                         | 2.6                                      |
-| external.influxdb.username                      | InfluxDB admin username                                  | "admin"                                  |
-| external.influxdb.password                      | InfluxDB admin password                                  | empty (auto-generated)                   |
-| external.influxdb.adminToken                    | InfluxDB admin token                                     | empty (auto-generated)                   |
-| external.influxdb.initOrg                       | InfluxDB initial organization                            | "sp"                                     |
-| external.influxdb.initBucket                    | InfluxDB initial bucket                                  | "sp"                                     |
-| external.influxdb.initMode                      | InfluxDB initialization mode                             | "setup"                                  |
-| external.influxdb.apiPort                       | Port number for the InfluxDB service (API)               | 8083                                     |
-| external.influxdb.httpPort                      | Port number for the InfluxDB service (HTTP)              | 8086                                     |
-| external.influxdb.grpcPort                      | Port number for the InfluxDB service (gRPC)              | 8090                                     |
-| external.influxdb.service.name                  | Name of the InfluxDB service                             | "influxdb"                               |
-| external.influxdb.service.apiPort               | TargetPort of the InfluxDB service for API               | 8083                                     |
-| external.influxdb.service.httpPort              | TargetPort of the InfluxDB service for HTTP              | 8086                                     |
-| external.influxdb.service.grpcPort              | TargetPort of the InfluxDB service for gRPC              | 8090                                     |
-| external.influxdb.persistence.storageClassName  | Storage class name for InfluxDB PVs                      | "hostpath"                               |
-| external.influxdb.persistence.storageSize       | Size of the InfluxDB PV                                  | "1Gi"                                    |
-| external.influxdb.persistence.storageSizeV1     | Size of the InfluxDB PV for v1 databases                 | "1Gi"                                    |
-| external.influxdb.persistence.claimName         | Name of the InfluxDBv2 PersistentVolumeClaim             | "influxdb2-pvc"                          |
-| external.influxdb.persistence.claimNameV1       | Name of the InfluxDBv1 PersistentVolumeClaim             | "influxdb-pvc"                           |
-| external.influxdb.persistence.pvName            | Name of the InfluxDBv2 PersistentVolume                  | "influxdb2-pv"                           |
-| external.influxdb.persistence.pvNameV1          | Name of the InfluxDBv1 PersistentVolume                  | "influxdb-pv"                            |
-
-
-#### Nats common parameters
-
-| Parameter Name                                  | Description                                              | Value                                    |
-|-------------------------------------------------|----------------------------------------------------------|------------------------------------------|
-| external.nats.appName                           | NATS application name                                    | "nats"                                   |
-| external.nats.port                              | Port for the NATS service                                | 4222                                     |
-| external.nats.version                           | NATS version                                             |                                          |
-| external.nats.service.type                      | Type of the NATS service                                 | "NodePort"                               |
-| external.nats.service.externalTrafficPolicy     | External traffic policy for the NATS service             | "Local"                                  |
-| external.nats.service.name                      | Name of the NATS service                                 | "nats"                                   |
-| external.nats.service.port                      | TargetPort of the NATS service                           | 4222                                     |
-
-
-#### Kafka common parameters
-
-| Parameter Name                                  | Description                                              | Value                                    |
-|-------------------------------------------------|----------------------------------------------------------|------------------------------------------|
-| external.kafka.appName                          | Kafka application name                                   | "kafka"                                  |
-| external.kafka.version                          | Kafka version                                            | 2.2.0                                    |
-| external.kafka.port                             | Port for the Kafka service                               | 9092                                     |
-| external.kafka.external.hostname                | Name which will be advertised to external clients. Clients which use (default) port 9094       | "localhost"
-| external.kafka.service.name                     | Name of the Kafka service                                | "kafka"                                  |
-| external.kafka.service.port                     | TargetPort of the Kafka service                          | 9092                                     |
-| external.kafka.service.portOutside              | Port for Kafka client outside of the cluster | 9094                              |
-| external.kafka.persistence.storageClassName     | Storage class name for Kafka PVs                         | "hostpath"                               |
-| external.kafka.persistence.storageSize          | Size of the Kafka PV                                     | "1Gi"                                    |
-| external.kafka.persistence.claimName            | Name of the Kafka PersistentVolumeClaim                  | "kafka-pvc"                              |
-| external.kafka.persistence.pvName               | Name of the Kafka PersistentVolume                       | "kafka-pv"                               |
-|
-
-#### Zookeeper common parameters
-
-| Parameter Name                                  | Description                                              | Value                                    |
-|-------------------------------------------------|----------------------------------------------------------|------------------------------------------|
-| external.zookeeper.appName                      | ZooKeeper application name                               | "zookeeper"                              |
-| external.zookeeper.version                      | ZooKeeper version                                        | 3.4.13                                   |
-| external.zookeeper.port                         | Port for the ZooKeeper service                           | 2181                                     |
-| external.zookeeper.service.name                 | Name of the ZooKeeper service                            | "zookeeper"                              |
-| external.zookeeper.service.port                 | TargetPort of the ZooKeeper service                      | 2181                                     |
-| external.zookeeper.persistence.storageClassName | Storage class name for ZooKeeper PVs                     | "hostpath"                               |
-| external.zookeeper.persistence.storageSize      | Size of the ZooKeeper PV                                 | "1Gi"                                    |
-| external.zookeeper.persistence.claimName        | Name of the ZooKeeper PersistentVolumeClaim              | "zookeeper-pvc"                          |
-| external.zookeeper.persistence.pvName           | Name of the ZooKeeper PersistentVolume                   | "zookeeper-pv"                           |
-
-
-#### Pulsar common parameters
-
-| Parameter Name                                  | Description                                              | Value                                    |
-|-------------------------------------------------|----------------------------------------------------------|------------------------------------------|
-| external.pulsar.appName                         | pulsar application name                                  | "pulsar"                                 |
-| external.pulsar.version                         | pulsar version                                           | 3.0.0                                    |
-| external.pulsar.port                            | Port for the pulsar service                              | 6650                                     |
-| external.pulsar.service.name                    | Name of the pulsar service                               | "pulsar"                                 |
-| external.pulsar.service.port                    | TargetPort of the pulsar service                         | 6650                                     |
-| external.pulsar.persistence.storageClassName    | Storage class name for pulsar PVs                        | "hostpath"                               |
-| external.pulsar.persistence.storageSize         | Size of the pulsar PV                                    | "1Gi"                                    |
-| external.pulsar.persistence.claimName           | Name of the pulsar PersistentVolumeClaim                 | "pulsar-pvc"                             |
-| external.pulsar.persistence.pvName              | Name of the pulsar PersistentVolume                      | "pulsar-pv"                              |
-
-### Monitoring common parameters
-
-#### Monitoring - Prometheus
-
-| Parameter Name                                  | Description                                              | Value                                    |
-|-------------------------------------------------|----------------------------------------------------------|------------------------------------------|
-| prometheus.appName                              | Prometheus application name                              | "prometheus"                             |
-| prometheus.version                              | Prometheus version                                       | 2.45.0                                   |
-| prometheus.port                                 | Prometheus port                                          | 9090                                     |
-| prometheus.service.name                         | Prometheus service name                                  | "prometheus"                             |
-| prometheus.service.port                         | Prometheus service port                                  | 9090                                     |
-| prometheus.persistence.storageClassName         | Prometheus storage class name                            | "hostpath"                               |
-| prometheus.persistence.storageSize              | Prometheus storage size                                  | "2Gi"                                    |
-| prometheus.persistence.claimName                | Prometheus PVC claim name                                | "prometheus-pvc"                         |
-| prometheus.persistence.pvName                   | Prometheus PV name                                       | "prometheus-pv"                          |
-| prometheus.persistence.tokenStorageSize         | Prometheus token storage size                            | "16Ki"                                   |
-| prometheus.config.scrapeInterval                | Prometheus scrape interval                               | 10s                                      |
-| prometheus.config.evaluationInterval            | Prometheus evaluation interval                           | 15s                                      |
-| prometheus.config.backendJobName                | Prometheus backend job name                              | "backend"                                |
-| prometheus.config.extensionsName                | Prometheus extensions job name                           | "extensions-all-iiot"                    |
-| prometheus.config.tokenFileName                 | Prometheus token file name                               | "token"                                  |
-| prometheus.config.tokenFileDir                  | Prometheus token file directory                          | "/opt/data"
-
-#### Monitoring - Grafana
-
-| Parameter Name                                  | Description                                              | Value                                    |
-|-------------------------------------------------|----------------------------------------------------------|------------------------------------------|
-| grafana.appName                                 | Grafana application name                                 | "grafana"                                |
-| grafana.version                                 | Grafana version                                          | 10.1.2                                   |
-| grafana.port                                    | Grafana port                                             | 3000                                     |
-| grafana.service.name                            | Grafana service name                                     | "grafana"                                |
-| grafana.service.port                            | Grafana service port                                     | 3000                                     |
-| grafana.persistence.storageClassName            | Grafana storage class name                               | "hostpath"                               |
-| grafana.persistence.storageSize                 | Grafana storage size                                     | "1Gi"                                    |
-| grafana.persistence.claimName                   | Grafana PVC claim name                                   | "grafana-pvc"                            |
-| grafana.persistence.pvName                      | Grafana PV name                                          | "grafana-pv"                             |
-
-
-## Auto-generation of parameters.
-
-The helm chart includes a `secrets.yaml` file which auto-generates several settings as follows:
-
-```yaml
-
-apiVersion: v1
-kind: Secret
-metadata:
-  name: sp-secrets
-  namespace: {{ .Release.Namespace | quote }}
-type: Opaque
-data:
-  sp-initial-admin-password: {{ ternary (randAlphaNum 10) .Values.streampipes.auth.users.admin.password (empty .Values.streampipes.auth.users.admin.password) | b64enc | quote }}
-  sp-initial-client-secret: {{ ternary (randAlphaNum 35) .Values.streampipes.auth.users.service.secret (empty .Values.streampipes.auth.users.service.secret) | b64enc | quote }}
-  sp-encryption-passcode:  {{ ternary (randAlphaNum 20) .Values.streampipes.auth.encryption.passcode (empty .Values.streampipes.auth.encryption.passcode) | b64enc | quote }}
-  sp-couchdb-password:  {{ ternary (randAlphaNum 20) .Values.external.couchdb.password (empty .Values.external.couchdb.password) | b64enc | quote }}
-  sp-ts-storage-password:  {{ ternary (randAlphaNum 20) .Values.external.influxdb.password (empty .Values.external.influxdb.password) | b64enc | quote }}
-  sp-ts-storage-token:  {{ ternary (randAlphaNum 20) .Values.external.influxdb.adminToken (empty .Values.external.influxdb.adminToken) | b64enc | quote }}
-
-```
-
-
-## Deleting the current helm chart deployment:
 ```bash
 helm uninstall streampipes
 ```
 
+Kubernetes is the better choice when you need:
 
-his page explains how SSL Certificates can be used to provide transport layer security between your Browser and the Streampipes Backend.
+- managed persistent volumes
+- ingress or Traefik-based routing
+- explicit service exposure rules
+- cluster operations and lifecycle management
+- flexible deployment of central services and extension services
 
-## Prerequisites
-You need a valid Certificate consisting of a Private and a Public Key. Both Keys must be in PEM Format. Please note that your Private Key should never be shared, otherwise the communication can not be considered secure.
+### Ingress and storage
 
-## Edit docker-compose.yml
-In order to use SSL you have to open port 443 on the nginx Service. Incoming insecure Traffic on Port 80 will be automatically rerouted to Port 443.
+The Helm chart supports both:
 
-The Environment-Variable NGINX_SSL must be set to "true".
+- standard Kubernetes `Ingress`
+- Traefik `IngressRoute`
 
-Finally you have to inject the Certificates into the Docker-Container. In the example below, the Certificates are placed in the directory /etc/ssl/private/ on the host machine. Please change the path according to the place where the Certificates are located on your machine. The path after the colon should not be changed!
+It also supports storage customization through the `storageClassName` values for the persistent components.
+
+## Distributed deployments
+
+A central advantage of StreamPipes is that extension services do not have to run in the same place as the UI and core. In industrial environments, this matters because data sources often live in restricted OT networks or on edge systems close to production equipment.
+
+A common topology looks like this:
+
+- `Central IT environment`: UI, Core, CouchDB, InfluxDB, and usually the main broker
+- `OT or edge environment`: one or more extension services that connect to local machines, PLCs, brokers, or APIs
+
+This split is useful when:
+
+- machine data should stay inside a plant network as long as possible
+- adapter traffic should terminate close to the source
+- firewall rules allow controlled service-to-service communication but not full central access to machines
+- lower latency is needed for ingestion or preprocessing
+
+In practice, an extension service in the OT network can:
+
+- collect data from local sources
+- normalize or preprocess the events
+- expose adapters and pipeline elements to the central StreamPipes installation
+- forward stream events through the configured message broker
+
+This means StreamPipes can be operated as a central industrial data platform while still placing data collection and processing components near the edge.
+
+## Message brokers
+
+StreamPipes supports different brokers for transporting events between adapters, processors, and sinks. In deployment terms, the broker is a core runtime decision because it affects both the infrastructure you install and the broker-specific configuration values you provide.
+
+### NATS
+
+`NATS` is the recommended default for new installations. The current default Compose installer uses it, and the Helm chart also defaults to:
+
 ```yaml
-[...]
-  nginx:
-    image: apachestreampipes/ui
-    ports:
-      - "80:80"
-      - "443:443"
-    environment:
-      - NGINX_SSL=true
-    volumes:
-      - /etc/ssl/private/private.pem:/etc/nginx/ssl/ssl.pem
-      - /etc/ssl/private/public.pem:/etc/nginx/ssl/cert.pem
-    depends_on:
-      - backend
-    networks:
-      spnet:
-[...]
+preferredBroker: "nats"
 ```
 
+Use NATS when you want:
+
+- the simplest current reference setup
+- a lightweight internal broker
+- an easy path into distributed deployments with StreamPipes extension services
+
+### Kafka
+
+`Kafka` remains available and is a good choice when:
+
+- your organization already operates Kafka
+- event streams should integrate with an existing Kafka-based data platform
+- operational standards already assume Kafka tooling and operations
+
+The Compose installer includes a dedicated Kafka preset, and the Helm chart keeps Kafka configuration values.
+
+### Pulsar
+
+`Pulsar` is also part of the Kubernetes configuration model. It is relevant when your infrastructure already uses Pulsar or when you want StreamPipes to align with a Pulsar-based streaming environment.
+
+Unlike NATS and Kafka, there is no dedicated Compose preset for Pulsar in the standard installer. In practice, Pulsar is therefore mainly a Kubernetes or custom-deployment topic.
+
+## HTTP and NATS transport modes
+
+It is important to distinguish two different communication paths:
+
+1. `Event transport`
+2. `Core-to-extension service transport`
+
+These are related, but they are not the same.
+
+### Event transport
+
+Event transport is controlled primarily through `SP_PRIORITIZED_PROTOCOL` in the backend. This decides which messaging system StreamPipes should prioritize for exchanging events between runtime components.
+
+Examples:
+
+- `nats` in the default Compose setup
+- `kafka` in the Kafka Compose setup
+
+### Core-to-extension service transport
+
+Core-to-extension communication is controlled separately. The relevant settings are:
+
+- `SP_CORE_EXTENSION_TRANSPORT_MODE` on the core side
+- `SP_EXTENSION_TRANSPORT_MODE` on the extension side
+
+The currently supported modes are:
+
+- Core: `http`, `nats`, or `auto`
+- Extension service: `http`, `nats`, or `dual`
+
+Use them as follows:
+
+- `HTTP` is the simplest direct model. Core sends requests directly to the extension service over HTTP.
+- `NATS` uses request/reply over NATS for core-to-extension communication.
+- `AUTO` on the core side prefers NATS when the service supports it and falls back to HTTP when necessary.
+- `DUAL` on the extension side allows a service to support both HTTP and NATS-based requests.
+
+This distinction matters in distributed installations. For example:
+
+- You may use `NATS` as the event broker between runtime components.
+- At the same time, core may still reach an extension service over `HTTP`.
+- Or you may move both event transport and core-to-extension requests to `NATS` when that better fits a segmented or broker-centric network design.
+
+The UI also needs to know where live adapter requests should be forwarded. In the Compose presets, this is configured through `SP_HTTP_SERVER_ADAPTER_ENDPOINT`, which points the UI proxy to the installed extension service.
+
+## Choosing a deployment pattern
+
+Use the following rules of thumb:
+
+- Start with `Docker Compose` if you want the quickest supported installation.
+- Choose the default `NATS` setup unless there is a clear reason to align with `Kafka`.
+- Use the `minimal` Compose preset for smaller installations or leaner edge-style setups.
+- Move to `Kubernetes` when you need cluster operations, ingress control, and persistent infrastructure management.
+- Place `extension services` in the OT network or at the edge when data sources should stay close to the machine network.
+- Use `HTTP` transport first if you want the most direct service wiring.
+- Use `NATS` or `AUTO` transport modes when broker-based service communication fits the deployment better.
+
+## Related configuration pages
+
+For the detailed environment-variable reference, continue with [Environment Variables](./06_configure-operate-environment-variables.md). For the operational view of registered services and runtime service configuration, see [Extension Services](./06_configure-operate-extension-services.md).
+
+## Kubernetes configuration reference
+
+The following tables summarize the Helm values that are currently exposed in the Kubernetes installer.
+
+### Common parameters
+
+| Parameter Name                | Description                                         | Value           |
+|------------------------------|-----------------------------------------------------|-----------------|
+| deployment                   | Deployment type (`lite` or `full`)                  | lite            |
+| preferredBroker              | Preferred broker for deployment                     | `"nats"`        |
+| monitoringSystem             | Enable monitoring system (`true` or `false`)        | false           |
+| pullPolicy                   | Image pull policy                                   | `"Always"`      |
+| restartPolicy                | Restart policy for the container                    | Always          |
+| persistentVolumeReclaimPolicy| Reclaim policy for persistent volumes               | `"Delete"`      |
+| persistentVolumeAccessModes  | Access mode for persistent volumes                  | `"ReadWriteOnce"` |
+| initialDelaySeconds          | Initial delay for liveness and readiness probes     | 60              |
+| periodSeconds                | Interval between liveness and readiness probes      | 30              |
+| failureThreshold             | Number of consecutive failures for readiness probes | 30              |
+| hostPath                     | Host path for the application                       | `""`            |
+
+### StreamPipes common parameters
+
+| Parameter Name                                | Description                                             | Value                                    |
+|-----------------------------------------------|---------------------------------------------------------|------------------------------------------|
+| streampipes.version                           | StreamPipes version                                     | `"0.99.0-SNAPSHOT"`                      |
+| streampipes.registry                          | StreamPipes registry URL                                | `"apachestreampipes"`                    |
+| streampipes.auth.secretName                   | Secret name for storing secrets                         | `"sp-secrets"`                           |
+| streampipes.auth.users.admin.user             | Initial admin user                                      | `"admin@streampipes.apache.org"`         |
+| streampipes.auth.users.admin.password         | Initial admin password                                  | `"admin"`                                |
+| streampipes.auth.users.service.user           | Initial service account user                            | `"sp-service-client"`                    |
+| streampipes.auth.users.service.secret         | Initial service account secret                          | empty (auto-generated)                   |
+| streampipes.auth.encryption.passcode          | Passcode for value encryption                           | empty (auto-generated)                   |
+| streampipes.core.appName                      | StreamPipes backend application name                    | `"backend"`                              |
+| streampipes.core.port                         | StreamPipes backend port                                | 8030                                     |
+| streampipes.core.persistence.storageClassName | Storage class name for backend PVs                      | `"hostpath"`                             |
+| streampipes.core.persistence.storageSize      | Size of the backend PV                                  | `"1Gi"`                                  |
+| streampipes.core.persistence.claimName        | Name of the backend PersistentVolumeClaim               | `"backend-pvc"`                          |
+| streampipes.core.persistence.pvName           | Name of the backend PersistentVolume                    | `"backend-pv"`                           |
+| streampipes.core.service.name                 | Name of the backend service                             | `"backend"`                              |
+| streampipes.core.service.port                 | Target port of the StreamPipes backend service          | 8030                                     |
+| streampipes.ui.appName                        | StreamPipes UI application name                         | `"ui"`                                   |
+| streampipes.ui.resolverActive                 | Enable DNS resolver for the Nginx proxy                 | true                                     |
+| streampipes.ui.port                           | StreamPipes UI port                                     | 8088                                     |
+| streampipes.ui.resolver                       | DNS resolver for the Nginx proxy                        | `"kube-dns.kube-system.svc.cluster.local"` |
+| streampipes.ui.service.name                   | Name of the UI service                                  | `"ui"`                                   |
+| streampipes.ui.service.type                   | Type of the UI service                                  | `"ClusterIP"`                            |
+| streampipes.ui.service.nodePort               | Node port for the UI service                            | 8088                                     |
+| streampipes.ui.service.port                   | Target port of the StreamPipes UI service               | 8088                                     |
+| streampipes.ingress.active                    | Enable Ingress for StreamPipes                          | false                                    |
+| streampipes.ingress.annotations               | Annotations for Ingress                                 | `{}`                                     |
+| streampipes.ingress.host                      | Hostname for Ingress                                    | `""`                                     |
+| streampipes.ingressroute.active               | Enable IngressRoute for StreamPipes                     | true                                     |
+| streampipes.ingressroute.annotations          | Annotations for IngressRoute                            | `{}`                                     |
+| streampipes.ingressroute.entryPoints          | Entry points for IngressRoute                           | `["web", "websecure"]`                   |
+| streampipes.ingressroute.host                 | Hostname for IngressRoute                               | `""`                                     |
+| streampipes.ingressroute.certResolverActive   | Enable certificate resolver for IngressRoute            | true                                     |
+| streampipes.ingressroute.certResolver         | Certificate resolver for IngressRoute                   | `""`                                     |
+
+### Extensions common parameters
+
+| Parameter Name               | Description                              | Value                   |
+|-----------------------------|------------------------------------------|-------------------------|
+| extensions.iiot.appName     | IIoT extensions application name         | `extensions-all-iiot`   |
+| extensions.iiot.imageName   | Container image name for the extensions  | `extensions-all-jvm`    |
+| extensions.iiot.port        | Port for the IIoT extensions application | 8090                    |
+| extensions.iiot.service.name| Name of the IIoT extensions service      | `extensions-all-iiot`   |
+| extensions.iiot.service.port| Target port of the IIoT extensions service | 8090                  |
+
+### External common parameters
+
+#### CouchDB common parameters
+
+| Parameter Name                                | Description                               | Value              |
+|-----------------------------------------------|-------------------------------------------|--------------------|
+| external.couchdb.appName                      | CouchDB application name                  | `"couchdb"`        |
+| external.couchdb.version                      | CouchDB version                           | 3.3.1              |
+| external.couchdb.user                         | CouchDB admin username                    | `"admin"`          |
+| external.couchdb.password                     | CouchDB admin password                    | empty (auto-generated) |
+| external.couchdb.port                         | Port for the CouchDB service              | 5984               |
+| external.couchdb.service.name                 | Name of the CouchDB service               | `"couchdb"`        |
+| external.couchdb.service.port                 | Target port of the CouchDB service        | 5984               |
+| external.couchdb.persistence.storageClassName | Storage class name for CouchDB PVs        | `"hostpath"`       |
+| external.couchdb.persistence.storageSize      | Size of the CouchDB PV                    | `"1Gi"`            |
+| external.couchdb.persistence.claimName        | Name of the CouchDB PersistentVolumeClaim | `"couchdb-pvc"`    |
+| external.couchdb.persistence.pvName           | Name of the CouchDB PersistentVolume      | `"couchdb-pv"`     |
+
+#### InfluxDB common parameters
+
+| Parameter Name                                 | Description                                  | Value                 |
+|------------------------------------------------|----------------------------------------------|-----------------------|
+| external.influxdb.appName                      | InfluxDB application name                    | `"influxdb"`          |
+| external.influxdb.version                      | InfluxDB version                             | 2.6                   |
+| external.influxdb.username                     | InfluxDB admin username                      | `"admin"`             |
+| external.influxdb.password                     | InfluxDB admin password                      | `"sp-admin"`          |
+| external.influxdb.adminToken                   | InfluxDB admin token                         | empty (auto-generated) |
+| external.influxdb.initOrg                      | InfluxDB initial organization                | `"sp"`                |
+| external.influxdb.initBucket                   | InfluxDB initial bucket                      | `"sp"`                |
+| external.influxdb.initMode                     | InfluxDB initialization mode                 | `"setup"`             |
+| external.influxdb.apiPort                      | Port number for the InfluxDB API service     | 8083                  |
+| external.influxdb.httpPort                     | Port number for the InfluxDB HTTP service    | 8086                  |
+| external.influxdb.grpcPort                     | Port number for the InfluxDB gRPC service    | 8090                  |
+| external.influxdb.service.name                 | Name of the InfluxDB service                 | `"influxdb"`          |
+| external.influxdb.service.apiPort              | Target port of the InfluxDB API service      | 8083                  |
+| external.influxdb.service.httpPort             | Target port of the InfluxDB HTTP service     | 8086                  |
+| external.influxdb.service.grpcPort             | Target port of the InfluxDB gRPC service     | 8090                  |
+| external.influxdb.persistence.storageClassName | Storage class name for InfluxDB PVs          | `"hostpath"`          |
+| external.influxdb.persistence.storageSize      | Size of the InfluxDB PV                      | `"1Gi"`               |
+| external.influxdb.persistence.storageSizeV1    | Size of the InfluxDB PV for v1 databases     | `"1Gi"`               |
+| external.influxdb.persistence.claimName        | Name of the InfluxDB v2 PersistentVolumeClaim | `"influxdb2-pvc"`    |
+| external.influxdb.persistence.claimNameV1      | Name of the InfluxDB v1 PersistentVolumeClaim | `"influxdb-pvc"`     |
+| external.influxdb.persistence.pvName           | Name of the InfluxDB v2 PersistentVolume     | `"influxdb2-pv"`      |
+| external.influxdb.persistence.pvNameV1         | Name of the InfluxDB v1 PersistentVolume     | `"influxdb-pv"`       |
+
+#### NATS common parameters
+
+| Parameter Name                            | Description                          | Value         |
+|-------------------------------------------|--------------------------------------|---------------|
+| external.nats.appName                     | NATS application name                | `"nats"`      |
+| external.nats.port                        | Port for the NATS service            | 4222          |
+| external.nats.version                     | NATS version                         | empty         |
+| external.nats.service.type                | Type of the NATS service             | `"NodePort"`  |
+| external.nats.service.externalTrafficPolicy | External traffic policy for NATS   | `"Local"`     |
+| external.nats.service.name                | Name of the NATS service             | `"nats"`      |
+| external.nats.service.port                | Target port of the NATS service      | 4222          |
+
+#### Kafka common parameters
+
+| Parameter Name                                | Description                                               | Value         |
+|-----------------------------------------------|-----------------------------------------------------------|---------------|
+| external.kafka.appName                        | Kafka application name                                    | `"kafka"`     |
+| external.kafka.version                        | Kafka version                                             | 2.2.0         |
+| external.kafka.port                           | Port for the Kafka service                                | 9092          |
+| external.kafka.external.hostname              | Hostname advertised to external clients                   | `"localhost"` |
+| external.kafka.service.name                   | Name of the Kafka service                                 | `"kafka"`     |
+| external.kafka.service.port                   | Target port of the Kafka service                          | 9092          |
+| external.kafka.service.portOutside            | Port for Kafka clients outside of the cluster             | 9094          |
+| external.kafka.persistence.storageClassName   | Storage class name for Kafka PVs                          | `"hostpath"`  |
+| external.kafka.persistence.storageSize        | Size of the Kafka PV                                      | `"1Gi"`       |
+| external.kafka.persistence.claimName          | Name of the Kafka PersistentVolumeClaim                   | `"kafka-pvc"` |
+| external.kafka.persistence.pvName             | Name of the Kafka PersistentVolume                        | `"kafka-pv"`  |
+
+#### Pulsar common parameters
+
+| Parameter Name                               | Description                                | Value          |
+|----------------------------------------------|--------------------------------------------|----------------|
+| external.pulsar.appName                      | Pulsar application name                    | `"pulsar"`     |
+| external.pulsar.version                      | Pulsar version                             | 3.0.0          |
+| external.pulsar.port                         | Port for the Pulsar service                | 6650           |
+| external.pulsar.service.name                 | Name of the Pulsar service                 | `"pulsar"`     |
+| external.pulsar.service.port                 | Target port of the Pulsar service          | 6650           |
+| external.pulsar.persistence.storageClassName | Storage class name for Pulsar PVs          | `"hostpath"`   |
+| external.pulsar.persistence.storageSize      | Size of the Pulsar PV                      | `"1Gi"`        |
+| external.pulsar.persistence.claimName        | Name of the Pulsar PersistentVolumeClaim   | `"pulsar-pvc"` |
+| external.pulsar.persistence.pvName           | Name of the Pulsar PersistentVolume        | `"pulsar-pv"`  |
+
+### Monitoring common parameters
+
+#### Prometheus
+
+| Parameter Name                             | Description                           | Value              |
+|--------------------------------------------|---------------------------------------|--------------------|
+| monitoring.prometheus.appName              | Prometheus application name           | `"prometheus"`     |
+| monitoring.prometheus.version              | Prometheus version                    | 2.45.0             |
+| monitoring.prometheus.port                 | Prometheus port                       | 9090               |
+| monitoring.prometheus.service.name         | Prometheus service name               | `"prometheus"`     |
+| monitoring.prometheus.service.port         | Prometheus service port               | 9090               |
+| monitoring.prometheus.persistence.storageClassName | Prometheus storage class name | `"hostpath"`       |
+| monitoring.prometheus.persistence.storageSize | Prometheus storage size            | `"2Gi"`            |
+| monitoring.prometheus.persistence.claimName | Prometheus PVC claim name           | `"prometheus-pvc"` |
+| monitoring.prometheus.persistence.pvName   | Prometheus PV name                    | `"prometheus-pv"`  |
+| monitoring.prometheus.persistence.tokenStorageSize | Prometheus token storage size | `"16Ki"`        |
+| monitoring.prometheus.config.scrapeInterval | Prometheus scrape interval          | `10s`              |
+| monitoring.prometheus.config.evaluationInterval | Prometheus evaluation interval   | `15s`              |
+| monitoring.prometheus.config.backendJobName | Prometheus backend job name         | `backend`          |
+| monitoring.prometheus.config.extensionsName | Prometheus extensions job name      | `extensions-all-iiot` |
+| monitoring.prometheus.config.tokenFileName | Prometheus token file name           | `token`            |
+| monitoring.prometheus.config.tokenFileDir  | Prometheus token file directory       | `/opt/data`        |
+
+#### Grafana
+
+| Parameter Name                          | Description                  | Value            |
+|-----------------------------------------|------------------------------|------------------|
+| monitoring.grafana.appName              | Grafana application name     | `"grafana"`      |
+| monitoring.grafana.version              | Grafana version              | 10.1.2           |
+| monitoring.grafana.port                 | Grafana port                 | 3000             |
+| monitoring.grafana.service.name         | Grafana service name         | `"grafana"`      |
+| monitoring.grafana.service.port         | Grafana service port         | 3000             |
+| monitoring.grafana.persistence.storageClassName | Grafana storage class name | `"hostpath"` |
+| monitoring.grafana.persistence.storageSize | Grafana storage size      | `"1Gi"`          |
+| monitoring.grafana.persistence.claimName | Grafana PVC claim name     | `"grafana-pvc"`  |
+| monitoring.grafana.persistence.pvName   | Grafana PV name              | `"grafana-pv"`   |
+
+## Auto-generated secrets in Kubernetes
+
+The Helm chart generates several secret values automatically when they are left empty. This includes:
+
+- the initial admin password
+- the initial service account secret
+- the encryption passcode
+- the CouchDB password
+- the InfluxDB password
+- the InfluxDB admin token
+
+This behavior is implemented in the chart's `secrets.yaml` template and is useful for first installations. In managed environments, many teams still choose to provide those values explicitly through their deployment process.

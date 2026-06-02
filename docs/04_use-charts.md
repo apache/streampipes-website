@@ -4,99 +4,100 @@ title: Charts
 sidebar_label: Charts
 ---
 
-The data explorer can be used to visualize and explore data streams that are persisted by using the **Data Lake** sink.
+Charts are where persisted industrial data becomes something a user can actually read and act on. In StreamPipes, a chart starts with an existing dataset, turns that dataset into a query result, and then presents that result in a visualization that matches the analytical question.
 
-<img className="docs-image" src="/img/03_use-data-explorer/01_data-explorer-overview.png" alt="StreamPipes Data Explorer Overview"/>
+This is an important distinction from `Connect` and `Pipelines`. Those features bring data into StreamPipes and prepare it. Charts work one step later. They assume that the data already exists and help you ask questions such as: What happened over time? What is the current value? How are two measurements related? Which states occurred most often?
 
-It provides a canvas (i.e. a data view) where various visualizations from multiple pipelines can be placed. For each data view, you can set a date and time range for the configured visualizations.
+> [Image placeholder: chart overview and chart editor with toolbar, designer panel, chart canvas, and data preview]
 
-## Using the data explorer
+## Before you create a chart
 
-### Get the data 
+Charts only work on persisted datasets. In practice, these datasets usually come from a running adapter, a persisted pipeline result, or a CSV import. If no datasets are available, the chart editor will tell you that directly and offer shortcuts back to `Connect` or `Pipelines`.
 
-In the data explorer, any pipeline that uses the so-called **Data Lake** sink can be explored in the data explorer. Switch to the pipeline editor and add the data lake sink to a data processor or stream.
-The sink requires an index name as a configuration parameter, which is used as an identifier in the data explorer.
+That also explains how to think about charts in the wider platform. A chart is not the place to fix ingestion or modeling problems. If timestamps are wrong, units are inconsistent, or fields are missing, the better fix is usually upstream in the adapter or pipeline. The chart should be the place where the data is already good enough to analyze.
 
-### Data Views & Widgets
+## Understand the current chart workflow
 
-After your data is stored in the data lake, you can switch over to the data-explorer tab to create a novel data view and the widgets of your choice. In StreamPipes, a data view organizes a set of related widgets (i.e. data visualizations or plots) and gets assigned a single date and time range. The standard date and time range consists of the last 15 minutes of the current date and time. You can select predefined ranges (e.g. day or month) or configure the exact date and time range you want to explore.
+The chart feature has two parts. The `Charts` overview is where you manage existing charts. The editor is where you design or refine one chart.
 
-<img className="docs-image" src="/img/03_use-data-explorer/02_data-explorer-overview-2.png" alt="StreamPipes Data Explorer Component"/>
+The overview lets you open, edit, clone, share, and delete charts. It also warns you when a chart is outdated. Two cases matter here. Older `legacy multi-source charts` still exist, but the current editor is built around one dataset per chart. In addition, StreamPipes can tell you when a chart `requires attention` because the schema of the underlying dataset has changed. Both warnings are useful because they tell you that the problem is not cosmetic. In those situations, the chart definition itself needs review.
 
-First create and name your data view and select the edit icon to proceed. In your data view, you can now add a new widget congiguration (plus icon) to configure and create your first widget. The widget configuration consists of (i) data, where the individual data sources in the data lake are selected, the properties for the widget are chosen and filters on the data sources are defined and applied, (ii) visualization, where the type of widget is chosen and the respective configuration for the widget type is done and (iii) appearance, where general style configurations for the widget (such as background color) can be performed. 
+Inside the editor, the work usually follows the same order every time. First select the dataset. Then decide which query result you want. Only after the data preview looks right does it make sense to choose the chart type and adjust appearance. Users who reverse that order often spend time tweaking a visualization when the real problem is still in the query.
 
-### Data Configuration
+## Start with the dataset
 
-The data configuration is the first step to define your widget. You can add several data sources (i.e. data sinks) and need to configure each added data source individually. This gives you sufficient freedom to combine the needed information, potentially consisting of different data resolutions, filters or types of information.
+To create a chart, open `Charts` and click `New chart`. The editor starts in the `Data` section because the dataset is the foundation of everything that follows.
 
-<img className="docs-image" src="/img/03_use-data-explorer/03_data-explorer-data.png" alt="StreamPipes Data Explorer Data Configuration"/>
+The current editor works with one dataset per chart. Select it in the `Dataset` section of the right-side designer panel. This may sound restrictive at first, but for documentation and day-to-day usage it is actually a strength: a chart stays easier to understand when it answers one question against one dataset clearly.
 
-After selecting the initial data source, you can choose if the underlying data query is to be performed raw, aggregated or single. Raw queries refer to using the data as-is, where you can define a limit on the number of events to guarantee performant usage in the application. In aggregated mode, you can choose among predefined aggregation granularites (e.g. day, minute, second). 
+When choosing the dataset, think less about where the data came from and more about what the chart is meant to say. If you want to verify the values exactly as they were stored from a source, choose the original persisted dataset. If you want to communicate a normalized KPI such as energy per part, choose the prepared dataset that already contains that KPI. A user looking for a suspicious alarm value should usually open the raw operational dataset. A user building a management dashboard should usually prefer the cleaned, business-level one.
 
-In the next step, you can choose the fields (i.e. properties of your data source) you are interested in exploring. If you selected aggregation or single mode, you can also modify the type of aggregation to be performed on the selected property.
+## Build the query before you think about styling
 
-You can also filter your data source by adding conjunctive conditions.
+Once a dataset is selected, the next task is to shape the query. This is the real heart of the chart. The visualization only presents the result; it does not rescue a poor query.
 
-### Visualization Configuration
+The first decision is the query type. StreamPipes currently supports `Raw`, `Aggregated`, and `Single`. These are not merely technical options. They describe three different ways of looking at data.
 
-The visualization configuration is dependent on the visulization type, which needs to be selected first. The data-explorer currently supports the following types:
+`Raw` is the right choice when exact event rows matter. If an engineer wants to inspect the last 200 machine events exactly as they were stored, raw mode is appropriate. In that mode, `Limit` and `Page` matter because you are thinking in rows. Raw mode is especially useful for troubleshooting, detailed tables, and charts where every original event should remain visible.
 
-#### Table
+`Aggregated` is the right choice when the raw data is too dense or too noisy to be useful as-is. Industrial datasets often fall into this category. A vibration sensor or a rapidly sampled temperature stream can produce too many points for a meaningful multi-day chart. Aggregation solves that by summarizing the data. In the editor, you can let StreamPipes use `Auto-Aggregate` or disable it when you need explicit control. In practice, aggregation is often the mode that turns a technically correct chart into one that is actually readable.
 
-The table view formats the selected properties in table format. 
+`Single` is the right choice when the chart should show one current state rather than a history. A gauge for current pressure, a status light for machine availability, or an indicator for current power draw are typical examples. In those cases, a time series would add noise instead of clarity.
 
-<img className="docs-image" src="/img/03_use-data-explorer/04_data-explorer-table.png" alt="StreamPipes Data Explorer Table"/>
+## Refine the result with fields, filters, grouping, and order
 
-#### Map
+After choosing the query type, continue refining the result itself. StreamPipes loads the dataset fields and preselects an initial set to get you started. Keep in mind that field selection is not just cosmetic. It changes what the chart can work with.
 
-The map allows to visualize and explore coordinates on the world map. The configuration requires to choose the property which comprises the coordinates, allows to choose the marker style, a zoom level as well as the tooltip content.
+In raw mode, selected fields are returned directly from the dataset. In aggregated or single mode, they take part in the summarization logic. A temperature field, for example, might become the basis for an average over time instead of a direct event-by-event series. That is why a good habit is to ask yourself: which fields are essential to answer the question, and which ones only add clutter? A troubleshooting table often benefits from several context fields. A focused time series often benefits from only the timestamp and one or two measurements.
 
-<img className="docs-image" src="/img/03_use-data-explorer/05_data-explorer-map.png" alt="StreamPipes Data Explorer Map"/>
+Filters come next. This is where a broad operational dataset becomes a dataset for one clear question. If a dataset contains values from several machines, several lines, or several orders, filtering is usually the first thing that makes the chart intelligible. A simple filter is often enough: one machine identifier, one status, one threshold, one product type. The `Advanced Filter` dialog becomes useful when the logic grows more precise, for example when one chart should show alarms for a specific line only when a second condition is also true.
 
-#### Heatmap
+Grouping and ordering complete the query shape. `Group by` is what makes one dataset split into several visible series or buckets, for example one series per machine or one bucket per state. `Order` matters most when the chart or table should emphasize recency or chronology. If a user wants the newest alarms first, descending order is natural. If the goal is to reconstruct a process in the order it happened, ascending order is better.
 
-The heatmap widget visualizes data in terms of the available intensity, where higher values are interpreted as being more intense. You only need to select the property which you want to visualize. Note that it might be interesting to aggregate the data in the data configuration to get more insights in your heatmap.
+At the bottom of the data configuration, StreamPipes also offers two small but practical switches: the browser overload warning and the missing-values option. These are not usually the main story of the chart, but they matter operationally. A large result set can make the browser heavy, and incomplete rows can distort multi-field charts. If a chart becomes unstable because one field is occasionally missing, ignoring incomplete events can be more useful than trying to style around the problem.
 
-<img className="docs-image" src="/img/03_use-data-explorer/06_data-explorer-heatmap.png" alt="StreamPipes Data Explorer Heatmap"/>
+## Use the data preview as your checkpoint
 
-#### Time Series
+The `Data preview` is one of the most important parts of the chart editor. It is the moment where the abstract query becomes visible as concrete rows. Users who learn to trust the preview usually build better charts faster.
 
-The time series widget allows you to do exploration and analysis for your numerical and boolean data properties. You can easily visualize your data properties in various styles (i.e. scatter, line, scattered line, bar or symbol) and colors, and configure a second y-axis for better interpretation of varying property ranges.
+Before spending time on chart type or appearance, look at the preview and ask a few basic questions. Did you select the correct dataset? Did the filter return the right subset? Did grouping create the result shape you expected? Does the result look like something the chosen chart type can represent well? Many chart problems are already obvious in the preview. If a pie chart seems wrong, the grouped values are often already wrong in the table. If a status chart looks confusing, the issue is often that the query still returns too many rows instead of one clear current state.
 
-<img className="docs-image" src="/img/03_use-data-explorer/07_data-explorer-timeseries-1.png" alt="StreamPipes Data Explorer Time Series 1"/>
+> [Image placeholder: chart data preview showing the actual query result before visualization]
 
-<img className="docs-image" src="/img/03_use-data-explorer/08_data-explorer-timeseries-2.png" alt="StreamPipes Data Explorer Time Series 2"/>
+## Choose the chart type to match the question
 
-<img className="docs-image" src="/img/03_use-data-explorer/09_data-explorer-timeseries-3.png" alt="StreamPipes Data Explorer Time Series 3"/>
+Only after the query result looks right does it make sense to choose the visualization. The current chart registry includes `Gauge`, `Table`, `Traffic Light`, `Status`, `Map`, `Time-Series Heatmap`, `Status Heatmap`, `Time Series Chart`, `Image`, `Indicator`, `Scatter`, `Histogram`, `Pie`, and `Value Distribution Heatmap`.
 
-#### Image
+The simplest way to choose among them is not to memorize all options, but to think about the shape of the answer you need. A `Time Series Chart` is the natural choice when the main question is how values develop over time. `Gauge`, `Indicator`, `Traffic Light`, and `Status` are all good when the chart should communicate one current state quickly. A `Table` is better when the exact stored rows still matter more than visual summarization. `Pie`, `Histogram`, and `Value Distribution Heatmap` are better when the goal is to understand composition or distribution. `Scatter` is useful when two measurements should be compared on an x/y plane. `Map` only becomes useful when the dataset really contains meaningful spatial coordinates.
 
-The image widget enables to integrate and visualize your image data.
+A few examples help. Machine temperature over the last eight hours is usually a `Time Series Chart`. Current tank fill level is a `Gauge`. Current compressed-air consumption as a KPI is an `Indicator`. The share of machine states during a shift is a `Pie`. The distribution of cycle times is a `Histogram`. The relationship between temperature and vibration is a `Scatter` plot. These are not hard rules, but they are reliable defaults.
 
-#### Indicator
+## Finish the chart in visualization and appearance
 
-The indiator widget lets you visualize a single numerical value as well as (optionally) the delta to another indicator. You only need to configure the respective properties.
+After selecting the chart type, the designer panel lets you refine `Visualization` and `Appearance`. The exact controls depend on the selected chart type, but the conceptual split stays the same: `Data` decides what is returned, `Visualization` decides how that result is interpreted, and `Appearance` controls presentation such as titles, colors, and formatting.
 
-<img className="docs-image" src="/img/03_use-data-explorer/11_data-explorer-indicator.png" alt="StreamPipes Data Explorer Indicator"/>
+This separation is worth keeping in mind because it prevents a common mistake. If the chart tells the wrong story, the problem is usually not in the appearance tab. It is usually in the query or in the chart type. Appearance should be the final polishing step, not the place where the analytical meaning is invented.
 
-#### 2D Correlation
+## Save, reuse, and manage the chart
 
-The correlation plot currently supports analyzing the relationship of two properties. Once selected, you can choose between a scatter view of the plotted data points or directly extract correlations in a density chart.
+The chart toolbar is deliberately small, but every action there matters. You can edit the `Chart Name`, `Save` the chart, `Add To Asset`, `Discard` changes, `Download data`, and change the time range.
 
-<img className="docs-image" src="/img/03_use-data-explorer/12_data-explorer-correlation-1.png" alt="StreamPipes Data Explorer Correlation 1"/>
+`Save` is what turns the current editor state into a reusable platform object. From that point on, the chart can be reopened, shared, linked to an asset, or added to a dashboard. `Download data` is useful when the query result should be validated outside StreamPipes or handed to someone else. `Add To Asset` matters when the chart belongs to a specific machine, line, or site and should be discoverable through the asset context.
 
-<img className="docs-image" src="/img/03_use-data-explorer/13_data-explorer-correlation-2.png" alt="StreamPipes Data Explorer Correlation 2"/>
+Back in the overview, you can open the chart again, edit it, clone it, manage permissions, or delete it. Cloning is especially useful because it lets you reuse a proven chart structure for another machine, another filter, or another visualization variant without rebuilding it from scratch. Permissions matter when a chart should be visible only to a specific group or team but still remain reusable in dashboards.
 
-#### Distribution
+## How charts fit into the rest of StreamPipes
 
-In the distribution widget, you can quickly get an overview of your data range and common data values. You can either choose a histrogram view, where a bar chart is used to show data the frequency of automatically extracted data ranges or a pie view, where you can also select the granularity of how your data is clustered in terms of frequency.
+Charts are best treated as reusable analytical building blocks. A chart should answer one question well. A dashboard can then combine several of those answers into one operational view. That is why the recommended workflow is to build and validate the chart first, save it, and only then add it to one or more dashboards.
 
-<img className="docs-image" src="/img/03_use-data-explorer/14_data-explorer-distribution-1.png" alt="StreamPipes Data Explorer Distribution 1"/>
+When users follow that approach, both features become easier to maintain. If one dashboard item looks wrong later, the place to fix it is often the source chart, not the dashboard itself.
 
-<img className="docs-image" src="/img/03_use-data-explorer/15_data-explorer-distribution-2.png" alt="StreamPipes Data Explorer Distribution 2"/>
+## Image placeholders
 
-### Appearance Configuration
+`[Image placeholder: chart overview with warnings for legacy multi-source charts and schema-change attention states]`
 
-Finally, you can change the title of your created widget as well as background and text colors in the appearance configuration. 
+`[Image placeholder: chart data configuration showing dataset selection, query type, filters, grouping, and ordering]`
 
-<img className="docs-image" src="/img/03_use-data-explorer/16_data-explorer-appearance.png" alt="StreamPipes Data Explorer Appearance"/>
+`[Image placeholder: chart type selector with current visualization options such as Time Series Chart, Gauge, Table, Pie, Scatter, and Status]`
+
+`[Image placeholder: finished chart editor with chart name, save, add-to-asset, download, time selector, and data preview]`

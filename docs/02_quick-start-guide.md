@@ -5,376 +5,375 @@ sidebar_label: "🚀 Quick Start Guide"
 ---
 
 import DownloadSection from '@site/src/components/download/DownloadSection.tsx';
+import StepFlow from '@site/src/components/docs/StepFlow.tsx';
+import DocVisualPlaceholder from '@site/src/components/docs/DocVisualPlaceholder.tsx';
+import UseCaseExample from '@site/src/components/docs/UseCaseExample.tsx';
+import ScreenshotFigure from '@site/src/components/docs/ScreenshotFigure';
+import ScreenshotComparison from '@site/src/components/docs/ScreenshotComparison';
+import ScreenshotSlideshow from '@site/src/components/docs/ScreenshotSlideshow';
 
-The easiest way to install StreamPipes is our Docker-based installation. For production-grade deployments, we also
-recommend looking at our Kubernetes support, which is also part of the installation kit.
+This guide helps you get from a fresh installation to a first working result in StreamPipes.
 
-## Prerequisites
+The guide begins with installation and then walks through one complete first-run flow in the product.
 
-The Docker-based installation requires **Docker** and **Docker Compose** to be installed on the target machine.
-Installation instructions can be found below.
+## Before you start
+
+The easiest way to install StreamPipes is the Docker-based installation.
+
+<ScreenshotFigure
+src="/img/2026/home-map.png"
+alt="StreamPipes home page with the factory map overview"
+title="Quickstart Home Overview"
+caption="The quickstart home page highlights the main entry points and gives users a high-level overview of the available factory assets."
+/>
+
+<ScreenshotComparison
+  title="Comparison Example"
+  eyebrow="Style Check"
+  summary="Use this component when documentation needs to contrast two related screens, for example two dashboard states or two setup outcomes."
+  items={[
+    {
+      src: '/img/2026/home-map.png',
+      alt: 'Home page with the map-based overview',
+      title: 'Map-centric Overview',
+      caption: 'A broad landing view that emphasizes navigation and spatial context.',
+    },
+    {
+      src: '/img/2026/home-table.png',
+      alt: 'Home page with the table-based overview',
+      title: 'Table-centric Overview',
+      caption: 'A denser operational view that emphasizes records and structured status information.',
+    },
+  ]}
+/>
+
+<ScreenshotSlideshow
+  title="Slideshow Example"
+  eyebrow="Style Check"
+  badge="Preview"
+  items={[
+    {
+      src: '/img/2026/login.png',
+      alt: 'Login screen',
+      title: 'Login',
+      caption: 'The first step after installation is authenticating with the initial credentials.',
+    },
+    {
+      src: '/img/2026/home-map.png',
+      alt: 'Home page with map overview',
+      title: 'Home Overview',
+      caption: 'After sign-in, users land on the home screen and can orient themselves in the product.',
+    },
+    {
+      src: '/img/2026/settings-site-create.png',
+      alt: 'Site creation settings screen',
+      title: 'Initial Configuration',
+      caption: 'A later setup step can introduce more structured configuration views and forms.',
+    },
+  ]}
+/>
+
+
+### Prerequisites
+
+You need:
+
+- `Docker`
+- `Docker Compose`
+- a recent version of `Chrome`, `Firefox`, or `Edge`
+
+The Docker-based installation is supported on:
+
+- `Linux`
+- `macOS`
+- `Windows 10` and newer
 
 :::info Install Docker
-Go to https://docs.docker.com/installation/ and follow the instructions to install Docker for your OS. Make sure
-docker can be started as a non-root user (described in the installation manual, don’t forget to log out and in
-again) and check that Docker is installed correctly by executing docker-run hello-world
+Go to [docs.docker.com](https://docs.docker.com/installation/) and follow the instructions for your operating system.
+
+Make sure Docker can be started as a non-root user where required and verify the installation with a simple test such as `docker run hello-world`.
 :::
-
-### Supported operating systems
-
-The Docker-based installation supports the operating systems **Linux**, **Mac OS X** and **Windows 10 upwards**. Older windows
-versions are not fully compatible with Docker. Linux VMs running under Windows might cause network problems with Docker,
-therefore some manual work might be needed to make StreamPipes run properly.
-
-### Web Browser
-
-The StreamPipes application itself will be accessible through a web browser. We recommend a recent version of Chrome (
-best experience), Firefox or Edge.
 
 ## Install StreamPipes
 
+Use the installation package below to start a local or test instance.
+
 <DownloadSection version={'0.98.0'} releaseDate={'2025-12-15'}></DownloadSection>
 
-## Setup StreamPipes
+For production-oriented setups, also review the Kubernetes-based deployment options that are part of the installation kit.
 
-Once you've opened the browser at the URL given above, you should see the StreamPipes application as shown below. At
-initial startup, StreamPipes automatically performs an installation process.
-After the installation has finished, continue by clicking on "Go to login
-page", once all components are successfully configured.
+## Complete the initial setup
 
-On the login page, enter your credentials, then you should be forwarded to the home page.
+After starting StreamPipes and opening the provided URL in your browser, StreamPipes performs its initial installation flow.
 
-Congratulations! You've successfully managed to install StreamPipes. Now we're ready to build our first pipeline!
+To complete the first setup:
 
-<div class="my-carousel docs-carousel">
-    <img src="/img/01_try-installation/04_home.png" alt="Home page"/>
-</div>
+1. Open the StreamPipes URL in your browser.
+2. Wait until the installation process finishes.
+3. Click `Go to login page`.
+4. Sign in with the credentials from your installation.
 
-:::danger Errors during the installation process
-In most cases, errors during the installation are due to an under-powered system.
-If there is a problem with any of the components, please restart the whole system (`docker-compose
-down` and eventually also delete the volumes).
-Please also make sure that you've assigned enough memory available to Docker.
+After login, you are ready to work in the web interface.
+
+<DocVisualPlaceholder
+  title="First login and home screen"
+  purpose="Orient new users after installation and show that the main modules are ready to use."
+/>
+
+:::danger If installation components do not start
+If the installation does not complete successfully, the most common reason is an underpowered local environment.
+
+Check that:
+
+- Docker has enough memory assigned
+- all required containers are running
+- you restarted the stack cleanly if the first startup failed
+
+If necessary, stop the deployment, remove the containers, and start again with a clean state.
 :::
 
-## Tutorial
+## What you will build
 
-Once you've installed StreamPipes and see the home screen, you'll see a number of modules that are part of the StreamPipes toolbox.
-As a first step, you might be interested in taking the interactive tutorial that helps you create your first pipeline.
-Switch to the **Pipeline Editor** and you will see a dialog that asks you for the start of the interactive tutorial:
+After installation, this quick start takes you through one simple end-to-end workflow:
 
-<img className="docs-image" src="/img/01_try-tutorial/01_tutorial-welcome.png" alt="Tutorial Welcome Page"/>
+- create a sample adapter, ideally with a simulator source
+- persist the events so StreamPipes creates a dataset
+- create a chart from that dataset
+- add the chart to a dashboard
 
-Click **Start Tour** to start the tour. In this tour, you'll build a simple pipeline that monitors (simulated) live data from a water tank system.
-Within the tour, perform the actions as recommended and click **Next** to trigger the next steps. Some tour steps won't require to select **Next**, but wait for you to take the recommended action.
-You can cancel the tour anytime by clicking the **Exit Tour** button.
+The goal is not to explain every feature. The goal is to get one complete flow running so you understand how StreamPipes works as an industrial data platform.
 
-<img className="docs-image" src="/img/01_try-tutorial/02_tutorial-process.png" alt="Tutorial Welcome Page"/>
+<StepFlow
+  steps={[
+    {
+      title: 'Connect a data source',
+      body: 'Create one adapter in Connect so StreamPipes can start receiving events.',
+    },
+    {
+      title: 'Create a reusable data stream',
+      body: 'Publish the source into the platform as a managed stream other features can use.',
+    },
+    {
+      title: 'Persist the data as a dataset',
+      body: 'Enable persistence so live events become durable operational data.',
+    },
+    {
+      title: 'Create a chart',
+      body: 'Query the dataset and confirm that the data can be visualized correctly.',
+    },
+    {
+      title: 'Place the chart on a dashboard',
+      body: 'Turn the first chart into a reusable operational view for monitoring.',
+    },
+  ]}
+/>
 
-Now after you've built your first pipeline, you might be interested in reading about some of our core [concepts](concepts-overview)
+If you complete these steps once, the rest of the platform becomes much easier to understand.
 
+<DocVisualPlaceholder
+  title="Quick start overview"
+  purpose="Show the first-run flow from Connect to Datasets, Charts, and Dashboards in one simple diagram."
+/>
 
-## Next Steps
+## Understand the first-run path
 
-That's it! Have a look at the usage guide to learn how to use Apache StreamPipes.
+A good first StreamPipes experience is not to start with a complex pipeline. Start with a simpler path that proves the platform is working:
 
+1. create one source in `Connect`
+2. persist its events
+3. confirm the dataset receives data
+4. build one chart
+5. add the chart to a dashboard
 
-StreamPipes is a framework that enables domain experts to model and execute stream processing pipelines in a big data infrastructure.
-The graphical user interface of StreamPipes is a web application that provides an easy to use solution for domain experts.
-In this page, an overview of the many features of StreamPipes is given. We will tour through all features and explain what they do and how users can interact with them.
+This gives you a concrete result quickly and introduces the main objects of the platform in the right order.
 
-First of all, a user needs to log in to the system.
-The credentials for the user are specified during the installation process.
+## Step 1: Connect a first data source
 
-![StreamPipes Login](/img/features_0_62_0/login.png)
+Open `Connect` and create a new adapter.
 
-## Home
-After logging in, the user is redirected on to the home page.
-The home page gives an overview over the different features available in the StreamPipes UI.
+For a first test, a simulator adapter is usually the best choice because it lets you validate the platform flow without depending on an external machine or broker.
 
-On the left, the navigation menu can be seen.
-You can either use the icons on the left side or click on the menu icon on the
-top left to open the details view of the navigation menu.
+<UseCaseExample title="Recommended first source">
+  Start with a simulator or sample-style adapter if one is available in your installation. It removes protocol and network uncertainty from the first run, so you can focus on learning the StreamPipes workflow itself.
+</UseCaseExample>
 
-On the top right, a link refers to the documentation and the logout button is present.
+To create the adapter:
 
-<div class="my-carousel">
-    <img src="/img/features_0_62_0/home/home.png" alt="Home"/>
-    <img src="/img/features_0_62_0/home/open_menu.png" alt="Open Menu"/>
-</div>
+1. Open `Connect`.
+2. Click `New Adapter`.
+3. Choose a sample or simulator-style adapter if one is available in your installation.
+4. Configure the adapter parameters.
+5. Move through the creation wizard until the final step.
 
+If your preferred adapter is not visible, first install the required extension in `Configuration > Extensions`.
 
+### What to pay attention to during adapter creation
 
-## Pipeline Editor
-The first feature we are going to explain is the Pipeline Editor.
-This is one of the central features of StreamPipes, since graphical modeling of pipelines takes place in this view.
+While creating the adapter, do not rush through the wizard. The important idea is that StreamPipes does more than establish a connection.
 
-On the top we can see four tabs: __Data Sets__, __Data Streams__, __Processing Elements__, and __Data Sinks__.
-Each tab contains multiple pipeline elements, which can be installed at runtime.
-The installation of pipeline elements is explained later in section [Install Pipeline Elements](user-guide-tour.md#install-pipeline-elements).
+During onboarding, you can already:
 
-<div class="my-carousel">
-    <img src="/img/features_0_62_0/editor/2_PipelineEditor_DataStreams.png" alt="Data Streams"/>
-    <img src="/img/features_0_62_0/editor/3_PipelineEditor_DataProcessors.png" alt="Processing Elements"/>
-    <img src="/img/features_0_62_0/editor/4_PipelineEditor_DataSinks.png" alt="Data Sinks"/>
-    <img src="/img/features_0_62_0/editor/1_PipelineEditor_DataSets.png" alt="Data Sets"/>
-</div>
+- validate incoming sample events
+- refine the schema
+- adjust field metadata
+- add transformations if needed
+- decide whether the stream should be persisted immediately
 
-There are multiple ways to search for a pipeline element.
-The easiest way is to enter a search term in the search field on the top left corner.
-The system filters the elements according to the search term and only presents the relevant ones.
-Another way is to select one of the categories from the drop down menu.
-The system then filters the elements according to the selected category.
-The category of an element is defined by its functionality.
+For the quick start, keep the schema simple and focus on getting a clean, running stream.
 
-<div class="my-carousel">
-    <img src="/img/features_0_62_0/editor/5_text_filter.png" alt="Text Filter"/>
-    <img src="/img/features_0_62_0/editor/6_category_drop_down.png" alt="Category Drop Down"/>
-    <img src="/img/features_0_62_0/editor/7_category_filter.png" alt="Category Filter"/>
-</div>
+<DocVisualPlaceholder
+  title="Connect wizard"
+  purpose="Show adapter selection, sample preview, schema refinement, and start options in one current UI screenshot."
+/>
 
-Modelling of a pipeline starts with choosing one ore more data sources. Therefore a data stream or data set must be selected
-and moved into the editor via drag and drop.
-After adding a data stream, we can select a processing element to transform the events of the data stream.
-This is done again by dragging the processing element icon into our editor.
-The mouse can be used to connect the two elements.
-It is automatically checked in the background if the two elements are semantically compatible.
-If this check is successful, a configuration menu is shown. It contains the parameters that can be modified by the
-user. For all parameters, a description is provided and the system also prevents the user from entering parameters that
-are not correct, according to the semantic description of the element.
-It is also ensured that all required parameters are provided by the user, otherwise an error message is displayed.
+## Step 2: Start the adapter and persist the events
 
+On the final adapter step, give the adapter a clear name and enable persistence.
 
-<div class="my-carousel">
-    <img src="/img/features_0_62_0/editor/8_connect_elements.png" alt="Connect Elements"/>
-    <img src="/img/features_0_62_0/editor/9_configure_element.png" alt="Configure Elements"/>
-</div>
+To do that:
 
-When the user tries to connect two elements that are not compatible, the system shows a __connection error__ message.
-The example illustrated below shows such a case. The user tried to connect a text filter to a light sensor.
-This is not possible since the text filter processing element requires at least one event property of type string, which is not provided by the light sensor.
+1. Enter a meaningful adapter name.
+2. Enable `Persist events`.
+3. Start the adapter.
 
-![Connection Error](/img/features_0_62_0/editor/10_connection_error.png)
+If your installation offers additional startup options such as asset linking or event-rate reduction, you can leave them at their defaults for the first run unless you already know you need them.
 
-To further improve the usability, multiple ways are available to connect new elements besides the drag and drop option.
-Each processing element has multiple short-cut buttons to connect it with another element.
-The first one (eye icon) can be used to get a suggestion of all elements that are compatible with the current element.
-The second one (plus icon) gives a recommendation on the elements the user might want to connect, based on the usage of the component in
-other pipelines.
-There is also a button (question tag icon) to open the documentation of a selected element.
-Elements can be deleted by clicking the 'delete' button.
-Each element can also be re-configured at a later point in time using the configuration button.
-There is one important aspect about re-configuration of pipeline elements you need to be aware of: Only elements that are not yet connected to another element can be modified.
-The reason for this behaviour is that some of the following elements might rely on the configuration of previous elements.
-This way it is ensured that the user can not change the behaviour of the pipeline by accident.
+### Why persistence matters in the quick start
 
+Persistence creates a dataset from the incoming events. That dataset becomes the basis for charts and dashboards.
 
-<div class="my-carousel">
-    <img src="/img/features_0_62_0/editor/11_shortcut_buttons.png" alt="Shortcut Buttons"/>
-    <img src="/img/features_0_62_0/editor/12_compatible_elements.png" alt="Compatible Elements"/>
-    <img src="/img/features_0_62_0/editor/13_recommend_elements.png" alt="Recommended elements"/>
-</div>
+Without persistence, you may still have a live stream, but you will not get the full chart and dashboard workflow that best demonstrates the current StreamPipes product model.
 
+### What success looks like
 
-After the pipeline is completely modelled, the editor looks similar to the first image below.
-Especially for larger pipelines, the auto layout button in the editor menu might be helpful.
-With this button, the pipeline will be beautifully aligned in the editor, helping users to get a better overview of the complete pipeline.
-On the top left corner of the editor, the 'save' button can be found.
-After the modelling of the pipeline is done, use this button to save and execute the pipeline.
-A save dialogue pops up when clicking the save button.
-The pipeline title must be entered and an additional description can be provided.
-It is recommended to always provide a description, because it makes it easier for other users to understand the meaning of the pipeline.
-In the save menu, the user can either just store the pipeline configuration or store it and immediately start the pipeline.
-Once the pipeline is executed, the user is redirected to the _Manage Pipeline_ view.
-In this view, the user gets immediate feedback whether all components did start correctly and the pipeline is up and running.
-This view also shows that individual elements might run in different environments on different servers.
-If there is an error during the execution, a notification containing a (hopefully) detailed error description is provided in this view.
-<div class="my-carousel">
-    <img src="/img/features_0_62_0/editor/14_save_adjust.png" alt="Save adjust delete"/>
-    <img src="/img/features_0_62_0/editor/15_save_dialogue.png" alt="Complete pipeline"/>
-    <img src="/img/features_0_62_0/editor/16_pipeline_sucessfully_started.png" alt="Pipeline sucessfully started"/>
-</div>
+After the adapter starts successfully:
 
-## Connect new Data Sources
-With StreamPipes Connect it is possible to connect new data sources in StreamPipes with just a few clicks.
-Therefore, we provide a marketplace with a lot of different adapters that can be configured and executed to create new __Data Streams__ in the __Pipeline Editor__.
-With StreamPipes Connect it is possible to connect specific data sources - e.g. an adapter streaming the current location of the ISS (International Space Station).
-It is also possible to connect generic sources like message brokers or databases.
-If the event schema of the data source is unknown, the system tries to infer the schema by extracting some sample data and analysing it.
+- the stream is available in StreamPipes
+- events begin to flow
+- a dataset is created and starts filling with records
 
-<div class="my-carousel">
-    <img src="/img/features_0_62_0/connect/new/01_connect.png" alt="Market Place"/>
-    <img src="/img/features_0_62_0/connect/new/02_mqtt_adapter.png" alt="MQTT adapter"/>
-    <img src="/img/features_0_62_0/connect/new/03_configure_mqtt.png" alt="Configure MQTT adpater"/>
-    <img src="/img/features_0_62_0/connect/new/04_configure_format.png" alt="Guess event schema"/>
-    <img src="/img/features_0_62_0/connect/new/05_guess_schema.png" alt="Guess event schema"/>
-    <img src="/img/features_0_62_0/connect/new/06_edit_adapter.png" alt="Edit adapter"/>
-    <img src="/img/features_0_62_0/connect/new/07_start_adapter.png" alt="Start adapter"/>
-    <img src="/img/features_0_62_0/connect/new/08_data_stream_in_editor.png" alt="New data stram in pipeline editor"/>
-</div>
+If no data appears later in the quick start, come back to this step first and verify that the adapter is actually running and persistence was enabled.
 
-Additionally to connecting new sources, data can be cleaned, transformed, and enriched with meta-information.
-Therefore, the event schema can be changed or enriched in step 3 (Define Event Schema).
+## Step 3: Check the dataset
 
-<div class="my-carousel">
-    <img src="/img/features_0_62_0/connect/edit/01_edit_timestamp.png" alt="Edit a property to timestamp"/>
-    <img src="/img/features_0_62_0/connect/edit/02_change_unit.png" alt="Change Unit of property"/>
-    <img src="/img/features_0_62_0/connect/edit/03_change_unit.png" alt="Change Unit of property"/>
-</div>
+Next, confirm that the persisted data is available as a dataset.
 
-## Manage Pipelines
-The _Manage Pipelines_ view provides an overview of all existing pipelines.
-Existing pipelines can be managed using this view.
-For instance, users can start and stop pipelines or delete them when they are not longer needed.
-Pipeline actions can be performed by clicking one of the buttons next to each pipeline.
-For each pipeline, the title and description is displayed in the table.
-By clicking the edit symbol an overview of the created pipline is shown. In this window you are able to analyze statistics, identify errors or edit the pipeline.
+To do that:
 
-<div class="my-carousel">
-    <img src="/img/features_0_62_0/manage_pipelines/1_pipeline_overview.png" alt="Pipeline Overview"/>
-    <img src="/img/features_0_62_0/manage_pipelines/2_pipeline_information.png" alt="Pipeline infomation"/>
-    <img src="/img/features_0_62_0/manage_pipelines/3_delete_pipeline.png" alt="Delete Pipelines"/>
-    <img src="/img/features_0_62_0/manage_pipelines/4_pipeline_deleted.png" alt="Delete Pipelines"/>
-</div>
+1. Open `Datasets`.
+2. Find the dataset created from your adapter.
+3. Check the event counters.
+4. Open the preview.
 
-In a setting with many defined pipelines, it can get really hard to keep track of all pipelines.
-This is why we introduce categories.
-A category is a set of pipelines that can be defined by users in order to better organize pipelines.
-By clicking on the "Manage Categories" button on the top left, a new category can be added to StreamPipes.
-In this example, we create a new category named "New Demo Category".
-After saving a category, pipelines can be added to the newly created category.
-The new category is then presented as a tab in the _Pipeline Management_ view.
-This tab contains all previously defined pipelines.
+You should see incoming records and a schema that matches the data you connected.
 
-<div class="my-carousel">
-    <img src="/img/features_0_62_0/manage_pipelines/5_pipeline_category.png" alt="Pipeline Category"/>
-    <img src="/img/features_0_62_0/manage_pipelines/6_add_category.png" alt="Add Pipeline Category"/>
-    <img src="/img/features_0_62_0/manage_pipelines/7_new_category.png" alt="New Category"/>
-    <img src="/img/features_0_62_0/manage_pipelines/8_show_new_category.png" alt="Show new Category"/>
-</div>
+This is the first important checkpoint in the quick start. Once data reaches a dataset, the rest of the workflow usually becomes straightforward.
 
-## Live Dashboard
-The live dashboard can be used for multiple use cases.
-It is a good way to live monitor a running system in a dashboard, but it can also be used during the pipeline development to get a fast feedback from newly created pipelines.
-Below is a screenshot of an example dashboard showing the current value of pressure, which further shows a line chart and a trafficlight for a water level pipeline.
-All pipelines that contain the "Dashboard Sink" can be visualized in this view.
-To add a new visualisation, click on the "Add visualisation" button on the top left corner.
-Afterwards, a three-step configuration menu is shown.
-The first step is to select the pipeline that should be visualized.
-In the second step, the type of visualization can be defined.
-Currently 10 different types are available, including line charts, various map visualizations and data tables.
-After selecting the type (in our example "Gauge"), you can select the specific measurement values of the data stream that should be displayed.
-In the example below, the water level value should be monitored and the gauge value should range from 0 to 100.
-Once all steps are completed, the new visualization is placed on the dashboard and live data is presented as soon as it becomes available.
+<DocVisualPlaceholder
+  title="Dataset overview and preview"
+  purpose="Show where users confirm that persisted events are arriving and inspect the resulting schema."
+/>
 
-<div class="my-carousel">
-    <img src="/img/features_0_62_0/dashboard/01_dashboard.png" alt="Screenshot of live dashboard"/>
-    <img src="/img/features_0_62_0/dashboard/02_new_visualisation.png" alt="Select Pipeline to visualize"/>
-    <img src="/img/features_0_62_0/dashboard/03_select_gauge.png" alt="Select Visualization Type"/>
-    <img src="/img/features_0_62_0/dashboard/04_configure_gauge.png" alt="Configure  Visualzation"/>
-    <img src="/img/features_0_62_0/dashboard/05_new_gauge_done.png" alt="Show new Visualzation"/>
-</div>
+## Step 4: Create a chart
 
-## File Download
-With the file download,  it is possible to download stored files directly from Elasticsearch.
-This can be very useful for example when a data dumb is needed for a specific time range.
-All data that is written into Elasticsearch using the _Elasticsearch Sink_ can be accessed by the file downloader.
-A common use case is to download data for offline analysis and to train a machine learning algorithm.
-First, an index must be defined, afterwards, the time range must be set.
-A date picker helps users to enter the time range.
-When a user clicks the "Create File" button the file is created.
-All files stored on the server can be downloaded via the download button.
-If the files are not longer needed, they can be deleted by clicking the delete button.
-This will remove the file from the server.
-Since data is stored in Elasticsearch anyways. it is recommended not to store the files for a longer period of time on the server.
-When a file is needed again at a later point in time it is easy to create it again.
-This way a lot of disk space on the server can be saved, especially when the files are rather large.
+Now create a visualization from the dataset.
 
-<div class="my-carousel">
-    <img src="/img/features_0_62_0/file_download/01_file_download.png" alt="File Download"/>
-    <img src="/img/features_0_62_0/file_download/02_file_download.png" alt="File Download with selected time range"/>
-    <img src="/img/features_0_62_0/file_download/03_file_download.png" alt="File Download with new File"/>
-</div>
+To create your first chart:
 
-## Notifications
-Notifications are a good solution to notify someone when a urgent situation occurs.
-A notification can be created by using the notification sink in the pipeline editor.
-When using such a sink a configuration dialogue is presented to the user.
-In this dialogue the user must provide enough information to resolve the solution when it occurs.
-The message can be nicely configured in the message editor.
-It is also possible to embed values of the event that triggered the notification.
-This can be done with the #property# notation.
-All available properties are presented in the notification configurator.
-When the notification is triggered the #property# template is replaced with the actual value of the property.
+1. Open `Charts`.
+2. Create a new chart.
+3. Select the dataset from the dropdown.
+4. Choose a query type such as `Raw`, `Aggregated`, or `Single`.
+5. Configure the fields needed for the chart.
+6. Use the preview to confirm the query result.
+7. Choose a visualization type.
+8. Save the chart.
 
-<div class="my-carousel">
-    <img src="/img/features_0_62_0/notification/01_select_notification_sink.png" alt="Select Notification"/>
-    <img src="/img/features_0_62_0/notification/02_configure_notification.png" alt="Configure Notification"/>
-</div>
+For a first run:
 
-A pop up icon on the notification tab in the menu shows the user how many unread notifications currently are in the system.
-This icon also alerts users when new notifications occur.
-In the notification overview all notifications are listed.
-On the top are the new notifications that are not read yet.
-A user can mark them as read by clicking on the little envelope icon.
-Those notifications are then no longer in the unread section, but they remain in the "All Messages" view.
-This way it is possible to keep track of all notifications and have a look at them at a later point in time.
+- use `Single` when you want one current value
+- use `Raw` when you want to see individual incoming events
+- use `Aggregated` when you want to summarize values over time
 
-<div class="my-carousel">
-    <img src="/img/features_0_62_0/notification/03_new_notification.png" alt="New Notification"/>
-</div>
+### A simple first chart
 
+If your sample data contains a numeric measurement such as temperature, pressure, speed, or fill level, start with a simple line chart or value view. These are the fastest visualizations to validate.
 
-## Install Pipeline Elements
-StreamPipes is highly configurable and extensible.
-Pipeline elements can be added and removed during runtime.
-This can be done in the "Install Pipeline Elements" view.
-All available pipeline elements are shown here and can be selected to install or uninstall.
-It is also possible to select multiple or all of them and then install them all together.
-When a new element is installed by the user it is automatically available in the "Pipeline Editor" and can be used for pipelines.
-Elements that are uninstalled are removed from the system.
-They can not longer be used within pipelines.
+The goal here is not to build the perfect visualization. The goal is to confirm that the dataset can be queried and rendered correctly.
 
-<div class="my-carousel">
-    <img src="/img/features_0_62_0/install_elements/01_install_elements.png" alt="Install Elements View"/>
-    <img src="/img/features_0_62_0/install_elements/02_install_countAggregation.png" alt="Insall new Element"/>
-    <img src="/img/features_0_62_0/install_elements/03_installed_countAggregation.png" alt="Installation Successful"/>
-    <img src="/img/features_0_62_0/install_elements/04_countAggregation_in_editor.png" alt="Show new installed element"/>
-</div>
+<DocVisualPlaceholder
+  title="First chart creation"
+  purpose="Show dataset selection, query preview, and visualization choice in the current chart workflow."
+/>
 
+## Step 5: Add the chart to a dashboard
 
-## My Elements
-The "My Elements" view gives a quick overview over all installed pipeline elements.
-Here they can be inspected and the description can be re-imported.
-In this view it is also possible to have a look at the JSON-LD representation of each element.
-This is not important for a user, but it is worth noting that the system uses this machine understandable format to support the user.
-For example all the information of the sources, like data schema or unit information is in the JSON-LD meta data.
+Dashboards in the current StreamPipes version are built from saved charts.
 
-<div class="my-carousel">
-    <img src="/img/features_0_62_0/my_elements/01_my_elements.png" alt="My Elements Overview"/>
-    <img src="/img/features_0_62_0/my_elements/02_my_elements_jsonid.png" alt="View JSON-LD"/>
-</div>
+To create a dashboard:
 
-## Configuration
-The last feature is the _configuration view_.
-Here, it is possible to change the configuration parameters of installed components.
-All components containing processing elements automatically register in StreamPipes when they are started in the same network as the backend component.
-Once a container is registered it is represented in the configuration view.
-The green dot on the top left indicates that tha container is running properly.
-When there is a problem with a container the green dot changes to red and the user knows there is a problem.
-To configure the parameters the top right arrow of a configuration box must be clicked.
-Then the configuration menu pops up.
-Within there it is possible to change the parameters of a service.
-To make the changes persistent the "Update" button must be clicked.
-A user should keep in mind that sometimes it is necessary to restart a container when the parameters are changed.
-Sometimes it is also necessary to re-import the pipeline element description, either by uninstalling and re-installing them after the container restart or be reloading the description in the "My elements" view.
+1. Open `Dashboards`.
+2. Create a new dashboard.
+3. Configure the basic dashboard settings.
+4. Open the chart panel on the right side.
+5. Add the chart you saved in the previous step.
+6. Arrange the chart on the grid.
+7. Save the dashboard.
 
-<div class="my-carousel">
-    <img src="/img/features_0_62_0/configuration/01_configuration_overview.png" alt="Configuration Overview"/>
-    <img src="/img/features_0_62_0/configuration/02_change_config.png" alt="Change Configuration"/>
-</div>
+At this point, you have completed a full first-use flow: from data onboarding to a reusable dashboard view.
 
+### Why this matters
 
-Congratulations! You've just finished your first tour of StreamPipes.
-Although there's still more to learn, we introduced most of the currently available features.
-On the next page, the different processing elements that come with the installation are explained.
+This is the moment where StreamPipes usually becomes clear to new users:
+
+- `Connect` creates usable data streams
+- `Datasets` preserve the data
+- `Charts` query and visualize it
+- `Dashboards` combine saved visualizations into an operational view
+
+<DocVisualPlaceholder
+  title="Dashboard editor with saved chart"
+  purpose="Show the current dashboard model where saved charts are added from the side panel."
+/>
+
+## Optional next step: Build a pipeline
+
+Once the quick start flow above works, the next logical step is to create a pipeline that transforms or enriches your live stream before persisting or visualizing it.
+
+Open `Pipelines` when you want to:
+
+- filter noisy data
+- calculate KPIs
+- combine processing steps
+- send results to sinks
+- create curated downstream datasets
+
+For many users, pipelines make more sense after the basic source-to-visualization flow is already working.
+
+## If something is missing
+
+If you cannot complete one of the steps, the most common reasons are:
+
+- the required adapter or sink is not installed
+- the adapter is not running
+- `Persist events` was not enabled
+- no events are arriving from the source
+- the dataset is empty, so the chart query has nothing to show
+
+Check these in order. Most first-run issues are resolved by going one step upstream.
+
+## Where to go next
+
+After this quick start, continue with the feature guides for the areas you used:
+
+- [Connect](04_use-connect.md)
+- [Datasets](04_use-datasets.md)
+- [Charts](04_use-charts.md)
+- [Dashboards](04_use-dashboards.md)
+- [Pipelines](04_use-pipelines.md)
+
+If you want a better mental model before going deeper, read the concepts pages next:
+
+- [Introduction](03_concepts-introduction.md)
+- [Terms](03_concepts-terms.md)
+- [Architecture](03_concepts-architecture.md)

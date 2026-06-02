@@ -4,205 +4,142 @@ title: Pipelines
 sidebar_label: Pipelines
 ---
 
-The pipeline editor module supports building pipelines that transform a data stream using a set of resuable data processors and data sinks.
-The empty pipeline editor looks similar to the illustration below after a new installation.
+import StepFlow from '@site/src/components/docs/StepFlow.tsx';
+import UseCaseExample from '@site/src/components/docs/UseCaseExample.tsx';
+import DocVisualPlaceholder from '@site/src/components/docs/DocVisualPlaceholder.tsx';
 
-<img className="docs-image" src="/img/03_use-pipeline-editor/01_pipeline-editor-overview.png" alt="StreamPipes Pipeline Editor Overview"/>
+Pipelines are where connected data becomes operational logic inside StreamPipes. They let you take one or more live streams, combine them with processors and sinks, and turn that flow into something useful: filtering, enrichment, alerting, routing, storage, or analytics.
 
-## Pipeline Elements
-The four main concepts data sets, data streams, data processors and data sinks are available at the top of the pipeline editor. By switching the tabs, the individual pipeline elements for each category can be found.
-By clicking the questionmark symbol, which appears when hovering over an element, additional information can be viewed (e.g., for data streams a live preview of incoming data and the documentation of the pipeline element for data processors and sinks).
+This is why pipelines matter so much in daily work. `Connect` brings data into the platform. Pipelines decide what should happen to that data next.
 
-<img className="docs-image" src="/img/03_use-pipeline-editor/02_pipeline-element-info.png" alt="StreamPipes Pipeline Element Info"/>
+## What a pipeline is for
 
-## Creating Pipelines
-Pipelines are built by dragging data streams, processors and sinks into the pipeline assembly area. Typically, a pipeline is built step-by-step starting with a data soure (stream or set). 
-Afterwards, data processors and sinks are subsequently added to the pipeline. Connections between pipeline elements are made by selecting the gray connector of the source and moving it to the target pipeline element.
-Once a connection is made, StreamPipes performs a quick validation step and, in case two pipeline elements are compatible, automatically opens a configuration window.
+A pipeline usually starts with a live stream, adds zero or more processing steps, and ends in one or more sinks. That sounds abstract at first, but in practice most pipelines serve straightforward industrial goals. A pipeline may keep only events above a threshold, enrich raw measurements with labels or derived values, forward selected events to another system, or persist curated results separately from the raw source data.
 
-### Configuring Pipeline Elements
-The configuration depends on the selected pipeline element and looks similar to the screenshot below.
-In general, pipeline elements are configured by providing the required values. Once the pipeline element is fully configured, the _Save_ button activates and can be used to save the configuration for the pipeline element.
+In other words, pipelines are not just an “advanced analytics” feature. They are the main place where a team shapes live industrial data into reusable behavior.
 
-<img className="docs-image" src="/img/03_use-pipeline-editor/03_configure-pipeline-element.png" alt="StreamPipes Pipeline Element Configuration"/>
+<UseCaseExample title="A typical operational pipeline">
+  A team receives machine temperature values as a live stream. They filter for high readings, enrich the event with a severity label, and send the result to both a notification sink and a persisted dataset. The pipeline is not an experiment; it is a maintained operational flow.
+</UseCaseExample>
 
-In addition, the following options are available in the pipeline element configuration menu:
-* **Show documentation** extends the view and displays the pipeline element's documentation next to the configuration view.
-* **Show only recommended settings** filters the list of available fields provided by the connected input data stream based on the _property scope_, e.g., so that only measurement values are displayed and dimension fields from the input stream are not available for selection. If deactivated, selections contain the full list of available fields that match the input requirement of the data processor.
+## Understand the current pipeline workspace
 
-### Pipeline Element Options
-Further options for a pipeline element can be displayed by hovering over a pipeline element in the assembly area, so that additional buttons appear around the pipeline element:
+The pipeline feature is split across three places, and each one has a different job.
 
-* **Configure element** re-opens the configuration view to update the pipeline element configuration (only available for data processors and sinks)
-* **Delete element** removes the pipeline element from the pipeline  
-* **Help** opens the pipeline element's documentation
-* **Compatible element** opens a dialog which shows all pipeline elements that are compatible to the current element's output data stream. The dialog offers an alternative to selecting pipeline elements directly from the pipeline element selection in the top.
-* **Pipeline Element Recommendation** opens a dialog which shows all recommended pipeline elements that are compatible the current element's output data stream. The recommendation is based on previously connected pipeline elements and is displayed below.
+The `Pipeline Editor` is where you design or change the flow. The `Pipeline Overview` is where you operate many pipelines at once. The `Pipeline Details` view is where you inspect one pipeline more deeply, including its structure, status, metrics, logs, and code view.
 
-### Pipeline Editor Options
-Several pipeline editor options are available in the menu bar of the pipeline assembly:
+This split is useful because it matches how people actually work. You usually build in the editor, operate from the overview, and investigate in the details view.
 
-<img className="docs-image" src="/img/03_use-pipeline-editor/05_pipeline-editor-options.png" alt="StreamPipes Pipeline Editor Options"/>
+<DocVisualPlaceholder
+  title="Pipeline editor overview"
+  purpose="Show the current editor with element catalog, assembly canvas, and top action bar before the user starts building."
+/>
 
-* **Save pipeline** opens the save dialog (see below)
-* **Pan** allows to pan within the assembly area, useful for larger pipelines that do not fit in the screen
-* **Select** is visible if pan mode is active and switches back to the default select mode
-* **Zoom in/out** triggers the zoom in the pipeline assembly
-* **Auto Layout** layouts the pipeline in a much more beautiful way than you are able to do by yourself ;-)
-* **All pipeline modification saved** is displayed if the current pipeline has been cached. Cache updates are triggered after every change of the pipeline so that changes are not lost after reloading the window.
-* **Hints** are shown to display current errors (e.g., incomplete pipelines). Details can be opened by clicking the hint button.
-* **Clear assembly** clears the assembly and removes the current pipeline.
+## Build the pipeline from left to right
 
-### Saving a pipeline
-To save a pipeline, press the _save pipeline_ button. A dialog pops up where a name and description of the pipeline can be entered (only name is mandatory).
-Additionally, a pipeline can be directly started after it has been stored by checking the corresponding button.
+The editor combines an element catalog on the left with the assembly canvas on the right. The catalog contains the installed streams, processors, and sinks that are available in the current StreamPipes installation.
 
-<img className="docs-image" src="/img/03_use-pipeline-editor/06_save-pipeline.png" alt="StreamPipes Save Pipeline Dialog"/>
+Most pipelines are easiest to build from left to right. Start with the source stream, connect a processor or sink, and continue from there until the flow matches the use case.
 
+<StepFlow
+  steps={[
+    {
+      title: 'Place the input stream',
+      body: 'Start with the live stream that should feed the pipeline. This is the source that defines the first schema users will work with.',
+    },
+    {
+      title: 'Add processors or sinks',
+      body: 'Continue the flow by connecting processors and sinks that match the desired behavior, such as filtering, enrichment, storage, or notification.',
+    },
+    {
+      title: 'Configure in context',
+      body: 'Whenever a new element is connected, StreamPipes opens its configuration against the actual upstream schema so the user can map fields with confidence.',
+    },
+    {
+      title: 'Validate before saving',
+      body: 'Use preview and validation features while the pipeline is still in the editor so the final saved flow already reflects real live data behavior.',
+    },
+  ]}
+/>
 
-The pipeline view lists all created pipelines and provides several views and actions to manage the lifecycle of pipelines.
+Elements can be added by dragging them from the catalog into the canvas or by using `Add pipeline element` in the toolbar. The toolbar also includes `Add from template`, which is useful when a team already has a standard pipeline fragment or a recurring structural pattern.
 
-In the entry screen, an overview of all created pipelines is shown:
+## Let compatibility checks guide the design
 
-<img className="docs-image" src="/img/03_use-managing-pipelines/01_pipeline-overview.png" alt="StreamPipes Pipeline Overview"/>
+One of the most important usability features in the editor is that StreamPipes validates connections as you build. When you connect two elements, the platform checks whether the output of the first element is compatible with the input requirements of the second one. If the connection is valid, the configuration dialog opens immediately.
 
-## Pipeline Actions
-Within the pipeline overview, for each pipeline several actions are available:
-* **Start/Stop pipeline** Starts or stops the selected pipeline. Once clicked, StreamPipes will trigger the selected action for all pipeline elements and open a success or error dialog as illustrated below.
-* **Show details** opens the pipeline detail view (see below).
-* **Modify pipeline** opens the pipeline in the pipeline editor, where the pipeline can be modified. Note that this button is only visible if the pipeline is not running.
-* **Delete pipeline** opens a confirm dialog, which subsequently deletes the selected pipeline.
+This means users do not need to guess whether an element combination should work. The editor helps steer them toward valid flows early, before they spend time configuring something impossible.
 
-The screenshot below shows the status of a pipeline after it has been successfully started. By clicking the _Show details_ button, more information on the status of each corresponding pipeline element microservice becomes available. In case of failures, the failure reason will be shown for each pipeline element that has failed to start.
+The same idea appears again later through `Compatible Elements`. Once an element is on the canvas, users can inspect which processors or sinks fit that element next. This is especially useful when someone knows the data they have at a certain point in the flow but has not yet decided which operation should follow.
 
-<img className="docs-image" src="/img/03_use-managing-pipelines/02_pipeline-start-dialog.png" alt="StreamPipes Pipeline Start Dialog"/>
+## Configure each element in the context of the real schema
 
-## Organizing Pipelines into Categories
-Pipelines can be organized into categories, which is a useful feature in case a larger amount of pipelines is created.
-All categories will be shown as separate tabs in the pipeline overview. The same pipeline can be assigned to multiple categories.
+After connecting a processor or sink, StreamPipes opens the element configuration dialog. This is where the editor becomes most helpful for real users, because the configuration is not shown in isolation. It is shown in the context of the actual upstream schema.
 
-To add a new category or to add a new pipeline to an existing category, click the _Manage Categories_ button and configured the category and assigned pipelines in the dialog.
+The dialog can expose the input schema directly, show the element documentation next to the settings, reduce visual noise with `Show only recommended settings`, and reuse or create configuration templates for recurring patterns.
 
-## Pipeline Details
-The pipeline details view can be opened by clicking the _Show details_ button in the pipeline overview panel.
+That combination matters because it reduces one of the biggest sources of pipeline errors: mapping the wrong field simply because the user had to remember the schema mentally instead of seeing it.
 
-<img className="docs-image" src="/img/03_use-managing-pipelines/03_pipeline-details.png" alt="StreamPipes Pipeline Details"/>
+<UseCaseExample title="Why input schema context matters">
+  A processor expects a measurement field, but the incoming stream also contains identifiers, timestamps, and several dimensions. Seeing the input schema in the configuration dialog makes it much easier to choose the real measurement field instead of guessing from field names alone.
+</UseCaseExample>
 
-### Overview
-The overview section displays the graphical structure of the pipeline and provides some statistics about recent pipeline actions. Additionally, pipelines can be directly started, stopped, modified and deletes within this view.
+When the incoming schema is large, `Show only recommended settings` can be a practical guide. It is not a limitation; it is a way to focus first on the fields StreamPipes considers most likely to be relevant. If the relevant field is not in that subset, the user can simply switch back to the full view.
 
-### Monitoring
-Monitoring features will become available in version 0.68.0.
+## Use editor features as working tools, not ornaments
 
-### Errors
-Monitoring of failures and logs will become available in version 0.69.0.
+The top toolbar contains a small set of features that matter during actual pipeline work.
 
-### QuickEdit
-The quick edit feature (only available for pipelines that are not running) is a quick and convenient way to modify some pipeline element configurations without opening the pipeline in the pipeline editor.
-To use the quick edit feature, switch to the _QuickEdit_ tab, which will display the selected pipeline.
+`Save` is the obvious one, but it only becomes available once the current flow passes validation. `Enable live preview` is more important than it may sound because it lets users check the behavior of a flow while still editing it. `Auto Layout` helps once a canvas has been rearranged several times and is harder to read. `Clear assembly` is mainly useful when starting over from scratch.
 
-By clicking a pipeline element from the preview canvas, available configuration options of the selected pipeline element can be modified. Note that only modifications that do not affect the pipeline structure (e.g., different output streams) can be changed.
+These are not just convenience buttons. They support the working style that produces better pipelines: build a little, preview a little, fix assumptions early, and save only once the flow reflects the intended behavior.
 
-<img className="docs-image" src="/img/03_use-managing-pipelines/04_pipeline-quick-edit.png" alt="StreamPipes Pipeline Quick Edit"/>
+## Save the pipeline deliberately
 
-After a configuration value was changed, make sure to click the _Update Pipeline_ button to save the changes.
+When the flow is ready, the save dialog defines how it should become a platform resource. This is where the visual design turns into an operational artifact.
 
+The save flow lets you set the pipeline name and description, decide whether the pipeline should start immediately, decide whether to navigate to the overview afterwards, optionally link the pipeline to assets, and inspect the pipeline configuration as code.
 
-In Apache StreamPipes, pipelines represent the flow of data from sources (streams), through processors (filters, transformations, etc.), and finally to sinks (third-party-systems, storage, notifications).
-Traditionally, pipelines are created through the web-based user interface.
-However, they can also be defined programmatically as code, offering the flexibility to manage pipelines using Infrastructure as Code (IaC) practices.
+If you are editing an existing pipeline, StreamPipes also distinguishes between `Update pipeline` and `Create new pipeline`. This is an important operational distinction. Updating changes the existing artifact. Creating a new pipeline preserves the previous version and stores the modified flow separately.
 
-This guide explains how to define and create pipelines programmatically using a YAML structure.
+That makes it practical to test a new thresholding or enrichment strategy without overwriting the current production pipeline immediately.
 
-## Introduction
+## Operate pipelines from the overview
 
-Defining pipelines as code allows you to automate the creation, management, and deployment of StreamPipes pipelines.
-This is especially useful for managing multiple StreamPipes instances across environments.
-Pipelines are written in a YAML format (or alternatively as JSON) and can be deployed programmatically via the StreamPipes REST API.
+Once a pipeline exists, the `Pipeline Overview` becomes the main operational entry point. It lists the existing pipelines and exposes their current state in a compact way. In practice, users come here to answer questions such as: Which pipelines are running? Which ones are stopped? Which ones require attention? Which ones should be started or stopped right now?
 
-This guide provides an overview of how to structure pipeline definitions in YAML and deploy them using the API.
+The overview is also where lifecycle management becomes efficient. You can start and stop pipelines directly without opening each one individually. For users with write privileges, bulk actions make this even more useful when several related pipelines must be activated or paused together.
 
-## Pipeline YAML Structure
+The important thing to understand is that a pipeline can exist even when it is not currently healthy or operationally valid. Upstream schema changes, missing dependencies, or other inconsistencies can put a pipeline into a state where it needs review. The overview is designed to surface exactly that kind of situation quickly.
 
-A pipeline in YAML consists of several key sections:
+## Use the details view when the overview is no longer enough
 
-- **ID**: A unique identifier for the pipeline.
-- **Name and Description**: Optional fields to describe the pipeline.
-- **Pipeline Elements**: The components that make up the pipeline, including streams (data sources), processors (data transformations), and sinks (output destinations).
-- **Create Options**: Specifies how and when to start the pipeline (e.g., `start: false` means the pipeline won't start automatically).
+The `Pipeline Details` view is where one pipeline can be inspected more deeply. It combines a visual representation of the pipeline with operational panels such as logs, status, actions, and code view.
 
-Here’s a high-level breakdown of the structure:
+This is the place to go when the pipeline should be understood, not just operated. If a pipeline is marked as requiring attention, the details view is usually the right place to investigate why. You can inspect logs, refresh metrics, enable live preview, and look at the pipeline structure in one screen.
 
-```yaml
-id: my-pipeline
-name: ""
-description: ""
-pipelineElements:  # Define pipeline components here
-  - type: stream     # Data source
-    ref: <reference> # Unique reference ID
-    id: <data-stream-id> # ID of the stream
+The details toolbar also includes `View pipeline as code`, which makes the underlying compact representation visible. That is useful for inspection, comparison across environments, and programmatic reuse.
 
-  - type: processor  # Data transformation
-    ref: <reference> # Unique reference ID
-    id: <processor-id> # ID of the processor
-    connectedTo:     # Previous pipeline element reference(s)
-      - <reference>
-    configuration:   # Processor-specific configurations
-      - <configuration-option>
+<DocVisualPlaceholder
+  title="Pipeline details view"
+  purpose="Show the current details view with visual pipeline preview, logs, status, actions, and the pipeline-as-code entry point."
+/>
 
-  - type: sink       # Data sink (output)
-    ref: <reference> # Unique reference ID
-    id: <sink-id>    # ID of the sink
-    connectedTo:     # Previous pipeline element reference(s)
-      - <reference>
-    configuration:   # Sink-specific configurations
-      - <configuration-option>
+## Treat templates as a standardization tool
 
-createOptions:
-  start: <true|false>  # Whether to start the pipeline immediately
-```
+Templates appear in several parts of the current pipeline experience. You can start a flow from a pipeline-level template or reuse element-level configuration templates inside individual dialogs.
 
-## Pipeline Elements
+The real value of templates is not only speed. It is consistency. When teams repeatedly build the same notification flow, the same sink configuration, or the same enrichment pattern, templates reduce manual repetition and lower the risk of small configuration differences that later become operational problems.
 
-### Building blocks
+## Pipelines as code
 
-The key building blocks of a pipeline include:
+Pipelines can also be represented in a compact text format and created over the API. This is useful when pipeline definitions should be versioned, reviewed, promoted between environments, or generated programmatically.
 
-#### Stream
-A stream represents a data source in the pipeline, such as a sensor feed, API, or message queue. It is referenced by a unique ID that identifies the data stream.
+The current UI exposes this compact representation in two helpful places: during save through `Show pipeline configuration as code`, and later in the details view through `View pipeline as code`. That makes the UI the best starting point for most users. Build the pipeline visually first, validate it, and only then reuse the compact definition for automation.
 
-#### Processor
-A processor transforms, filters, or enriches the data coming from a stream or another processor. Each processor has configuration parameters that control its behavior, such as filtering criteria or mapping options.
+The compact model represents the same decisions users already made in the editor: pipeline identity, the ordered elements, how those elements are connected, element-specific configuration, and create options such as whether the pipeline should start immediately.
 
-#### Sink
-A sink sends the processed data to a final destination, such as a database, file storage, or another service. Sinks may also have configuration options that specify where and how the data should be sent.
-
-A pipeline element is selected by providing its ID. For processors and sinks, the ID  refers to the `appId` of the pipeline element, e.g., `org.apache.streampipes.processors.filters.jvm.numericalfilter`.
-For data streams, the ID refers to the `elementId` of the data stream.
-
-To define connections between pipeline elements, the `ref` and `connectedTo` fields can be used.
-`ref` can be a short string (e.g., `stream01` or `processor01`) which will be used as an internal identifier of the pipeline element.
-Within the `connectedTo` list, connections to other pipeline elements can be defined.
-Each item of the list should relate to an existing `ref`.
-
-### Configuration
-
-In the `configuration` section, which only applies for data processors and sinks, the pipeline element configuration can be applied.
-The configuration options depend on the pipeline element and have the same structure as the adapter configuration (see [Adapters as Code](use-programmatically-create-adapters))
-The easiest way to determine a valid configuration is the web interface.
-
-After creating a pipeline in the web interface and clicking on `Save pipeline`, the option `Show pipeline configuration as code` shows the current pipeline configuration in YAML or JSON format:
-
-<img className="docs-image" src="/img/03_use-programmatically-create-pipelines/01_pipeline-editor-pipeline-as-code.png" alt="StreamPipes Pipeline Editor Code View"/>
-
-Another option is to view the pipeline details for an existing pipeline. Here, the YAMl definition of the pipeline can be viewed by clicking the `View pipeline as code` button:
-
-<img className="docs-image" src="/img/03_use-programmatically-create-pipelines/02_pipeline-details-pipeline-as-code.png" alt="StreamPipes Pipeline Editor Code View"/>
-
-
-## Example pipeline as Code
-
-Here's an example of a pipeline written in YAML format:
+### Example pipeline definition
 
 ```yaml
 id: my-pipeline
@@ -237,32 +174,35 @@ createOptions:
   start: false
 ```
 
-Stream: The pipeline begins with a data stream (sp:spdatastream:GWWzMD) referenced by stream01. This is the source of the data.
+To create such a compact pipeline over the API, send it to:
 
-Processor: The data is passed through a numerical filter processor (org.apache.streampipes.processors.filters.jvm.numericalfilter) which checks if the field s0::density is less than 12. The filter is connected to the stream via reference stream01.
-
-Sink: The filtered data is then sent to a data lake (org.apache.streampipes.sinks.internal.jvm.datalake). The sink is configured with several parameters including the mapping of the timestamp (s0::timestamp) and schema update options. The sink is connected to the processor via reference processor01.
-
-Create Options: The pipeline is set to not start automatically (start: false).
-
-## API
-
-To create a new pipeline, call the StreamPipes API as follows:
-
-```
+```text
 POST /streampipes-backend/api/v2/compact-pipelines
-Content-type: application/yml
+Content-Type: application/yml
 Accept: application/yml
 ```
 
-You must provide valid credentials by either adding a Bearer token or an API key:
+You can also send JSON by using `application/json`. Authentication is provided through:
 
-```
+```text
 X-API-USER: your username
 X-API-KEY: your api key
 ```
 
-The body of the request should contain the YAML definition.
+The most reliable workflow is still to validate the pipeline visually first, then reuse the generated compact model. That keeps “pipeline as code” grounded in a pipeline that already works.
 
-:::info
-It is also possible to provide the pipeline specification as a JSON document. In this case, change the `Content-type` to `application/json`.
+## How to work well with pipelines
+
+In practice, good pipeline work usually follows a predictable pattern. Start with one clear input stream. Add only the processors that the use case truly needs. Configure each element against the actual upstream schema. Use preview early. Save with a name and description that make operational sense. Only then start the flow against real data.
+
+That style keeps pipelines understandable later. A pipeline should not feel like a temporary experiment nobody wants to touch. It should feel like a maintained part of the data platform.
+
+## Image placeholders
+
+`[Image placeholder: pipeline editor showing catalog, assembly canvas, compatible elements, and toolbar actions]`
+
+`[Image placeholder: pipeline element configuration dialog with input schema, documentation toggle, recommended settings, and template actions]`
+
+`[Image placeholder: pipeline overview showing status, health, warnings, start/stop actions, and bulk operations]`
+
+`[Image placeholder: pipeline details view showing logs, status, actions, live preview, and pipeline-as-code access]`

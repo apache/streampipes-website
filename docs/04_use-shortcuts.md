@@ -4,30 +4,40 @@ title: Shortcuts
 sidebar_label: Shortcuts
 ---
 
-This page lists keyboard shortcuts available in StreamPipes.
+Keyboard shortcuts in StreamPipes are intentionally small in number, but they are useful in the places where users work repeatedly: editing pipelines, charts, and dashboards, filtering table content, and closing dialogs without leaving the keyboard.
 
-## General
+This page collects the shortcuts that are currently available in the UI.
 
-- `Ctrl/Cmd + S` in chart/dashboard/pipeline edit view
-  - Saves the current state.
+## General shortcuts
 
-- `E` in dashboard/pipeline panel
-  - Enters edit mode.
+| Context | Shortcut | Effect |
+|---|---|---|
+| Chart, dashboard, or pipeline edit view | `Ctrl/Cmd + S` | Saves the current state |
+| Dashboard or pipeline panel | `E` | Enters edit mode |
 
-## Pipeline Assembly
+These are the shortcuts most users notice first because they fit the main edit workflows of the platform.
 
-- `Delete` and `Backspace` in pipeline editor
-  - Deletes the currently hovered pipeline element.
+## Pipeline editor
 
-## Table Widget
+| Context | Shortcut | Effect |
+|---|---|---|
+| Pipeline assembly | `Delete` or `Backspace` | Deletes the currently hovered pipeline element |
 
-- `Ctrl/Cmd + F` in table widget filter dropdown (chart type -> table)
-  - Focuses/selects the filter search input.
+This is useful when refining a pipeline quickly without moving back to the element action controls.
 
-## Dialog Behavior
+## Table widget
 
-- `Escape`
-  - Closes shared overlay dialogs.
+| Context | Shortcut | Effect |
+|---|---|---|
+| Table widget filter dropdown | `Ctrl/Cmd + F` | Focuses the filter search input |
 
-- `Enter`
-  - Confirms.
+This is most helpful in chart views that use the `Table` visualization and have many fields or filter options.
+
+## Dialog behavior
+
+| Context | Shortcut | Effect |
+|---|---|---|
+| Shared overlay dialogs | `Escape` | Closes the dialog |
+| Shared overlay dialogs | `Enter` | Confirms the dialog |
+
+These shortcuts are simple, but they make repeated configuration work much faster once they become muscle memory.

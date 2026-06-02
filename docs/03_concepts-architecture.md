@@ -4,80 +4,171 @@ title: Architecture
 sidebar_label: Architecture
 ---
 
-## Architecture
+Apache StreamPipes is designed as a distributed industrial data platform.
+Its architecture supports sovereign deployments, real-time data processing, and extension points for company-specific integrations and analytics.
 
-<img className="docs-image" src="/img/07_technicals/architecture.png" alt="StreamPipes Architecture"/>
+This page explains the technical building blocks behind that platform model.
+If you are new to StreamPipes, read [Introduction](03_concepts-introduction.md) first for the overall positioning and [Terms](03_concepts-terms.md) for the core platform concepts.
 
-Apache StreamPipes implements a microservice architecture as shown in the figure above.
+## Architecture at a glance
+
+<img className="docs-image" src="/img/07_technicals/architecture.png" alt="StreamPipes architecture overview"/>
+
+At a high level, a StreamPipes installation consists of:
+
+* one central **StreamPipes Core**
+* one or more **extension services**
+* a web-based **user interface**
+* bundled infrastructure components for **messaging**, **time-series storage**, and **configuration storage**
+
+This architecture is intentionally distributed.
+It allows teams to run StreamPipes close to their data sources, split workloads across environments, and keep control over where industrial data is processed and stored.
+
+:::info Suggested image placeholder
+**Image idea:** Annotated architecture overview with labeled zones for UI, Core, Extension Services, Message Broker, Time-Series Database, and Configuration Storage.  
+**Purpose:** Give readers one clear mental model of the full deployment before the page goes into details.
+:::
+
+## Why the architecture looks this way
+
+Industrial data platforms have to solve for more than throughput.
+They also need to handle protocol diversity, OT/IT boundaries, deployment constraints, and long-term maintainability.
+
+StreamPipes addresses this with a microservice-oriented architecture that is:
+
+* **distributed**, so components can run where they fit operationally
+* **extensible**, so new protocols and logic can be added without changing the core
+* **event-driven**, so live machine data can move efficiently through the platform
+* **sovereign**, so organizations can keep control over infrastructure, deployment topology, and data ownership
+
+In practical terms, this means StreamPipes can serve both centralized and edge-near deployment scenarios.
 
 ## StreamPipes Core
 
-The StreamPipes Core is the central component to manage all StreamPipes resources.
-It delegates the management of adapters, pipeline elements, pipelines and functions to registered extensions services (see below) and monitors the execution of extensions.
-The Core also provides internal REST interfaces to communicate with the user interface, as well as public REST interfaces that can be used by external applications and StreamPipes clients.
+The **StreamPipes Core** is the central control plane of a StreamPipes installation.
+It manages the platform’s resources and coordinates the lifecycle of extensions and runtime artifacts.
 
-Configuration and user data are stored in an Apache CouchDB database.
+Core responsibilities include:
 
-## StreamPipes Extensions
+* managing metadata for streams, pipelines, assets, datasets, and related resources
+* coordinating adapters, processors, sinks, and functions provided by extension services
+* exposing REST APIs for the user interface and external applications
+* handling orchestration tasks such as registration, installation, and lifecycle management
+* providing the foundation for permissions, configuration, and platform-wide consistency
 
-An Apache StreamPipes extensions service is a microservice which contains the implementation of specific adapters, data streams, data processors, data sinks and functions.
-Multiple extension services can be part of a single StreamPipes installation.
-Each service might provide its own set of extensions. Extensions services register at the StreamPipes Core at startup. Users are able to install all or a subset of extensions of each service.
-This allows StreamPipes to be extended at runtime by starting a new service with additional extensions.
+The Core does not implement every protocol adapter or processing function itself.
+Instead, it acts as the central system that knows what is available, how components fit together, and how they should be operated as one platform.
 
-Extensions can be built using the SDK (see [Extending StreamPipes](07_extend-setup.md)).
-Extensions services can be provided either in Java or in Python.
+## Extension Services
 
-:::info
+**Extension services** are microservices that contribute functional building blocks to StreamPipes.
+They can provide:
 
-As of version 0.93.0, the Python SDK supports functions only. If you would like to develop pipeline elements in Python as well, let us know in a [Github discussions](https://github.com/apache/streampipes/discussions) comment, so that we can better prioritize development.
+* adapters
+* data processors
+* data sinks
+* functions
+* additional domain-specific logic
 
+Multiple extension services can be registered in one installation.
+Each service can provide a different set of capabilities, which makes the platform modular and easy to grow over time.
+
+This model is especially valuable in industrial environments.
+Instead of modifying a monolithic application, teams can add new services for proprietary machines, internal analytics logic, or site-specific integrations.
+
+Extensions can be developed with the SDK and deployed independently from the core platform.
+See [Extending StreamPipes](07_extend-setup.md) for implementation details.
+
+:::info Suggested image placeholder
+**Image idea:** Diagram showing the Core in the center and multiple extension services around it, each contributing different adapters, processors, or sinks.  
+**Purpose:** Make the extension model tangible and reinforce the modular platform story.
 :::
 
+## User Interface
 
-An extensions service interacts with the core by receiving control messages to invoke or detach an extension.
-In addition, the core regularly fetches monitoring and log data from each registered extensions service.
+The web-based **user interface** is the main entry point for platform users.
+It provides access to the operational and analytical capabilities of StreamPipes, such as:
 
+* configuring adapters and data sources
+* building and operating pipelines
+* exploring historical and live data
+* managing assets, datasets, and configuration
+* working with dashboards and platform administration features
 
-## StreamPipes Client
+From an architectural perspective, the UI is not a standalone tool layered loosely on top.
+It is a first-class part of the platform that interacts with the Core and exposes the capabilities registered by extension services.
 
-The Apache StreamPipes Client is a lightweight library for Java and Python which can be used to interact with StreamPipes resources programmatically.
-For instance, users use the client to influence the control flow of pipelines, to download raw data from the data lake APIs or to realize custom applications with live data.
+The UI also helps strengthen the data-platform positioning of StreamPipes: it makes industrial data accessible not only to developers, but also to engineers, analysts, and operations users.
 
+## Messaging Layer
 
-## Third-party systems
+StreamPipes uses an external **messaging layer** as the backbone for live event exchange.
+Adapters, processors, sinks, and other components communicate through this event-driven layer instead of relying on direct point-to-point coupling.
 
-In addition to the core components, an Apache StreamPipes version uses several third-party services, which are part of the standard installation.
+Supported messaging systems include:
 
-* Configurations and user data is stored in an [Apache CouchDB](https://couchdb.apache.org) database.
-* Time-series data is stored in an [InfluxDB](https://github.com/influxdata/influxdb) database.
-* Events are exchanged over a messaging system. Users can choose from various messaging systems that StreamPipes supports. Currently, we support [Apache Kafka](https://kafka.apache.org), [Apache Pulsar](https://pulsar.apache.org), [MQTT](https://mqtt.org/) and [NATS](https://nats.io/). The selection of the right messaging system depends on the use case. See [Messaging](07_technicals-messaging.md) for more information.
+* [NATS](https://nats.io/)
+* [Apache Kafka](https://kafka.apache.org)
+* [MQTT](https://mqtt.org/)
+* [Apache Pulsar](https://pulsar.apache.org)
 
-:::info
+For many installations, **NATS** is a strong default because it is lightweight and fits well into distributed and OT-adjacent deployments.
+Other brokers may be preferred when an organization already standardizes on them or needs specific messaging capabilities.
 
-Versions prior to 0.93.0 included Consul for service discovery and registration. Starting from 0.93.0 onwards, we switched to an internal service discovery mechanism.
+The messaging layer is what allows StreamPipes to remain highly performant and focused on streaming data while keeping services decoupled.
 
+## Storage Components
+
+In a standard StreamPipes installation, storage is split across dedicated infrastructure components that are deployed as part of the platform setup.
+StreamPipes separates different storage concerns instead of forcing all data into one subsystem.
+
+The standard installation includes:
+
+* **InfluxDB** for time-series data
+* **Apache CouchDB** for configuration and user-related platform data
+
+This separation reflects the different roles of the stored data:
+
+* time-series storage supports historical analysis, charts, and monitoring
+* configuration storage supports platform state, metadata, and management tasks
+
+These databases are not described here as optional side tools.
+They are part of the default StreamPipes installation architecture and provide the persistence layers the platform relies on for historical data, metadata, and configuration state.
+
+By combining these built-in storage components with a unified platform layer, StreamPipes provides a pragmatic architecture for industrial data workloads.
+
+## Deployment Across OT and IT Boundaries
+
+A key strength of StreamPipes is that Core and extension services do not have to run in the same network segment.
+They can be deployed across OT and IT environments depending on operational and security requirements.
+
+For example:
+
+* an extension service can run close to a machine or broker inside the OT network
+* the Core, UI, and storage components can run in a central IT environment
+* different sites can contribute extension services to one broader platform setup
+
+This allows organizations to keep source-near integrations local while still building a shared industrial data platform at a higher level.
+
+:::info Suggested image placeholder
+**Image idea:** OT/IT deployment diagram with an extension service in the OT network and Core/UI/storage in the IT network.  
+**Purpose:** Show how StreamPipes supports secure, realistic industrial deployment topologies.
 :::
 
-All mentioned third-party services are part of the default installation and are auto-configured during the installation process.
+## Communication Modes
 
-## Programming Languages
+Communication between the Core and extension services supports different transport modes, including **HTTP** and **NATS**.
 
-Apache StreamPipes is mainly written in Java.
-Services are based on Spring Boot.
-The included [Python integration](https://streampipes.apache.org/docs/docs/python/latest/) is written in Python.
+This matters in real deployments.
+In some OT environments, opening inbound ports to extension services is undesirable or impossible.
+Using NATS-based communication can reduce that requirement and make it easier to deploy services in restricted networks.
 
-The user interface is mainly written in TypeScript using the Angular framework.
+This flexibility is another reason StreamPipes works well in industrial settings where network boundaries are part of the system design, not an afterthought.
 
+## Data Model and Schema Layer
 
-## Data Model
-
-Internally, Apache StreamPipes realizes a stream processing layer where events are continuously exchanged over a messaging system.
-When building a pipeline, data processors consume data from a topic assigned by the core and publish data back to another topic, which is also assigned by the core.
-
-At runtime, events have a flat and easily understandable data structure, consisting of key/value pairs. Events are serialized in JSON, although StreamPipes can be configured to use other (binary) message formats.
-
-This allows for easy integration with other systems which want to consume data from Streampipes, since an event could look as simple as this:
+At runtime, StreamPipes works with lightweight event payloads that are easy to transport and integrate with downstream systems.
+An event might look as simple as this:
 
 ```json
 {
@@ -87,7 +178,8 @@ This allows for easy integration with other systems which want to consume data f
 }
 ```
 
-However, this wouldn't be very expressive, right? To [assist users](07_technicals-user-guidance.md), StreamPipes provides a rich description layer for events. So under the hood, for the `temperature` field shown above StreamPipes can also store the following:
+What makes StreamPipes more than a transport layer is the additional schema and semantic description managed by the platform.
+For a field such as `temperature`, StreamPipes can also keep metadata such as:
 
 ```json
 {
@@ -100,101 +192,53 @@ However, this wouldn't be very expressive, right? To [assist users](07_technical
 }
 ```
 
-By dividing the description layer from the runtime representation, we get a good trade-off between expressivity, readability for humans and lightweight runtime message formats.
-The schema is stored in an internal schema registry and available to the client APIs and user interface views to improve validation and user guidance.
+This separation between runtime payload and descriptive schema is important:
 
-StreamPipes also supports arrays and nested structures, although we recommend using flat events where possible to ease integration with downstream systems (such as time-series storage).
+* runtime events stay compact and integration-friendly
+* users still benefit from rich semantics, validation, and better guidance in the UI
+* clients and extensions can work with data that is not only available, but also understandable
 
+In other words, StreamPipes treats industrial data as structured information, not just message traffic.
 
+## APIs, SDKs, and Developer Access
 
-## Architecture
+StreamPipes is not only operated through the browser.
+It also provides developer-facing access through:
 
-To exchange messages at runtime between individual [Extensions Services](07_technicals-architecture.md), StreamPipes uses external messaging systems.
-This corresponds to an event-driven architecture with a central message broker and decoupled services which consume and produce events from the messaging system.
+* REST APIs
+* SDKs for building pipeline elements and extensions
+* client libraries for programmatic access
 
-There are many different open source messaging systems on the market, which each have individual strengths.
-To provide a flexible system which matches different needs, StreamPipes can be configured to use various messaging systems.
+This supports use cases such as:
 
-## Supported messaging systems
+* integrating StreamPipes into internal applications
+* automating pipeline lifecycle operations
+* developing custom adapters, processors, and sinks
+* building data analytics workflows around live or historical machine data
 
-The following messaging systems are currently supported:
+The platform is primarily implemented in Java, the UI is built with TypeScript and Angular, and Python support enables data-science-oriented workflows around StreamPipes.
 
-* Apache Kafka
-* Apache Pulsar
-* MQTT
-* NATS
+## Third-Party Components in Context
 
-## Configure StreamPipes to use another messaging system
+StreamPipes intentionally builds on proven third-party infrastructure instead of reimplementing those layers itself.
+A standard installation therefore includes infrastructure components alongside the StreamPipes services, such as:
 
-Configuring StreamPipes for one of these messaging system is an installation-time configuration.
-We currently do not recommend to change the configuration at runtime.
+* a message broker
+* a time-series database
+* a configuration database
 
-The protocol can be configured with the environment variable `SP_PRIORITIZED_PROTOCOL` assigned to the core with one of the following values:
+These components are part of the installed platform architecture, even though they are separate technologies.
+This architecture gives teams flexibility without losing the benefits of one integrated platform experience.
+Users work with StreamPipes as a coherent system, while operators can still align deployments with existing infrastructure standards.
 
-```bash
-SP_PRIORITIZED_PROTOCOL=kafka # Use Kafka as protocol
-SP_PRIORITIZED_PROTOCOL=pulsar # Use Pulsar as protocol
-SP_PRIORITIZED_PROTOCOL=mqtt # Use MQTT as protocol
-SP_PRIORITIZED_PROTOCOL=nats # Use NATS as protocol
-```
+## What this architecture enables
 
-Note that each extension service can support an arbitrary number of protocols. For instance, you can have a lightweight extension service which only supports NATS, but have another, cloud-centered service which supports Kafka, both registered at the Core.
-To select a protocol when multiple protocols are supported by two pipeline elements, StreamPipes selects a protocol based on a priority, which can be configured in the [Configuration View](06_configure-operate-general-settings.md).
-StreamPipes ensures that only pipeline elements which have a commonly supported protocol can be connected.
+Taken together, the architecture enables StreamPipes to act as a sovereign industrial data platform:
 
-Note that you might need to change the installation files. For the `Docker-Compose` based installation, we provide various compose file for different messaging setups. For the `Kubernetes` installation, we provide variables which can be set in the helm chart's `values.yaml` file.
+* live machine data can be ingested and processed close to the source
+* data flows can be governed centrally across teams and sites
+* extensions can evolve independently of the core platform
+* messaging and storage infrastructure can be aligned with enterprise requirements
+* users and developers can work against one consistent platform model
 
-### Configure broker addresses
-
-By default, StreamPipes assumes that the messaging system is started from its own environment, e.g., the system configured in the selected `Docker-Compose` file.
-
-Besides that, it is also possible to let StreamPipes connect to an externally provided messaging system. For this purpose, various environment variables exist.
-
-* `SP_PRIORITIZED_PROTOCOL` to set the prioritized protocol to either `kafka`, `mqtt`, `nats` or `pulsar`
-
-* `SP_KAFKA_HOST`, `SP_KAFKA_PORT` to configure Kafka access
-* `SP_MQTT_HOST`, `SP_MQTT_PORT` to configure MQTT access
-* `SP_NATS_HOST`, `SP_NATS_PORT` to configure NATS access
-* `SP_PULSAR_URL` to configure Pulsar access
-
-
-Most settings can also be set in the UI under `Settings->Messaging`.
-
-:::warning Installation-time configurations
-Although it is currently possible to change messaging settings in the user interface, we do not support dynamic modification of messaging systems.
-Choosing a proper system is considered an installation-time setting which should not be changed afterwards.
-Already existing Adapters and pipeline elements are not properly updated after changes of the messaging layer.
-:::
-
-
-## Overview
-
-In general, StreamPipes has an exchangeable runtime layer, e.g., the actual processing of incoming events can be delegated to a third-party stream processing system such as Kafka Streams or Apache Flink.
-
-The default runtime wrapper is the StreamPipes Native Wrapper, called the `StandaloneWrapper`.
-
-Although not recommended for production, we invite interested developers to check out our experimental wrappers:
-
-* Kafka Streams runtime wrapper at [https://github.com/apache/streampipes/tree/dev/streampipes-wrapper-kafka-streams](https://github.com/apache/streampipes/tree/dev/streampipes-wrapper-kafka-streams)
-* Apache Flink runtime wrapper at [https://github.com/apache/streampipes/tree/dev/streampipes-wrapper-flink](https://github.com/apache/streampipes/tree/dev/streampipes-wrapper-flink)
-
-## Assigning a runtime wrapper to an extension service
-
-Runtime wrappers can be assigned in the `Service Definition` of the `Init` class of an extension service:
-
-```java
-
-  @Override
-  public SpServiceDefinition provideServiceDefinition(){
-    return SpServiceDefinitionBuilder.create("org.apache.streampipes.extensions.all.jvm",
-    "StreamPipes Extensions (JVM)",
-    "",8090)
-    ...
-    .registerRuntimeProvider(new StandaloneStreamPipesRuntimeProvider())
-    ...
-    .build();
-  }
-
-```
-
-Please let us know through our communication channels if you are interested in this feature and if you are willing to contribute!
+The result is an architecture that is not only technically scalable, but also operationally realistic for industrial environments.

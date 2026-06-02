@@ -14,8 +14,6 @@ Afterwards, this section contains two examples on how to create pipelines based 
 ## Interactive Tutorial
 The easiest way to get started with StreamPipes is the interactive tutorial. Once you open the pipeline editor for the first time, you'll see a splash screen as shown below.
 Click **Start tour** to start the interactive tutorial, which will guide you through your first steps with StreamPipes.
- 
-![Interactive Tutorial](/img/quickstart/interactive-tutorial.png)  
 
 If the splash screen does not show up, make sure you've installed the following pipeline elements:
 * Flow rate (data stream)

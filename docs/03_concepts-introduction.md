@@ -4,82 +4,117 @@ title: Introduction
 sidebar_label: Introduction
 ---
 
-## What is StreamPipes?
+## What is Apache StreamPipes?
 
-Apache StreamPipes is a self-service Industrial IoT toolbox to enable non-technical users to connect, analyze and
-explore IoT data streams. The main goal of StreamPipes is to help users bridging the gap between operational
-technology (OT) and information technology (IT). This is achieved by providing a set of tools which help to make
-industrial data accessible for downstream tasks such as data analytics and condition monitoring.
-When working with industrial data and especially when building upon an open source stack for such tasks, users are often
-faced with the management and integration of a variety of different tools for data connectivity, messaging &
-integration, data enrichment, data storage, visualization and analytics. This results in an increasing operational
-complexity and hardly manageable software stacks.
+Apache StreamPipes is an open-source platform for working with industrial data in motion.
+It helps teams connect machines, sensors, brokers, and software systems, turn incoming events into structured data streams, and build processing flows without starting from a custom integration stack.
 
-Apache StreamPipes addresses this problem: It provides a complete toolbox with a variety of different tools to easily
-gather data from OT systems such as Programmatic Logic Controllers (PLCs), industrial protocols (e.g., OPC-UA or
-Modbus), IT protocols (e.g., MQTT) and others. Data is integrated in the form of live data streams. Based on connected
-data, StreamPipes provides another module called the pipeline editor, which can be used to apply real-time analytics
-algorithms on connected data stream. To this end, a library of pre-defined algorithms can be used. Out of the box,
-StreamPipes provides more than 100 pipeline elements tailored at manufacturing data analytics. This includes simple
-rule-based algorithms (e.g., flank detection, peak detection, boolean timers), as well as the possibility to integrate
-more sophisticated ML-based algorithms. Finally, the pipeline editor allows to integrate with third-party systems by
-using a variety of data sinks (e.g., to forward data to messaging brokers such as Apache Kafka, MQTT or RocketMQ, to
-store data in databases such as PostgreSQL or Redis or to trigger notifications). Besides pipelines, an included data
-explorer allows to visually analyze industrial IoT data. For this purpose, a number of visualizations are integrated
-that allow non-technical users to quickly get first insights. Examples are correlations between several sensor values,
-value heatmaps, distributions or time-series visualizations. Further tools include a dashboard used for real-time
-monitoring, e.g., for visualizing live KPIs at shopfloor level.
+In practice, StreamPipes combines several tasks that are often spread across multiple tools:
 
-But StreamPipes is much more than just the user interface and an orchestration system for pipelines: It can be used as a
-whole developer platform for Industrial IoT application. Apache StreamPipes is made for extensibility - it provides
-several extension points, which allow the definition of custom algorithms, additional interfaces to third-party tools
-and proprietary data sources.
+* connecting to OT and IT systems
+* modeling and validating event schemas
+* transforming and enriching live data
+* forwarding data to databases, brokers, and business systems
+* storing and exploring historical time-series data
+* building dashboards and visual monitoring views
 
-StreamPipes includes developer support for Java and Python, making it easy to integrate custom-trained machine learning
-models into the data processing environment. With the built-in Python support, it is also possible to run online machine
-learning methods directly on data streams gathered by StreamPipes.
+This makes StreamPipes especially useful when you want to move from isolated machine data to a maintainable data product that operators, engineers, and developers can all work with.
 
-## Where does StreamPipes help?
+:::info Suggested image placeholder
+**Image idea:** Product overview screenshot that shows the main modules in one view, for example Connect, Pipelines, Charts, and Dashboards.  
+**Purpose:** Give new readers an immediate visual impression of StreamPipes as one integrated platform.
+:::
 
-Being positioned in the industrial IoT domain, the overall goal of StreamPipes is to help manufacturing companies to
-quickly build up an industrial IoT infrastructure and to analyse IIoT data without the need for manual programming.
-Oftentimes, StreamPipes is compared to other tools in this area such as Node-RED for visually wiring of pipelines, which
-is often used together with Grafana for data visualization and InfluxDB for time-series storage. The disadvantage of
-such architectures is the system complexity beyond the first prototype, especially when it comes to production
-deployments. Maintaining and securing multiple software instances is often a hard task requiring for substantial
-development effort. In addition, implementing single-sign-on and providing a unified user experience is another hurdle.
-This is where StreamPipes, as a single integrated tool with production-critical features such as access and role
-management, provides many advantages.
-StreamPipes has already a wide user range from the manufacturing domain. It helps users to quickly do the first steps
-related to industrial analytics but can also be used for monitoring whole production facilities, analysing data streams
-from multiple plants and sensors in real time using the integrated algorithm toolbox. Customization to individual use
-cases is easy due to several extension points:
+## What problem does StreamPipes solve?
 
-* Software development kit for adapters, data processors and sinks: The functionality of StreamPipes can be extending by
-  using the integrated SDK. For instance, it is possible to integrate custom-tailored algorithms for proprietary sensors
-  or models into the toolbox. Additional algorithms and data sinks can be installed at runtime.
-* Additional user interface plugins: StreamPipes allows to extend the default installation with additional UI views,
-  making use of a micro frontend approach. For instance, users can extend the system with custom-tailored views for a
-  specific machine or plant. Developers can use a platform API to communicate with the core StreamPipes instance.
-* UI customization: To ensure a consistent look and feel, StreamPipes can be customized to the company’s corporate
-  identity.
+Industrial data projects usually start with a simple question: "How do we get data from machines into applications that can use it?"
+The difficult part is not only reading the data source.
+The real effort is typically in everything around it:
 
-## How does StreamPipes technically work in a nutshell?
+* handling many protocols and source formats
+* creating a stable event structure
+* enriching raw values with context
+* routing data to the right downstream systems
+* making data accessible to users who are not software developers
+* operating the resulting stack securely and consistently
 
+Without an integrated platform, these tasks are often split across protocol adapters, message brokers, custom scripts, dashboards, storage systems, and alerting tools.
+That can work for prototypes, but it becomes expensive to maintain once multiple plants, teams, or use cases are involved.
 
-<img className="docs-image docs-image-no-shadow" src="/img/architecture/streampipes-architecture-components.png" alt="Overview StreamPipes Architecture"/>
+StreamPipes reduces this integration overhead by providing one platform for the full path from ingestion to action.
 
+## Who is StreamPipes for?
 
-To foster extensibility, Apache StreamPipes is based on a microservice architecture as illustrated above. The main
-services provided or used by StreamPipes are the a) user interface, b) the core, c) a time-series storage, d) a
-publish/subscribe messaging layer and e) extensions services. Adapters are created over the user interface using an
-intuitive configuration wizard and connect to the underlying source systems. Raw events coming from adapters can be
-pre-processed (e.g., measurement unit conversions or datatype conversions). Afterwards, events are sent to the message
-broker, which is the central backbone to provide IIoT data to internal and external applications. 
+StreamPipes is designed for teams that work with industrial or machine-related event data and need both usability and extensibility.
+Typical users include:
 
-Besides adapters, extensions microservices can also integrate additional business logic in form of data processors and
-data sinks. StreamPipes comes with over 100 built-in processors and sinks, covering basic use cases out-of-the-box. The StreamPipes core cares about orchestration of these pipeline elements and communicates with the user
-interface. In addition, a time-series storage ensures persistence and can be used by any extensions service to write
-data into the internal storage. The StreamPipes core provides a query interface to access historical data, which is, for
-instance, used by the data explorer UI component. The user interface itself provides several built-in modules but can
-also be extended with additional micro frontends. 
+* operations and process experts who want to configure data flows without writing everything from scratch
+* data and analytics teams who need clean, reusable event streams for downstream analysis
+* platform and integration engineers who want a structured way to connect industrial assets
+* developers who need extension points for custom adapters, processors, sinks, or UI modules
+
+The platform is therefore not only a user interface for pipelines.
+It is also a developer platform that can be adapted to company-specific infrastructure and domain logic.
+
+## How StreamPipes fits into the data flow
+
+At a high level, StreamPipes supports the full lifecycle of industrial event data:
+
+1. **Connect data sources** using adapters for protocols, devices, brokers, or custom integrations.
+2. **Normalize and describe events** so that data arrives with a clear structure and metadata.
+3. **Process streams in real time** with filters, enrichments, transformations, and analytics logic.
+4. **Deliver results** to storage systems, brokers, notifications, dashboards, or external applications.
+5. **Explore and monitor data** through built-in visual tools and live views.
+
+This flow is reflected in the core concepts of StreamPipes, which are described in more detail in the [Terms](03_concepts-terms.md) section:
+
+* **Adapters** ingest data from external systems.
+* **Data Streams** represent structured event streams inside StreamPipes.
+* **Data Processors** transform or analyze those streams.
+* **Data Sinks** persist, forward, or visualize the results.
+* **Pipelines** connect these building blocks into executable flows.
+
+:::info Suggested image placeholder
+**Image idea:** Simple left-to-right lifecycle diagram: Source System -> Adapter -> Data Stream -> Processor -> Sink -> Dashboard/Database.  
+**Purpose:** Help readers understand the basic execution model before they see detailed terminology.
+:::
+
+## Where StreamPipes helps most
+
+StreamPipes is a strong fit when you need to build repeatable industrial data workflows, not just one-off integrations.
+Common scenarios include:
+
+* connecting PLCs, MQTT brokers, OPC UA servers, and similar systems to a shared data platform
+* enriching raw telemetry before it is stored or forwarded
+* implementing rule-based monitoring and event-driven reactions
+* preparing live data for dashboards, analytics, or machine learning
+* giving multiple teams a shared environment for ingestion, processing, and exploration
+
+Compared with loosely coupled toolchains, StreamPipes offers a more consistent operating model.
+Security, user management, pipeline lifecycle management, and extension handling can be managed within one platform instead of being assembled separately around each use case.
+
+## StreamPipes as a platform
+
+One of the key ideas behind StreamPipes is extensibility.
+The platform includes many built-in pipeline elements, but it is not limited to them.
+You can adapt StreamPipes to your domain in several ways:
+
+* build custom adapters for proprietary devices or protocols
+* add custom data processors and sinks for company-specific logic
+* integrate Python- or Java-based functionality into processing workflows
+* extend the user interface with additional views or micro frontends
+* tailor the platform to internal branding and operational requirements
+
+This allows teams to start with standard building blocks and gradually move toward specialized solutions without replacing the platform.
+
+:::info Suggested image placeholder
+**Image idea:** Extension map or annotated screenshot showing built-in elements plus custom extensions.  
+**Purpose:** Communicate that StreamPipes is both ready to use and intentionally extensible.
+:::
+
+## What to read next
+
+After this introduction, the best next steps are:
+
+* [Terms](03_concepts-terms.md) to understand the platform building blocks such as adapters, streams, assets, and datasets
+* [Architecture](03_concepts-architecture.md) to understand how StreamPipes implements these concepts technically

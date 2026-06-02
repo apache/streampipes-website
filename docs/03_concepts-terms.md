@@ -4,43 +4,185 @@ title: Terms
 sidebar_label: Terms
 ---
 
-To understand how StreamPipes works, it is helpful to understand a few core concepts, which are illustrated below.
-These encompass the entire data journey within StreamPipes: Starting with data collection ([adapters](#adapter)),
-through data exchange ([data streams](#data-stream)) and data processing ([data processors](#data-processor) and [pipelines](#pipeline)),
-to data persistence and distribution ([data sinks](#data-sink)).
+To use StreamPipes effectively, it helps to think of it as an industrial data platform with a few core building blocks.
+Some of these building blocks bring data into the platform, some process or store it, and others add context so that machine data becomes useful across teams and use cases.
 
-<img src="/img/02_concepts-overview/components-overview.png" alt="Overview of concepts"/>
+This page introduces the most important terms you will encounter throughout the documentation and in the StreamPipes user interface.
+
+<img src="/img/02_concepts-overview/components-overview.png" alt="Overview of StreamPipes concepts"/>
+
+:::info Suggested image placeholder
+**Image idea:** Updated platform concepts diagram that includes Assets and Datasets in addition to Adapters, Data Streams, Data Processors, Data Sinks, and Pipelines.  
+**Purpose:** Show that StreamPipes is not only about stream processing, but also about organizing industrial context and reusable data resources.
+:::
+
+## How the concepts fit together
+
+At a high level, StreamPipes turns industrial source data into usable, governed, and reusable data products:
+
+1. **Adapters** connect external systems and ingest raw machine or process data.
+2. **Data Streams** provide the structured live event model inside the platform.
+3. **Data Processors** transform, enrich, or analyze live streams.
+4. **Data Sinks** deliver results to storage, dashboards, notifications, or external systems.
+5. **Pipelines** combine these runtime building blocks into executable flows.
+6. **Assets** add operational context such as machines, lines, or sites.
+7. **Datasets** capture reusable data collections for analysis, export, or downstream consumption.
+
+Together, these concepts position StreamPipes as more than an ingestion or rule engine.
+They define the platform model that StreamPipes uses to manage industrial data from source connection to downstream reuse.
+
+## Extensions
+
+Several core capabilities in StreamPipes are provided through extensions.
+Extensions make the platform adaptable to different protocols, data models, analytics tasks, and target systems.
+
+The most visible extension types are:
+
+* **Adapters**, which connect external sources
+* **Data Processors**, which apply logic to live streams
+* **Data Sinks**, which persist, forward, or visualize results
+
+This extension model is important because industrial environments are heterogeneous.
+No platform can predict every machine, protocol, or processing requirement in advance.
+StreamPipes therefore combines built-in functionality with a clear path for adding company-specific integrations and logic.
+
+:::info Suggested image placeholder
+**Image idea:** Marketplace or pipeline element catalog screenshot grouped by extension type.  
+**Purpose:** Show that adapters, processors, and sinks are modular platform capabilities rather than hardcoded features.
+:::
 
 ## Adapter
-An adapter connects to any external data source (e.g., OPC-UA, MQTT, S7 PLC, Modbus) and forwards the events it receives to the internal StreamPipes system.
-Adapters can either be created by using a predefined adapter for a data source available in our marketplace [StreamPipes Connect](04_use-connect.md).
-An overview of all available adapters can be found under the menu bar **📚 Pipeline Elements**.
-When you select one of these adapters, you can easily connect to the data source using an intuitive and convenient UI dialog (see the Connect section for more details).
-Alternatively, you can define your own adapter by [using the provided Software Development Kit (SDK)](05_how-to-custom-adapter.md).
-Creating an adapter is always the first step when you want to get data into StreamPipes and process it further.
+
+An **adapter** connects StreamPipes to an external data source and translates incoming data into the StreamPipes event model.
+Typical sources include PLCs, OPC UA servers, MQTT brokers, Modbus devices, REST endpoints, and proprietary machine interfaces.
+
+Adapters are usually the starting point of a data flow.
+They are responsible for bringing raw events into the platform in a structured and reusable way.
+Depending on the source and configuration, an adapter can also help normalize values, define schemas, and prepare the data for downstream processing.
+
+Adapters can be created in different ways:
+
+* by using built-in adapters from the platform catalog
+* by configuring sources interactively in [StreamPipes Connect](04_use-connect.md)
+* by implementing custom adapters with the [SDK](05_how-to-custom-adapter.md)
+
+In a platform context, adapters are what turn isolated machine interfaces into shareable data resources.
 
 ## Data Stream
-**Data streams** are the primary source for working with events in StreamPipes.
-A stream is an ordered sequence of events, where an event typically consists of one or more observation values and additional metadata.
-The `structure` (or `schema` as we call it) of an event provided by a data stream is stored in StreamPipes' internal semantic schema registry.
-Data streams are primarily created by adapters, but can also be created by a [StreamPipes Function](07_extend-sdk-functions.md).
+
+A **data stream** is the central runtime concept for live data in StreamPipes.
+It represents an ordered sequence of events that share a defined structure.
+
+Each event typically contains:
+
+* one or more measured or derived values
+* timestamps
+* identifiers or dimension fields
+* semantic metadata that helps describe the meaning of the data
+
+The schema of a data stream is managed inside StreamPipes and is used to validate compatibility between pipeline elements.
+This means StreamPipes does not only move bytes from one place to another, it keeps track of how data is structured and how it can be reused.
+
+Data streams are typically created by adapters, but they can also be generated by other platform components such as functions or processing results.
 
 ## Data Processor
-**Data processors** in StreamPipes transform one or more input streams into an output stream.
-Such transformations can be simple, such as filtering based on a predefined rule, or more complex, such as applying rule-based or learning-based algorithms to the data.  
-Data processors can be applied to any data stream that meets the input requirements of a processor.
-In addition, most processors can be configured by providing custom parameters directly in the user interface.
-Processing elements define stream requirements, which are a set of minimum characteristics that an incoming event stream must provide.
-Data processors can maintain state or perform stateless operations.
+
+A **data processor** consumes one or more input data streams and produces a new output stream.
+Processors are used to apply logic to live machine data while it is flowing through the platform.
+
+Typical processor tasks include:
+
+* filtering events based on rules or thresholds
+* converting or normalizing values
+* enriching events with derived fields
+* correlating multiple streams
+* detecting patterns or anomalies
+* applying custom analytics or machine learning logic
+
+Processors define input requirements so that they can only be connected to compatible streams.
+This helps users build correct pipelines and promotes reuse across different industrial data sources.
+
+Some processors are stateless and act on each event independently.
+Others maintain state over time, which is useful for aggregations, timers, counters, and temporal analytics.
 
 ## Data Sink
-**Data sinks** consume event streams similar to data processors, but do not provide an output data stream.
-As such, data sinks typically perform some action or trigger a visualization as a result of a stream transformation.
-Similar to data processors, sinks also require the presence of specific input requirements from each bound data stream and can be customized.
-StreamPipes provides several internal data sinks, for example, to generate notifications, visualize live data, or persist historical data from incoming streams.
-In addition, StreamPipes provides several data sinks to forward data streams to external systems such as databases.
+
+A **data sink** consumes a data stream without producing another stream as output.
+Its role is to deliver the processed data to a destination or trigger an action.
+
+Common examples include sinks that:
+
+* store data in internal or external databases
+* forward data to brokers or APIs
+* trigger notifications or alerts
+* feed dashboards or live visual components
+
+In platform terms, sinks connect StreamPipes to the systems where data is ultimately used.
+They close the loop between live processing and operational action.
 
 ## Pipeline
-A pipeline in Apache StreamPipes describes the transformation process from a data stream to a data sink.
-Typically, a pipeline consists of at least one data stream, zero or more data processors, and at least one data sink.
-Pipelines are created graphically by users using the [Pipeline Editor](04_use-pipelines.md) and can be started and stopped at any time.
+
+A **pipeline** is an executable flow that combines streams, processors, and sinks into a runtime graph.
+It describes how data moves through StreamPipes from ingestion to transformation to delivery.
+
+A pipeline typically contains:
+
+* at least one input data stream
+* zero or more data processors
+* one or more data sinks
+
+Pipelines are usually created visually in the [Pipeline Editor](04_use-pipelines.md), where users can connect compatible elements, configure them, and start or stop the resulting flow.
+
+Pipelines are important because they turn reusable building blocks into concrete industrial applications such as monitoring flows, quality checks, event routing, or real-time enrichment.
+
+:::info Suggested image placeholder
+**Image idea:** Example pipeline screenshot that shows one machine stream, two processors, and one sink.  
+**Purpose:** Make the relationship between streams, processors, and sinks immediately tangible.
+:::
+
+## Asset
+
+An **asset** represents a real-world industrial object or organizational entity that gives data business context.
+Examples include machines, lines, workstations, plants, buildings, or logical equipment groups.
+
+Assets matter because industrial data is rarely useful in isolation.
+Users usually want to answer questions such as:
+
+* Which machine produced this data?
+* Which production line does this stream belong to?
+* Which assets share the same type or location?
+* Which dashboards, pipelines, or datasets relate to a specific site?
+
+By modeling assets, StreamPipes can organize machine data around the actual structure of an industrial environment instead of treating every stream as an isolated technical artifact.
+
+## Dataset
+
+A **dataset** is a reusable collection of data that can be consumed beyond the original live processing flow.
+While data streams represent events in motion, datasets represent data prepared for analysis, sharing, retention, export, or downstream reuse.
+
+Depending on the use case, a dataset can help teams:
+
+* preserve relevant historical data
+* expose curated data for analytics workflows
+* share stable data collections across teams or tools
+* separate long-term data usage from the original live stream
+
+This distinction is important because not all industrial use cases are purely real-time.
+Many require a combination of live processing and persistent, reusable data collections that can be explored later or exported into other systems.
+
+:::info Suggested image placeholder
+**Image idea:** Conceptual comparison graphic: live stream on one side, persistent dataset on the other.  
+**Purpose:** Clarify the difference between data in motion and curated or retained data collections.
+:::
+
+## Why these terms matter
+
+These concepts are not only documentation vocabulary.
+They define the operating model of the platform:
+
+* **Extensions** make the platform adaptable.
+* **Streams, processors, sinks, and pipelines** define the live execution model.
+* **Assets and datasets** make data easier to organize, understand, and reuse over time.
+
+Taken together, they describe what exists inside StreamPipes as a platform.
+The [Architecture](03_concepts-architecture.md) page explains how these concepts are implemented technically across the Core, extension services, messaging, and storage components.
