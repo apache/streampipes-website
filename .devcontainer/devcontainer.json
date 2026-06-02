@@ -1,0 +1,30 @@
+{
+  "name": "Apache StreamPipes Website",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "postCreateCommand": "cd website-v2 && npm install",
+  "forwardPorts": [
+    3000
+  ],
+  "portsAttributes": {
+    "3000": {
+      "label": "Docusaurus",
+      "onAutoForward": "notify"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "yzhang.markdown-all-in-one",
+        "ms-azuretools.vscode-docker"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "npm.packageManager": "npm",
+        "npm.exclude": "**/node_modules/**"
+      }
+    }
+  }
+}
