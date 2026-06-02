@@ -4,11 +4,20 @@ title: Charts
 sidebar_label: Charts
 ---
 
+import ScreenshotFigure from '@site/src/components/docs/ScreenshotFigure';
+import ScreenshotSlideshow from '@site/src/components/docs/ScreenshotSlideshow';
+
 Charts are where persisted industrial data becomes something a user can actually read and act on. In StreamPipes, a chart starts with an existing dataset, turns that dataset into a query result, and then presents that result in a visualization that matches the analytical question.
 
 This is an important distinction from `Connect` and `Pipelines`. Those features bring data into StreamPipes and prepare it. Charts work one step later. They assume that the data already exists and help you ask questions such as: What happened over time? What is the current value? How are two measurements related? Which states occurred most often?
 
-> [Image placeholder: chart overview and chart editor with toolbar, designer panel, chart canvas, and data preview]
+<ScreenshotFigure
+  src="/img/2026/chart-timeseries.png"
+  alt="Chart editor with time series visualization, toolbar, data preview, and visualization settings"
+  title="Chart Editor Overview"
+  eyebrow="Charts"
+  caption="The chart editor combines dataset-driven query design, live visualization preview, and chart-specific styling in one screen."
+/>
 
 ## Before you create a chart
 
@@ -62,7 +71,13 @@ The `Data preview` is one of the most important parts of the chart editor. It is
 
 Before spending time on chart type or appearance, look at the preview and ask a few basic questions. Did you select the correct dataset? Did the filter return the right subset? Did grouping create the result shape you expected? Does the result look like something the chosen chart type can represent well? Many chart problems are already obvious in the preview. If a pie chart seems wrong, the grouped values are often already wrong in the table. If a status chart looks confusing, the issue is often that the query still returns too many rows instead of one clear current state.
 
-> [Image placeholder: chart data preview showing the actual query result before visualization]
+<ScreenshotFigure
+  src="/img/2026/chart-data-fields.png"
+  alt="Chart editor data tab with field selection"
+  title="Build the Query First"
+  eyebrow="Data Configuration"
+  caption="Field selection, grouping, and filters define the analytical result before the visualization tab turns it into a chart."
+/>
 
 ## Choose the chart type to match the question
 
@@ -71,6 +86,50 @@ Only after the query result looks right does it make sense to choose the visuali
 The simplest way to choose among them is not to memorize all options, but to think about the shape of the answer you need. A `Time Series Chart` is the natural choice when the main question is how values develop over time. `Gauge`, `Indicator`, `Traffic Light`, and `Status` are all good when the chart should communicate one current state quickly. A `Table` is better when the exact stored rows still matter more than visual summarization. `Pie`, `Histogram`, and `Value Distribution Heatmap` are better when the goal is to understand composition or distribution. `Scatter` is useful when two measurements should be compared on an x/y plane. `Map` only becomes useful when the dataset really contains meaningful spatial coordinates.
 
 A few examples help. Machine temperature over the last eight hours is usually a `Time Series Chart`. Current tank fill level is a `Gauge`. Current compressed-air consumption as a KPI is an `Indicator`. The share of machine states during a shift is a `Pie`. The distribution of cycle times is a `Histogram`. The relationship between temperature and vibration is a `Scatter` plot. These are not hard rules, but they are reliable defaults.
+
+<ScreenshotSlideshow
+  title="Representative Chart Types"
+  eyebrow="Visualization Examples"
+  badge="Gallery"
+  items={[
+    {
+      src: '/img/2026/chart-gauge.png',
+      alt: 'Gauge chart configuration',
+      title: 'Gauge',
+      caption: 'Use gauges when one current numeric state should be understood at a glance.',
+    },
+    {
+      src: '/img/2026/chart-indicator.png',
+      alt: 'Indicator chart configuration',
+      title: 'Indicator',
+      caption: 'Indicators highlight one KPI with minimal visual noise.',
+    },
+    {
+      src: '/img/2026/chart-scatter.png',
+      alt: 'Scatter chart configuration',
+      title: 'Scatter',
+      caption: 'Scatter plots help compare two measurements against each other instead of against time.',
+    },
+    {
+      src: '/img/2026/chart-histogram.png',
+      alt: 'Histogram chart configuration',
+      title: 'Histogram',
+      caption: 'Histograms show the distribution of values across buckets instead of showing event order.',
+    },
+    {
+      src: '/img/2026/chart-status.png',
+      alt: 'Status chart configuration',
+      title: 'Status',
+      caption: 'Status-style charts communicate categorical state quickly for operational dashboards.',
+    },
+    {
+      src: '/img/2026/chart-table.png',
+      alt: 'Table chart configuration',
+      title: 'Table',
+      caption: 'Use tables when the exact stored rows still matter more than summarized visualization.',
+    },
+  ]}
+/>
 
 ## Finish the chart in visualization and appearance
 

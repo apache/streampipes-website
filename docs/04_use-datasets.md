@@ -7,6 +7,8 @@ sidebar_label: Datasets
 import StepFlow from '@site/src/components/docs/StepFlow.tsx';
 import UseCaseExample from '@site/src/components/docs/UseCaseExample.tsx';
 import DocVisualPlaceholder from '@site/src/components/docs/DocVisualPlaceholder.tsx';
+import ScreenshotFigure from '@site/src/components/docs/ScreenshotFigure';
+import ScreenshotSlideshow from '@site/src/components/docs/ScreenshotSlideshow';
 
 A dataset in StreamPipes is stored operational data. It is the point where live machine events stop being only transient stream traffic and become something users can inspect later, analyze in charts, reuse in dashboards, export for other systems, and govern over time.
 
@@ -26,9 +28,12 @@ The third is CSV import. A team already has historical data in files and wants t
   A raw machine stream may be useful for live processing, but a persisted dataset is what lets another team come back tomorrow, open the same data again, build charts on top of it, and compare current behavior with last week.
 </UseCaseExample>
 
-<DocVisualPlaceholder
-  title="Dataset overview"
-  purpose="Show how persisted adapters, persisted pipelines, and imported CSV files all result in datasets that appear in one operational workspace."
+<ScreenshotFigure
+  src="/img/2026/dataset-overview.png"
+  alt="Dataset overview with event counts, retention column, and export provider section"
+  title="Dataset Overview"
+  eyebrow="Datasets"
+  caption="The datasets page brings persisted event stores and export-provider management together in one operational workspace."
 />
 
 ## Open the dataset workspace
@@ -69,9 +74,29 @@ To open the preview, open `Datasets`, find the row, and click the preview action
   A team imports one week of machine history from CSV and sees the row count they expected. That still does not prove the timestamp column was interpreted correctly. One preview is usually enough to catch that kind of problem before the data reaches charts and dashboards.
 </UseCaseExample>
 
-<DocVisualPlaceholder
-  title="Dataset preview"
-  purpose="Show one stored event with a timestamp, dimensions, and measurements so users understand what the preview action validates."
+<ScreenshotSlideshow
+  title="Inspect and Import Data"
+  eyebrow="Dataset Actions"
+  items={[
+    {
+      src: '/img/2026/dataset-upload-data-dialog-preview.png',
+      alt: 'CSV upload preview dialog for datasets',
+      title: 'Validate CSV Parsing',
+      caption: 'Check delimiters, headers, and timestamp interpretation before imported data becomes part of a dataset.',
+    },
+    {
+      src: '/img/2026/dataset-download-data-dialog.png',
+      alt: 'Dataset download dialog',
+      title: 'Download Data',
+      caption: 'Export the current dataset when another team or tool needs an offline extract.',
+    },
+    {
+      src: '/img/2026/dataset-export-provider-dialog-s3.png',
+      alt: 'S3 export provider dialog for datasets',
+      title: 'Configure Export Providers',
+      caption: 'Retention rules can archive older data through reusable export-provider settings such as S3-compatible targets.',
+    },
+  ]}
 />
 
 ## Import CSV data when the live connection is not the starting point

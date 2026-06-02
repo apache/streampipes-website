@@ -6,7 +6,7 @@ sidebar_label: Assets & Sites
 
 import UseCaseExample from '@site/src/components/docs/UseCaseExample.tsx';
 import StepFlow from '@site/src/components/docs/StepFlow.tsx';
-import DocVisualPlaceholder from '@site/src/components/docs/DocVisualPlaceholder.tsx';
+import ScreenshotFigure from '@site/src/components/docs/ScreenshotFigure';
 
 Assets and sites give StreamPipes industrial context. They let you describe machines, lines, stations, and plants as real-world objects and then connect adapters, datasets, charts, dashboards, and pipelines to those objects.
 
@@ -50,9 +50,12 @@ Open `Assets` from the main navigation to reach the overview. The overview lists
 
 The overview is intentionally simple. The interesting structure appears once you open one asset model and begin to navigate or edit its hierarchy.
 
-<DocVisualPlaceholder
-  title="Asset overview"
-  purpose="Show the root asset table with actions for opening, editing, managing permissions, and deleting asset models."
+<ScreenshotFigure
+  src="/img/2026/asset-create.png"
+  alt="Asset editor with hierarchy on the left and basic fields on the right"
+  title="Asset Editor"
+  eyebrow="Assets"
+  caption="The asset editor combines the hierarchy tree with the selected asset's identity, type, labels, and other structural metadata."
 />
 
 ## Create the asset model before you fill in the details
@@ -132,6 +135,14 @@ The distinction is simple but important. The site gives reusable general locatio
 
 This is a good example of how the model stays flexible. Not every machine needs a precise map point. But the ones that do can have one without forcing the same detail level onto every other asset.
 
+<ScreenshotFigure
+  src="/img/2026/asset-asset-link-overview.png"
+  alt="Asset links section with site assignment and linked resources"
+  title="Site Assignment and Asset Links"
+  eyebrow="Operational Context"
+  caption="Sites provide reusable location context, while asset links turn the asset into a navigable entry point for adapters, pipelines, datasets, and streams."
+/>
+
 ## Link resources once the model is meaningful
 
 The `Asset links` section is what makes the asset model valuable across the rest of StreamPipes. In edit mode, you can add one link at a time or open the broader link-management flow when several resources should be attached together.
@@ -161,25 +172,3 @@ Deletion should be treated carefully because an asset may contain hierarchy and 
 The cleanest working style is to model the industrial hierarchy first, assign site context second, and link technical resources third. That order tends to produce the most coherent result because the structure exists before the individual platform objects are attached to it.
 
 The most common mistake is to build many useful charts, datasets, and dashboards but leave them unlinked. In that situation, StreamPipes still works, but much of the contextual value of the platform is lost. Assets are what turn those isolated resources into something users can navigate naturally.
-
-## Image placeholders
-
-<DocVisualPlaceholder
-  title="Asset model and hierarchy"
-  purpose="Show one industrial hierarchy with a root asset, subassets, and linked resources such as adapters, datasets, charts, dashboards, and pipelines."
-/>
-
-<DocVisualPlaceholder
-  title="Asset editor"
-  purpose="Show edit mode with the hierarchy tree on the left and the selected asset details on the right."
-/>
-
-<DocVisualPlaceholder
-  title="Site and exact location"
-  purpose="Show the site assignment section together with the exact-location controls in the asset editor."
-/>
-
-<DocVisualPlaceholder
-  title="Linked resources view"
-  purpose="Show one machine asset in view mode with its linked resources section populated."
-/>

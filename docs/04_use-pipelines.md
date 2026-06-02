@@ -6,7 +6,8 @@ sidebar_label: Pipelines
 
 import StepFlow from '@site/src/components/docs/StepFlow.tsx';
 import UseCaseExample from '@site/src/components/docs/UseCaseExample.tsx';
-import DocVisualPlaceholder from '@site/src/components/docs/DocVisualPlaceholder.tsx';
+import ScreenshotComparison from '@site/src/components/docs/ScreenshotComparison';
+import ScreenshotFigure from '@site/src/components/docs/ScreenshotFigure';
 
 Pipelines are where connected data becomes operational logic inside StreamPipes. They let you take one or more live streams, combine them with processors and sinks, and turn that flow into something useful: filtering, enrichment, alerting, routing, storage, or analytics.
 
@@ -30,9 +31,12 @@ The `Pipeline Editor` is where you design or change the flow. The `Pipeline Over
 
 This split is useful because it matches how people actually work. You usually build in the editor, operate from the overview, and investigate in the details view.
 
-<DocVisualPlaceholder
-  title="Pipeline editor overview"
-  purpose="Show the current editor with element catalog, assembly canvas, and top action bar before the user starts building."
+<ScreenshotFigure
+  src="/img/2026/pipeline-editor-example.png"
+  alt="Pipeline editor with element catalog, pipeline canvas, and save toolbar"
+  title="Pipeline Editor"
+  eyebrow="Pipeline Workspace"
+  caption="The editor combines the element catalog, the assembly canvas, and validation-aware save actions in one guided workspace."
 />
 
 ## Build the pipeline from left to right
@@ -120,9 +124,24 @@ This is the place to go when the pipeline should be understood, not just operate
 
 The details toolbar also includes `View pipeline as code`, which makes the underlying compact representation visible. That is useful for inspection, comparison across environments, and programmatic reuse.
 
-<DocVisualPlaceholder
-  title="Pipeline details view"
-  purpose="Show the current details view with visual pipeline preview, logs, status, actions, and the pipeline-as-code entry point."
+<ScreenshotComparison
+  title="Operate and Inspect Pipelines"
+  eyebrow="Pipeline Operations"
+  summary="The grouped overview is the fastest place to manage many pipelines, while the details view is the place to inspect one pipeline more deeply."
+  items={[
+    {
+      src: '/img/2026/pipeline-overview-grouped.png',
+      alt: 'Grouped pipeline overview',
+      title: 'Pipeline Overview',
+      caption: 'Use the overview to scan status, open actions, and operate several pipelines efficiently.',
+    },
+    {
+      src: '/img/2026/pipeline-details.png',
+      alt: 'Pipeline details view',
+      title: 'Pipeline Details',
+      caption: 'Open one pipeline in detail when you need to inspect structure, logs, metrics, or code-oriented information.',
+    },
+  ]}
 />
 
 ## Treat templates as a standardization tool

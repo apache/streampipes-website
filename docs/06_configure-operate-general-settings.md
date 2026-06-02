@@ -4,11 +4,19 @@ title: General Settings
 sidebar_label: General Settings
 ---
 
+import ScreenshotFigure from '@site/src/components/docs/ScreenshotFigure';
+
 The `General` tab in `Configuration` contains the instance-wide settings that shape how users experience StreamPipes. This is where administrators define the platform name, the public URL, self-service account behavior, visible help links, and the terms users may need to accept after login.
 
 This page focuses on the current `Configuration > General` screen.
 
-> [Image placeholder: Configuration page with the General tab selected and the sections Basic, Registration, Links, and Terms visible]
+<ScreenshotFigure
+  src="/img/2026/settings-general.png"
+  alt="General settings page with Basic, Registration, Links, and Terms sections"
+  title="General Settings"
+  eyebrow="Configuration"
+  caption="The General tab groups instance identity, registration behavior, support links, and terms acknowledgment on one administrator-facing page."
+/>
 
 ## What the General tab controls
 

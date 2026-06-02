@@ -4,32 +4,29 @@ title: Extension Services
 sidebar_label: Extension Services
 ---
 
+import ScreenshotFigure from '@site/src/components/docs/ScreenshotFigure';
+
 The `Extension Services` tab in `Configuration` is the operational view for the services behind StreamPipes extensions. While the `Extensions` tab controls which adapters and pipeline elements are installed, `Extension Services` shows which services are currently registered, which service-level settings they expose, and how OPC UA certificates are handled.
 
 This page focuses on the current `Configuration > Extension Services` screen.
 
-> [Image placeholder: Extension Services page with the sections Registered services, Service configurations, and Certificates]
+<ScreenshotFigure
+  src="/img/2026/settings-extension-services.png"
+  alt="Extension Services page with registered services, service configurations, and certificates"
+  title="Extension Services"
+  eyebrow="Configuration"
+  caption="The Extension Services tab brings service registration, service-level configuration, and OPC UA certificate handling together in one operational view."
+/>
 
 ## What the Extension Services tab is for
 
-Use this page when you want to:
-
-- inspect which extension services are currently registered in the instance
-- review service health at a glance
-- open technical details of a registered service
-- update service-level configuration values
-- manage trusted and rejected OPC UA certificates
-
-This tab is aimed at platform operators and administrators, not end users building adapters or pipelines.
+This page is for operational work on the services behind the extension catalog. It is the place to confirm that a service is registered, check its health, inspect its identity and location, update service-level runtime settings, and manage trusted or rejected OPC UA certificates. In other words, it is aimed at platform operators, not at end users creating adapters or pipelines.
 
 ## Understand the difference between Extensions and Extension Services
 
 The two configuration tabs are related, but they solve different problems.
 
-- `Extensions` controls which installable items such as adapters, processors, and sinks are available in the instance.
-- `Extension Services` controls the services that provide those items and the configuration values those services need at runtime.
-
-In practice, you go to `Extensions` when something should become available to users, and to `Extension Services` when you need to inspect or configure the underlying service behavior.
+`Extensions` decides which installable items such as adapters, processors, and sinks are available in the instance. `Extension Services` deals with the services that provide those items and the configuration those services need at runtime. In practice, you go to `Extensions` when something should become available to users, and to `Extension Services` when you need to inspect or influence the service behavior behind that feature.
 
 ## Open the page
 
@@ -38,32 +35,15 @@ To open the screen:
 1. Go to `Configuration`.
 2. Open the `Extension Services` tab.
 
-The current page contains three sections:
-
-- `Registered services`
-- `Service configurations`
-- `Certificates`
+The page is organized into three sections: `Registered services`, `Service configurations`, and `Certificates`. Read from top to bottom, they move from service presence to service behavior and then to protocol trust management.
 
 ## Inspect registered services
 
-The `Registered services` section provides an overview of the services that are currently known to the StreamPipes instance.
-
-The table shows:
-
-- `Status`
-- `Service ID`
-- `Service Group`
-
-Each row also provides an action to open the service details.
+The `Registered services` section is the fastest health and inventory view for the service layer. The table shows the health state, the service ID, and the service group for every service currently known to the instance. Each row can also be opened in more detail, which is useful when the short row no longer gives enough context.
 
 ### Read the service status
 
-The status column uses a simple health indicator.
-
-- a green indicator means the service is `HEALTHY`
-- a non-healthy state is shown with a critical indicator
-
-Use this view as a first diagnostic step when a service-backed feature is missing or behaving unexpectedly.
+The status column uses a deliberately simple health indicator. A green marker means the service is `HEALTHY`; other states are shown as critical. That makes this section the natural first stop when a service-backed feature is missing or behaves unexpectedly.
 
 Example:
 If a set of adapters is installed but not behaving as expected, checking the registration and health state of the providing service is a sensible first step before editing adapters themselves.
@@ -89,30 +69,14 @@ To inspect one service:
 2. Find the service in `Registered services`.
 3. Click the details action on the right side of the row.
 
-The details dialog shows:
-
-- `Service ID`
-- `Service Group`
-- `Location`
-- `Tags`
-
-This is useful when you need to understand which service instance is registered, where it is running, and how it identifies itself to StreamPipes.
+The details dialog exposes the service identity more clearly, including fields such as `Service ID`, `Service Group`, `Location`, and `Tags`. This is the place to go when you need to understand which instance is actually registered, where it runs, and how it identifies itself to StreamPipes.
 
 Example:
 If multiple services are present, the dialog helps distinguish them by location and tags instead of relying only on a short row in the overview.
 
-> [Image placeholder: Registered services table with status indicators and the service details dialog open]
-
 ## Update service configurations
 
-The `Service configurations` section is where StreamPipes exposes configurable settings for core and extension services.
-
-The table shows:
-
-- `Service Group`
-- `Service Name`
-
-Each row includes an edit action that expands the configuration details inline.
+The `Service configurations` section is where StreamPipes exposes runtime settings for core and extension services. The table stays compact at first, showing only the service group and service name. Configuration details appear only when you expand one row, which keeps the page readable even when several services exist side by side.
 
 ### Open a configuration row
 
@@ -123,22 +87,11 @@ To edit a service configuration:
 3. Find the service you want to change.
 4. Click the edit icon in the row.
 
-The row expands and shows the available configuration keys for that service.
-
-Use this area when a service requires runtime configuration values, for example connection settings, feature toggles, or other service-specific parameters.
+The expanded row reveals the configuration keys for that specific service. Use this area whenever a service needs runtime values such as connection details, feature toggles, or other service-specific operational parameters.
 
 ### Understand the configuration form
 
-Inside an expanded row, StreamPipes renders the fields based on the type of the configuration item.
-
-Depending on the configuration, you may see:
-
-- text fields
-- number fields
-- boolean checkboxes
-- password fields
-
-For text and boolean values, the current UI can show a help tooltip with the configuration description. Use that tooltip when the key name alone is not enough to understand the setting.
+Inside an expanded row, StreamPipes renders fields according to their type. Depending on the service, this can mean text inputs, number inputs, boolean checkboxes, or password fields. The form is therefore not decorative; it is a typed representation of the service contract. Where a help tooltip exists, use it. It often contains the operational explanation that the raw key name alone cannot provide.
 
 ### Update a service configuration
 
@@ -149,60 +102,18 @@ To save changes for one service:
 3. Change the relevant values.
 4. Click `Update` at the bottom of the expanded form.
 
-After saving, the page reloads the configuration list.
-
-This means the section is designed around service-by-service updates rather than one global save for the whole page.
+After saving, the page reloads the configuration list. This reinforces the intended working model: update one service deliberately, verify the effect, then move on to the next one if necessary.
 
 ### How to work with different field types
 
-The exact fields depend on the service, but the interaction pattern is consistent.
-
-For text settings:
-
-1. Expand the service row.
-2. Click into the text field.
-3. Enter or replace the value.
-4. Use the help icon if a description is available.
-5. Click `Update`.
-
-For number settings:
-
-1. Expand the service row.
-2. Enter the numeric value in the number field.
-3. Click `Update`.
-
-For boolean settings:
-
-1. Expand the service row.
-2. Enable or disable the checkbox.
-3. Use the help icon if you need the description.
-4. Click `Update`.
-
-For password settings:
-
-1. Expand the service row.
-2. Click into the password field.
-3. Enter the new value.
-4. Click `Update`.
-
-Because these values can directly affect the behavior of a service, make changes deliberately and verify the related functionality afterwards.
+The exact fields differ from service to service, but the interaction pattern stays consistent: expand the row, change the relevant value, use the help text when needed, and update the configuration explicitly. Because these settings can directly affect runtime behavior, they should be treated as operational changes rather than as harmless metadata edits.
 
 Example:
 If a service-level setting controls access to an external dependency, change the configuration here and then validate the feature that depends on that service instead of assuming the update is correct.
 
-> [Image placeholder: Expanded service configuration row showing text, number, boolean, and password fields plus the Update button]
-
 ## Manage OPC UA certificates
 
-The `Certificates` section is dedicated to OPC UA certificate handling.
-
-In the current UI, the section is described as the place to configure trusted and rejected OPC UA certificates.
-
-The table shows certificates together with:
-
-- `Issuer`
-- `Expires`
-- actions for `Details`, `Trust` or `Reject`, and `Delete`
+The `Certificates` section is the trust-management area for OPC UA communication. It lists certificates together with their issuer, their expiry information, and the actions needed to inspect, trust, reject, or delete them.
 
 ### Refresh the certificate list
 
@@ -222,7 +133,7 @@ To inspect one certificate:
 2. Find the certificate in the table.
 3. Click `Details`.
 
-This opens the certificate details dialog so you can inspect the certificate before deciding whether to trust, reject, or remove it.
+This opens the certificate details dialog so you can inspect the certificate before deciding whether to trust it, reject it, or remove it entirely.
 
 ### Trust or reject a certificate
 
@@ -235,9 +146,7 @@ To change the state:
 3. Find the certificate.
 4. Click `Trust` if it is currently rejected, or `Reject` if it is currently trusted.
 
-After the action, StreamPipes updates the certificate state and reloads the table.
-
-Use this when an OPC UA connection depends on whether a certificate is accepted.
+After the action, StreamPipes updates the certificate state and reloads the table. This is the normal way to resolve trust decisions without deleting the historical certificate entry from the system.
 
 ### Delete a certificate
 
@@ -247,9 +156,7 @@ To remove a certificate entry:
 2. Find the certificate you want to remove.
 3. Click `Delete`.
 
-Use deletion carefully. Trust or reject is often the better operational action when the certificate should remain known to the system but with a controlled state.
-
-> [Image placeholder: Certificates table showing Details, Trust or Reject, and Delete actions]
+Use deletion carefully. In many cases, `Trust` or `Reject` is the better operational choice because the certificate remains known to the system, only with a controlled trust state.
 
 ## Typical workflows
 
@@ -279,7 +186,4 @@ Use deletion carefully. Trust or reject is often the better operational action w
 
 ## Common pitfalls
 
-- Do not confuse installed extensions with registered services. One tab manages catalog items, the other manages the services behind them.
-- Do not change service-level settings without validating the dependent functionality afterwards.
-- Use the service details dialog when a row alone does not provide enough context.
-- Treat certificate deletion carefully because it removes the entry instead of just changing its state.
+The most common mistake is to confuse installed extensions with registered services. One tab manages catalog items, the other manages the service layer behind them. The second common mistake is to change service-level settings and assume the job is done without validating the dependent feature afterwards. And finally, certificate deletion should be used more carefully than trust-state changes, because deletion removes the entry entirely instead of simply moving it between trusted and rejected states.

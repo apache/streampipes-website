@@ -5,8 +5,9 @@ sidebar_label: Connect IoT Data
 ---
 
 import FeatureList from '@site/src/components/docs/FeatureList.tsx';
-import DocVisualPlaceholder from '@site/src/components/docs/DocVisualPlaceholder.tsx';
 import UseCaseExample from '@site/src/components/docs/UseCaseExample.tsx';
+import ScreenshotFigure from '@site/src/components/docs/ScreenshotFigure';
+import ScreenshotSlideshow from '@site/src/components/docs/ScreenshotSlideshow';
 
 Apache StreamPipes Connect is the entry point for bringing industrial and IoT data into the platform.
 It lets users create adapters from the web interface, inspect incoming events, refine schemas, and publish the resulting data streams for reuse across pipelines, dashboards, charts, assets, and datasets.
@@ -43,9 +44,12 @@ Instead of building custom ingestion services for every source, users can config
 This makes Connect more than a connection dialog.
 It is the ingestion layer of the StreamPipes data platform.
 
-<DocVisualPlaceholder
-  title="Connect overview"
-  purpose="Show the adapter list, status indicators, and create action so Connect reads as an operational ingestion workspace."
+<ScreenshotFigure
+  src="/img/2026/connect-overview.png"
+  alt="Connect overview with adapter list, status indicators, and create action"
+  title="Connect Overview"
+  eyebrow="Connect"
+  caption="The Connect workspace shows all configured adapters, their runtime status, and the operational context assigned to each source."
 />
 
 ## Key features
@@ -121,7 +125,13 @@ The goal of this step is simple: choose the adapter that best matches the source
   A team wants to onboard one new machine feed. They do not start by thinking about downstream pipelines yet. They start by choosing the adapter that best matches the source they already have, because that determines the configuration options and the sample data StreamPipes can inspect next.
 </UseCaseExample>
 
-<img className="docs-image" src="/img/03_use-connect/01_connect-overview.png" alt="StreamPipes Connect adapter catalog"/>
+<ScreenshotFigure
+  src="/img/2026/connect-create-select-adapter.png"
+  alt="Adapter selection dialog in StreamPipes Connect"
+  title="Select an Adapter"
+  eyebrow="Step 1"
+  caption="The adapter catalog is the entry point for choosing the integration type that matches the external source."
+/>
 
 ### 2. Configure source settings
 
@@ -137,11 +147,12 @@ The exact fields differ by adapter, but the purpose stays the same: define how S
 Example: imagine a team receives machine events from a broker in CSV format.
 In this step, they would define where the source is located, how StreamPipes should access it, and how the incoming payload should be interpreted before any schema work begins.
 
-<img className="docs-image" src="/img/03_use-connect/06_connect-create.png" alt="StreamPipes Connect adapter settings"/>
-
-<DocVisualPlaceholder
-  title="Adapter settings step"
-  purpose="Show current adapter-specific configuration fields together with the stepper to make the guided setup flow visible."
+<ScreenshotFigure
+  src="/img/2026/connect-create-adapter-settings.png"
+  alt="Adapter settings step in Connect with source-specific configuration fields"
+  title="Configure Source Settings"
+  eyebrow="Step 2"
+  caption="The settings step defines how StreamPipes reaches the source and how the adapter should interpret the incoming payload."
 />
 
 ### 3. Inspect and shape the incoming event structure
@@ -162,7 +173,31 @@ Instead of blindly ingesting data, users can validate whether the input looks co
 
 Example: if a machine emits timestamps in a custom field such as `input_timestamp`, users can inspect a sample event, test a transformation script, and verify the output before the stream is created.
 
-<img className="docs-image" src="/img/03_use-connect/02_customize-format.png" alt="StreamPipes Connect schema configuration"/>
+<ScreenshotSlideshow
+  title="Schema and Metadata Workflow"
+  eyebrow="Step 3"
+  badge="Preview"
+  items={[
+    {
+      src: '/img/2026/connect-create-configure-schema-example.png',
+      alt: 'Schema configuration step with sample event preview',
+      title: 'Inspect the Sample Event',
+      caption: 'Load or refresh a representative event before publishing anything into the platform model.',
+    },
+    {
+      src: '/img/2026/connect-create-configure-schema-measurement-unit.png',
+      alt: 'Schema configuration with measurement unit refinement',
+      title: 'Refine the Schema',
+      caption: 'Adjust field semantics such as units and measurement meaning before downstream users consume the stream.',
+    },
+    {
+      src: '/img/2026/connect-create-configure-metadata.png',
+      alt: 'Metadata configuration step in StreamPipes Connect',
+      title: 'Add Metadata and Runtime Options',
+      caption: 'The final step captures naming, persistence, and asset-context decisions that turn the connection into an operated resource.',
+    },
+  ]}
+/>
 
 #### Using script-based transformations
 

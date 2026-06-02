@@ -4,36 +4,30 @@ title: Security & User Management
 sidebar_label: Security & User Management
 ---
 
+import ScreenshotComparison from '@site/src/components/docs/ScreenshotComparison';
+import ScreenshotFigure from '@site/src/components/docs/ScreenshotFigure';
+
 ## Introduction
 
 The `Security` section in StreamPipes is where administrators manage who can access the platform, which roles they receive, and how platform resources are shared. It combines account management, role-based access control, group assignment, service accounts, and JWT signing support in one place.
 
-Use this page together with:
+It is best read together with [General Settings](./06_configure-operate-general-settings.md), where self-registration and default roles are configured, and with [Environment Variables](./06_configure-operate-environment-variables.md), where the installation-time security settings live.
 
-- [General Settings](./06_configure-operate-general-settings.md) for self-registration, password recovery, and default roles for new users
-- [Environment Variables](./06_configure-operate-environment-variables.md) for installation-time security settings
+<ScreenshotFigure
+  src="/img/2026/security-overview.png"
+  alt="Security configuration page with user accounts, service accounts, groups, and roles"
+  title="Security Overview"
+  eyebrow="Configuration"
+  caption="The Security tab groups interactive accounts, service identities, groups, roles, and authentication-related administration into one operator-facing page."
+/>
 
 ## What the Security page contains
 
-The current `Security` page is organized into five sections:
-
-- `User Accounts`
-- `Service Accounts`
-- `Groups`
-- `Roles`
-- `Authentication`
-
-Each section supports a different part of the security model.
+The page is structured around five areas that reflect how access control actually works in operation. `User Accounts` and `Service Accounts` define who or what authenticates. `Groups` and `Roles` define how permissions are bundled and assigned. `Authentication` covers the technical material used for token signing and related trust configuration. Read together, these sections describe both the human and the technical side of platform access.
 
 ## Security model at a glance
 
-In practice, StreamPipes combines three layers:
-
-1. `Accounts` identify users or services.
-2. `Roles` define what those accounts are allowed to do.
-3. `Resource permissions` define who can access a specific pipeline, adapter, chart, dashboard, dataset, asset, or extension.
-
-That means a user does not only need the right global role, but may also need access to the individual resource.
+In practice, StreamPipes combines three layers. Accounts identify users or services. Roles define what those accounts are generally allowed to do. Resource permissions decide who may access one specific adapter, pipeline, chart, dashboard, dataset, asset, or extension. That distinction matters because a user can have the correct global role and still not see a concrete resource until that object has been shared explicitly.
 
 ## Installation-time security settings
 
@@ -57,15 +51,7 @@ For production systems, you should change the default credentials and secrets be
 
 ## User accounts
 
-`User Accounts` are interactive identities for people who sign in to StreamPipes through the UI or use the API as named users.
-
-The user table shows:
-
-- email address
-- provider type
-- full name
-- creation time
-- last login
+`User Accounts` are the interactive identities for people who sign in through the UI or use the API as named users. The table is designed as a quick operational view: it shows who the user is, where the identity comes from, when the account was created, and when it was used last. In daily administration, that is usually enough to answer the first questions immediately: Is this a local or external user, and is the account still active in practice?
 
 ### Create a user account
 
@@ -81,38 +67,25 @@ To create a local user:
 
 ### Edit a user account
 
-When you edit a local user, you can change:
-
-- email address
-- full name
-- assigned groups
-- assigned roles
-- enabled state
-- locked state
-
-If you change the email address of the currently signed-in user, StreamPipes requires a new login afterwards.
+Editing a local user is where identity and authorization come together. You can update the email address and full name, adjust direct role assignments, add or remove groups, and change whether the account is enabled or locked. If you change the email address of the currently signed-in user, StreamPipes requires a new login afterwards, which is operationally sensible because the signed-in identity itself has changed.
 
 ### External users
 
 StreamPipes can also show users that come from an external identity provider. In the table, these users are marked by their provider instead of `local`.
 
-For externally managed users:
+These accounts should be read differently from local ones. Identity fields are owned by the external system, parts of the form can therefore become read-only, and role information may also be mapped from the provider depending on the installation model. The UI makes that distinction explicit so administrators do not mistake an external identity for a normal local user that simply happens to be missing some fields.
 
-- identity fields are managed by the external system
-- some settings in StreamPipes are read-only
-- role assignments may also be externally managed, depending on the provider configuration
-
-The UI explicitly warns when externally managed user settings cannot be changed.
+<ScreenshotFigure
+  src="/img/2026/security-edit-user.png"
+  alt="Edit user dialog with basic fields, group assignment, and role assignment"
+  title="Edit a User Account"
+  eyebrow="User Management"
+  caption="Editing a local user combines identity data with the effective authorization inputs: direct roles and assigned groups."
+/>
 
 ## Service accounts
 
-`Service Accounts` are non-human accounts for automated communication with the core API. They are typically used by extension services and other technical integrations.
-
-Use a service account when:
-
-- an extension service needs to authenticate to the core
-- an automated integration should call the StreamPipes API
-- access should not be tied to an individual person
+`Service Accounts` are the non-human identities used for automated communication with the core API. They are the right tool whenever access should belong to an extension service, a script, or another integration instead of to an individual person. This keeps technical access stable over time and avoids coupling long-running integrations to one employee account.
 
 ### Create a service account
 
@@ -125,11 +98,11 @@ To create a service account:
 5. Assign the required groups and roles.
 6. Click `Save`.
 
-The client secret must meet the minimum length requirement enforced by the UI. In practice, service accounts should receive only the roles they actually need.
+The client secret must meet the minimum length requirement enforced by the UI. In practice, service accounts should stay tightly scoped. Give them only the roles they actually need, because they often become long-lived technical identities that are harder to notice than interactive users.
 
 ## Groups
 
-`Groups` are a practical way to assign the same role set to multiple users. Instead of assigning every role to every user individually, you assign roles to a group and then assign users to that group.
+`Groups` are the practical answer to repeated user management. Instead of assigning the same set of roles to many individuals again and again, you define the shared role set once on the group and then assign users to that group. This is usually the cleaner model as soon as several people work in the same function or team.
 
 ### Create a group
 
@@ -143,24 +116,19 @@ After that, edit users and enable the group checkboxes you want to assign.
 
 ### Alternate IDs for groups
 
-Groups also support `Alternate IDs`. These are useful when you want to map externally defined groups to a StreamPipes group. This is especially relevant in setups with external identity providers.
+Groups also support `Alternate IDs`. These are especially useful in external-identity setups, because they let you keep a stable StreamPipes group with its local role definition while still mapping it to the identifier used by the upstream identity provider.
 
-In practice:
-
-- the StreamPipes group keeps the local role definition
-- the alternate ID stores the external group identifier
-- external identities can then be aligned with the local authorization model
+<ScreenshotFigure
+  src="/img/2026/security-add-group.png"
+  alt="Add group dialog with role assignments and alternate IDs"
+  title="Create a Group"
+  eyebrow="Groups"
+  caption="Groups bundle reusable role assignments and can also carry alternate IDs for mapping external identity-provider groups."
+/>
 
 ## Roles
 
-`Roles` are the central access-control building block in StreamPipes. A role contains a set of privileges, and users or groups receive those privileges by assignment.
-
-The role overview distinguishes between:
-
-- `Default roles`, which are built into the platform
-- custom roles, which administrators create for their own operating model
-
-Default roles cannot be deleted.
+`Roles` are the central permission-building block in StreamPipes. A role contains a set of privileges, and those privileges become effective only when the role is assigned directly to a user or inherited through a group. The role overview therefore separates built-in default roles from custom roles created for the local operating model. Default roles remain part of the platform and cannot be deleted.
 
 ### Create a custom role
 
@@ -176,49 +144,39 @@ The role ID must start with `ROLE_` and use only uppercase letters and underscor
 
 ### Alternate IDs for roles
 
-Like groups, roles can also contain `Alternate IDs`. These are used to map externally defined roles to a StreamPipes role. This makes it possible to keep a stable local authorization model even when role names in the external system differ from the StreamPipes role ID.
+Like groups, roles can also carry `Alternate IDs`. This is the bridge between externally named roles and the local StreamPipes authorization model. It allows the local model to remain stable even when the upstream provider uses different names or identifiers.
+
+<ScreenshotComparison
+  title="Roles and Effective Authorization Inputs"
+  eyebrow="Role Management"
+  summary="Groups are the reusable assignment mechanism, while roles themselves define the concrete privilege set available to users and services."
+  items={[
+    {
+      src: '/img/2026/security-add-group.png',
+      alt: 'Add group dialog with assigned roles',
+      title: 'Assign Roles Through Groups',
+      caption: 'Groups are useful when several users should inherit the same business-oriented role set.',
+    },
+    {
+      src: '/img/2026/security-edit-roles.png',
+      alt: 'Edit role dialog with available and selected privileges',
+      title: 'Define the Role Privileges',
+      caption: 'Role editing is where the actual privilege list is composed and reviewed.',
+    },
+  ]}
+/>
 
 ## How users, groups, and roles work together
 
-The effective permissions of a user are the combination of:
-
-- roles assigned directly to the user
-- roles inherited from assigned groups
-
-This means groups are not a separate permission system. They are a role-assignment mechanism.
-
-A practical pattern is:
-
-- create a small number of business-oriented groups such as `Operations`, `Data Engineering`, or `Plant Supervisors`
-- assign the relevant roles to those groups
-- assign users to groups instead of distributing many direct role assignments
+The effective permissions of a user are the combination of direct role assignments and the roles inherited from assigned groups. That is why groups should be seen as a role-assignment mechanism, not as a second permission system. In most real installations, the cleanest pattern is to keep only a small number of business-oriented groups such as `Operations`, `Data Engineering`, or `Plant Supervisors`, attach the relevant roles there, and rely less on large numbers of direct per-user assignments.
 
 ## Resource permissions
 
-Roles control what a user is allowed to do in general. Resource permissions control which concrete objects a user or group can access.
-
-StreamPipes supports permissions dialogs for major resource types, including:
-
-- adapters
-- pipelines
-- datasets
-- charts
-- dashboards
-- assets
-- extensions
+Roles control what a user is allowed to do in general. Resource permissions decide which concrete objects that user or group can actually access. This model is used across the major resource types, including adapters, pipelines, datasets, charts, dashboards, assets, and extensions.
 
 ### How resource permissions work
 
-Each resource has:
-
-- an owner
-- a visibility model such as private or shared access
-- explicit user and group assignments in the permissions dialog
-
-In practice, this allows you to separate:
-
-- who may generally manage pipelines or dashboards
-- who may access one specific pipeline or dashboard
+Each resource has an owner, a visibility model such as private or shared access, and explicit assignments in its permissions dialog. This allows StreamPipes to separate two decisions that should remain separate: who may generally manage a type of object, and who may access one specific object of that type.
 
 ### Change permissions for a resource
 
@@ -234,14 +192,7 @@ This is the mechanism to use when one team should see or edit a specific object 
 
 ## Authentication and JWT signing
 
-The `Authentication` section currently focuses on `JWT Signature`.
-
-In the UI, administrators can:
-
-- generate a new public/private key pair
-- download the generated files
-
-This is useful in setups where signed tokens and authenticated service communication should rely on an explicit key pair instead of only a shared secret.
+The `Authentication` section currently focuses on `JWT Signature`. In operational terms, this is the technical trust material for token-based communication. The UI can generate a new public/private key pair and make both files available for download, which is useful when signed tokens should rely on an explicit RSA key pair instead of only on a shared secret.
 
 ### Generate a key pair
 
@@ -251,27 +202,11 @@ This is useful in setups where signed tokens and authenticated service communica
 4. Store the downloaded files securely.
 5. Update the deployment configuration so the core and dependent services use the generated keys.
 
-The downloaded files are:
-
-- `public.key`
-- `private.pem`
-
-If you configure RSA-based JWT signing, make sure the deployment references the matching key locations through the appropriate environment variables.
+The generated bundle contains `public.key` and `private.pem`. If you configure RSA-based JWT signing, the deployment must reference those files through the matching environment variables. Without that final deployment step, generating the files in the UI alone does not change the effective signing behavior of the installation.
 
 ## Self-registration and default roles
 
-User self-registration is not configured in the `Security` page itself. It is configured in `General Settings`.
-
-There you can define:
-
-- whether self-registration is allowed
-- whether password recovery is allowed
-- which default roles newly registered users receive
-
-This distinction matters:
-
-- `Security` is where you manage concrete accounts, groups, roles, and technical authentication assets
-- `General Settings` is where you control how new users enter the system
+User self-registration is not configured in `Security` itself. It lives in `General Settings`, where you decide whether self-registration and password recovery are allowed and which default roles newly registered users should receive. The separation is intentional. `Security` is where you manage concrete identities, groups, roles, and technical authentication assets. `General Settings` is where you define how new users enter the system in the first place.
 
 ## OAuth and external identity providers
 
@@ -300,7 +235,7 @@ Examples:
 - `SP_OAUTH_PROVIDER_GITHUB_CLIENT_SECRET`
 - `SP_OAUTH_PROVIDER_KEYCLOAK_ISSUER_URI`
 
-The `PROVIDER_ID` identifies one configured provider. You can define multiple providers side by side by using different IDs.
+The `PROVIDER_ID` identifies one configured provider. Multiple providers can exist side by side by using different IDs, which makes it possible to support more than one identity source without inventing a separate configuration model for each one.
 
 ### Provider-specific settings
 
@@ -322,26 +257,11 @@ The current OAuth configuration parser supports the following provider settings:
 - `NAME`
 - `DEFAULT_ROLES`
 
-In practice, the most important ones are:
-
-- connection details such as `AUTHORIZATION_URI`, `TOKEN_URI`, `USER_INFO_URI`, `ISSUER_URI`, and `JWK_SET_URI`
-- client credentials such as `CLIENT_ID` and `CLIENT_SECRET`
-- user-attribute mapping such as `EMAIL_ATTRIBUTE_NAME`, `FULL_NAME_ATTRIBUTE_NAME`, and `USER_ID_ATTRIBUTE_NAME`
-- optional role mapping through `ROLE_ATTRIBUTE_NAME`
-- optional default role assignment through `DEFAULT_ROLES`
+In practice, the most important values fall into four groups: connection details such as `AUTHORIZATION_URI` or `ISSUER_URI`, client credentials such as `CLIENT_ID` and `CLIENT_SECRET`, user-attribute mapping such as `EMAIL_ATTRIBUTE_NAME` and `FULL_NAME_ATTRIBUTE_NAME`, and optional authorization mapping through `ROLE_ATTRIBUTE_NAME` or `DEFAULT_ROLES`.
 
 ### What the provider settings mean
 
-Use the settings as follows:
-
-- `NAME` is the display name shown for the login provider.
-- `CLIENT_NAME` is the client name used in the OAuth configuration.
-- `SCOPES` is a comma-separated list of requested scopes.
-- `EMAIL_ATTRIBUTE_NAME` maps the email claim from the provider to the StreamPipes user.
-- `FULL_NAME_ATTRIBUTE_NAME` maps the full-name claim.
-- `USER_ID_ATTRIBUTE_NAME` maps the external user identifier.
-- `ROLE_ATTRIBUTE_NAME` defines which claim contains externally provided role information.
-- `DEFAULT_ROLES` assigns StreamPipes roles to users from that provider if no explicit external mapping is used.
+At a practical level, `NAME` controls the label shown to users on the login screen, `CLIENT_NAME` identifies the OAuth client, and `SCOPES` defines which information should be requested from the provider. The attribute-mapping settings such as `EMAIL_ATTRIBUTE_NAME`, `FULL_NAME_ATTRIBUTE_NAME`, and `USER_ID_ATTRIBUTE_NAME` decide how StreamPipes translates external claims into a local user. `ROLE_ATTRIBUTE_NAME` is used when the provider sends role information directly. `DEFAULT_ROLES` is the fallback when authentication should succeed even without explicit external role mapping.
 
 ### Example structure
 
@@ -370,37 +290,8 @@ If you define more than one provider, keep `SP_OAUTH_ENABLED` and `SP_OAUTH_REDI
 
 ### Role mapping in OAuth-based setups
 
-OAuth-based installations can combine several mechanisms:
-
-- `DEFAULT_ROLES` in the provider configuration
-- `ROLE_ATTRIBUTE_NAME` if the provider sends role claims
-- `Alternate IDs` on roles and groups in the Security page
-
-This is the recommended mental model:
-
-- use provider configuration to establish authentication and basic claim mapping
-- use StreamPipes roles and groups to keep the local authorization model understandable
-- use alternate IDs when external role or group names should map to existing StreamPipes objects
-
-In external-login setups, the Security page remains important because it still shows the resulting users, role assignments, and externally managed status.
+OAuth-based installations can combine several mechanisms at once: `DEFAULT_ROLES` in the provider configuration, `ROLE_ATTRIBUTE_NAME` when the provider sends role claims directly, and `Alternate IDs` on groups or roles in the Security page. The clean mental model is to use provider configuration for authentication and claim mapping, and to keep the local StreamPipes roles and groups as the understandable authorization layer. In that model, alternate IDs are simply the bridge between both worlds.
 
 ## Recommended operating pattern
 
-For most teams, the following model works well:
-
-1. Set secure initial credentials and secrets during deployment.
-2. Create a dedicated service account for every technical integration or extension deployment.
-3. Use groups for team-level access management.
-4. Keep custom roles small and purpose-specific.
-5. Use resource permissions to share individual adapters, pipelines, charts, dashboards, datasets, assets, and extensions.
-6. Review externally managed users and role mappings carefully in OAuth-based installations.
-
-## Image placeholders
-
-`[Image placeholder: Security settings overview with the five sections User Accounts, Service Accounts, Groups, Roles, and Authentication]`
-
-`[Image placeholder: Edit user dialog showing local user fields, group assignment, role assignment, and account status]`
-
-`[Image placeholder: Role editor with available privileges, selected privileges, and alternate IDs]`
-
-`[Image placeholder: Permissions dialog for a resource such as a pipeline or dashboard]`
+For most teams, the most reliable model is simple: set secure initial credentials during deployment, create dedicated service accounts for technical integrations, use groups for team-level assignment, keep custom roles small and purpose-specific, and use resource permissions for sharing individual objects. In OAuth-based installations, add one more habit: review the resulting users and mappings in the Security page instead of assuming the external provider configuration already tells the full story.

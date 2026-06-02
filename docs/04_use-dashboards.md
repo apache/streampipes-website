@@ -4,11 +4,32 @@ title: Dashboards
 sidebar_label: Dashboards
 ---
 
+import ScreenshotComparison from '@site/src/components/docs/ScreenshotComparison';
+import ScreenshotFigure from '@site/src/components/docs/ScreenshotFigure';
+
 Dashboards are the place where individual charts become a shared operational view. In the current StreamPipes product, dashboards are no longer built from a separate widget framework. Instead, they reuse the charts you already created in `Charts` and arrange them into one screen for monitoring, analysis, or presentation.
 
 That design is important because it keeps the responsibilities clear. A chart answers one analytical question well. A dashboard combines several of those answers so a user can understand a machine, a line, or a whole process at a glance.
 
-> [Image placeholder: dashboard overview and dashboard panel showing multiple saved charts reused in one layout]
+<ScreenshotComparison
+  title="Dashboard Overview and Runtime"
+  eyebrow="Dashboards"
+  summary="The overview helps manage saved dashboards, while the runtime panel is where the composed charts are actually consumed."
+  items={[
+    {
+      src: '/img/2026/dashboard-preview.png',
+      alt: 'Dashboard overview with preview drawer',
+      title: 'Dashboard Overview',
+      caption: 'Use the overview to browse saved dashboards, inspect metadata, and preview one dashboard before opening it.',
+    },
+    {
+      src: '/img/2026/dashboard-create.png',
+      alt: 'Dashboard runtime and edit mode',
+      title: 'Dashboard Runtime',
+      caption: 'The runtime screen shows the actual chart composition, the global toolbar, and the chart-selection panel in edit mode.',
+    },
+  ]}
+/>
 
 ## Before you build a dashboard
 
@@ -90,7 +111,13 @@ The toolbar is small, but it defines how the dashboard behaves. In edit mode, it
 
 This split between the panel and the settings dialog is useful. Settings define what the dashboard should be. The panel is where users experience that decision in practice.
 
-> [Image placeholder: dashboard panel with toolbar, time selector, options menu, chart canvas, and right-side chart selection panel in edit mode]
+<ScreenshotFigure
+  src="/img/2026/dashboard-create.png"
+  alt="Dashboard edit mode with save toolbar, chart canvas, and chart selection panel"
+  title="Compose the Dashboard"
+  eyebrow="Edit Mode"
+  caption="In edit mode, the dashboard becomes a composition surface where saved charts are placed, arranged, and coordinated through shared settings."
+/>
 
 ## Move into edit mode when the composition should change
 
