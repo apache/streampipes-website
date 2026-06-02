@@ -7,10 +7,11 @@ sidebar_label: Overview
 import StepFlow from '@site/src/components/docs/StepFlow.tsx';
 import FeatureList from '@site/src/components/docs/FeatureList.tsx';
 import UseCaseExample from '@site/src/components/docs/UseCaseExample.tsx';
-import DocVisualPlaceholder from '@site/src/components/docs/DocVisualPlaceholder.tsx';
+import ScreenshotSlideshow from '@site/src/components/docs/ScreenshotSlideshow';
 
-Apache StreamPipes is an open-source IoT and industrial data platform for building complete data infrastructure on your own terms.
+Apache StreamPipes is an open-source data platform for the Industrial IoT.
 It helps teams set up an on-premise, extensible environment for connecting machines and software systems, turning incoming events into reusable data streams, processing those streams in real time, persisting historical data, and building charts and dashboards on top.
+For developers, StreamPipes offers interfaces to extend the software with custom plugins, and provides client libraries to interact with resources programmatically.
 
 This page is the entry point to the documentation.
 It helps you understand what StreamPipes does, what the documentation covers, and where to start depending on your goal.
@@ -21,7 +22,7 @@ It helps you understand what StreamPipes does, what the documentation covers, an
   items={[
     {
       title: 'StreamPipes is an industrial data platform',
-      text: 'It is not only a pipeline editor. It is a complete IoT and industrial data platform that covers ingestion, stream processing, historical data, visualization, context modeling, and platform administration.',
+      text: 'A complete IoT and industrial data platform that covers ingestion, stream processing, historical data, visualization, context modeling, and platform administration.',
     },
     {
       title: 'It can serve as your open-source IoT data infrastructure',
@@ -36,23 +37,58 @@ It helps you understand what StreamPipes does, what the documentation covers, an
       text: 'StreamPipes supports both data in motion and data at rest. A stream can drive live processing while also becoming a dataset for later exploration and visualization.',
     },
     {
-      title: 'The platform is built for industrial reuse',
-      text: 'Adapters, pipelines, datasets, charts, dashboards, assets, and extensions are managed as reusable platform resources rather than one-off scripts or isolated views.',
-    },
-    {
       title: 'The platform is intentionally extensible',
       text: 'You can start with the built-in capabilities and extend the platform later with custom adapters, processors, sinks, and UI modules when your infrastructure or domain requires it.',
-    },
-    {
-      title: 'The documentation is organized by task',
-      text: 'Use the Quick Start for first success, Concepts for the mental model, Features for day-to-day usage, Configure & Operate for administration, and Extend for development.',
-    },
+    }
   ]}
 />
 
-<DocVisualPlaceholder
-  title="Product overview"
-  purpose="Show the main StreamPipes modules such as Connect, Pipelines, Datasets, Charts, Dashboards, and Assets in one current product view."
+## Screenshots
+
+Here are some screenshots that help you understand what you can do with StreamPipes:
+
+<ScreenshotSlideshow
+title="StreamPipes Features"
+eyebrow="Style Check"
+badge="Preview"
+items={[
+{
+src: '/img/2026/home-map.png',
+alt: 'Home screen',
+title: 'Home screen',
+caption: 'The home screen shows a list of assets and resources in a map-style or table view.',
+},
+{
+src: '/img/2026/connect-create-select-adapter.png',
+alt: 'Adapters for industrial connectivity',
+title: 'Adapters for industrial connectivity',
+caption: 'Connect data from a large number of supported protocols like S7, OPC UA, Modbus or MQTT.',
+},
+{
+src: '/img/2026/chart-timeseries.png',
+alt: 'Chart library',
+title: 'Chart library',
+caption: 'Visualize data in a single platform using an extensive chart library.',
+},
+{
+src: '/img/2026/dashboard-create.png',
+alt: 'Dashboards',
+title: 'Dashboards',
+caption: 'Configure dashboards for shopfloor monitoring and more.',
+},
+{
+src: '/img/2026/pipeline-editor-example.png',
+alt: 'Pipelines',
+title: 'Pipelines',
+caption: 'Create pipelines for streaming data analytics to analyze machine data on-the-fly.',
+},
+{
+src: '/img/2026/asset-create.png',
+alt: 'Assets',
+title: 'Assets',
+caption: 'Assign resources to assets to organize your industrial data sources.',
+},
+]}
 />
 
 ## What you can do with StreamPipes
@@ -63,7 +99,7 @@ In practice, StreamPipes combines several jobs that are often spread across sepa
   steps={[
     {
       title: 'Connect industrial and software sources',
-      body: 'Use adapters to bring machine data, broker data, file-based data, and other source events into the platform.',
+      body: 'Use adapters to bring machine data, broker data, and other source events into the platform.',
     },
     {
       title: 'Refine and govern event structures',
@@ -84,8 +120,8 @@ In practice, StreamPipes combines several jobs that are often spread across sepa
   ]}
 />
 
-<UseCaseExample title="A typical StreamPipes workflow">
-  A team connects a machine source, refines the schema so the fields are meaningful, persists the stream as a dataset, creates a chart to validate the data, and then adds that chart to a dashboard used by operators and engineers.
+<UseCaseExample title="A simple StreamPipes workflow">
+  A team connects a machine data source from OPC UA, persists the stream as a dataset, creates a chart to validate the data, and then adds that chart to a dashboard used by operators and engineers.
 </UseCaseExample>
 
 ## StreamPipes as infrastructure

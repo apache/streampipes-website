@@ -10,7 +10,6 @@ import DocVisualPlaceholder from '@site/src/components/docs/DocVisualPlaceholder
 import UseCaseExample from '@site/src/components/docs/UseCaseExample.tsx';
 import ScreenshotFigure from '@site/src/components/docs/ScreenshotFigure';
 import ScreenshotComparison from '@site/src/components/docs/ScreenshotComparison';
-import ScreenshotSlideshow from '@site/src/components/docs/ScreenshotSlideshow';
 
 This guide helps you get from a fresh installation to a first working result in StreamPipes.
 
@@ -19,59 +18,6 @@ The guide begins with installation and then walks through one complete first-run
 ## Before you start
 
 The easiest way to install StreamPipes is the Docker-based installation.
-
-<ScreenshotFigure
-src="/img/2026/home-map.png"
-alt="StreamPipes home page with the factory map overview"
-title="Quickstart Home Overview"
-caption="The quickstart home page highlights the main entry points and gives users a high-level overview of the available factory assets."
-/>
-
-<ScreenshotComparison
-  title="Comparison Example"
-  eyebrow="Style Check"
-  summary="Use this component when documentation needs to contrast two related screens, for example two dashboard states or two setup outcomes."
-  items={[
-    {
-      src: '/img/2026/home-map.png',
-      alt: 'Home page with the map-based overview',
-      title: 'Map-centric Overview',
-      caption: 'A broad landing view that emphasizes navigation and spatial context.',
-    },
-    {
-      src: '/img/2026/home-table.png',
-      alt: 'Home page with the table-based overview',
-      title: 'Table-centric Overview',
-      caption: 'A denser operational view that emphasizes records and structured status information.',
-    },
-  ]}
-/>
-
-<ScreenshotSlideshow
-  title="Slideshow Example"
-  eyebrow="Style Check"
-  badge="Preview"
-  items={[
-    {
-      src: '/img/2026/login.png',
-      alt: 'Login screen',
-      title: 'Login',
-      caption: 'The first step after installation is authenticating with the initial credentials.',
-    },
-    {
-      src: '/img/2026/home-map.png',
-      alt: 'Home page with map overview',
-      title: 'Home Overview',
-      caption: 'After sign-in, users land on the home screen and can orient themselves in the product.',
-    },
-    {
-      src: '/img/2026/settings-site-create.png',
-      alt: 'Site creation settings screen',
-      title: 'Initial Configuration',
-      caption: 'A later setup step can introduce more structured configuration views and forms.',
-    },
-  ]}
-/>
 
 
 ### Prerequisites
