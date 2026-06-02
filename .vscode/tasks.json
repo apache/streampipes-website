@@ -1,0 +1,50 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Docusaurus: install",
+      "type": "shell",
+      "command": "npm install",
+      "options": {
+        "cwd": "${workspaceFolder}/website-v2"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docusaurus: start",
+      "type": "npm",
+      "script": "start",
+      "path": "website-v2/",
+      "isBackground": true,
+      "options": {
+        "cwd": "${workspaceFolder}/website-v2"
+      },
+      "problemMatcher": {
+        "owner": "docusaurus",
+        "pattern": {
+          "regexp": "^$"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".*",
+          "endsPattern": ".*(Docusaurus website is running|compiled successfully|Compiled successfully|http://localhost:3000).*"
+        }
+      }
+    },
+    {
+      "label": "Docusaurus: build",
+      "type": "npm",
+      "script": "build",
+      "path": "website-v2/",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Docusaurus: serve build",
+      "type": "npm",
+      "script": "serve",
+      "path": "website-v2/",
+      "problemMatcher": []
+    }
+  ]
+}
