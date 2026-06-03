@@ -9,7 +9,7 @@ import ScreenshotSlideshow from '@site/src/components/docs/ScreenshotSlideshow';
 
 Charts are where persisted industrial data becomes something a user can actually read and act on. In StreamPipes, a chart starts with an existing dataset, turns that dataset into a query result, and then presents that result in a visualization that matches the analytical question.
 
-This is an important distinction from `Connect` and `Pipelines`. Those features bring data into StreamPipes and prepare it. Charts work one step later. They assume that the data already exists and help you ask questions such as: What happened over time? What is the current value? How are two measurements related? Which states occurred most often?
+Charts assume that the data already exists as a a dataset and help you ask questions such as: What happened over time? What is the current value? How are two measurements related? Which states occurred most often?
 
 <ScreenshotFigure
   src="/img/2026/chart-timeseries.png"
@@ -29,7 +29,7 @@ That also explains how to think about charts in the wider platform. A chart is n
 
 The chart feature has two parts. The `Charts` overview is where you manage existing charts. The editor is where you design or refine one chart.
 
-The overview lets you open, edit, clone, share, and delete charts. It also warns you when a chart is outdated. Two cases matter here. Older `legacy multi-source charts` still exist, but the current editor is built around one dataset per chart. In addition, StreamPipes can tell you when a chart `requires attention` because the schema of the underlying dataset has changed. Both warnings are useful because they tell you that the problem is not cosmetic. In those situations, the chart definition itself needs review.
+The overview lets you open, edit, clone, share, and delete charts. It also warns you when a chart is outdated. StreamPipes can tell you when a chart `requires attention` because the schema of the underlying dataset has changed. Both warnings are useful because they tell you that the problem is not cosmetic. In those situations, the chart definition itself needs review.
 
 Inside the editor, the work usually follows the same order every time. First select the dataset. Then decide which query result you want. Only after the data preview looks right does it make sense to choose the chart type and adjust appearance. Users who reverse that order often spend time tweaking a visualization when the real problem is still in the query.
 
@@ -53,6 +53,14 @@ The first decision is the query type. StreamPipes currently supports `Raw`, `Agg
 
 `Single` is the right choice when the chart should show one current state rather than a history. A gauge for current pressure, a status light for machine availability, or an indicator for current power draw are typical examples. In those cases, a time series would add noise instead of clarity.
 
+<ScreenshotFigure
+src="/img/2026/chart-data-aggregation.png"
+alt="Chart editor data tab with aggregation selection"
+title="Query Type"
+caption="Field selection, grouping, and filters define the analytical result before the visualization tab turns it into a chart."
+size="compact"
+/>
+
 ## Refine the result with fields, filters, grouping, and order
 
 After choosing the query type, continue refining the result itself. StreamPipes loads the dataset fields and preselects an initial set to get you started. Keep in mind that field selection is not just cosmetic. It changes what the chart can work with.
@@ -65,19 +73,30 @@ Grouping and ordering complete the query shape. `Group by` is what makes one dat
 
 At the bottom of the data configuration, StreamPipes also offers two small but practical switches: the browser overload warning and the missing-values option. These are not usually the main story of the chart, but they matter operationally. A large result set can make the browser heavy, and incomplete rows can distort multi-field charts. If a chart becomes unstable because one field is occasionally missing, ignoring incomplete events can be more useful than trying to style around the problem.
 
+<ScreenshotFigure
+src="/img/2026/chart-data-fields.png"
+alt="Chart editor data tab with field selection"
+title="Build the Query First"
+eyebrow="Data Configuration"
+caption="Field selection, grouping, and filters define the analytical result before the visualization tab turns it into a chart."
+size="compact"
+/>
+
+<ScreenshotFigure
+src="/img/2026/chart-advanced-filter.png"
+alt="Advanced Filter"
+title="Advanced Filter"
+caption="Use the Advanced Filter for complex filter expressions"
+size="compact"
+/>
+
 ## Use the data preview as your checkpoint
 
 The `Data preview` is one of the most important parts of the chart editor. It is the moment where the abstract query becomes visible as concrete rows. Users who learn to trust the preview usually build better charts faster.
 
 Before spending time on chart type or appearance, look at the preview and ask a few basic questions. Did you select the correct dataset? Did the filter return the right subset? Did grouping create the result shape you expected? Does the result look like something the chosen chart type can represent well? Many chart problems are already obvious in the preview. If a pie chart seems wrong, the grouped values are often already wrong in the table. If a status chart looks confusing, the issue is often that the query still returns too many rows instead of one clear current state.
 
-<ScreenshotFigure
-  src="/img/2026/chart-data-fields.png"
-  alt="Chart editor data tab with field selection"
-  title="Build the Query First"
-  eyebrow="Data Configuration"
-  caption="Field selection, grouping, and filters define the analytical result before the visualization tab turns it into a chart."
-/>
+The three configuration tabs are easiest to understand as a sequence. `Data` defines what should be queried. `Visualization` decides how that result should be interpreted as a chart type. `Appearance` is where presentation details are refined once the analytical meaning is already correct.
 
 ## Choose the chart type to match the question
 
@@ -137,6 +156,28 @@ After selecting the chart type, the designer panel lets you refine `Visualizatio
 
 This separation is worth keeping in mind because it prevents a common mistake. If the chart tells the wrong story, the problem is usually not in the appearance tab. It is usually in the query or in the chart type. Appearance should be the final polishing step, not the place where the analytical meaning is invented.
 
+<ScreenshotFigure
+  src="/img/2026/chart-time-selection.png"
+  alt="Chart editor with the time selection menu and custom date range dialog open"
+  title="Time Selection"
+  eyebrow="Chart Configuration"
+  caption="The time selector in the toolbar lets you switch quickly between relative ranges such as the last 15 minutes or the last month, or define an explicit custom start and end time when the chart should answer a precise historical question."
+  size="compact"
+/>
+
+Time selection matters more than it first appears. A chart can be technically correct and still communicate the wrong thing when the active time range does not match the operational question. Short ranges are usually best for current monitoring and troubleshooting. Longer ranges are better when you want to understand trends, compare shifts, or inspect seasonal behavior. The custom date range is the right choice whenever the chart should focus on one exact incident window instead of a rolling relative interval.
+
+<ScreenshotFigure
+  src="/img/2026/chart-appearance.png"
+  alt="Appearance tab in the chart editor with color, chart settings, and zoom options"
+  title="Appearance Settings"
+  eyebrow="Chart Configuration"
+  caption="The appearance tab refines how the chart is presented through colors, legend and tooltip visibility, decimal formatting, and interactive options such as zoom behavior."
+  size="compact"
+/>
+
+This is where a technically correct chart becomes easier to consume. Colors should support recognition rather than decoration. Legend, toolbox, and tooltip settings decide how much local guidance the viewer gets. Decimal formatting matters when values are either too noisy or not precise enough for the intended audience. Options such as zoom are useful when a chart is meant for exploration instead of only passive monitoring. The key is still the same: use these controls to improve readability, not to compensate for a weak query.
+
 ## Save, reuse, and manage the chart
 
 The chart toolbar is deliberately small, but every action there matters. You can edit the `Chart Name`, `Save` the chart, `Add To Asset`, `Discard` changes, `Download data`, and change the time range.
@@ -150,13 +191,3 @@ Back in the overview, you can open the chart again, edit it, clone it, manage pe
 Charts are best treated as reusable analytical building blocks. A chart should answer one question well. A dashboard can then combine several of those answers into one operational view. That is why the recommended workflow is to build and validate the chart first, save it, and only then add it to one or more dashboards.
 
 When users follow that approach, both features become easier to maintain. If one dashboard item looks wrong later, the place to fix it is often the source chart, not the dashboard itself.
-
-## Image placeholders
-
-`[Image placeholder: chart overview with warnings for legacy multi-source charts and schema-change attention states]`
-
-`[Image placeholder: chart data configuration showing dataset selection, query type, filters, grouping, and ordering]`
-
-`[Image placeholder: chart type selector with current visualization options such as Time Series Chart, Gauge, Table, Pie, Scatter, and Status]`
-
-`[Image placeholder: finished chart editor with chart name, save, add-to-asset, download, time selector, and data preview]`

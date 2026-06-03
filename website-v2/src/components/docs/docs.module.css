@@ -241,6 +241,16 @@
   padding: 1rem;
 }
 
+.screenshotMediaCompact {
+  margin: 0 auto;
+  max-width: 620px;
+}
+
+.screenshotMediaNarrow {
+  margin: 0 auto;
+  max-width: 460px;
+}
+
 .screenshotMediaLink {
   color: inherit;
   display: block;

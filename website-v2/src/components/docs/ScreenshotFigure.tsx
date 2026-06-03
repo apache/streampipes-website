@@ -9,6 +9,7 @@ type ScreenshotFigureProps = {
   eyebrow?: string;
   badge?: string;
   href?: string;
+  size?: 'full' | 'compact' | 'narrow';
 };
 
 const ScreenshotFigure = ({
@@ -19,8 +20,16 @@ const ScreenshotFigure = ({
   eyebrow,
   badge,
   href,
+  size = 'full',
 }: ScreenshotFigureProps) => {
   const image = <img className={styles.screenshotImage} src={src} alt={alt} />;
+  const mediaClassName = `${styles.screenshotMedia} ${
+    size === 'compact'
+      ? styles.screenshotMediaCompact
+      : size === 'narrow'
+        ? styles.screenshotMediaNarrow
+        : ''
+  }`;
 
   return (
     <figure className={styles.screenshotFrame}>
@@ -35,7 +44,7 @@ const ScreenshotFigure = ({
           {badge ? <span className={styles.screenshotBadge}>{badge}</span> : null}
         </div>
       ) : null}
-      <div className={styles.screenshotMedia}>
+      <div className={mediaClassName}>
         {href ? (
           <a className={styles.screenshotMediaLink} href={href}>
             {image}

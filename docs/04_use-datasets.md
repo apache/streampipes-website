@@ -16,13 +16,12 @@ This makes datasets an important part of the platform story. Adapters and pipeli
 
 ## Understand where datasets come from
 
-Datasets are not created in isolation. They are usually the result of one of three workflows.
+The default way how datasets are created are pipelines when using the `Data Lake` sink. 
+A team creates an adapter or a pipeline, enables persistence, and lets StreamPipes store the resulting events continuously. The dataset then becomes the historical record of that live source.
+A pipeline cleans, enriches, or aggregates raw input and writes the result as a dataset. In practice, these datasets are often the best source for dashboards because they already contain business-ready fields instead of raw machine payloads.
 
-The first is live persistence. A team creates an adapter or a pipeline, enables persistence, and lets StreamPipes store the resulting events continuously. The dataset then becomes the historical record of that live source.
-
-The second is processed persistence. A pipeline cleans, enriches, or aggregates raw input and writes the result as a dataset. In practice, these datasets are often the best source for dashboards because they already contain business-ready fields instead of raw machine payloads.
-
-The third is CSV import. A team already has historical data in files and wants to start with analysis immediately, even before a live connection is available.
+There are also short-hand features to create datasets directly from an adapter (which internally creates a pipeline upon start of the adapter) and by CSV import.
+In this case. a team already has historical data in files and wants to start with analysis immediately, even before a live connection is available.
 
 <UseCaseExample title="Think of datasets as durable context">
   A raw machine stream may be useful for live processing, but a persisted dataset is what lets another team come back tomorrow, open the same data again, build charts on top of it, and compare current behavior with last week.
@@ -74,34 +73,16 @@ To open the preview, open `Datasets`, find the row, and click the preview action
   A team imports one week of machine history from CSV and sees the row count they expected. That still does not prove the timestamp column was interpreted correctly. One preview is usually enough to catch that kind of problem before the data reaches charts and dashboards.
 </UseCaseExample>
 
-<ScreenshotSlideshow
-  title="Inspect and Import Data"
-  eyebrow="Dataset Actions"
-  items={[
-    {
-      src: '/img/2026/dataset-upload-data-dialog-preview.png',
-      alt: 'CSV upload preview dialog for datasets',
-      title: 'Validate CSV Parsing',
-      caption: 'Check delimiters, headers, and timestamp interpretation before imported data becomes part of a dataset.',
-    },
-    {
-      src: '/img/2026/dataset-download-data-dialog.png',
-      alt: 'Dataset download dialog',
-      title: 'Download Data',
-      caption: 'Export the current dataset when another team or tool needs an offline extract.',
-    },
-    {
-      src: '/img/2026/dataset-export-provider-dialog-s3.png',
-      alt: 'S3 export provider dialog for datasets',
-      title: 'Configure Export Providers',
-      caption: 'Retention rules can archive older data through reusable export-provider settings such as S3-compatible targets.',
-    },
-  ]}
-/>
-
 ## Import CSV data when the live connection is not the starting point
 
 CSV import is the fastest way to create datasets from historical machine data, vendor exports, test data, or migrated records from another system. The import flow is deliberately guided so users can validate the file structure before anything is written permanently.
+
+<ScreenshotFigure
+src="/img/2026/dataset-upload-data-dialog-preview.png"
+alt="Import CSV Data"
+title="Import CSV Data"
+caption="Check delimiters, headers, and timestamp interpretation before imported data becomes part of a dataset."
+/>
 
 You would typically use CSV import when a machine vendor provides data history as files, when dashboards should be prepared before the live source exists, or when legacy historian exports need to be brought into StreamPipes for comparison and reuse.
 
@@ -136,6 +117,15 @@ Datasets are also a handover point to external consumers. Sometimes a process en
 
 To download a dataset, open the row action menu, click `Download`, configure the export dialog, and start the export. The exact export shape depends on the dialog options, but the operational idea is simple: StreamPipes remains the source of truth while still letting data move into external workflows when required.
 
+<ScreenshotFigure
+src="/img/2026/dataset-download-data-dialog.png"
+alt="Download Datasets"
+title="Download Datasets"
+caption="Retention rules can archive older data through reusable export-provider settings such as S3-compatible targets."
+/>
+
+Current export options are CSV, JSON and Microsoft Excel. In case you want to export data in Excel format, it is also possible to upload a template that will be used to append data to a formatted spreadsheet.
+
 ## Configure retention when stored data keeps growing
 
 Retention is where dataset operation becomes long-term platform operation. Machine data often grows continuously, and not every dataset should remain in the active store forever. A retention rule lets you decide what should happen to older data after a certain age.
@@ -150,9 +140,11 @@ If the action includes saving data, the same dialog also requires export setting
 
 Once a rule exists, the same dialog can be used operationally. `Run Sync Now` executes the configured rule immediately, which is useful for testing, and `Delete Sync` removes the stored retention configuration.
 
-<DocVisualPlaceholder
-  title="Retention configuration"
-  purpose="Show the retention dialog with age threshold, interval, action, export settings, provider selection, and run-now controls."
+<ScreenshotFigure
+src="/img/2026/dataset-configure-retention.png"
+alt="Configure Retention"
+title="Configure Retention"
+caption="Define a retention policy for a dataset."
 />
 
 ## Use export providers as shared retention infrastructure
@@ -160,6 +152,14 @@ Once a rule exists, the same dialog can be used operationally. `Run Sync Now` ex
 Export providers define where retained data should be sent when a retention rule includes `Save` or `Save and Delete`. In the current UI, provider management appears in the lower area of the datasets page and is typically an administrator task rather than a daily user task.
 
 The practical pattern is to configure the provider once, test it, and then reuse it across several dataset rules. That keeps retention predictable and avoids copy-pasting infrastructure details into every single dataset workflow.
+
+<ScreenshotFigure
+src="/img/2026/dataset-export-provider-dialog-s3.png"
+alt="S3 export provider dialog for datasets"
+title="S3 export provider dialog for datasets"
+caption="Export the current dataset when another team or tool needs an offline extract."
+/>
+
 
 ## Know the difference between truncating data and deleting the dataset
 
@@ -174,15 +174,3 @@ Use `Delete dataset` when the dataset should disappear completely. Open the same
 Datasets often sit between several roles. One team may own ingestion, another may consume charts, and a third may be responsible for audit or export. For that reason, permission management is available directly from the dataset row.
 
 Open the action menu, click `Manage permissions`, and update access in the dialog. This keeps ownership and consumption separate without duplicating the stored data itself.
-
-## Typical ways teams use datasets
-
-The simplest workflow starts in `Connect`: a team creates an adapter, enables persistence, opens `Datasets` to confirm the new store appears, checks the recent count, previews one event, and then builds charts on top of the result.
-
-Another common workflow starts with historical files: open `Datasets`, click `Import CSV`, upload the file, validate parsing and timestamps, finish the upload, confirm the total event count, and then move directly into chart creation.
-
-A more operational workflow appears later in production: once a high-volume dataset grows steadily, the team adds a retention rule, selects `Save and Delete`, assigns the export provider, and monitors the retention log to make sure old data is archived as intended.
-
-## Work with datasets deliberately
-
-The most useful mindset is to treat datasets as governed operational stores, not only as technical byproducts of persistence. Check freshness before assuming the source is healthy. Preview before building a chart on top of imported or transformed data. Append CSV files only when the schema truly matches. Use retention once storage growth becomes part of daily operation, and use permissions when the same data must serve several roles with different responsibilities.

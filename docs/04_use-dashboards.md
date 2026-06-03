@@ -7,7 +7,7 @@ sidebar_label: Dashboards
 import ScreenshotComparison from '@site/src/components/docs/ScreenshotComparison';
 import ScreenshotFigure from '@site/src/components/docs/ScreenshotFigure';
 
-Dashboards are the place where individual charts become a shared operational view. In the current StreamPipes product, dashboards are no longer built from a separate widget framework. Instead, they reuse the charts you already created in `Charts` and arrange them into one screen for monitoring, analysis, or presentation.
+Dashboards are the place where individual charts become a shared operational view. Dashboards reuse the charts you already created in `Charts` and arrange them into one screen for monitoring, analysis, or presentation.
 
 That design is important because it keeps the responsibilities clear. A chart answers one analytical question well. A dashboard combines several of those answers so a user can understand a machine, a line, or a whole process at a glance.
 
@@ -24,9 +24,9 @@ That design is important because it keeps the responsibilities clear. A chart an
     },
     {
       src: '/img/2026/dashboard-create.png',
-      alt: 'Dashboard runtime and edit mode',
-      title: 'Dashboard Runtime',
-      caption: 'The runtime screen shows the actual chart composition, the global toolbar, and the chart-selection panel in edit mode.',
+      alt: 'Dashboard edit mode',
+      title: 'Dashboard',
+      caption: 'The dashboard screen shows the actual chart composition, the global toolbar, and the chart-selection panel in edit mode.',
     },
   ]}
 />
@@ -170,13 +170,3 @@ Permissions matter when a dashboard should be available only to certain teams, r
 Charts and dashboards are tightly related, but they solve different problems. A chart answers one analytical question well. A dashboard combines several saved charts into one operational context. This is why the cleanest working style is to refine the chart first, save it, and then reuse it in one or more dashboards.
 
 If something looks wrong later, the right fix is often not in the dashboard layout at all. It is in the source chart. Once users understand that distinction, both features become much easier to use well.
-
-## Image placeholders
-
-`[Image placeholder: dashboard overview with actions for show, edit, clone, kiosk mode, settings, permissions, and delete]`
-
-`[Image placeholder: dashboard settings dialog with grid and slide options, global time, grid columns, row height, and hide-toolbox option]`
-
-`[Image placeholder: dashboard edit mode with right-side chart selection panel and a button to add saved charts]`
-
-`[Image placeholder: one dashboard shown in grid view and slide view to explain the difference between the two modes]`

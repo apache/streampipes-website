@@ -44,7 +44,7 @@ const LovedByUsers = (props) => (
           </p>
           <hr/>
           <p>Our pipeline elements focus on analyzing industrial IoT data - for instance, we provide many operators to transform process data from PLC systems.</p>
-          <a href="/docs/use-pipeline-editor/" className="sp-button sp-button-medium sp-button-blue"><i
+          <a href="/docs/use-pipelines/" className="sp-button sp-button-medium sp-button-blue"><i
             className="fas fa-hand-point-right"></i> Learn more</a>
         </FeatureItemHorizontal>
         <FeatureItemHorizontal featureNumber={"03."} title={"Exploit"} images={[{src: "/img/2026/dashboard-create.png", alt: "Dashboards"}, {src: "/img/2026/chart-status-heatmap.png", alt: "StreamPipes Status Heatmap"}, {src: "/img/2026/chart-traffic-light.png", alt: "Chart Traffic Light"}]}>
@@ -63,8 +63,8 @@ const LovedByUsers = (props) => (
           <hr/>
           <p className={"text-left"}>Use the live dashboard to visualize data in real-time, e.g., show critical values directly on the shopfloor.</p>
           <a href="/docs/use-charts/" className="sp-button sp-button-medium sp-button-blue"><i
-            className="fas fa-hand-point-right/"></i> Charts</a>
-          <a href="/docs/use-dashboard/" className="sp-button sp-button-medium sp-button-blue"><i
+            className="fas fa-hand-point-right"></i> Charts</a>
+          <a href="/docs/use-dashboards/" className="sp-button sp-button-medium sp-button-blue"><i
             className="fas fa-hand-point-right"></i> Dashboards</a>
         </FeatureItemHorizontal>
         <FeatureItemHorizontal featureNumber={"04."} title={"Manage"} images={[{src: "/img/2026/home-map.png", alt: "Homepage"}, {src: "/img/2026/asset-create.png", alt: "Asset Management"}, {src: "/img/2026/dataset-export-provider-dialog-s3.png", alt: "Retention Config"}]}>
