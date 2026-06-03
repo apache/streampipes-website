@@ -49,8 +49,6 @@ Here are some screenshots that help you understand what you can do with StreamPi
 
 <ScreenshotSlideshow
 title="StreamPipes Features"
-eyebrow="Style Check"
-badge="Preview"
 items={[
 {
 src: '/img/2026/home-map.png',

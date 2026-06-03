@@ -10,14 +10,11 @@ import ScreenshotComparison from '@site/src/components/docs/ScreenshotComparison
 import ScreenshotFigure from '@site/src/components/docs/ScreenshotFigure';
 
 Pipelines are where connected data becomes operational logic inside StreamPipes. They let you take one or more live streams, combine them with processors and sinks, and turn that flow into something useful: filtering, enrichment, alerting, routing, storage, or analytics.
-
-This is why pipelines matter so much in daily work. `Connect` brings data into the platform. Pipelines decide what should happen to that data next.
+The pipeline module uses an extensible set of `Extensions` such as data processors and data sinks and lets users define stream processing logic based on live data streams.
 
 ## What a pipeline is for
 
 A pipeline usually starts with a live stream, adds zero or more processing steps, and ends in one or more sinks. That sounds abstract at first, but in practice most pipelines serve straightforward industrial goals. A pipeline may keep only events above a threshold, enrich raw measurements with labels or derived values, forward selected events to another system, or persist curated results separately from the raw source data.
-
-In other words, pipelines are not just an “advanced analytics” feature. They are the main place where a team shapes live industrial data into reusable behavior.
 
 <UseCaseExample title="A typical operational pipeline">
   A team receives machine temperature values as a live stream. They filter for high readings, enrich the event with a severity label, and send the result to both a notification sink and a persisted dataset. The pipeline is not an experiment; it is a maintained operational flow.
@@ -212,16 +209,8 @@ The most reliable workflow is still to validate the pipeline visually first, the
 
 ## How to work well with pipelines
 
-In practice, good pipeline work usually follows a predictable pattern. Start with one clear input stream. Add only the processors that the use case truly needs. Configure each element against the actual upstream schema. Use preview early. Save with a name and description that make operational sense. Only then start the flow against real data.
+In practice, good pipeline work usually follows a predictable pattern. Start with one clear input stream. 
+Add only the processors that the use case truly needs. Configure each element against the actual upstream schema. Use preview early. Save with a name and description that make operational sense. Only then start the flow against real data.
 
-That style keeps pipelines understandable later. A pipeline should not feel like a temporary experiment nobody wants to touch. It should feel like a maintained part of the data platform.
-
-## Image placeholders
-
-`[Image placeholder: pipeline editor showing catalog, assembly canvas, compatible elements, and toolbar actions]`
-
-`[Image placeholder: pipeline element configuration dialog with input schema, documentation toggle, recommended settings, and template actions]`
-
-`[Image placeholder: pipeline overview showing status, health, warnings, start/stop actions, and bulk operations]`
-
-`[Image placeholder: pipeline details view showing logs, status, actions, live preview, and pipeline-as-code access]`
+If you are coming from other tools such as Node-RED, don't start with rebuilding the behaviour. In StreamPipes, pipelines are supposed to be single-purpose analytics functions. If a pipeline serves different purposes and has many splits, it is often better to split it into multiple pipelines and manage them independently. 
+Built-in features such as auto-migrations in case of changes in the related adapters make it easy to work with a larger number of pipelines.

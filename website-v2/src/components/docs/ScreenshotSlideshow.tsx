@@ -26,7 +26,7 @@ type ScreenshotSlideshowProps = {
 const ScreenshotSlideshow = ({
   items,
   title,
-  eyebrow = 'Slideshow',
+  eyebrow,
   badge,
   autoplayDelay = 3500,
 }: ScreenshotSlideshowProps) => {
