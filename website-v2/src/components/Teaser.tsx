@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import TeaserFeature from './TeaserFeature';
-import CircleContainer from './CircleContainer';
 
 const Teaser = (props) => (
   <>
@@ -13,10 +12,10 @@ const Teaser = (props) => (
                 <span className={"top-claim-area-subtitle-text"}>All-In-One</span>
               </div>
               <div className={"top-claim-area-main-title"}>
-                Industrial IoT Toolbox
+                Industrial IoT Data Platform
               </div>
             </div>
-            <div className="apache-teaser">Apache StreamPipes is a self-service Industrial IoT toolbox to enable
+            <div className="apache-teaser">Apache StreamPipes is a self-service Industrial IoT data platform to enable
               non-technical
               users to
               connect, analyze and explore IoT data streams.
@@ -37,25 +36,32 @@ const Teaser = (props) => (
 
             <div className="container-header">
               <div className="row">
-                <div className="col-12 col-lg-4">
+                <div className="col-12 col-lg-3">
                   <TeaserFeature
                     icon={"fa-table-columns"}
                     title={"Easy to use"}
                     subtitle={"Intuitive and fully integrated web-based user interface"}>
                   </TeaserFeature>
                 </div>
-                <div className="col-12 col-lg-4">
+                <div className="col-12 col-lg-3">
                   <TeaserFeature
                     icon={"fa-bolt"}
                     title={"Powerful"}
-                    subtitle={"Quickly implement your IIoT use cases"}>
+                    subtitle={"Quickly implement your IIoT use cases."}>
                   </TeaserFeature>
                 </div>
-                <div className="col-12 col-lg-4">
+                <div className="col-12 col-lg-3">
                   <TeaserFeature
                     icon={"fa-code"}
                     title={"Extensible"}
                     subtitle={"Developer tools for Java, Python and TypeScript"}>
+                  </TeaserFeature>
+                </div>
+                <div className="col-12 col-lg-3">
+                  <TeaserFeature
+                    icon={"fa-industry"}
+                    title={"Enterprise-ready"}
+                    subtitle={"Scale from pilot to production"}>
                   </TeaserFeature>
                 </div>
                 {/*<a href="https://www.apache.org/events/current-event.html">*/}

@@ -14,17 +14,17 @@ const ReadyforProduction = (props) => (
             User management is included and can be configured directly from the user interface.
           </p>
           <p className={"text-left text-light"}>
-            StreamPipes supports the management of users, groups and permissions, so that access to views can be individually restricted.
+            StreamPipes supports the management of users, groups and permissions, so that access to views can be individually restricted. OAuth 2.0 can enabled.
           </p>
         </Subsection>
         <div>
-          <img className="d-block w-100 mt-2 mb-2" src={"/img/screenshots/streampipes-user-management.png"} alt={"User Management"}/>
+          <img className="d-block w-100 mt-2 mb-2" src={"/img/2026/security-edit-user.png"} alt={"User Management"}/>
         </div>
       </TwoColumnFeatureSection>
 
       <TwoColumnFeatureSection>
         <div>
-          <img className="d-block w-100 mt-2 mb-2" src={"/img/screenshots/streampipes-mail-configuration.png"} alt={"Mail Configuration"}/>
+          <img className="d-block w-100 mt-2 mb-2" src={"/img/2026/settings-mail-template.png"} alt={"Mail Configuration"}/>
         </div>
         <Subsection title={"Email & notifications"}>
           <p className={"text-left text-light"}>

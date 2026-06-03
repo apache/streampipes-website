@@ -75,22 +75,6 @@ const LovedByDevelopers = (props) => (
             <img className="d-block w-100 mt-2 mb-2" src={"/img/screenshots/python-onlineml.png"} alt={"Online ML"}/>
           </div>
         </TwoColumnFeatureSection>
-        <TwoColumnFeatureSection>
-          <div>
-            <img className="d-block w-100 mt-2 mb-2" src={"/img/screenshots/streampipes-custom-ui.png"} alt={"Online ML"}/>
-          </div>
-          <Subsection title={"Customized User Interfaces"}>
-            <p className={"text-left"}>
-              As a software platform that targets the Industrial IoT, we know that many applications require their own user interface, for instance, to assist maintenance personnel or to visualize machine behaviour.
-            </p>
-            <p className={"text-left"}>
-              The default user interface of StreamPipes can be extended with additional views by an integrated microfrontend framework.
-            </p>
-            <p className={"text-left"}>
-              A Typescript client library and an API to access platform features help you to build your custom IIoT solution with much less programming effort.
-            </p>
-          </Subsection>
-        </TwoColumnFeatureSection>
       </PageSection>
 
     </>

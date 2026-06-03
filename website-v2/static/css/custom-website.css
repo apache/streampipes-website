@@ -301,7 +301,7 @@ img {
 	width:100%;
 	//background: rgba(255, 255, 255, 0.85);
 	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-	height: 250px;
+	height: 200px;
 	border-radius: 10px;
 	text-align: center;
 	padding: 15px;
@@ -310,20 +310,20 @@ img {
 .feature-highlights-icon {
     margin-right:10px;
 	color: var(--color-accent);
-	font-size: 3rem;
+	font-size: 2.5rem;
 }
 
 .feature-highlights-title {
     font-weight: 800;
 	color: var(--color-accent);
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 }
 
 .feature-highlights-subtitle {
 	color:var(--color-primary);
 	padding:3px;
 	font-weight: 500;
-	font-size: 1rem;
+	font-size: 0.9rem;
 }
 
 .sp-blue {
@@ -389,7 +389,7 @@ img {
 }
 
 .teaser-image {
-	background-image:url('/img/bg-img/sp.png');
+	background-image:url('/img/2026/home-table.png');
 	//background:linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('/img/bg-img/bg-index-color.png');
 	background-size:cover;
 	border-radius: 20px;
@@ -451,7 +451,7 @@ img {
 
 .top-claim-area-main-title {
 	font-weight: 800;
-	font-size: 5.25rem;
+	font-size: 4.25rem;
 	color: var(--color-primary);
 }
 
