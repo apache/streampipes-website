@@ -4,6 +4,8 @@ title: Deployment options
 sidebar_label: Deployment options
 ---
 
+import ScreenshotFigure from '@site/src/components/docs/ScreenshotFigure';
+
 ## Introduction
 
 StreamPipes supports several deployment models, from a simple single-host installation to distributed industrial setups with extension services running close to machines. This page explains how to deploy StreamPipes with Docker Compose or Kubernetes, how broker and transport choices affect the setup, and which configuration options are available in the current Helm chart.
@@ -499,4 +501,3 @@ This behavior is implemented in the chart's `secrets.yaml` template and is usefu
 ## Related configuration pages
 
 For the detailed environment-variable reference, continue with [Environment Variables](./06_configure-operate-environment-variables.md). For the operational view of registered services and runtime service configuration, see [Extension Services](./06_configure-operate-extension-services.md).
-

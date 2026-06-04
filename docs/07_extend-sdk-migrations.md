@@ -9,16 +9,6 @@ version of StreamPipes is installed. This means that whenever you upgrade Stream
 pipeline elements will be directly compatible with the new version without any manual interaction. Pipeline elements
 include adapters, data processors, and data sinks.
 
-:::info
-Migrations will make their debut in StreamPipes version `0.93.0` and will be an integral part of the system going
-forward.
-However, it's important to note that this feature is not available in any of the previous versions of StreamPipes. To
-take full advantage of migrations and their benefits, it is recommended to upgrade to version `0.93.0` or later. This
-will
-ensure that you have access to the latest enhancements and maintain compatibility with the evolving StreamPipes
-platform.
-:::
-
 ## Define Migrations
 
 Whenever a pipeline element, be it an adapter, data processor, or data sink, undergoes changes that result in

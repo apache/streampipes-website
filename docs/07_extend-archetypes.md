@@ -22,7 +22,7 @@ You can keep the default values for the other settings, confirm them by hitting 
 
 :::info Choosing the right version
 Make sure that the version used to create your archetype matches your running Apache StreamPipes version.
-In the example below, replace `{sp.version}` with the proper version, e.g., `0.92.0`.
+In the example below, replace `{sp.version}` with the proper version, e.g., `0.99.0`.
 :::
 
 ```bash

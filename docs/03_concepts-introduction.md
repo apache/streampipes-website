@@ -4,6 +4,8 @@ title: Introduction
 sidebar_label: Introduction
 ---
 
+import ScreenshotSlideshow from '@site/src/components/docs/ScreenshotSlideshow';
+
 ## What is Apache StreamPipes?
 
 Apache StreamPipes is an open-source platform for working with industrial data in motion.
@@ -20,10 +22,84 @@ In practice, StreamPipes combines several tasks that are often spread across mul
 
 This makes StreamPipes especially useful when you want to move from isolated machine data to a maintainable data product that operators, engineers, and developers can all work with.
 
-:::info Suggested image placeholder
-**Image idea:** Product overview screenshot that shows the main modules in one view, for example Connect, Pipelines, Charts, and Dashboards.  
-**Purpose:** Give new readers an immediate visual impression of StreamPipes as one integrated platform.
-:::
+<ScreenshotSlideshow
+  title="Apache StreamPipes User Interface Examples"
+  eyebrow="Product Tour"
+  items={[
+    {
+      src: '/img/2026/connect-create-select-adapter.png',
+      alt: 'StreamPipes Connect adapter selection',
+      title: 'Connect',
+      caption: 'Start by selecting the right adapter for the external system you want to integrate.',
+    },
+    {
+      src: '/img/2026/connect-create-opcua-browser.png',
+      alt: 'StreamPipes OPC UA browser',
+      title: 'Industrial Connectivity',
+      caption: 'Protocol-specific configuration views make industrial interfaces such as OPC UA directly usable from the UI.',
+    },
+    {
+      src: '/img/2026/connect-create-configure-schema-example.png',
+      alt: 'StreamPipes schema transformation view',
+      title: 'Schema and Transformation',
+      caption: 'Validate incoming events, refine their schema, and add transformations before ingesting them into the platform.',
+    },
+    {
+      src: '/img/2026/pipeline-editor-example.png',
+      alt: 'StreamPipes pipeline editor',
+      title: 'Pipelines',
+      caption: 'Build real-time processing flows that filter, enrich, and analyze live event streams.',
+    },
+    {
+      src: '/img/2026/pipeline-editor-configuration.png',
+      alt: 'Pipeline element configuration',
+      title: 'Processing Configuration',
+      caption: 'Each processing step is configured directly in the editor instead of being hidden in external code or scripts.',
+    },
+    {
+      src: '/img/2026/pipeline-overview-grouped.png',
+      alt: 'Pipeline overview page',
+      title: 'Operational Overview',
+      caption: 'Manage and inspect multiple running pipelines from one overview.',
+    },
+    {
+      src: '/img/2026/dashboard-create.png',
+      alt: 'Dashboard creation view',
+      title: 'Dashboards',
+      caption: 'Turn saved charts into reusable operational views for teams and shopfloor users.',
+    },
+    {
+      src: '/img/2026/chart-status-heatmap.png',
+      alt: 'Status heatmap chart in StreamPipes',
+      title: 'Charts',
+      caption: 'Use specialized industrial visualizations to explore persisted time-series and status data.',
+    },
+    {
+      src: '/img/2026/chart-traffic-light.png',
+      alt: 'Traffic light chart in StreamPipes',
+      title: 'Visual Monitoring',
+      caption: 'Compact visual components make thresholds and states immediately visible.',
+    },
+    {
+      src: '/img/2026/home-map.png',
+      alt: 'Homepage map view in StreamPipes',
+      title: 'Unified Context',
+      caption: 'StreamPipes combines data integration with operational context such as sites, assets, and locations.',
+    },
+    {
+      src: '/img/2026/asset-create.png',
+      alt: 'Asset management view in StreamPipes',
+      title: 'Assets',
+      caption: 'Model machines, plants, and other domain objects and link technical resources to them.',
+    },
+    {
+      src: '/img/2026/dataset-export-provider-dialog-s3.png',
+      alt: 'Dataset export provider configuration in StreamPipes',
+      title: 'Retention and Export',
+      caption: 'Persisted data can be retained, exported, and integrated with external storage targets.',
+    },
+  ]}
+/>
 
 ## What problem does StreamPipes solve?
 
