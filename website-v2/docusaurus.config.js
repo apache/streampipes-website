@@ -48,7 +48,6 @@ module.exports = {
           "showLastUpdateTime": true,
           "path": "../docs",
           "sidebarPath": "./sidebars.json",
-          lastVersion: 'current'
         },
         "blog": {
           "path": "blog"
