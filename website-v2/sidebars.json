@@ -58,6 +58,7 @@
       "items": [
         "how-to-mqtt",
         "how-to-opcua",
+        "how-to-opcua-events",
         "how-to-custom-adapter",
         "how-to-custom-data-processor",
         "how-to-custom-data-sink"

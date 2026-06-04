@@ -4,17 +4,19 @@ title: Terms
 sidebar_label: Terms
 ---
 
+import ScreenshotFigure from '@site/src/components/docs/ScreenshotFigure';
+
 To use StreamPipes effectively, it helps to think of it as an industrial data platform with a few core building blocks.
 Some of these building blocks bring data into the platform, some process or store it, and others add context so that machine data becomes useful across teams and use cases.
 
 This page introduces the most important terms you will encounter throughout the documentation and in the StreamPipes user interface.
 
-<img src="/img/02_concepts-overview/components-overview.png" alt="Overview of StreamPipes concepts"/>
-
-:::info Suggested image placeholder
-**Image idea:** Updated platform concepts diagram that includes Assets and Datasets in addition to Adapters, Data Streams, Data Processors, Data Sinks, and Pipelines.  
-**Purpose:** Show that StreamPipes is not only about stream processing, but also about organizing industrial context and reusable data resources.
-:::
+<ScreenshotFigure
+title="Overview of terms"
+src="/img/architecture/streampipes-terms.png"
+alt="The main resource types for interacting with IoT data in StreamPipes"
+caption="The main resource types for interacting with IoT data in StreamPipes"
+/>
 
 ## How the concepts fit together
 
@@ -25,8 +27,9 @@ At a high level, StreamPipes turns industrial source data into usable, governed,
 3. **Data Processors** transform, enrich, or analyze live streams.
 4. **Data Sinks** deliver results to storage, dashboards, notifications, or external systems.
 5. **Pipelines** combine these runtime building blocks into executable flows.
-6. **Assets** add operational context such as machines, lines, or sites.
+6. **Functions** are programmatically defined and consume input data streams and produce results as data streams. 
 7. **Datasets** capture reusable data collections for analysis, export, or downstream consumption.
+8. **Assets** add operational context such as machines, lines, or sites and organize the other resources.
 
 Together, these concepts position StreamPipes as more than an ingestion or rule engine.
 They define the platform model that StreamPipes uses to manage industrial data from source connection to downstream reuse.
@@ -41,15 +44,18 @@ The most visible extension types are:
 * **Adapters**, which connect external sources
 * **Data Processors**, which apply logic to live streams
 * **Data Sinks**, which persist, forward, or visualize results
+* **Functions**, which are programmatically-defined processing logic.
 
 This extension model is important because industrial environments are heterogeneous.
 No platform can predict every machine, protocol, or processing requirement in advance.
 StreamPipes therefore combines built-in functionality with a clear path for adding company-specific integrations and logic.
 
-:::info Suggested image placeholder
-**Image idea:** Marketplace or pipeline element catalog screenshot grouped by extension type.  
-**Purpose:** Show that adapters, processors, and sinks are modular platform capabilities rather than hardcoded features.
-:::
+<ScreenshotFigure
+src="/img/2026/settings-extensions.png"
+alt="Built-in and custom extensions can be installed at runtime."
+title="Extensions Catalog"
+caption="Built-in and custom extensions can be installed at runtime."
+/>
 
 ## Adapter
 
@@ -135,10 +141,12 @@ Pipelines are usually created visually in the [Pipeline Editor](04_use-pipelines
 
 Pipelines are important because they turn reusable building blocks into concrete industrial applications such as monitoring flows, quality checks, event routing, or real-time enrichment.
 
-:::info Suggested image placeholder
-**Image idea:** Example pipeline screenshot that shows one machine stream, two processors, and one sink.  
-**Purpose:** Make the relationship between streams, processors, and sinks immediately tangible.
-:::
+<ScreenshotFigure
+src="/img/2026/pipeline-editor-example.png"
+alt="Pipeline editor with element catalog, pipeline canvas, and save toolbar"
+title="Pipeline Editor"
+caption="The pipeline editor is used as a no-code approach to creating processing logic on live data streams."
+/>
 
 ## Asset
 
@@ -169,20 +177,3 @@ Depending on the use case, a dataset can help teams:
 
 This distinction is important because not all industrial use cases are purely real-time.
 Many require a combination of live processing and persistent, reusable data collections that can be explored later or exported into other systems.
-
-:::info Suggested image placeholder
-**Image idea:** Conceptual comparison graphic: live stream on one side, persistent dataset on the other.  
-**Purpose:** Clarify the difference between data in motion and curated or retained data collections.
-:::
-
-## Why these terms matter
-
-These concepts are not only documentation vocabulary.
-They define the operating model of the platform:
-
-* **Extensions** make the platform adaptable.
-* **Streams, processors, sinks, and pipelines** define the live execution model.
-* **Assets and datasets** make data easier to organize, understand, and reuse over time.
-
-Taken together, they describe what exists inside StreamPipes as a platform.
-The [Architecture](03_concepts-architecture.md) page explains how these concepts are implemented technically across the Core, extension services, messaging, and storage components.

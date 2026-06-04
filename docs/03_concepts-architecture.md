@@ -4,6 +4,8 @@ title: Architecture
 sidebar_label: Architecture
 ---
 
+import ScreenshotFigure from '@site/src/components/docs/ScreenshotFigure';
+
 Apache StreamPipes is designed as a distributed industrial data platform.
 Its architecture supports sovereign deployments, real-time data processing, and extension points for company-specific integrations and analytics.
 
@@ -11,8 +13,6 @@ This page explains the technical building blocks behind that platform model.
 If you are new to StreamPipes, read [Introduction](03_concepts-introduction.md) first for the overall positioning and [Terms](03_concepts-terms.md) for the core platform concepts.
 
 ## Architecture at a glance
-
-<img className="docs-image" src="/img/07_technicals/architecture.png" alt="StreamPipes architecture overview"/>
 
 At a high level, a StreamPipes installation consists of:
 
@@ -24,10 +24,11 @@ At a high level, a StreamPipes installation consists of:
 This architecture is intentionally distributed.
 It allows teams to run StreamPipes close to their data sources, split workloads across environments, and keep control over where industrial data is processed and stored.
 
-:::info Suggested image placeholder
-**Image idea:** Annotated architecture overview with labeled zones for UI, Core, Extension Services, Message Broker, Time-Series Database, and Configuration Storage.  
-**Purpose:** Give readers one clear mental model of the full deployment before the page goes into details.
-:::
+<ScreenshotFigure
+title="StreamPipes Architecture"
+src="/img/architecture/streampipes-architecture.png"
+alt="High-Level Architecture"
+/>
 
 ## Why the architecture looks this way
 
@@ -79,10 +80,13 @@ Instead of modifying a monolithic application, teams can add new services for pr
 Extensions can be developed with the SDK and deployed independently from the core platform.
 See [Extending StreamPipes](07_extend-setup.md) for implementation details.
 
-:::info Suggested image placeholder
-**Image idea:** Diagram showing the Core in the center and multiple extension services around it, each contributing different adapters, processors, or sinks.  
-**Purpose:** Make the extension model tangible and reinforce the modular platform story.
-:::
+<ScreenshotFigure
+title="StreamPipes Extension Services"
+src="/img/architecture/streampipes-extension-services.png"
+alt="Multiple extension services running at distributed locations can register at the core."
+caption="Multiple extension services running at distributed locations can register at the core."
+size="compact"
+/>
 
 ## User Interface
 
@@ -150,10 +154,13 @@ For example:
 
 This allows organizations to keep source-near integrations local while still building a shared industrial data platform at a higher level.
 
-:::info Suggested image placeholder
-**Image idea:** OT/IT deployment diagram with an extension service in the OT network and Core/UI/storage in the IT network.  
-**Purpose:** Show how StreamPipes supports secure, realistic industrial deployment topologies.
-:::
+<ScreenshotFigure
+title="Distributed deployment"
+src="/img/architecture/streampipes-distributed-deployment.png"
+alt="Distributed deployment with an extension service placed in the OT network for data connectivity."
+caption="Distributed deployment with an extension service placed in the OT network for data connectivity."
+size="compact"
+/>
 
 ## Communication Modes
 
@@ -207,7 +214,7 @@ It also provides developer-facing access through:
 
 * REST APIs
 * SDKs for building pipeline elements and extensions
-* client libraries for programmatic access
+* client libraries for programmatic access (Java, Python and Go)
 
 This supports use cases such as:
 
@@ -216,29 +223,14 @@ This supports use cases such as:
 * developing custom adapters, processors, and sinks
 * building data analytics workflows around live or historical machine data
 
-The platform is primarily implemented in Java, the UI is built with TypeScript and Angular, and Python support enables data-science-oriented workflows around StreamPipes.
+## Implementation
 
-## Third-Party Components in Context
+The core platform is primarily implemented in Java. Additional programming languages for developers who want to interact with StreamPipes are available for Python, Java and Go.
 
-StreamPipes intentionally builds on proven third-party infrastructure instead of reimplementing those layers itself.
-A standard installation therefore includes infrastructure components alongside the StreamPipes services, such as:
+The UI is built with TypeScript and Angular.
 
-* a message broker
-* a time-series database
-* a configuration database
+Python support enables data-science-oriented workflows around StreamPipes.
 
-These components are part of the installed platform architecture, even though they are separate technologies.
-This architecture gives teams flexibility without losing the benefits of one integrated platform experience.
-Users work with StreamPipes as a coherent system, while operators can still align deployments with existing infrastructure standards.
-
-## What this architecture enables
-
-Taken together, the architecture enables StreamPipes to act as a sovereign industrial data platform:
-
-* live machine data can be ingested and processed close to the source
-* data flows can be governed centrally across teams and sites
-* extensions can evolve independently of the core platform
-* messaging and storage infrastructure can be aligned with enterprise requirements
-* users and developers can work against one consistent platform model
-
-The result is an architecture that is not only technically scalable, but also operationally realistic for industrial environments.
+For data stream, StreamPipes provides its own stream processing framework that routes data from sources to data processors and sinks.
+The system is capable of processing thousands to tens of thousands events per second with sub-second latency out of the box, depending on the use case and data structure.
+For scenarios that require even more throughput or latency, there are many ways to fine-tune the system. The see [Environment Variables](06_configure-operate-environment-variables.md) section for configuration options.

@@ -109,48 +109,21 @@ Use Compose when you want:
 - a simple way to compare the `default`, `kafka`, and `minimal` variants
 - a development or test environment that closely matches the official installer
 
-## Kubernetes deployment
-
-The Kubernetes deployment is provided as a Helm chart in the StreamPipes source repository. The central configuration file is:
-
-- [installer/k8s/values.yaml](https://github.com/apache/streampipes/blob/dev/installer/k8s/values.yaml)
-
-Install the chart from the `installer/k8s` directory:
-
-```bash
-helm install streampipes ./
-```
-
-Remove it again with:
-
-```bash
-helm uninstall streampipes
-```
-
-Kubernetes is the better choice when you need:
-
-- managed persistent volumes
-- ingress or Traefik-based routing
-- explicit service exposure rules
-- cluster operations and lifecycle management
-- flexible deployment of central services and extension services
-
-### Ingress and storage
-
-The Helm chart supports both:
-
-- standard Kubernetes `Ingress`
-- Traefik `IngressRoute`
-
-It also supports storage customization through the `storageClassName` values for the persistent components.
-
 ## Distributed deployments
 
 A central advantage of StreamPipes is that extension services do not have to run in the same place as the UI and core. In industrial environments, this matters because data sources often live in restricted OT networks or on edge systems close to production equipment.
 
+<ScreenshotFigure
+title="Distributed deployment"
+src="/img/architecture/streampipes-distributed-deployment.png"
+alt="Distributed deployment with an extension service placed in the OT network for data connectivity."
+caption="Distributed deployment with an extension service placed in the OT network for data connectivity."
+size="compact"
+/>
+
 A common topology looks like this:
 
-- `Central IT environment`: UI, Core, CouchDB, InfluxDB, and usually the main broker
+- `Central IT environment`: UI, Core, CouchDB, InfluxDB, the main broker and an extension service with data processors and sinks.
 - `OT or edge environment`: one or more extension services that connect to local machines, PLCs, brokers, or APIs
 
 This split is useful when:
@@ -167,19 +140,21 @@ In practice, an extension service in the OT network can:
 - expose adapters and pipeline elements to the central StreamPipes installation
 - forward stream events through the configured message broker
 
+To reflect the security requirements typically found in OT networks, by enabling the NATS-based transport mode (see below), no incoming traffic needs to be allowed for the OT extension service, while adapters can still be managed from the central StreamPipes instance.
+
 This means StreamPipes can be operated as a central industrial data platform while still placing data collection and processing components near the edge.
+
 
 ## Message brokers
 
 StreamPipes supports different brokers for transporting events between adapters, processors, and sinks. In deployment terms, the broker is a core runtime decision because it affects both the infrastructure you install and the broker-specific configuration values you provide.
 
-### NATS
 
-`NATS` is the recommended default for new installations. The current default Compose installer uses it, and the Helm chart also defaults to:
+### Supported Message Brokers
 
-```yaml
-preferredBroker: "nats"
-```
+#### NATS
+
+`NATS` is the recommended default for new installations.
 
 Use NATS when you want:
 
@@ -187,7 +162,7 @@ Use NATS when you want:
 - a lightweight internal broker
 - an easy path into distributed deployments with StreamPipes extension services
 
-### Kafka
+#### Kafka
 
 `Kafka` remains available and is a good choice when:
 
@@ -197,11 +172,32 @@ Use NATS when you want:
 
 The Compose installer includes a dedicated Kafka preset, and the Helm chart keeps Kafka configuration values.
 
-### Pulsar
+#### Pulsar
 
 `Pulsar` is also part of the Kubernetes configuration model. It is relevant when your infrastructure already uses Pulsar or when you want StreamPipes to align with a Pulsar-based streaming environment.
 
+#### MQTT
+`MQTT` can also be configured but, similar to Pulsar, must be used from a custom docker compose setup which includes an MQTT broker. See the [Environment Variables](06_configure-operate-environment-variables.md) page for MQTT-specific configuration options.
+
 Unlike NATS and Kafka, there is no dedicated Compose preset for Pulsar in the standard installer. In practice, Pulsar is therefore mainly a Kubernetes or custom-deployment topic.
+
+### Choosing a broker setup
+
+You should decide at installation time which protocol StreamPipes should use for internal communication. The protocol can be set by providing an environment variable to the `core` (`backend`) service.
+
+```yaml
+# Use nats
+SP_PRIORITIZED_PROTOCOL=nats
+
+# Use kafka
+SP_PRIORITIZED_PROTOCOL=kafka
+
+# Use pulsar
+SP_PRIORITIZED_PROTOCOL=pulsar
+
+# Use mqtt
+SP_PRIORITIZED_PROTOCOL=mqtt
+```
 
 ## HTTP and NATS transport modes
 
@@ -260,9 +256,40 @@ Use the following rules of thumb:
 - Use `HTTP` transport first if you want the most direct service wiring.
 - Use `NATS` or `AUTO` transport modes when broker-based service communication fits the deployment better.
 
-## Related configuration pages
+## Kubernetes deployment
 
-For the detailed environment-variable reference, continue with [Environment Variables](./06_configure-operate-environment-variables.md). For the operational view of registered services and runtime service configuration, see [Extension Services](./06_configure-operate-extension-services.md).
+The Kubernetes deployment is provided as a Helm chart in the StreamPipes source repository. The central configuration file is:
+
+- [installer/k8s/values.yaml](https://github.com/apache/streampipes/blob/dev/installer/k8s/values.yaml)
+
+Install the chart from the `installer/k8s` directory:
+
+```bash
+helm install streampipes ./
+```
+
+Remove it again with:
+
+```bash
+helm uninstall streampipes
+```
+
+Kubernetes is the better choice when you need:
+
+- managed persistent volumes
+- ingress or Traefik-based routing
+- explicit service exposure rules
+- cluster operations and lifecycle management
+- flexible deployment of central services and extension services
+
+### Ingress and storage
+
+The Helm chart supports both:
+
+- standard Kubernetes `Ingress`
+- Traefik `IngressRoute`
+
+It also supports storage customization through the `storageClassName` values for the persistent components.
 
 ## Kubernetes configuration reference
 
@@ -468,3 +495,8 @@ The Helm chart generates several secret values automatically when they are left 
 - the InfluxDB admin token
 
 This behavior is implemented in the chart's `secrets.yaml` template and is useful for first installations. In managed environments, many teams still choose to provide those values explicitly through their deployment process.
+
+## Related configuration pages
+
+For the detailed environment-variable reference, continue with [Environment Variables](./06_configure-operate-environment-variables.md). For the operational view of registered services and runtime service configuration, see [Extension Services](./06_configure-operate-extension-services.md).
+
