@@ -92,7 +92,7 @@ The processor creates a new event containing:
 #### Configuration
 * Sensor Value: temperature
 * Label Name: temperature_status
-* Condition: "<;20;cold", "<;30;warm", "*;hot"
+* Condition: "\<\;20\;cold", "\<\;30\;warm", "*\;hot"
 
 #### Output Event
 ```json

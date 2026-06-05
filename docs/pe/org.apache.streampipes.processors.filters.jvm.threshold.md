@@ -51,10 +51,10 @@ Select the numerical field to monitor for threshold crossing.
 
 ### Operation
 Choose from six comparison operations:
-* **<** (Less than)
-* **<=** (Less than or equal)
-* **>** (Greater than)
-* **>=** (Greater than or equal)
+* **\<** (Less than)
+* **\<=** (Less than or equal)
+* **\>** (Greater than)
+* **\>=** (Greater than or equal)
 * **==** (Equal)
 * **!=** (Not equal)
 

@@ -52,10 +52,10 @@ A data stream containing at least one numerical field to filter on.
 
 ### Operation
 Choose from the following comparison operators:
-* **<** (Less than)
-* **<=** (Less than or equal)
-* **>** (Greater than)
-* **>=** (Greater than or equal)
+* **\<** (Less than)
+* **\<=** (Less than or equal)
+* **\>** (Greater than)
+* **\>=** (Greater than or equal)
 * **==** (Equal)
 * **!=** (Not equal)
 
@@ -87,7 +87,7 @@ The processor forwards the input event only if the numerical comparison evaluate
 #### Example 1: Greater Than Filter
 Configuration:
 * Field: temperature
-* Operation: >
+* Operation: \>
 * Threshold Value: 25.8
 
 Output Events:

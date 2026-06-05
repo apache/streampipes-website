@@ -51,9 +51,9 @@ The processor requires an input event stream containing:
 ### Numerical Filter
 * **Field**: Select the numerical field to apply the filter operation on
 * **Operation**: Choose from the following comparison operators:
-  * **<** (Less than)
-  * **<=** (Less than or equal)
-  * **>** (Greater than)
+  * **\<** (Less than)
+  * **\<=** (Less than or equal)
+  * **\>** (Greater than)
   * **>=** (Greater than or equal)
   * **==** (Equal)
   * **!=** (Not equal)
@@ -83,7 +83,7 @@ The processor forwards the input event only if both the numerical and text condi
 #### Configuration
 Numerical Filter:
 * Field: temperature
-* Operation: >
+* Operation: \>
 * Threshold: 20.0
 
 Text Filter:

@@ -44,7 +44,7 @@ This sink does not have any requirements and works with any incoming event type.
 ## Configuration
 
 ### URI
-The URI of the Milvus instance.("http://${YOUR_PROXY_IP}:19530")
+The URI of the Milvus instance.(`http://${YOUR_PROXY_IP}:19530`)
 
 ### Token
 A valid access token to access the specified Milvus instance.(default: "root:milvus")
