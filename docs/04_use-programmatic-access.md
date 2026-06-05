@@ -20,7 +20,16 @@ Not every integration with StreamPipes needs a custom extension. Sometimes the e
 
 Other common scenarios are collecting live data from a stream inside another service, listing available streams or pipelines, or reusing platform metadata such as templates and sink definitions.
 
-## Start with the correct client version
+## Python client
+
+We provide a Python client that allows to interact with StreamPipes and is tailored for data science support.
+
+Find the complete guide here: [Python Documentation](https://streampipes.apache.org/docs/docs/python/latest/)
+
+
+## Java Client 
+
+### Start with the correct client version
 
 The client library version should match the installed StreamPipes version. When you add the Java dependency, replace `${streampipes.version}` with the version of the StreamPipes installation you are working against.
 
@@ -34,7 +43,7 @@ The client library version should match the installed StreamPipes version. When 
 
 This version alignment matters because the client and the server should agree on the available API surface and data structures.
 
-## Decide how the client should authenticate
+### Decide how the client should authenticate
 
 To communicate with StreamPipes, the client needs valid credentials. In practice, there are two common choices.
 
@@ -44,7 +53,7 @@ To obtain an API token in the UI, open the user menu and navigate to `Profile/AP
 
 The rule of thumb is simple: if the integration is personal and temporary, an API token may be acceptable. If the integration is operational and should outlive individual users, a service account is usually the better design.
 
-## Connect the client to StreamPipes
+### Connect the client to StreamPipes
 
 Once the dependency and credentials are in place, the Java client can be created directly:
 
@@ -58,7 +67,7 @@ StreamPipesClient client = StreamPipesClient
 
 The credentials block can also be created with a service token instead of an API key. The client itself needs the host, the port, the credentials object, and the HTTPS flag. StreamPipes also provides convenience creation options, but the important point is that the client should connect to the same public address and protocol configuration your users would use in the browser.
 
-## Use the client for metadata and lifecycle work
+### Use the client for metadata and lifecycle work
 
 Once connected, the client can inspect streams, pipelines, sinks, and templates, and it can also trigger lifecycle operations such as starting or stopping pipelines.
 
@@ -79,7 +88,7 @@ List<DataSinkInvocation> dataSinks = client.sinks().all();
 
 The most useful way to think about these calls is not as isolated snippets, but as a client-side view into the same platform objects users see in the UI. Streams expose schema, pipelines expose lifecycle, templates expose reusable configuration, and sinks expose available targets.
 
-## Consume live data from streams
+### Consume live data from streams
 
 If the goal is not only to query metadata but also to consume live stream data, the client needs support for the messaging protocol used inside the StreamPipes installation.
 
@@ -139,7 +148,7 @@ client.streams().subscribe(dataStreams.get(0), new EventProcessor() {
 
 This is the point where the client moves from platform automation into live stream consumption. The important operational question is therefore not only “does the Java code compile?” but also “does the chosen protocol match the actual StreamPipes installation?”
 
-## How to work well with the client
+### How to work well with the client
 
 The most reliable pattern is to use the client for clearly scoped tasks: read platform metadata, automate lifecycle operations, or consume live stream data in a controlled way. A service account with appropriately limited permissions is usually the best basis for that work.
 

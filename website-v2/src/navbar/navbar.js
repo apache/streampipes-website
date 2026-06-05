@@ -7,20 +7,7 @@ module.exports = [
   {
     "label": "Docs",
     "position": "right",
-    items: [
-      {
-        "to": "docs/user-guide-introduction",
-        "label": "Apache StreamPipes - User Guide",
-      },
-      {
-        "to": "https://streampipes.apache.org/docs/docs/python/latest/",
-        "label": "Apache StreamPipes - Python",
-      },
-      {
-        "to": "docs/faq-common-problems",
-        "label": "FAQ",
-      },
-    ]
+    "to": "/docs/user-guide-introduction"
   },
   {
     "to": "/download",
@@ -42,10 +29,6 @@ module.exports = [
       {
         href: "http://cwiki.apache.org/confluence/display/STREAMPIPES",
         label: "Developer wiki"
-      },
-      {
-        "to": "/resources/slides-videos",
-        "label": "Slides & Videos",
       },
     ]
   },
@@ -69,11 +52,7 @@ module.exports = [
       {
         "to": "/community/get-involved",
         "label": "Get involved",
-      },
-      {
-        "to": "/community/talks-events",
-        "label": "Talks & Events",
-      },
+      }
     ]
   },
   {
