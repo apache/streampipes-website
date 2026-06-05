@@ -3,14 +3,12 @@ import TeaserFeature from './TeaserFeature';
 
 const Teaser = (props) => (
   <>
-    <section className="elements-area" style={{borderBottom: '1px solid #cecece'}}>
+    <section className="elements-area homepage-hero">
       <div className={"row"}>
         <div className={"col-lg-9 col-12 container-lg d-flex align-items-center justify-content-center"}>
           <div className={"left-claim-section"}>
             <div className={"top-claim-area"}>
-              <div className={"top-claim-area-subtitle"}>
-                <span className={"top-claim-area-subtitle-text"}>All-In-One</span>
-              </div>
+              <div className={"homepage-eyebrow"}>Open Source for Industrial Data Management</div>
               <div className={"top-claim-area-main-title"}>
                 Industrial IoT Data Platform
               </div>
@@ -21,7 +19,7 @@ const Teaser = (props) => (
               connect, analyze and explore IoT data streams.
             </div>
             <div className={"after-apache-teaser"}></div>
-            <div className={"teaser-actions text-center"}>
+            <div className={"teaser-actions text-center homepage-cta-group"}>
               <a href="/download/" className="sp-button sp-button-large sp-button-blue sp-button-margin"><i
                 className="fas fa-download"></i> Download</a>
               <a href="/docs/user-guide-introduction/"
@@ -34,7 +32,7 @@ const Teaser = (props) => (
               </a>
             </div>
 
-            <div className="container-header">
+            <div className="container-header homepage-feature-grid-shell">
               <div className="row">
                 <div className="col-12 col-lg-3">
                   <TeaserFeature

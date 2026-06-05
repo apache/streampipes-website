@@ -1,24 +1,20 @@
-import React, { FC } from 'react';
+import React from 'react';
 
-const DownloadBrowser = (props) => (
-  <>
-    <li className="installation-step">
-      <div className="row" style={{alignItems: 'center',justifyContent: 'center'}}>
-        <div className="col-md-1 col-3">
-            <span className="fa-stack fa-2x">
-                 <i className="fas fa-circle fa-stack-2x sp-color-green"></i>
-                 <strong className="fa-stack-1x"  style={{color:'white'}}>3</strong>
-            </span>
-        </div>
-        <div className="col-md-11 col-9">
-          Open your browser, navigate to http://localhost:80 (or use the domain name of your server) and finish the
-          setup according to the instructions.
-          The default login credentials are <code>admin@streampipes.apache.org</code>, password <code>admin</code>
-        </div>
-      </div>
-    </li>
-
-  </>
-)
+const DownloadBrowser = () => (
+  <div className="download-step-item">
+    <div className="download-step-index">2</div>
+    <div className="download-step-content">
+      <h4>Open the web interface</h4>
+      <p>
+        Open your browser and navigate to <code>http://localhost:80</code>, or use the host name of
+        the server where StreamPipes is running, and complete the setup flow in the UI.
+      </p>
+      <p>
+        The default credentials are <code>admin@streampipes.apache.org</code> and{' '}
+        <code>admin</code>.
+      </p>
+    </div>
+  </div>
+);
 
 export default DownloadBrowser;

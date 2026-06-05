@@ -30,21 +30,25 @@ const FlexibleDeployment = () => (
           </div>
         </Subsection>
         <div>
-          <img
-            className="d-block w-100 mt-2 mb-2"
-            src={'/img/architecture/streampipes-deployment-options.png'}
-            alt={'Deployment overview with Docker, Kubernetes, and supported brokers'}
-          />
+          <div className="homepage-media-frame">
+            <img
+              className="d-block w-100 mt-2 mb-2"
+              src={'/img/architecture/streampipes-deployment-options.png'}
+              alt={'Deployment overview with Docker, Kubernetes, and supported brokers'}
+            />
+          </div>
         </div>
       </TwoColumnFeatureSection>
 
       <TwoColumnFeatureSection>
         <div>
-          <img
-            className="d-block w-100 mt-2 mb-2"
-            src={'/img/architecture/streampipes-distributed-deployment.png'}
-            alt={'Distributed StreamPipes deployment across OT and IT environments'}
-          />
+          <div className="homepage-media-frame">
+            <img
+              className="d-block w-100 mt-2 mb-2"
+              src={'/img/architecture/streampipes-distributed-deployment.png'}
+              alt={'Distributed StreamPipes deployment across OT and IT environments'}
+            />
+          </div>
         </div>
         <Subsection title={'Distributed OT/IT deployment'}>
           <p className={'text-left'}>

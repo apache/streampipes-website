@@ -11,17 +11,17 @@ const PageSectionTitle = (props) => {
   return (
     <div className={`section-title ${largeSectionClass} ${alignClass}`} style={{marginBottom: props.marginBottom}}>
       {
-        props.sectionSubtitle ? (<span className="sub-title">{props.sectionSubtitle}</span>) : (<span></span>)
+        props.sectionSubtitle ? (<span className="sub-title homepage-section-subtitle">{props.sectionSubtitle}</span>) : (<span></span>)
       }
       {
-        props.title ? (<h2 className={`${titleClass} mb-4`}>{props.title}</h2>)
+        props.title ? (<h2 className={`${titleClass} mb-4 homepage-section-title`}>{props.title}</h2>)
           : (
-            <h2 className={`${titleClass} mb-4`}>
+            <h2 className={`${titleClass} mb-4 homepage-section-title`}>
               {props.titleId}
             </h2>
           )
       }
-      <div className={`${alignTextBlockClass} ${titleClass}`}>
+      <div className={`${alignTextBlockClass} ${titleClass} homepage-section-title-copy`}>
         {props.children}
       </div>
     </div>

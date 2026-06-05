@@ -30,12 +30,16 @@ const LovedByDevelopers = (props) => (
             </div>
           </Subsection>
           <div>
-            <img className="d-block w-100 mt-2 mb-2" src={"/img/screenshots/sdk-data-processor.png"} alt={"Online ML"}/>
+            <div className="homepage-media-frame">
+              <img className="d-block w-100 mt-2 mb-2" src={"/img/screenshots/sdk-data-processor.png"} alt={"SDK data processor"}/>
+            </div>
           </div>
         </TwoColumnFeatureSection>
         <TwoColumnFeatureSection>
           <div>
-            <img className="d-block w-100 mt-2 mb-2" src={"/img/screenshots/python-client.png"} alt={"Online ML"}/>
+            <div className="homepage-media-frame">
+              <img className="d-block w-100 mt-2 mb-2" src={"/img/screenshots/python-client.png"} alt={"Python client"}/>
+            </div>
           </div>
           <Subsection title={"Interact with StreamPipes through our client libraries"}>
             <p className={"text-left"}>
@@ -72,7 +76,9 @@ const LovedByDevelopers = (props) => (
             </div>
           </Subsection>
           <div>
-            <img className="d-block w-100 mt-2 mb-2" src={"/img/screenshots/python-onlineml.png"} alt={"Online ML"}/>
+            <div className="homepage-media-frame">
+              <img className="d-block w-100 mt-2 mb-2" src={"/img/screenshots/python-onlineml.png"} alt={"Online ML"}/>
+            </div>
           </div>
         </TwoColumnFeatureSection>
       </PageSection>

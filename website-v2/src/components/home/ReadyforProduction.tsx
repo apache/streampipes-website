@@ -18,13 +18,17 @@ const ReadyforProduction = (props) => (
           </p>
         </Subsection>
         <div>
-          <img className="d-block w-100 mt-2 mb-2" src={"/img/2026/security-edit-user.png"} alt={"User Management"}/>
+          <div className="homepage-media-frame homepage-media-frame-dark">
+            <img className="d-block w-100 mt-2 mb-2" src={"/img/2026/security-edit-user.png"} alt={"User Management"}/>
+          </div>
         </div>
       </TwoColumnFeatureSection>
 
       <TwoColumnFeatureSection>
         <div>
-          <img className="d-block w-100 mt-2 mb-2" src={"/img/2026/settings-mail-template.png"} alt={"Mail Configuration"}/>
+          <div className="homepage-media-frame homepage-media-frame-dark">
+            <img className="d-block w-100 mt-2 mb-2" src={"/img/2026/settings-mail-template.png"} alt={"Mail Configuration"}/>
+          </div>
         </div>
         <Subsection title={"Email & notifications"}>
           <p className={"text-left text-light"}>
@@ -49,7 +53,9 @@ const ReadyforProduction = (props) => (
           </p>
         </Subsection>
         <div>
-          <img className="d-block w-100 mt-2 mb-2" src={"/img/screenshots/streampipes-cli.png"} alt={"Online ML"}/>
+          <div className="homepage-media-frame homepage-media-frame-dark">
+            <img className="d-block w-100 mt-2 mb-2" src={"/img/screenshots/streampipes-cli.png"} alt={"Online ML"}/>
+          </div>
         </div>
       </TwoColumnFeatureSection>
     </PageSection>
