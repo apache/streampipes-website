@@ -4,8 +4,8 @@ title: Integrate OPC UA data
 sidebar_label: Integrate OPC UA data
 ---
 
-import DocVisualPlaceholder from '@site/src/components/docs/DocVisualPlaceholder.tsx';
 import UseCaseExample from '@site/src/components/docs/UseCaseExample.tsx';
+import ScreenshotFigure from '@site/src/components/docs/ScreenshotFigure';
 
 OPC UA is one of the most common ways to integrate industrial devices and machine data into StreamPipes.
 The StreamPipes OPC UA adapter can read selected nodes from an OPC UA server, either in pull mode or in subscription mode, and it supports unsecured as well as signed or encrypted connections.
@@ -33,9 +33,11 @@ If the server requires signed or encrypted communication, you should also prepar
 Open `Connect`, click `New Adapter`, and select `OPC UA` from the adapter catalog.
 The adapter configuration starts with the protocol-specific settings.
 
-<DocVisualPlaceholder
-  title="OPC UA Adapter Selection"
-  purpose="Show the adapter catalog with the OPC UA adapter selected."
+<ScreenshotFigure
+title="OPC UA Adapter Selection"
+src="/img/howto/opcua/howto-opcua-adapter-selection.png"
+alt="Select the OPC UA adapter from the adapter catalog"
+caption="Select the OPC UA adapter from the adapter catalog."
 />
 
 ## Choose pull mode or subscription mode
@@ -89,9 +91,11 @@ opc.tcp://test-server.com:4840
 
 If the connection fails, verify first that the endpoint is reachable from the extension service container or host, not only from your browser machine.
 
-<DocVisualPlaceholder
-  title="OPC UA Connection Settings"
-  purpose="Show the settings section with adapter mode, security mode, authentication, and endpoint URL filled in."
+<ScreenshotFigure
+title="OPC UA Adapter Basic Settings"
+src="/img/howto/opcua/howto-opcua-basic-settings-1.png"
+alt="Configure the basic settings for OPC UA"
+caption="Configure the basic settings for OPC UA."
 />
 
 ## Browse and select OPC UA nodes
@@ -106,6 +110,8 @@ The adapter supports two ways of defining the node selection:
 The tree view is usually the best option for the first setup because it allows you to navigate the server structure and inspect node details before selecting them.
 The text view is useful when you already know the exact node IDs or want to copy selections between environments.
 
+In the tree view, nodes can be inspected by clicking the `eye` icon. To select a node, click the `plus` icon.
+
 The selected nodes must be valid OPC UA variable nodes.
 If a node ID does not exist or uses an invalid format, the adapter validation fails and StreamPipes reports the offending node ID in the error message.
 
@@ -116,9 +122,11 @@ ns=2;s=Demo.Dynamic.Boolean
 ns=2;s=Demo.Dynamic.Int32
 ```
 
-<DocVisualPlaceholder
-  title="OPC UA Node Selection"
-  purpose="Show the node browser with a few selected variable nodes and the selected-nodes list."
+<ScreenshotFigure
+title="OPC UA Node Selection"
+src="/img/howto/opcua/howto-opcua-node-selection.png"
+alt="Select the OPC UA nodes"
+caption="Select the OPC UA nodes."
 />
 
 ## Finish the adapter setup
@@ -193,16 +201,23 @@ In practical terms, that means:
 
 ## Trust or reject certificates in Extension Services
 
+Upon connection, StreamPipes checks if the provided server certificate can be trusted. If an error occurs while validating the certificate, an errors is shown:
+
+<ScreenshotFigure
+title="OPC UA Untrusted Connection"
+src="/img/howto/opcua/howto-opcua-untrusted-certificate.png"
+alt="Untrusted Certificate"
+caption="Untrusted Certificate"
+/>
+
+If the certificate of the OPC UA server is not found in the trust store, it can also be manually trusted from the UI.
+This is an administrator-only view. An OPC UA server which provides a certificate that cannot be trusted is added to the list of untrusted servers in the core.
+
 StreamPipes exposes the current OPC UA certificates in `Configuration > Extension Services`, in the `Certificates` section.
 This is the operational view for reviewing and changing trust decisions after the extension service has seen a certificate.
 
 The table shows each certificate together with its issuer and expiry date.
 For every entry, StreamPipes provides actions to inspect details, switch the state between trusted and rejected, and delete the certificate entry entirely.
-
-<DocVisualPlaceholder
-  title="Extension Services Certificates"
-  purpose="Show the Certificates section in Configuration > Extension Services with one trusted and one rejected certificate."
-/>
 
 ### Typical trust workflow
 
@@ -241,8 +256,6 @@ The OPC UA documentation in the extension expects the certificate to include:
 - a subject alternative name that contains the application URI
 - `CA:FALSE` in the basic constraints when using a self-signed certificate
 - extended key usages for TLS web server authentication and TLS web client authentication
-
-This matters especially when you integrate with stricter OPC UA servers that validate certificate identity and intended use rigorously.
 
 ## Common issues
 

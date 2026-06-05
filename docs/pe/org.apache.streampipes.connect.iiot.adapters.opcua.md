@@ -32,7 +32,42 @@ sidebar_label: OPC UA
 
 ## Description
 
-Reads values from an OPC-UA server repeatedly
+This adapter reads node values from an OPC-UA server.
+The adapter supports both signed/encrypted and unencrypted communication.
+
+To establish connections using a `Sign` or `Sign & Encrypt` security mode,
+the extension service needs a writable OPC-UA security directory.
+If the configured keystore file does not exist yet, StreamPipes creates a client certificate
+and PKCS#12 keystore automatically on first use.
+The following environment variables control that location and certificate identity:
+
+* SP_OPCUA_SECURITY_DIR the directory where the keystore and trusted certificates are located
+* SP_OPCUA_KEYSTORE_FILE the keystore file to create or reuse (e.g., keystore.pfx, must be of type PKCS12)
+* SP_OPCUA_KEYSTORE_PASSWORD the password to the keystore
+* SP_OPCUA_APPLICATION_URI the application URI used by the client to identify itself
+
+Certificate requirements:
+
+The X509 certificate must provide the following extras:
+* Key Usage: Certificate Sign
+* Subject Alternative Name: Application URI
+* Basic Constraints: Must provide CA:FALSE when using a self-signed certificate
+* Extended Key Usage: TLS Web Server Authentication, TLS Web Client Authentication
+
+The directory layout of the `SP_OPCUA_SECURITY_DIR` look as follows:
+
+```
+SP_OPC_SECURITY_DIR/
+├─ pki/
+│  ├─ issuers/
+│  ├─ rejected/
+│  ├─ trusted/
+│  │  ├─ certs/
+│  │  ├─ crl/
+```
+
+Trusted server certificates are managed in the `pki` directory.
+Rejected certificates are stored in the `rejected` folder.
 
 ***
 
@@ -46,7 +81,15 @@ Reads values from an OPC-UA server repeatedly
 
 Duration of the polling interval in seconds
 
-### Anonymous vs. Username/Password
+### Security Mode
+
+Can be either None, Signed or Signed & Encrypt
+
+### Security Policy
+
+Choose one of the OPC-UA security policies or `None`
+
+### User Authentication
 
 Choose whether you want to connect anonymously or authenticate using your credentials.
 
@@ -59,14 +102,6 @@ Where can the OPC UA server be found?
 
 &nbsp;&nbsp;&nbsp;&nbsp; **URL**: Specify the server's full `URL` (including port), can be with our without leading `opc.tcp://`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **Host/Port**: Insert the `host` address (with or without leading `opc.tcp://`) and the `port`<br/>
-
-### Namespace Index
-
-Requires the index of the namespace you want to connect to.
-
-### Node ID
-
-The identifier of the node you want to read from, numbers and strings are both valid.
 
 ### Available Nodes
 

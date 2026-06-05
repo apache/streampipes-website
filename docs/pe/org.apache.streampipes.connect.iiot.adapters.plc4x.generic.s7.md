@@ -82,12 +82,27 @@ The following transports are supported by this adapter:
 
 * local-rack: Rack value for the client (PLC4X device). (INT)
 * local-slot: Slot value for the client (PLC4X device). (INT)
-* local-tsap: Local Transport Service Access Point. (INT)
+* local-device-group: Local Device Group. (Defaults to 'OTHERS').
+Allowed values:
+ - PG_OR_PC
+ - OS
+ - OTHERS (STRING)
+* local-tsap: Local Transport Service Access Point. (Overrides settings made in local-rack, local-slot and local-device-group. Be sure to convert into integer representation) (INT)
 * remote-rack: Rack value for the remote main CPU (PLC). (INT)
 * remote-slot: Slot value for the remote main CPU (PLC). (INT)
+* remote-device-group: Remote Device Group (Defaults to 'PG_OR_PC').
+Allowed values:
+ - PG_OR_PC
+ - OS
+ - OTHERS (STRING)
+* remote-tsap: Remote Transport Service Access Point. (Overrides settings made in remote-rack, remote-slot and remote-device-group. Be sure to convert into integer representation) (INT)
 * remote-rack2: Rack value for the remote secondary CPU (PLC). (INT)
 * remote-slot2: Slot value for the remote secondary CPU (PLC). (INT)
-* remote-tsap: Remote Transport Service Access Point. (INT)
+* remote-device-group2: Remote Device Group. (Defaults to 'PG_OR_PC').
+Allowed values:
+ - PG_OR_PC
+ - OS
+ - OTHERS (STRING)
 * pdu-size: Maximum size of a data-packet sent to and received from the remote PLC. During the connection process both parties will negotiate a maximum size both parties can work with and is equal or smaller than the given value is used. The driver will automatically split up large requests to not exceed this value in a request or expected response. (INT)
 * max-amq-caller: Maximum number of unconfirmed requests the PLC will accept in parallel before discarding with errors. This parameter also will be negotiated during the connection process and the maximum both parties can work with and is equal or smaller than the given value is used. The driver will automatically take care not exceeding this value while processing requests. Too many requests can cause a growing queue. (INT)
 * max-amq-callee: Maximum number of unconfirmed responses or requests PLC4X will accept in parallel before discarding with errors. This option is available for completeness and is correctly handled out during the connection process, however it is currently not enforced on PLC4X’s side. So if a PLC would send more messages than agreed upon, these would still be processed. (INT)
@@ -97,9 +112,9 @@ The following transports are supported by this adapter:
 - S7-1500
 - LOGO (STRING)
 * read-timeout: This is the maximum waiting time for reading on the TCP channel. As there is no traffic, it must be assumed that the connection with the interlocutor was lost and it must be restarted. When the channel is closed, the "fail over" is carried out in case of having the secondary channel, or it is expected that it will be restored automatically, which is done every 4 seconds. (INT)
-* ping: Time for supervision of TCP channels. If the channel is not active, a safe stop of the EventLoop must be performed, to ensure that no additional tasks are created. (BOOLEAN)
-* ping-time: If your application requires sampling times greater than the set "read-timeout" time, it is important that the PING option is activated, this will prevent the TCP channel from being closed unnecessarily. (INT)
-* retry-time: Time value in seconds at which the execution of the PING will be scheduled. Generally set by developer experience, but generally should be the same as (read-timeout / 2). (INT)
+* ping: If your application requires sampling times greater than the set "read-timeout" time, it is important that the PING option is activated, this will prevent the TCP channel from being closed unnecessarily. (BOOLEAN)
+* ping-time: Time value in seconds at which the execution of the PING will be scheduled. Generally set by developer experience, but generally should be the same as (read-timeout / 2). (INT)
+* retry-time: Time for supervision of TCP channels. If the channel is not active, a safe stop of the EventLoop must be performed, to ensure that no additional tasks are created. (INT)
 
 ### Tags
 

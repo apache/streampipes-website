@@ -6,6 +6,7 @@ sidebar_label: Integrate OPC UA events
 
 import DocVisualPlaceholder from '@site/src/components/docs/DocVisualPlaceholder.tsx';
 import UseCaseExample from '@site/src/components/docs/UseCaseExample.tsx';
+import ScreenshotFigure from '@site/src/components/docs/ScreenshotFigure';
 
 The `OPC UA Events` adapter is used when you want to receive OPC UA event notifications such as alarms and conditions instead of reading ordinary variable values.
 Unlike the regular OPC UA adapter, this adapter creates an event subscription and emits a flat event payload whenever the OPC UA server reports a matching event.
@@ -39,9 +40,11 @@ The trust workflow is managed in `Configuration > Extension Services > Certifica
 Open `Connect`, click `New Adapter`, and select `OPC UA Events`.
 The configuration starts with the same connection settings as the regular OPC UA adapter.
 
-<DocVisualPlaceholder
-  title="OPC UA Events Adapter Selection"
-  purpose="Show the adapter catalog with the OPC UA Events adapter selected."
+<ScreenshotFigure
+title="OPC UA Events Adapter Selection"
+src="/img/howto/opcua/howto-opcua-adapter-selection.png"
+alt="Select the OPC UA Events adapter from the adapter catalog"
+caption="Select the OPC UA Events adapter from the adapter catalog."
 />
 
 ## Configure the OPC UA connection
@@ -61,11 +64,6 @@ For secured endpoints, make sure the selected mode and policy match the server e
 If the server uses username/password authentication, provide those credentials in the adapter.
 If it uses X.509 authentication, provide the corresponding client certificate material expected by the adapter configuration.
 
-<DocVisualPlaceholder
-  title="OPC UA Events Connection Settings"
-  purpose="Show the endpoint, security, and authentication configuration for the OPC UA Events adapter."
-/>
-
 ## Choose where events should come from
 
 The next important decision is the event source scope.
@@ -83,9 +81,11 @@ This is useful when only one machine, production cell, or logical area should be
 If you choose a specific area or machine, StreamPipes loads a notifier tree from the OPC UA address space.
 Only event-capable object nodes are selectable there.
 
-<DocVisualPlaceholder
-  title="OPC UA Event Source"
-  purpose="Show the choice between whole-server subscription and a specific notifier node selected from the tree."
+<ScreenshotFigure
+title="OPC UA Events Event Source"
+src="/img/howto/opcua-events/howto-opcua-event-source.png"
+alt="Select event notifier node"
+caption="Select event notifier node."
 />
 
 ## Select the event type
@@ -103,9 +103,11 @@ In practice, however, selecting the concrete event type you care about makes the
 
 The event type tree is ordered alphabetically by browse name, so it is usually easiest to start with the family you expect, such as a base alarm type or a more specialized condition subtype.
 
-<DocVisualPlaceholder
-  title="OPC UA Event Type Selection"
-  purpose="Show the event type tree with one event type selected for the server-side filter."
+<ScreenshotFigure
+title="OPC UA Events Event Types"
+src="/img/howto/opcua-events/howto-opcua-events-type.png"
+alt="Select the event type to monitor"
+caption="Select the event type to monitor."
 />
 
 ## Add optional event fields carefully
@@ -137,9 +139,11 @@ The safest workflow is:
 If you change the selected event type later, reload the additional fields list before continuing.
 The available fields depend on the chosen type.
 
-<DocVisualPlaceholder
-  title="OPC UA Additional Fields"
-  purpose="Show the additional fields selector after choosing an event type."
+<ScreenshotFigure
+title="OPC UA Events Additional Fields"
+src="/img/howto/opcua-events/howto-opcua-events-additional-fields.png"
+alt="Select additional fields depending on the selected event type"
+caption="Select additional fields depending on the selected event type."
 />
 
 ## Configure event filters
@@ -157,11 +161,6 @@ The minimum severity filter keeps only events whose numeric severity is greater 
 
 These filters are useful when a server emits many events and you only want the subset that matters operationally.
 For example, a broad server subscription can still be made manageable by limiting it to one source-name pattern and a minimum severity.
-
-<DocVisualPlaceholder
-  title="OPC UA Event Filters"
-  purpose="Show the filter section with source name and minimum severity configured."
-/>
 
 ## Understand preview behavior
 

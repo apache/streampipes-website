@@ -81,8 +81,17 @@ The following transports are supported by this adapter:
 #### Optional
 
 * request-timeout: Default timeout for all types of requests. (INT)
-* unit-identifier: Unit-identifier that identifies the target PLC (On RS485 multiple Modbus Devices can be listening). Defaults to 1. (INT)
+* default-unit-identifier: Unit-identifier or slave-id that identifies the target PLC (On RS485 multiple Modbus Devices can be listening). Defaults to 1. (INT)
 * ping-address: Simple address, that the driver will use to check, if the connection to a given device is active (Defaults to reading holding-register 1). (STRING)
+* default-payload-byte-order: Default encoding used for transporting register values (Defaults to BIG_ENDIAN).
+Allowed values are: 
+ - BIG_ENDIAN
+ - LITTLE_ENDIAN
+ - BIG_ENDIAN_BYTE_SWAP
+ - LITTLE_ENDIAN_BYTE_SWAP
+ (STRING)
+* max-coils-per-request: Maximum number of coils addressable in one request (Defaults to 2000) (INT)
+* max-registers-per-request: Maximum number of registers addressable in one request (Defaults to 125) (INT)
 
 ### Tags
 

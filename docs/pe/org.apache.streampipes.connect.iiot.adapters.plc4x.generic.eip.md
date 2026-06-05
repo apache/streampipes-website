@@ -82,7 +82,8 @@ The following transports are supported by this adapter:
 
 * backplane: Without using routing information the backplane defaults to 1. This is overridden if communicationPath is provided. (INT)
 * slot: The slot within the backplane the CPU is located. (INT)
-* bigEndian: Configure if the connection should be set to transport data in Big-Endian format, or not. (BOOLEAN)
+* big-endian: Configure if the connection should be set to transport data in Big-Endian format, or not. (BOOLEAN)
+* force-unconnected-operation: Forces the driver to use unconnected requests. (BOOLEAN)
 
 ### Tags
 

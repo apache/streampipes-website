@@ -36,7 +36,7 @@ CEP engine Siddhi by issuing a Siddhi query, e.g.
 
 ```
 // filter query to filter out all events not satisfying the condition
-`from inputStreamName[numberField<10]`
+from inputStreamName[numberField<10]
 select *
 ```
 

@@ -1,7 +1,7 @@
 ---
-id: org.apache.streampipes.connect.iiot.adapters.netio.mqtt
-title: NETIO MQTT M2M
-sidebar_label: NETIO MQTT M2M
+id: org.apache.streampipes.sinks.databases.jvm.milvus
+title: Milvus
+sidebar_label: Milvus
 ---
 
 <!--
@@ -23,17 +23,15 @@ sidebar_label: NETIO MQTT M2M
   -->
 
 
-
 <p align="center"> 
-    <img src="/img/pipeline-elements/org.apache.streampipes.connect.iiot.adapters.netio.mqtt/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.sinks.databases.jvm.milvus/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***
 
 ## Description
 
-Connect Robots running on ROS
-
+stores events in a Milvus database.
 
 ***
 
@@ -45,20 +43,38 @@ This sink does not have any requirements and works with any incoming event type.
 
 ## Configuration
 
-Describe the configuration parameters here
+### URI
+The URI of the Milvus instance.("http://${YOUR_PROXY_IP}:19530")
 
-### Ros Bridge
+### Token
+A valid access token to access the specified Milvus instance.(default: "root:milvus")
 
-Example: test-server.com (No protocol)
+### DBName
+The name of the database to which the target Milvus instance belongs.
 
-### Port
+### DatabaseReplicasNumber
+The number of replicas of the database to create.
 
-The port of the ROS instance.
+### CollectionName
+The name of the collection to create.
 
-### Topic
+### Vector
+The name of the vector field to create.
 
-Example: /battery (Starts with /)
+### Index
+The name of the vectorDataType to create.
 
+### Primary
+The name of the primary key to create.
+
+### Dimension
+The dimension of the vector field to create.
+
+### MetricType
+The metric type of the vector field to create.
 
 ## Output
+(not applicable for data sinks)
+
+
 

@@ -14,32 +14,31 @@ The page is grouped by operational concern rather than by source file. That make
 
 These variables define how StreamPipes identifies itself internally and how services find each other.
 
-| Env Variable Name | Scope | Default Value | Description |
-|---|---|---|---|
-| `SP_HOST` | Core + Extensions | Empty | Generic host override used by some deployments and wrappers. |
-| `SP_PORT` | Core + Extensions | Empty | Generic port override used by some deployments and wrappers. |
-| `SP_CORE_SCHEME` | Extensions | `http` | Scheme used by internal clients when contacting the core service. |
-| `SP_CORE_HOST` | Extensions | `backend` | Internal host name of the core service. |
-| `SP_CORE_PORT` | Extensions | `8030` | Internal port of the core service. |
-| `SP_CORE_ASSET_BASE_DIR` | Core | Empty | Base directory for core-managed asset files. |
-| `SP_EXT_ASSET_BASE_DIR` | Extensions | Empty | Base directory for extension-managed asset files. |
-| `SP_CORE_EXTENSION_TRANSPORT_MODE` | Core | `http` | Transport mode used by the core when communicating with extensions. |
-| `SP_CORE_EXTENSIONS_TRANSPORT_MODE_TIMEOUT_SECONDS` | Core | `20` | Timeout in seconds for core-to-extension transport calls. |
-| `SP_EXTENSION_TRANSPORT_MODE` | Extensions | `http` | Transport mode used by extensions when communicating with the core. |
-| `SP_EXTENSION_REQUEST_TOPIC_PREFIX` | Core + Extensions | `sp.extensions.request` | Topic prefix used for extension request messaging. |
-| `SP_SERVICE_TAGS` | Core + Extensions | Empty | Comma-separated service tags used during service registration and discovery. |
+| Env Variable Name | Scope | Default Value               | Description |
+|---|---|-----------------------------|---|
+| `SP_HOST` | Core + Extensions | Empty                       | Generic host override used by some deployments and wrappers. |
+| `SP_PORT` | Core + Extensions | `8030 (Core), 8090 (Ext)`   | Generic port override used by some deployments and wrappers. |
+| `SP_CORE_SCHEME` | Extensions | `http`                      | Scheme used by internal clients when contacting the core service. |
+| `SP_CORE_HOST` | Extensions | `backend`                   | Internal host name of the core service. |
+| `SP_CORE_PORT` | Extensions | `8030`                      | Internal port of the core service. |
+| `SP_CORE_ASSET_BASE_DIR` | Core | `${user.home}/.streampipes` | Base directory for core-managed asset files. |
+| `SP_EXT_ASSET_BASE_DIR` | Extensions | `${user.home}/.streampipes`                       | Base directory for extension-managed asset files. |
+| `SP_CORE_EXTENSION_TRANSPORT_MODE` | Core | `http`                      | Transport mode used by the core when communicating with extensions. |
+| `SP_CORE_EXTENSIONS_TRANSPORT_MODE_TIMEOUT_SECONDS` | Core | `20`                        | Timeout in seconds for core-to-extension transport calls. |
+| `SP_EXTENSION_TRANSPORT_MODE` | Extensions | `http`                      | Transport mode used by extensions when communicating with the core. |
+| `SP_EXTENSION_REQUEST_TOPIC_PREFIX` | Core + Extensions | `sp.extensions.request`     | Topic prefix used for extension request messaging. |
+| `SP_SERVICE_TAGS` | Core + Extensions | Empty                       | Comma-separated service tags used during service registration and discovery. |
 
 ## Installation, setup, and general runtime
 
 These variables shape first startup behavior and a few cross-cutting runtime options.
 
-| Env Variable Name | Scope | Default Value | Description |
-|---|---|---|---|
-| `SP_DEBUG` | Core + Extensions | `false` | Debug mode for local development and related traffic-routing behavior. |
+| Env Variable Name | Scope | Default Value | Description                                                                  |
+|---|---|---|------------------------------------------------------------------------------|
+| `SP_DEBUG` | Core + Extensions | `false` | Debug mode for local development and related traffic-routing behavior.       |
 | `SP_SETUP_INSTALL_PIPELINE_ELEMENTS` | Core | From `DefaultEnvValues.INSTALL_PIPELINE_ELEMENTS` | Controls whether pipeline elements are installed automatically during setup. |
-| `SP_INITIAL_WAIT_BEFORE_INSTALLATION_MS` | Core | `5000` | Wait time before installation tasks start. |
-| `SP_MAX_WAIT_TIME_AT_SHUTDOWN` | Core + Extensions | Empty | Maximum wait time during shutdown handling. |
-| `SP_ALLOWED_UPLOAD_FILETYPES` | Core | Empty | Comma-separated allowlist for uploadable file types. |
+| `SP_INITIAL_WAIT_BEFORE_INSTALLATION_MS` | Core | `5000` | Wait time before installation tasks start.                                   |
+| `SP_ALLOWED_UPLOAD_FILETYPES` | Core | Empty | Comma-separated allowlist for additional uploadable file types.              |
 
 ## Security, authentication, and initial credentials
 
@@ -50,11 +49,11 @@ These variables control bootstrap credentials, encryption, JWT signing, and exte
 | `SP_INITIAL_ADMIN_EMAIL` | Core | `admin@streampipes.apache.org` | Initial administrator email for a fresh installation. |
 | `SP_INITIAL_ADMIN_PASSWORD` | Core | `admin` | Initial administrator password for a fresh installation. |
 | `SP_INITIAL_SERVICE_USER` | Core | `sp-service-client` | Initial technical service account used for service-to-service communication. |
-| `SP_INITIAL_SERVICE_USER_SECRET` | Core | From `DefaultEnvValues.INITIAL_CLIENT_SECRET_DEFAULT` | Initial secret for the technical service account. |
+| `SP_INITIAL_SERVICE_USER_SECRET` | Core | `my-apache-streampipes-secret-key-change-me` | Initial secret for the technical service account. |
 | `SP_CLIENT_USER` | Extensions | `sp-service-client` | Service account used by extensions or integrations to authenticate against the core. |
-| `SP_CLIENT_SECRET` | Extensions | From `DefaultEnvValues.INITIAL_CLIENT_SECRET_DEFAULT` | Secret used together with `SP_CLIENT_USER`. |
+| `SP_CLIENT_SECRET` | Extensions | `my-apache-streampipes-secret-key-change-me` | Secret used together with `SP_CLIENT_USER`. |
 | `SP_EXT_AUTH_MODE` | Extensions | Empty | Extension authentication mode, for example whether extension endpoints require authenticated access. |
-| `SP_ENCRYPTION_PASSCODE` | Core | From `DefaultEnvValues.DEFAULT_ENCRYPTION_PASSCODE` | Encryption passcode used for secret static properties and related protected values. |
+| `SP_ENCRYPTION_PASSCODE` | Core | `eGgemyGBoILAu3xckoIp` | Encryption passcode used for secret static properties and related protected values. |
 | `SP_JWT_SECRET` | Core | Empty | Shared JWT secret used in HMAC-based signing setups. |
 | `SP_JWT_SIGNING_MODE` | Core | Empty | JWT signing mode, typically `HMAC` or `RSA`. |
 | `SP_JWT_PRIVATE_KEY_LOC` | Core | Empty | Path to the JWT private key for RSA-based signing. |
@@ -80,29 +79,30 @@ These variables configure the document store and the time-series backend used by
 
 | Env Variable Name | Scope | Default Value | Description |
 |---|---|---|---|
-| `SP_COUCHDB_PROTOCOL` | Core + Extensions | `http` | Protocol used to access CouchDB. |
-| `SP_COUCHDB_HOST` | Core + Extensions | `couchdb` | Host name of the CouchDB instance. |
-| `SP_COUCHDB_PORT` | Core + Extensions | `5984` | Port of the CouchDB instance. |
-| `SP_COUCHDB_USER` | Core + Extensions | `admin` | User name used for CouchDB access. |
-| `SP_COUCHDB_PASSWORD` | Core + Extensions | `admin` | Password used for CouchDB access. |
+| `SP_COUCHDB_PROTOCOL` | Core | `http` | Protocol used to access CouchDB. |
+| `SP_COUCHDB_HOST` | Core | `couchdb` | Host name of the CouchDB instance. |
+| `SP_COUCHDB_PORT` | Core | `5984` | Port of the CouchDB instance. |
+| `SP_COUCHDB_USER` | Core | `admin` | User name used for CouchDB access. |
+| `SP_COUCHDB_PASSWORD` | Core | `admin` | Password used for CouchDB access. |
 
 ### Time-series storage
 
-| Env Variable Name | Scope | Default Value | Description |
-|---|---|---|---|
-| `SP_TS_STORAGE` | Core + Extensions | `influxdb` | Selected time-series backend implementation. |
-| `SP_TS_STORAGE_PROTOCOL` | Core + Extensions | `http` | Protocol used to access the time-series backend. |
-| `SP_TS_STORAGE_HOST` | Core + Extensions | `influxdb` | Host name of the time-series backend. |
-| `SP_TS_STORAGE_PORT` | Core + Extensions | `8086` | Port of the time-series backend. |
-| `SP_TS_STORAGE_TOKEN` | Core + Extensions | `sp-admin` | Token used for time-series backend access. |
-| `SP_TS_STORAGE_ORG` | Core + Extensions | `sp` | Organization name used by the time-series backend. |
-| `SP_TS_STORAGE_BUCKET` | Core + Extensions | `sp` | Bucket or logical storage target used by the time-series backend. |
-| `SP_TS_STORAGE_IOT_DB_SESSION_POOL_SIZE` | Core + Extensions | `10` | Session-pool size for IoTDB-based setups. |
-| `SP_TS_STORAGE_IOT_DB_SESSION_POOL_ENABLE_COMPRESSION` | Core + Extensions | `false` | Enables compression for the IoTDB session pool. |
-| `SP_TS_STORAGE_IOT_DB_USER` | Core + Extensions | `root` | User name for IoTDB-based setups. |
-| `SP_TS_STORAGE_IOT_DB_PASSWORD` | Core + Extensions | `root` | Password for IoTDB-based setups. |
+| Env Variable Name | Scope                    | Default Value | Description |
+|---|--------------------------|---|---|
+| `SP_TS_STORAGE` | Core + Extensions (opt)  | `influxdb` | Selected time-series backend implementation. |
+| `SP_TS_STORAGE_PROTOCOL` | Core + Extensions (opt)  | `http` | Protocol used to access the time-series backend. |
+| `SP_TS_STORAGE_HOST` | Core + Extensions (opt)  | `influxdb` | Host name of the time-series backend. |
+| `SP_TS_STORAGE_PORT` | Core + Extensions  (opt) | `8086` | Port of the time-series backend. |
+| `SP_TS_STORAGE_TOKEN` | Core + Extensions (opt)  | `sp-admin` | Token used for time-series backend access. |
+| `SP_TS_STORAGE_ORG` | Core + Extensions (opt)  | `sp` | Organization name used by the time-series backend. |
+| `SP_TS_STORAGE_BUCKET` | Core + Extensions (opt)  | `sp` | Bucket or logical storage target used by the time-series backend. |
+| `SP_TS_STORAGE_IOT_DB_SESSION_POOL_SIZE` | Core + Extensions (opt)  | `10` | Session-pool size for IoTDB-based setups. |
+| `SP_TS_STORAGE_IOT_DB_SESSION_POOL_ENABLE_COMPRESSION` | Core + Extensions (opt)  | `false` | Enables compression for the IoTDB session pool. |
+| `SP_TS_STORAGE_IOT_DB_USER` | Core + Extensions (opt)  | `root` | User name for IoTDB-based setups. |
+| `SP_TS_STORAGE_IOT_DB_PASSWORD` | Core + Extensions (opt)  | `root` | Password for IoTDB-based setups. |
 
-The containerized InfluxDB service itself may also need service-specific variables such as `DOCKER_INFLUXDB_INIT_PASSWORD` and `DOCKER_INFLUXDB_INIT_ADMIN_TOKEN`, but those are not part of the shared `Envs` class.
+For extension services, these variables are optional depending on the included extensions.
+The containerized InfluxDB service itself may also need service-specific variables such as `DOCKER_INFLUXDB_INIT_PASSWORD` and `DOCKER_INFLUXDB_INIT_ADMIN_TOKEN`, see the `Docker Compose` files for reference.
 
 ## Messaging and broker configuration
 
@@ -155,14 +155,14 @@ These variables define keystore, truststore, and OPC UA-specific security behavi
 
 | Env Variable Name | Scope | Default Value | Description |
 |---|---|---|---|
-| `SP_SECURITY_KEYSTORE_FILENAME` | Core + Extensions | `/streampipes-security/keystore.pfx` | Default keystore filename. |
-| `SP_SECURITY_KEYSTORE_PASSWORD` | Core + Extensions | Empty | Password for the default keystore. |
-| `SP_SECURITY_KEYSTORE_TYPE` | Core + Extensions | `PKCS12` | Type of the default keystore. |
-| `SP_SECURITY_KEY_PASSWORD` | Core + Extensions | Empty | Password for the key inside the keystore if it differs from the store password. |
-| `SP_SECURITY_TRUSTSTORE_FILENAME` | Core + Extensions | `/streampipes-security/truststore.pfx` | Default truststore filename. |
-| `SP_SECURITY_TRUSTSTORE_PASSWORD` | Core + Extensions | Empty | Password for the default truststore. |
-| `SP_SECURITY_TRUSTSTORE_TYPE` | Core + Extensions | `PKCS12` | Type of the default truststore. |
-| `SP_SECURITY_ALLOW_SELFSIGNED` | Core + Extensions | `false` | Whether self-signed certificates are accepted. |
+| `SP_SECURITY_KEYSTORE_FILENAME` | Extensions | `/streampipes-security/keystore.pfx` | Default keystore filename. |
+| `SP_SECURITY_KEYSTORE_PASSWORD` | Extensions | Empty | Password for the default keystore. |
+| `SP_SECURITY_KEYSTORE_TYPE` | Extensions | `PKCS12` | Type of the default keystore. |
+| `SP_SECURITY_KEY_PASSWORD` | Extensions | Empty | Password for the key inside the keystore if it differs from the store password. |
+| `SP_SECURITY_TRUSTSTORE_FILENAME` | Extensions | `/streampipes-security/truststore.pfx` | Default truststore filename. |
+| `SP_SECURITY_TRUSTSTORE_PASSWORD` | Extensions | Empty | Password for the default truststore. |
+| `SP_SECURITY_TRUSTSTORE_TYPE` | Extensions | `PKCS12` | Type of the default truststore. |
+| `SP_SECURITY_ALLOW_SELFSIGNED` | Extensions | `false` | Whether self-signed certificates are accepted. |
 
 ## PLC4X, retention, and archive behavior
 

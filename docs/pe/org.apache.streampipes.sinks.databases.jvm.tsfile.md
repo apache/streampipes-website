@@ -1,7 +1,7 @@
 ---
-id: org.apache.streampipes.connect.iiot.adapters.netio.rest
-title: NETIO http JSON
-sidebar_label: NETIO http JSON
+id: org.apache.streampipes.sinks.databases.jvm.tsfile
+title: tsfile
+sidebar_label: tsfile
 ---
 
 <!--
@@ -23,17 +23,15 @@ sidebar_label: NETIO http JSON
   -->
 
 
-
 <p align="center"> 
-    <img src="/img/pipeline-elements/org.apache.streampipes.connect.iiot.adapters.netio.rest/icon.png" width="150px;" class="pe-image-documentation"/>
+    <img src="/img/pipeline-elements/org.apache.streampipes.sinks.databases.jvm.tsfile/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***
 
 ## Description
 
-Connect Robots running on ROS
-
+stores events in TsFile
 
 ***
 
@@ -45,20 +43,23 @@ This sink does not have any requirements and works with any incoming event type.
 
 ## Configuration
 
-Describe the configuration parameters here
+### DeviceId
+The device id of the TsFile.
 
-### Ros Bridge
+### TsFIleName
+The name of the TsFile to create.
 
-Example: test-server.com (No protocol)
+### TimeStamp
+To create timeStamp field in TsFile.
 
-### Port
+### TsFileGenerationDirectory
+The directory where the TsFile will be generated.
 
-The port of the ROS instance.
+### MaxTsFileSize
+The maximum size of the TsFile. The default value is 10MB.
 
-### Topic
+### MaxFlushDiskSize
+The maximum memory cache when writing TSFile
 
-Example: /battery (Starts with /)
-
-
-## Output
-
+### Aligned
+This field allows users to choose whether the written data format is aligned or not 
