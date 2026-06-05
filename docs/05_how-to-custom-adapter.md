@@ -439,7 +439,7 @@ registering our adapter service with the core to make the adapter available in S
 This is done within `provideServiceDefinition()`. Since we don't have the generic adapter ready yet,
 we'll comment out its registration (`line 7`). Now we can run the `Init` class to register the adapter with your running
 StreamPipes instance. If you don't have a running instance at your hand,
-you can take a look at our [Installation Guide](02_installation.md).
+you can take a look at our [Installation Guide](02_quick-start-guide.md).
 
 ```java jsx {7-8} showLineNumbers
 @Override

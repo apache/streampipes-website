@@ -100,7 +100,7 @@ module.exports = [
   {
     href: "https://twitter.com/streampipes",
     position: "right",
-    className: "header-link h-twitter",
-    "aria-label": "Apache StreamPipes Twitter",
+    className: "header-link h-x",
+    "aria-label": "Apache StreamPipes on X",
   },
 ];

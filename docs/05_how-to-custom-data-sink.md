@@ -269,4 +269,3 @@ the [user guide](06_configure-operate-extensions.md).
 
 Congratulations! You've just created your first data sink for StreamPipes.
 There are many more things to explore and data sinks can be defined in much more detail using multiple wrappers.
-Follow our [SDK guide](../dev-guide-sdk-guide-sinks) to see what's possible!
