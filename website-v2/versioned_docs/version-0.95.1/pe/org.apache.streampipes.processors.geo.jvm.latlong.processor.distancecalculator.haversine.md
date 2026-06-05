@@ -56,6 +56,8 @@ This is the second geographic coordinate that specifies the east-west position o
 This is the second geographic coordinate that specifies the north-south position of a point on the Earth's surface.
 
 ## Output
+```json
 {
-  'distance': 12.2
+  "distance": 12.2
 }
+```

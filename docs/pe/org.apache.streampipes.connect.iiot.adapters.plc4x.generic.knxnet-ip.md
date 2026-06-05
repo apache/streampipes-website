@@ -81,20 +81,20 @@ Use this configuration option in order to define the port number of the local po
 
 #### Optional
 
-* knxproj-file-path: Path to the `knxproj` file. The default KNXnet/IP protocol doesn't provide all the information needed to be able to fully decode the messages. (STRING)
+* knxproj-file-path: Path to the `knxproj` file. The default KNXnet\/IP protocol doesn't provide all the information needed to be able to fully decode the messages. (STRING)
 * knxproj-password: Optional password needed to read the knxproj file. (STRING)
 * group-address-num-levels: KNX Addresses can be encoded in multiple ways. Which encoding is used, is too not provided by the protocol itself so it has to be provided externally:
 
-- 3 Levels: {main-group (5 bit)}/{middle-group (3 bit)}/{sub-group (8 bit)}
-- 2 Levels: {main-group (5 bit)}/{sub-group (11 bit)}
-- 1 Level: {sub-group (16 bit)}
+- 3 Levels: `{main-group (5 bit)}/{middle-group (3 bit)}/{sub-group (8 bit)}`
+- 2 Levels: `{main-group (5 bit)}/{sub-group (11 bit)}`
+- 1 Level: `{sub-group (16 bit)}`
 
 The default is 3 levels. If the `knxproj-file-path` this information is provided by the file. (INT)
 * connection-type: Type of connection used to communicate. Possible values are:
 
 - 'LINK_LAYER' (default): The client becomes a participant of the KNX bus and gets it's own individual KNX address.
 - 'RAW': The client gets unmanaged access to the bus (be careful with this)
-- 'BUSMONITOR': The client operates as a busmonitor where he can't actively participate on the bus. Only one 'BUSMONITOR' connection is allowed at the same time on a KNXnet/IP gateway. (STRING)
+- 'BUSMONITOR': The client operates as a busmonitor where he can't actively participate on the bus. Only one 'BUSMONITOR' connection is allowed at the same time on a KNXnet\/IP gateway. (STRING)
 
 ### Tags
 

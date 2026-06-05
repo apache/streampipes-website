@@ -17,20 +17,71 @@
  */
 
 .page-banner-area {
-    height: 250px;
-    width: 100%;
     position: relative;
-    z-index: 1;
-    //background: linear-gradient(0deg,rgba(57, 181, 74, 0.8),rgba(57, 181, 74, 0.8)), url('/img/bg-img/bg-index.jpg');
-    background-size:cover;
-    background: #fcfcfc;
-    border-bottom: 1px solid #cecece;
-    color:var(--color-accent);
+    overflow: hidden;
+    padding: 6rem 0 2.8rem;
+    background:
+        radial-gradient(circle at top left, rgba(57, 181, 74, 0.14), transparent 32%),
+        radial-gradient(circle at 85% 25%, rgba(27, 20, 100, 0.1), transparent 26%),
+        linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    color: var(--color-primary);
 }
 
-.page-banner-content h2 {
-    color: var(--color-accent);
+.page-banner-shell {
+    position: relative;
+    max-width: 52rem;
+    padding: 1.6rem 2rem;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+    backdrop-filter: blur(8px);
+}
+
+.page-banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+.page-banner-content h1 {
+    margin: 0;
+    color: var(--color-primary);
     font-family: 'Heebo', sans-serif;
-    font-size: 68px;
+    font-size: clamp(2.3rem, 4.4vw, 4rem);
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
 }
 
+.page-banner-subtitle {
+    max-width: 40rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0;
+    font-size: 1.02rem;
+    line-height: 1.6;
+    color: #52606d;
+}
+
+.page-banner-accent {
+    position: absolute;
+    border-radius: 999px;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.page-banner-accent-left {
+    top: 4rem;
+    left: -4rem;
+    width: 14rem;
+    height: 14rem;
+    background: radial-gradient(circle, rgba(57, 181, 74, 0.26), rgba(57, 181, 74, 0));
+}
+
+.page-banner-accent-right {
+    right: -3rem;
+    bottom: -2rem;
+    width: 16rem;
+    height: 16rem;
+    background: radial-gradient(circle, rgba(27, 20, 100, 0.14), rgba(27, 20, 100, 0));
+}

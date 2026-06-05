@@ -25,10 +25,6 @@ On the left, the navigation menu can be seen.
 You can either use the icons on the left side or click on the menu icon on the
 top left to open the details view of the navigation menu.
 
-<div class="my-carousel docs-carousel">
-    <img src="/img/quickstart/user-guide/01_home.png" alt="Home"/>
-</div>
-
 ## Connect
 The _Connect_ view provides an overview of all existing adapters to let StreamPipes connect data sources.
 
@@ -131,4 +127,3 @@ In Quickstart mode, StreamPipes have pre-defined several notification trigger in
 
 
 Congratulations! You've just finished Quickstart user guide of StreamPipes.
-

@@ -50,7 +50,7 @@ When all boolean values are false, a default state can be defined
 ### Mapping Configuration
 
 Configuration to provide a string mapping for each possible value.
-On the left ist the value of the runtime name and on the right the new value (e.g. {"runtimeName": "newValue"}).
+On the left ist the value of the runtime name and on the right the new value (e.g. `{"runtimeName": "newValue"}`).
 
 ***
 

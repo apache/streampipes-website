@@ -12,7 +12,7 @@ authorImageURL: "/img/wiener.png"
 This is the start of a two part series on how we want to bring StreamPipes closer to the edge. The [first part](/docs/blog/2020/01/23/streampipes_on_rpi) describes how we managed to build and deploy StreamPipes on one Raspberry Pi (Model 4), while the [second part](/docs/blog/2020/05/27/streampipes_on_k3s) further covers how to deploy StreamPipes over a Kubernetes cluster of two Raspberry Pi's via K3s using our StreamPipes helm chart.
 <!--truncate-->
 
-<TL;DR>
+**TL;DR**
 
 _With new advancements that came in the last StreamPipes release, we managed to reduce the required resources (mainly memory) drastically. To this extent, we cross-compiled StreamPipes Docker images for ARM support and deployed our lite version on a Raspberry Pi (Model 4). We showcase, that it is feasible to run analytical pipelines with ease and operate StreamPipes at moderate load._
 
