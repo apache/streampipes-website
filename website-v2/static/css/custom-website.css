@@ -787,6 +787,115 @@ img {
 	margin-bottom: 0;
 }
 
+.community-intro {
+	max-width: 54rem;
+	margin: 0 auto 2.25rem;
+	text-align: center;
+}
+
+.community-lead {
+	font-size: 1.08rem;
+	line-height: 1.8;
+	color: #52606d;
+}
+
+.community-contribution-grid,
+.community-channel-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1.25rem;
+}
+
+.community-card,
+.community-channel-card,
+.community-steps-card {
+	padding: 1.5rem;
+	background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+	border: 1px solid rgba(15, 23, 42, 0.08);
+	border-radius: 24px;
+	box-shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
+}
+
+.community-card-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 3rem;
+	height: 3rem;
+	margin-bottom: 1rem;
+	border-radius: 999px;
+	background: rgba(27, 20, 100, 0.08);
+	color: var(--color-primary);
+	font-size: 1.1rem;
+}
+
+.community-card h3,
+.community-channel-card h3,
+.community-steps-card h3 {
+	margin-bottom: 0.7rem;
+	font-size: 1.18rem;
+}
+
+.community-card p,
+.community-channel-card p,
+.community-steps-card p {
+	color: #52606d;
+}
+
+.community-steps-card {
+	margin-top: 1.5rem;
+}
+
+.community-repo-table-wrap {
+	overflow-x: auto;
+	max-width: 68rem;
+	margin: 0 auto;
+	padding: 0.35rem;
+}
+
+.community-repo-table {
+	width: 100%;
+	margin-top: 0.5rem;
+	background: white;
+	border-collapse: separate;
+	border-spacing: 0;
+	border: 1px solid rgba(27, 20, 100, 0.12);
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
+}
+
+.community-repo-table thead th {
+	background: var(--color-primary);
+	color: white;
+	padding: 0.95rem 1rem;
+	font-size: 0.92rem;
+	white-space: nowrap;
+}
+
+.community-repo-table tbody td {
+	padding: 1rem;
+	color: #243b53;
+	background: white;
+	border-top: 1px solid rgba(15, 23, 42, 0.06);
+	vertical-align: top;
+}
+
+.community-repo-table tbody td:first-child {
+	width: 18%;
+	font-weight: 800;
+	color: var(--color-primary);
+}
+
+.community-repo-table tbody td:nth-child(2) {
+	width: 57%;
+}
+
+.community-repo-table tbody td:last-child {
+	width: 25%;
+	white-space: nowrap;
+}
+
 .form-group.position-relative input {
 	padding-right: 32px;
 }
@@ -934,4 +1043,3 @@ img {
 	margin-left: auto;
 	margin-right: auto;
 }
-
