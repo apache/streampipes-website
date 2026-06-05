@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
+const https = require('https');
 
 const websiteRoot = path.resolve(__dirname, '..');
 const defaultRepoPath = path.resolve(websiteRoot, '..', '..', 'streampipes');
@@ -10,6 +11,7 @@ const repoPath = process.argv[2] ? path.resolve(process.argv[2]) : defaultRepoPa
 
 const sourcePath = path.join(websiteRoot, 'src', 'team', 'team-source.js');
 const targetPath = path.join(websiteRoot, 'src', 'team', 'team.js');
+const avatarDirectory = path.join(websiteRoot, 'static', 'img', 'team', 'github');
 
 const teamSource = require(sourcePath);
 
@@ -85,7 +87,7 @@ function buildTeamData() {
       github: member.github,
       pmc: member.pmc,
       contributions,
-      imageSrc: `https://github.com/${member.github}.png?size=240`
+      imageSrc: `/img/team/github/${member.github}.png`
     };
   });
 
@@ -103,14 +105,61 @@ function writeTeamFile(teamData) {
   fs.writeFileSync(targetPath, content, 'utf8');
 }
 
-function main() {
+function downloadFile(url, targetFile) {
+  return new Promise((resolve, reject) => {
+    const file = fs.createWriteStream(targetFile);
+
+    const request = https.get(url, response => {
+      if (response.statusCode >= 300 && response.statusCode < 400 && response.headers.location) {
+        file.close();
+        fs.unlinkSync(targetFile);
+        return resolve(downloadFile(response.headers.location, targetFile));
+      }
+
+      if (response.statusCode !== 200) {
+        file.close();
+        fs.unlinkSync(targetFile);
+        return reject(new Error(`Failed to download ${url}: HTTP ${response.statusCode}`));
+      }
+
+      response.pipe(file);
+      file.on('finish', () => {
+        file.close(resolve);
+      });
+    });
+
+    request.on('error', error => {
+      file.close();
+      if (fs.existsSync(targetFile)) {
+        fs.unlinkSync(targetFile);
+      }
+      reject(error);
+    });
+  });
+}
+
+async function cacheAvatars(teamData) {
+  fs.mkdirSync(avatarDirectory, { recursive: true });
+
+  for (const member of teamData) {
+    const avatarPath = path.join(avatarDirectory, `${member.github}.png`);
+    const avatarUrl = `https://github.com/${member.github}.png?size=240`;
+    await downloadFile(avatarUrl, avatarPath);
+  }
+}
+
+async function main() {
   if (!fs.existsSync(repoPath)) {
     throw new Error(`StreamPipes repository not found: ${repoPath}`);
   }
 
   const teamData = buildTeamData();
+  await cacheAvatars(teamData);
   writeTeamFile(teamData);
   process.stdout.write(`Updated ${path.relative(websiteRoot, targetPath)} from ${repoPath}\n`);
 }
 
-main();
+main().catch(error => {
+  process.stderr.write(`${error.message}\n`);
+  process.exit(1);
+});
