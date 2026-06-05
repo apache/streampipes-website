@@ -34,6 +34,18 @@
     .top-claim-area-main-title {
         font-size: 3.25rem;
     }
+
+    .homepage-trust-band-inner {
+        justify-content: flex-start;
+    }
+
+    .download-layout-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .download-content-side {
+        position: static;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -75,6 +87,32 @@
         -webkit-box-flex: 0;
             -ms-flex: 0 0 50%;
                 flex: 0 0 50%;
+    }
+
+    .homepage-feature-copy {
+        margin-bottom: 2rem;
+        padding-right: 0;
+    }
+
+    .download-quick-facts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .download-command-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .community-contribution-grid,
+    .community-channel-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .page-banner-area {
+        padding: 5.25rem 0 2.6rem;
+    }
+
+    .page-banner-shell {
+        padding: 1.4rem 1.6rem;
     }
 
 }
@@ -147,6 +185,87 @@
         height: 100px;
         text-align: center;
         padding: 25px 0;
+    }
+
+    .homepage-eyebrow {
+        font-size: 0.72rem;
+    }
+
+    .apache-teaser {
+        max-width: 100%;
+        font-size: 1.02rem;
+        line-height: 1.65;
+    }
+
+    .container-header {
+        margin: 2.25rem 0 0;
+    }
+
+    .homepage-trust-band-inner {
+        justify-content: center;
+    }
+
+    .homepage-trust-band-label {
+        width: 100%;
+        text-align: center;
+    }
+
+    .homepage-trust-band-items {
+        justify-content: center;
+    }
+
+    .homepage-media-frame {
+        padding: 0.6rem;
+        border-radius: 18px;
+    }
+
+    .page-banner-area {
+        padding: 4.9rem 0 2.1rem;
+    }
+
+    .page-banner-shell {
+        padding: 1.15rem 1rem;
+        border-radius: 20px;
+    }
+
+    .page-banner-accent-left {
+        width: 8rem;
+        height: 8rem;
+        left: -3rem;
+    }
+
+    .page-banner-accent-right {
+        width: 9rem;
+        height: 9rem;
+        right: -3.5rem;
+    }
+
+    .download-quick-facts {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .community-contribution-grid,
+    .community-channel-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .download-release-header {
+        flex-direction: column;
+    }
+
+    .download-release-header .sp-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .download-step-item {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.8rem;
+    }
+
+    .download-step-index {
+        width: 2.75rem;
+        height: 2.75rem;
     }
 }
 

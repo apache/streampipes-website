@@ -1,23 +1,21 @@
-import React, { FC } from 'react';
+import React from 'react';
 
-const DownloadFolder = (props) => (
-  <>
-    <li className="installation-step">
-      <div className="row" style={{alignItems: 'center',justifyContent: 'center'}}>
-        <div className="col-md-1 col-3">
-            <span className="fa-stack fa-2x">
-                 <i className="fas fa-circle fa-stack-2x sp-color-green"></i>
-                 <strong className="fa-stack-1x" style={{color:'white'}}>2</strong>
-            </span>
-        </div>
-        <div className="col-md-11 col-9">
-          In a command prompt, open the folder <code>installer/compose/</code> and run <code>docker-compose up -d</code>. Please follow the <a
-            target="asf" href="https://streampipes.apache.org/docs/next/deploy-docker/">Docker Deployment</a> guide to explore additional installation options.
-        </div>
-      </div>
-    </li>
-
-  </>
-)
+const DownloadFolder = () => (
+  <div className="download-step-item">
+    <div className="download-step-index">1</div>
+    <div className="download-step-content">
+      <h4>Start the installer</h4>
+      <p>
+        Open the folder <code>installer/compose/</code> and run{' '}
+        <code>docker compose up -d</code>. If your environment still uses the legacy Compose
+        binary, <code>docker-compose up -d</code> works as well.
+      </p>
+      <p>
+        For additional deployment models and broker-specific setups, continue with the{' '}
+        <a href="/docs/configure-operate-deployment/">deployment documentation</a>.
+      </p>
+    </div>
+  </div>
+);
 
 export default DownloadFolder;

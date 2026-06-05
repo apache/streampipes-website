@@ -3,6 +3,7 @@
     "examples": "docusaurus-examples",
     "start": "docusaurus start",
     "build": "docusaurus build",
+    "update-team": "node ./scripts/update-team.js",
     "serve": "docusaurus serve",
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
@@ -13,17 +14,17 @@
     "docusaurus": "docusaurus"
   },
   "dependencies": {
-    "@docusaurus/core": "2.4.1",
-    "@docusaurus/plugin-client-redirects": "2.4.1",
-    "@docusaurus/preset-classic": "2.4.1",
+    "@docusaurus/core": "3.10.1",
+    "@docusaurus/plugin-client-redirects": "3.10.1",
+    "@docusaurus/preset-classic": "3.10.1",
     "@iconify/icons-akar-icons": "^1.2.8",
     "@iconify/react": "^3.2.2",
     "react-lazy-load-image-component": "^1.5.4",
     "swiper": "^10.0.0",
     "clsx": "^1.1.1",
     "docusaurus-plugin-sass": "^0.2.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
     "sass": "^1.63.6"
   }
 }

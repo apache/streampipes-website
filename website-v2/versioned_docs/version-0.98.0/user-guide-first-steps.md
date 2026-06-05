@@ -14,8 +14,6 @@ Afterwards, this section contains two examples on how to create pipelines based 
 ## Interactive Tutorial
 The easiest way to get started with StreamPipes is the interactive tutorial. Once you open the pipeline editor for the first time, you'll see a splash screen as shown below.
 Click **Start tour** to start the interactive tutorial, which will guide you through your first steps with StreamPipes.
- 
-![Interactive Tutorial](/img/quickstart/interactive-tutorial.png)  
 
 If the splash screen does not show up, make sure you've installed the following pipeline elements:
 * Flow rate (data stream)
@@ -103,7 +101,7 @@ Now lets start!
 * Use the **NF** (Numerical Filter) from the processing elements tab and connect it to the **FRS1** source
 * Configure the **Numerical Filter**:
     * Field name for filter operator: **mass_flow**
-    * Filter Operation: **<**
+    * Filter Operation: `<`
     * Threshold value: **1**
 
 <div class="my-carousel">
@@ -206,4 +204,3 @@ It is recommended to stop the last pipeline, because it will keep creating notif
 We hope we gave you an easy quick start into StreamPipes.
 If you have any questions or suggestions, just send us an email.
 From here on you can explore all features in the [User Guide](user-guide-introduction) or go to the [Developer Guide](extend-setup) to learn how to write your own StreamPipes processing elements.
-

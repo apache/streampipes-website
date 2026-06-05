@@ -85,7 +85,8 @@ It consists of pairs of values, each pair begins with either 1 (Backplane) or 2 
 or if using Ethernet an ip address. e.g. [1,4,2,192.168.0.1,1,1] - Routes to the 4th slot in the first rack, which is a ethernet module, it then connects to the address 192.168.0.1, then finds the module in slot 1. (STRING)
 * backplane: Without using routing information the backplane defaults to 1. This is overridden if communicationPath is provided. (INT)
 * slot: The slot within the backplane the CPU is located. (INT)
-* bigEndian: Configure if the connection should be set to transport data in Big-Endian format, or not. (BOOLEAN)
+* big-endian: Configure if the connection should be set to transport data in Big-Endian format, or not. (BOOLEAN)
+* force-unconnected-operation: Forces the driver to use unconnected requests. (BOOLEAN)
 
 ### Tags
 

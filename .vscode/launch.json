@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Docusaurus: Start dev server",
+      "type": "node-terminal",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/website-v2",
+      "command": "npm run start -- --host 0.0.0.0",
+      "serverReadyAction": {
+        "pattern": "http://localhost:([0-9]+)",
+        "uriFormat": "http://localhost:%s",
+        "action": "openExternally"
+      }
+    }
+  ]
+}

@@ -51,7 +51,7 @@ Each of the data streams needs a timestamp.
 ## Configuration
 
 * For each stream a the timestamp property on which the merger is performed has to be selected
-* The Time Interval describes the maximum value between two events to decide whether they are a match. To be a valid match the following function must be true: | timestamp_stream_1 - timestamp_stream_2 | < interval
+* The Time Interval describes the maximum value between two events to decide whether they are a match. To be a valid match the following function must be true: `| timestamp_stream_1 - timestamp_stream_2 | < interval`
 
 ## Output
 The Compose processor has a configurable output that can be selected by the user at pipeline modeling time.

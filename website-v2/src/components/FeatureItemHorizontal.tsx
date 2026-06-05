@@ -35,8 +35,10 @@ const FeatureItemHorizontal = (props) => {
         >
           {props.images.map(image => {
             return (
-              <SwiperSlide>
-                <img className="d-block w-100 mt-2 mb-2" src={image.src} alt={image.alt}/>
+              <SwiperSlide key={image.src}>
+                <div className="homepage-media-frame homepage-gallery-frame">
+                  <img className="d-block w-100 mt-2 mb-2 homepage-gallery-image" src={image.src} alt={image.alt}/>
+                </div>
               </SwiperSlide>
             )
           })
@@ -53,8 +55,10 @@ const FeatureItemHorizontal = (props) => {
         >
           {props.images.map(image => {
             return (
-              <SwiperSlide>
-                <img className="d-block w-100 mt-2 mb-2" src={image.src} alt={image.alt}/>
+              <SwiperSlide key={`${image.src}-thumb`}>
+                <div className="homepage-thumb-frame">
+                  <img className="d-block w-100 mt-2 mb-2 homepage-gallery-thumb" src={image.src} alt={image.alt}/>
+                </div>
               </SwiperSlide>
             )
             })
@@ -63,11 +67,11 @@ const FeatureItemHorizontal = (props) => {
       </>
 
   return (<>
-      <section className="elements-area section-padding-50">
+      <section className="elements-area section-padding-50 homepage-feature-showcase">
         <div className="container">
-          <div className="row">
+          <div className="row homepage-feature-row">
             <div className="col-md-4 col-12">
-              <div className="single-service-area">
+              <div className="single-service-area homepage-feature-copy">
                 <h2 className={"feature-hz-number"}>{props.featureNumber}</h2>
                 <h4 className={"feature-hz-title"}>{props.title}</h4>
                 {props.children}
@@ -77,7 +81,7 @@ const FeatureItemHorizontal = (props) => {
               {imageGallery}
             </div>
           </div>
-          <hr style={{marginTop: '20px', marginBottom: '20px'}}/>
+          <div className="homepage-section-divider"></div>
         </div>
       </section>
     </>
@@ -86,4 +90,3 @@ const FeatureItemHorizontal = (props) => {
 }
 
 export default FeatureItemHorizontal;
-
