@@ -1,7 +1,7 @@
 ---
 id: use-dashboards
 title: Dashboards
-sidebar_label: Dashboards
+sidebar_label: 📊 Dashboards
 ---
 
 import ScreenshotComparison from '@site/src/components/docs/ScreenshotComparison';

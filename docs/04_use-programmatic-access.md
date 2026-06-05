@@ -1,7 +1,7 @@
 ---
 id: use-programmatic-access
 title: Programmatic Access
-sidebar_label: Programmatic Access
+sidebar_label: 💻 Programmatic Access
 ---
 
 import UseCaseExample from '@site/src/components/docs/UseCaseExample.tsx';

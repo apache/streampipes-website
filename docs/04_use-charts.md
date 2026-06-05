@@ -1,7 +1,7 @@
 ---
 id: use-charts
 title: Charts
-sidebar_label: Charts
+sidebar_label: 📈 Charts
 ---
 
 import ScreenshotFigure from '@site/src/components/docs/ScreenshotFigure';

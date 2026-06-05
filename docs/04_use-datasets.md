@@ -1,7 +1,7 @@
 ---
 id: use-datasets
 title: Datasets
-sidebar_label: Datasets
+sidebar_label: 🗃️ Datasets
 ---
 
 import StepFlow from '@site/src/components/docs/StepFlow.tsx';

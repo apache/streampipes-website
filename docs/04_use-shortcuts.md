@@ -1,7 +1,7 @@
 ---
 id: use-shortcuts
 title: Shortcuts
-sidebar_label: Shortcuts
+sidebar_label: ⌨️ Shortcuts
 ---
 
 Keyboard shortcuts in StreamPipes are intentionally small in number, but they are useful in the places where users work repeatedly: editing pipelines, charts, and dashboards, filtering table content, and closing dialogs without leaving the keyboard.

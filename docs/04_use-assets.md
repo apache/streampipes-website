@@ -1,7 +1,7 @@
 ---
 id: use-assets
 title: Assets & Sites
-sidebar_label: Assets & Sites
+sidebar_label: 🧭 Assets & Sites
 ---
 
 import UseCaseExample from '@site/src/components/docs/UseCaseExample.tsx';

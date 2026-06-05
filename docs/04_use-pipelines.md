@@ -1,7 +1,7 @@
 ---
 id: use-pipelines
 title: Pipelines
-sidebar_label: Pipelines
+sidebar_label: 🧠 Pipelines
 ---
 
 import StepFlow from '@site/src/components/docs/StepFlow.tsx';

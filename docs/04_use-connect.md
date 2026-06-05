@@ -1,7 +1,7 @@
 ---
 id: use-connect
 title: Connect IoT Data
-sidebar_label: Connect IoT Data
+sidebar_label: 🔌 Connect IoT Data
 ---
 
 import FeatureList from '@site/src/components/docs/FeatureList.tsx';
