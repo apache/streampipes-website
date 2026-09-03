@@ -63,6 +63,13 @@ module.exports = [
     "imageSrc": "/img/team/github/obermeier.png"
   },
   {
+    "name": "Baiqi Lu",
+    "github": "ittuann",
+    "pmc": false,
+    "contributions": 35,
+    "imageSrc": "/img/team/github/ittuann.png"
+  },
+  {
     "name": "Grainier Perera",
     "github": "grainier",
     "pmc": true,
