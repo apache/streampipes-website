@@ -12,7 +12,30 @@ module.exports = {
     "/js/slick.min.js",
     "/js/custom.js",
     "/js/clipboard.min.js",
-    "/js/code-block-buttons.js"
+    "/js/code-block-buttons.js",
+    {
+      src: 'https://widget.kapa.ai/kapa-widget.bundle.js',
+      async: true,
+      'data-website-id': '510e1ad6-2442-42ed-bf29-17ad4b316986',
+      'data-project-name': 'Apache StreamPipes',
+      'data-project-color': '#FFFFFF',
+      'data-project-logo':
+          'https://streampipes.apache.org/img/favicon.png',
+      'data-modal-override-open-id': 'ask-ai-input',
+      'data-modal-override-open-class': 'search-input',
+      'data-modal-disclaimer':
+          'This is a custom LLM for Apache StreamPipes with access to all [documentation](https://streampipes.apache.org/docs/user-guide-introduction/), [GitHub Open Issues, PRs and READMEs](https://github.com/apache/streampipes).&#10;&#10;Companies deploy assistants like this ([built by kapa.ai](https://kapa.ai)) on docs via [website widget](https://docs.kapa.ai/integrations/website-widget) (Docker, Reddit), in [support forms](https://docs.kapa.ai/integrations/support-form-deflector) for ticket deflection (Monday.com, Mapbox), or as [Slack bots](https://docs.kapa.ai/integrations/slack-bot) with private sources.',
+      'data-modal-example-questions':
+          'How do I install StreamPipes?,How can I contribute to StreamPipes?',
+      'data-button-text-color': '#130E46',
+      'data-modal-header-bg-color': '#ffffff',
+      'data-modal-title-color': '#130E46',
+      'data-modal-title': 'Apache StreamPipes AI',
+      'data-modal-disclaimer-text-color': '#000000',
+      'data-consent-required': 'true',
+      'data-consent-screen-disclaimer':
+          "By clicking \"I agree, let's chat\", you consent to the use of the AI assistant in accordance with kapa.ai's [Privacy Policy](https://www.kapa.ai/content/privacy-policy). This service uses reCAPTCHA, which requires your consent to Google's [Privacy Policy](https://policies.google.com/privacy) and [Terms of Service](https://policies.google.com/terms). By proceeding, you explicitly agree to both kapa.ai's and Google's privacy policies.",
+    },
   ],
   "stylesheets": [
     "/css/slick.min.css",
