@@ -1,0 +1,42 @@
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Resolve Docusaurus clean URLs in the static ASF deployment.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+RewriteRule ^(.+?)/?$ /$1/index.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+?)/?$ /$1.html [L]
+
+# CSP permissions for streampipes.apache.org
+# Additional domains required for docs site functionality:
+# - widget.kapa.ai: AI chatbot widget (uses Google reCAPTCHA). Approval here: https://privacy.apache.org/faq/committers.html
+# - *.googleapis.com, *.google.com, *.gstatic.com: Google Calendar embed, kapa.ai reCAPTCHA - all of these loaded with user consent, following policy laid out in https://privacy.apache.org/faq/committers.html
+# - github.com, *.github.com, *.githubusercontent.com: GitHub user-attachment images in docs (apex github.com serves user-attachments/* assets). Discussed/resolved in this thread: https://issues.apache.org/jira/browse/INFRA-25701?filter=-2 (DPA in place with GitHub)
+# - *.algolia.net, *.algolianet.com: Algolia DocSearch. Approved here: https://privacy.apache.org/faq/committers.html
+# - *.run.app: Google-owned domain (Google Cloud Run) used by the kapa.ai widget backend - only reached after explicit user acceptance when opening the widget, allowable per the policy laid out in https://privacy.apache.org/faq/committers.html
+# See: https://infra.apache.org/tools/csp.html
+SetEnv CSP_PROJECT_DOMAINS "widget.kapa.ai https://*.googleapis.com/ https://*.google.com/ https://*.gstatic.com/ https://github.com/ https://*.github.com/ https://*.githubusercontent.com/ https://*.algolia.net/ https://*.algolianet.com/ https://*.run.app/"
+

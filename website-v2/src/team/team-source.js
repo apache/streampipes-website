@@ -42,6 +42,12 @@ module.exports = [
     aliases: []
   },
   {
+    name: 'Baiqi Lu',
+    github: 'ittuann',
+    pmc: false,
+    aliases: ['lu baiqi']
+  },
+  {
     name: 'Sven Oehler',
     github: 'SvenO3',
     pmc: true,
