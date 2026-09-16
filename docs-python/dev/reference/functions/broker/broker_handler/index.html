@@ -2336,9 +2336,9 @@
 
 
 <a id="streampipes.functions.broker.broker_handler"></a>
-  <div class="doc doc-contents first">
+    <div class="doc doc-contents first">
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2354,21 +2354,21 @@
 
 
 <h2 id="streampipes.functions.broker.broker_handler.SupportedBroker" class="doc doc-heading">
-          <code>SupportedBroker</code>
+            <code>SupportedBroker</code>
 
 
 <a href="#streampipes.functions.broker.broker_handler.SupportedBroker" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="enum.Enum">Enum</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="enum.Enum">Enum</span></code></p>
 
-  
+
       <p>Enum for the supported brokers.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2384,8 +2384,7 @@
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -2394,20 +2393,20 @@
 
 
 <h2 id="streampipes.functions.broker.broker_handler.UnsupportedBrokerError" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">UnsupportedBrokerError</span><span class="p">(</span><span class="n">broker_name</span><span class="p">)</span></code>
+              <code class="highlight language-python"><span class="n">UnsupportedBrokerError</span><span class="p">(</span><span class="n">broker_name</span><span class="p">)</span></code>
 
 <a href="#streampipes.functions.broker.broker_handler.UnsupportedBrokerError" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>Exception</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="Exception">Exception</span></code></p>
 
-  
+
       <p>Exception if a broker isn't implemented yet.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2423,209 +2422,198 @@
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="streampipes.functions.broker.broker_handler.get_broker" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_broker</span><span class="p">(</span><span class="n">data_stream</span><span class="p">,</span> <span class="n">is_publisher</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_broker</span><span class="p">(</span><span class="n">data_stream</span><span class="p">,</span> <span class="n">is_publisher</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#streampipes.functions.broker.broker_handler.get_broker" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Derive the broker for the given data stream.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>data_stream</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Data stream instance from which the broker is inferred</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.model.resource.data_stream.DataStream" href="../../../model/resource/data_stream/#streampipes.model.resource.data_stream.DataStream">DataStream</a></code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
-
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-              <code>broker</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>The corresponding broker instance derived from data stream.</p>
-            </div>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>data_stream</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Data stream instance from which the broker is inferred</p>
+              </div>
               <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.functions.broker.Broker" href="../broker/#streampipes.functions.broker.broker.Broker">Broker</a></code>
-                </span>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="DataStream (streampipes.model.resource.data_stream.DataStream)" href="../../../model/resource/data_stream/#streampipes.model.resource.data_stream.DataStream">DataStream</a></code>
+                  </span>
               </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RAISES</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-            <span class="doc-raises-annotation">
-                <code><a class="autorefs autorefs-internal" title="streampipes.functions.broker.broker_handler.UnsupportedBrokerError" href="#streampipes.functions.broker.broker_handler.UnsupportedBrokerError">UnsupportedBrokerError</a></code>
-            </span>
-          </td>
-          <td class="doc-raises-details">
-            <div class="doc-md-description">
-              <p>Is raised when the given data stream belongs to a broker that is currently not supported by StreamPipes Python.</p>
-            </div>
-          </td>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>broker</code>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>The corresponding broker instance derived from data stream.</p>
+              </div>
+                <p>
+                  <span class="doc-returns-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="Broker (streampipes.functions.broker.Broker)" href="../broker/#streampipes.functions.broker.broker.Broker">Broker</a></code>
+                  </span>
+                </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RAISES</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+              <span class="doc-raises-annotation">
+                  <code><a class="autorefs autorefs-internal" title="UnsupportedBrokerError (streampipes.functions.broker.broker_handler.UnsupportedBrokerError)" href="#streampipes.functions.broker.broker_handler.UnsupportedBrokerError">UnsupportedBrokerError</a></code>
+              </span>
+            </td>
+            <td class="doc-raises-details">
+              <div class="doc-md-description">
+                <p>Is raised when the given data stream belongs to a broker that is currently not supported by StreamPipes Python.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="streampipes.functions.broker.broker_handler.get_broker_description" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_broker_description</span><span class="p">(</span><span class="n">data_stream</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_broker_description</span><span class="p">(</span><span class="n">data_stream</span><span class="p">)</span></code>
 
 <a href="#streampipes.functions.broker.broker_handler.get_broker_description" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Derive the decription of the broker for the given data stream.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>data_stream</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Data stream instance from which the broker is inferred</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.model.resource.data_stream.DataStream" href="../../../model/resource/data_stream/#streampipes.model.resource.data_stream.DataStream">DataStream</a></code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
-
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-              <code>broker</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>The corresponding broker description derived from data stream.</p>
-            </div>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>data_stream</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Data stream instance from which the broker is inferred</p>
+              </div>
               <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.functions.broker.broker_handler.SupportedBroker" href="#streampipes.functions.broker.broker_handler.SupportedBroker">SupportedBroker</a></code>
-                </span>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="DataStream (streampipes.model.resource.data_stream.DataStream)" href="../../../model/resource/data_stream/#streampipes.model.resource.data_stream.DataStream">DataStream</a></code>
+                  </span>
               </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RAISES</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-            <span class="doc-raises-annotation">
-                <code><a class="autorefs autorefs-internal" title="streampipes.functions.broker.broker_handler.UnsupportedBrokerError" href="#streampipes.functions.broker.broker_handler.UnsupportedBrokerError">UnsupportedBrokerError</a></code>
-            </span>
-          </td>
-          <td class="doc-raises-details">
-            <div class="doc-md-description">
-              <p>Is raised when the given data stream belongs to a broker that is currently not supported by StreamPipes Python.</p>
-            </div>
-          </td>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>broker</code>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>The corresponding broker description derived from data stream.</p>
+              </div>
+                <p>
+                  <span class="doc-returns-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="SupportedBroker (streampipes.functions.broker.broker_handler.SupportedBroker)" href="#streampipes.functions.broker.broker_handler.SupportedBroker">SupportedBroker</a></code>
+                  </span>
+                </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RAISES</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+              <span class="doc-raises-annotation">
+                  <code><a class="autorefs autorefs-internal" title="UnsupportedBrokerError (streampipes.functions.broker.broker_handler.UnsupportedBrokerError)" href="#streampipes.functions.broker.broker_handler.UnsupportedBrokerError">UnsupportedBrokerError</a></code>
+              </span>
+            </td>
+            <td class="doc-raises-details">
+              <div class="doc-md-description">
+                <p>Is raised when the given data stream belongs to a broker that is currently not supported by StreamPipes Python.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
 
 </div>
 
@@ -2633,7 +2621,7 @@
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2642,7 +2630,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 7, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2025 02:35:20">July 26, 2025</span>
       
     
   </small>

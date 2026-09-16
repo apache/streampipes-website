@@ -2332,9 +2332,9 @@
 
 
 <a id="streampipes.functions.registration"></a>
-  <div class="doc doc-contents first">
+    <div class="doc doc-contents first">
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2350,45 +2350,44 @@
 
 
 <h2 id="streampipes.functions.registration.Registration" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">Registration</span><span class="p">()</span></code>
+              <code class="highlight language-python"><span class="n">Registration</span><span class="p">()</span></code>
 
 <a href="#streampipes.functions.registration.Registration" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>Manages the existing StreamPipesFunctions and registers them.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>ATTRIBUTE</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code><span title="streampipes.functions.registration.Registration.functions">functions</span></code></td>
-          <td class="doc-attribute-details">
-            <div class="doc-md-description">
-              <p>List of all registered StreamPipesFunction</p>
-            </div>
-            <p>
-                <span class="doc-attribute-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.List">List</span>[<a class="autorefs autorefs-internal" title="streampipes.functions.streampipes_function.StreamPipesFunction" href="../streampipes_function/#streampipes.functions.streampipes_function.StreamPipesFunction">StreamPipesFunction</a>]</code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">ATTRIBUTE</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="streampipes.functions.registration.Registration.functions">functions</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>List of all registered StreamPipesFunction</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.List">List</span>[<a class="autorefs autorefs-internal" title="StreamPipesFunction (streampipes.functions.streampipes_function.StreamPipesFunction)" href="../streampipes_function/#streampipes.functions.streampipes_function.StreamPipesFunction">StreamPipesFunction</a>]</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2400,127 +2399,120 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.functions.registration.Registration.getFunctions" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">getFunctions</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">getFunctions</span><span class="p">()</span></code>
 
 <a href="#streampipes.functions.registration.Registration.getFunctions" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get all registered functions.</p>
 <p>This method exists to be consistent with the Java client.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-              <code>functions</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>List of all registered functions.</p>
-            </div>
-              <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.List">List</span>[<a class="autorefs autorefs-internal" title="streampipes.functions.streampipes_function.StreamPipesFunction" href="../streampipes_function/#streampipes.functions.streampipes_function.StreamPipesFunction">StreamPipesFunction</a>]</code>
-                </span>
-              </p>
-          </td>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>functions</code>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>List of all registered functions.</p>
+              </div>
+                <p>
+                  <span class="doc-returns-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.List">List</span>[<a class="autorefs autorefs-internal" title="StreamPipesFunction (streampipes.functions.streampipes_function.StreamPipesFunction)" href="../streampipes_function/#streampipes.functions.streampipes_function.StreamPipesFunction">StreamPipesFunction</a>]</code>
+                  </span>
+                </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.functions.registration.Registration.register" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">register</span><span class="p">(</span><span class="n">streampipes_function</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">register</span><span class="p">(</span><span class="n">streampipes_function</span><span class="p">)</span></code>
 
 <a href="#streampipes.functions.registration.Registration.register" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Registers a new function.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>streampipes_function</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The function to register.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.functions.streampipes_function.StreamPipesFunction" href="../streampipes_function/#streampipes.functions.streampipes_function.StreamPipesFunction">StreamPipesFunction</a></code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
-
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-              <code>self</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>The updated Registration instance</p>
-            </div>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>streampipes_function</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The function to register.</p>
+              </div>
               <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.functions.registration.Registration" href="#streampipes.functions.registration.Registration">Registration</a></code>
-                </span>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="StreamPipesFunction (streampipes.functions.streampipes_function.StreamPipesFunction)" href="../streampipes_function/#streampipes.functions.streampipes_function.StreamPipesFunction">StreamPipesFunction</a></code>
+                  </span>
               </p>
-          </td>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>self</code>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>The updated Registration instance</p>
+              </div>
+                <p>
+                  <span class="doc-returns-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="Registration (streampipes.functions.registration.Registration)" href="#streampipes.functions.registration.Registration">Registration</a></code>
+                  </span>
+                </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2528,8 +2520,7 @@
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -2538,7 +2529,7 @@
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2547,7 +2538,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 7, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2025 02:35:19">July 26, 2025</span>
       
     
   </small>

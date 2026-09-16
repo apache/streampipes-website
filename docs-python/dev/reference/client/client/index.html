@@ -2360,13 +2360,13 @@
 
 
 <a id="streampipes.client.client"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Implementation of the StreamPipes client.
 The client is designed as the central point of interaction with the StreamPipes API and
 provides all functionalities to communicate with the API.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2382,14 +2382,14 @@ provides all functionalities to communicate with the API.</p>
 
 
 <h2 id="streampipes.client.client.StreamPipesClient" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">StreamPipesClient</span><span class="p">(</span><span class="n">client_config</span><span class="p">,</span> <span class="n">logging_level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span></code>
+              <code class="highlight language-python"><span class="n">StreamPipesClient</span><span class="p">(</span><span class="n">client_config</span><span class="p">,</span> <span class="n">logging_level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span></code>
 
 <a href="#streampipes.client.client.StreamPipesClient" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>The client to connect to StreamPipes.</p>
 <p>This is the central point of contact with StreamPipes and
 provides all the functionalities to interact with it.</p>
@@ -2399,122 +2399,118 @@ An <a class="autorefs autorefs-internal" href="../../endpoint/endpoint/#streampi
 API.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>client_config</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Configures the client to connect properly to the StreamPipes instance.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.client.config.StreamPipesClientConfig" href="../config/#streampipes.client.config.StreamPipesClientConfig">StreamPipesClientConfig</a></code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>client_config</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Configures the client to connect properly to the StreamPipes instance.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="StreamPipesClientConfig (streampipes.client.config.StreamPipesClientConfig)" href="../config/#streampipes.client.config.StreamPipesClientConfig">StreamPipesClientConfig</a></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>logging_level</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Influences the log messages emitted by the <code>StreamPipesClient</code></p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Optional">Optional</span>[<span title="int">int</span>]</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code><span title="logging.INFO">INFO</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
         <tr>
-          <td><code>logging_level</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Influences the log messages emitted by the <code>StreamPipesClient</code></p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Optional">Optional</span>[int]</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code><span title="logging.INFO">INFO</span></code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">ATTRIBUTE</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="streampipes.client.client.StreamPipesClient.dataLakeMeasureApi">dataLakeMeasureApi</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Instance of the data lake measure endpoint</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="DataLakeMeasureEndpoint (streampipes.endpoint.api.DataLakeMeasureEndpoint)" href="../../endpoint/api/data_lake_measure/#streampipes.endpoint.api.data_lake_measure.DataLakeMeasureEndpoint">DataLakeMeasureEndpoint</a></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="streampipes.client.client.StreamPipesClient.dataStreamApi">dataStreamApi</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Instance of the data stream endpoint</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="DataStreamEndpoint (streampipes.endpoint.api.DataStreamEndpoint)" href="../../endpoint/api/data_stream/#streampipes.endpoint.api.data_stream.DataStreamEndpoint">DataStreamEndpoint</a></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>ATTRIBUTE</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code><span title="streampipes.client.client.StreamPipesClient.dataLakeMeasureApi">dataLakeMeasureApi</span></code></td>
-          <td class="doc-attribute-details">
-            <div class="doc-md-description">
-              <p>Instance of the data lake measure endpoint</p>
-            </div>
-            <p>
-                <span class="doc-attribute-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.endpoint.api.DataLakeMeasureEndpoint" href="../../endpoint/api/data_lake_measure/#streampipes.endpoint.api.data_lake_measure.DataLakeMeasureEndpoint">DataLakeMeasureEndpoint</a></code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">RAISES</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr>
-          <td><code><span title="streampipes.client.client.StreamPipesClient.dataStreamApi">dataStreamApi</span></code></td>
-          <td class="doc-attribute-details">
-            <div class="doc-md-description">
-              <p>Instance of the data stream endpoint</p>
-            </div>
-            <p>
-                <span class="doc-attribute-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.endpoint.api.DataStreamEndpoint" href="../../endpoint/api/data_stream/#streampipes.endpoint.api.data_stream.DataStreamEndpoint">DataStreamEndpoint</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+              <span class="doc-raises-annotation">
+                  <code>AttributeError:</code>
+              </span>
+            </td>
+            <td class="doc-raises-details">
+              <div class="doc-md-description">
+                <p>In case an invalid configuration of the <code>StreamPipesClientConfig</code> is passed</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RAISES</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-            <span class="doc-raises-annotation">
-                <code>AttributeError:</code>
-            </span>
-          </td>
-          <td class="doc-raises-details">
-            <div class="doc-md-description">
-              <p>In case an invalid configuration of the <code>StreamPipesClientConfig</code> is passed</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-
-<p><strong>Examples:</strong></p>
-    <div class="language-python highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">streampipes.client</span> <span class="kn">import</span> <span class="n">StreamPipesClient</span>
-<span class="kn">from</span> <span class="nn">streampipes.client.config</span> <span class="kn">import</span> <span class="n">StreamPipesClientConfig</span>
-<span class="kn">from</span> <span class="nn">streampipes.client.credential_provider</span> <span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="language-python highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.client</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamPipesClient</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.client.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamPipesClientConfig</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.client.credential_provider</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
 </code></pre></div>
 <div class="language-python highlight"><pre><span></span><code><span class="n">client_config</span> <span class="o">=</span> <span class="n">StreamPipesClientConfig</span><span class="p">(</span>
     <span class="n">credential_provider</span><span class="o">=</span><span class="n">StreamPipesApiKeyCredentials</span><span class="p">(</span>
@@ -2544,7 +2540,7 @@ intended to be consistent with the StreamPipes Java client.
 </code></pre></div></p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2559,8 +2555,8 @@ intended to be consistent with the StreamPipes Java client.
 
 
 <h3 id="streampipes.client.client.StreamPipesClient.base_api_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">base_api_path</span><span class="p">:</span> <span class="nb">str</span></code>
-  
+            <code class="highlight language-python"><span class="n">base_api_path</span><span class="p">:</span> <span class="nb">str</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -2568,39 +2564,38 @@ intended to be consistent with the StreamPipes Java client.
 <a href="#streampipes.client.client.StreamPipesClient.base_api_path" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Constructs the basic API URL from the given <code>client_config</code>.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-              <code>base_api_path</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>basic API path of the connected StreamPipes instance</p>
-            </div>
-              <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code>str</code>
-                </span>
-              </p>
-          </td>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
-  </div>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>base_api_path</code>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>basic API path of the connected StreamPipes instance</p>
+              </div>
+                <p>
+                  <span class="doc-returns-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
+                </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+    </div>
 
 </div>
 
@@ -2609,8 +2604,8 @@ intended to be consistent with the StreamPipes Java client.
 
 
 <h3 id="streampipes.client.client.StreamPipesClient.http_headers" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">http_headers</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span></code>
-  
+            <code class="highlight language-python"><span class="n">http_headers</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -2618,54 +2613,51 @@ intended to be consistent with the StreamPipes Java client.
 <a href="#streampipes.client.client.StreamPipesClient.http_headers" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns the HTTP headers used for all requests.</p>
 <p>The HTTP headers are composed of the authentication headers supplied by the credential
 provider and additional required headers (currently this is only the application header).</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-              <code>http_headers</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>Header information for HTTP requests as string key-value pairs.</p>
-            </div>
-              <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Dict">Dict</span>[str, str]</code>
-                </span>
-              </p>
-          </td>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
-  </div>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>http_headers</code>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>Header information for HTTP requests as string key-value pairs.</p>
+              </div>
+                <p>
+                  <span class="doc-returns-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="str">str</span>]</code>
+                  </span>
+                </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+    </div>
 
 </div>
-
 
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.client.client.StreamPipesClient.create" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">create</span><span class="p">(</span><span class="n">client_config</span><span class="p">,</span> <span class="n">logging_level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">create</span><span class="p">(</span><span class="n">client_config</span><span class="p">,</span> <span class="n">logging_level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
   </span>
@@ -2673,128 +2665,122 @@ provider and additional required headers (currently this is only the application
 <a href="#streampipes.client.client.StreamPipesClient.create" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns an instance of the <code>StreamPipesPythonClient</code>.</p>
 <p>Provides consistency to the StreamPipes Java client.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>client_config</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Configures the client to connect properly to the StreamPipes instance.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.client.config.StreamPipesClientConfig" href="../config/#streampipes.client.config.StreamPipesClientConfig">StreamPipesClientConfig</a></code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>client_config</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Configures the client to connect properly to the StreamPipes instance.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="StreamPipesClientConfig (streampipes.client.config.StreamPipesClientConfig)" href="../config/#streampipes.client.config.StreamPipesClientConfig">StreamPipesClientConfig</a></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>logging_level</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Influences the log messages emitted by the <code>StreamPipesClient</code>.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="int">int</span></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code><span title="logging.INFO">INFO</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
         <tr>
-          <td><code>logging_level</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Influences the log messages emitted by the <code>StreamPipesClient</code>.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code>int</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code><span title="logging.INFO">INFO</span></code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code><a class="autorefs autorefs-internal" title="StreamPipesClient (streampipes.client.client.StreamPipesClient)" href="#streampipes.client.client.StreamPipesClient">StreamPipesClient</a></code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code><a class="autorefs autorefs-internal" title="streampipes.client.client.StreamPipesClient" href="#streampipes.client.client.StreamPipesClient">StreamPipesClient</a></code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.client.client.StreamPipesClient.describe" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">describe</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">describe</span><span class="p">()</span></code>
 
 <a href="#streampipes.client.client.StreamPipesClient.describe" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Prints a short description of the connected StreamPipes instance and the available resources to the console.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code>    None</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              
-            </div>
-          </td>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code>    None</code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <p><div class="language-python highlight"><pre><span></span><code><span class="n">client</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </code></pre></div>
 Output:
@@ -2805,7 +2791,7 @@ The following StreamPipes resources are available with this client:
 1x DataLakeMeasures
 </code></pre></div></p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2813,8 +2799,7 @@ The following StreamPipes resources are available with this client:
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -2823,7 +2808,7 @@ The following StreamPipes resources are available with this client:
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2832,7 +2817,7 @@ The following StreamPipes resources are available with this client:
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 7, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2025 02:35:19">July 26, 2025</span>
       
     
   </small>

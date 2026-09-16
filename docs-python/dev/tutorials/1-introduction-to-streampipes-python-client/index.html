@@ -3323,6 +3323,7 @@ Licensed under the Apache License, Version 2.0.
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -3482,9 +3483,9 @@ For this purpose, the client so far only supports the authentication via an API 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">streampipes.client</span> <span class="kn">import</span> <span class="n">StreamPipesClient</span>
-<span class="kn">from</span> <span class="nn">streampipes.client.config</span> <span class="kn">import</span> <span class="n">StreamPipesClientConfig</span>
-<span class="kn">from</span> <span class="nn">streampipes.client.credential_provider</span> <span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.client</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamPipesClient</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.client.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamPipesClientConfig</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">streampipes.client.credential_provider</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamPipesApiKeyCredentials</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-3">from streampipes.client import StreamPipesClient
 from streampipes.client.config import StreamPipesClientConfig
@@ -3609,7 +3610,7 @@ This can be done as follows:</p>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"SP_USERNAME"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"admin@streampipes.apache.org"</span>
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"SP_API_KEY"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"XXX"</span>
 </pre></div>
@@ -3748,7 +3749,7 @@ We'll read and react to them all, we promise!</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 18, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2024 20:36:12">June 18, 2024</span>
       
     
   </small>

@@ -2346,9 +2346,9 @@
 
 
 <a id="streampipes.functions.function_handler"></a>
-  <div class="doc doc-contents first">
+    <div class="doc doc-contents first">
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2364,102 +2364,100 @@
 
 
 <h2 id="streampipes.functions.function_handler.FunctionHandler" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">FunctionHandler</span><span class="p">(</span><span class="n">registration</span><span class="p">,</span> <span class="n">client</span><span class="p">)</span></code>
+              <code class="highlight language-python"><span class="n">FunctionHandler</span><span class="p">(</span><span class="n">registration</span><span class="p">,</span> <span class="n">client</span><span class="p">)</span></code>
 
 <a href="#streampipes.functions.function_handler.FunctionHandler" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>The function handler manages the StreamPipes Functions.</p>
 <p>It controls the connection to the brokers, starts the functions, manages the broadcast of the live data
 and is able to stop the connection to the brokers and functions.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>registration</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The registration, that contains the StreamPipesFunctions.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.functions.registration.Registration" href="../registration/#streampipes.functions.registration.Registration">Registration</a></code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>registration</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The registration, that contains the StreamPipesFunctions.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="Registration (streampipes.functions.registration.Registration)" href="../registration/#streampipes.functions.registration.Registration">Registration</a></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>client</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The client to interact with the API.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="StreamPipesClient (streampipes.client.client.StreamPipesClient)" href="../../client/client/#streampipes.client.client.StreamPipesClient">StreamPipesClient</a></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
         <tr>
-          <td><code>client</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The client to interact with the API.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.client.client.StreamPipesClient" href="../../client/client/#streampipes.client.client.StreamPipesClient">StreamPipesClient</a></code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">ATTRIBUTE</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="streampipes.functions.function_handler.FunctionHandler.stream_contexts">stream_contexts</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Map of all data stream contexts</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Dict">Dict</span>[<span title="str">str</span>, <a class="autorefs autorefs-internal" title="DataStreamContext (streampipes.functions.utils.data_stream_context.DataStreamContext)" href="../utils/data_stream_context/#streampipes.functions.utils.data_stream_context.DataStreamContext">DataStreamContext</a>]</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="streampipes.functions.function_handler.FunctionHandler.brokers">brokers</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>List of all registered brokers</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.List">List</span>[<a class="autorefs autorefs-internal" title="Broker (streampipes.functions.broker.Broker)" href="../broker/broker/#streampipes.functions.broker.broker.Broker">Broker</a>]</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
 
-  <table>
-    <thead>
-      <tr>
-        <th><b>ATTRIBUTE</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code><span title="streampipes.functions.function_handler.FunctionHandler.stream_contexts">stream_contexts</span></code></td>
-          <td class="doc-attribute-details">
-            <div class="doc-md-description">
-              <p>Map of all data stream contexts</p>
-            </div>
-            <p>
-                <span class="doc-attribute-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Dict">Dict</span>[str, <a class="autorefs autorefs-internal" title="streampipes.functions.utils.data_stream_context.DataStreamContext" href="../utils/data_stream_context/#streampipes.functions.utils.data_stream_context.DataStreamContext">DataStreamContext</a>]</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code><span title="streampipes.functions.function_handler.FunctionHandler.brokers">brokers</span></code></td>
-          <td class="doc-attribute-details">
-            <div class="doc-md-description">
-              <p>List of all registered brokers</p>
-            </div>
-            <p>
-                <span class="doc-attribute-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.List">List</span>[<a class="autorefs autorefs-internal" title="streampipes.functions.broker.Broker" href="../broker/broker/#streampipes.functions.broker.broker.Broker">Broker</a>]</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-  
 
   <div class="doc doc-children">
 
@@ -2471,160 +2469,150 @@ and is able to stop the connection to the brokers and functions.</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.functions.function_handler.FunctionHandler.disconnect" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">disconnect</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">disconnect</span><span class="p">()</span></code>
 
 <a href="#streampipes.functions.function_handler.FunctionHandler.disconnect" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Disconnects from the brokers and stops all functions.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code>None</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              
-            </div>
-          </td>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code>None</code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.functions.function_handler.FunctionHandler.force_stop_functions" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">force_stop_functions</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">force_stop_functions</span><span class="p">()</span></code>
 
 <a href="#streampipes.functions.function_handler.FunctionHandler.force_stop_functions" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Stops the StreamPipesFunctions when the event loop was stopped without stopping the functions.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code>None</code>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code>None</code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">WARNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+              <span class="doc-warns-annotation">
+                  <code><span title="UserWarning">UserWarning</span></code>
               </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+            </td>
+            <td class="doc-warns-details">
+              <div class="doc-md-description">
+                <p>If there is a running event loop and the functions should be stopped by disconnecting from the broker.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>WARNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-            <span class="doc-warns-annotation">
-                <code>UserWarning</code>
-            </span>
-          </td>
-          <td class="doc-warns-details">
-            <div class="doc-md-description">
-              <p>If there is a running event loop and the functions should be stopped by disconnecting from the broker.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.functions.function_handler.FunctionHandler.initializeFunctions" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">initializeFunctions</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">initializeFunctions</span><span class="p">()</span></code>
 
 <a href="#streampipes.functions.function_handler.FunctionHandler.initializeFunctions" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Creates the context for every data stream and starts the event loop to manage the StreamPipes Functions.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code>None</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              
-            </div>
-          </td>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code>None</code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2632,8 +2620,7 @@ and is able to stop the connection to the brokers and functions.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -2642,7 +2629,7 @@ and is able to stop the connection to the brokers and functions.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2651,7 +2638,7 @@ and is able to stop the connection to the brokers and functions.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 7, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2025 02:35:19">July 26, 2025</span>
       
     
   </small>

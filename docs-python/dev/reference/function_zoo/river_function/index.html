@@ -2470,9 +2470,9 @@
 
 
 <a id="streampipes.function_zoo.river_function"></a>
-  <div class="doc doc-contents first">
+    <div class="doc doc-contents first">
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2488,185 +2488,184 @@
 
 
 <h2 id="streampipes.function_zoo.river_function.OnlineML" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">OnlineML</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">stream_ids</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">prediction_type</span><span class="o">=</span><span class="n">RuntimeType</span><span class="o">.</span><span class="n">STRING</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">supervised</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">target_label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">on_start</span><span class="o">=</span><span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="n">on_event</span><span class="o">=</span><span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">streamId</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="n">on_stop</span><span class="o">=</span><span class="k">lambda</span> <span class="bp">self</span><span class="p">:</span> <span class="kc">None</span><span class="p">)</span></code>
+              <code class="highlight language-python"><span class="n">OnlineML</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">stream_ids</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">prediction_type</span><span class="o">=</span><span class="n">RuntimeType</span><span class="o">.</span><span class="n">STRING</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">supervised</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">target_label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">on_start</span><span class="o">=</span><span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="n">on_event</span><span class="o">=</span><span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">streamId</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="n">on_stop</span><span class="o">=</span><span class="k">lambda</span> <span class="bp">self</span><span class="p">:</span> <span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#streampipes.function_zoo.river_function.OnlineML" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>Wrapper class to enable an easy usage for Online Machine Learning models of the River library.</p>
 <p>It creates a StreamPipesFunction to train a model with the incoming events of a data stream and
 creates an output data stream that publishes the prediction to StreamPipes.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>client</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The client for the StreamPipes API.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.client.client.StreamPipesClient" href="../../client/client/#streampipes.client.client.StreamPipesClient">StreamPipesClient</a></code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr>
-          <td><code>stream_ids</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The ids of the data stream to train the model.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.List">List</span>[str]</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>model</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The model to train. It meant to be a River model/pipeline,
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>client</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The client for the StreamPipes API.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="StreamPipesClient (streampipes.client.client.StreamPipesClient)" href="../../client/client/#streampipes.client.client.StreamPipesClient">StreamPipesClient</a></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>stream_ids</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The ids of the data stream to train the model.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.List">List</span>[<span title="str">str</span>]</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>model</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The model to train. It meant to be a River model/pipeline,
 but can be every model with a 'learn_one' and 'predict_one' methode.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Any">Any</span></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>prediction_type</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The data type of the prediction.
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Any">Any</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>prediction_type</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The data type of the prediction.
 Is only needed when you continue to work with the prediction in StreamPipes.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code>str</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code><span title="streampipes.functions.utils.data_stream_generator.RuntimeType.STRING.value">value</span></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>supervised</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Define if the model is supervised or unsupervised.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code>bool</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>target_label</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Define the name of the target attribute if the model is supervised.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Optional">Optional</span>[str]</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>on_start</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>A function to be called when this StreamPipesFunction gets started.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Callable">Callable</span>[[<span title="typing.Any">Any</span>, <a class="autorefs autorefs-internal" title="streampipes.functions.utils.function_context.FunctionContext" href="../../functions/utils/function_context/#streampipes.functions.utils.function_context.FunctionContext">FunctionContext</a>], None]</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>lambda self, context: None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>on_event</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>A function to be called when this StreamPipesFunction receives an event.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Callable">Callable</span>[[<span title="typing.Any">Any</span>, <span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>], str], None]</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>lambda self, event, streamId: None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>on_stop</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>A function to be called when this StreamPipesFunction gets stopped.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Callable">Callable</span>[[<span title="typing.Any">Any</span>], None]</code>
-                </span>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>lambda self: None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code><span title="streampipes.functions.utils.data_stream_generator.RuntimeType.STRING">STRING</span>.value</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>supervised</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Define if the model is supervised or unsupervised.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="bool">bool</span></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>target_label</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Define the name of the target attribute if the model is supervised.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>on_start</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>A function to be called when this StreamPipesFunction gets started.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Callable">Callable</span>[[<span title="typing.Any">Any</span>, <a class="autorefs autorefs-internal" title="FunctionContext (streampipes.functions.utils.function_context.FunctionContext)" href="../../functions/utils/function_context/#streampipes.functions.utils.function_context.FunctionContext">FunctionContext</a>], None]</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>lambda self, context: None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>on_event</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>A function to be called when this StreamPipesFunction receives an event.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Callable">Callable</span>[[<span title="typing.Any">Any</span>, <span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>], <span title="str">str</span>], None]</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>lambda self, event, streamId: None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>on_stop</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>A function to be called when this StreamPipesFunction gets stopped.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Callable">Callable</span>[[<span title="typing.Any">Any</span>], None]</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>lambda self: None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2678,87 +2677,80 @@ Is only needed when you continue to work with the prediction in StreamPipes.</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.function_zoo.river_function.OnlineML.set_learning" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">set_learning</span><span class="p">(</span><span class="n">learning</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">set_learning</span><span class="p">(</span><span class="n">learning</span><span class="p">)</span></code>
 
 <a href="#streampipes.function_zoo.river_function.OnlineML.set_learning" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Start or stop the training of the model.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>learning</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Defines if the training should be continued</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code>bool</code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>learning</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Defines if the training should be continued</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="bool">bool</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.function_zoo.river_function.OnlineML.start" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">start</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">start</span><span class="p">()</span></code>
 
 <a href="#streampipes.function_zoo.river_function.OnlineML.start" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Registers the function and starts the training.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.function_zoo.river_function.OnlineML.stop" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">stop</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">stop</span><span class="p">()</span></code>
 
 <a href="#streampipes.function_zoo.river_function.OnlineML.stop" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Stops the function and ends the training forever.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2766,8 +2758,7 @@ Is only needed when you continue to work with the prediction in StreamPipes.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -2776,134 +2767,133 @@ Is only needed when you continue to work with the prediction in StreamPipes.</p>
 
 
 <h2 id="streampipes.function_zoo.river_function.RiverFunction" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">RiverFunction</span><span class="p">(</span><span class="n">function_definition</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">supervised</span><span class="p">,</span> <span class="n">target_label</span><span class="p">,</span> <span class="n">on_start</span><span class="p">,</span> <span class="n">on_event</span><span class="p">,</span> <span class="n">on_stop</span><span class="p">)</span></code>
+              <code class="highlight language-python"><span class="n">RiverFunction</span><span class="p">(</span><span class="n">function_definition</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">supervised</span><span class="p">,</span> <span class="n">target_label</span><span class="p">,</span> <span class="n">on_start</span><span class="p">,</span> <span class="n">on_event</span><span class="p">,</span> <span class="n">on_stop</span><span class="p">)</span></code>
 
 <a href="#streampipes.function_zoo.river_function.RiverFunction" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="streampipes.functions.streampipes_function.StreamPipesFunction" href="../../functions/streampipes_function/#streampipes.functions.streampipes_function.StreamPipesFunction">StreamPipesFunction</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="StreamPipesFunction (streampipes.functions.streampipes_function.StreamPipesFunction)" href="../../functions/streampipes_function/#streampipes.functions.streampipes_function.StreamPipesFunction">StreamPipesFunction</a></code></p>
 
-  
+
       <p>Implementation of a StreamPipesFunction to enable an easy usage
 for Online Machine Learning models of the <a href="https://riverml.xyz/">River library</a>.</p>
 <p>The function trains the model with the incoming events and publishes the prediction to an output data stream.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>function_definition</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The function definition which contains the output stream.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.model.resource.function_definition.FunctionDefinition" href="../../model/resource/function_definition/#streampipes.model.resource.function_definition.FunctionDefinition">FunctionDefinition</a></code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr>
-          <td><code>model</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The model to train. It meant to be a River model/pipeline,
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>function_definition</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The function definition which contains the output stream.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="FunctionDefinition (streampipes.model.resource.function_definition.FunctionDefinition)" href="../../model/resource/function_definition/#streampipes.model.resource.function_definition.FunctionDefinition">FunctionDefinition</a></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>model</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The model to train. It meant to be a River model/pipeline,
 but can be every model with a 'learn_one' and 'predict_one' method.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Any">Any</span></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>supervised</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Define if the model is supervised or unsupervised.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code>bool</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>target_label</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Define the name of the target attribute if the model is supervised.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Optional">Optional</span>[str]</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>on_start</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>A function to be called when this StreamPipesFunction gets started.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Callable">Callable</span>[[<span title="typing.Any">Any</span>, <a class="autorefs autorefs-internal" title="streampipes.functions.utils.function_context.FunctionContext" href="../../functions/utils/function_context/#streampipes.functions.utils.function_context.FunctionContext">FunctionContext</a>], None]</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>on_event</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>A function to be called when this StreamPipesFunction receives an event.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Callable">Callable</span>[[<span title="typing.Any">Any</span>, <span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>], str], None]</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>on_stop</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>A function to be called when this StreamPipesFunction gets stopped.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Callable">Callable</span>[[<span title="typing.Any">Any</span>], None]</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Any">Any</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>supervised</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Define if the model is supervised or unsupervised.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="bool">bool</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>target_label</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Define the name of the target attribute if the model is supervised.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>on_start</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>A function to be called when this StreamPipesFunction gets started.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Callable">Callable</span>[[<span title="typing.Any">Any</span>, <a class="autorefs autorefs-internal" title="FunctionContext (streampipes.functions.utils.function_context.FunctionContext)" href="../../functions/utils/function_context/#streampipes.functions.utils.function_context.FunctionContext">FunctionContext</a>], None]</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>on_event</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>A function to be called when this StreamPipesFunction receives an event.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Callable">Callable</span>[[<span title="typing.Any">Any</span>, <span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>], <span title="str">str</span>], None]</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>on_stop</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>A function to be called when this StreamPipesFunction gets stopped.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Callable">Callable</span>[[<span title="typing.Any">Any</span>], None]</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2915,378 +2905,356 @@ but can be every model with a 'learn_one' and 'predict_one' method.</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.function_zoo.river_function.RiverFunction.add_output" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">add_output</span><span class="p">(</span><span class="n">stream_id</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">add_output</span><span class="p">(</span><span class="n">stream_id</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span></code>
 
 <a href="#streampipes.function_zoo.river_function.RiverFunction.add_output" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Send an event via an output data stream to StreamPipes.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>stream_id</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The id of the output data stream</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code>str</code>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>stream_id</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The id of the output data stream</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>event</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The event which should be sent</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code>None</code>
                 </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>event</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The event which should be sent</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code>None</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.function_zoo.river_function.RiverFunction.getFunctionId" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">getFunctionId</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">getFunctionId</span><span class="p">()</span></code>
 
 <a href="#streampipes.function_zoo.river_function.RiverFunction.getFunctionId" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns the id of the function.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-              <code>function_id</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>Identification object of the StreamPipes function</p>
-            </div>
-              <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.model.resource.function_definition.FunctionId" href="../../model/resource/function_definition/#streampipes.model.resource.function_definition.FunctionId">FunctionId</a></code>
-                </span>
-              </p>
-          </td>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>function_id</code>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>Identification object of the StreamPipes function</p>
+              </div>
+                <p>
+                  <span class="doc-returns-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="FunctionId (streampipes.model.resource.function_definition.FunctionId)" href="../../model/resource/function_definition/#streampipes.model.resource.function_definition.FunctionId">FunctionId</a></code>
+                  </span>
+                </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.function_zoo.river_function.RiverFunction.onEvent" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">onEvent</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">streamId</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">onEvent</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">streamId</span><span class="p">)</span></code>
 
 <a href="#streampipes.function_zoo.river_function.RiverFunction.onEvent" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Trains the model with the incoming events and sends the prediction back to StreamPipes.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>event</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The incoming event that serves as input for the function</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]</code>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>event</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The incoming event that serves as input for the function</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>streamId</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Identifier of the corresponding data stream</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code>None</code>
                 </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>streamId</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Identifier of the corresponding data stream</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code>str</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code>None</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.function_zoo.river_function.RiverFunction.onServiceStarted" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">onServiceStarted</span><span class="p">(</span><span class="n">context</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">onServiceStarted</span><span class="p">(</span><span class="n">context</span><span class="p">)</span></code>
 
 <a href="#streampipes.function_zoo.river_function.RiverFunction.onServiceStarted" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Executes the <code>on_start</code> method of the function.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>context</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The functions' context</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.functions.utils.function_context.FunctionContext" href="../../functions/utils/function_context/#streampipes.functions.utils.function_context.FunctionContext">FunctionContext</a></code>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>context</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The functions' context</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="FunctionContext (streampipes.functions.utils.function_context.FunctionContext)" href="../../functions/utils/function_context/#streampipes.functions.utils.function_context.FunctionContext">FunctionContext</a></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code>None</code>
                 </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code>None</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.function_zoo.river_function.RiverFunction.onServiceStopped" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">onServiceStopped</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">onServiceStopped</span><span class="p">()</span></code>
 
 <a href="#streampipes.function_zoo.river_function.RiverFunction.onServiceStopped" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Executes the <code>on_stop</code> function.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.function_zoo.river_function.RiverFunction.requiredStreamIds" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">requiredStreamIds</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">requiredStreamIds</span><span class="p">()</span></code>
 
 <a href="#streampipes.function_zoo.river_function.RiverFunction.requiredStreamIds" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get the ids of the streams needed by the function.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td>
-              <code>stream_ids</code>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>List of the stream ids</p>
-            </div>
-              <p>
-                <span class="doc-returns-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.List">List</span>[str]</code>
-                </span>
-              </p>
-          </td>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>stream_ids</code>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>List of the stream ids</p>
+              </div>
+                <p>
+                  <span class="doc-returns-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.List">List</span>[<span title="str">str</span>]</code>
+                  </span>
+                </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.function_zoo.river_function.RiverFunction.stop" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">stop</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">stop</span><span class="p">()</span></code>
 
 <a href="#streampipes.function_zoo.river_function.RiverFunction.stop" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Stops the function and disconnects from the output streams.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -3294,8 +3262,7 @@ but can be every model with a 'learn_one' and 'predict_one' method.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -3304,7 +3271,7 @@ but can be every model with a 'learn_one' and 'predict_one' method.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -3313,7 +3280,7 @@ but can be every model with a 'learn_one' and 'predict_one' method.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 7, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2025 02:35:19">July 26, 2025</span>
       
     
   </small>
