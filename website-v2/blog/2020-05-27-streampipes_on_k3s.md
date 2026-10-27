@@ -1,8 +1,8 @@
 ---
 title: Running StreamPipes the Kubernetes-Way using k3s
-author: Patrick Wiener
-authorURL: "https://twitter.com/patrickwiener"
-authorImageURL: "/img/wiener.png"
+authors: [wipatrick]
+image: /img/blog/2020-05-27/streampipes_k3s.png
+tags: [tutorial]
 ---
 <img class="blog-image" style={{maxWidth: '100%'}} src="/img/blog/2020-05-27/streampipes_k3s.png" alt="StreamPipes on k3s"/>
 **<div style={{float: 'left', paddingRight: '40px'}}>15 minutes to read</div>**

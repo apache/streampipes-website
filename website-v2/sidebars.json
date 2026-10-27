@@ -7,7 +7,7 @@
     },
     {
       "type": "category",
-      "label": "🔧 Concepts & Architecture",
+      "label": "Concepts & Architecture",
       "items": [
         "concepts-introduction",
         "concepts-terms",
@@ -16,7 +16,7 @@
     },
     {
       "type": "category",
-      "label": "✨ Features",
+      "label": "Features",
       "items": [
         {
           "type": "doc",
@@ -54,7 +54,7 @@
     },
     {
       "type": "category",
-      "label": "🧭 How-to",
+      "label": "How-to",
       "items": [
         "how-to-mqtt",
         "how-to-opcua",
@@ -66,7 +66,7 @@
     },
     {
       "type": "category",
-      "label": "⚙️ Configure & Operate",
+      "label": "Configure & Operate",
       "items": [
         "configure-operate-deployment",
         "configure-operate-environment-variables",
@@ -78,7 +78,7 @@
     },
     {
       "type": "category",
-      "label": "🛠️ Extend",
+      "label": "Extend",
       "items": [
         "extend-setup",
         "extend-cli",
@@ -95,7 +95,7 @@
     },
     {
       "type": "category",
-      "label": "🧩 Extensions Reference",
+      "label": "Extensions Reference",
       "items": [
         {
           "type": "category",
@@ -273,7 +273,7 @@
     },
     {
       "type": "category",
-      "label": "👪 Support & Community",
+      "label": "Support & Community",
       "items": [
         "community-get-help",
         "community-contribute"

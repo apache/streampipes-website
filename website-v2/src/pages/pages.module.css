@@ -1,0 +1,21 @@
+/* Shared layout helpers for sub-pages (download, community). Components: src/components/ui */
+.compact { padding-top: 0 !important; }
+.head { margin-bottom: 36px; display: grid; gap: 14px; }
+.twoCol { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.twoCol > * { min-width: 0; }
+.h3 { font-family: var(--sp-font); font-size: 20px; font-weight: 500; color: var(--sp-ink); margin: 0 0 6px; text-align: left; }
+.p { font-family: var(--sp-font); font-size: 15px; line-height: 1.6; color: var(--sp-muted); margin: 0 0 14px; text-align: left; }
+.prose { max-width: 720px; font-size: 16px; line-height: 1.7; color: var(--sp-text); }
+.prose p { margin: 0 0 14px; }
+.teamGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.member { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding: 20px; border: 1px solid var(--sp-line); border-radius: 10px; background: var(--sp-surface); text-decoration: none; color: inherit; }
+.member:hover { border-color: var(--sp-navy); text-decoration: none; color: inherit; }
+.member img { width: 64px; height: 64px; border-radius: 50%; border: 1px solid var(--sp-line); object-fit: cover; }
+.member strong { font-family: var(--sp-font); font-size: 16px; font-weight: 500; color: var(--sp-ink); }
+.member span { font-size: 13px; color: var(--sp-muted); }
+.role { display: inline-block; padding: 2px 8px; border-radius: 4px; border: 1px solid var(--sp-line); font-size: 11px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--sp-ink); }
+.rolePmc { border-color: var(--sp-green-dark); color: var(--sp-green-dark); }
+@media (max-width: 1100px) { .teamGrid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 760px) { .twoCol { grid-template-columns: 1fr; } .teamGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .teamGrid { grid-template-columns: 1fr; } }
+.teamNote { margin-top: 32px; font-size: 15px; }

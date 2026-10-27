@@ -19,7 +19,7 @@ const installCommand = `mkdir -p streampipes-${RELEASE.version} && cd streampipe
 /** Count adapters, processors and sinks from the docs sidebar so the numbers track releases. */
 function countExtensions() {
   const counts: Record<string, number> = {Adapters: 0, 'Data Processors': 0, 'Data Sinks': 0};
-  const reference = (sidebars as any).documentation.find((entry: any) => entry?.label === '🧩 Extensions Reference');
+  const reference = (sidebars as any).documentation.find((entry: any) => typeof entry?.label === 'string' && entry.label.endsWith('Extensions Reference'));
   reference?.items?.forEach((category: any) => { if (category?.label in counts) counts[category.label] = new Set(category.items).size; });
   return counts;
 }

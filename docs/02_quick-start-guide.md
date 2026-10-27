@@ -2,7 +2,7 @@
 id: quick-start-guide
 title: Quick Start Guide
 description: "Install Apache StreamPipes with Docker Compose and build your first workflow: connect a data source, persist a dataset, create a chart and add it to a dashboard."
-sidebar_label: "🚀 Quick Start Guide"
+sidebar_label: "Quick Start Guide"
 ---
 
 import DownloadSection from '@site/src/components/download/DownloadSection.tsx';

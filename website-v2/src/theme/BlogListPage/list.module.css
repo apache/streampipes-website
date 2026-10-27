@@ -1,0 +1,5 @@
+.list { padding-top: 0 !important; }
+.links { display: flex; flex-wrap: wrap; gap: 8px; }
+.links a { display: inline-flex; align-items: center; padding: 7px 12px; border: 1px solid var(--sp-line); border-radius: 6px; font-size: 14px; font-weight: 500; color: var(--sp-ink); text-decoration: none; }
+.links a:hover { border-color: var(--sp-navy); color: var(--sp-navy); text-decoration: none; }
+.paginator { margin-top: 40px; }

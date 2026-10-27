@@ -1,8 +1,8 @@
 ---
 title: StreamPi(pes) - Running StreamPipes on Raspberry Pi
-author: Patrick Wiener
-authorURL: "https://twitter.com/patrickwiener"
-authorImageURL: "/img/wiener.png"
+authors: [wipatrick]
+image: /img/blog/2020-01-23/streampipes_raspberrypi.png
+tags: [tutorial]
 ---
 <img class="blog-image" style={{maxWidth: '100%'}} src="/img/blog/2020-01-23/streampipes_raspberrypi.png" alt="StreamPipes on Raspberry Pi"/>
 **<div style={{float: 'left', paddingRight: '40px'}}>5 minutes to read</div>**

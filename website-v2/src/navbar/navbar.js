@@ -1,88 +1,66 @@
 module.exports = [
   {
-    "to": "/",
-    "label": "Home",
-    "position": "right"
-  },
-  {
-    "label": "Docs",
-    "position": "right",
-    "to": "/docs/user-guide-introduction"
-  },
-  {
-    "to": "/download",
-    "label": "Download",
-    "position": "right"
-  },
-  {
-    "label": "Resources",
-    "position": "right",
+    label: "Platform",
+    position: "right",
     items: [
-      {
-        href: "https://github.com/apache/streampipes/issues",
-        label: "Issue Tracker"
-      },
-      {
-        href: "https://github.com/apache/streampipes/discussions",
-        label: "Github Discussions Support"
-      },
-      {
-        href: "http://cwiki.apache.org/confluence/display/STREAMPIPES",
-        label: "Developer wiki"
-      },
+      { label: "Overview", to: "/#platform" },
+      { label: "Connectivity", to: "/docs/use-connect/" },
+      { label: "Pipelines", to: "/docs/use-pipelines/" },
+      { label: "Datasets", to: "/docs/use-datasets/" },
+      { label: "Charts", to: "/docs/use-charts/" },
+      { label: "Dashboards", to: "/docs/use-dashboards/" },
+      { label: "Assets and sites", to: "/docs/use-assets/" },
+      { label: "Architecture", to: "/#architecture-overview" },
+      { label: "Deployment", to: "/docs/configure-operate-deployment/" },
+      { label: "Enterprise readiness", to: "/#enterprise" }
     ]
   },
   {
-    "to": "blog",
-    "label": "Blog",
-    "position": "right"
-  },
-  {
-    "label": "Community",
-    "position": "right",
+    label: "Developers",
+    position: "right",
     items: [
-      {
-        "to": "/community/mailing-lists",
-        "label": "Mailing Lists",
-      },
-      {
-        "to": "/community/team",
-        "label": "Team",
-      },
-      {
-        "to": "/community/get-involved",
-        "label": "Get involved",
-      }
+      { label: "Overview", to: "/#developers" },
+      { label: "Python client", href: "https://streampipes.apache.org/docs/docs/python/dev/" },
+      { label: "Java client and APIs", to: "/docs/use-programmatic-access/" },
+      { label: "Functions", to: "/docs/extend-sdk-functions/" },
+      { label: "Extension SDK", to: "/docs/extend-setup/" },
+      { label: "Extend the UI", to: "/docs/extend-customize-ui/" },
+      { label: "Examples on GitHub", href: "https://github.com/apache/streampipes-examples" }
     ]
   },
   {
-    "label": "Apache",
-    "position": "right",
+    label: "Docs",
+    position: "right",
+    to: "/docs/user-guide-introduction/"
+  },
+  {
+    label: "Download",
+    position: "right",
+    to: "/download/"
+  },
+  {
+    label: "Community",
+    position: "right",
     items: [
-      {
-        href: "https://www.apache.org/",
-        label: "Apache Software Foundation"
-      },
-      {
-        href: "https://www.apache.org/foundation/how-it-works.html",
-        label: "How Apache Works"
-      },
-      {
-        href: "https://www.apache.org/licenses",
-        label: "License"
-      },
-      {
-        href: "https://www.apache.org/security",
-        label: "Security"
-      },
-      {
-        href: "https://www.apache.org/foundation/sponsorship.html",
-        label: "Sponsoring Apache"
-      },
-      {
-        href: "https://www.apache.org/foundation/thanks.html",
-        label: "Thanks"
-      }
+      { label: "Blog", to: "/blog/" },
+      { label: "Get involved", to: "/community/get-involved/" },
+      { label: "Mailing lists", to: "/community/mailing-lists/" },
+      { label: "Team", to: "/community/team/" },
+      { label: "GitHub Discussions", href: "https://github.com/apache/streampipes/discussions" },
+      { label: "Issue tracker", href: "https://github.com/apache/streampipes/issues" },
+      { label: "Get help", to: "/docs/community-get-help/" }
+    ]
+  },
+  {
+    label: "Apache",
+    position: "right",
+    items: [
+      { href: "https://www.apache.org/", label: "Apache Software Foundation" },
+      { href: "https://www.apache.org/foundation/how-it-works.html", label: "How Apache works" },
+      { href: "https://www.apache.org/licenses", label: "License" },
+      { href: "https://www.apache.org/security", label: "Security" },
+      { href: "https://www.apache.org/foundation/sponsorship.html", label: "Sponsoring Apache" },
+      { href: "https://www.apache.org/foundation/thanks.html", label: "Thanks" }
     ]
   },
   {
@@ -94,18 +72,12 @@ module.exports = [
     href: "https://github.com/apache/streampipes",
     position: "right",
     className: "header-link h-github",
-    "aria-label": "Apache StreamPipes Github",
+    "aria-label": "Apache StreamPipes on GitHub"
   },
   {
-    href: "https://linkedin.com/company/apache-streampipes",
+    label: "Get started",
     position: "right",
-    className: "header-link h-linkedin",
-    "aria-label": "Apache StreamPipes LinkedIn",
-  },
-  {
-    href: "https://twitter.com/streampipes",
-    position: "right",
-    className: "header-link h-x",
-    "aria-label": "Apache StreamPipes on X",
-  },
+    to: "/docs/quick-start-guide/",
+    className: "sp-nav-start"
+  }
 ];

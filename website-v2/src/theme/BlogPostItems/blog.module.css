@@ -1,0 +1,31 @@
+/* Blog list cards. Tokens: src/css/customTheme.css */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; font-family: var(--sp-font); }
+.card { display: flex; flex-direction: column; border: 1px solid var(--sp-line); border-radius: 12px; background: var(--sp-surface); overflow: hidden; transition: border-color 150ms ease; }
+.card:hover { border-color: var(--sp-navy); }
+.featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1.4fr 1fr; }
+.cover { display: block; aspect-ratio: 16 / 9; background: var(--sp-surface-2); border-bottom: 1px solid var(--sp-line); overflow: hidden; }
+.featured .cover { aspect-ratio: auto; min-height: 320px; border-bottom: 0; border-right: 1px solid var(--sp-line); }
+.cover img { width: 100%; height: 100%; object-fit: cover; object-position: top left; display: block; }
+.coverFallback { display: block; width: 100%; height: 100%; }
+.body { display: flex; flex-direction: column; gap: 10px; padding: 20px 22px 22px; }
+.featured .body { padding: 32px; justify-content: center; }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 13px; color: var(--sp-muted); }
+.meta time::after, .tag::after { content: '·'; margin-left: 10px; color: var(--sp-line); }
+.meta > :last-child::after { content: none; }
+.tag { font-weight: 500; letter-spacing: .06em; text-transform: uppercase; font-size: 12px; color: var(--sp-green-dark); text-decoration: none; }
+.tag:hover { color: var(--sp-navy); }
+.title { margin: 0; font-size: 20px; font-weight: 500; letter-spacing: -.01em; line-height: 1.3; }
+.featured .title { font-size: 30px; font-weight: 900; letter-spacing: -.025em; line-height: 1.12; }
+.title a { color: var(--sp-ink); text-decoration: none; }
+.card:hover .title a { color: var(--sp-navy); }
+.excerpt { margin: 0; font-size: 15px; line-height: 1.6; color: var(--sp-muted); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.featured .excerpt { font-size: 16px; -webkit-line-clamp: 4; }
+.authors { display: flex; flex-wrap: wrap; gap: 14px; margin-top: auto; padding-top: 8px; }
+.author { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: var(--sp-ink); }
+.author img { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--sp-line); object-fit: cover; }
+@media (max-width: 760px) {
+  .featured { grid-template-columns: 1fr; }
+  .featured .cover { min-height: 0; aspect-ratio: 16 / 9; border-right: 0; border-bottom: 1px solid var(--sp-line); }
+  .featured .body { padding: 22px; }
+  .featured .title { font-size: 24px; }
+}

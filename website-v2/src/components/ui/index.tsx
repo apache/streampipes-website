@@ -246,3 +246,32 @@ export function DeploymentDiagram() {
     </svg>
   </>;
 }
+
+/* ---------- Page intro (sub-page header) ---------- */
+
+export function PageIntro({eyebrow, title, lead, actions}: {eyebrow?: string; title: React.ReactNode; lead?: React.ReactNode; actions?: React.ReactNode}) {
+  return <Section tone="light" className={s.pageIntro}>
+    <Container>
+      {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
+      <Headline level={1} className={s.pageTitle}>{title}</Headline>
+      {lead && <Lead>{lead}</Lead>}
+      {actions && <Actions className={s.pageActions}>{actions}</Actions>}
+    </Container>
+  </Section>;
+}
+
+/* ---------- Table ---------- */
+
+export function Table({head, rows, caption}: {head: string[]; rows: React.ReactNode[][]; caption?: string}) {
+  return <div className={s.tableWrap}><table className={s.table}>
+    {caption && <caption className={s.tableCaption}>{caption}</caption>}
+    <thead><tr>{head.map(h => <th key={h} scope="col">{h}</th>)}</tr></thead>
+    <tbody>{rows.map((row, i) => <tr key={i}>{row.map((cell, j) => <td key={j}>{cell}</td>)}</tr>)}</tbody>
+  </table></div>;
+}
+
+/* ---------- Numbered list (procedures) ---------- */
+
+export function NumberedList({items}: {items: Array<{title: string; children: React.ReactNode}>}) {
+  return <ol className={s.numbered}>{items.map((item, i) => <li key={item.title}><span className={s.numberedIndex}>{i + 1}</span><div><h3>{item.title}</h3><div className={s.numberedBody}>{item.children}</div></div></li>)}</ol>;
+}

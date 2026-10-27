@@ -1,56 +1,28 @@
-import type { FC } from 'react';
 import React from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import PageSection from '../../components/PageSection';
-import PageHeader from '../../components/PageHeader';
+import {Container, Lead, PageIntro, Section} from '../../components/ui';
+import styles from '../pages.module.css';
 
-const Team: FC = () => {
+type Member = {name: string; github: string; pmc: boolean; contributions: number; imageSrc: string};
+
+export default function Team() {
   const {siteConfig} = useDocusaurusContext();
-  const {team} = siteConfig.customFields as { team: any[] };
-
-  const teamMemberSection = team.map(member => {
-    return (
-      <div className="col-lg-4 col-md-6 col-12" key={member.github}>
-        <div className="team-card">
-          <div className="team-thumbnail">
-            <img src={member.imageSrc} alt={`${member.name} GitHub profile`} />
-          </div>
-          <div className="team-member-name">
-            <h4>{member.name}</h4>
-            <div className="team-meta">
-              <span className={`team-role-badge ${member.pmc ? 'team-role-pmc' : 'team-role-committer'}`}>
-                {member.pmc ? 'PMC' : 'Committer'}
-              </span>
-            </div>
-            <a
-              className="team-github-link"
-              href={`https://github.com/${member.github}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              @{member.github}
-            </a>
-          </div>
+  const team = (siteConfig.customFields as {team: Member[]}).team;
+  return <Layout title="Team" description="Committers and PMC members of the Apache StreamPipes project.">
+    <PageIntro eyebrow="Community" title="Team" lead="Committers and members of the Project Management Committee (PMC). The list is ordered by contribution count in the main repository and updated periodically." />
+    <Section tone="light" className={styles.compact}>
+      <Container>
+        <div className={styles.teamGrid}>
+          {team.map(member => <a key={member.github} className={styles.member} href={`https://github.com/${member.github}`} target="_blank" rel="noreferrer">
+            <img src={member.imageSrc} alt="" loading="lazy" width="64" height="64" />
+            <strong>{member.name}</strong>
+            <span>@{member.github}</span>
+            <span className={`${styles.role} ${member.pmc ? styles.rolePmc : ''}`}>{member.pmc ? 'PMC member' : 'Committer'}</span>
+          </a>)}
         </div>
-      </div>
-    );
-  });
-
-  return (
-    <Layout title={'Team'}>
-      <PageHeader title={'Team'} subtitle={'Committers and PMC members active in the Apache StreamPipes project'}></PageHeader>
-      <PageSection backgroundClass={"background-white"} sectionTitle={"StreamPipes Committers"}>
-        <h5 className="section-subtitle">
-          Get to know our team! The list of team members is ordered by contribution count (which is periodically updated) in the <code>apache/streampipes</code> repository history.
-        </h5>
-
-        <div className="row">
-          {teamMemberSection}
-        </div>
-      </PageSection>
-    </Layout>
-  );
-};
-
-export default Team;
+        <Lead className={styles.teamNote}>Want to join? Sustained contributions of any kind, code, documentation, reviews or community support, are how committers are invited. Start on the <a href="/community/get-involved/">get involved</a> page.</Lead>
+      </Container>
+    </Section>
+  </Layout>;
+}

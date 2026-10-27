@@ -164,6 +164,33 @@ a.stat:hover .statValue { color: var(--sp-green-dark); }
 .step h3 { font-size: 18px; font-weight: 500; margin-bottom: 8px; }
 .step p { font-size: 15px; line-height: 1.6; color: var(--sp-muted); }
 
+/* ---------- Page intro ---------- */
+.pageIntro { padding: 72px 0 40px !important; }
+.pageTitle { font-size: clamp(36px, 4.6vw, 60px); margin-bottom: 18px; }
+.pageActions { margin-top: 24px; }
+
+/* ---------- Table ---------- */
+.tableWrap { overflow-x: auto; border: 1px solid var(--sp-line); border-radius: 10px; }
+.table { width: 100%; border-collapse: collapse; font-size: 15px; margin: 0; display: table; }
+.table th { text-align: left; font-weight: 500; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; color: var(--sp-muted); background: var(--sp-surface-2); padding: 12px 16px; border-bottom: 1px solid var(--sp-line); }
+.table td { padding: 14px 16px; border-bottom: 1px solid var(--sp-line); color: var(--sp-text); vertical-align: top; }
+.table tr:last-child td { border-bottom: 0; }
+.table a { color: var(--sp-navy); }
+.table a:hover { color: var(--sp-green-dark); }
+.table code { font-size: 13px; }
+.tableCaption { caption-side: bottom; text-align: left; padding: 10px 16px; font-size: 13px; color: var(--sp-muted); }
+
+/* ---------- Numbered list ---------- */
+.numbered { display: grid; gap: 0; }
+.numbered li { display: grid; grid-template-columns: 40px 1fr; gap: 16px; padding: 22px 0; border-top: 1px solid var(--sp-line); }
+.numbered li:last-child { border-bottom: 1px solid var(--sp-line); }
+.numberedIndex { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--sp-navy); color: var(--sp-navy); font-size: 14px; font-weight: 500; }
+.numbered h3 { font-size: 18px; font-weight: 500; margin-bottom: 6px; }
+.numberedBody { font-size: 15px; line-height: 1.65; color: var(--sp-muted); }
+.numberedBody p { margin: 0 0 8px; }
+.numberedBody p:last-child { margin-bottom: 0; }
+.numberedBody code { font-size: 13px; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1100px) {
   .container { width: calc(100% - 64px); }

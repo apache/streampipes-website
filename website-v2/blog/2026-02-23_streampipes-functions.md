@@ -1,8 +1,8 @@
 ---
 title: Persistent State for StreamPipes Functions
-author: Philipp Zehnder
-authorURL: "https://github.com/tenthe"
-authorImageURL: "/img/zehnder.png"
+authors: [tenthe]
+image: /img/blog/covers/engineering.png
+tags: [tutorial]
 ---
 
 # Persistent State for StreamPipes Functions

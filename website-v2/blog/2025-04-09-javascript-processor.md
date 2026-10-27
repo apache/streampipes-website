@@ -1,8 +1,8 @@
 ---
 title: How to Use the JavaScript Evaluator Processor
-author: Philipp Zehnder
-authorURL: "https://github.com/tenthe"
-authorImageURL: "/img/zehnder.png"
+authors: [tenthe]
+image: /img/blog/2025-04-09/javascript-processor-pipeline.png
+tags: [tutorial]
 ---
 
 # How to Use the JavaScript Evaluator Processor 

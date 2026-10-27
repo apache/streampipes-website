@@ -27,6 +27,7 @@ const groups = [
       ['Java client & APIs', '/docs/use-programmatic-access/'],
       ['Extension SDK', '/docs/extend-setup/'],
       ['Blog', '/blog/'],
+      ['Blog RSS feed', 'pathname:///blog/rss.xml'],
     ],
   },
   {

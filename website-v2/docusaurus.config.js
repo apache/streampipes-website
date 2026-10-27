@@ -7,12 +7,6 @@ module.exports = {
   "organizationName": "apache",
   "projectName": "streampipes-docs",
   "scripts": [
-    "/js/jquery-3.3.1.min.js",
-    "/js/buttons.js",
-    "/js/slick.min.js",
-    "/js/custom.js",
-    "/js/clipboard.min.js",
-    "/js/code-block-buttons.js",
     {
       src: 'https://widget.kapa.ai/kapa-widget.bundle.js',
       async: true,
@@ -39,20 +33,9 @@ module.exports = {
     },
   ],
   "stylesheets": [
-    "/css/slick.min.css",
-    "/css/slick-theme.min.css",
     "/css/fonts.css",
     "/css/admonition.css",
     "/css/custom.css",
-    "/css/code-block-buttons.css",
-    "/css/all.min.css",
-
-    "/css/bootstrap.min.css",
-    "/css/buttons.css",
-    "/css/team.css",
-    "/css/custom-website.css",
-    "/css/page-banner.css",
-    "/css/responsive.css",
   ],
   "favicon": "img/favicon.png",
   "customFields": {
@@ -74,6 +57,8 @@ module.exports = {
           "sidebarPath": "./sidebars.json",
           lastVersion: 'current',
           versions: {
+            current: { label: 'Next (unreleased)' },
+            '0.98.0': { label: '0.98.0 (latest release)' },
             '0.97.0': { noIndex: true },
             '0.95.1': { noIndex: true }
           }
@@ -83,12 +68,17 @@ module.exports = {
           ignorePatterns: ['/docs/0.97.0/**', '/docs/0.95.1/**']
         },
         "blog": {
-          "path": "blog"
+          "path": "blog",
+          blogTitle: 'Blog',
+          blogDescription: 'Release notes, how-tos and news from the Apache StreamPipes project.',
+          postsPerPage: 13,
+          blogSidebarCount: 8,
+          blogSidebarTitle: 'Recent posts',
+          feedOptions: { type: 'all', title: 'Apache StreamPipes blog', description: 'Release notes, how-tos and news from the Apache StreamPipes project.' }
         },
         "theme": {
           "customCss": [
-            "./src/css/customTheme.css",
-              require.resolve('./src/css/page-section.scss')
+            "./src/css/customTheme.css"
           ]
         }
       }
