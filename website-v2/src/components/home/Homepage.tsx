@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import useBrokenLinks from '@docusaurus/useBrokenLinks';
 import sidebars from '../../../sidebars.json';
-import {Accent, Actions, Badge, Bento, Button, Card, CodePanel, Container, DeploymentDiagram, Eyebrow, FeatureList, FlowDiagram, Headline, Lead, LogoWall, ScreenshotFrame, Section, SectionHead, Stat, Stats, Steps, TabPanel, Tabs} from '../ui';
+import {Accent, Actions, Bento, Button, Card, CodePanel, Container, DeploymentDiagram, Eyebrow, FeatureList, FlowDiagram, Headline, Lead, LogoWall, ScreenshotFrame, Section, SectionHead, Stat, Stats, Steps, TabPanel, Tabs} from '../ui';
 import {useCases} from '../usecases/data';
 import styles from './Homepage.module.css';
 
@@ -97,7 +97,7 @@ const modules = [
   {label: 'Datasets', src: '/img/home/dataset-overview.webp', alt: 'Dataset workspace with stored events, retention and export providers', caption: 'Datasets: stored history with retention rules, export and permissions.', to: docs('use-datasets')},
   {label: 'Charts', src: '/img/home/chart-timeseries.webp', alt: 'Chart editor with a time-series visualization', caption: 'Charts: query a dataset and pick the right visualization.', to: docs('use-charts')},
   {label: 'Dashboards', src: '/img/home/dashboard-create.webp', alt: 'Dashboard with a gauge, a flow-rate chart and a machine status indicator', caption: 'Dashboards: saved charts combined into one view for the team.', to: docs('use-dashboards')},
-  {label: 'Assets', src: '/img/home/asset-asset-link-overview.webp', alt: 'Machine asset with site assignment and linked resources', caption: 'Assets: plants, lines and machines with their linked data.', to: docs('use-assets')},
+  {label: 'Assets', src: '/img/home/home-map.webp', alt: 'StreamPipes home screen with assets shown on a map', caption: 'Assets: plants, lines and machines on a map, with their linked data.', to: docs('use-assets')},
 ];
 
 function ModuleShowcase() {
@@ -116,14 +116,14 @@ function ModuleShowcase() {
 function Hero({stars}: {stars: number | null}) {
   return <Section tone="light" className={styles.hero}>
     <Container center narrow className={styles.heroCopy}>
-      <Badge to="/download/">Apache top-level project · Release {RELEASE.version}</Badge>
+      <Eyebrow>Apache StreamPipes</Eyebrow>
       <Headline level={1}>The open-source platform<br />for <Accent>industrial data</Accent>.</Headline>
       <Lead>StreamPipes connects to machines and industrial systems, works on the data as it arrives, keeps the history, and turns it into charts and dashboards. It runs on your own servers under the Apache license.</Lead>
       <Actions className={styles.heroActions}>
         <Button to={quickstart} size="large">Get started</Button>
         <Button href={githubRepo} variant="secondary" size="large" arrow={false}>{icons.github}{stars === null ? 'Star on GitHub' : `${stars.toLocaleString('en-US')} stars on GitHub`}</Button>
       </Actions>
-      <p className={styles.heroNote}>Runs with Docker Compose or Kubernetes. Nothing to sign up for.</p>
+      <p className={styles.heroNote}>Runs with Docker Compose or Kubernetes.</p>
     </Container>
     <Container className={styles.heroFrame}>
       <ModuleShowcase />
@@ -169,7 +169,7 @@ function Platform({stars}: {stars: number | null}) {
 function UseCases() {
   return <Section id="use-cases" tone="light" bordered>
     <Container>
-      <SectionHead eyebrow="Use cases" title={<>What people<br />build with it.</>} lead="Five scenarios we see often, with the adapters, processors and sinks they use and the guide that goes with each." action={<Button to="/use-cases/" variant="ghost">All use cases</Button>} />
+      <SectionHead eyebrow="Use cases" title={<>What people<br />build with it.</>} lead="Scenarios we see often, with the adapters, processors and sinks they use and the guide that goes with each." action={<Button to="/use-cases/" variant="ghost">All use cases</Button>} />
       <Bento>
         {useCases.slice(0, 3).map(u => <Card key={u.slug} span={2} to={`/use-cases/${u.slug}/`} media={{src: u.cover.src, alt: u.cover.alt}} title={u.title} link="Read the use case">{u.lead}</Card>)}
       </Bento>
@@ -217,7 +217,7 @@ function Architecture() {
 function Deployment() {
   return <Section id="deployment" tone="tint" bordered>
     <Container>
-      <SectionHead eyebrow="Deployment" title={<>Extension services in the plant,<br />the core where your servers are.</>} lead="Each plant runs a small extension service next to its PLCs and machines. The service connects outbound to the broker, so you do not open any ports into the OT network. The core, the storage and the heavier processing stay in IT." />
+      <SectionHead eyebrow="Deployment" title="Extension services in the plant, the core in your data center." lead="Each plant runs a small extension service next to its PLCs and machines. The service connects outbound to the broker, so you do not open any ports into the OT network. The core, the storage and the heavier processing stay in IT." />
       <div className={styles.deployFrame}><DeploymentDiagram /></div>
       <div className={styles.deploySteps}>
         <Steps items={[

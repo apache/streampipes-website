@@ -205,7 +205,7 @@ export function DeploymentDiagram() {
     {sub && <text className={s.dpSub} x="14" y={h / 2 + 16}>{sub}</text>}
   </g>;
   const Site = ({y, name}: {y: number; name: string}) => <g>
-    <rect className={s.dpSite} x="40" y={y} width="470" height="200" rx="10" />
+    <rect className={s.dpSite} x="40" y={y} width="470" height="190" rx="10" />
     <text className={s.dpZoneLabel} x="56" y={y + 24}>{name}</text>
     <Box x={56} y={y + 40} w={130} h={46} title="PLC" sub="Siemens S7, Modbus" />
     <Box x={198} y={y + 40} w={140} h={46} title="OPC UA server" sub="Machines, lines" />
@@ -224,7 +224,7 @@ export function DeploymentDiagram() {
       <rect className={s.dpZone} x="20" y="20" width="510" height="440" rx="12" />
       <text className={s.dpZoneTitle} x="40" y="46">OT</text><text className={s.dpZoneSub} x="68" y="46">Plant networks</text>
       <Site y={60} name="Plant A" />
-      <Site y={262} name="Plant B" />
+      <Site y={258} name="Plant B" />
       <line className={s.dpBoundary} x1="555" y1="86" x2="555" y2="460" />
       <rect className={s.dpTag} x="518" y="28" width="74" height="30" rx="6" />
       <text className={s.dpTagText} x="555" y="47" textAnchor="middle">Firewall</text>
@@ -232,8 +232,8 @@ export function DeploymentDiagram() {
       <text className={s.dpZoneTitle} x="600" y="46">IT</text><text className={s.dpZoneSub} x="620" y="46">Data center or cloud</text>
       <Box x={600} y={180} w={150} h={120} title="Message broker" sub="NATS or Kafka" strong />
       <path className={s.dpLineAccent} d="M494 205 H530 C 565 205, 565 226, 600 226" markerEnd="url(#dp-arrow)" />
-      <path className={s.dpLineAccent} d="M494 421 H530 C 565 421, 565 254, 600 254" markerEnd="url(#dp-arrow)" />
-      <text className={s.dpNote} x="555" y="76" textAnchor="middle">outbound only, TLS</text>
+      <path className={s.dpLineAccent} d="M494 403 H530 C 565 403, 565 254, 600 254" markerEnd="url(#dp-arrow)" />
+      <rect className={s.dpNoteBg} x="546" y="120" width="18" height="104" rx="4" /><text className={s.dpNote} x="555" y="176" textAnchor="middle" transform="rotate(-90 555 172)">outbound only, TLS</text>
       <Box x={790} y={60} w={250} h={78} title="Core" sub="UI, management, monitoring, APIs" strong />
       <Box x={790} y={162} w={250} h={60} title="Time-series storage" sub="Datasets, retention, export" />
       <Box x={790} y={246} w={250} h={78} title="Extension services in IT" sub="Processors and sinks" strong />

@@ -48,7 +48,7 @@ export default function Architecture() {
     </Section>
     <Section tone="light" bordered>
       <Container>
-        <SectionHead eyebrow="Deployment" title={<>Extension services in the plant,<br />the core where your servers are.</>} lead="Each plant runs a small extension service next to its PLCs and machines. The service connects outbound to the broker, so you do not open any ports into the OT network. The core, the storage and the heavier processing stay in IT." />
+        <SectionHead eyebrow="Deployment" title="Extension services in the plant, the core in your data center." lead="Each plant runs a small extension service next to its PLCs and machines. The service connects outbound to the broker, so you do not open any ports into the OT network. The core, the storage and the heavier processing stay in IT." />
         <div className={styles.diagramFrame}><DeploymentDiagram /></div>
         <div className={styles.stepsBlock}>
           <Steps items={[

@@ -155,6 +155,7 @@ a.stat:hover .statValue { color: var(--sp-green-dark); }
 .dpBoundary { stroke: var(--sp-navy); stroke-width: 1.5; stroke-dasharray: 6 6; }
 .dpTag { fill: var(--sp-navy); }
 .dpTagText { fill: #fff; font-size: 12px; font-weight: 500; }
+.dpNoteBg { fill: var(--sp-surface); }
 .dpNote { fill: var(--sp-green-dark); font-size: 11px; }
 .diagramFrame { border: 1px solid var(--sp-line); border-radius: 10px; background: var(--sp-surface); padding: 20px 24px; }
 
