@@ -177,7 +177,7 @@ pipelineElements:
       - value: "12"
   - type: sink
     ref: sink01
-    id: org.apache.streampipes.sinks.internal.jvm.datalake
+    id: org.apache.streampipes.sinks.internal.jvm.dataset
     connectedTo:
       - processor01
     configuration:

@@ -9,11 +9,16 @@ const groups = [
   {
     title: 'Platform',
     links: [
+      ['Features', '/features/'],
+      ['Use cases', '/use-cases/'],
+      ['Integrations', '/integrations/'],
       ['Connectivity', '/docs/use-connect/'],
       ['Data management', '/docs/use-datasets/'],
       ['Assets & sites', '/docs/use-assets/'],
       ['Pipelines', '/docs/use-pipelines/'],
       ['Charts & dashboards', '/docs/use-dashboards/'],
+      ['Architecture', '/architecture/'],
+      ['Enterprise readiness', '/enterprise/'],
       ['Deployment', '/docs/configure-operate-deployment/'],
     ],
   },

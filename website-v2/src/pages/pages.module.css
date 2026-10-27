@@ -19,3 +19,26 @@
 @media (max-width: 760px) { .twoCol { grid-template-columns: 1fr; } .teamGrid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px) { .teamGrid { grid-template-columns: 1fr; } }
 .teamNote { margin-top: 32px; font-size: 15px; }
+.note { margin-top: 24px; font-family: var(--sp-font); font-size: 14px; line-height: 1.6; color: var(--sp-muted); max-width: 760px; }
+.diagramFrame { border: 1px solid var(--sp-line); border-radius: 10px; background: var(--sp-surface); padding: 24px 28px; }
+.diagramFrame img { padding: 0; }
+.componentList { display: grid; }
+.componentRow { display: grid; grid-template-columns: 48px 1fr; gap: 16px; padding: 22px 0; border-top: 1px solid var(--sp-line); }
+.componentRow:last-child { border-bottom: 1px solid var(--sp-line); }
+.componentRow span { font-family: var(--sp-font); font-size: 13px; font-weight: 500; letter-spacing: .08em; color: var(--sp-green-dark); padding-top: 4px; }
+.componentRow h3 { font-family: var(--sp-font); font-size: 19px; font-weight: 500; color: var(--sp-ink); margin: 0 0 6px; text-align: left; }
+.componentRow p { font-family: var(--sp-font); font-size: 15px; line-height: 1.65; color: var(--sp-muted); margin: 0; text-align: left; max-width: 820px; }
+.actionsRow { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 28px; }
+.stepsBlock { margin-top: 48px; }
+.factList { list-style: none; margin: 0; padding: 0; display: grid; }
+.factList li { position: relative; padding: 12px 0 12px 22px; border-top: 1px solid var(--sp-line); font-family: var(--sp-font); font-size: 15px; color: var(--sp-text); text-align: left; }
+.factList li:last-child { border-bottom: 1px solid var(--sp-line); }
+.factList li::before { content: ''; position: absolute; left: 0; top: 19px; width: 8px; height: 8px; border-radius: 2px; background: var(--sp-green-dark); }
+.topicImage { margin-bottom: 20px; }
+@media (max-width: 760px) { .diagramFrame { padding: 12px; } .componentRow { grid-template-columns: 36px 1fr; } }
+.topicTitle { margin-bottom: 20px; }
+.jumpList { display: flex; flex-wrap: wrap; gap: 8px; }
+.jumpList a { display: inline-block; padding: 7px 12px; border: 1px solid var(--sp-line); border-radius: 6px; font-family: var(--sp-font); font-size: 14px; font-weight: 500; color: var(--sp-ink); text-decoration: none; }
+.jumpList a:hover { border-color: var(--sp-navy); color: var(--sp-navy); text-decoration: none; }
+.shotStack { display: grid; gap: 16px; }
+.factList + .actionsRow { margin-top: 20px; }

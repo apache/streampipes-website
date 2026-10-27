@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import useBrokenLinks from '@docusaurus/useBrokenLinks';
 import sidebars from '../../../sidebars.json';
 import {Accent, Actions, Badge, Bento, Button, Card, CodePanel, Container, DeploymentDiagram, Eyebrow, FeatureList, FlowDiagram, Headline, Lead, LogoWall, ScreenshotFrame, Section, SectionHead, Stat, Stats, Steps, TabPanel, Tabs} from '../ui';
+import {useCases} from '../usecases/data';
 import styles from './Homepage.module.css';
 
 const RELEASE = {version: '0.98.0', date: 'December 2025'};
@@ -135,7 +136,7 @@ function Connectors() {
     <Container>
       <div className={styles.connectorsHead}>
         <div><Eyebrow>Connectivity</Eyebrow><Headline level={3}>Works with the systems you already run.</Headline></div>
-        <Button to={docs('use-connect')} variant="ghost">All {ext.Adapters} adapters</Button>
+        <Button to="/integrations/" variant="ghost">All {ext.Adapters + ext['Data Processors'] + ext['Data Sinks']} integrations</Button>
       </div>
       <LogoWall logos={connectors} label="Supported protocols, brokers and databases" />
     </Container>
@@ -152,7 +153,7 @@ function Platform({stars}: {stars: number | null}) {
         <Stat value={`${ext['Data Processors'] + ext['Data Sinks']}+`} label="Processors and sinks" note="Filter, enrich, detect, route and store" to={docs('use-pipelines')} />
       </Stats>
       <div className={styles.platformHead}>
-        <SectionHead eyebrow="Platform" title={<>One platform.<br />The whole data journey.</>} lead="From the first machine connection to the dashboard on the shop floor. Every step is built in, and every step is open." />
+        <SectionHead eyebrow="Platform" title={<>One platform.<br />The whole data journey.</>} lead="From the first machine connection to the dashboard on the shop floor. Every step is built in, and every step is open." action={<Button to="/features/" variant="ghost">All features</Button>} />
       </div>
       <Bento>
         <Card span={3} to={docs('use-connect')} media={{src: '/img/home/connect-create-select-adapter.webp', alt: 'StreamPipes adapter library'}} title="Connect" link="Explore connectivity">Bring machines, brokers and software systems into the platform with guided adapters, event previews and schema refinement.</Card>
@@ -160,6 +161,17 @@ function Platform({stars}: {stars: number | null}) {
         <Card span={2} to={docs('use-dashboards')} media={{src: '/img/home/chart-timeseries.webp', alt: 'StreamPipes chart editor'}} title="Charts and dashboards" link="Explore dashboards">Query datasets, choose the right visualization and compose shared operational views.</Card>
         <Card span={2} to={docs('use-datasets')} icon={icons.db} title="Datasets" link="Explore datasets">Persist streams as historical data. Inspect, export, import CSV and define retention and archival.</Card>
         <Card span={2} to={docs('use-assets')} icon={icons.site} title="Assets and sites" link="Explore assets">Model plants, lines and machines and link every stream, dataset, pipeline and dashboard to them.</Card>
+      </Bento>
+    </Container>
+  </Section>;
+}
+
+function UseCases() {
+  return <Section id="use-cases" tone="light" bordered>
+    <Container>
+      <SectionHead eyebrow="Use cases" title={<>Built for the work<br />on the shop floor.</>} lead="Typical scenarios, each with the adapters, processors and sinks involved and the guide to follow." action={<Button to="/use-cases/" variant="ghost">All use cases</Button>} />
+      <Bento>
+        {useCases.slice(0, 3).map(u => <Card key={u.slug} span={2} to={`/use-cases/${u.slug}/`} media={{src: u.cover.src, alt: u.cover.alt}} title={u.title} link="Read the use case">{u.lead}</Card>)}
       </Bento>
     </Container>
   </Section>;
@@ -197,7 +209,7 @@ function Architecture() {
         <ScreenshotFrame src="/img/home/architecture.webp" alt="StreamPipes architecture: interfaces on top, the core and time-series database in the middle, a messaging layer, and extension services with adapters, processors, sinks and Functions connected to machines" width={1600} height={695} caption="Architecture overview" />
         <ol className={styles.layers}>{layers.map((layer, i) => <li key={layer.title}><span>{String(i + 1).padStart(2, '0')}</span><div><h3>{layer.title}</h3><p>{layer.text}</p></div></li>)}</ol>
       </div>
-      <div className={styles.sectionFoot}><Button to={docs('concepts-architecture')} variant="ghost">Architecture in detail</Button></div>
+      <div className={styles.sectionFoot}><Button to="/architecture/" variant="ghost">Architecture in detail</Button></div>
     </Container>
   </Section>;
 }
@@ -222,7 +234,7 @@ function Deployment() {
 function Enterprise() {
   return <Section id="enterprise" tone="light" bordered>
     <Container>
-      <SectionHead eyebrow="Enterprise readiness" title={<>Ready for the plant.<br />Ready for IT.</>} lead="The controls an IT department expects, built into the open-source platform: identity, access control, audit trail, data lifecycle and secured connections." action={<Button to={docs('configure-operate-security')} variant="ghost">Security and operations docs</Button>} />
+      <SectionHead eyebrow="Enterprise readiness" title={<>Ready for the plant.<br />Ready for IT.</>} lead="The controls an IT department expects, built into the open-source platform: identity, access control, audit trail, data lifecycle and secured connections." action={<Button to="/enterprise/" variant="ghost">Everything on enterprise readiness</Button>} />
       <Bento>
         <Card span={2} to={docs('configure-operate-environment-variables')} icon={icons.lock} title="Single sign-on" link="Configure OpenID Connect">Log in through your identity provider with OpenID Connect or OAuth2. Configure one or more providers and map roles from token claims.</Card>
         <Card span={2} to={docs('configure-operate-security')} icon={icons.users} title="Roles, groups and permissions" link="User management">Built-in and custom roles from fine-grained privileges, user groups, per-resource permissions with owners and public links, service accounts and API keys.</Card>
@@ -281,13 +293,14 @@ function GetStarted() {
 
 export default function Homepage() {
   const {collectAnchor} = useBrokenLinks();
-  ['platform', 'architecture', 'architecture-overview', 'deployment', 'enterprise', 'developers', 'install'].forEach(collectAnchor);
+  ['platform', 'use-cases', 'architecture', 'architecture-overview', 'deployment', 'enterprise', 'developers', 'install'].forEach(collectAnchor);
   const stars = useGithubStars();
   return <div className={`${styles.home} sp-home`}>
     <main>
       <Hero stars={stars} />
       <Connectors />
       <Platform stars={stars} />
+      <UseCases />
       <HowItWorks />
       <Architecture />
       <Deployment />

@@ -16,6 +16,7 @@ export default function Download() {
     <Section tone="light" className={styles.compact}>
       <Container>
         <DownloadSection version={RELEASE.version} releaseDate={RELEASE.date} showMoreInfo />
+        <p className={styles.note}>Which docs apply? The <a href="/docs/0.98.0/user-guide-introduction/">0.98.0 documentation</a> matches this release. The default <a href="/docs/user-guide-introduction/">documentation</a> and the screenshots on this site describe the upcoming release, labelled "Next", which you can try with the nightly build below.</p>
       </Container>
     </Section>
     <Section tone="tint" bordered>

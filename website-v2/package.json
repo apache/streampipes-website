@@ -11,7 +11,8 @@
     "rename-version": "docusaurus-rename-version",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
-    "docusaurus": "docusaurus"
+    "docusaurus": "docusaurus",
+    "update-extensions": "node ./scripts/update-extensions.js"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.1",

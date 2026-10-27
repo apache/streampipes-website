@@ -3,29 +3,28 @@ module.exports = [
     label: "Platform",
     position: "right",
     items: [
-      { label: "Overview", to: "/#platform" },
-      { label: "Connectivity", to: "/docs/use-connect/" },
-      { label: "Pipelines", to: "/docs/use-pipelines/" },
-      { label: "Datasets", to: "/docs/use-datasets/" },
-      { label: "Charts", to: "/docs/use-charts/" },
-      { label: "Dashboards", to: "/docs/use-dashboards/" },
-      { label: "Assets and sites", to: "/docs/use-assets/" },
-      { label: "Architecture", to: "/#architecture-overview" },
-      { label: "Deployment", to: "/docs/configure-operate-deployment/" },
-      { label: "Enterprise readiness", to: "/#enterprise" }
+      { label: "Overview", to: "/#platform", activeBaseRegex: "^$" },
+      { label: "Features", to: "/features/" },
+      { label: "Architecture", to: "/architecture/" },
+      { label: "Enterprise readiness", to: "/enterprise/" },
+      { label: "Integrations", to: "/integrations/" }
     ]
+  },
+  {
+    label: "Use cases",
+    position: "right",
+    to: "/use-cases/"
   },
   {
     label: "Developers",
     position: "right",
     items: [
-      { label: "Overview", to: "/#developers" },
+      { label: "Overview", to: "/#developers", activeBaseRegex: "^$" },
       { label: "Python client", href: "https://streampipes.apache.org/docs/docs/python/dev/" },
       { label: "Java client and APIs", to: "/docs/use-programmatic-access/" },
       { label: "Functions", to: "/docs/extend-sdk-functions/" },
       { label: "Extension SDK", to: "/docs/extend-setup/" },
-      { label: "Extend the UI", to: "/docs/extend-customize-ui/" },
-      { label: "Examples on GitHub", href: "https://github.com/apache/streampipes-examples" }
+      { label: "Extend the UI", to: "/docs/extend-customize-ui/" }
     ]
   },
   {

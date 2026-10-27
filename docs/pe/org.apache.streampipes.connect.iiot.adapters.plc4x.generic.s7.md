@@ -50,27 +50,48 @@ The polling interval requires a number in milliseconds, which represents the int
 PLC for new data. For instance, a polling interval of 1000 milliseconds will configure the adapter to send a request to
 the PLC every second.
 
+If a read is still running when the next poll is due, that poll is skipped. Read requests are bounded to five seconds;
+configure driver request timeouts below this bound. After a failure, retries back off from one second up to sixty seconds.
+Successful reads reset this backoff.
+
 ### Supported Transports
 
 The following transports are supported by this adapter:
 
-* tcp
+* cotp
 
 ### Transport Metadata
 
 #### Required
 
-**tcp**
+**cotp**
 
 
 
 #### Advanced
 
-**tcp**
+**cotp**
 
-* keep-alive: Should keep-alive packets be sent? (BOOLEAN)
-* no-delay: Should packets be sent instantly or should we give the OS some time to aggregate data. (BOOLEAN)
-* default-timeout: Timeout after which a connection will be treated as disconnected. (INT)
+* local-rack: Rack value for the client (PLC4X device). (INT)
+* local-slot: Slot value for the client (PLC4X device). (INT)
+* local-device-group: Local Device Group. (STRING)
+* remote-rack: Rack value for the remote main CPU (PLC). (INT)
+* remote-slot: Slot value for the remote main CPU (PLC). (INT)
+* remote-device-group: Remote Device Group. (STRING)
+* local-tsap: Local TSAP (Transport Service Access Point) identifier. (INT)
+* remote-tsap: Remote TSAP (Transport Service Access Point) identifier. (INT)
+* tpdu-size: COTP PDU size for data transmission. Valid values: 128, 256, 512, 1024, 2048, 4096, 8192. (INT)
+* handshake-timeout-ms: Connection timeout for COTP handshake in milliseconds. (INT)
+* protocol-class: COTP protocol class to use. Class 0 is most commonly used (simple class, no flow control). (INT)
+* connect-timeout-ms:  (INT)
+* read-timeout-ms:  (INT)
+* write-timeout-ms:  (INT)
+* no-delay:  (BOOLEAN)
+* keep-alive:  (BOOLEAN)
+* send-buffer-size:  (INT)
+* receive-buffer-size:  (INT)
+* local-address:  (STRING)
+* local-port:  (INT)
 
 ### Protocol Metadata
 
@@ -80,52 +101,56 @@ The following transports are supported by this adapter:
 
 #### Optional
 
-* local-rack: Rack value for the client (PLC4X device). (INT)
-* local-slot: Slot value for the client (PLC4X device). (INT)
-* local-device-group: Local Device Group. (Defaults to 'OTHERS').
-Allowed values:
- - PG_OR_PC
- - OS
- - OTHERS (STRING)
-* local-tsap: Local Transport Service Access Point. (Overrides settings made in local-rack, local-slot and local-device-group. Be sure to convert into integer representation) (INT)
-* remote-rack: Rack value for the remote main CPU (PLC). (INT)
-* remote-slot: Slot value for the remote main CPU (PLC). (INT)
-* remote-device-group: Remote Device Group (Defaults to 'PG_OR_PC').
-Allowed values:
- - PG_OR_PC
- - OS
- - OTHERS (STRING)
-* remote-tsap: Remote Transport Service Access Point. (Overrides settings made in remote-rack, remote-slot and remote-device-group. Be sure to convert into integer representation) (INT)
-* remote-rack2: Rack value for the remote secondary CPU (PLC). (INT)
-* remote-slot2: Slot value for the remote secondary CPU (PLC). (INT)
-* remote-device-group2: Remote Device Group. (Defaults to 'PG_OR_PC').
-Allowed values:
- - PG_OR_PC
- - OS
- - OTHERS (STRING)
-* pdu-size: Maximum size of a data-packet sent to and received from the remote PLC. During the connection process both parties will negotiate a maximum size both parties can work with and is equal or smaller than the given value is used. The driver will automatically split up large requests to not exceed this value in a request or expected response. (INT)
-* max-amq-caller: Maximum number of unconfirmed requests the PLC will accept in parallel before discarding with errors. This parameter also will be negotiated during the connection process and the maximum both parties can work with and is equal or smaller than the given value is used. The driver will automatically take care not exceeding this value while processing requests. Too many requests can cause a growing queue. (INT)
-* max-amq-callee: Maximum number of unconfirmed responses or requests PLC4X will accept in parallel before discarding with errors. This option is available for completeness and is correctly handled out during the connection process, however it is currently not enforced on PLC4X’s side. So if a PLC would send more messages than agreed upon, these would still be processed. (INT)
-* controller-type: As part of the connection process, usually the PLC4X S7 driver would try to identify the remote device. However some devices seem to have problems with this and hang up or cause other problems. In such a case, providing the controller-type will skip the identification process and hereby avoid this type of problem. Possible values are:/n- S7_300
-- S7_400
-- S7_1200
-- S7-1500
-- LOGO (STRING)
-* read-timeout: This is the maximum waiting time for reading on the TCP channel. As there is no traffic, it must be assumed that the connection with the interlocutor was lost and it must be restarted. When the channel is closed, the "fail over" is carried out in case of having the secondary channel, or it is expected that it will be restored automatically, which is done every 4 seconds. (INT)
-* ping: If your application requires sampling times greater than the set "read-timeout" time, it is important that the PING option is activated, this will prevent the TCP channel from being closed unnecessarily. (BOOLEAN)
-* ping-time: Time value in seconds at which the execution of the PING will be scheduled. Generally set by developer experience, but generally should be the same as (read-timeout / 2). (INT)
-* retry-time: Time for supervision of TCP channels. If the channel is not active, a safe stop of the EventLoop must be performed, to ensure that no additional tasks are created. (INT)
+* pdu-size: Maximum size of an S7 data-packet sent to and received from the remote PLC. (INT)
+* max-amq-caller: Maximum number of unconfirmed requests the PLC will accept in parallel. (INT)
+* max-amq-callee: Maximum number of unconfirmed responses or requests PLC4X will accept in parallel. (INT)
+* controller-type: Skip controller-type detection and assume the given type. (STRING)
+* read-timeout-ms: Maximum waiting time (in milliseconds) for a single S7 request/response exchange. (INT)
+* ha-heartbeat-interval-ms: S7H dual-path only: interval between heartbeat ticks (in milliseconds). Each tick pings each inner connection so a standby disruption is detected within interval + ha-failover-timeout-ms. Lower values detect faster but generate more background traffic. Default 4000 (4s). (INT)
+* ha-failover-timeout-ms: S7H dual-path only: maximum time (in milliseconds) the wrapper waits for an operation on the active inner before swapping to the alternate. The same value is used as the per-tick ping timeout in the heartbeat. Lower values fail over faster but risk swapping on transient slow responses. Default 2000 (2s). (INT)
 
 ### Tags
 
-The syntax to define tags is based on the PLC4X syntax, see https://plc4x.apache.org/users/protocols/s7.html.
+The syntax to define tags is based on the PLC4X syntax, see https://plc4x.apache.org/plc4x/latest/users/protocols/s7.html.
 Address Pattern:
 
 ```
-propertyName=%{Memory-Area}{start-address}:{Data-Type}[{array-size}]
+propertyName=%{Memory-Area}{start-address}[{start-index}..{end-index}]:{Data-Type}
 
 temperature=%I0.0:INT
 ```
+
+### Browsing tags
+
+Choose **Browse PLC tags** after configuring the connection, then load **Available tags** and select the readable tags.
+The browse query defaults to `*` for S7 and ADS, which browse all available items with this query.
+For OPC UA, it defaults to `ns=0;i=85` (the Objects folder). Children are loaded one level at a time
+as you expand folders, avoiding a recursive browse of the entire server. Enter a parent NodeId to browse its children,
+for example `ns=2;s=Demo.Industrial.CncMachine.RawData`, then select `cycleActive` from the results.
+A query for a leaf node returns its children, not the leaf itself. Earlier saved OPC UA queries using `*` are
+interpreted as the Objects folder. Include the server's endpoint path in **PLC Address**, for example
+`localhost:4840/milo`; the path is case-sensitive. Query syntax and returned information depend on the driver and PLC. Unsupported connections report an error; use **Enter tags manually** instead.
+Browsing waits up to ten seconds for the response and returns the connection to the shared cache afterwards.
+
+The tree preserves the hierarchy supplied by the driver. Only readable items with an address can be selected.
+S7 browsing can return memory areas and data blocks as byte addresses rather than symbolic, typed variables.
+Use manual entry when you need different offsets, datatypes, or custom event field names.
+
+Selected addresses are used unchanged for sampling and polling. Event field names start with `tag_`, followed by the
+address with punctuation replaced by underscores. Conflicting names require manual entry. Browsing is performed only
+while configuring the adapter; starting an adapter uses its saved selections without browsing again.
+
+### Upgrading existing adapters
+
+The version 3 migration keeps existing tags in the selected manual-entry option, preserving field names and addresses.
+
+The version 2 adapter migration updates saved PLC4X configuration parameter names and legacy array addresses for PLC4X 1.0.
+For example, `request-timeout` becomes `request-timeout-ms`, and `%DB42:28.0:BYTE[4]` becomes
+`%DB42:28.0[0..3]:BYTE`. A single index selects a scalar; a range selects a list.
+S7 connections now use the `s7` driver with the `cotp` transport. Rack and slot parameters use the `cotp.` prefix.
+Explicit configuration values are retained. Unspecified settings use PLC4X 1.0 defaults, including its certificate
+verification defaults. Review the [PLC4X migration guide](https://plc4x.apache.org/plc4x/latest/users/migrations/0.13.1-to-1.0.0/index.html)
+for protocol-specific changes before connecting to a device after an upgrade.
 
 ## Best Practices
 

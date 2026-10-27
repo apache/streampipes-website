@@ -14,6 +14,14 @@ import ScreenshotComparison from '@site/src/components/docs/ScreenshotComparison
 
 This guide helps you get from a fresh installation to a first working result in StreamPipes.
 
+**What you will have in about ten minutes:** a running StreamPipes instance, one adapter delivering simulated machine data, a dataset that keeps its history, a chart on that dataset, and a dashboard that shows the chart. No external machine or broker is needed; the built-in machine data simulator provides the data.
+
+<ScreenshotFigure
+src="/img/2026/dashboard-create.png"
+alt="The dashboard you will build in this guide"
+title="The result: a dashboard built from a chart on persisted data"
+/>
+
 The guide begins with installation and then walks through one complete first-run flow in the product.
 
 ## Before you start
