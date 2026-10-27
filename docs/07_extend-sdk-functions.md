@@ -1,6 +1,7 @@
 ---
 id: extend-sdk-functions
 title: "SDK Guide: Functions"
+description: "Write StreamPipes Functions: lightweight Java or Python code that subscribes to data streams and reacts to events without building a pipeline element."
 sidebar_label: "SDK: Functions"
 ---
 

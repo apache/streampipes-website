@@ -1,6 +1,7 @@
 ---
 id: configure-operate-extension-services
 title: Extension Services
+description: "Manage StreamPipes extension services: inspect registered services, change service configuration and manage certificates for secure connections."
 sidebar_label: Extension Services
 ---
 

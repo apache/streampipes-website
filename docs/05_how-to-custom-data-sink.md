@@ -1,6 +1,7 @@
 ---
 id: how-to-custom-data-sink
 title: "Write a custom data sink"
+description: "Tutorial: build a custom StreamPipes data sink with the standalone wrapper to forward pipeline output to external systems."
 sidebar_label: "Write a custom data sink"
 ---
 

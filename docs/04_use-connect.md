@@ -1,6 +1,7 @@
 ---
 id: use-connect
 title: Connect IoT Data
+description: "Connect industrial and IoT data sources in StreamPipes with adapters for OPC UA, MQTT, Siemens S7, Modbus, Kafka and more; inspect events and refine schemas."
 sidebar_label: 🔌 Connect IoT Data
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: concepts-architecture
 title: Architecture
+description: "Technical architecture of Apache StreamPipes: core services, extension services, message brokers, storage, and how to deploy components across OT and IT."
 sidebar_label: Architecture
 ---
 

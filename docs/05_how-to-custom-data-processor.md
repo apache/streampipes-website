@@ -1,6 +1,7 @@
 ---
 id: how-to-custom-data-processor
 title: "Write a custom data processor"
+description: "Tutorial: build a custom StreamPipes data processor as a standalone extension service and use it in pipelines."
 sidebar_label: "Write a custom data processor"
 ---
 

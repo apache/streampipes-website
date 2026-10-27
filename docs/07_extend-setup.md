@@ -1,6 +1,7 @@
 ---
 id: extend-setup
 title: Development Setup
+description: "Recommended local development setup for building, running and testing new StreamPipes pipeline elements and extensions."
 sidebar_label: Development Setup
 ---
 

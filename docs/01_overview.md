@@ -1,6 +1,7 @@
 ---
 id: user-guide-introduction
 title: Apache StreamPipes Documentation
+description: "Entry point to the Apache StreamPipes documentation: what the open-source industrial IoT data platform does, how the docs are organized, and where to start."
 sidebar_label: Overview
 ---
 

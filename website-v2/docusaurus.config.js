@@ -1,6 +1,6 @@
 module.exports = {
   "title": "Apache StreamPipes",
-  "tagline": "Self-Service Data Analytics",
+  "tagline": "Open-source industrial IoT data platform",
   "url": "https://streampipes.apache.org",
   "baseUrl": "/",
   "trailingSlash": true,
@@ -71,7 +71,15 @@ module.exports = {
           "showLastUpdateTime": true,
           "path": "../docs",
           "sidebarPath": "./sidebars.json",
-          lastVersion: 'current'
+          lastVersion: 'current',
+          versions: {
+            '0.97.0': { noIndex: true },
+            '0.95.1': { noIndex: true }
+          }
+        },
+        "sitemap": {
+          changefreq: 'weekly',
+          ignorePatterns: ['/docs/0.97.0/**', '/docs/0.95.1/**']
         },
         "blog": {
           "path": "blog"
@@ -84,6 +92,49 @@ module.exports = {
         }
       }
     ]
+  ],
+  "headTags": [
+    {
+      tagName: 'script',
+      attributes: { type: 'application/ld+json' },
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'SoftwareApplication',
+            '@id': 'https://streampipes.apache.org/#software',
+            name: 'Apache StreamPipes',
+            url: 'https://streampipes.apache.org/',
+            applicationCategory: 'DeveloperApplication',
+            applicationSubCategory: 'Industrial IoT data platform',
+            operatingSystem: 'Linux, macOS, Windows (Docker)',
+            softwareVersion: '0.98.0',
+            license: 'https://www.apache.org/licenses/LICENSE-2.0',
+            isAccessibleForFree: true,
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+            downloadUrl: 'https://streampipes.apache.org/download/',
+            softwareHelp: 'https://streampipes.apache.org/docs/user-guide-introduction/',
+            codeRepository: 'https://github.com/apache/streampipes',
+            description: 'Open-source industrial IoT data platform to connect machines, process live data streams, store datasets and build charts and dashboards.',
+            author: { '@id': 'https://www.apache.org/#organization' }
+          },
+          {
+            '@type': 'Organization',
+            '@id': 'https://www.apache.org/#organization',
+            name: 'The Apache Software Foundation',
+            url: 'https://www.apache.org/',
+            logo: 'https://streampipes.apache.org/img/asf_logo_wide.svg'
+          },
+          {
+            '@type': 'WebSite',
+            '@id': 'https://streampipes.apache.org/#website',
+            url: 'https://streampipes.apache.org/',
+            name: 'Apache StreamPipes',
+            publisher: { '@id': 'https://www.apache.org/#organization' }
+          }
+        ]
+      })
+    }
   ],
   "plugins": [
     "./src/plugins/matomo",
@@ -125,7 +176,20 @@ module.exports = {
       content:
           'Apache StreamPipes 0.98.0 is available! ⭐️',
     },
-    "image": "img/favicon.png",
+    "image": "img/streampipes-social-card.png",
+    "metadata": [
+      {
+        name: 'description',
+        content: 'Apache StreamPipes is an open-source industrial IoT data platform. Connect machines via OPC UA, MQTT, S7 and Modbus, process live data in visual pipelines, store datasets and build charts and dashboards.'
+      },
+      {
+        name: 'keywords',
+        content: 'industrial IoT, IIoT platform, open source, OPC UA, MQTT, Siemens S7, Modbus, stream processing, dashboards, Apache StreamPipes'
+      },
+      { name: 'twitter:site', content: '@StreamPipes' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:site_name', content: 'Apache StreamPipes' }
+    ],
     "footer": {
       "links": [],
       "copyright": "Copyright © 2019 - 2026 The Apache Software Foundation",

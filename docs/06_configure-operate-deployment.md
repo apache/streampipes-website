@@ -1,6 +1,7 @@
 ---
 id: configure-operate-deployment
 title: Deployment options
+description: "Deploy Apache StreamPipes with Docker Compose or Kubernetes, choose NATS or Kafka as message broker and run extension services close to machines."
 sidebar_label: Deployment options
 ---
 

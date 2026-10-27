@@ -1,6 +1,7 @@
 ---
 id: configure-operate-security
 title: Security & User Management
+description: "Manage users, roles, groups, service accounts and resource sharing in StreamPipes with role-based access control and JWT signing."
 sidebar_label: Security & User Management
 ---
 

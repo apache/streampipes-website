@@ -1,6 +1,7 @@
 ---
 id: use-pipelines
 title: Pipelines
+description: "Build real-time stream processing pipelines in the StreamPipes visual editor: filter, enrich, analyze and route live machine data with processors and sinks."
 sidebar_label: 🧠 Pipelines
 ---
 

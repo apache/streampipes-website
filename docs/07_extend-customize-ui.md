@@ -1,6 +1,7 @@
 ---
 id: extend-customize-ui
 title: UI customization
+description: "Customize the StreamPipes user interface with your own theme, logos and styles, and extend the UI with custom modules."
 sidebar_label: UI customization
 ---
 
