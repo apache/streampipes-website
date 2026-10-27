@@ -21,6 +21,7 @@ module.exports = {
       'data-project-color': '#FFFFFF',
       'data-project-logo':
           'https://streampipes.apache.org/img/favicon.png',
+      'data-launcher-button-hidden': 'true',
       'data-modal-override-open-id': 'ask-ai-input',
       'data-modal-override-open-class': 'search-input',
       'data-modal-disclaimer':
@@ -167,14 +168,6 @@ module.exports = {
         "src": "img/sp-logo-color.png"
       },
       "items": require('./src/navbar/navbar.js')
-    },
-    announcementBar: {
-      id: 'query',
-      backgroundColor: 'var(--color-accent)',
-      textColor: 'white',
-      isCloseable: false,
-      content:
-          'Apache StreamPipes 0.98.0 is available! ⭐️',
     },
     "image": "img/streampipes-social-card.png",
     "metadata": [

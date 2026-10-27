@@ -86,6 +86,11 @@ module.exports = [
     ]
   },
   {
+    type: "html",
+    position: "right",
+    value: '<button type="button" id="ask-ai-input" class="search-input sp-ask-ai" aria-label="Ask the StreamPipes AI assistant"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8L12 3Zm6.5 10 .9 2.3 2.3.9-2.3.9-.9 2.3-.9-2.3-2.3-.9 2.3-.9.9-2.3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Ask AI</button>'
+  },
+  {
     href: "https://github.com/apache/streampipes",
     position: "right",
     className: "header-link h-github",

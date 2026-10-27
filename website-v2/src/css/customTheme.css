@@ -1,3 +1,88 @@
+/*
+ * StreamPipes design tokens (brand: navy #1B1464 + green #39B54A from the logo).
+ * Used by src/components/ui and the homepage; docs, blog and other pages adopt them in phase 2.
+ */
+:root {
+    --sp-navy: #1B1464;
+    --sp-navy-deep: #0B0929;
+    --sp-navy-900: #120F45;
+    --sp-navy-800: #1B1464;
+    --sp-navy-700: #27285B;
+    --sp-green: #39B54A;
+    --sp-green-dark: #2E9A3E;
+    --sp-green-light: #7ED491;
+    --sp-green-glow: rgba(57, 181, 74, .45);
+    --sp-ink: #1B1464;
+    --sp-text: #2F2D4F;
+    --sp-muted: #5F5E7D;
+    --sp-surface: #FFFFFF;
+    --sp-surface-2: #F6F6FB;
+    --sp-line: #E4E4F0;
+    --sp-on-dark: #F4F3FB;
+    --sp-on-dark-muted: #A9A8C6;
+    --sp-line-dark: rgba(255, 255, 255, .10);
+    --sp-glass: rgba(255, 255, 255, .04);
+    --sp-code-surface: #0E0C33;
+    --sp-font: 'Heebo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --sp-mono: ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+    --sp-radius-sm: 6px;
+    --sp-radius: 12px;
+    --sp-radius-lg: 18px;
+    --sp-container: 1200px;
+    --sp-shadow-frame: 0 30px 80px -30px rgba(11, 9, 41, .6), 0 0 0 1px rgba(255,255,255,.06);
+}
+
+/* Homepage-only navbar refinements (the page wrapper carries .sp-home). */
+body:has(.sp-home) .navbar {
+    box-shadow: none;
+    border-bottom: 1px solid var(--sp-line);
+    font-family: var(--sp-font);
+}
+body:has(.sp-home) .navbar__link {
+    color: var(--sp-ink);
+    font-weight: 500;
+}
+body:has(.sp-home) .navbar__link:hover,
+body:has(.sp-home) .navbar__link--active {
+    color: var(--sp-green-dark);
+}
+
+/* "Ask AI" navbar button (opens the kapa.ai modal; the floating launcher is hidden). */
+.sp-ask-ai {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0 4px;
+    padding: 6px 12px;
+    border: 1px solid var(--sp-line);
+    border-radius: var(--sp-radius-control);
+    background: transparent;
+    color: var(--sp-ink);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.sp-ask-ai:hover {
+    background: var(--sp-surface-2);
+    color: var(--sp-green-dark);
+}
+
+/* Homepage-only navbar refinements (the page wrapper carries .sp-home). */
+body:has(.sp-home) .navbar {
+    box-shadow: none;
+    border-bottom: 1px solid var(--sp-line);
+    font-family: var(--sp-font);
+}
+body:has(.sp-home) .navbar__link {
+    color: var(--sp-ink);
+    font-weight: 500;
+}
+body:has(.sp-home) .navbar__link:hover,
+body:has(.sp-home) .navbar__link--active {
+    color: var(--sp-green);
+}
+
 :root {
     --ifm-color-primary-lightest: #231A82;
     --ifm-color-primary-lighter: #1F1773;

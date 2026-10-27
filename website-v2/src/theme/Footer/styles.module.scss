@@ -1,113 +1,57 @@
-@import "../../css/util";
+.footer {
+  border-top: 1px solid var(--sp-line);
+  background: var(--sp-surface);
+  font-family: var(--sp-font);
+  color: var(--sp-ink);
+  padding: 64px 0 40px;
 
-$links-color: #707279;
-$margin: 8px;
-
-.container {
-  border-top: 1px solid #cecece;
-  background: #f3f3f3;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px 25%;
-  min-width: 50%;
-
-  & .linksRow {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    & .linksCol {
-      display: flex;
-      flex-direction: column;
-
-      & div {
-        font-weight: bolder;
-        margin-bottom: $margin * 2;
-        margin-left: -0.5px;
-      }
-
-      & ul {
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-
-        li {
-          line-height: 1.15em;
-          margin-bottom: calc($margin / 2);
-          padding: calc($margin / 4) 0;
-
-          a {
-            display: flex;
-            align-items: center;
-            color: $links-color;
-
-            &:hover {
-              color: var(--ifm-link-color);
-            }
-
-            svg {
-              $size: $margin * 2;
-
-              width: $size;
-              height: $size;
-              margin-right: $margin;
-            }
-
-            span {
-              font-size: 14px;
-              margin-top: 2px;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  @include respond-below(sm) {
-    padding: 0;
-    margin: 4rem 1rem 1.5rem;
-
-    & .linksRow {
-      display: grid;
-      column-gap: 50px;
-      row-gap: 25px;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-
-      & .linksCol {
-        margin-bottom: $margin;
-
-        & div {
-          margin-bottom: $margin;
-          margin-left: 0;
-        }
-
-        & ul {
-          li {
-            a {
-              span {
-                font-size: 16px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+  h3, p, a, li { font-family: var(--sp-font); text-align: left; }
+  img { display: block; max-width: 100%; height: auto; }
+  ul { list-style: none; margin: 0; padding: 0; }
 }
 
-.copyright {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 680px;
-  font-size: 12px;
-  color: $links-color;
-  margin-top: 2.4rem;
+.container {
+  width: calc(100% - 112px);
+  max-width: var(--sp-container);
+  margin: 0 auto;
 
-  @include respond-below(sm) {
-    text-align: left;
-  }
+  @media (max-width: 1200px) { width: calc(100% - 72px); }
+  @media (max-width: 700px) { width: calc(100% - 40px); }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--sp-line);
+
+  p { margin: 0; font-size: 20px; font-weight: 500; line-height: 1.3; color: var(--sp-ink); }
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 48px 0;
+
+  h3 { font-size: 14px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; color: var(--sp-ink); margin: 0 0 18px; }
+  li { margin: 0 0 10px; }
+  a { font-size: 15px; font-weight: 400; color: var(--sp-muted); text-decoration: none; }
+  a:hover { color: var(--sp-green-dark); text-decoration: underline; text-underline-offset: 4px; }
+
+  @media (max-width: 700px) { grid-template-columns: repeat(2, 1fr); gap: 28px; padding: 36px 0; }
+}
+
+.legal {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--sp-line);
+
+  p { margin: 0; font-size: 12px; line-height: 1.6; color: var(--sp-muted); }
+
+  @media (max-width: 700px) { flex-direction: column; align-items: flex-start; gap: 20px; }
 }

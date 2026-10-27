@@ -1,0 +1,77 @@
+/* Homepage layout. Components and tokens: src/components/ui and src/css/customTheme.css */
+
+.home { font-family: var(--sp-font); background: var(--sp-surface); -webkit-font-smoothing: antialiased; }
+
+/* Hero */
+.hero { padding: 88px 0 80px !important; }
+.heroCopy { display: flex; flex-direction: column; align-items: center; gap: 24px; max-width: 980px; }
+.heroActions { justify-content: center; margin-top: 4px; }
+.heroNote { font-size: 14px; color: var(--sp-muted); }
+.heroFrame { margin-top: 48px; }
+
+/* Module showcase (hero) */
+.showcase { display: flex; flex-direction: column; gap: 20px; }
+.showcaseTabs { justify-content: center; border-bottom: 0; gap: 8px; }
+.showcaseTabs button { border: 1px solid var(--sp-line); border-radius: 6px; margin: 0; padding: 9px 14px; font-size: 14px; }
+.showcaseTabs button[aria-selected='true'] { border-color: var(--sp-navy); background: var(--sp-navy); color: #fff; }
+.showcase figure img { aspect-ratio: 1440 / 640; object-fit: cover; object-position: top; }
+.showcaseCaption { display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+.showcaseCaption a { font-size: 13px; }
+.showcase .preload { display: none; }
+
+/* Connectors */
+.connectors { padding: 56px 0 !important; }
+.connectorsHead { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 24px; }
+.connectorsHead h3 { max-width: 28ch; }
+
+/* Platform */
+.platformHead { margin-top: 80px; }
+
+/* How it works */
+.flow { padding: 8px 0 0; }
+
+/* Architecture */
+.archGrid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 48px; align-items: start; }
+.archGrid > * { min-width: 0; }
+.archGrid figure img { padding: 24px; }
+.layers { display: grid; }
+.layers li { display: grid; grid-template-columns: 36px 1fr; gap: 12px; padding: 16px 0; border-top: 1px solid var(--sp-line); }
+.layers li:last-child { border-bottom: 1px solid var(--sp-line); }
+.layers span { font-size: 13px; font-weight: 500; letter-spacing: .08em; color: var(--sp-green-dark); padding-top: 3px; }
+.layers h3 { font-size: 17px; font-weight: 500; margin-bottom: 4px; }
+.layers p { font-size: 14px; line-height: 1.6; color: var(--sp-muted); }
+/* Deployment */
+.deployFrame { border: 1px solid var(--sp-line); border-radius: 10px; background: var(--sp-surface); padding: 24px 28px; }
+.deploySteps { margin-top: 56px; }
+.sectionFoot { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 40px; }
+
+/* Enterprise */
+.enterpriseNote { margin-top: 24px; font-size: 14px; line-height: 1.6; color: var(--sp-muted); max-width: 760px; }
+
+/* Developers */
+.developerPanel { display: grid; grid-template-columns: .9fr 1.3fr; gap: 56px; align-items: center; margin-top: 40px; }
+.developerPanel > * { min-width: 0; }
+.developerCopy { display: flex; flex-direction: column; gap: 16px; }
+.developerCopy p { font-size: 16px; line-height: 1.65; color: var(--sp-muted); }
+
+/* Get started */
+.ctaGrid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: center; }
+.ctaGrid > * { min-width: 0; }
+.ctaGrid h2 { margin: 0 0 18px; }
+.ctaActions { margin-top: 28px; }
+.community { margin-top: 72px; }
+
+@media (max-width: 1100px) {
+  .developerPanel, .ctaGrid, .archGrid { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (max-width: 760px) {
+  .hero { padding: 48px 0 56px !important; }
+  .heroFrame { margin-top: 36px; }
+  .showcaseTabs { justify-content: flex-start; }
+  .showcaseCaption { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .connectorsHead { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .platformHead { margin-top: 56px; }
+  .archGrid figure img { padding: 12px; }
+  .deployFrame { padding: 12px; }
+  .community { margin-top: 48px; }
+}
