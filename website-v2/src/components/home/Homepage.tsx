@@ -77,26 +77,26 @@ const icons = {
 };
 
 const developerTools = [
-  {label: 'Python client', title: 'Your data, in notebooks and apps.', text: 'Bring historical datasets into pandas, work with live streams and automate the platform from Python.', language: 'python', file: 'explore_dataset.py',
+  {label: 'Python client', title: 'Your data in a notebook.', text: 'Load a dataset into pandas, subscribe to a live stream, or script the platform from Python.', language: 'python', file: 'explore_dataset.py',
     code: '# With an authenticated StreamPipes client\n# and an existing dataset named "flow-rate":\n\ndataset = client.dataLakeMeasureApi.get(\n    identifier="flow-rate"\n)\n\nframe = dataset.to_pandas()\nprint(frame.describe())',
     links: [{label: 'Python client docs', to: pythonDocs}]},
-  {label: 'Java client & APIs', title: 'Automate from your own services.', text: 'Inspect resources, subscribe to streams and manage pipeline lifecycles through the Java client or the REST API.', language: 'java', file: 'PipelineAutomation.java',
+  {label: 'Java client & APIs', title: 'Automate it from your own services.', text: 'List resources, subscribe to streams, and start or stop pipelines through the Java client or the REST API.', language: 'java', file: 'PipelineAutomation.java',
     code: 'var client = StreamPipesClient.create(\n    "localhost", 80,\n    StreamPipesCredentials.withApiKey(user, apiKey));\n\nclient.pipelines().all()\n    .forEach(p -> client.pipelines().start(p));',
     links: [{label: 'Java client & APIs', to: docs('use-programmatic-access')}]},
-  {label: 'Functions', title: 'Write the logic your application needs.', text: 'Subscribe to connected streams and handle events in code, without building a reusable element for the visual editor.', language: 'java', file: 'StreamPipesFunction.java',
+  {label: 'Functions', title: 'Logic that does not fit a pipeline element.', text: 'A Function subscribes to a stream and handles each event in code. No need to build a reusable element for the editor when you need the logic only once.', language: 'java', file: 'StreamPipesFunction.java',
     code: '@Override\npublic List<String> requiredStreamIds() {\n  return List.of("your-stream-id");\n}\n\n@Override\npublic void onEvent(Event event, String streamId) {\n  // Apply your application-specific logic here.\n}',
     links: [{label: 'Build a Function', to: docs('extend-sdk-functions')}]},
-  {label: 'Extension SDK', title: 'Make the platform fit your domain.', text: 'Build reusable adapters, processors and sinks. Describe their inputs and configuration so your team can use them inside StreamPipes.', language: 'java', file: 'ExtensionService.java',
+  {label: 'Extension SDK', title: 'Extensions for your own systems.', text: 'Write adapters, processors and sinks for the protocols and logic your plant needs. Describe their configuration, and your team uses them in the editor like any built-in element.', language: 'java', file: 'ExtensionService.java',
     code: '@Override\npublic SpServiceDefinition provideServiceDefinition() {\n  return SpServiceDefinitionBuilder.create(\n      "plant-extensions", "Plant extensions", "", 8090)\n    .registerPipelineElement(new MyProcessor())\n    .build();\n}',
     links: [{label: 'Start with the SDK', to: docs('extend-setup')}, {label: 'Extend the UI', to: docs('extend-customize-ui')}]},
 ];
 
 const modules = [
-  {label: 'Connect', src: '/img/home/connect-create-select-adapter.webp', alt: 'Adapter library with industrial and software connectors', caption: 'Connect: choose an adapter for OPC UA, S7, Modbus, MQTT, Kafka and more.', to: docs('use-connect')},
+  {label: 'Connect', src: '/img/home/connect-create-select-adapter.webp', alt: 'Adapter library with industrial and software connectors', caption: 'Connect: pick an adapter for OPC UA, S7, Modbus, MQTT, Kafka and others.', to: docs('use-connect')},
   {label: 'Pipelines', src: '/img/home/pipeline-editor-example.webp', alt: 'Visual pipeline editor routing machine data to trend detection, a Teams notification and storage', caption: 'Pipelines: filter, detect and route live data in the visual editor.', to: docs('use-pipelines')},
-  {label: 'Datasets', src: '/img/home/dataset-overview.webp', alt: 'Dataset workspace with stored events, retention and export providers', caption: 'Datasets: persisted history with retention, export and permissions.', to: docs('use-datasets')},
+  {label: 'Datasets', src: '/img/home/dataset-overview.webp', alt: 'Dataset workspace with stored events, retention and export providers', caption: 'Datasets: stored history with retention rules, export and permissions.', to: docs('use-datasets')},
   {label: 'Charts', src: '/img/home/chart-timeseries.webp', alt: 'Chart editor with a time-series visualization', caption: 'Charts: query a dataset and pick the right visualization.', to: docs('use-charts')},
-  {label: 'Dashboards', src: '/img/home/dashboard-create.webp', alt: 'Dashboard with a gauge, a flow-rate chart and a machine status indicator', caption: 'Dashboards: compose saved charts into one operational view.', to: docs('use-dashboards')},
+  {label: 'Dashboards', src: '/img/home/dashboard-create.webp', alt: 'Dashboard with a gauge, a flow-rate chart and a machine status indicator', caption: 'Dashboards: saved charts combined into one view for the team.', to: docs('use-dashboards')},
   {label: 'Assets', src: '/img/home/asset-asset-link-overview.webp', alt: 'Machine asset with site assignment and linked resources', caption: 'Assets: plants, lines and machines with their linked data.', to: docs('use-assets')},
 ];
 
@@ -118,12 +118,12 @@ function Hero({stars}: {stars: number | null}) {
     <Container center narrow className={styles.heroCopy}>
       <Badge to="/download/">Apache top-level project · Release {RELEASE.version}</Badge>
       <Headline level={1}>The open-source platform<br />for <Accent>industrial data</Accent>.</Headline>
-      <Lead>Connect machines, process live streams, store datasets and build the dashboards your team runs on. On your infrastructure, under the Apache license.</Lead>
+      <Lead>StreamPipes connects to machines and industrial systems, works on the data as it arrives, keeps the history, and turns it into charts and dashboards. It runs on your own servers under the Apache license.</Lead>
       <Actions className={styles.heroActions}>
         <Button to={quickstart} size="large">Get started</Button>
         <Button href={githubRepo} variant="secondary" size="large" arrow={false}>{icons.github}{stars === null ? 'Star on GitHub' : `${stars.toLocaleString('en-US')} stars on GitHub`}</Button>
       </Actions>
-      <p className={styles.heroNote}>Docker Compose or Kubernetes. No account, no vendor lock-in.</p>
+      <p className={styles.heroNote}>Runs with Docker Compose or Kubernetes. Nothing to sign up for.</p>
     </Container>
     <Container className={styles.heroFrame}>
       <ModuleShowcase />
@@ -135,7 +135,7 @@ function Connectors() {
   return <Section tone="light" bordered className={styles.connectors} aria-label="Supported systems">
     <Container>
       <div className={styles.connectorsHead}>
-        <div><Eyebrow>Connectivity</Eyebrow><Headline level={3}>Works with the systems you already run.</Headline></div>
+        <div><Eyebrow>Connectivity</Eyebrow><Headline level={3}>Works with the systems you already have.</Headline></div>
         <Button to="/integrations/" variant="ghost">All {ext.Adapters + ext['Data Processors'] + ext['Data Sinks']} integrations</Button>
       </div>
       <LogoWall logos={connectors} label="Supported protocols, brokers and databases" />
@@ -147,20 +147,20 @@ function Platform({stars}: {stars: number | null}) {
   return <Section id="platform" tone="light" bordered>
     <Container>
       <Stats>
-        <Stat value="Apache" label="Top-level project" note="Governed by the Apache Software Foundation" to="https://www.apache.org/" />
+        <Stat value="Apache" label="Top-level project" note="A project of the Apache Software Foundation" to="https://www.apache.org/" />
         <Stat value={stars === null ? 'Open source' : stars.toLocaleString('en-US')} label={stars === null ? 'Apache License 2.0' : 'GitHub stars'} note={stars === null ? 'Source on GitHub' : 'Apache License 2.0'} to={githubRepo} />
         <Stat value={`${ext.Adapters}+`} label="Adapters" note="OPC UA, S7, Modbus, MQTT, Kafka and more" to={docs('use-connect')} />
-        <Stat value={`${ext['Data Processors'] + ext['Data Sinks']}+`} label="Processors and sinks" note="Filter, enrich, detect, route and store" to={docs('use-pipelines')} />
+        <Stat value={`${ext['Data Processors'] + ext['Data Sinks']}+`} label="Processors and sinks" note="Filtering, enrichment, detection, routing, storage" to={docs('use-pipelines')} />
       </Stats>
       <div className={styles.platformHead}>
-        <SectionHead eyebrow="Platform" title={<>One platform.<br />The whole data journey.</>} lead="From the first machine connection to the dashboard on the shop floor. Every step is built in, and every step is open." action={<Button to="/features/" variant="ghost">All features</Button>} />
+        <SectionHead eyebrow="Platform" title={<>From the first connection<br />to the dashboard.</>} lead="Connecting a machine, processing its data, storing it and charting it usually means four tools. In StreamPipes they are modules of one platform, and all of them are open source." action={<Button to="/features/" variant="ghost">All features</Button>} />
       </div>
       <Bento>
-        <Card span={3} to={docs('use-connect')} media={{src: '/img/home/connect-create-select-adapter.webp', alt: 'StreamPipes adapter library'}} title="Connect" link="Explore connectivity">Bring machines, brokers and software systems into the platform with guided adapters, event previews and schema refinement.</Card>
-        <Card span={3} to={docs('use-pipelines')} media={{src: '/img/home/pipeline-editor-example.webp', alt: 'StreamPipes visual pipeline editor'}} title="Pipelines" link="Explore pipelines">Filter, enrich, detect and route live data in a visual editor. Reuse validated pipelines as code.</Card>
-        <Card span={2} to={docs('use-dashboards')} media={{src: '/img/home/chart-timeseries.webp', alt: 'StreamPipes chart editor'}} title="Charts and dashboards" link="Explore dashboards">Query datasets, choose the right visualization and compose shared operational views.</Card>
-        <Card span={2} to={docs('use-datasets')} icon={icons.db} title="Datasets" link="Explore datasets">Persist streams as historical data. Inspect, export, import CSV and define retention and archival.</Card>
-        <Card span={2} to={docs('use-assets')} icon={icons.site} title="Assets and sites" link="Explore assets">Model plants, lines and machines and link every stream, dataset, pipeline and dashboard to them.</Card>
+        <Card span={3} to={docs('use-connect')} media={{src: '/img/home/connect-create-select-adapter.webp', alt: 'StreamPipes adapter library'}} title="Connect" link="Explore connectivity">Adapters connect machines, brokers and other software. You see the incoming events before you save anything, and you fix field names, types and units once.</Card>
+        <Card span={3} to={docs('use-pipelines')} media={{src: '/img/home/pipeline-editor-example.webp', alt: 'StreamPipes visual pipeline editor'}} title="Pipelines" link="Explore pipelines">Filter, enrich and route live data in a visual editor. Elements are checked against the stream's schema, so a pipeline that saves is a pipeline that runs.</Card>
+        <Card span={2} to={docs('use-dashboards')} media={{src: '/img/home/chart-timeseries.webp', alt: 'StreamPipes chart editor'}} title="Charts and dashboards" link="Explore dashboards">Query a dataset, pick a chart type, and put several charts together into a dashboard for the team.</Card>
+        <Card span={2} to={docs('use-datasets')} icon={icons.db} title="Datasets" link="Explore datasets">Stored history for the streams you choose to keep. Inspect it, export it, import CSV files, and set retention rules.</Card>
+        <Card span={2} to={docs('use-assets')} icon={icons.site} title="Assets and sites" link="Explore assets">Describe your plants, lines and machines, and attach the streams, datasets, pipelines and dashboards that belong to each.</Card>
       </Bento>
     </Container>
   </Section>;
@@ -169,7 +169,7 @@ function Platform({stars}: {stars: number | null}) {
 function UseCases() {
   return <Section id="use-cases" tone="light" bordered>
     <Container>
-      <SectionHead eyebrow="Use cases" title={<>Built for the work<br />on the shop floor.</>} lead="Typical scenarios, each with the adapters, processors and sinks involved and the guide to follow." action={<Button to="/use-cases/" variant="ghost">All use cases</Button>} />
+      <SectionHead eyebrow="Use cases" title={<>What people<br />build with it.</>} lead="Five scenarios we see often, with the adapters, processors and sinks they use and the guide that goes with each." action={<Button to="/use-cases/" variant="ghost">All use cases</Button>} />
       <Bento>
         {useCases.slice(0, 3).map(u => <Card key={u.slug} span={2} to={`/use-cases/${u.slug}/`} media={{src: u.cover.src, alt: u.cover.alt}} title={u.title} link="Read the use case">{u.lead}</Card>)}
       </Bento>
@@ -180,7 +180,7 @@ function UseCases() {
 function HowItWorks() {
   return <Section id="architecture" tone="tint" bordered>
     <Container>
-      <SectionHead eyebrow="How it works" title={<>From machine signal<br />to insight.</>} lead="Adapters turn raw signals into typed streams. Pipelines act on them in real time. Datasets keep the history. Charts and dashboards make it visible." />
+      <SectionHead eyebrow="How it works" title={<>What happens<br />to an event.</>} lead="An adapter turns raw signals into a typed stream. Pipelines work on that stream as events arrive. Datasets keep what you want to look at later, and charts and dashboards show it." />
       <div className={styles.flow}>
         <FlowDiagram nodes={[
           {label: 'Machines and systems', sub: 'OPC UA, S7, MQTT, Kafka'},
@@ -196,15 +196,15 @@ function HowItWorks() {
 
 function Architecture() {
   const layers = [
-    {title: 'Interfaces', text: 'The web UI for everyday work, Java and Python clients and REST APIs for automation, and connections to third-party systems.'},
-    {title: 'Core', text: 'Manages adapters, pipelines, datasets, assets and users, monitors every running component and serves the UI.'},
-    {title: 'Messaging layer', text: 'NATS or Kafka carries events between adapters, pipelines and sinks, so each part can run where it fits best.'},
-    {title: 'Extension services', text: 'Adapters, processors, sinks and Functions run as separate services. Add your own with the SDK and install them at runtime.'},
-    {title: 'Time-series storage', text: 'Persisted datasets live in a time-series database with retention rules and export to CSV, JSON or Excel.'},
+    {title: 'Interfaces', text: 'The web UI for daily work, plus Java and Python clients and a REST API for anything you want to automate.'},
+    {title: 'Core', text: 'Keeps track of adapters, pipelines, datasets, assets and users, watches what is running, and serves the UI.'},
+    {title: 'Messaging layer', text: 'NATS or Kafka moves events between adapters, pipelines and sinks. Nothing talks point to point, so each part can run where it makes sense.'},
+    {title: 'Extension services', text: 'Adapters, processors, sinks and Functions are packaged as separate services. Write your own with the SDK and install them while the platform is running.'},
+    {title: 'Time-series storage', text: 'Datasets go into a time-series database. Retention rules decide how long they stay, and you can export them as CSV, JSON or Excel.'},
   ];
   return <Section id="architecture-overview" tone="light" bordered>
     <Container>
-      <SectionHead eyebrow="Architecture" title={<>Built as services.<br />Deployed where you need them.</>} lead="A core, a message broker and any number of extension services. Run everything on one host with Docker Compose, or spread extension services across plants and scale the core on Kubernetes." />
+      <SectionHead eyebrow="Architecture" title={<>Several services,<br />one platform.</>} lead="A core, a message broker, and as many extension services as you need. Run all of it on one host with Docker Compose, or put the extension services into the plants and the core into the data center." />
       <div className={styles.archGrid}>
         <ScreenshotFrame src="/img/home/architecture.webp" alt="StreamPipes architecture: interfaces on top, the core and time-series database in the middle, a messaging layer, and extension services with adapters, processors, sinks and Functions connected to machines" width={1600} height={695} caption="Architecture overview" />
         <ol className={styles.layers}>{layers.map((layer, i) => <li key={layer.title}><span>{String(i + 1).padStart(2, '0')}</span><div><h3>{layer.title}</h3><p>{layer.text}</p></div></li>)}</ol>
@@ -217,13 +217,13 @@ function Architecture() {
 function Deployment() {
   return <Section id="deployment" tone="tint" bordered>
     <Container>
-      <SectionHead eyebrow="Deployment" title={<>Extension services at the edge.<br />One core to manage them.</>} lead="Each plant runs a small extension service next to its PLCs and machines. It connects outbound to the broker, so the OT network needs no inbound ports. Core, storage, processors and sinks stay in IT, managed from one place." />
+      <SectionHead eyebrow="Deployment" title={<>Extension services in the plant,<br />the core where your servers are.</>} lead="Each plant runs a small extension service next to its PLCs and machines. The service connects outbound to the broker, so you do not open any ports into the OT network. The core, the storage and the heavier processing stay in IT." />
       <div className={styles.deployFrame}><DeploymentDiagram /></div>
       <div className={styles.deploySteps}>
         <Steps items={[
-          {title: 'Run it where the data is', text: 'Place extension services in the OT network next to your equipment and keep the core in the data center or cloud. The broker connects both, with control flow only from IT to OT.'},
-          {title: 'Start small, grow in place', text: 'A single Docker Compose host is enough to evaluate. The same services scale out on Kubernetes without changing your pipelines.'},
-          {title: 'Keep the data yours', text: 'Everything runs on your infrastructure. No usage metering, no proprietary formats: export datasets whenever you need.'},
+          {title: 'Run it where the data is', text: 'Put extension services into the plant network, next to the equipment, and keep the core in the data center or in the cloud. The broker connects the two.'},
+          {title: 'Start small, grow in place', text: 'One Docker Compose host is enough to try things out. The same services scale out on Kubernetes later, and your pipelines stay as they are.'},
+          {title: 'The data stays yours', text: 'Everything runs on infrastructure you control. There is no usage metering and no proprietary format, and you can export a dataset whenever you want to.'},
         ]} />
       </div>
       <div className={styles.sectionFoot}><Button to={docs('configure-operate-deployment')} variant="ghost">Deployment options</Button><Button to={docs('configure-operate-extension-services')} variant="ghost">Extension services</Button></div>
@@ -234,16 +234,16 @@ function Deployment() {
 function Enterprise() {
   return <Section id="enterprise" tone="light" bordered>
     <Container>
-      <SectionHead eyebrow="Enterprise readiness" title={<>Ready for the plant.<br />Ready for IT.</>} lead="The controls an IT department expects, built into the open-source platform: identity, access control, audit trail, data lifecycle and secured connections." action={<Button to="/enterprise/" variant="ghost">Everything on enterprise readiness</Button>} />
+      <SectionHead eyebrow="Enterprise readiness" title={<>The things<br />IT will ask about.</>} lead="Single sign-on, roles and permissions, an audit log, retention rules and encrypted connections are part of the platform. There is no separate enterprise edition." action={<Button to="/enterprise/" variant="ghost">Everything on enterprise readiness</Button>} />
       <Bento>
-        <Card span={2} to={docs('configure-operate-environment-variables')} icon={icons.lock} title="Single sign-on" link="Configure OpenID Connect">Log in through your identity provider with OpenID Connect or OAuth2. Configure one or more providers and map roles from token claims.</Card>
-        <Card span={2} to={docs('configure-operate-security')} icon={icons.users} title="Roles, groups and permissions" link="User management">Built-in and custom roles from fine-grained privileges, user groups, per-resource permissions with owners and public links, service accounts and API keys.</Card>
-        <Card span={2} to={docs('configure-operate-general-settings')} icon={icons.list} title="Audit log" link="Audit log">Who changed what: logins, adapters, datasets, charts, dashboards, exports and security groups. Filter, download as CSV, JSON or Excel, and apply retention rules.</Card>
-        <Card span={2} to={docs('use-datasets')} icon={icons.clock} title="Data retention and archival" link="Dataset retention">Per-dataset retention policies that delete, archive or both, on a daily, weekly or monthly schedule. Archive to a local folder or S3 and export CSV, JSON or Excel.</Card>
-        <Card span={2} to={docs('configure-operate-extension-services')} icon={icons.shield} title="Secured connections" link="Certificates and transport">HTTPS for the UI, encrypted secrets at rest, certificate management for OPC UA, MQTT and Kafka with expiry alerts, and NATS transport between core and extension services.</Card>
-        <Card span={2} to={docs('configure-operate-deployment')} icon={icons.activity} title="Operations" link="Deploy and operate">Metrics and logs per adapter and pipeline, a Prometheus endpoint, a Helm chart with Prometheus and Grafana, export and import of resources, and automatic migrations on upgrade.</Card>
+        <Card span={2} to={docs('configure-operate-environment-variables')} icon={icons.lock} title="Single sign-on" link="Configure OpenID Connect">Sign in through your identity provider with OpenID Connect or OAuth2. Several providers can be configured side by side, and roles can be taken from token claims.</Card>
+        <Card span={2} to={docs('configure-operate-security')} icon={icons.users} title="Roles, groups and permissions" link="User management">Built-in roles, custom roles made from individual privileges, user groups, and permissions on every resource. Service accounts and API keys for anything automated.</Card>
+        <Card span={2} to={docs('configure-operate-general-settings')} icon={icons.list} title="Audit log" link="Audit log">Logins and changes to adapters, datasets, charts, dashboards, exports and security settings are recorded. Filter the log, download it, and give it its own retention rule.</Card>
+        <Card span={2} to={docs('use-datasets')} icon={icons.clock} title="Data retention and archival" link="Dataset retention">Each dataset gets a retention policy that deletes old data, archives it to a folder or S3, or does both, on a daily, weekly or monthly schedule.</Card>
+        <Card span={2} to={docs('configure-operate-extension-services')} icon={icons.shield} title="Secured connections" link="Certificates and transport">HTTPS for the UI, encrypted secrets at rest, and certificate management for OPC UA, MQTT and Kafka with a warning before a certificate expires.</Card>
+        <Card span={2} to={docs('configure-operate-deployment')} icon={icons.activity} title="Operations" link="Deploy and operate">Metrics and logs for every adapter and pipeline, a Prometheus endpoint, a Helm chart that includes Prometheus and Grafana, and migrations that run on upgrade.</Card>
       </Bento>
-      <p className={styles.enterpriseNote}>Terms-of-use acknowledgment after login, self-registration and password-recovery toggles, and a configurable app name round it off. All of it is Apache licensed; nothing sits behind an enterprise tier.</p>
+      <p className={styles.enterpriseNote}>Also in the box: a terms-of-use screen after login, switches for self-registration and password recovery, and a configurable app name. All of it under the Apache license.</p>
     </Container>
   </Section>;
 }
@@ -253,7 +253,7 @@ function Developers() {
   const tool = developerTools[selected];
   return <Section id="developers" tone="light" bordered>
     <Container>
-      <SectionHead eyebrow="Developers" title={<>Integrate. Automate.<br />Extend.</>} lead="Start with the visual tools. Go further with client libraries, event-driven Functions and an SDK for your own extensions." />
+      <SectionHead eyebrow="Developers" title={<>Use it from<br />code, too.</>} lead="The visual tools are the start. Python and Java clients, Functions for event-driven code and an SDK for your own extensions cover the rest." />
       <Tabs id="developer" label="Developer tools" items={developerTools.map(t => t.label)} selected={selected} onSelect={setSelected} />
       <TabPanel id="developer" selected={selected} className={styles.developerPanel}>
         <div className={styles.developerCopy}>
@@ -273,18 +273,18 @@ function GetStarted() {
       <div className={styles.ctaGrid}>
         <div>
           <Eyebrow>Get started</Eyebrow>
-          <Headline level={2}>Running in minutes.<br />On your machine.</Headline>
-          <Lead>One command downloads the Compose files for release {RELEASE.version} and starts StreamPipes with Docker. Then follow the quickstart from your first data source to a working dashboard.</Lead>
+          <Headline level={2}>Up and running<br />in a few minutes.</Headline>
+          <Lead>The command on the right downloads the Compose files for release {RELEASE.version} and starts StreamPipes with Docker. From there, the quickstart takes you from a first data source to a dashboard.</Lead>
           <Actions className={styles.ctaActions}><Button to={quickstart} size="large">Open the quickstart</Button><Button to="/download/" variant="secondary" size="large">All downloads</Button></Actions>
         </div>
         <CodePanel title="docker compose" language="bash" code={installCommand} wrap meta={`release ${RELEASE.version}`} />
       </div>
       <div className={styles.community}>
         <FeatureList items={[
-          {icon: icons.github, title: 'GitHub Discussions', text: 'Questions, ideas and show-and-tell with maintainers and users.', to: 'https://github.com/apache/streampipes/discussions'},
-          {icon: icons.mail, title: 'Mailing lists', text: 'Development and user lists, the Apache way. Decisions happen in the open.', to: '/community/mailing-lists/'},
-          {icon: icons.help, title: 'Support and training', text: 'Community support on GitHub, commercial support from companies around the project.', to: docs('community-get-help')},
-          {icon: icons.code, title: 'Contribute', text: 'Code, documentation, testing and ideas. Start with a discussion or pick an issue.', to: '/community/get-involved/'},
+          {icon: icons.github, title: 'GitHub Discussions', text: 'Questions, ideas, and showing what you built. The maintainers read it.', to: 'https://github.com/apache/streampipes/discussions'},
+          {icon: icons.mail, title: 'Mailing lists', text: 'The user list for questions, the dev list for decisions. This is how Apache projects work.', to: '/community/mailing-lists/'},
+          {icon: icons.help, title: 'Support and training', text: 'The community helps on GitHub. If you need guaranteed response times, companies around the project offer support contracts.', to: docs('community-get-help')},
+          {icon: icons.code, title: 'Contribute', text: 'Code, docs, tests, ideas. Start with a discussion or pick an issue labelled good first issue.', to: '/community/get-involved/'},
         ]} />
       </div>
     </Container>

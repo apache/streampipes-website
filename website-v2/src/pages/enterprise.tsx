@@ -6,45 +6,45 @@ import styles from './pages.module.css';
 const topics = [
   {
     title: 'Single sign-on',
-    lead: 'Log in through the identity provider you already run.',
-    text: 'StreamPipes supports OpenID Connect and OAuth2. Configure one or more providers, such as Keycloak, Microsoft Entra ID or GitHub, through environment variables, map email, name and roles from token claims, and assign default roles to new users. Password login stays available alongside.',
+    lead: 'Sign in with the identity provider you already have.',
+    text: 'StreamPipes supports OpenID Connect and OAuth2. Providers such as Keycloak, Microsoft Entra ID or GitHub are configured through environment variables. You can set up several side by side, take email, name and roles from token claims, and give new users default roles. Password login stays available.',
     facts: ['OpenID Connect and OAuth2 providers', 'Several providers in parallel', 'Role mapping from token claims', 'Login method recorded in the audit log'],
     link: {label: 'Configure external identity providers', to: '/docs/configure-operate-security/'},
   },
   {
     title: 'Roles, groups and permissions',
-    lead: 'Fine-grained control over who sees and changes what.',
-    text: 'Built-in roles cover administrators, pipeline, dashboard, data explorer, connect and asset users; custom roles are composed from individual privileges. Groups make assignments reusable. Every resource has an owner and can be shared with users and groups, made public or exposed through a public link. Service accounts and API keys cover automation.',
+    lead: 'Decide who sees and changes what.',
+    text: 'Built-in roles cover administrators and the pipeline, dashboard, data explorer, connect and asset areas. Custom roles are put together from individual privileges, and groups make assignments reusable. Every resource has an owner and can be shared with users or groups, made public, or exposed through a link. Service accounts and API keys cover scripts and integrations.',
     facts: ['Built-in and custom roles from fine-grained privileges', 'User groups for reusable assignments', 'Per-resource permissions with owners and public links', 'Service accounts and API keys for automation'],
     link: {label: 'Security and user management', to: '/docs/configure-operate-security/'},
     image: {src: '/img/home/security-edit-roles.webp', alt: 'Role editor with available and selected privileges', caption: 'Custom roles are composed from individual privileges.'},
   },
   {
     title: 'Audit log',
-    lead: 'Who changed what, when, and how they signed in.',
-    text: 'The audit log records logins and logouts, adapter, dataset, chart and dashboard changes, exports and imports, file uploads, mail configuration and security group changes. Review it in the Configuration area with filters, download it as CSV, JSON or Excel, and apply retention rules that delete or archive older entries on a schedule.',
+    lead: 'A record of who changed what.',
+    text: 'The audit log records logins and logouts, changes to adapters, datasets, charts and dashboards, exports and imports, file uploads, mail settings and security groups. You read it in the Configuration area with filters, download it as CSV, JSON or Excel, and give it a retention rule so it does not grow forever.',
     facts: ['Logins, resource changes, exports, security changes', 'Filterable view in the Configuration area', 'Download as CSV, JSON or Excel', 'Retention with delete, archive or both'],
     link: {label: 'General settings and configuration', to: '/docs/configure-operate-general-settings/'},
   },
   {
     title: 'Data retention and archival',
-    lead: 'Keep the history you need, archive the rest.',
-    text: 'Each dataset gets its own retention policy: delete entries older than a threshold, archive them to an export provider, or both, on a daily, weekly or monthly schedule, or on demand. Export providers write to a local folder or to S3-compatible object storage. Any dataset exports to CSV, JSON or Excel.',
+    lead: 'Keep what you need, archive the rest.',
+    text: 'Each dataset gets its own retention policy: delete entries older than a threshold, archive them to an export provider, or both, on a daily, weekly or monthly schedule or whenever you trigger it. Export providers write to a local folder or to S3-compatible storage. Any dataset can be exported as CSV, JSON or Excel.',
     facts: ['Per-dataset policies: delete, archive or both', 'Daily, weekly, monthly or on demand', 'Archive to local folders or S3', 'Export as CSV, JSON or Excel'],
     link: {label: 'Datasets and retention', to: '/docs/use-datasets/'},
   },
   {
     title: 'Secured connections',
-    lead: 'TLS where data moves, encryption where secrets rest.',
-    text: 'The UI serves HTTPS, and the Kubernetes ingress supports TLS. Secrets stored in the platform are encrypted at rest. Certificates for OPC UA, MQTT and Kafka are managed in the Extension Services view, where server certificates are trusted or rejected and expiry alerts are sent by email. The OPC UA adapter can be restricted to secure endpoints only.',
+    lead: 'Encrypted on the wire and at rest.',
+    text: 'The UI serves HTTPS and the Kubernetes ingress supports TLS. Secrets stored in the platform are encrypted. Certificates for OPC UA, MQTT and Kafka are handled in the Extension Services view, where you trust or reject a server certificate and get an email before one expires. The OPC UA adapter can be limited to secure endpoints.',
     facts: ['HTTPS for the UI, TLS in the Kubernetes ingress', 'Encrypted secrets at rest', 'Certificate management with trust decisions and expiry alerts', 'Keystores and truststores for OPC UA, MQTT and Kafka'],
     link: {label: 'Extension services and certificates', to: '/docs/configure-operate-extension-services/'},
     image: {src: '/img/home/settings-extension-services.webp', alt: 'Extension services view with certificate management', caption: 'Certificates are trusted or rejected per extension service.'},
   },
   {
     title: 'Operations',
-    lead: 'Run it like any other service in your landscape.',
-    text: 'Adapters and pipelines expose metrics and logs in the UI, and a Prometheus endpoint feeds your monitoring. The Helm chart includes Prometheus and Grafana templates. Resources such as adapters, assets, dashboards, charts and files can be exported and imported between instances, and migrations run automatically when a new version is installed.',
+    lead: 'Operate it like your other services.',
+    text: 'Adapters and pipelines show metrics and logs in the UI, and a Prometheus endpoint feeds your monitoring. The Helm chart comes with Prometheus and Grafana templates. Adapters, assets, dashboards, charts and files can be exported and imported between instances, and migrations run on their own when you install a new version.',
     facts: ['Metrics and logs per adapter and pipeline', 'Prometheus endpoint, Helm chart with Prometheus and Grafana', 'Export and import of resources between instances', 'Automatic migrations on upgrade'],
     link: {label: 'Deploy and operate', to: '/docs/configure-operate-deployment/'},
   },
@@ -52,7 +52,7 @@ const topics = [
 
 export default function Enterprise() {
   return <Layout title="Enterprise readiness" description="Apache StreamPipes for enterprise use: single sign-on with OpenID Connect, roles and permissions, audit log, dataset retention and archival, secured connections and operations, all under the Apache license.">
-    <PageIntro eyebrow="Enterprise readiness" title="Ready for the plant. Ready for IT." lead="The controls an IT department expects, built into the open-source platform: identity, access control, audit trail, data lifecycle and secured connections. Everything is Apache licensed; nothing sits behind an enterprise tier." actions={<><Button to="/docs/configure-operate-security/">Security documentation</Button><Button to="/architecture/" variant="ghost">Architecture</Button></>} />
+    <PageIntro eyebrow="Enterprise readiness" title="The things IT will ask about." lead="Single sign-on, roles and permissions, an audit log, retention rules and encrypted connections are part of the platform. There is no separate enterprise edition; everything on this page is in the Apache-licensed release." actions={<><Button to="/docs/configure-operate-security/">Security documentation</Button><Button to="/architecture/" variant="ghost">Architecture</Button></>} />
     <Section tone="light" className={styles.compact}>
       <Container>
         <ScreenshotFrame src="/img/home/security-overview.webp" alt="Security overview with user accounts, service accounts, groups and roles" width={1440} height={747} caption="Security overview: user accounts, service accounts, groups and roles" priority />
@@ -76,7 +76,7 @@ export default function Enterprise() {
     </Section>)}
     <Section tone="light" bordered>
       <Container>
-        <SectionHead eyebrow="Also included" title={<>Small things<br />that matter in production.</>} />
+        <SectionHead eyebrow="Also included" title={<>Smaller things<br />you will still want.</>} />
         <Table head={['Capability', 'What it does']} rows={[
           ['Terms acknowledgment', 'Require users to accept terms of use after login, with your own title and text.'],
           ['Self-registration and password recovery', 'Toggle both in General Settings and define the default roles for new accounts.'],
@@ -90,10 +90,10 @@ export default function Enterprise() {
     <Section tone="tint" bordered>
       <Container>
         <div className={styles.twoCol}>
-          <div><Headline level={2}>Need more than community support?</Headline><Lead>The community answers on GitHub Discussions and the mailing lists. Companies around the project offer support, training and development with guaranteed response times.</Lead></div>
+          <div><Headline level={2}>If community support is not enough.</Headline><Lead>The community answers on GitHub Discussions and the mailing lists. Several companies around the project offer support contracts, training and development.</Lead></div>
           <Bento>
-            <Card span={3} to="/docs/community-get-help/" title="Support options" link="Read">Community channels and commercial support providers.</Card>
-            <Card span={3} to="/download/" title="Install StreamPipes" link="Download">Source release, Compose shortcuts and nightly builds.</Card>
+            <Card span={3} to="/docs/community-get-help/" title="Support options" link="Read">Community channels and companies that offer support.</Card>
+            <Card span={3} to="/download/" title="Install StreamPipes" link="Download">Source release, one-command Compose setup and nightly builds.</Card>
           </Bento>
         </div>
       </Container>

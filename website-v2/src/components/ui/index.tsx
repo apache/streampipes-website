@@ -159,8 +159,10 @@ export function CodePanel({title, language, code, wrap = false, meta}: {title: s
 /* ---------- Screenshot frame ---------- */
 
 export function ScreenshotFrame({src, alt, caption, width, height, priority = false, className}: {src: string; alt: string; caption?: React.ReactNode; width?: number; height?: number; priority?: boolean; className?: string}) {
-  return <figure className={clsx(s.frame, className)} style={{margin: 0}}>
-    <img src={src} alt={alt} width={width} height={height} loading={priority ? 'eager' : 'lazy'} decoding="async" {...(priority ? {fetchPriority: 'high'} : {})} />
+  return <figure className={s.figure}>
+    <div className={clsx(s.frame, className)}>
+      <img src={src} alt={alt} width={width} height={height} loading={priority ? 'eager' : 'lazy'} decoding="async" {...(priority ? {fetchPriority: 'high'} : {})} />
+    </div>
     {caption && <figcaption className={s.frameCaption}>{caption}</figcaption>}
   </figure>;
 }

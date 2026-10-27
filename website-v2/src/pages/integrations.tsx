@@ -27,7 +27,7 @@ export default function Integrations() {
   }, [type, category, query]);
 
   return <Layout title="Integrations" description={`Browse all ${all.length} Apache StreamPipes extensions: ${counts.adapter} adapters for OPC UA, Siemens S7, Modbus, MQTT, Kafka and more, ${counts.processor} data processors and ${counts.sink} data sinks.`}>
-    <PageIntro eyebrow="Integrations" title="Everything StreamPipes connects to." lead={`${counts.adapter} adapters, ${counts.processor} data processors and ${counts.sink} data sinks ship with the platform and install at runtime. This list reflects the upcoming release. Need something else? Build it with the SDK.`} actions={<><Button to="/docs/extend-setup/" variant="secondary">Build your own extension</Button><Button to="/docs/configure-operate-extensions/" variant="ghost">How to install extensions</Button></>} />
+    <PageIntro eyebrow="Integrations" title="Everything StreamPipes connects to." lead={`${counts.adapter} adapters, ${counts.processor} data processors and ${counts.sink} data sinks come with the platform and install while it runs. This list is for the upcoming release. If something is missing, the SDK is there to build it.`} actions={<><Button to="/docs/extend-setup/" variant="secondary">Build your own extension</Button><Button to="/docs/configure-operate-extensions/" variant="ghost">How to install extensions</Button></>} />
     <Section tone="light" className={styles.catalog}>
       <Container>
         <div className={styles.toolbar}>
@@ -56,7 +56,7 @@ export default function Integrations() {
             </Link>
           </li>)}
         </ul>
-        {items.length === 0 && <p className={styles.empty}>Nothing matches. Try another term, or <Link to="/docs/extend-setup/">build the extension you need</Link>.</p>}
+        {items.length === 0 && <p className={styles.empty}>Nothing matches. Try another term, or <Link to="/docs/extend-setup/">build the extension yourself</Link>.</p>}
       </Container>
     </Section>
   </Layout>;

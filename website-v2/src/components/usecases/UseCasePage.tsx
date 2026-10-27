@@ -49,7 +49,7 @@ export default function UseCasePage({useCase: u}: {useCase: UseCase}) {
         <div className={styles.twoCol}>
           <div>
             <Headline level={2}>Extensions used</Headline>
-            <Lead>All included in the standard installation.</Lead>
+            <Lead>All of these come with the standard installation.</Lead>
             <ul className={styles.chips}>{u.extensions.map(e => <li key={e.id}><Link to={`/docs/pe/org.apache.streampipes.${e.id}/`}>{e.name}</Link></li>)}</ul>
             <Button to="/integrations/" variant="ghost">Browse all integrations</Button>
           </div>
@@ -63,7 +63,7 @@ export default function UseCasePage({useCase: u}: {useCase: UseCase}) {
     <Section tone="light" bordered>
       <Container>
         <div className={styles.twoCol}>
-          <div><Headline level={2}>Try it on your machine.</Headline><Lead>One command starts StreamPipes with Docker. The quickstart then takes you from the first data source to a dashboard.</Lead><div className={styles.actions}><Button to="/docs/quick-start-guide/">Open the quickstart</Button><Button to="/download/" variant="secondary">All downloads</Button></div></div>
+          <div><Headline level={2}>Try it on your machine.</Headline><Lead>One command starts StreamPipes with Docker. The quickstart takes you from there to a first dashboard.</Lead><div className={styles.actions}><Button to="/docs/quick-start-guide/">Open the quickstart</Button><Button to="/download/" variant="secondary">All downloads</Button></div></div>
           <CodePanel title="docker compose" language="bash" code={installCommand} wrap meta={`release ${RELEASE}`} />
         </div>
       </Container>

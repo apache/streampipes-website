@@ -11,29 +11,29 @@ const repositories = [
 
 export default function GetInvolved() {
   return <Layout title="Get involved" description="Contribute code, documentation, ideas and feedback to Apache StreamPipes. Where to start, which channels to use, and the main repositories.">
-    <PageIntro eyebrow="Community" title="Get involved" lead="StreamPipes grows through its community. You do not need to start with a large feature: bug reports, documentation improvements, testing, UI refinements, example updates and small fixes all move the project forward." actions={<><Button href="https://github.com/apache/streampipes/issues" variant="secondary">Browse open issues</Button><Button href="https://github.com/apache/streampipes/discussions" variant="ghost">Start a discussion</Button></>} />
+    <PageIntro eyebrow="Community" title="Get involved" lead="StreamPipes is built by its community. You do not need a big feature to get started: bug reports, better docs, testing, small UI fixes and updated examples all help." actions={<><Button href="https://github.com/apache/streampipes/issues" variant="secondary">Browse open issues</Button><Button href="https://github.com/apache/streampipes/discussions" variant="ghost">Start a discussion</Button></>} />
     <Section tone="light" className={styles.compact}>
       <Container>
         <NumberedList items={[
-          {title: 'Start with a discussion', children: <p>If you want feedback on an idea, need product context, or want to know whether work is already in progress, ask on the <a href="/community/mailing-lists/">mailing lists</a> or in <a href="https://github.com/apache/streampipes/discussions">GitHub Discussions</a> before opening a larger pull request.</p>},
-          {title: 'Pick an issue or report one', children: <p>Contributions often begin with an issue. Report bugs, propose improvements, or look for an existing task in the <a href="https://github.com/apache/streampipes/issues">issue tracker</a> that matches your interest.</p>},
-          {title: 'Open a pull request', children: <p>Open a focused pull request against the relevant repository and describe motivation, scope and follow-up work. Smaller, single-topic pull requests are easier to review and integrate.</p>},
+          {title: 'Start with a discussion', children: <p>Before you start on something larger, ask on the <a href="/community/mailing-lists/">mailing lists</a> or in <a href="https://github.com/apache/streampipes/discussions">GitHub Discussions</a>. You get feedback on the idea, and you find out whether someone is already working on it.</p>},
+          {title: 'Pick an issue or report one', children: <p>Many contributions start from an issue. Report a bug, propose an improvement, or pick an open issue in the <a href="https://github.com/apache/streampipes/issues">tracker</a> that matches what you know.</p>},
+          {title: 'Open a pull request', children: <p>Open a pull request against the right repository and explain what it changes and why. Small, focused pull requests get reviewed faster.</p>},
         ]} />
       </Container>
     </Section>
     <Section tone="tint" bordered>
       <Container>
-        <div className={styles.head}><Headline level={2}>Where things happen.</Headline><Lead>Choose the channel that fits the kind of contribution.</Lead></div>
+        <div className={styles.head}><Headline level={2}>Where things happen.</Headline><Lead>Pick the channel that fits what you want to do.</Lead></div>
         <Bento>
-          <Card span={2} to="/community/mailing-lists/" title="Mailing lists" link="Open mailing lists">Design discussions, contributor questions and decisions that should be easy to reference later. The Apache way.</Card>
-          <Card span={2} href="https://github.com/apache/streampipes/discussions" title="GitHub Discussions" link="Open discussions">Questions, ideas and early feedback when you want a low-friction conversation around a possible contribution.</Card>
-          <Card span={2} href="https://github.com/apache/streampipes/issues" title="GitHub Issues" link="Browse issues">Actionable bugs, feature requests and work items that should be tracked explicitly in the project backlog.</Card>
+          <Card span={2} to="/community/mailing-lists/" title="Mailing lists" link="Open mailing lists">Design discussions, contributor questions, and decisions that people should be able to find later. This is how Apache projects work.</Card>
+          <Card span={2} href="https://github.com/apache/streampipes/discussions" title="GitHub Discussions" link="Open discussions">Questions, ideas and early feedback, when you want a quick conversation before committing to anything.</Card>
+          <Card span={2} href="https://github.com/apache/streampipes/issues" title="GitHub Issues" link="Browse issues">Bugs, feature requests and tasks that should be tracked.</Card>
         </Bento>
       </Container>
     </Section>
     <Section tone="light" bordered>
       <Container>
-        <div className={styles.head}><Headline level={2}>Source code.</Headline><Lead>The main repositories for code, documentation and examples.</Lead></div>
+        <div className={styles.head}><Headline level={2}>Source code.</Headline><Lead>The repositories for code, documentation and examples.</Lead></div>
         <Table head={['Repository', 'What it contains', 'Link']} rows={repositories.map(([name, text, link]) => [<code>{name}</code>, text, <a href={link}>Open repository</a>])} />
       </Container>
     </Section>

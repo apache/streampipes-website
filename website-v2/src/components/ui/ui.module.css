@@ -123,9 +123,10 @@ a.stat:hover .statValue { color: var(--sp-green-dark); }
 .wrap :global(pre), .wrap :global(code), .wrap :global(.token-line) { white-space: pre-wrap !important; word-break: break-all; float: none !important; min-width: 0 !important; }
 
 /* ---------- Screenshot frame ---------- */
-.frame { border-radius: 10px; overflow: hidden; border: 1px solid var(--sp-line); background: var(--sp-surface); box-shadow: 0 24px 60px -36px rgba(27, 20, 100, .35); }
-.frame img { width: 100%; }
-.frameCaption { padding: 10px 14px; border-top: 1px solid var(--sp-line); font-size: 12px; color: var(--sp-muted); background: var(--sp-surface-2); }
+.figure { margin: 0; }
+.frame { border-radius: 8px; overflow: hidden; border: 1px solid var(--sp-line); background: var(--sp-surface); }
+.frame img { width: 100%; display: block; }
+.frameCaption { margin-top: 10px; font-size: 13px; line-height: 1.5; color: var(--sp-muted); }
 
 /* ---------- Flow diagram ---------- */
 .flow { width: 100%; height: auto; display: block; font-family: var(--sp-font); }

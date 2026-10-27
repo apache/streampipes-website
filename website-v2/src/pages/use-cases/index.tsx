@@ -6,7 +6,7 @@ import styles from '../../components/usecases/usecases.module.css';
 
 export default function UseCases() {
   return <Layout title="Use cases" description="What teams build with Apache StreamPipes: condition monitoring with OPC UA, PLC data to Kafka and InfluxDB, MQTT and unified namespace, anomaly detection with Python, alarms and notifications.">
-    <PageIntro eyebrow="Use cases" title="What teams build with StreamPipes." lead="Five typical scenarios, each with the adapters, processors and sinks involved and the guide to follow. All of them run on the standard installation." actions={<><Button to="/docs/quick-start-guide/">Start with the quickstart</Button><Button to="/integrations/" variant="ghost">Browse integrations</Button></>} />
+    <PageIntro eyebrow="Use cases" title="What people build with StreamPipes." lead="Five scenarios we see often. Each page lists the adapters, processors and sinks involved and links to the guide. All of it runs on a standard installation." actions={<><Button to="/docs/quick-start-guide/">Start with the quickstart</Button><Button to="/integrations/" variant="ghost">Browse integrations</Button></>} />
     <Section tone="light" className={styles.compact}>
       <Container>
         <div className={styles.index}>

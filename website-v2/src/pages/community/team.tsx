@@ -10,7 +10,7 @@ export default function Team() {
   const {siteConfig} = useDocusaurusContext();
   const team = (siteConfig.customFields as {team: Member[]}).team;
   return <Layout title="Team" description="Committers and PMC members of the Apache StreamPipes project.">
-    <PageIntro eyebrow="Community" title="Team" lead="Committers and members of the Project Management Committee (PMC). The list is ordered by contribution count in the main repository and updated periodically." />
+    <PageIntro eyebrow="Community" title="Team" lead="Committers and members of the Project Management Committee. The list is ordered by number of contributions to the main repository and refreshed from time to time." />
     <Section tone="light" className={styles.compact}>
       <Container>
         <div className={styles.teamGrid}>
@@ -21,7 +21,7 @@ export default function Team() {
             <span className={`${styles.role} ${member.pmc ? styles.rolePmc : ''}`}>{member.pmc ? 'PMC member' : 'Committer'}</span>
           </a>)}
         </div>
-        <Lead className={styles.teamNote}>Want to join? Sustained contributions of any kind, code, documentation, reviews or community support, are how committers are invited. Start on the <a href="/community/get-involved/">get involved</a> page.</Lead>
+        <Lead className={styles.teamNote}>Want to join? Committers are invited based on sustained contributions, whether code, documentation, reviews or helping others. The <a href="/community/get-involved/">get involved</a> page is the place to start.</Lead>
       </Container>
     </Section>
   </Layout>;
