@@ -69,7 +69,7 @@ const Footer: FC = () => (
         <Link to="/" aria-label="Apache StreamPipes home">
           <img src="/img/sp-logo-color.png" width="210" height="44" alt="Apache StreamPipes" loading="lazy" />
         </Link>
-        <p>Open source.<br />Built together.</p>
+        <p>Built in the open,<br />by its community.</p>
       </div>
       <div className={style.links}>
         {groups.map(group => (
