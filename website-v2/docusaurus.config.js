@@ -159,8 +159,11 @@ module.exports = {
       },
       "items": require('./src/navbar/navbar.js')
     },
-    "image": "img/streampipes-social-card.png",
+    "image": "img/streampipes-social-card-2026.png",
     "metadata": [
+      {property: 'og:image:width', content: '1200'},
+      {property: 'og:image:height', content: '630'},
+      {property: 'og:image:type', content: 'image/png'},
       {
         name: 'description',
         content: 'Apache StreamPipes is an open-source industrial IoT data platform. Connect machines via OPC UA, MQTT, S7 and Modbus, process live data in visual pipelines, store datasets and build charts and dashboards.'
