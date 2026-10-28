@@ -501,4 +501,4 @@ This behavior is implemented in the chart's `secrets.yaml` template and is usefu
 
 ## Related configuration pages
 
-For the detailed environment-variable reference, continue with [Environment Variables](./06_configure-operate-environment-variables.md). For the operational view of registered services and runtime service configuration, see [Extension Services](./06_configure-operate-extension-services.md).
+To serve the web interface over HTTPS, see [TLS for the web interface](./06_configure-operate-tls.md). For the detailed environment-variable reference, continue with [Environment Variables](./06_configure-operate-environment-variables.md). For the operational view of registered services and runtime service configuration, see [Extension Services](./06_configure-operate-extension-services.md).

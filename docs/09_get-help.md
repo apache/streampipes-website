@@ -32,7 +32,8 @@ If you or your business need stronger guarantees around availability, response t
 
 The information listed in this section is provided by the named entities themselves. Except for the stated involvement level, it is not verified, updated, or endorsed by the Apache Software Foundation or the Apache StreamPipes project.
 
-| Company                                                     | Offering | Contact | Involvement Level |
-|-------------------------------------------------------------| ---  | --- | --- |
+| Company                                                     | Offering                                            | Contact                                     | Involvement Level    |
+|-------------------------------------------------------------|-----------------------------------------------------|---------------------------------------------|----------------------|
 | <img src="/img/support/logo-bytefabrik.svg" width="200px"/> | Support, Training & Workshops, Development, Add-Ons | [Bytefabrik.AI GmbH](https://bytefabrik.ai) | Multiple PMC Members |
+| <img src="/img/support/logo-toddysoft.svg" width="200px"/>  | Add-Ons (Driver Development)                        | [ToddySoft GmbH](https://toddysoft.com)     | PMC Member           |
 
