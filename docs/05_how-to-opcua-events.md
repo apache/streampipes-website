@@ -1,6 +1,7 @@
 ---
 id: how-to-opcua-events
 title: Integrate OPC UA events
+description: "How to receive OPC UA alarms and condition events in StreamPipes with the OPC UA Events adapter, including event types and additional fields."
 sidebar_label: Integrate OPC UA events
 ---
 

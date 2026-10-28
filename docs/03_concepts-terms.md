@@ -1,6 +1,7 @@
 ---
 id: concepts-terms
 title: Terms
+description: "Core StreamPipes terms explained: adapters, data streams, pipelines, processors, sinks, datasets, charts, dashboards, assets and sites."
 sidebar_label: Terms
 ---
 

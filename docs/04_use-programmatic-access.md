@@ -1,6 +1,7 @@
 ---
 id: use-programmatic-access
 title: Programmatic Access
+description: "Control StreamPipes from your own applications with the Java client and REST APIs: automate pipelines, query resources and subscribe to live data streams."
 sidebar_label: 💻 Programmatic Access
 ---
 

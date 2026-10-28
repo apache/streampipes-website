@@ -1,156 +1,97 @@
-/* eslint-disable react/prop-types */
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
 import type { FC } from 'react';
 import React from 'react';
 import Link from '@docusaurus/Link';
-import useBaseUrl from '@docusaurus/useBaseUrl';
-import { Icon } from '@iconify/react';
-import githubIcon from '@iconify/icons-akar-icons/github-fill';
-import twitterIcon from '@iconify/icons-akar-icons/twitter-fill';
-import linkedInIcon from '@iconify/icons-akar-icons/linkedin-fill';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import style from './styles.module.scss';
 
-const footer = {
-  links: [
-    {
-      title: 'ASF',
-      items: [
-        {
-          label: 'Foundation',
-          to: 'https://www.apache.org/',
-        },
-        {
-          label: 'License',
-          to: 'https://www.apache.org/licenses/',
-        },
-        {
-          label: 'Events',
-          to: 'https://www.apache.org/events/',
-        },
-        {
-          label: 'Security',
-          to: 'https://www.apache.org/security/',
-        },
-        {
-          label: 'Sponsorship',
-          to: 'https://www.apache.org/foundation/sponsorship.html',
-        },
-        {
-          label: 'Thanks',
-          to: 'https://www.apache.org/foundation/thanks.html',
-        },
-      ],
-    },
-    {
-      title: 'Community',
-      items: [
-        {
-          icon: githubIcon,
-          label: 'GitHub Issues',
-          to: 'https://github.com/apache/streampipes/issues',
-        },
-        {
-          icon: githubIcon,
-          label: 'Github Discussions',
-          to: 'https://github.com/apache/streampipes/discussions',
-        },
-        {
-          icon: twitterIcon,
-          label: 'Twitter',
-          to: 'https://twitter.com/StreamPipes',
-        },
-        {
-          icon: linkedInIcon,
-          label: 'LinkedIn',
-          to: 'https://www.linkedin.com/company/apache-streampipes',
-        },
-      ],
-    },
-    {
-      title: 'More',
-      items: [
-        {
-          label: 'Blog',
-          to: '/blog/',
-          target: '_parent',
-        }, {
-          label: 'Privacy',
-          to: 'https://privacy.apache.org/policies/privacy-policy-public.html',
-          target: '_parent',
-        }
-      ],
-    },
-  ],
-  logo: {
-    alt: 'Apache Software Foundation',
-    src: '/img/asf_logo_wide.svg',
-    href: 'https://www.apache.org/',
+const pythonDocs = 'https://streampipes.apache.org/docs/docs/python/dev/';
+
+const groups = [
+  {
+    title: 'Platform',
+    links: [
+      ['Features', '/features/'],
+      ['Use cases', '/use-cases/'],
+      ['Integrations', '/integrations/'],
+      ['Connectivity', '/docs/use-connect/'],
+      ['Data management', '/docs/use-datasets/'],
+      ['Assets & sites', '/docs/use-assets/'],
+      ['Pipelines', '/docs/use-pipelines/'],
+      ['Charts & dashboards', '/docs/use-dashboards/'],
+      ['Architecture', '/architecture/'],
+      ['Enterprise readiness', '/enterprise/'],
+      ['Deployment', '/docs/configure-operate-deployment/'],
+    ],
   },
+  {
+    title: 'Build & learn',
+    links: [
+      ['Documentation', '/docs/user-guide-introduction/'],
+      ['Quickstart', '/docs/quick-start-guide/'],
+      ['Download', '/download/'],
+      ['Python client', pythonDocs],
+      ['Java client & APIs', '/docs/use-programmatic-access/'],
+      ['Extension SDK', '/docs/extend-setup/'],
+      ['Blog', '/blog/'],
+      ['Blog RSS feed', 'pathname:///blog/rss.xml'],
+    ],
+  },
+  {
+    title: 'Community',
+    links: [
+      ['Get involved', '/community/get-involved/'],
+      ['Mailing lists', '/community/mailing-lists/'],
+      ['Team', '/community/team/'],
+      ['GitHub', 'https://github.com/apache/streampipes'],
+      ['Discussions', 'https://github.com/apache/streampipes/discussions'],
+      ['Report an issue', 'https://github.com/apache/streampipes/issues'],
+      ['LinkedIn', 'https://www.linkedin.com/company/apache-streampipes'],
+      ['X', 'https://x.com/StreamPipes'],
+    ],
+  },
+  {
+    title: 'Apache',
+    links: [
+      ['Foundation', 'https://www.apache.org/'],
+      ['License', 'https://www.apache.org/licenses/'],
+      ['Events', 'https://www.apache.org/events/'],
+      ['Security', 'https://www.apache.org/security/'],
+      ['Sponsorship', 'https://www.apache.org/foundation/sponsorship.html'],
+      ['Thanks', 'https://www.apache.org/foundation/thanks.html'],
+      ['Privacy', 'https://privacy.apache.org/policies/privacy-policy-public.html'],
+    ],
+  },
+];
 
-  copyright:
-    `Copyright © 2019-${new Date().getFullYear()} The Apache Software Foundation. Apache StreamPipes, Apache, the Apache feather logo, and the Apache StreamPipes project logo are either registered trademarks or trademarks of the Apache Software Foundation.`,
-};
-
-const FooterLink = ({
-                      to, icon, href, label, prependBaseUrlToHref, ...props
-                    }) => {
-  const toUrl = useBaseUrl(to);
-  const normalizedHref = useBaseUrl(href, {
-    forcePrependBaseUrl: true,
-  });
-  const hrefObj = href
-    ? {href: prependBaseUrlToHref ? normalizedHref : href}
-    : {to: toUrl};
-  return (
-    <Link
-      {...hrefObj}
-      {...props}
-    >
-      <Icon icon={icon}/>
-      <span>{label}</span>
-    </Link>
-  );
-};
-
-const Footer: FC = () => {
-  const {copyright, links, logo} = footer;
-
-  if (!footer) {
-    return null;
-  }
-
-  return (
-    <footer className={style.container}>
-      {links && links.length > 0 && (
-        <div className={style.linksRow}>
-          {links.map(({title, items}) => (
-            <div key={title} className={style.linksCol}>
-              <div>{title}</div>
-              <ul>
-                {items.map((v) => (
-                  <li key={v.to} className="footer__item">
-                    <FooterLink {...v} />
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      )}
-      <div className={style.copyright}>
-        <Link href={logo.href}>
-          <LazyLoadImage alt={logo.alt} src={logo.src} height="40px" width="231.25px"/>
+const Footer: FC = () => (
+  <footer className={style.footer}>
+    <div className={style.container}>
+      <div className={style.top}>
+        <Link to="/" aria-label="Apache StreamPipes home">
+          <img src="/img/sp-logo-color.png" width="210" height="44" alt="Apache StreamPipes" loading="lazy" />
         </Link>
-        <div className={style.text}>{copyright}</div>
+        <p>Built in the open,<br />by its community.</p>
       </div>
-    </footer>
-  );
-};
+      <div className={style.links}>
+        {groups.map(group => (
+          <div key={group.title}>
+            <h3>{group.title}</h3>
+            <ul>
+              {group.links.map(([label, href]) => (
+                <li key={label}><Link to={href}>{label}</Link></li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <div className={style.legal}>
+        <a href="https://www.apache.org/"><img src="/img/asf_logo_wide.svg" width="174" height="31" alt="The Apache Software Foundation" loading="lazy" /></a>
+        <p>
+          Copyright © 2019–{new Date().getFullYear()} The Apache Software Foundation. Apache StreamPipes, Apache, the Apache feather logo,
+          and the Apache StreamPipes project logo are either registered trademarks or trademarks of The Apache Software Foundation.
+        </p>
+      </div>
+    </div>
+  </footer>
+);
 
 export default Footer;

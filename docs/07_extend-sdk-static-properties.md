@@ -1,6 +1,7 @@
 ---
 id: extend-sdk-static-properties
 title: "SDK Guide: Static Properties"
+description: "Declare static properties in the StreamPipes SDK to render configuration parameters such as text fields, selections and mappings in the pipeline editor."
 sidebar_label: "SDK: Static Properties"
 ---
 

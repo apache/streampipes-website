@@ -1,6 +1,8 @@
 ---
 title: "Using Factory I/O with StreamPipes"
-author: Sven Oehler
+authors: [SvenO3]
+image: /img/blog/2022-09-05/plc.jpg
+tags: [tutorial]
 ---
 
 **<div style={{float: 'left', paddingRight: '40px'}}>10 minutes to read</div>**<br/>

@@ -1,8 +1,8 @@
 ---
 title: Usage-Based Maintenance with Apache StreamPipes
-author: Philipp Zehnder
-authorURL: "https://github.com/tenthe"
-authorImageURL: "/img/zehnder.png"
+authors: [tenthe]
+image: /img/blog/2025-04-30/maintenance-pipeline-one.png
+tags: [tutorial]
 ---
 
 # Usage-Based Maintenance with Apache StreamPipes

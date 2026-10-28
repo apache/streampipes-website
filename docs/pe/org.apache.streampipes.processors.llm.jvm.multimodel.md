@@ -22,9 +22,9 @@ sidebar_label: Multi-Model Prompt Processor
   ~
   -->
 
-<p align="center"> 
-    <img src="/img/pipeline-elements/org.apache.streampipes.processors.llm.jvm.multimodel/icon.png" width="150px;" class="pe-image-documentation"/>
-</p>
+
+
+![icon](/img/pipeline-elements/org.apache.streampipes.processors.llm.jvm.multimodel/icon.png)
 
 ---
 

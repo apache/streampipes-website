@@ -6,9 +6,12 @@ export default (function () {
   }
   return {
     onRouteUpdate({location}) {
-      _paq.push(['setCustomUrl', location.pathname]);
-      _paq.push(['setDocumentTitle', document.title]);
-      _paq.push(['trackPageView']);
+      // Guard: if the Matomo bootstrap script was blocked, do not crash the page.
+      const paq = window._paq;
+      if (!Array.isArray(paq)) return;
+      paq.push(['setCustomUrl', location.pathname]);
+      paq.push(['setDocumentTitle', document.title]);
+      paq.push(['trackPageView']);
     },
   };
 })();

@@ -1,0 +1,35 @@
+dominikriemer:
+  name: Dominik Riemer
+  title: PMC member, Apache StreamPipes
+  url: https://github.com/dominikriemer
+  image_url: /img/team/github/dominikriemer.png
+tenthe:
+  name: Philipp Zehnder
+  title: PMC member, Apache StreamPipes
+  url: https://github.com/tenthe
+  image_url: /img/team/github/tenthe.png
+wipatrick:
+  name: Patrick Wiener
+  title: PMC member, Apache StreamPipes
+  url: https://github.com/wipatrick
+  image_url: /img/team/github/wipatrick.png
+bossenti:
+  name: Tim Bossenmaier
+  title: PMC member, Apache StreamPipes
+  url: https://github.com/bossenti
+  image_url: /img/team/github/bossenti.png
+grainier:
+  name: Grainier Perera
+  title: PMC member, Apache StreamPipes
+  url: https://github.com/grainier
+  image_url: /img/team/github/grainier.png
+SvenO3:
+  name: Sven Oehler
+  title: PMC member, Apache StreamPipes
+  url: https://github.com/SvenO3
+  image_url: /img/team/github/SvenO3.png
+mortentorp:
+  name: Morten Torp
+  title: Community contributor
+  url: https://www.linkedin.com/in/morten-torp-7b731526/
+  image_url: /img/torp.jpg

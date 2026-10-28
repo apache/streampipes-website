@@ -1,8 +1,8 @@
 ---
 title: How to understand your machine data?
-author: Philipp Zehnder
-authorURL: "http://twitter.com/philipp10der"
-authorImageURL: "/img/zehnder.png"
+authors: [tenthe]
+image: /img/blog/2018-06-18/01_motivation.png
+tags: [tutorial]
 ---
 **<div style={{float: 'left', paddingRight: '40px'}}>8 minutes to read</div>**
 <br/>

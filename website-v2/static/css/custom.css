@@ -122,7 +122,7 @@ li.installation-step {
 }
 
 body {
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Heebo', sans-serif;
 }
 
 hr {
@@ -275,12 +275,12 @@ hr {
 }
 
 h1, h2, h3, h4, h5 {
-    font-weight: bolder;
-    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-family: 'Heebo', sans-serif;
 }
 
 p {
-    text-align: justify;
+    text-align: left;
 }
 
 .community {

@@ -1,8 +1,8 @@
 ---
 title: Explore StreamPipes with Data Simulators!
-author: Philipp Zehnder
-authorURL: "https://github.com/tenthe"
-authorImageURL: "/img/zehnder.png"
+authors: [tenthe]
+image: /img/blog/2025-03-25/adapter_configuration.png
+tags: [tutorial]
 ---
 
 ### Introduction

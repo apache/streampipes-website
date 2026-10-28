@@ -1,6 +1,7 @@
 ---
 id: configure-operate-extensions
 title: Manage Extensions
+description: "Install, update and uninstall StreamPipes extensions: the administrative catalog of adapters, data processors and data sinks."
 sidebar_label: Manage Extensions
 ---
 

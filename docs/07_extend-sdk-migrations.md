@@ -1,6 +1,7 @@
 ---
 id: extend-sdk-migration
 title: "SDK Guide: Pipeline Element Migration"
+description: "Write migrations for StreamPipes pipeline elements so existing adapters, processors and sinks update automatically when a new version is installed."
 sidebar_label: "SDK: PE Migration"
 ---
 

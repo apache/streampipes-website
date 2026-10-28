@@ -1,6 +1,7 @@
 ---
 id: faq-common-problems
 title: Common Problems
+description: "Solutions for common Apache StreamPipes installation and startup problems on Windows, Linux and macOS, including Docker and VM setups."
 sidebar_label: Common Problems
 ---
 

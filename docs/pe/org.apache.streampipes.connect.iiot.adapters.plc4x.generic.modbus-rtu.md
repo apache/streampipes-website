@@ -50,28 +50,44 @@ The polling interval requires a number in milliseconds, which represents the int
 PLC for new data. For instance, a polling interval of 1000 milliseconds will configure the adapter to send a request to
 the PLC every second.
 
+If a read is still running when the next poll is due, that poll is skipped. Read requests are bounded to five seconds;
+configure driver request timeouts below this bound. After a failure, retries back off from one second up to sixty seconds.
+Successful reads reset this backoff.
+
 ### Supported Transports
 
 The following transports are supported by this adapter:
 
-* tcp
 * serial
+* tcp
+* tls
+* tls-psk
+* udp
+* test
 
 ### Transport Metadata
 
 #### Required
 
-**tcp**
+**serial**
 
 
 
 #### Advanced
 
-**tcp**
+**serial**
 
-* keep-alive: Should keep-alive packets be sent? (BOOLEAN)
-* no-delay: Should packets be sent instantly or should we give the OS some time to aggregate data. (BOOLEAN)
-* default-timeout: Timeout after which a connection will be treated as disconnected. (INT)
+* baud-rate: Baud rate (bits per second) (INT)
+* data-bits: Number of data bits (5, 6, 7, or 8) (INT)
+* stop-bits: Number of stop bits (1 or 2) (INT)
+* parity: Parity: none, odd, even, mark, space (case-insensitive) (STRING)
+* flow-control: Flow control: none, rts-cts, xon-xoff (case-insensitive) (STRING)
+* read-timeout-ms: Read timeout in milliseconds. 0 means blocking read. (INT)
+* write-timeout-ms: Write timeout in milliseconds. (INT)
+* dtr: Enable DTR (Data Terminal Ready) signal (BOOLEAN)
+* rts: Enable RTS (Request To Send) signal (BOOLEAN)
+* reuse-port: Reuse the underlying serial port across multiple transport instances. When true, instances with the same port will share a connection. This is useful for protocols where multiple logical connections share one serial port. Connections sharing a port must target distinct unit ids; Modbus RTU responses carry no transaction ids, so same-unit traffic from multiple connections cannot be told apart. (BOOLEAN)
+* interframe-delay: Interframe delay in milliseconds for protocols that need spacing between messages. Applies to shared and dedicated ports; the gap is measured from the last write or received data. (INT)
 
 ### Protocol Metadata
 
@@ -81,8 +97,9 @@ The following transports are supported by this adapter:
 
 #### Optional
 
-* request-timeout: Default timeout for all types of requests. (INT)
+* request-timeout-ms: Default timeout for all types of requests. The timeout covers the full time from submission including queueing; queued requests whose remaining budget falls below a small dispatch margin (at most a quarter of the timeout, capped at 50 ms) fail fast instead of being sent. (INT)
 * default-unit-identifier: Unit-identifier or slave-id that identifies the target PLC (On RS485 multiple Modbus Devices can be listening). Defaults to 1. (INT)
+* ping-address: Simple address, that the driver will use to check, if the connection to a given device is active (Defaults to reading holding-register 1). (STRING)
 * default-payload-byte-order: Default encoding used for transporting register values (Defaults to BIG_ENDIAN).
 Allowed values are: 
  - BIG_ENDIAN
@@ -95,14 +112,46 @@ Allowed values are:
 
 ### Tags
 
-The syntax to define tags is based on the PLC4X syntax, see https://plc4x.apache.org/users/protocols/s7.html.
+The syntax to define tags is based on the PLC4X syntax, see https://plc4x.apache.org/plc4x/latest/users/protocols/s7.html.
 Address Pattern:
 
 ```
-propertyName=%{Memory-Area}{start-address}:{Data-Type}[{array-size}]
+propertyName=%{Memory-Area}{start-address}[{start-index}..{end-index}]:{Data-Type}
 
 temperature=%I0.0:INT
 ```
+
+### Browsing tags
+
+Choose **Browse PLC tags** after configuring the connection, then load **Available tags** and select the readable tags.
+The browse query defaults to `*` for S7 and ADS, which browse all available items with this query.
+For OPC UA, it defaults to `ns=0;i=85` (the Objects folder). Children are loaded one level at a time
+as you expand folders, avoiding a recursive browse of the entire server. Enter a parent NodeId to browse its children,
+for example `ns=2;s=Demo.Industrial.CncMachine.RawData`, then select `cycleActive` from the results.
+A query for a leaf node returns its children, not the leaf itself. Earlier saved OPC UA queries using `*` are
+interpreted as the Objects folder. Include the server's endpoint path in **PLC Address**, for example
+`localhost:4840/milo`; the path is case-sensitive. Query syntax and returned information depend on the driver and PLC. Unsupported connections report an error; use **Enter tags manually** instead.
+Browsing waits up to ten seconds for the response and returns the connection to the shared cache afterwards.
+
+The tree preserves the hierarchy supplied by the driver. Only readable items with an address can be selected.
+S7 browsing can return memory areas and data blocks as byte addresses rather than symbolic, typed variables.
+Use manual entry when you need different offsets, datatypes, or custom event field names.
+
+Selected addresses are used unchanged for sampling and polling. Event field names start with `tag_`, followed by the
+address with punctuation replaced by underscores. Conflicting names require manual entry. Browsing is performed only
+while configuring the adapter; starting an adapter uses its saved selections without browsing again.
+
+### Upgrading existing adapters
+
+The version 3 migration keeps existing tags in the selected manual-entry option, preserving field names and addresses.
+
+The version 2 adapter migration updates saved PLC4X configuration parameter names and legacy array addresses for PLC4X 1.0.
+For example, `request-timeout` becomes `request-timeout-ms`, and `%DB42:28.0:BYTE[4]` becomes
+`%DB42:28.0[0..3]:BYTE`. A single index selects a scalar; a range selects a list.
+S7 connections now use the `s7` driver with the `cotp` transport. Rack and slot parameters use the `cotp.` prefix.
+Explicit configuration values are retained. Unspecified settings use PLC4X 1.0 defaults, including its certificate
+verification defaults. Review the [PLC4X migration guide](https://plc4x.apache.org/plc4x/latest/users/migrations/0.13.1-to-1.0.0/index.html)
+for protocol-specific changes before connecting to a device after an upgrade.
 
 ## Best Practices
 

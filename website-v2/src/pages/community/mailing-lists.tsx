@@ -1,77 +1,31 @@
-import type { FC } from 'react';
 import React from 'react';
 import Layout from '@theme/Layout';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { translate } from '@docusaurus/Translate';
-import PageHeader from '../../components/PageHeader';
-import PageSection from '../../components/PageSection';
+import {Container, Headline, Lead, PageIntro, Section, Table} from '../../components/ui';
+import styles from '../pages.module.css';
 
+const list = (name: string) => [
+  <code>{name}@streampipes.apache.org</code>,
+  <a href={`mailto:${name}-subscribe@streampipes.apache.org`}>Subscribe</a>,
+  <a href={`mailto:${name}-unsubscribe@streampipes.apache.org`}>Unsubscribe</a>,
+  <a href={`mailto:${name}@streampipes.apache.org`}>Post</a>,
+  <a href={`https://lists.apache.org/list.html?${name}@streampipes.apache.org`}>Archive</a>,
+];
+const head = ['List', 'Subscribe', 'Unsubscribe', 'Post', 'Archive'];
 
-const MailingLists: FC = () => (
-  <Layout title={'Mailing Lists'}>
-    <PageHeader title={'Mailing Lists'}></PageHeader>
-    <PageSection backgroundClass={"background-white"} sectionTitle={"Users"} alignCenter alignContentCenter>
-
-      <b className={"text-center"}>You are using StreamPipes and have problems, questions or feature requests? Then the
-        community is happy
-        to answer you on the user list.</b>
-      <div>
-        <table className="table" style={{marginTop: '30px'}}>
-          <thead>
-          <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Subscribe</th>
-            <th scope="col">Unsubscribe</th>
-            <th scope="col">Post</th>
-            <th scope="col">Archive</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>users@streampipes.apache.org</td>
-            <td><a href="mailto:users-subscribe@streampipes.apache.org">Subscribe</a></td>
-            <td><a href="mailto:users-subscribe@streampipes.apache.org">Unsubscribe</a></td>
-            <td><a href="mailto:users@streampipes.apache.org">Post</a></td>
-            <td><a href="http://mail-archives.apache.org/mod_mbox/streampipes-users/">Archive</a></td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-    </PageSection>
-    <PageSection backgroundClass={"background-primary-light"} sectionTitle={"Developers"} alignCenter alignContentCenter>
-      <b>If you are interested in contributing to StreamPipes, subscribe to our developer-oriented lists!</b>
-      <div>
-        <table className="table" style={{marginTop: '30px'}}>
-          <thead>
-          <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Subscribe</th>
-            <th scope="col">Unsubscribe</th>
-            <th scope="col">Post</th>
-            <th scope="col">Archive</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>dev@streampipes.apache.org</td>
-            <td><a href="mailto:dev-subscribe@streampipes.apache.org">Subscribe</a></td>
-            <td><a href="mailto:dev-unsubscribe@streampipes.apache.org">Unsubscribe</a></td>
-            <td><a href="mailto:dev@streampipes.apache.org">Post</a></td>
-            <td><a href="http://mail-archives.apache.org/mod_mbox/streampipes-dev/">Archive</a></td>
-          </tr>
-          <tr>
-            <td>commits@streampipes.apache.org</td>
-            <td><a href="mailto:commits-subscribe@streampipes.apache.org">Subscribe</a></td>
-            <td><a href="mailto:commits-unsubscribe@streampipes.apache.org">Unsubscribe</a></td>
-            <td><a href="mailto:commits@streampipes.apache.org">Post</a></td>
-            <td><a href="http://mail-archives.apache.org/mod_mbox/streampipes-commits/">Archive</a></td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-    </PageSection>
-  </Layout>
-)
-
-
-export default MailingLists;
+export default function MailingLists() {
+  return <Layout title="Mailing lists" description="Subscribe to the Apache StreamPipes user and developer mailing lists to ask questions, follow development and take part in decisions.">
+    <PageIntro eyebrow="Community" title="Mailing lists" lead="Apache projects discuss and decide on mailing lists. To subscribe, send an empty email to the subscribe address and confirm the reply. The archives are public." />
+    <Section tone="light" className={styles.compact}>
+      <Container>
+        <div className={styles.head}><Headline level={2}>Users</Headline><Lead>Questions, problems, feature requests: the user list is where the community answers.</Lead></div>
+        <Table head={head} rows={[list('users')]} />
+      </Container>
+    </Section>
+    <Section tone="tint" bordered>
+      <Container>
+        <div className={styles.head}><Headline level={2}>Developers</Headline><Lead>Want to contribute? The dev list carries design discussions and votes. The commits list gets a mail for every change.</Lead></div>
+        <Table head={head} rows={[list('dev'), list('commits')]} />
+      </Container>
+    </Section>
+  </Layout>;
+}

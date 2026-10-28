@@ -1,8 +1,8 @@
 ---
 title: Anomaly Detection with StreamPipes Functions in Python and ONNX
-author: Tim Bossenmaier
-authorURL: "https://github.com/bossenti"
-authorImageURL: "/img/bossenmaier.png"
+authors: [bossenti]
+image: /img/blog/2024-03-26/prediction-analysis.png
+tags: [tutorial]
 ---
 
 

@@ -2,7 +2,7 @@
   "documentation": [
     {
       "type": "category",
-      "label": "🚀 Try StreamPipes",
+      "label": "Try StreamPipes",
       "items": [
         "user-guide-introduction",
         "try-installation"
@@ -10,7 +10,7 @@
     },
     {
       "type": "category",
-      "label": "💡 Concepts",
+      "label": "Concepts",
       "items": [
         "introduction",
         "concepts-overview"
@@ -18,7 +18,7 @@
     },
     {
       "type": "category",
-      "label": "🎓 Use StreamPipes",
+      "label": "Use StreamPipes",
       "items": [
         "use-connect",
         "use-pipeline-editor",
@@ -34,7 +34,7 @@
     },
     {
       "type": "category",
-      "label": "📚 Extensions",
+      "label": "Extensions",
       "items": [
         {
           "type": "category",
@@ -184,7 +184,7 @@
     },
     {
       "type": "category",
-      "label": "⚡ Deploy StreamPipes",
+      "label": "Deploy StreamPipes",
       "items": [
         "choosing-the-right-flavor",
         "deploy-docker",
@@ -197,7 +197,7 @@
     },
     {
       "type": "category",
-      "label": "💻 Customize StreamPipes",
+      "label": "Customize StreamPipes",
       "items": [
         "extend-setup",
         "extend-cli",
@@ -218,7 +218,7 @@
     },
     {
       "type": "category",
-      "label": "🔧 Technicals",
+      "label": "Technicals",
       "items": [
         "technicals-architecture",
         "technicals-runtime-wrappers",
@@ -227,7 +227,7 @@
     },
     {
       "type": "category",
-      "label": "👪 Community",
+      "label": "Community",
       "items": [
         "community-get-help",
         "community-contribute"

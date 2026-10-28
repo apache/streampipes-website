@@ -1,8 +1,8 @@
 ---
 title: StreamPipes on Windows with Podman
-author: Morten Torp
-authorURL: "https://www.linkedin.com/in/morten-torp-7b731526/"
-authorImageURL: "/img/torp.jpg"
+authors: [mortentorp]
+image: /img/blog/2026-03-21/podman-setup.png
+tags: [tutorial]
 ---
 
 # StreamPipes on Windows with Podman
