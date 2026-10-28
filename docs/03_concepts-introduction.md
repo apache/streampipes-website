@@ -1,6 +1,7 @@
 ---
 id: concepts-introduction
 title: Introduction
+description: "What Apache StreamPipes is: an open-source platform to connect machines and sensors, turn events into data streams, process them in real time and visualize them."
 sidebar_label: Introduction
 ---
 

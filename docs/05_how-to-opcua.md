@@ -1,6 +1,7 @@
 ---
 id: how-to-opcua
 title: Integrate OPC UA data
+description: "How to connect an OPC UA server to StreamPipes: pull and subscription mode, node selection, security modes and certificate trust management."
 sidebar_label: Integrate OPC UA data
 ---
 

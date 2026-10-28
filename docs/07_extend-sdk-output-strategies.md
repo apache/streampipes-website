@@ -1,6 +1,7 @@
 ---
 id: extend-sdk-output-strategies
 title: "SDK Guide: Output Strategies"
+description: "Define output strategies in the StreamPipes SDK to describe how a data processor transforms its input stream into an output stream."
 sidebar_label: "SDK: Output Strategies"
 ---
 

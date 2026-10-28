@@ -1,104 +1,41 @@
-import type { FC } from 'react';
 import React from 'react';
 import Layout from '@theme/Layout';
-import PageHeader from '../components/PageHeader';
-import PageSection from '../components/PageSection';
+import {Bento, Card, CodePanel, Container, Headline, Lead, PageIntro, Section} from '../components/ui';
 import DownloadSection from '../components/download/DownloadSection';
+import styles from './pages.module.css';
 
-const Downloads: FC = () => (
-  <Layout title={'Downloads'}>
-    <PageHeader title={'Downloads'}></PageHeader>
+const RELEASE = {version: '0.98.0', date: '15 December 2025'};
+const compose = (ref: string) => `mkdir -p streampipes-${ref} && cd streampipes-${ref} \\
+  && curl -fsSLO https://raw.githubusercontent.com/apache/streampipes/${ref}/installer/compose/docker-compose.yml \\
+  && curl -fsSLO https://raw.githubusercontent.com/apache/streampipes/${ref}/installer/compose/.env \\
+  && docker compose up -d`;
 
-    <PageSection
-      backgroundClass={'background-white'}
-      sectionTitle={'Install Apache StreamPipes'}
-      sectionSubtitle={'The fastest path from download to a running instance'}
-    >
-      <div className="download-page-intro">
-        <p className="download-page-lead">
-          The standard path is the official source release. If you prefer a shorter command for local
-          evaluation or demos, you can also start StreamPipes directly from the Compose files shown
-          below.
-        </p>
-      </div>
-
-      <div className="download-layout-grid">
-        <div className="download-content-main">
-          <DownloadSection version={'0.98.0'} showMoreInfo={true} releaseDate={'2025-12-15'}></DownloadSection>
+export default function Download() {
+  return <Layout title="Download" description="Download the Apache StreamPipes source release or start the latest release and nightly builds with a single Docker Compose command.">
+    <PageIntro eyebrow="Download" title="Install Apache StreamPipes" lead="The source release is the official download. If you just want to try StreamPipes, the Compose commands further down start a complete instance in one go. You need Docker with Compose on Linux, macOS or Windows." />
+    <Section tone="light" className={styles.compact}>
+      <Container>
+        <DownloadSection version={RELEASE.version} releaseDate={RELEASE.date} showMoreInfo />
+        <p className={styles.note}>A note on versions: the <a href="/docs/0.98.0/user-guide-introduction/">0.98.0 documentation</a> matches this release. The default <a href="/docs/user-guide-introduction/">documentation</a> and the screenshots on this site show the upcoming release, called Next, which you can run with the nightly build below.</p>
+      </Container>
+    </Section>
+    <Section tone="tint" bordered>
+      <Container>
+        <div className={styles.head}><Headline level={2}>One command, running instance.</Headline><Lead>Each command creates a folder, downloads the Compose file and the environment file, and starts the default setup. Edit the environment file before you use an instance for real.</Lead></div>
+        <div className={styles.twoCol}>
+          <div><h3 className={styles.h3}>Latest release {RELEASE.version}</h3><p className={styles.p}>The current release with the default NATS setup.</p><CodePanel title="docker compose" language="bash" code={compose(RELEASE.version)} wrap meta={`release ${RELEASE.version}`} /></div>
+          <div><h3 className={styles.h3}>Nightly build</h3><p className={styles.p}>Follows the dev branch. No guarantees, and things can break between builds.</p><CodePanel title="docker compose" language="bash" code={compose('dev')} wrap meta="dev branch" /></div>
         </div>
-
-        <aside className="download-content-side">
-          <div className="download-side-card">
-            <h3>Prerequisites</h3>
-            <ul className="download-checklist">
-              <li>Docker installed and runnable on your machine</li>
-              <li>Docker Compose support available</li>
-              <li>Linux, macOS, or Windows 10 and newer</li>
-            </ul>
-            <p>
-              Install Docker from <a href="https://docs.docker.com/install/" target="_blank" rel="noreferrer">docs.docker.com</a>.
-            </p>
-          </div>
-
-          <div className="download-side-card">
-            <h3>After installation</h3>
-            <p>
-              Continue with the <a href="/docs/quick-start-guide/">Quick Start Guide</a> to create your first
-              adapter, dataset, chart, and dashboard.
-            </p>
-          </div>
-
-          <div className="download-side-card">
-            <h3>Need help?</h3>
-            <p>
-              Check the <a href="/docs/community-get-help/">Get Help</a> section to check our support channels.
-            </p>
-          </div>
-        </aside>
-      </div>
-
-      <div className="download-command-section">
-        <div className="download-command-header">
-          <span className="download-steps-eyebrow">Convenience Setup</span>
-          <h3>Start StreamPipes with a single shell command</h3>
-          <p>
-            These shortcuts create a local folder, download <code>docker-compose.yml</code> and
-            <code> .env</code>, and start the default Compose setup immediately.
-          </p>
-        </div>
-
-        <div className="download-command-grid">
-          <div className="download-command-card">
-            <h4>Nightly build (unreleased)</h4>
-            <p>
-              Tracks the current <code>dev</code> branch and is useful when you want the latest version.
-              Unreleased versions come without any guarantees and can include breaking changes.
-            </p>
-            <pre className="download-command-block">
-              <code>{`mkdir -p streampipes-nightly && cd streampipes-nightly \\
-  && curl -fsSLO https://raw.githubusercontent.com/apache/streampipes/dev/installer/compose/docker-compose.yml \\
-  && curl -fsSLO https://raw.githubusercontent.com/apache/streampipes/dev/installer/compose/.env \\
-  && docker compose up -d`}</code>
-            </pre>
-          </div>
-
-          <div className="download-command-card">
-            <h4>Latest release</h4>
-            <p>
-              Pinned to Apache StreamPipes <code>0.98.0</code>, which is the latest release version.
-              Includes the NATS-based setup and a pre-configured .env file which should be changed for production usage.
-            </p>
-            <pre className="download-command-block">
-              <code>{`mkdir -p streampipes-0.98.0 && cd streampipes-0.98.0 \\
-  && curl -fsSLO https://raw.githubusercontent.com/apache/streampipes/0.98.0/installer/compose/docker-compose.yml \\
-  && curl -fsSLO https://raw.githubusercontent.com/apache/streampipes/0.98.0/installer/compose/.env \\
-  && docker compose up -d`}</code>
-            </pre>
-          </div>
-        </div>
-      </div>
-    </PageSection>
-  </Layout>
-);
-
-export default Downloads;
+      </Container>
+    </Section>
+    <Section tone="light" bordered>
+      <Container>
+        <Bento>
+          <Card span={2} to="/docs/quick-start-guide/" title="After installation" link="Open the quickstart">Create a first adapter, store its data, build a chart and put it on a dashboard.</Card>
+          <Card span={2} to="/docs/configure-operate-deployment/" title="Production deployments" link="Deployment options">Kubernetes with the Helm chart, Kafka instead of NATS, extension services next to the machines.</Card>
+          <Card span={2} to="/docs/community-get-help/" title="Need help?" link="Support channels">GitHub Discussions, the user mailing list, and companies that offer support contracts.</Card>
+        </Bento>
+      </Container>
+    </Section>
+  </Layout>;
+}

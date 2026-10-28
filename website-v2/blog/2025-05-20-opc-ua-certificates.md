@@ -1,8 +1,8 @@
 ---
 title: "Secure OPC-UA Integration with Apache StreamPipes: A Comprehensive Guide"
-author: Dominik Riemer
-authorURL: "https://github.com/dominikriemer"
-authorImageURL: "/img/about/riemer.png"
+authors: [dominikriemer]
+image: /img/blog/2025-05-20/opc-ua-configuration.png
+tags: [tutorial]
 ---
 
 With the release of Apache StreamPipes 0.97.0, the OPC UA adapter now supports encrypted communication using

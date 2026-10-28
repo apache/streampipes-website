@@ -1,6 +1,7 @@
 ---
 id: use-dashboards
 title: Dashboards
+description: "Build operational dashboards in StreamPipes by combining saved charts, coordinating time ranges and linking dashboards to machines and assets."
 sidebar_label: 📊 Dashboards
 ---
 

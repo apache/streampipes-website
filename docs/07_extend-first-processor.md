@@ -1,6 +1,7 @@
 ---
 id: extend-first-processor
 title: Your first data processor
+description: "Start your first StreamPipes pipeline element service, implement the onEvent method and install the processor through the UI."
 sidebar_label: Your first data processor
 ---
 

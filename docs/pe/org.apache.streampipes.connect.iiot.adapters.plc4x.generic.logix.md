@@ -50,11 +50,16 @@ The polling interval requires a number in milliseconds, which represents the int
 PLC for new data. For instance, a polling interval of 1000 milliseconds will configure the adapter to send a request to
 the PLC every second.
 
+If a read is still running when the next poll is due, that poll is skipped. Read requests are bounded to five seconds;
+configure driver request timeouts below this bound. After a failure, retries back off from one second up to sixty seconds.
+Successful reads reset this backoff.
+
 ### Supported Transports
 
 The following transports are supported by this adapter:
 
 * tcp
+* test
 
 ### Transport Metadata
 
@@ -68,9 +73,15 @@ The following transports are supported by this adapter:
 
 **tcp**
 
-* keep-alive: Should keep-alive packets be sent? (BOOLEAN)
-* no-delay: Should packets be sent instantly or should we give the OS some time to aggregate data. (BOOLEAN)
-* default-timeout: Timeout after which a connection will be treated as disconnected. (INT)
+* connect-timeout-ms:  (INT)
+* read-timeout-ms:  (INT)
+* write-timeout-ms:  (INT)
+* no-delay:  (BOOLEAN)
+* keep-alive:  (BOOLEAN)
+* send-buffer-size:  (INT)
+* receive-buffer-size:  (INT)
+* local-address:  (STRING)
+* local-port:  (INT)
 
 ### Protocol Metadata
 
@@ -80,24 +91,55 @@ The following transports are supported by this adapter:
 
 #### Optional
 
-* communication-path: The communication path allows for connection routing across multiple backplanes. It uses a common format found in Logix controllers.
-It consists of pairs of values, each pair begins with either 1 (Backplane) or 2 (Ethernet), followed by a slot in the case of a backplane address,
-or if using Ethernet an ip address. e.g. [1,4,2,192.168.0.1,1,1] - Routes to the 4th slot in the first rack, which is a ethernet module, it then connects to the address 192.168.0.1, then finds the module in slot 1. (STRING)
-* backplane: Without using routing information the backplane defaults to 1. This is overridden if communicationPath is provided. (INT)
-* slot: The slot within the backplane the CPU is located. (INT)
 * big-endian: Configure if the connection should be set to transport data in Big-Endian format, or not. (BOOLEAN)
+* connection-serial-number: Connection serial number to use in Forward_Open. CIP wants this unique per connection, so the default of 0 means 'pick a random one per connection'. Set it explicitly only when the exchange has to be reproducible, e.g. in recorded tests. (INT)
 * force-unconnected-operation: Forces the driver to use unconnected requests. (BOOLEAN)
+* request-timeout-ms: Default timeout for all types of requests. (INT)
+* communication-path: The communication path allows for connection routing across multiple backplanes. It uses a common format found in Logix controllers.
+It consists of pairs of values, each pair begins with either 1 (Backplane) or 2 (Ethernet), followed by a slot in the case of a backplane address, or if using Ethernet an ip address. e.g. [1,4,2,192.168.0.1,1,1] - Routes to the 4th slot in the first rack, which is an Ethernet module, it then connects to the address 192.168.0.1, then finds the module in slot 1. (STRING)
 
 ### Tags
 
-The syntax to define tags is based on the PLC4X syntax, see https://plc4x.apache.org/users/protocols/s7.html.
+The syntax to define tags is based on the PLC4X syntax, see https://plc4x.apache.org/plc4x/latest/users/protocols/s7.html.
 Address Pattern:
 
 ```
-propertyName=%{Memory-Area}{start-address}:{Data-Type}[{array-size}]
+propertyName=%{Memory-Area}{start-address}[{start-index}..{end-index}]:{Data-Type}
 
 temperature=%I0.0:INT
 ```
+
+### Browsing tags
+
+Choose **Browse PLC tags** after configuring the connection, then load **Available tags** and select the readable tags.
+The browse query defaults to `*` for S7 and ADS, which browse all available items with this query.
+For OPC UA, it defaults to `ns=0;i=85` (the Objects folder). Children are loaded one level at a time
+as you expand folders, avoiding a recursive browse of the entire server. Enter a parent NodeId to browse its children,
+for example `ns=2;s=Demo.Industrial.CncMachine.RawData`, then select `cycleActive` from the results.
+A query for a leaf node returns its children, not the leaf itself. Earlier saved OPC UA queries using `*` are
+interpreted as the Objects folder. Include the server's endpoint path in **PLC Address**, for example
+`localhost:4840/milo`; the path is case-sensitive. Query syntax and returned information depend on the driver and PLC. Unsupported connections report an error; use **Enter tags manually** instead.
+Browsing waits up to ten seconds for the response and returns the connection to the shared cache afterwards.
+
+The tree preserves the hierarchy supplied by the driver. Only readable items with an address can be selected.
+S7 browsing can return memory areas and data blocks as byte addresses rather than symbolic, typed variables.
+Use manual entry when you need different offsets, datatypes, or custom event field names.
+
+Selected addresses are used unchanged for sampling and polling. Event field names start with `tag_`, followed by the
+address with punctuation replaced by underscores. Conflicting names require manual entry. Browsing is performed only
+while configuring the adapter; starting an adapter uses its saved selections without browsing again.
+
+### Upgrading existing adapters
+
+The version 3 migration keeps existing tags in the selected manual-entry option, preserving field names and addresses.
+
+The version 2 adapter migration updates saved PLC4X configuration parameter names and legacy array addresses for PLC4X 1.0.
+For example, `request-timeout` becomes `request-timeout-ms`, and `%DB42:28.0:BYTE[4]` becomes
+`%DB42:28.0[0..3]:BYTE`. A single index selects a scalar; a range selects a list.
+S7 connections now use the `s7` driver with the `cotp` transport. Rack and slot parameters use the `cotp.` prefix.
+Explicit configuration values are retained. Unspecified settings use PLC4X 1.0 defaults, including its certificate
+verification defaults. Review the [PLC4X migration guide](https://plc4x.apache.org/plc4x/latest/users/migrations/0.13.1-to-1.0.0/index.html)
+for protocol-specific changes before connecting to a device after an upgrade.
 
 ## Best Practices
 

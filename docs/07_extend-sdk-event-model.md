@@ -1,6 +1,7 @@
 ---
 id: extend-sdk-event-model
 title: "SDK Guide: Event Model"
+description: "Use the StreamPipes SDK event model to read, manipulate and add fields of runtime events in data processors and data sinks."
 sidebar_label: "SDK: Event Model"
 ---
 

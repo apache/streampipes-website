@@ -1,6 +1,7 @@
 ---
 id: configure-operate-general-settings
 title: General Settings
+description: "Configure instance-wide StreamPipes settings: platform name, public URL, self-service accounts, help links and terms of use."
 sidebar_label: General Settings
 ---
 

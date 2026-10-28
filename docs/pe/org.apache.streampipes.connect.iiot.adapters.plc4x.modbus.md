@@ -32,6 +32,9 @@ sidebar_label: PLC4X MODBUS
 
 ## Description
 
+This adapter is deprecated since StreamPipes 0.99.0 and is planned for removal after the 0.99.0 release.
+Use the Modbus TCP adapter based on the generic PLC4X implementation instead.
+
 The Modbus adapter allows to connect to a PLC using the Modbus specification.
 
 ***

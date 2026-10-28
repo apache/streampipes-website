@@ -1,6 +1,7 @@
 ---
 id: extend-cli
 title: StreamPipes CLI
+description: "Set up a StreamPipes development environment with the CLI to develop extensions such as adapters, processors and sinks or core features."
 sidebar_label: StreamPipes CLI
 ---
 

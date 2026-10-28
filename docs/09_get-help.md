@@ -1,6 +1,7 @@
 ---
 id: community-get-help
 title: Get Help
+description: "Get help with Apache StreamPipes: user mailing list, GitHub Discussions, bug reports, feature requests and commercial support options."
 sidebar_label: Get Help
 ---
 

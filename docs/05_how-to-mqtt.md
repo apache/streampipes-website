@@ -1,6 +1,7 @@
 ---
 id: how-to-mqtt
 title: Integrate MQTT data
+description: "How to connect StreamPipes to an MQTT broker: broker URL, authentication modes, TLS/SSL settings and keystore and truststore management."
 sidebar_label: Integrate MQTT data
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: use-assets
 title: Assets & Sites
+description: "Model plants, lines and machines as assets and sites in StreamPipes and link adapters, datasets, pipelines, charts and dashboards to real-world equipment."
 sidebar_label: 🧭 Assets & Sites
 ---
 

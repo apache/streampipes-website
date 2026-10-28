@@ -1,6 +1,7 @@
 ---
 id: community-contribute
 title: Contribute
+description: "How to contribute to Apache StreamPipes: code, documentation, testing and ideas, and where to get in touch with the community."
 sidebar_label: Contribute
 ---
 

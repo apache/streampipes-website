@@ -87,7 +87,7 @@ The processor forwards the input event only if the numerical comparison evaluate
 #### Example 1: Greater Than Filter
 Configuration:
 * Field: temperature
-* Operation: \>
+* Operation: >
 * Threshold Value: 25.8
 
 Output Events:

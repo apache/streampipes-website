@@ -1,8 +1,8 @@
 ---
 title: Moving to the Apache Incubator
-author: Dominik Riemer
-authorURL: "https://twitter.com/dominikjriemer"
-authorImageURL: "/img/riemer.png"
+authors: [dominikriemer]
+image: /img/blog/2019-11-25/2019-11_StreamPipes-v0.png
+tags: [community]
 ---
 
 **<div style={{float: 'left', paddingRight: '40px'}}>8 minutes to read</div>**

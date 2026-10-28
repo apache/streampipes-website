@@ -1,6 +1,7 @@
 ---
 id: extend-archetypes
 title: Maven Archetypes
+description: "Use Maven archetypes to scaffold your own StreamPipes data processors and data sinks and run them from your IDE."
 sidebar_label: Maven Archetypes
 ---
 

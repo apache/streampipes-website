@@ -1,6 +1,7 @@
 ---
 id: use-shortcuts
 title: Shortcuts
+description: "Keyboard shortcuts available in the StreamPipes user interface for the pipeline editor, chart editor, dashboards, tables and dialogs."
 sidebar_label: ⌨️ Shortcuts
 ---
 

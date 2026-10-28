@@ -1,7 +1,8 @@
 ---
 id: quick-start-guide
 title: Quick Start Guide
-sidebar_label: "🚀 Quick Start Guide"
+description: "Install Apache StreamPipes with Docker Compose and build your first workflow: connect a data source, persist a dataset, create a chart and add it to a dashboard."
+sidebar_label: "Quick Start Guide"
 ---
 
 import DownloadSection from '@site/src/components/download/DownloadSection.tsx';
@@ -12,6 +13,14 @@ import ScreenshotFigure from '@site/src/components/docs/ScreenshotFigure';
 import ScreenshotComparison from '@site/src/components/docs/ScreenshotComparison';
 
 This guide helps you get from a fresh installation to a first working result in StreamPipes.
+
+**What you will have in about ten minutes:** a running StreamPipes instance, one adapter delivering simulated machine data, a dataset that keeps its history, a chart on that dataset, and a dashboard that shows the chart. No external machine or broker is needed; the built-in machine data simulator provides the data.
+
+<ScreenshotFigure
+src="/img/2026/dashboard-create.png"
+alt="The dashboard you will build in this guide"
+title="The result: a dashboard built from a chart on persisted data"
+/>
 
 The guide begins with installation and then walks through one complete first-run flow in the product.
 

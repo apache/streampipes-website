@@ -1,6 +1,7 @@
 ---
 id: use-charts
 title: Charts
+description: "Create charts from persisted datasets in StreamPipes: define queries, filters and aggregations and choose time series, heatmap, gauge, table and other visualizations."
 sidebar_label: 📈 Charts
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: how-to-custom-adapter
 title: "Write a custom adapter"
+description: "Tutorial: implement a custom StreamPipes adapter to connect data sources that are not covered by the built-in connectors."
 sidebar_label: "Write a custom adapter"
 ---
 

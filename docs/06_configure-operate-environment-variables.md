@@ -1,6 +1,7 @@
 ---
 id: configure-operate-environment-variables
 title: Environment Variables
+description: "Reference of StreamPipes environment variables for instance identity, storage, message transport, security and runtime tuning of core and extension services."
 sidebar_label: Environment Variables
 ---
 

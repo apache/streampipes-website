@@ -1,6 +1,7 @@
 ---
 id: user-guide-introduction
 title: Apache StreamPipes Documentation
+description: "Entry point to the Apache StreamPipes documentation: what the open-source industrial IoT data platform does, how the docs are organized, and where to start."
 sidebar_label: Overview
 ---
 
@@ -15,6 +16,10 @@ For developers, StreamPipes offers interfaces to extend the software with custom
 
 This page is the entry point to the documentation.
 It helps you understand what StreamPipes does, what the documentation covers, and where to start depending on your goal.
+
+:::note Which version is this?
+You are reading the documentation for the upcoming release ("Next"), which you can try with the nightly build. If you installed the latest release, switch to the matching version with the version dropdown in the sidebar, or go directly to the [0.98.0 documentation](/docs/0.98.0/user-guide-introduction/).
+:::
 
 ## The most important facts
 

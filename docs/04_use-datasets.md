@@ -1,6 +1,7 @@
 ---
 id: use-datasets
 title: Datasets
+description: "Work with datasets in StreamPipes: persist live streams as historical data, inspect and export events, import CSV files and configure retention and archival."
 sidebar_label: 🗃️ Datasets
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: extend-sdk-stream-requirements
 title: "SDK Guide: Stream Requirements"
+description: "Use stream requirements in the StreamPipes SDK to declare which event fields a data processor or sink needs from an incoming stream."
 sidebar_label: "SDK: Stream Requirements"
 ---
 

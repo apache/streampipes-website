@@ -34,6 +34,7 @@ sidebar_label: Kafka Publisher
 The Kafka Publisher sink enables StreamPipes to publish events to Apache Kafka topics. It provides:
 * Real-time event publishing to Kafka topics
 * Support for various security configurations
+* Support for multiple brokers
 * Automatic topic creation if not exists
 * Configurable message handling
 * JSON message serialization
@@ -48,8 +49,7 @@ This sink accepts any incoming event type and serializes it to JSON format befor
 ## Configuration
 
 ### Broker Settings
-* **Broker Hostname**: The hostname or IP address of the Kafka broker (e.g., test.server.com). Do not include the protocol.
-* **Broker Port**: The port number of the Kafka broker (default: 9092)
+* **Kafka Brokers**: A comma-separated list of Kafka brokers as host:port (e.g., broker1:9092,broker2:9092).
 
 ### Security Settings
 * **Security Protocol**: Choose the security protocol for broker communication:
@@ -68,6 +68,12 @@ This sink accepts any incoming event type and serializes it to JSON format befor
 
 ### Topic Settings
 * **Topic**: The Kafka topic where events will be published. If the topic doesn't exist, it will be created automatically with default settings.
+
+### Message Key
+* **No key**: Records are published without a key
+* **Static value**: A fixed text is attached to every record
+* **Event field**: The value of a selected event field is used, primitive fields only
+* **Expression**: Text combined with field placeholders in the form `#fieldName#`
 
 ### Advanced Settings
 * **Additional Configurations**: Add custom Kafka producer configurations in key=value format. Each configuration should be on a new line. For example:
