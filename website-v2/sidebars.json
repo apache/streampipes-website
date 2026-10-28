@@ -69,6 +69,7 @@
       "label": "Configure & Operate",
       "items": [
         "configure-operate-deployment",
+        "configure-operate-tls",
         "configure-operate-environment-variables",
         "configure-operate-general-settings",
         "configure-operate-extensions",
