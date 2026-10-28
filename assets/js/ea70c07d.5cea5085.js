@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[18732],{76387(e){e.exports=JSON.parse('{"metadata":{"permalink":"/blog/page/2","page":2,"postsPerPage":13,"totalPages":3,"totalCount":37,"previousPage":"/blog","nextPage":"/blog/page/3","blogDescription":"Release notes, how-tos and news from the Apache StreamPipes project.","blogTitle":"Blog"}}')}}]);

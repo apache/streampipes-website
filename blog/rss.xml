@@ -1,13 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>Apache StreamPipes Blog</title>
+        <title>Apache StreamPipes blog</title>
         <link>https://streampipes.apache.org/blog/</link>
-        <description>Apache StreamPipes Blog</description>
-        <lastBuildDate>Sat, 21 Mar 2026 00:00:00 GMT</lastBuildDate>
+        <description>Release notes, how-tos and news from the Apache StreamPipes project.</description>
+        <lastBuildDate>Fri, 30 Oct 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Assets are the backbone of StreamPipes]]></title>
+            <link>https://streampipes.apache.org/blog/2026/10/30/assets-as-the-backbone/</link>
+            <guid>https://streampipes.apache.org/blog/2026/10/30/assets-as-the-backbone/</guid>
+            <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Why StreamPipes organises adapters, datasets, pipelines, charts and dashboards around machines, lines and plants, and how to model your own assets.]]></description>
+            <content:encoded><![CDATA[<p>If you have used StreamPipes for a while, you will have noticed that the number of things in it grows quickly. One machine easily ends up with an adapter, a persisted dataset, two or three pipelines, a handful of charts and a dashboard. Multiply that by a line, and then by a plant, and the lists in the UI stop being useful. Everything is there, but you have to remember what it is called.</p>
+<p>Assets are our answer to that. They let you describe the plant the way people on the floor think about it, as plants, lines, machines and components, and attach all of those technical resources to the object they belong to. Over the past year most of the UI has been rebuilt around this idea, and in this post I want to explain what that means in practice.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-idea-in-one-sentence">The idea in one sentence<a href="https://streampipes.apache.org/blog/2026/10/30/assets-as-the-backbone/#the-idea-in-one-sentence" class="hash-link" aria-label="Direct link to The idea in one sentence" title="Direct link to The idea in one sentence" translate="no">​</a></h2>
+<p>An asset is a real-world thing: a plant, a line, a machine, a station, a subsystem. Assets can be nested, so a plant contains lines and a line contains machines. Each asset can be linked to the StreamPipes resources that belong to it. Once those links exist, you can start from the machine and find everything around it, instead of starting from a list of adapters and working out which one is which.</p>
+<p>Sites add a second dimension. A site is shared location context, such as a factory, a building or a hall, with an optional area. You define a site once and assign it to as many assets as you like. An asset can also carry an exact position, which is what puts it on the map.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="start-on-the-home-screen">Start on the home screen<a href="https://streampipes.apache.org/blog/2026/10/30/assets-as-the-backbone/#start-on-the-home-screen" class="hash-link" aria-label="Direct link to Start on the home screen" title="Direct link to Start on the home screen" translate="no">​</a></h2>
+<p>The home screen is the first place where this shows. Instead of a list of modules, it opens with your assets. In table mode every row is one asset with its type, location and a row of icons for the linked resources, and each icon takes you straight to that adapter, pipeline, chart or dashboard. Switch to map mode and the same assets appear as markers on a map, which is the view we see most often on large screens in control rooms.</p>
+<p><img decoding="async" loading="lazy" alt="Home screen with assets on a map" src="https://streampipes.apache.org/assets/images/home-map-5360635df00313b665f59597b182d82f.png" width="800" height="444" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="one-page-per-machine">One page per machine<a href="https://streampipes.apache.org/blog/2026/10/30/assets-as-the-backbone/#one-page-per-machine" class="hash-link" aria-label="Direct link to One page per machine" title="Direct link to One page per machine" translate="no">​</a></h2>
+<p>Open an asset and you get a detail page: identifier, type, labels, the site and area it belongs to, a small map if a position is set, and the full list of linked resources. The demo machine below has 29 of them, three adapters, their datasets, the pipelines that persist and process the data, and the charts and dashboards built on top. This is the page we point people to when they ask "where is the data for this machine".</p>
+<p><img decoding="async" loading="lazy" alt="Asset detail view with linked resources" src="https://streampipes.apache.org/assets/images/asset-view-660b2ab47a847600846a602c011370a2.png" width="800" height="444" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="asset-context-everywhere-else">Asset context everywhere else<a href="https://streampipes.apache.org/blog/2026/10/30/assets-as-the-backbone/#asset-context-everywhere-else" class="hash-link" aria-label="Direct link to Asset context everywhere else" title="Direct link to Asset context everywhere else" translate="no">​</a></h2>
+<p>The part that took the longest, and that I think matters most, is that assets are not confined to their own module. Every resource list in StreamPipes, adapters, pipelines, datasets, charts and dashboards, shows the asset context of each row and can be filtered by it. The filter button in the top right lets you narrow a list by asset, by asset type, by site and by label, and the filter is kept while you edit resources.</p>
+<p>So an operator responsible for the Hamburg plant can set the filter and see only the adapters, pipelines and dashboards for that plant. A maintenance team interested in everything tagged <code>critical</code> can do the same with a label.</p>
+<p><img decoding="async" loading="lazy" alt="Asset filter on the adapter list" src="https://streampipes.apache.org/assets/images/asset-filter-b21fc80277b9352c6723239f481c0644.png" width="800" height="444" class="img_ev3q"></p>
+<p>New resources pick up the context automatically where it makes sense. When a pipeline persists a stream into a dataset, that dataset is assigned to the same asset as the pipeline.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="modelling-your-own-plant">Modelling your own plant<a href="https://streampipes.apache.org/blog/2026/10/30/assets-as-the-backbone/#modelling-your-own-plant" class="hash-link" aria-label="Direct link to Modelling your own plant" title="Direct link to Modelling your own plant" translate="no">​</a></h2>
+<p>The asset editor shows the hierarchy on the left and the details of the selected node on the right. A few things we learned while building and using it:</p>
+<ul>
+<li class=""><strong>Start with the root that people navigate from.</strong> For some teams that is the plant, for others a single line. The root does not have to be the most detailed object, it is the entry point.</li>
+<li class=""><strong>Mirror how people talk about the equipment.</strong> If the packaging line is "filler, capper, labeler" in daily conversation, those are the sub-assets. If maintenance thinks in subsystems, model subsystems. The tree can be reordered and nodes can be moved to another parent later, so the first version does not have to be final.</li>
+<li class=""><strong>Use labels for the lightweight stuff and custom fields for the structured stuff.</strong> <code>critical</code> or <code>testbench</code> are labels. Vendor, serial number and commissioning date are custom fields. Custom fields work on sub-assets too, so a machine and its components can carry different sets.</li>
+<li class=""><strong>Assign the site at the root, the exact position only where it is needed.</strong> Not every pump needs a map pin. The ones that do can have one without forcing the same detail on everything else.</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Asset editor with hierarchy, basics and labels" src="https://streampipes.apache.org/assets/images/asset-edit-basics-190b09af49a9f66311ff0cdc18249918.webp" width="1440" height="735" class="img_ev3q"></p>
+<p>Linking resources is the last step, and the one most often forgotten. The editor lets you add links one at a time or open a dialog to attach several at once. Our rule of thumb is to model the hierarchy first, assign the site second and link resources third. The structure should exist before the technical objects are hung onto it.</p>
+<p><img decoding="async" loading="lazy" alt="Site assignment and asset links in the editor" src="https://streampipes.apache.org/assets/images/asset-edit-links-8c704d216a2f06a24f22ad31be810f2a.webp" width="1440" height="747" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="permissions-follow-the-model">Permissions follow the model<a href="https://streampipes.apache.org/blog/2026/10/30/assets-as-the-backbone/#permissions-follow-the-model" class="hash-link" aria-label="Direct link to Permissions follow the model" title="Direct link to Permissions follow the model" translate="no">​</a></h2>
+<p>Assets have their own permissions, so a shared installation can give one team edit rights on their line and read access on the rest. Combined with the filters, this is how we run installations where several groups share one StreamPipes instance without seeing each other's clutter.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="where-this-is-heading">Where this is heading<a href="https://streampipes.apache.org/blog/2026/10/30/assets-as-the-backbone/#where-this-is-heading" class="hash-link" aria-label="Direct link to Where this is heading" title="Direct link to Where this is heading" translate="no">​</a></h2>
+<p>Most of what is shown here is in the development version of StreamPipes and will ship with the next release; parts of it are already in 0.98.0. The direction is clear: assets are becoming the way you navigate the platform, and new features are designed with that context in mind from the start. If you run StreamPipes today, it is worth taking an afternoon to model your plant. The benefit grows with every resource you add afterwards.</p>
+<p>The <a class="" href="https://streampipes.apache.org/docs/use-assets/">assets and sites documentation</a> covers the editor step by step. If you have ideas for what asset context should do next, the <a class="" href="https://streampipes.apache.org/community/mailing-lists/">mailing lists</a> and <a href="https://github.com/apache/streampipes/discussions" target="_blank" rel="noopener noreferrer" class="">GitHub Discussions</a> are the right places.</p>]]></content:encoded>
+            <category>tutorial</category>
+        </item>
+        <item>
+            <title><![CDATA[When to use Apache StreamPipes, and when Node-RED is the better fit]]></title>
+            <link>https://streampipes.apache.org/blog/2026/07/14/streampipes-vs-node-red/</link>
+            <guid>https://streampipes.apache.org/blog/2026/07/14/streampipes-vs-node-red/</guid>
+            <pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Node-RED and StreamPipes both have a flow editor, and that is roughly where the similarity ends. Where each one is strong, why StreamPipes is the better fit for professional machine data integration, and when to use which.]]></description>
+            <content:encoded><![CDATA[<p>A question we get a lot: "We already use Node-RED, why would we need StreamPipes?" It is a fair question. Both tools have a browser-based editor where you connect boxes into a flow, and if that is all you have seen of either, they look like the same thing. They are not, and this post tries to explain where the difference is, so you can pick the right one for the job, or use both.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-node-red-is-built-for">What Node-RED is built for<a href="https://streampipes.apache.org/blog/2026/07/14/streampipes-vs-node-red/#what-node-red-is-built-for" class="hash-link" aria-label="Direct link to What Node-RED is built for" title="Direct link to What Node-RED is built for" translate="no">​</a></h2>
+<p>Node-RED is a general-purpose, flow-based programming tool. A flow runs inside a single Node.js process, and the node library covers almost everything: HTTP, MQTT, serial ports, databases, cloud services, and thousands of community nodes. It is excellent for wiring devices and services together, for prototyping, for small automations at the edge, and for home and lab setups. A single developer can build something useful in an afternoon.</p>
+<p>What Node-RED does not try to be is a data platform. There is no built-in time-series storage, no idea of a dataset with a retention rule, no user and role management beyond basic authentication, and no catalog of typed streams. Dashboards are an add-on. Once you run many flows across several sites, you end up building the operations side yourself.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-apache-streampipes-is-built-for">What Apache StreamPipes is built for<a href="https://streampipes.apache.org/blog/2026/07/14/streampipes-vs-node-red/#what-apache-streampipes-is-built-for" class="hash-link" aria-label="Direct link to What Apache StreamPipes is built for" title="Direct link to What Apache StreamPipes is built for" translate="no">​</a></h2>
+<p>StreamPipes is an industrial IoT data platform. Its unit of work is a typed data stream: an adapter connects a source such as OPC UA, Siemens S7, Modbus or MQTT, describes the fields, units and metadata once, and every pipeline, chart and dashboard builds on that description. Pipelines are built from processors and sinks that are validated against the stream schema, run as separate services, and are monitored by the core. Datasets keep history with retention rules and export. Assets and sites give streams their place in the plant. Users, roles, groups, permissions, single sign-on and an audit log are part of the platform.</p>
+<p>That is the setting StreamPipes is made for: several people, several machines, data that has to be kept and governed, and one platform that operators, engineers and developers all use.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="where-the-difference-is-biggest-getting-data-out-of-machines">Where the difference is biggest: getting data out of machines<a href="https://streampipes.apache.org/blog/2026/07/14/streampipes-vs-node-red/#where-the-difference-is-biggest-getting-data-out-of-machines" class="hash-link" aria-label="Direct link to Where the difference is biggest: getting data out of machines" title="Direct link to Where the difference is biggest: getting data out of machines" translate="no">​</a></h2>
+<p>This is the point most comparisons gloss over, so it deserves its own section. Both tools can talk to a PLC. The experience of doing so is very different.</p>
+<p>In Node-RED, industrial connectivity comes from community nodes. The OPC UA nodes, for example, expect you to know the node ids you want to read, to type them into a node configuration or inject them from a function node, and to deal with security settings, reconnects and data types in the flow yourself. That works well for a handful of tags on a server you know. It becomes hard to maintain once there is a server with thousands of nodes, several machines from different vendors, certificates to manage, and colleagues who have to understand the flow later.</p>
+<p>StreamPipes treats machine connectivity as a product feature, not as a library. The OPC UA adapter opens the server's node tree in a browser, lets you pick the variables you want, and shows live values before you commit. You choose pull or subscription mode per adapter, pick the security mode and policy, and either upload a client certificate or let StreamPipes generate one. Certificates are managed in one place for all adapters, and X.509 user authentication is supported. Complex types in extension objects are decoded into flat fields. A second adapter subscribes to OPC UA alarms and conditions and turns them into a stream of events. All of that is configured in a wizard, with the schema, units and metadata of each field refined in the next step, and saved as an adapter that colleagues can inspect, copy and restart.</p>
+<p>The same applies beyond OPC UA. StreamPipes ships adapters for Siemens S7, Modbus TCP, RTU and ASCII, Beckhoff TwinCAT ADS, Allen-Bradley and Logix CIP, EtherNet/IP, CANopen and generic CAN, IEC 60870-5-104, Mitsubishi SLMP, Schneider UMAS, KNXnet/IP, OI4 and the Siemens WinCC alarm archive, next to the usual MQTT, Kafka, NATS, HTTP, file and database sources. Every adapter follows the same pattern: a guided configuration, a live preview of the incoming events, a schema step where you fix field names, types and measurement units and can run a short transformation script against a sample, and then monitoring of throughput, errors and logs once it runs. When a machine changes, you edit the adapter and the change is validated against the pipelines that depend on it.</p>
+<p>That is what we mean by professional-grade machine data integration. It is not that Node-RED cannot read a PLC. It is that in StreamPipes the hard parts are done once, in the platform, and every machine after the first one benefits.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="where-each-one-wins">Where each one wins<a href="https://streampipes.apache.org/blog/2026/07/14/streampipes-vs-node-red/#where-each-one-wins" class="hash-link" aria-label="Direct link to Where each one wins" title="Direct link to Where each one wins" translate="no">​</a></h2>
+<table><thead><tr><th>Question</th><th>Node-RED</th><th>Apache StreamPipes</th></tr></thead><tbody><tr><td>Wire a device to a service in an afternoon</td><td>Yes, with the broadest node library available</td><td>Yes, for anything with an adapter; the SDK covers the rest</td></tr><tr><td>Connect industrial machines</td><td>Community nodes, node ids and security handled in the flow</td><td>Guided adapters with OPC UA node browser, certificate management, PLC protocols, live preview and schema editor</td></tr><tr><td>Keep and query months of machine history</td><td>Not built in</td><td>Datasets with retention, export and charts</td></tr><tr><td>Typed streams with units and metadata</td><td>Per flow, by convention</td><td>Core concept, shared by all features</td></tr><tr><td>Dashboards for operators</td><td>Via the dashboard add-on</td><td>Built in, with assets and permissions</td></tr><tr><td>Users, roles, SSO, audit log</td><td>Basic</td><td>Built in</td></tr><tr><td>Run processing next to the machines, manage centrally</td><td>Multiple independent instances</td><td>Extension services in OT, one core in IT</td></tr><tr><td>Custom logic</td><td>JavaScript function nodes</td><td>Java or Python Functions, SDK for reusable elements</td></tr><tr><td>Operating model</td><td>One process per instance</td><td>Core, broker and extension services on Docker or Kubernetes</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="using-both">Using both<a href="https://streampipes.apache.org/blog/2026/07/14/streampipes-vs-node-red/#using-both" class="hash-link" aria-label="Direct link to Using both" title="Direct link to Using both" translate="no">​</a></h2>
+<p>The two get along fine. Node-RED can act as a bridge for a device StreamPipes has no adapter for, publishing to MQTT, where a StreamPipes adapter picks it up. In the other direction, StreamPipes can publish derived values to a broker that Node-RED flows react to. If you have Node-RED flows that work, keep them.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="summary">Summary<a href="https://streampipes.apache.org/blog/2026/07/14/streampipes-vs-node-red/#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary" translate="no">​</a></h2>
+<p>Use Node-RED for integrations and automations where the flow is the whole product and one process is enough. Use StreamPipes when the sources are machines and the data has to become something a team shares: connected through adapters that handle the protocols, certificates and schemas properly, kept with history, shown on dashboards and governed with access control. The <a class="" href="https://streampipes.apache.org/integrations/">integrations catalog</a> lists every adapter, and the <a class="" href="https://streampipes.apache.org/docs/quick-start-guide/">quickstart</a> shows the StreamPipes side in about ten minutes.</p>]]></content:encoded>
+            <category>comparison</category>
+        </item>
         <item>
             <title><![CDATA[StreamPipes on Windows with Podman]]></title>
             <link>https://streampipes.apache.org/blog/2026/03/21/_streampipes-with-windows-and-podman/</link>
@@ -106,6 +173,7 @@ Here is how the docker-compose.yml should look loke</p>
 <img src="https://streampipes.apache.org/img/blog/2026-03-21/podman-running.png" alt="Running">
 <p>Congratulations, now we can start to use the strongpoints of Podman which enable us in a fast and terminal free way to make backups of our projects or scale them further with Kubernetes.</p>
 <p>Happy StreamPiping on Windows with Podman Desktop</p>]]></content:encoded>
+            <category>tutorial</category>
         </item>
         <item>
             <title><![CDATA[Persistent State for StreamPipes Functions]]></title>
@@ -202,6 +270,28 @@ No additional infrastructure required.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="conclusion--feedback">Conclusion &amp; Feedback<a href="https://streampipes.apache.org/blog/2026/02/23/_streampipes-functions/#conclusion--feedback" class="hash-link" aria-label="Direct link to Conclusion &amp; Feedback" title="Direct link to Conclusion &amp; Feedback" translate="no">​</a></h2>
 <p>Functions and state persistence are currently available in <strong>developer preview</strong>, and the API may evolve.</p>
 <p>We are open to feedback from developers, if you try out stateful functions, let us know your thoughts and suggestions.</p>]]></content:encoded>
+            <category>tutorial</category>
+        </item>
+        <item>
+            <title><![CDATA[Apache StreamPipes compared with Telegraf, InfluxDB and Grafana]]></title>
+            <link>https://streampipes.apache.org/blog/2026/01/20/streampipes-vs-telegraf-influxdb-grafana/</link>
+            <guid>https://streampipes.apache.org/blog/2026/01/20/streampipes-vs-telegraf-influxdb-grafana/</guid>
+            <pubDate>Tue, 20 Jan 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Telegraf, InfluxDB and Grafana are a well-worn path for collecting and charting machine data. Where that path ends, and how StreamPipes relates to it.]]></description>
+            <content:encoded><![CDATA[<p>A lot of teams start with the same three tools: Telegraf collects metrics, InfluxDB stores them, Grafana charts them. We used them ourselves before StreamPipes existed, and they are still a good choice for what they do. This post is about what the stack covers, what you tend to build around it over time, and where StreamPipes fits in, including the setup where StreamPipes writes into the same InfluxDB.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-the-stack-does-well">What the stack does well<a href="https://streampipes.apache.org/blog/2026/01/20/streampipes-vs-telegraf-influxdb-grafana/#what-the-stack-does-well" class="hash-link" aria-label="Direct link to What the stack does well" title="Direct link to What the stack does well" translate="no">​</a></h2>
+<p>Telegraf has input plugins for OPC UA, Modbus, MQTT, SNMP and hundreds of other sources, and output plugins for InfluxDB and many other databases. InfluxDB is a time-series database with retention policies and a query language built for time-based analysis. Grafana is the standard for charting time-series data, with alerting and a large ecosystem of data sources and panels. If the task is "collect these metrics and chart them", the three tools do it with little effort, and all of them are open source.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-you-build-around-it">What you build around it<a href="https://streampipes.apache.org/blog/2026/01/20/streampipes-vs-telegraf-influxdb-grafana/#what-you-build-around-it" class="hash-link" aria-label="Direct link to What you build around it" title="Direct link to What you build around it" translate="no">​</a></h2>
+<p>The stack has no shared model of what a stream is. Field names, units and types are conventions in Telegraf configuration files, repeated per source. There is no event preview while configuring a source, no catalog of streams, and no place where a line or machine is modelled so that its data can be found from the asset. Processing is limited to Telegraf's processor plugins and database-side queries; reacting to a live event, for example detecting a trend and notifying a team, means another component such as Kapacitor, Grafana alert rules or custom code. Users and permissions exist in Grafana, not across the pipeline. Extending the stack means writing Telegraf plugins in Go and deploying new agents.</p>
+<p>None of this is a flaw. The stack is a set of focused tools, and teams with enough engineering time assemble them into a platform. The point is that the assembly is yours to do and to maintain.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-streampipes-adds">What StreamPipes adds<a href="https://streampipes.apache.org/blog/2026/01/20/streampipes-vs-telegraf-influxdb-grafana/#what-streampipes-adds" class="hash-link" aria-label="Direct link to What StreamPipes adds" title="Direct link to What StreamPipes adds" translate="no">​</a></h2>
+<p>StreamPipes is that platform, already assembled. Adapters connect sources with a guided setup that shows incoming events and lets you set names, units and metadata once. The resulting typed streams drive pipelines that filter, enrich, detect and route in real time, with processors and sinks installed at runtime and validated against the schema. Datasets keep history with retention and export. Charts and dashboards are built on datasets, and assets and sites make them discoverable per machine. Roles, groups, permissions, single sign-on and an audit log cover the whole platform. Python and Java clients and an SDK extend it.</p>
+<p>The storage underneath is a time-series database, and one of the included sinks writes to InfluxDB. Grafana can keep charting the data it already has, while StreamPipes handles connectivity, processing, context and history.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="side-by-side">Side by side<a href="https://streampipes.apache.org/blog/2026/01/20/streampipes-vs-telegraf-influxdb-grafana/#side-by-side" class="hash-link" aria-label="Direct link to Side by side" title="Direct link to Side by side" translate="no">​</a></h2>
+<table><thead><tr><th>Topic</th><th>Telegraf, InfluxDB, Grafana</th><th>Apache StreamPipes</th></tr></thead><tbody><tr><td>Connect a source</td><td>Telegraf input plugin, configured in files</td><td>Adapter with guided setup and event preview</td></tr><tr><td>Schema, units, metadata</td><td>Conventions per configuration</td><td>Typed streams, set once, shared by all features</td></tr><tr><td>Real-time processing</td><td>Processor plugins, external alerting</td><td>Pipelines with processors and sinks, Functions</td></tr><tr><td>History</td><td>InfluxDB retention policies</td><td>Datasets with retention, archival and export</td></tr><tr><td>Visualization</td><td>Grafana</td><td>Built-in charts and dashboards; Grafana via InfluxDB sink</td></tr><tr><td>Asset context</td><td>Not modelled</td><td>Assets and sites</td></tr><tr><td>Access control and audit</td><td>Grafana users and teams</td><td>Platform-wide roles, groups, SSO, audit log</td></tr><tr><td>Extensibility</td><td>Go plugins</td><td>SDK for adapters, processors and sinks; Java and Python Functions</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="choosing">Choosing<a href="https://streampipes.apache.org/blog/2026/01/20/streampipes-vs-telegraf-influxdb-grafana/#choosing" class="hash-link" aria-label="Direct link to Choosing" title="Direct link to Choosing" translate="no">​</a></h2>
+<p>Keep the stack if what you need is metrics and charts, your team is happy assembling tools, and Grafana is already the house standard. Use StreamPipes when the sources are industrial, when several people need a shared and governed view of the data, and when real-time processing and history should come out of one platform. The two meet at InfluxDB: StreamPipes can feed it, and Grafana can read it. The <a class="" href="https://streampipes.apache.org/docs/quick-start-guide/">quickstart</a> takes about ten minutes.</p>]]></content:encoded>
+            <category>comparison</category>
         </item>
         <item>
             <title><![CDATA[Apache StreamPipes release 0.98.0]]></title>
@@ -363,6 +453,27 @@ experience</strong>, while continuing the architectural cleanup and modernizatio
 <p>We would like to thank all contributors and community members who made this release possible.<br>
 <!-- -->As always, we welcome your feedback—join the discussion on <a href="https://github.com/apache/streampipes/discussions" target="_blank" rel="noopener noreferrer" class="">GitHub</a>
 or the <a href="mailto:dev@streampipes.apache.org" target="_blank" rel="noopener noreferrer" class="">mailing list</a>, and help shape the future of StreamPipes!</p>]]></content:encoded>
+            <category>release</category>
+        </item>
+        <item>
+            <title><![CDATA[Apache StreamPipes and ThingsBoard: device platform or data platform?]]></title>
+            <link>https://streampipes.apache.org/blog/2025/09/16/streampipes-vs-thingsboard/</link>
+            <guid>https://streampipes.apache.org/blog/2025/09/16/streampipes-vs-thingsboard/</guid>
+            <pubDate>Tue, 16 Sep 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[ThingsBoard starts from the device, StreamPipes starts from the data. That difference explains most of what each one does well.]]></description>
+            <content:encoded><![CDATA[<p>ThingsBoard comes up in almost every evaluation we hear about, and it deserves to. It is a mature open-source IoT platform with dashboards, rule processing and a plugin model, which on paper sounds like StreamPipes. The difference is the question each tool starts from. ThingsBoard asks: which devices do I have, and what are they reporting? StreamPipes asks: what data is coming from my machines, and what should happen with it? Most of the differences below follow from that.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="thingsboard-in-short">ThingsBoard in short<a href="https://streampipes.apache.org/blog/2025/09/16/streampipes-vs-thingsboard/#thingsboard-in-short" class="hash-link" aria-label="Direct link to ThingsBoard in short" title="Direct link to ThingsBoard in short" translate="no">​</a></h2>
+<p>ThingsBoard is a device management and telemetry platform. Devices connect over MQTT, CoAP, HTTP or LwM2M, are provisioned and grouped, and send telemetry and attributes. Rule chains react to incoming data with filters, enrichment and actions. Dashboards are built from widgets bound to device telemetry, and a multi-tenant model with customers and users is part of the core. The community edition is open source; some features such as white-labeling, advanced rule nodes and integrations are reserved for the professional edition.</p>
+<p>It fits well when you own a fleet of devices that speak IP protocols, when provisioning and device state are what you manage, and when you need dashboards separated by tenant for different customers.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="streampipes-in-short">StreamPipes in short<a href="https://streampipes.apache.org/blog/2025/09/16/streampipes-vs-thingsboard/#streampipes-in-short" class="hash-link" aria-label="Direct link to StreamPipes in short" title="Direct link to StreamPipes in short" translate="no">​</a></h2>
+<p>StreamPipes is an industrial data platform under the Apache Software Foundation. It connects to industrial systems with adapters for OPC UA, Siemens S7, Modbus, PLC4X-based protocols, MQTT, Kafka and more, including an OPC UA node browser and support for OPC UA alarms and events. Every source becomes a typed data stream. Pipelines process streams in real time with validated processors and sinks. Datasets keep history with retention and export. Charts and dashboards are built on datasets, and assets and sites organize everything by plant, line and machine. Users, roles, groups, permissions, single sign-on and an audit log are included, and everything is Apache licensed with no separate edition.</p>
+<p>It fits well when the sources are machines and controllers rather than devices you provision yourself, and when the goal is a data foundation that operators, engineers and developers share.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="side-by-side">Side by side<a href="https://streampipes.apache.org/blog/2025/09/16/streampipes-vs-thingsboard/#side-by-side" class="hash-link" aria-label="Direct link to Side by side" title="Direct link to Side by side" translate="no">​</a></h2>
+<table><thead><tr><th>Topic</th><th>ThingsBoard</th><th>Apache StreamPipes</th></tr></thead><tbody><tr><td>Primary object</td><td>Device with telemetry and attributes</td><td>Typed data stream from an adapter</td></tr><tr><td>Industrial protocols</td><td>Gateway with OPC UA, Modbus and others</td><td>Native adapters incl. OPC UA browser, S7, Modbus, PLC4X family</td></tr><tr><td>Processing</td><td>Rule chains</td><td>Pipelines with validated processors and sinks, plus Functions</td></tr><tr><td>History</td><td>Telemetry storage per device</td><td>Datasets with retention, archival and export</td></tr><tr><td>Context model</td><td>Devices, assets, customers, tenants</td><td>Assets and sites linked to streams, datasets, dashboards</td></tr><tr><td>Multi-tenancy</td><td>Yes, core concept</td><td>No; one instance per organization</td></tr><tr><td>Licensing</td><td>Community edition open source, professional edition commercial</td><td>Fully Apache licensed</td></tr><tr><td>Extensibility</td><td>Custom rule nodes, widgets, integrations</td><td>SDK for adapters, processors, sinks; Java and Python Functions; UI modules</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="choosing">Choosing<a href="https://streampipes.apache.org/blog/2025/09/16/streampipes-vs-thingsboard/#choosing" class="hash-link" aria-label="Direct link to Choosing" title="Direct link to Choosing" translate="no">​</a></h2>
+<p>If you manage many devices and need views separated by customer, ThingsBoard is built for exactly that, and the professional edition adds what larger deployments need. If your data comes from machines and controllers, if you want processing, history and dashboards on typed streams, and if you want all of it under one open-source license with no feature tiers, start with StreamPipes.</p>
+<p>The two can also run side by side: a ThingsBoard gateway can forward telemetry to MQTT, and StreamPipes subscribes to it from there. The <a class="" href="https://streampipes.apache.org/docs/quick-start-guide/">quickstart</a> is the fastest way to see the StreamPipes side.</p>]]></content:encoded>
+            <category>comparison</category>
         </item>
         <item>
             <title><![CDATA[From Sensor to Insight - Rapid IIoT Integration for IO-Link Devices with Apache StreamPipes]]></title>
@@ -451,6 +562,7 @@ You can edit the event schema to apply scaling and remove unused fields.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="conclusion">Conclusion<a href="https://streampipes.apache.org/blog/2025/06/11/oi4-adapter/#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion" translate="no">​</a></h2>
 <p>Apache StreamPipes and IO-Link together offer a highly accessible yet powerful IIoT solution.
 From a simple dashboard setup to complex, multi-sensor condition monitoring pipelines, this integration enables IT teams to drive real-time insights from machine data—without needing a background in industrial automation.</p>]]></content:encoded>
+            <category>tutorial</category>
         </item>
         <item>
             <title><![CDATA[Secure OPC-UA Integration with Apache StreamPipes: A Comprehensive Guide]]></title>
@@ -542,6 +654,7 @@ We'll move the server certificate from the <code>rejected</code> folder to the <
 <p>You'll see the beautiful tree view where you can navigate through all OPC-UA nodes.</p>
 <p>Now you can select the nodes you want to use in your adapter.</p>
 <p>That's it! You've successfully configured the OPC-UA adapter to use encrypted communication with self-signed certificates.</p>]]></content:encoded>
+            <category>tutorial</category>
         </item>
         <item>
             <title><![CDATA[Usage-Based Maintenance with Apache StreamPipes]]></title>
@@ -697,6 +810,7 @@ This flag is streamed using an Apache StreamPipes S7 adapter. The stream also in
 <li class="">Understand machine usage over time with time-based aggregations</li>
 </ul>
 <p>By replacing static maintenance intervals with actual usage insights, you can reduce unnecessary work and improve efficiency — all without needing to retrofit expensive new sensors.</p>]]></content:encoded>
+            <category>tutorial</category>
         </item>
         <item>
             <title><![CDATA[Bringing LLM Power to Every Pipeline – The Multi-Model Prompt Processor]]></title>
@@ -757,6 +871,7 @@ Apache StreamPipes pipeline—no extra code required.</p>
 <p>Whether you need a lightweight rule engine, live summaries, or just a smarter filter, the Multi-Model Prompt Processor
 drops straight into your pipeline and starts working within minutes.</p>
 <p>Give it a try, and let us know what you build!</p>]]></content:encoded>
+            <category>tutorial</category>
         </item>
         <item>
             <title><![CDATA[How to Use the JavaScript Evaluator Processor]]></title>
@@ -816,6 +931,7 @@ Just make sure that any new properties you add to the event, like <code>count</c
 <!-- -->✅ Prototype complex logic—without deploying a new microservice</p>
 <p>So, next time you think <em>"I wish there was a processor that could..."</em>, just try the JavaScript Evaluator. Chances are, it can.</p>
 <p>Got a cool use case using this processor? Let us know or share it with the community—we’d love to see what you’re building with Apache StreamPipes!</p>]]></content:encoded>
+            <category>tutorial</category>
         </item>
         <item>
             <title><![CDATA[Explore StreamPipes with Data Simulators!]]></title>
@@ -892,6 +1008,7 @@ It's not meant for production use, but it's perfect for experimenting with Strea
 <p>In this tutorial, we've explored how to use the File Stream Adapter in Apache StreamPipes to create a simulation data stream and persist CSV data into a data lake.
 This adapter lets you experiment with StreamPipes' capabilities and explore its functionality using your own data.
 Happy streaming!</p>]]></content:encoded>
+            <category>tutorial</category>
         </item>
         <item>
             <title><![CDATA[Apache StreamPipes release 0.97.0]]></title>
@@ -989,6 +1106,7 @@ As a replacement, the Data Explorer dashboards has been enhanced with auto-refre
 Version 0.97.0 brings improvements in usability, security, and automation, helping users to analyze their IIoT data sources.</p>
 <p>As always, we welcome your feedback and suggestions to continue refining and enhancing StreamPipes.
 Feel free to share your thoughts or get involved through <strong>GitHub</strong> or <strong>mailing list</strong>.</p>]]></content:encoded>
+            <category>release</category>
         </item>
         <item>
             <title><![CDATA[Apache StreamPipes release 0.95.0]]></title>
@@ -1089,6 +1207,7 @@ the <a href="https://github.com/apache/incubator-streampipes/blob/release/0.95.0
 <p>We appreciate your continued support and valuable feedback.
 StreamPipes is continually evolving, and we are dedicated to providing you with a powerful and reliable platform for
 your IIoT streaming data needs.</p>]]></content:encoded>
+            <category>release</category>
         </item>
         <item>
             <title><![CDATA[Anomaly Detection with StreamPipes Functions in Python and ONNX]]></title>
@@ -1173,6 +1292,7 @@ If you have brought up your own model, you need to adapt line <code>10-13</code>
 <p></p>
 <p>From here on you can further work with the prediction events in StreamPipes, e.g., by sending notifications
 to <a href="https://streampipes.apache.org/docs/next/pe/org.apache.streampipes.sinks.notifications.jvm.msteams/" target="_blank" rel="noopener noreferrer" class="">MS Teams</a>.</p>]]></content:encoded>
+            <category>tutorial</category>
         </item>
         <item>
             <title><![CDATA[Apache StreamPipes release 0.93.0]]></title>
@@ -1332,6 +1452,7 @@ the <a href="https://github.com/apache/incubator-streampipes/blob/release/0.92.0
 <p>We appreciate your continued support and valuable feedback.
 StreamPipes is continually evolving, and we are dedicated to providing you with a powerful and reliable platform for
 your IIoT streaming data needs.</p>]]></content:encoded>
+            <category>release</category>
         </item>
         <item>
             <title><![CDATA[Apache StreamPipes release 0.92.0]]></title>
@@ -1377,6 +1498,7 @@ See the example below:</p>
 For more detailed information, please refer to the <a href="https://github.com/apache/incubator-streampipes/blob/release/0.92.0/RELEASE_NOTES.md#0920" target="_blank" rel="noopener noreferrer" class="">release notes</a>.</p>
 <p>We appreciate your continued support and valuable feedback.
 StreamPipes is continually evolving, and we are dedicated to providing you with a powerful and reliable platform for your IIoT streaming data needs.</p>]]></content:encoded>
+            <category>release</category>
         </item>
         <item>
             <title><![CDATA[Apache StreamPipes release 0.91.0]]></title>
@@ -1441,6 +1563,7 @@ perform any data manipulation in Python, and send the data back to StreamPipes, 
 <br>
 <p>To get a comprehensive overview of all changes released within Apache StreamPipes 0.91.0
 please visit our <a href="https://github.com/apache/incubator-streampipes/blob/release/0.91.0/RELEASE_NOTES.md#0910" target="_blank" rel="noopener noreferrer" class="">release notes</a>.</p>]]></content:encoded>
+            <category>release</category>
         </item>
         <item>
             <title><![CDATA[Apache StreamPipes release 0.90.0]]></title>
@@ -1501,321 +1624,7 @@ The community is currently working hard to bring the StreamPipes client and func
 <br>
 <p>To get a comprehensive overview of all changes released within Apache StreamPipes 0.90.0
 please visit our <a href="https://github.com/apache/incubator-streampipes/blob/release/0.90.0/RELEASE_NOTES.md#0900" target="_blank" rel="noopener noreferrer" class="">release notes</a>.</p>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Apache StreamPipes release 0.70.0]]></title>
-            <link>https://streampipes.apache.org/blog/2022/10/13/release-070/</link>
-            <guid>https://streampipes.apache.org/blog/2022/10/13/release-070/</guid>
-            <pubDate>Thu, 13 Oct 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[6 minutes to read]]></description>
-            <content:encoded><![CDATA[<p><strong></strong></p><div style="float:left;padding-right:40px"><strong>6 minutes to read</strong></div><p></p>
-<br>
-<p>The Apache StreamPipes (incubating) community is delighted to announce the release of Apache StreamPipes version 0.70.0!
-Key highlights of this release include many enhancements to the data explorer for fast exploration of IoT data and
-a brand new asset management that allows importing and exporting of StreamPipes resources.
-In addition, our new version includes more than 50 improvements and bug fixes.</p>
-<p>The current release can be downloaded <a href="https://streampipes.apache.org/download.html">here</a>.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="preview-of-event-schema">Preview of Event Schema<a href="https://streampipes.apache.org/blog/2022/10/13/release-070/#preview-of-event-schema" class="hash-link" aria-label="Direct link to Preview of Event Schema" title="Direct link to Preview of Event Schema" translate="no">​</a></h2>
-<p>A very important and inevitable step when connecting to a data source with Apache StreamPipes
-is the definition of the event schema. By collecting some sample events, Apache StreamPipes is able to suggest
-an event schema that describes the data structure of the incoming events.
-Although this works quite well in the vast majority of cases, there is usually a need to modify the proposed
-event schema to some degree or add additional fields. So far, a user has gotten little idea of what
-the revised data source event schema looks like until the adapter has been created and some data was consumed.
-With this release, we have included a before/after comparison of the events while defining the event schema.
-This allows to compare the proposed events of Apache StreamPipes (<code>before</code>) with the events after
-all the user's changes have been applied (<code>after</code>).
-The after view adapts to each interaction of the user.</p>
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2022-10-13/event-schema-preview.png">
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="export-and-import-streampipes-resource">Export and Import StreamPipes Resource<a href="https://streampipes.apache.org/blog/2022/10/13/release-070/#export-and-import-streampipes-resource" class="hash-link" aria-label="Direct link to Export and Import StreamPipes Resource" title="Direct link to Export and Import StreamPipes Resource" translate="no">​</a></h2>
-<p>With this release we introduce a completely new module called <code>Asset Management</code>.
-This can be selected in the menu bar of the modules on the left side as the third last icon and
-is marked by a construction icon. This module allows to combine several StreamPipes resources to a so called <code>Asset</code>,
-which can be exported and re-imported later. To do this, a new asset must first be created.
-Afterwards the asset can be edited and the following detail view allows to link all resources
-available in StreamPipes to the asset. After the asset has been finally saved, the asset (inlcuding all resources) can be downloaded
-within the configuration module by switching to the <code>Export/Import</code> tab. All existing assets are listed there and
-can be selected for download.
-The downloaded file can then be re-imported later in the same or another StreamPipes instance at the same place.</p>
-<img src="https://streampipes.apache.org/img/blog/2022-10-13/asset-manager.gif" alt="demonstration how to create an asset and download it afterwards in form of a gif">
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="download-data-of-configured-query-from-data-lake">Download Data of Configured Query from Data Lake<a href="https://streampipes.apache.org/blog/2022/10/13/release-070/#download-data-of-configured-query-from-data-lake" class="hash-link" aria-label="Direct link to Download Data of Configured Query from Data Lake" title="Direct link to Download Data of Configured Query from Data Lake" translate="no">​</a></h2>
-<p>Another new feature is the ability to download or export data from the StreamPipes data lake
-defined by a user-defined query. Previously, it was only possible to download all events belonging to a data lake index
-from the <code>Data Lake</code> tab of the configuration menu. In addition to this, each widget in the <code>Data Explorer</code>
-offers the possibility to download the corresponding data. The underlying query is created from the configuration
-of the widget and is also used to create the widget's figure.
-The download supports both <code>CSV</code> and <code>JSON</code> format.</p>
-<img src="https://streampipes.apache.org/img/blog/2022-10-13/custom-query-download.gif" alt="demonstration how to download the data of a custom data lake query in form of a gif">
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="slide-view-in-data-explorer">Slide View in Data Explorer<a href="https://streampipes.apache.org/blog/2022/10/13/release-070/#slide-view-in-data-explorer" class="hash-link" aria-label="Direct link to Slide View in Data Explorer" title="Direct link to Slide View in Data Explorer" translate="no">​</a></h2>
-<p>Traditionally, the graphs created in the Data Explorer are displayed in a grid view, where the user can adjust
-the arrangement of the figures as well as their height and width.
-With this release, another option for displaying the dashboard widgets is available: the slide view.
-This view allows to display a single graph in full-screen mode and switch between views using a horizontal menu bar.
-When a new <code>Data View</code> is created in the Data Explorer, a choice can be made between <code>grid view</code> and
-<code>slide view</code> as the default display mode.
-Once a <code>Data View</code> is created, the display mode can be changed by clicking the icon in the upper left corner
-right next to the <code>Back</code> button.</p>
-<img src="https://streampipes.apache.org/img/blog/2022-10-13/slide-view.gif" alt="demonstration how to use the slide view in the data explorer in form of a gif">
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="templates-for-adapter-configuration">Templates for Adapter Configuration<a href="https://streampipes.apache.org/blog/2022/10/13/release-070/#templates-for-adapter-configuration" class="hash-link" aria-label="Direct link to Templates for Adapter Configuration" title="Direct link to Templates for Adapter Configuration" translate="no">​</a></h2>
-<p>Similar to the processing elements, it is now possible to create templates for adapter configurations.
-This allows you to start from a previously defined set of configuration settings when creating similar adapters.
-To create a template for an adapter configuration, start by creating a new adapter and
-configuring all the settings that will be part of the template. Before proceeding to the field
-configuration (the second step of adapter creation), save the current configuration as a template.
-Whenever a new instance of the same adapter is created, the template can be selected from
-the drop-down menu that appears. Templates are only available for the same type of adapter (obviously).</p>
-<img src="https://streampipes.apache.org/img/blog/2022-10-13/adapter-template.gif" alt="demonstration how to create an adapter template in form of a gif">
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="upload-multiple-files-at-once">Upload Multiple Files at Once<a href="https://streampipes.apache.org/blog/2022/10/13/release-070/#upload-multiple-files-at-once" class="hash-link" aria-label="Direct link to Upload Multiple Files at Once" title="Direct link to Upload Multiple Files at Once" translate="no">​</a></h2>
-<p>A rather small but very handy improvement is the possibility to upload multiple files at once to StreamPipes.
-When you click the <code>UPLOAD NEW FILE</code> button in the <code>File Management</code> module, it is now possible to select
-as many files as you want in the file upload dialog.</p>
-<br>
-<p>To get a comprehensive overview of all changes released within Apache StreamPipes 0.70.0
-please visit our <a href="https://github.com/apache/incubator-streampipes/blob/release/0.70.0/RELEASE_NOTES.md#0700" target="_blank" rel="noopener noreferrer" class="">release notes</a>.</p>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Using Factory I/O with StreamPipes]]></title>
-            <link>https://streampipes.apache.org/blog/2022/09/05/using-factory.io-with-streampipes/</link>
-            <guid>https://streampipes.apache.org/blog/2022/09/05/using-factory.io-with-streampipes/</guid>
-            <pubDate>Mon, 05 Sep 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[10 minutes to read]]></description>
-            <content:encoded><![CDATA[<p><strong></strong></p><div style="float:left;padding-right:40px"><strong>10 minutes to read</strong></div><br><p></p>
-<p>This tutorial shows how you can stream sensor data into StreamPipes from a simulation environment (Factory I/O). The
-simulation environment is controlled by a "Siemens S7-1200" PLC and shows a conveyor belt which sorts packages by their
-height. The tutorial is based on the upcoming version 0.70.0 and teaches you how to load the sensor data, build a
-pipeline, preprocess the data and create visualizations.</p>
-<img class="blog-image" style="max-width:75%" src="https://streampipes.apache.org/img/blog/2022-09-05/plc.jpg" alt="plc">
-<br>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-factory-io">1. Factory I/O<a href="https://streampipes.apache.org/blog/2022/09/05/using-factory.io-with-streampipes/#1-factory-io" class="hash-link" aria-label="Direct link to 1. Factory I/O" title="Direct link to 1. Factory I/O" translate="no">​</a></h2>
-<p><a href="https://docs.factoryio.com/"><em>Factory</em> I/O</a> is a 3D simulation for virtual factories and is commonly used as
-a PLC training platform. We will need it to simulate the live data.</p>
-<ul>
-<li class="">Set up Factory I/O and make sure that the <a href="https://docs.factoryio.com/tutorials/siemens/sample-s7-1200-1500/">
-<em>Sorting by Height (Basic)</em></a> simulation works.</li>
-</ul>
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2022-09-05/factory.io.png" alt="dataView">
-<br>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-adapter">2. Adapter<a href="https://streampipes.apache.org/blog/2022/09/05/using-factory.io-with-streampipes/#2-adapter" class="hash-link" aria-label="Direct link to 2. Adapter" title="Direct link to 2. Adapter" translate="no">​</a></h2>
-<p>The next step is to connect the PLC to StreamPipes. To achieve this we need to create an adapter.</p>
-<ul>
-<li class="">Start <a href="https://streampipes.apache.org/docs/docs/user-guide-introduction.html"><em>StreamPipes</em></a>, go to the *
-<em>CONNECT</em>* menu and create a <strong>NEW ADAPTER</strong>.</li>
-<li class="">Select the <strong>PLC4X S7</strong> adapter, insert the <strong>IP-address</strong> of your PLC and <strong>import the file</strong> with the PLC tags (see
-below). Then click <strong>NEXT</strong> on the bottom right.</li>
-</ul>
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2022-09-05/adapter1.png" alt="adapter1">
-<ul>
-<li class="">If the warning "MISSING TIMESTAMP" appears, press <strong>ADD TIMESTAMP</strong> and then <strong>NEXT</strong>. This warning occurs because
-some data sources don't provide a timestamp.</li>
-</ul>
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2022-09-05/adapter2.png" alt="adapter2">
-<ul>
-<li class="">You can name the adapter "S7_sorting" and select the option <strong>PERSIST EVENTS</strong> to make sure the data is persisted. The
-adapter is now ready to <strong>START</strong>. (You can check if the adapter is working by pressing the <strong><code>?</code></strong> symbol in the
-connect menu and clicking on <strong>VALUES</strong> to see a live preview).</li>
-</ul>
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2022-09-05/adapter3.png" alt="adapter3">
-<br>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-dashboard-for-raw-data">3. Dashboard for raw data<a href="https://streampipes.apache.org/blog/2022/09/05/using-factory.io-with-streampipes/#3-dashboard-for-raw-data" class="hash-link" aria-label="Direct link to 3. Dashboard for raw data" title="Direct link to 3. Dashboard for raw data" translate="no">​</a></h2>
-<p>A dashboard is used to monitor live data from a data stream. We will use it to make sure that the sensor values are
-updated when the simulation runs.</p>
-<ul>
-<li class="">Go to the <strong>DASHBOARD</strong> menu and create a <strong>NEW DASHBOARD</strong> "Dashboard_sorting". Press the pen symbol to edit the
-dashboard.</li>
-<li class="">Click <strong>ADD VISUALIZATION</strong> and select the automatically created pipeline "Persist S7_sorting". Choose the <strong>TABLE</strong>
-widget, configure it by pressing <strong>SELECT ALL</strong> and <strong>CREATE</strong> the widget.</li>
-<li class="">Change the size of the table as you like and <strong>SAVE</strong> the dashboard.</li>
-<li class="">The values should now update every 5 seconds. Test it by starting the simulation in Factory I/O.</li>
-</ul>
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2022-09-05/dashboard1.png" alt="dashboard1">
-<br>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-creating-a-data-view">4. Creating a Data View<a href="https://streampipes.apache.org/blog/2022/09/05/using-factory.io-with-streampipes/#4-creating-a-data-view" class="hash-link" aria-label="Direct link to 4. Creating a Data View" title="Direct link to 4. Creating a Data View" translate="no">​</a></h2>
-<p>The Data View is used to create visualization for persisted data in a Data Lake. You can choose various visualization to
-explore your data. We will create a table to see the stored data and a bar chart to take a closer look at a single
-sensor.</p>
-<ul>
-<li class="">Create a <strong>NEW DATA VIEW</strong> "Sorting" in the <strong>DATA EXPLORER</strong> menu and edit the view.</li>
-<li class="">Select the "Persist S7_sorting" pipeline at the <strong>NEW WIDGET</strong> menu, <strong>SELECT ALL</strong> fields and press <strong>NEXT</strong>.</li>
-<li class="">Select the <strong>TABLE</strong> visualization. Click <strong>SELECT ALL</strong> and <strong>CREATE</strong>.</li>
-</ul>
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2022-09-05/dataView1.png" alt="dataView1">
-<ul>
-<li class="">Now we want to look closer at a single sensor value. Therefore click on the <strong><code>+</code></strong> symbol on the top left to add a
-new widget.</li>
-<li class="">Choose the "Persist S7_sorting" pipeline again, set the <strong>LIMIT</strong> to 1000 and only select the <strong>I_At_right_entry</strong>
-field. Now select  <strong>DISTRIBUTION</strong> as visualization and press <strong>CREATE</strong>. This chart shows how often the sensor
-returned true or false (package in front of it or not).</li>
-</ul>
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2022-09-05/dataView2.png" alt="dataView2">
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-modifying-the-pipeline">5. Modifying the Pipeline<a href="https://streampipes.apache.org/blog/2022/09/05/using-factory.io-with-streampipes/#5-modifying-the-pipeline" class="hash-link" aria-label="Direct link to 5. Modifying the Pipeline" title="Direct link to 5. Modifying the Pipeline" translate="no">​</a></h2>
-<p>The next step is to change the pipeline to add some preproccessing steps. We want to count the number of large packages
-which get transported to the right side and we want to measure the time between two arriving packages.</p>
-<ul>
-<li class="">Therefore <strong>STOP</strong> the running "Persist S7_sorting" pipeline in the <strong>PIPELINE</strong> menu and <strong>MODIFY</strong> the pipeline.</li>
-<li class="">Add the <strong>BOOLEAN COUNTER</strong> as new pipeline element. Connect the data source to the counter and configure the element.
-Select <strong>I_At_right_entry</strong> as boolean field and change the flank parameter to <strong>FALSE -&gt; TRUE</strong>. Then add a <strong>DATA
-LAKE</strong> and connect the <strong>BOOLEAN COUNTER</strong> to it. Use "Boolean_Counter" as identifier.</li>
-<li class="">Add the <strong>BOOLEAN TIMER</strong> to the pipeline and connect the data source to it. Select <strong>I_At_right_entry</strong> as boolean
-field too and select <strong>TRUE</strong> and <strong>SECONDS</strong> in the configuration window. Add another <strong>DATA LAKE</strong> and connect the *
-<em>BOOLEAN TIMER</em>* to it. Use "Boolean_Timer" as identifier.</li>
-<li class=""><strong>SAVE</strong> the pipeline and click the checkbox <strong>START PIPELINE IMMEDIATELY</strong>.</li>
-</ul>
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2022-09-05/pipeline.png" alt="pipeline">
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-dashboard-for-preprocessed-data">6. Dashboard for preprocessed data<a href="https://streampipes.apache.org/blog/2022/09/05/using-factory.io-with-streampipes/#6-dashboard-for-preprocessed-data" class="hash-link" aria-label="Direct link to 6. Dashboard for preprocessed data" title="Direct link to 6. Dashboard for preprocessed data" translate="no">​</a></h2>
-<p>After we created two new data field in the last step, we will monitor them in the dashboard.</p>
-<ul>
-<li class="">Go to the <strong>DASHBOARD</strong> menu and <strong>EDIT</strong> the dashboard.</li>
-<li class="">Click <strong>ADD VISUALIZATION</strong> and select "Persist S7_sorting: Boolean_Counter". Create a <strong>TABLE</strong> widget as before and
-<strong>SELECT ALL</strong> fields.</li>
-<li class="">Now add one last table. Choose "Persist S7_sorting: Boolean_Timer" and only select the <strong>measured_time</strong> field</li>
-<li class="">Test your pipeline by starting the simulation again. The counter should now count up when a package passes the sensor
-on the right side and the "measured_time" should show the time since the last package arrived.</li>
-</ul>
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2022-09-05/dashboard2.png" alt="dashboard2">
-<br>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-final-data-view">7. Final Data View<a href="https://streampipes.apache.org/blog/2022/09/05/using-factory.io-with-streampipes/#7-final-data-view" class="hash-link" aria-label="Direct link to 7. Final Data View" title="Direct link to 7. Final Data View" translate="no">​</a></h2>
-<p>Finally we want to improve the Data Explorer and create visualizations with the preprocessed data. We will create a time
-series to verify when a new package arrived and a heat map to check the time between two packages.</p>
-<ul>
-<li class="">Go to the <strong>DATA EXPLORER</strong> menu and edit the data view.</li>
-<li class="">Click <strong>ADD WIDGET</strong> and choose the pipeline "Persist S7_sorting: Boolean_Counter". Select the <strong>counter</strong> field and
-choose the <strong>TIME SERIES</strong> visualization.</li>
-<li class="">Create another widget. Choose the "Persist S7_sorting: BooleanCounter" pipeline and select the <strong>measured_time</strong>
-field. Then select the <strong>HEATMAP</strong> and use "measured_time" as <strong>HEAT VALUE</strong></li>
-</ul>
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2022-09-05/dataView3.png" alt="dataView3">
-<br>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="summary">Summary<a href="https://streampipes.apache.org/blog/2022/09/05/using-factory.io-with-streampipes/#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary" translate="no">​</a></h2>
-<p>In this tutorial we learned how to connect a PLC to StreamPipes, monitor the data stream with a dashboard, create a
-pipeline with different preprocessing steps and visualize the data in the Data View. But we just focused on the basics,
-so feel free to try out your own ideas and use different preprocessing steps, create new visualizations or try out
-another simulation environment.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="csv-file-for-plc-tags">CSV file for PLC tags<a href="https://streampipes.apache.org/blog/2022/09/05/using-factory.io-with-streampipes/#csv-file-for-plc-tags" class="hash-link" aria-label="Direct link to CSV file for PLC tags" title="Direct link to CSV file for PLC tags" translate="no">​</a></h2>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#bfc7d5"><span class="token plain">Runtime Name,Path,Data Type,Node Name,Comment,Hmi Visible,Hmi Accessible,Hmi Writeable,Typeobject ID,Version ID</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">I_High_sensor,Tag table_1,Bool,%I0.0,,True,True,True,,</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">I_Low_sensor,Tag table_1,Bool,%I0.1,,True,True,True,,</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">I_Pallet_sensor,Tag table_1,Bool,%I0.2,,True,True,True,,</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">I_Loaded,Tag table_1,Bool,%I0.3,,True,True,True,,</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">I_At_left_entry,Tag table_1,Bool,%I0.4,,True,True,True,,</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">I_At_left_exit,Tag table_1,Bool,%I0.5,,True,True,True,,</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">I_At_right_entry,Tag table_1,Bool,%I0.6,,True,True,True,,</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">I_At_right_exit,Tag table_1,Bool,%I0.7,,True,True,True,,</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">O_Conveyor_entry,Tag table_1,Bool,%Q0.0,,True,True,True,,</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">O_Load,Tag table_1,Bool,%Q0.1,,True,True,True,,</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">O_Unload,Tag table_1,Bool,%Q0.2,,True,True,True,,</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">O_Transf_left,Tag table_1,Bool,%Q0.3,,True,True,True,,</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">O_Tranf_right,Tag table_1,Bool,%Q0.4,,True,True,True,,</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">O_Conveyor_left,Tag table_1,Bool,%Q0.5,,True,True,True,,</span><br></div></code></pre></div></div>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Apache StreamPipes release 0.69.0]]></title>
-            <link>https://streampipes.apache.org/blog/2022/03/21/_release-0690/</link>
-            <guid>https://streampipes.apache.org/blog/2022/03/21/_release-0690/</guid>
-            <pubDate>Mon, 21 Mar 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[5 minutes to read]]></description>
-            <content:encoded><![CDATA[<p><strong></strong></p><div style="float:left;padding-right:40px"><strong>5 minutes to read</strong></div><p></p>
-<br>
-<p>The Apache StreamPipes (incubating) community is pleased to announce Apache StreamPipes version 0.69.0!
-The most notable highlights of this release include a completely reworked data explorer for quick exploration of IoT data and advanced user and access rights management.
-In addition, our new release includes more than 80 improvements and bug fixes.</p>
-<p>The current release can be downloaded <a href="https://streampipes.apache.org/download.html">here</a>.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="data-explorer">Data Explorer<a href="https://streampipes.apache.org/blog/2022/03/21/_release-0690/#data-explorer" class="hash-link" aria-label="Direct link to Data Explorer" title="Direct link to Data Explorer" translate="no">​</a></h2>
-<p>Apache StreamPipes 0.69.0 includes a heavily improved data explorer. The new user interface allows to visually explore data streams within minutes.
-Any pipeline which uses the <code>Data Lake</code> sink can be visualized in the data explorer. The completely new query interface allows to easily select date and time ranges and users can choose from either displaying raw data or aggregated time series.
-The widget library includes charts to visualize time-series data (e.g., line chart, scatter plots or heatmaps), value distributions (e.g., density or histograms) or single values.
-The widget interface is completely customized and users can build rich dashboards.</p>
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2022-03-21/sp-data-explorer-2.png" alt="Data Explorer">
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2022-03-21/sp-data-explorer-3.png" alt="Data Explorer">
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2022-03-21/sp-data-explorer-4.png" alt="Data Explorer">
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-and-access-rights-management">User and access rights management<a href="https://streampipes.apache.org/blog/2022/03/21/_release-0690/#user-and-access-rights-management" class="hash-link" aria-label="Direct link to User and access rights management" title="Direct link to User and access rights management" translate="no">​</a></h2>
-<p>StreamPipes now supports multiple users and roles. The new <code>User management</code> section in the settings page allows to create individual users and groups.
-Various roles can be assigned to users and groups to manage permissions and visible views. For instance, you can now create users which only see dashboards, but cannot create pipelines or connect new data streams.
-In addition, individual permissions can be assigned to various resource objects such as pipelines, data streams and dashboards.</p>
-<p>Communication between extensions services and the core are now authenticated by default. Service accounts can be created to allow extensions services to access StreamPipes resources.</p>
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2022-03-21/sp-user-management-2.png" alt="User Management">
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="improved-pipeline-element-modeling">Improved pipeline element modeling<a href="https://streampipes.apache.org/blog/2022/03/21/_release-0690/#improved-pipeline-element-modeling" class="hash-link" aria-label="Direct link to Improved pipeline element modeling" title="Direct link to Improved pipeline element modeling" translate="no">​</a></h2>
-<p>We've removed one of the major drawbacks of previous StreamPipes versions: Pipelines can now be flexibly reconfigured. In previous versions, due to the validation of pipelines and their configuration, only root elements could be modified.
-The new version now gives users full flexibility when modeling pipelines (e.g., by removing or modifying elements from the middle of a pipeline), while pipelines are still continuously validated and modeling errors are shown.
-Updating pipelines should now be much less distracting and faster.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="other-new-features">Other new features<a href="https://streampipes.apache.org/blog/2022/03/21/_release-0690/#other-new-features" class="hash-link" aria-label="Direct link to Other new features" title="Direct link to Other new features" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="mail-configuration">Mail configuration<a href="https://streampipes.apache.org/blog/2022/03/21/_release-0690/#mail-configuration" class="hash-link" aria-label="Direct link to Mail configuration" title="Direct link to Mail configuration" translate="no">​</a></h3>
-<p>StreamPipes now includes a configuration interface for mail server settings. These settings are used by the email data sink used to trigger email notifications.
-In addition, several system-wide mail services exist, e.g., to restore forgotten passwords.</p>
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2022-03-21/sp-config-mail.png" alt="Mail configuration">
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="login-configuration">Login configuration<a href="https://streampipes.apache.org/blog/2022/03/21/_release-0690/#login-configuration" class="hash-link" aria-label="Direct link to Login configuration" title="Direct link to Login configuration" translate="no">​</a></h3>
-<p>The login mechanism can now be configured directly in the user interface. A self-registration can be activated to allow users to create new accounts.
-In addition, passwords can be restored by using a two-stage email confirmation process. The profile view allows users to change their passwords individually.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="redesign-of-pipeline-editor">Redesign of pipeline editor<a href="https://streampipes.apache.org/blog/2022/03/21/_release-0690/#redesign-of-pipeline-editor" class="hash-link" aria-label="Direct link to Redesign of pipeline editor" title="Direct link to Redesign of pipeline editor" translate="no">​</a></h3>
-<p>The pipeline editor has a new look: The pipeline element selection bar has been moved from the top to the left side. The icons are smaller and for each pipeline element, the name and description are shown by default.
-This makes it easier to find the elements you're looking for.</p>
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2022-03-21/sp-pipeline-editor.png" alt="Dark mode">
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="improved-service-discovery">Improved service discovery<a href="https://streampipes.apache.org/blog/2022/03/21/_release-0690/#improved-service-discovery" class="hash-link" aria-label="Direct link to Improved service discovery" title="Direct link to Improved service discovery" translate="no">​</a></h3>
-<p>Under the hood, we've improved the discovery of extensions services. This is part of a larger effort which will be further improved in the next versions.
-Extensions services now automatically register within the core depending on the IP address of the service. Pipeline element descriptions are now free of the hostname and can be easily updated.
-Several environment variables exist to manually assign the hostname to an extensions service.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="performance">Performance<a href="https://streampipes.apache.org/blog/2022/03/21/_release-0690/#performance" class="hash-link" aria-label="Direct link to Performance" title="Direct link to Performance" translate="no">​</a></h3>
-<p>We've improved the overall system performance by replacing the triple store with a standard NoSQL database. This leads to huge performance improvements in terms of system start time, pipeline element installation and overall loading time.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="dark-mode--">Dark mode ;-)<a href="https://streampipes.apache.org/blog/2022/03/21/_release-0690/#dark-mode--" class="hash-link" aria-label="Direct link to Dark mode ;-)" title="Direct link to Dark mode ;-)" translate="no">​</a></h3>
-<p>We know that you wanted this: An experimental dark mode has been added to StreamPipes. The color scheme can be flexibly changed in the profile view and is stored for each user.
-The dark mode should be considered experimental, so please expect some layout flaws.</p>
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2022-03-21/sp-dark-mode.png" alt="Dark mode">
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="migration">Migration<a href="https://streampipes.apache.org/blog/2022/03/21/_release-0690/#migration" class="hash-link" aria-label="Direct link to Migration" title="Direct link to Migration" translate="no">​</a></h2>
-<p>While we are not yet ready for automatic migration, a migration guide explains several new concepts introduced in this StreamPipes version.
-We aim at providing a backwards compatible version with release 1.0, planned for later this year.</p>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Apache StreamPipes release 0.68.0]]></title>
-            <link>https://streampipes.apache.org/blog/2021/07/22/_release-0680/</link>
-            <guid>https://streampipes.apache.org/blog/2021/07/22/_release-0680/</guid>
-            <pubDate>Thu, 22 Jul 2021 00:00:00 GMT</pubDate>
-            <description><![CDATA[8 minutes to read]]></description>
-            <content:encoded><![CDATA[<p><strong></strong></p><div style="float:left;padding-right:40px"><strong>8 minutes to read</strong></div><p></p>
-<br>
-<p>The Apache StreamPipes (incubating) community is pleased to announce Apache StreamPipes version 0.68.0!
-The latest release brings many improvements related to health management of pipelines and pipeline monitoring, improved user guidance such as a live preview in the pipeline editor and better handling of pipeline updates as well as several new data processors and sinks such as support for NATS.
-In addition, the release contains several bug fixes related to K8s deployment, PLC adapters and pipeline management.</p>
-<p>The current release can be downloaded <a href="https://streampipes.apache.org/download.html">here</a>.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-interface">User interface<a href="https://streampipes.apache.org/blog/2021/07/22/_release-0680/#user-interface" class="hash-link" aria-label="Direct link to User interface" title="Direct link to User interface" translate="no">​</a></h2>
-<p>The user interface brings several improvements for users when working with pipelines.
-For this release, we focused on providing a better user experience when pipelines and associated dashboard widgets are updated.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pipeline-preview">Pipeline preview<a href="https://streampipes.apache.org/blog/2021/07/22/_release-0680/#pipeline-preview" class="hash-link" aria-label="Direct link to Pipeline preview" title="Direct link to Pipeline preview" translate="no">​</a></h3>
-<p>A new pipeline preview allows to quickly inspect the output of data streams and processors during pipeline development.
-The preview can be enabled in the pipeline canvas and displays the latest value of each pipeline element every second.</p>
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2021-07-22/pipeline-preview.png" alt="Pipeline preview">
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="editable-dashboard-widgets">Editable dashboard widgets<a href="https://streampipes.apache.org/blog/2021/07/22/_release-0680/#editable-dashboard-widgets" class="hash-link" aria-label="Direct link to Editable dashboard widgets" title="Direct link to Editable dashboard widgets" translate="no">​</a></h3>
-<p>Apache StreamPipes 0.68.0 improves the modification of existing dashboard widgets. In the live dashboard, the visualization type and the underlying pipeline can now easily be changed without recreating a widget.
-In addition, the dashboard shows additional error messages and hints in case pipelines are stopped or have been deleted. In the first case, pipelines can be conveniently started directly from the dashboard.</p>
-<p>Besides that, the dashboard now provides more visualization types (e.g., bar race chart, status light and word cloud) based on <a href="https://echarts.apache.org/" target="_blank" rel="noopener noreferrer" class="">Apache ECharts</a>.</p>
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2021-07-22/edit-visualizations.png" alt="Modify existing dashboard visualizations">
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="monitoring--resilience">Monitoring &amp; Resilience<a href="https://streampipes.apache.org/blog/2021/07/22/_release-0680/#monitoring--resilience" class="hash-link" aria-label="Direct link to Monitoring &amp; Resilience" title="Direct link to Monitoring &amp; Resilience" translate="no">​</a></h2>
-<p>The latest version comes with several improvements related to better monitoring of running pipelines and internal health checking.
-To allow users to inspect currently running pipelines, a new pipeline monitoring module has been added to the user interface which shows the current throughput of each pipeline element.
-Individual pipeline elements can be selected in the preview panel. For each pipeline element, the number of processed input events, produced output events and the lag is displayed.
-The displayed numbers may be slightly inaccurate for higher throughputs, but give an estimate whether the pipeline is running smoothly or lagging behind.</p>
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2021-07-22/pipeline-monitoring.png" alt="Pipeline Monitoring">
-<p>Besides monitoring, StreamPipes 0.68.0 brings many improvements in terms of system resilience. Pipelines are now gracefully stopped once the StreamPipes installation is stopped.
-Running pipelines are flagged and restarted at startup time. In addition, StreamPipes checks at every startup for any pipelines that were not properly stopped and restarts these pipelines accordingly.
-For all running pipelines, StreamPipes now regularly checks the state of all involved pipeline elements and detects any failures. Problems are displayed in the UI and pipeline elements are automatically re-invoked once they become available after a failure.</p>
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2021-07-22/pipeline-failed.png" alt="Awareness of pipeline failures in the UI">
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2021-07-22/pipeline-restored.png" alt="Recovery of failed pipeline elements">
-<p>Altogether, Apache StreamPipes is now able to recover and resume its state even when the power plug is pulled!
-Resiliency is part of an ongoing larger community effort and will be further improved with a new service discovery approach that will be part of the upcoming version 0.69.0.</p>
-<p>The Docker Compose-based installation now restarts StreamPipes automatically after a system restart by default.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="streampipes-client">StreamPipes Client<a href="https://streampipes.apache.org/blog/2021/07/22/_release-0680/#streampipes-client" class="hash-link" aria-label="Direct link to StreamPipes Client" title="Direct link to StreamPipes Client" translate="no">​</a></h2>
-<p>To allow third-party applications to access concepts managed by Apache StreamPipes, version 0.68.0 brings a preview of the StreamPipes client and REST API.
-The public REST API and the client expose several features that were previously only internally available to developers, such as reading pipelines, performing operations on pipelines and subscribing to data sources managed by StreamPipes.
-An API token can be easily generated in the profile section of the user interface.</p>
-<img class="blog-image" style="max-width:90%" src="https://streampipes.apache.org/img/blog/2021-07-22/api-key-generation.png" alt="Generating an API key for the StreamPipes client &amp; REST API">
-<p>Currently provided REST interfaces can be seen in the Swagger documentation, which is linked on the login page.
-The client is provided as a Java library, an example of its usage is provided in our <a href="https://github.com/apache/incubator-streampipes-examples/blob/dev/streampipes-pipeline-elements-examples-processors-jvm/src/main/java/org/apache/streampipes/client/example/StreamPipesClientExample.java" target="_blank" rel="noopener noreferrer" class="">Examples Github repository</a></p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="streampipes-extensions">StreamPipes Extensions<a href="https://streampipes.apache.org/blog/2021/07/22/_release-0680/#streampipes-extensions" class="hash-link" aria-label="Direct link to StreamPipes Extensions" title="Direct link to StreamPipes Extensions" translate="no">​</a></h2>
-<p>We also added several new adapters to connect data sources and pipeline elements:</p>
-<ul>
-<li class="">A new NATS sink allows to forward events to a NATS broker</li>
-<li class="">The PLC adapter now makes use of the PooledPLCDriverManager</li>
-<li class="">Improvements to the MQTT sink</li>
-<li class="">The IoTDB adapter now uses the latest IoTDB version</li>
-<li class="">All SQL-based sinks now share a common and more stable codebase</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="other-features-and-improvements">Other features and improvements<a href="https://streampipes.apache.org/blog/2021/07/22/_release-0680/#other-features-and-improvements" class="hash-link" aria-label="Direct link to Other features and improvements" title="Direct link to Other features and improvements" translate="no">​</a></h2>
-<ul>
-<li class="">The connect-master module has been removed and integrated into the core</li>
-<li class="">Library upgrades to Angular (11), Spring Boot, and others</li>
-<li class="">Improvements to the helm chart for K8s deployment</li>
-</ul>
-<p>See the <a href="https://issues.apache.org/jira/projects/STREAMPIPES/versions/12348698" target="_blank" rel="noopener noreferrer" class="">release notes</a> for a complete list of new features and improvements.</p>
-<h1>Upgrading</h1>
-<p>StreamPipes 0.68.0 is an intermediate release towards a stable version 1.0. Under the hood, we are performing several code migrations to further improve the overall stability and performance of StreamPipes.
-Therefore, we currently recommend to start with a clean installation when upgrading. We are working towards an auto-update feature which will be available later this year.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="feedback">Feedback<a href="https://streampipes.apache.org/blog/2021/07/22/_release-0680/#feedback" class="hash-link" aria-label="Direct link to Feedback" title="Direct link to Feedback" translate="no">​</a></h2>
-<p>We are absolutely open to your suggestions for further improvements! Let us know (by <a href="mailto:users@streampipes.apache.org" target="_blank" rel="noopener noreferrer" class="">mail</a> or <a href="https://www.twitter.com/streampipes" target="_blank" rel="noopener noreferrer" class="">twitter</a>) and we'll consider your feature request in the next release!</p>
-<p>And do not forget to subscribe to our new mailing lists: <a href="https://streampipes.apache.org/mailinglists.html" target="_blank" rel="noopener noreferrer" class="">https://streampipes.apache.org/mailinglists.html</a></p>]]></content:encoded>
+            <category>release</category>
         </item>
     </channel>
 </rss>
