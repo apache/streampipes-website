@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.plc4x.generic.modbus-rtu
 title: Modbus RTU
+description: "Modbus RTU adapter for Apache StreamPipes: The adapter allows to connect devices supporting Modbus RTU."
 sidebar_label: Modbus RTU
 ---
 

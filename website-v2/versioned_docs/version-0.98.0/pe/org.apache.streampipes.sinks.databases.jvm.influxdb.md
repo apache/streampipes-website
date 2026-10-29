@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.databases.jvm.influxdb
 title: InfluxDB
+description: "InfluxDB data sink for Apache StreamPipes: Stores events in an InfluxDB."
 sidebar_label: InfluxDB
 ---
 

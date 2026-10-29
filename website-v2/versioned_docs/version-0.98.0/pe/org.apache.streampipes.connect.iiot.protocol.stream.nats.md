@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.protocol.stream.nats
 title: NATS
+description: "NATS adapter for Apache StreamPipes: Consumes events from a NATS broker."
 sidebar_label: NATS
 ---
 

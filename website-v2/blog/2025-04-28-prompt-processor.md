@@ -1,5 +1,6 @@
 ---
 title: Bringing LLM Power to Every Pipeline – The Multi-Model Prompt Processor
+description: "Use the Multi-Model Prompt Processor to add OpenAI, Anthropic or Ollama Llama LLMs to Apache StreamPipes pipelines for sentiment checks, summaries and rules."
 authors: [grainier]
 image: /img/blog/2025-04-28/prompt-processor-pipeline.png
 tags: [tutorial]

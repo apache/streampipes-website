@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.enricher.jvm.valuechange
 title: Value Change
+description: "The Value Change processor detects specific transitions in numerical values."
 sidebar_label: Value Change
 ---
 

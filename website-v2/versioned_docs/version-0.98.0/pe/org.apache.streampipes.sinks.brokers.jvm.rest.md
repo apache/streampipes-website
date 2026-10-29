@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.brokers.jvm.rest
 title: REST Publisher
+description: "REST Publisher data sink for Apache StreamPipes: Posts a JSON representation of an event to a REST interface."
 sidebar_label: REST Publisher
 ---
 

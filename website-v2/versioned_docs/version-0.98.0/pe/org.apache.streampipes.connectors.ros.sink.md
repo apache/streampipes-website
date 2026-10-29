@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connectors.ros.sink
 title: ROS Bridge Sink
+description: "ROS Bridge Sink data sink for Apache StreamPipes: This data sinks can publish events to ROS over websocket."
 sidebar_label: ROS Bridge Sink
 ---
 

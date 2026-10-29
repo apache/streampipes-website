@@ -2,38 +2,12 @@
   {
     "version": "dev",
     "title": "dev",
-    "aliases": [
-    ]
-  },
-  {
-    "version": "0.91.0",
-    "title": "0.91.0",
-    "aliases": [
-    ]
-  },
-  {
-    "version": "0.92.0",
-    "title": "0.92.0",
-    "aliases": [
-    ]
-  },
-  {
-    "version": "0.93.0",
-    "title": "0.93.0",
-    "aliases": [
-    ]
-  },
-  {
-    "version": "0.95.0",
-    "title": "0.95.0",
-    "aliases": [
-    ]
+    "aliases": []
   },
   {
     "version": "0.97.0",
     "title": "0.97.0",
-    "aliases": [
-    ]
+    "aliases": []
   },
   {
     "version": "0.98.0",

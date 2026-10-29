@@ -1,5 +1,6 @@
 ---
 title: "Secure OPC-UA Integration with Apache StreamPipes: A Comprehensive Guide"
+description: "Guide to secure OPC UA connections in Apache StreamPipes 0.97.0: create certificates with OpenSSL and set up an Eclipse Milo server with Sign and Encrypt."
 authors: [dominikriemer]
 image: /img/blog/2025-05-20/opc-ua-configuration.png
 tags: [tutorial]

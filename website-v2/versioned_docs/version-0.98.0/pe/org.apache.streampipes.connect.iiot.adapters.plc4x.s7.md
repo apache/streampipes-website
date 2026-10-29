@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.plc4x.s7
 title: PLC4X S7
+description: "PLC4X S7 adapter for Apache StreamPipes: The adapter allows to connect with a Siemens S7 PLC."
 sidebar_label: PLC4X S7
 ---
 

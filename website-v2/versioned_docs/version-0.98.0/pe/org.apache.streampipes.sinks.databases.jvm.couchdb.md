@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.databases.jvm.couchdb
 title: CouchDB
+description: "CouchDB data sink for Apache StreamPipes: Stores events in an Apache CouchDB database."
 sidebar_label: CouchDB
 ---
 

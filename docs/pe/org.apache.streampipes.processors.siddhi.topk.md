@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.siddhi.topk
 title: Top k
+description: "The Top K Analysis processor collects incoming events in a configurable time window and outputs the top or bottom K events based on a specified count value."
 sidebar_label: Top k
 ---
 

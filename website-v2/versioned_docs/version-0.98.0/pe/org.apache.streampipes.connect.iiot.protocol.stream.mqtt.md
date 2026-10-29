@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.protocol.stream.mqtt
 title: MQTT
+description: "MQTT adapter for Apache StreamPipes: Consumes messages from a broker using the MQTT protocol."
 sidebar_label: MQTT
 ---
 

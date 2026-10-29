@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.textmining.jvm.partofspeech
 title: Part of Speech (English)
+description: "Takes in a stream of tokens and marks each token with a part-of-speech tag The list of used suffixes can be found here."
 sidebar_label: Part of Speech (English)
 ---
 

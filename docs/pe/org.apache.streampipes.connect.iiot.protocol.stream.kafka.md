@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.protocol.stream.kafka
 title: Apache Kafka
+description: "The Apache Kafka protocol adapter enables StreamPipes to connect to Kafka brokers and consume messages."
 sidebar_label: Apache Kafka
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.internal.jvm.dataset
 title: Dataset
+description: "Stores events in the internal dataset so that data can be visualized in the live dashboard or in the data explorer."
 sidebar_label: Dataset
 ---
 

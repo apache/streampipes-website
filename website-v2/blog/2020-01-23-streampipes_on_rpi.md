@@ -1,5 +1,6 @@
 ---
 title: StreamPi(pes) - Running StreamPipes on Raspberry Pi
+description: "How to run the StreamPipes lite version on a Raspberry Pi 4 with multi-arch ARM Docker images, with a temperature monitoring pipeline for edge use cases."
 authors: [wipatrick]
 image: /img/blog/2020-01-23/streampipes_raspberrypi.png
 tags: [tutorial]

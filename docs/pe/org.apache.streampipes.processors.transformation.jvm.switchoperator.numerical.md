@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.switchoperator.numerical
 title: Switch Operator (Numerical Input)
+description: "The Switch Operator (Numerical Input) is a StreamPipes data processor that allows you to route events based on the numerical value of a selected field."
 sidebar_label: Switch Operator (Numerical Input)
 ---
 

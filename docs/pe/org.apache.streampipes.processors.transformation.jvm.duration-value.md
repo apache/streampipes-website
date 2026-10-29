@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.duration-value
 title: Calculate Duration
+description: "The Calculate Duration processor computes the time difference between two timestamps."
 sidebar_label: Calculate Duration
 ---
 

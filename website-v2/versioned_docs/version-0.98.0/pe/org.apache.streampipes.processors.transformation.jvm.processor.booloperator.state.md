@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.processor.booloperator.state
 title: Boolean To State
+description: "Converts boolean fields to a state string representing the current state of the system."
 sidebar_label: Boolean To State
 ---
 

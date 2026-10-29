@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.booloperator.timer
 title: Boolean Timer
+description: "The Boolean Timer processor measures the duration that a boolean field maintains a specific state."
 sidebar_label: Boolean Timer
 ---
 

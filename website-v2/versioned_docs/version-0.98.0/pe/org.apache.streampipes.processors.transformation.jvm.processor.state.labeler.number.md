@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number
 title: Number Labeler
+description: "Apply a rule to a value of a field. (E.g. when minimum value is lower then 10, add label not ok else add label ok)."
 sidebar_label: Number Labeler
 ---
 

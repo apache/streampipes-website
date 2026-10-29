@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.plc4x.generic.genericcan
 title: Generic CAN
+description: "Generic CAN adapter for Apache StreamPipes: The adapter allows to connect devices supporting Generic CAN."
 sidebar_label: Generic CAN
 ---
 

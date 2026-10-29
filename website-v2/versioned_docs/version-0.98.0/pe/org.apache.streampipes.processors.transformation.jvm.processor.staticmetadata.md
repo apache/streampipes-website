@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.processor.staticmetadata
 title: Static Metadata Enricher
+description: "The Static Metadata Enricher is designed to enrich a data stream by dynamically adding fields based on user-provided metadata configuration."
 sidebar_label: Static Metadata Enricher
 ---
 

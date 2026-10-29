@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.plc4x.s7
 title: PLC4X S7
+description: "This adapter is deprecated since StreamPipes 0.99.0 and is planned for removal after the 0.99.0 release. Use the Siemens S7 (Basic) adapter instead."
 sidebar_label: PLC4X S7
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.enricher.jvm.jseval
 title: JavaScript Eval
+description: "JavaScript Eval data processor for Apache StreamPipes: A pipeline element that allows writing user defined JavaScript function to enrich events."
 sidebar_label: JavaScript Eval
 ---
 

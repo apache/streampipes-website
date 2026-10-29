@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.enricher.jvm.processor.math.mathop
 title: Math
+description: "Math data processor for Apache StreamPipes: Performs calculations on event properties (+, -, *, /, %)."
 sidebar_label: Math
 ---
 

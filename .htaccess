@@ -19,6 +19,22 @@ RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Docs versions that are no longer built: send old deep links to the current
+# docs with a permanent redirect. Renamed page ids are then handled by the
+# client-side redirects generated from website-v2/src/redirects.js.
+RewriteRule ^docs/(next|0\.95\.0|0\.93\.0|0\.92\.0|0\.91\.0|0\.90\.0|0\.70\.0|0\.69\.0|0\.68\.0)/(.*)$ /docs/$2 [R=301,L]
+
+# Python docs versions that were removed: send deep links to the latest docs.
+RewriteRule ^docs/docs/python/(0\.91\.0|0\.92\.0|0\.93\.0|0\.95\.0)/(.*)$ /docs/docs/python/latest/$2 [R=301,L]
+
+# Legacy URLs of the old website that are still linked from the Python docs
+# and from external sites.
+RewriteRule ^getinvolved\.html$ /community/get-involved/ [R=301,L]
+RewriteRule ^mailinglists\.html$ /community/mailing-lists/ [R=301,L]
+RewriteRule ^docs/docs/deploy-docker\.html$ /docs/configure-operate-deployment/ [R=301,L]
+RewriteRule ^docs/docs/extend-cli\.html$ /docs/extend-cli/ [R=301,L]
+RewriteRule ^docs/docs/extend-sdk-functions\.html$ /docs/extend-sdk-functions/ [R=301,L]
+
 # Resolve Docusaurus clean URLs in the static ASF deployment.
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

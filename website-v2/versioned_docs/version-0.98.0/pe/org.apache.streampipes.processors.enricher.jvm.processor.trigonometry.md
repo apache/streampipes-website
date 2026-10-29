@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.enricher.jvm.processor.trigonometry
 title: Trigonometry Functions
+description: "Trigonometry Functions data processor for Apache StreamPipes: Performs Trigonometric functions (sin, cos, tan) on event properties."
 sidebar_label: Trigonometry Functions
 ---
 

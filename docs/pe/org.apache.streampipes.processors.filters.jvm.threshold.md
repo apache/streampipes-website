@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.threshold
 title: Threshold Detector
+description: "The Threshold Detector processor monitors numerical values and detects when they cross specified thresholds."
 sidebar_label: Threshold Detector
 ---
 

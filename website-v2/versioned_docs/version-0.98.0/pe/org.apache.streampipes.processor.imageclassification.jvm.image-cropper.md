@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processor.imageclassification.jvm.image-cropper
 title: Image Cropper
+description: "Image Cropper data processor for Apache StreamPipes: Image Enrichment: Crops an + image based on + given bounding box coordinates."
 sidebar_label: Image Cropper
 ---
 

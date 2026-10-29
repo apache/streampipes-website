@@ -1,5 +1,6 @@
 ---
 title: StreamPipes on Windows with Podman
+description: "Run Apache StreamPipes on Windows with Podman Desktop and WSL as a Docker Desktop alternative: install podman-compose, adjust the compose file and start up."
 authors: [mortentorp]
 image: /img/blog/2026-03-21/podman-setup.png
 tags: [tutorial]

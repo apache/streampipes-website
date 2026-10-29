@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.brokers.jvm.jms
 title: JMS Publisher
+description: "Publishes events to a message broker (e.g., ActiveMQ) using the Java Message Service (JMS) protocol."
 sidebar_label: JMS Publisher
 ---
 

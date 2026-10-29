@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.enricher.jvm.processor.limitsalert
 title: Sensor Limit Alert
+description: "The Sensor Limit Alert processor monitors sensor values in real-time and triggers alerts when these values exceed user-defined control or warning limits."
 sidebar_label: Sensor Limit Alert
 ---
 

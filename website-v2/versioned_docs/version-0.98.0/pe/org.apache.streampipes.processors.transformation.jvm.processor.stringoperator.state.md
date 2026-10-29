@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state
 title: String To State
+description: "Convert string fields to a state representing the current state of the system. This processor requires one or multiple string values in the data stream."
 sidebar_label: String To State
 ---
 

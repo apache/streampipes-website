@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.simulator.machine
 title: Machine Data Simulator
+description: "This adapter publishes simulated machine sensor data at a configurable time interval."
 sidebar_label: Machine Data Simulator
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.limit
 title: Rate Limit
+description: "This limits the number of events emitted based on a specified criterion such as time, and number of events."
 sidebar_label: Rate Limit
 ---
 

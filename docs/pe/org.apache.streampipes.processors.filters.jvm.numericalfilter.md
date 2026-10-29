@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.numericalfilter
 title: Numerical Filter
+description: "The Numerical Filter processor filters events based on numerical comparisons with a specified threshold."
 sidebar_label: Numerical Filter
 ---
 

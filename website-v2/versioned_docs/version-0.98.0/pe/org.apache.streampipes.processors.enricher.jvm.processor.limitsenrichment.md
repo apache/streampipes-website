@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.enricher.jvm.processor.limitsenrichment
 title: Quality Control Limits Enrichment
+description: "The Quality Control Limits Enrichment processor appends user-defined control and warning limits to incoming events."
 sidebar_label: Quality Control Limits Enrichment
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.enricher.jvm.processor.math.staticmathop
 title: Static Math
+description: "Static Math data processor for Apache StreamPipes: Performs calculation on an event property with a static value (+, -, *, /, %)."
 sidebar_label: Static Math
 ---
 

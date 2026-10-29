@@ -1,5 +1,6 @@
 ---
 title: "ContainerCLI: A CLI tool for your Docker Application"
+description: "How ContainerCLI works: a template CLI tool that installs and manages StreamPipes or any Docker Compose application and speeds up developer environment setup."
 authors: [tenthe]
 image: /img/blog/2018-11-24/roles.png
 tags: [tutorial]

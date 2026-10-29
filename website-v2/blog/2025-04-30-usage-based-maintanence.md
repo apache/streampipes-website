@@ -1,5 +1,6 @@
 ---
 title: Usage-Based Maintenance with Apache StreamPipes
+description: "Usage-based maintenance with Apache StreamPipes: count machine operations from a boolean S7 signal, chart usage and send an email when service is due."
 authors: [tenthe]
 image: /img/blog/2025-04-30/maintenance-pipeline-one.png
 tags: [tutorial]

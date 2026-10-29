@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.textmining.jvm.tokenizer
 title: Tokenizer (English)
+description: "Segments a given text into Tokens (usually words, numbers, punctuations, ...). Works best with english text."
 sidebar_label: Tokenizer (English)
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.round
 title: Numeric Rounding
+description: "The Number Rounder processor provides precise control over the decimal places in numerical data by applying various rounding strategies."
 sidebar_label: Numeric Rounding
 ---
 

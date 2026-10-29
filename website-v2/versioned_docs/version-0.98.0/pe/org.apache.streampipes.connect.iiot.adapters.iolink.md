@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.iolink
 title: ifm IOLink
+description: "This adapter enables the integration of IO-Link sensor data produced by an ifm IO-Link Master (e.g., AL1350) with Apache StreamPipes."
 sidebar_label: ifm IOLink
 ---
 

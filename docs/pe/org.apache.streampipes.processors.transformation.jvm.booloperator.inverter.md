@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.booloperator.inverter
 title: Boolean Inverter
+description: "The Boolean Inverter processor inverts the value of a boolean field in a data stream."
 sidebar_label: Boolean Inverter
 ---
 

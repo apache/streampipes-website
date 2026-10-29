@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.databases.jvm.qdrant
 title: Qdrant
+description: "Stores events in a Qdrant vector database. This sink connector allows you to store vector data along with associated metadata in a Qdrant collection."
 sidebar_label: Qdrant
 ---
 

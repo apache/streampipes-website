@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.threshold
 title: Threshold Detector
+description: "The Threshold Detector processor appends a boolean whether the condition is fulfilled or not."
 sidebar_label: Threshold Detector
 ---
 

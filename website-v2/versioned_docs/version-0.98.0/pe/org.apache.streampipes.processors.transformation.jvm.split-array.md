@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.split-array
 title: Split Array
+description: "This processor takes an array of event properties and creates an event for each of them. Further property of the events can be added to each element."
 sidebar_label: Split Array
 ---
 

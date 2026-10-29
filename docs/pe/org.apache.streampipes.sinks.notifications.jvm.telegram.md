@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.notifications.jvm.telegram
 title: Telegram Publisher
+description: "Telegram Publisher data sink for Apache StreamPipes: Publisher to send notifications to a Telegram channel."
 sidebar_label: Telegram Publisher
 ---
 

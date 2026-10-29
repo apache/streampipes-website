@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.measurementunitconverter
 title: Measurement Unit Converter
+description: "The Measurement Unit Converter processor automatically converts values between different units of measurement."
 sidebar_label: Measurement Unit Converter
 ---
 

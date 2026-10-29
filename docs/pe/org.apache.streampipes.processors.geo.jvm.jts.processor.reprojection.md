@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.geo.jvm.jts.processor.reprojection
 title: Geo CRS Reprojection
+description: "Geo CRS Reprojection data processor for Apache StreamPipes: Change of CRS due reprojection."
 sidebar_label: Geo CRS Reprojection
 ---
 

@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /docs/0.97.0/
-Disallow: /docs/0.95.1/
 
 Sitemap: https://streampipes.apache.org/sitemap.xml

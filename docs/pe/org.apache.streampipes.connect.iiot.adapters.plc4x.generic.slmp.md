@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.plc4x.generic.slmp
 title: SLMP (MELSEC) 3E
+description: "SLMP (MELSEC) 3E adapter for Apache StreamPipes: The adapter allows to connect devices supporting SLMP (MELSEC) 3E."
 sidebar_label: SLMP (MELSEC) 3E
 ---
 

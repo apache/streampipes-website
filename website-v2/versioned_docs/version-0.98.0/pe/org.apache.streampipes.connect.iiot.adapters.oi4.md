@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.oi4
 title: OI4
+description: "The OI4 adapter facilitates the integration of any OT-device compliant with the OI4 standard into Apache StreamPipes."
 sidebar_label: OI4
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.geo.jvm.jts.processor.validation.complex
 title: Geo Geometry Topology Validation Filter
+description: "Geo Geometry Topology Validation Filter data processor for Apache StreamPipes: Validates geometry of topology erros from JTS."
 sidebar_label: Geo Geometry Topology Validation Filter
 ---
 

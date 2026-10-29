@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.plc4x.generic.modbus-tcp
 title: Modbus TCP
+description: "Modbus TCP adapter for Apache StreamPipes: The adapter allows to connect devices supporting Modbus TCP."
 sidebar_label: Modbus TCP
 ---
 

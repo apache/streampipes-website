@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.databases.jvm.iotdb
 title: Apache IoTDB
+description: "Apache IoTDB data sink for Apache StreamPipes: Stores events in a IoTDB database."
 sidebar_label: Apache IoTDB
 ---
 

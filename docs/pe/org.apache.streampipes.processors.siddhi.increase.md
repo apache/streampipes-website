@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.siddhi.increase
 title: Trend
+description: "The Trend Analysis processor monitors numerical values and detects significant increases or decreases within a configurable time window."
 sidebar_label: Trend
 ---
 

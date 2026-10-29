@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.siddhi.count
 title: Count Value Occurrence
+description: "The Count Aggregation processor performs counting operations on event streams."
 sidebar_label: Count Value Occurrence
 ---
 

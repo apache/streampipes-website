@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.databases.jvm.postgresql
 title: PostgreSQL
+description: "PostgreSQL data sink for Apache StreamPipes: Stores events in a Postgres database."
 sidebar_label: PostgreSQL
 ---
 

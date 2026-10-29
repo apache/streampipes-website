@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.enricher.jvm.processor.math.mathop
 title: Math
+description: "The Math Operation processor performs arithmetic calculations between two numerical fields in an event."
 sidebar_label: Math
 ---
 

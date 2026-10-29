@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.plc4x.generic.eip
 title: EthernetIP
+description: "EthernetIP adapter for Apache StreamPipes: The adapter allows to connect devices supporting EthernetIP."
 sidebar_label: EthernetIP
 ---
 
