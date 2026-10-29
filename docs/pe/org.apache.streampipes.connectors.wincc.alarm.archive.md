@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connectors.wincc.alarm.archive
 title: WinCC Alarm Archive
+description: "WinCC Alarm Archive adapter for Apache StreamPipes: The WinCC Alarm Archive adapter reads Siemens WinCC alarm archives exported as CSV files."
 sidebar_label: WinCC Alarm Archive
 ---
 

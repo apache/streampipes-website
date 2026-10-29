@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.adapters.iss
 title: ISS Location
+description: "Shows the live position of the International Space Station (ISS), updated every two seconds."
 sidebar_label: ISS Location
 ---
 

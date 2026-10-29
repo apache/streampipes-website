@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.plc4x.generic.bacnet-ip
 title: BACnet/IP
+description: "BACnet/IP adapter for Apache StreamPipes: The adapter allows to connect devices supporting BACnet/IP."
 sidebar_label: BACnet/IP
 ---
 

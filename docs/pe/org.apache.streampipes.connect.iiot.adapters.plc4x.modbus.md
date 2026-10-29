@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.plc4x.modbus
 title: PLC4X MODBUS
+description: "This adapter is deprecated since StreamPipes 0.99.0 and is planned for removal after the 0.99.0 release."
 sidebar_label: PLC4X MODBUS
 ---
 

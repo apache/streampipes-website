@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.opcua
 title: OPC UA
+description: "This adapter reads node values from an OPC-UA server. The adapter supports both signed/encrypted and unencrypted communication."
 sidebar_label: OPC UA
 ---
 

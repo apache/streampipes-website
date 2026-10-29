@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.enricher.jvm.valuechange
 title: Value Change
+description: "The processing element should be able to detect when a numeric property change from one configured value to another."
 sidebar_label: Value Change
 ---
 

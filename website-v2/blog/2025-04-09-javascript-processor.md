@@ -1,5 +1,6 @@
 ---
 title: How to Use the JavaScript Evaluator Processor
+description: "Learn how the JavaScript Evaluator Processor in Apache StreamPipes transforms, filters and enriches events with custom JavaScript, including stateful logic."
 authors: [tenthe]
 image: /img/blog/2025-04-09/javascript-processor-pipeline.png
 tags: [tutorial]

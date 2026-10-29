@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.stringoperator.counter
 title: String Counter
+description: "The String Counter processor counts changes in string field values."
 sidebar_label: String Counter
 ---
 

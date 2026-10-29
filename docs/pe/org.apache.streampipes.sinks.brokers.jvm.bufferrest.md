@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.brokers.jvm.bufferrest
 title: Buffered REST Publisher
+description: "Collects a given amount of events into a JSON array. Once this event count is reached the JSON array is posted to the given REST interface."
 sidebar_label: Buffered REST Publisher
 ---
 

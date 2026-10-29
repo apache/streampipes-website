@@ -132,11 +132,7 @@ module.exports = {
     "docusaurus-plugin-sass",
     [
       "@docusaurus/plugin-client-redirects",
-      {
-        "fromExtensions": [
-          "html"
-        ]
-      }
+      require('./src/redirects.js')
     ]
   ],
   "themeConfig": {

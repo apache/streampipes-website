@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.processor.staticmetadata
 title: Static Metadata Enricher
+description: "The Static Metadata Enricher processor adds predefined metadata fields to events."
 sidebar_label: Static Metadata Enricher
 ---
 

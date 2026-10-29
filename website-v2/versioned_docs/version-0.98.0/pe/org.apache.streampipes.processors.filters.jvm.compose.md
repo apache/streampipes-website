@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.compose
 title: Compose
+description: "Merges two event streams. Any time, a new input event arrives, it is merged with the last input event from the other event stream and forwarded."
 sidebar_label: Compose
 ---
 

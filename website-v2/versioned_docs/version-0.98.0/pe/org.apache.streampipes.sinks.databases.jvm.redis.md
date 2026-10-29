@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.databases.jvm.redis
 title: Redis
+description: "Redis data sink for Apache StreamPipes: Stores events in a Redis key-value store."
 sidebar_label: Redis
 ---
 

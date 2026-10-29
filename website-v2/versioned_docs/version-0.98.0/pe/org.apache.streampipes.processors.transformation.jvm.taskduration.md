@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.taskduration
 title: Task Duration
+description: "This processors computes the duration of a task, i.e., a field containing a task description."
 sidebar_label: Task Duration
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.switchoperator.string
 title: Switch Operator (String Input)
+description: "The Switch Operator (String Input) is a StreamPipes data processor that allows you to route events based on the value of a selected string field."
 sidebar_label: Switch Operator (String Input)
 ---
 

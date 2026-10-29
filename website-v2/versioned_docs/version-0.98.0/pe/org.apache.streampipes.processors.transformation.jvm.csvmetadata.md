@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.csvmetadata
 title: CSV Metadata Enricher
+description: "Upload a CSV file with static meta information that will be appended to each event. The file can contain different information for different keys in the stream."
 sidebar_label: CSV Metadata Enricher
 ---
 

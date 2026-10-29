@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.siddhi.listcollector
 title: List Collector
+description: "The List Collector processor aggregates values from a specified field into a list within a configurable batch window."
 sidebar_label: List Collector
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.sdt
 title: Swinging Door Trending (SDT) Filter Processor
+description: "The Swinging Door Trending (SDT) algorithm is a linear trend compression algorithm."
 sidebar_label: Swinging Door Trending (SDT) Filter Processor
 ---
 

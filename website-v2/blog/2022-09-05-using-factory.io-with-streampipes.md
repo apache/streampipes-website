@@ -1,5 +1,6 @@
 ---
 title: "Using Factory I/O with StreamPipes"
+description: "Tutorial: stream sensor data from a Factory I/O simulation with a Siemens S7-1200 PLC into Apache StreamPipes via the PLC4X S7 adapter and build dashboards."
 authors: [SvenO3]
 image: /img/blog/2022-09-05/plc.jpg
 tags: [tutorial]

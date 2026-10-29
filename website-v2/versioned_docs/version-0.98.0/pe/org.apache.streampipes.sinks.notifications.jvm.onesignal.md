@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.notifications.jvm.onesignal
 title: OneSignal
+description: "OneSignal data sink for Apache StreamPipes: This sink sends a push message to the OneSignal application."
 sidebar_label: OneSignal
 ---
 

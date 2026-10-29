@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.protocol.stream.tubemq
 title: Apache TubeMQ (InLong)
+description: "Apache TubeMQ (InLong) adapter for Apache StreamPipes: Consumes messages from an Apache TubeMQ broker."
 sidebar_label: Apache TubeMQ (InLong)
 ---
 

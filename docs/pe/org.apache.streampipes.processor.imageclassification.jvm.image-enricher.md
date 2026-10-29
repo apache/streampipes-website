@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processor.imageclassification.jvm.image-enricher
 title: Image Enricher
+description: "Image Enricher data processor for Apache StreamPipes: Image Enrichment: Enriches an + image with + given bounding box coordinates."
 sidebar_label: Image Enricher
 ---
 

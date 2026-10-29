@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.plc4x.generic.knxnet-ip
 title: KNXNet/IP
+description: "KNXNet/IP adapter for Apache StreamPipes: The adapter allows to connect devices supporting KNXNet/IP."
 sidebar_label: KNXNet/IP
 ---
 

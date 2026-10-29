@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.protocol.stream.rocketmq
 title: Apache RocketMQ
+description: "Apache RocketMQ adapter for Apache StreamPipes: Consumes messages from an Apache RocketMQ broker."
 sidebar_label: Apache RocketMQ
 ---
 

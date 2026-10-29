@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.fieldrename
 title: Field Renamer
+description: "The Field Renamer processor changes the name of fields in events."
 sidebar_label: Field Renamer
 ---
 

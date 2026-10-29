@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.databases.jvm.tsfile
 title: tsfile
+description: "tsfile data sink for Apache StreamPipes: Stores events in TsFile."
 sidebar_label: tsfile
 ---
 

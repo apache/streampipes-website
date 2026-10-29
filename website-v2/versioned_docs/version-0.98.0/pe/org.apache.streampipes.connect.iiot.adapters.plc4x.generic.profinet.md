@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.plc4x.generic.profinet
 title: Profinet
+description: "Profinet adapter for Apache StreamPipes: The adapter allows to connect devices supporting Profinet."
 sidebar_label: Profinet
 ---
 

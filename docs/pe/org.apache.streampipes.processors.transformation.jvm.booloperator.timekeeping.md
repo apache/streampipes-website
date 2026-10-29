@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.booloperator.timekeeping
 title: Measure Time Between Two Sensors
+description: "The Measure Time Between Two Sensors processor calculates the time difference between two boolean signals."
 sidebar_label: Measure Time Between Two Sensors
 ---
 

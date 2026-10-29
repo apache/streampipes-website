@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.count-array
 title: Count Array
+description: "The Count Array processor counts the number of elements in array/list fields."
 sidebar_label: Count Array
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.geo.jvm.latlong.processor.geocoder.googlemaps
 title: Geo Google Maps Geocoder
+description: "This processor computes the latitude and longitude values from a location (a place name such as \"Karlsruhe, Germany \") and adds the result to the event."
 sidebar_label: Geo Google Maps Geocoder
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.count-array
 title: Count Array
+description: "This processor takes a list field, computes the size of the list and appends the result to the event."
 sidebar_label: Count Array
 ---
 

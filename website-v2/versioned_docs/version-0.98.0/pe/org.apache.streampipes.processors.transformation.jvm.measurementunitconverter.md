@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.measurementunitconverter
 title: Measurement Unit Converter
+description: "Measurement Unit Converter data processor for Apache StreamPipes: Converts a unit of measurement to another one."
 sidebar_label: Measurement Unit Converter
 ---
 

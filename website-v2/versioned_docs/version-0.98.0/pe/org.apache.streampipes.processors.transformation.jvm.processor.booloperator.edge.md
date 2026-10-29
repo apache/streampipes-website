@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.processor.booloperator.edge
 title: Signal Edge Filter
+description: "Signal Edge Filter data processor for Apache StreamPipes: Observes a boolean value and forwards the event when a signal edge is detected."
 sidebar_label: Signal Edge Filter
 ---
 

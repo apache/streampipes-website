@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.processor.stringoperator.state
 title: String To State
+description: "The String To State processor transforms string properties into a list of state values."
 sidebar_label: String To State
 ---
 

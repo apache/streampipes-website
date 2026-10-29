@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.protocol.stream.file
 title: File Stream
+description: "The File Stream Adapter enables continuous streaming of file contents to Apache StreamPipes, creating a data stream for utilization within StreamPipes."
 sidebar_label: File Stream
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.influxdb.stream
 title: InfluxDB Stream Adapter
+description: "InfluxDB Stream Adapter adapter for Apache StreamPipes: Creates a data stream for an InfluxDB measurement."
 sidebar_label: InfluxDB Stream Adapter
 ---
 

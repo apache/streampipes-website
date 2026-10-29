@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.numericaltextfilter
 title: Numerical Text Filter
+description: "The Numerical Text Filter processor filters numerical values based on a given threshold and text values based on a given string."
 sidebar_label: Numerical Text Filter
 ---
 

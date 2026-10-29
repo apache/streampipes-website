@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.siddhi.topk
 title: Top k
+description: "Detects the increase of a numerical field over a customizable time window. Example: A temperature value increases by 10 percent within 5 minutes."
 sidebar_label: Top k
 ---
 

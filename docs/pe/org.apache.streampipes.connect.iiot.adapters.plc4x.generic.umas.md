@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.plc4x.generic.umas
 title: UMAS (Schneider Electric)
+description: "UMAS (Schneider Electric) adapter for Apache StreamPipes: The adapter allows to connect devices supporting UMAS (Schneider Electric)."
 sidebar_label: UMAS (Schneider Electric)
 ---
 

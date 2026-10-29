@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.netio.rest
 title: NETIO http JSON
+description: "NETIO http JSON adapter for Apache StreamPipes: Connect Robots running on ROS."
 sidebar_label: NETIO http JSON
 ---
 

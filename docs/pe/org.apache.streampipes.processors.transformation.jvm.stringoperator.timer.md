@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.stringoperator.timer
 title: String Timer
+description: "The String Timer processor measures how long a string field maintains a specific value."
 sidebar_label: String Timer
 ---
 

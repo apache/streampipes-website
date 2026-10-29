@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.plc4x.generic.logix
 title: Logix CIP
+description: "Logix CIP adapter for Apache StreamPipes: The adapter allows to connect devices supporting Logix CIP."
 sidebar_label: Logix CIP
 ---
 

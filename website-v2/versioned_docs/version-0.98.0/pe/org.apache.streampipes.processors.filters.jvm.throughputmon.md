@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.throughputmon
 title: Throughput Monitor
+description: "Throughput Monitor data processor for Apache StreamPipes: The Throughput Monitoring processor computes throughput statistics."
 sidebar_label: Throughput Monitor
 ---
 

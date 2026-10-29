@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.geo.jvm.latlong.processor.geocoder.googlemapsstatic
 title: Geo Google Maps Static Geocoder
+description: "This processor computes the latitude and longitude values from a fixed location (a place name such as \"Karlsruhe , Germany \") and adds the result to the event."
 sidebar_label: Geo Google Maps Static Geocoder
 ---
 

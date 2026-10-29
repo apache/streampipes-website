@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processor.imageclassification.jvm.generic-image-classification
 title: Generic Image Classification
+description: "Generic Image Classification data processor for Apache StreamPipes: Image + Classification Description (Generic Model)."
 sidebar_label: Generic Image Classification
 ---
 

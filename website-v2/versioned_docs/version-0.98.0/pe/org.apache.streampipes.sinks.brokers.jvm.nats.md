@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.brokers.jvm.nats
 title: NATS Publisher
+description: "NATS Publisher data sink for Apache StreamPipes: Publishes events to NATS broker."
 sidebar_label: NATS Publisher
 ---
 

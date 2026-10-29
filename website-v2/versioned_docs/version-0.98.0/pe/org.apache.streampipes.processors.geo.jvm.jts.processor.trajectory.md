@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.geo.jvm.jts.processor.trajectory
 title: Geo Single Trajectory Creator
+description: "This processor creates a JTS LineString geometry from JTS Points events, represent a trajectory."
 sidebar_label: Geo Single Trajectory Creator
 ---
 

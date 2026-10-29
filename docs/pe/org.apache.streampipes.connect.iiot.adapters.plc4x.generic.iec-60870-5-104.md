@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.plc4x.generic.iec-60870-5-104
 title: IEC 60870-5-104
+description: "IEC 60870-5-104 adapter for Apache StreamPipes: The adapter allows to connect devices supporting IEC 60870-5-104."
 sidebar_label: IEC 60870-5-104
 ---
 

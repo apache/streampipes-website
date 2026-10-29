@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.netio.mqtt
 title: NETIO MQTT M2M
+description: "NETIO MQTT M2M adapter for Apache StreamPipes: Connect Robots running on ROS."
 sidebar_label: NETIO MQTT M2M
 ---
 

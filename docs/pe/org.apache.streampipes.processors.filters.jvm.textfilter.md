@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.textfilter
 title: Text Filter
+description: "The Text Filter processor filters events based on text field content."
 sidebar_label: Text Filter
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Anomaly Detection with StreamPipes Functions in Python and ONNX
+description: "Tutorial: get historical data with the StreamPipes Python client, train an Isolation Forest for anomaly detection, export to ONNX and apply it to live data."
 authors: [bossenti]
 image: /img/blog/2024-03-26/prediction-analysis.png
 tags: [tutorial]
@@ -266,4 +267,4 @@ We can now access the live values of the prediction in the StreamPipes UI, e.g.,
 <p></p>
 
 From here on you can further work with the prediction events in StreamPipes, e.g., by sending notifications
-to [MS Teams](https://streampipes.apache.org/docs/next/pe/org.apache.streampipes.sinks.notifications.jvm.msteams/).
+to [MS Teams](https://streampipes.apache.org/docs/pe/org.apache.streampipes.sinks.notifications.jvm.msteams/).

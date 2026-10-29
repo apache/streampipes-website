@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.enricher.jvm.processor.trigonometry
 title: Trigonometry Functions
+description: "The Trigonometry Functions processor performs trigonometric calculations on numerical values."
 sidebar_label: Trigonometry Functions
 ---
 

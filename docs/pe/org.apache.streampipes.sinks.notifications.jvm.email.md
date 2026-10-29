@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.notifications.jvm.email
 title: Email Notification
+description: "Email Notification data sink for Apache StreamPipes: This sink sends an email to a specified receiver."
 sidebar_label: Email Notification
 ---
 

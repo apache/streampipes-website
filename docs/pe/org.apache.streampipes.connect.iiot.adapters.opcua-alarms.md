@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.opcua-alarms
 title: OPC UA Events
+description: "This adapter subscribes to OPC UA server events and emits read-only OPC UA event payloads."
 sidebar_label: OPC UA Events
 ---
 

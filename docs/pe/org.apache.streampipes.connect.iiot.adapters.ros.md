@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.ros
 title: ROS Bridge
+description: "ROS Bridge adapter for Apache StreamPipes: Connect Robots running on ROS."
 sidebar_label: ROS Bridge
 ---
 

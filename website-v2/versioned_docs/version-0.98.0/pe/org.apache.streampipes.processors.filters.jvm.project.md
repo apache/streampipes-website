@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.project
 title: Projection
+description: "Projection data processor for Apache StreamPipes: Outputs a selectable subset of an input event type."
 sidebar_label: Projection
 ---
 

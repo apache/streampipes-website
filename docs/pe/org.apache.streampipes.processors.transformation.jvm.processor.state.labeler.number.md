@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.processor.state.labeler.number
 title: Number Labeler
+description: "The Number Labeler processor adds labels to numerical values based on user-defined rules."
 sidebar_label: Number Labeler
 ---
 

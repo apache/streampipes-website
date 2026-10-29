@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.merge
 title: Synchronize Two Streams
+description: "The Merge By Time processor combines events from two data streams based on their timestamps."
 sidebar_label: Synchronize Two Streams
 ---
 

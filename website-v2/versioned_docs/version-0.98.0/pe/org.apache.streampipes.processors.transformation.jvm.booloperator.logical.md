@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.booloperator.logical
 title: Boolean Logical Operator
+description: "This processor performs the logical boolean operation b/w the vales of set of properties. A user can select the type of operation and set of properties."
 sidebar_label: Boolean Logical Operator
 ---
 

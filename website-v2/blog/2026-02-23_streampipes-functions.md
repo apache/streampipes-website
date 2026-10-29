@@ -1,5 +1,6 @@
 ---
 title: Persistent State for StreamPipes Functions
+description: "How persistent state works for StreamPipes Functions: a typed state store in the Java API lets Apache StreamPipes Functions resume after a service restart."
 authors: [tenthe]
 image: /img/blog/covers/engineering.png
 tags: [tutorial]

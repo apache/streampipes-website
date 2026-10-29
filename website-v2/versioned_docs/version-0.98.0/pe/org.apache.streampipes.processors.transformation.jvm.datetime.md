@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.datetime
 title: Datetime From String
+description: "The \"Datetime From String\" processor is a handy tool that helps convert human-readable datetime information into a format that machines can understand."
 sidebar_label: Datetime From String
 ---
 

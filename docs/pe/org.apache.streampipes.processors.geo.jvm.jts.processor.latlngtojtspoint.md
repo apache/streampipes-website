@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.geo.jvm.jts.processor.latlngtojtspoint
 title: Geo Create JTS Point
+description: "Geo Create JTS Point data processor for Apache StreamPipes: This processor creates a JTS Point geometry from latitude and longitude value."
 sidebar_label: Geo Create JTS Point
 ---
 

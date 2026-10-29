@@ -4,7 +4,7 @@ authors: [dominikriemer]
 image: /img/blog/covers/compare-node-red.png
 tags: [comparison]
 date: 2026-07-14
-description: "Node-RED and StreamPipes both have a flow editor, and that is roughly where the similarity ends. Where each one is strong, why StreamPipes is the better fit for professional machine data integration, and when to use which."
+description: "Node-RED and Apache StreamPipes both offer flow editors but solve different problems. Where each fits, notably OPC UA and PLC data, and when to pick which."
 ---
 
 A question we get a lot: "We already use Node-RED, why would we need StreamPipes?" It is a fair question. Both tools have a browser-based editor where you connect boxes into a flow, and if that is all you have seen of either, they look like the same thing. They are not, and this post tries to explain where the difference is, so you can pick the right one for the job, or use both.

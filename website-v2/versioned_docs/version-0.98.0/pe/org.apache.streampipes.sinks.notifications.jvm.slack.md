@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.notifications.jvm.slack
 title: Slack Notification
+description: "Slack Notification data sink for Apache StreamPipes: Slack bot to send notifications directly into your slack."
 sidebar_label: Slack Notification
 ---
 

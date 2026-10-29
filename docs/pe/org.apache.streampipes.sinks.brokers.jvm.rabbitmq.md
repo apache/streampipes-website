@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.brokers.jvm.rabbitmq
 title: RabbitMQ Publisher
+description: "RabbitMQ Publisher data sink for Apache StreamPipes: Forwards events to a RabbitMQ broker."
 sidebar_label: RabbitMQ Publisher
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Running StreamPipes the Kubernetes-Way using k3s
+description: "Tutorial for running Apache StreamPipes on a two-node Raspberry Pi 4 cluster with k3s, Helm and the StreamPipes Helm chart, from setup to deployment."
 authors: [wipatrick]
 image: /img/blog/2020-05-27/streampipes_k3s.png
 tags: [tutorial]

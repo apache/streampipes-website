@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.round
 title: Numeric Rounding
+description: "This processor rounds numeric values to the given decimal places. It supports multiple rounding strategies."
 sidebar_label: Numeric Rounding
 ---
 

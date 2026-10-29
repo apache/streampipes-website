@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.geo.jvm.jts.processor.buffergeometry
 title: Geo Buffer Geometry
+description: "Geo Buffer Geometry data processor for Apache StreamPipes: Creates a buffer polygon geometry from a geometry."
 sidebar_label: Geo Buffer Geometry
 ---
 

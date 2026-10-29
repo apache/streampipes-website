@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.plc4x.generic.s7
 title: Siemens S7 (Basic)
+description: "Siemens S7 (Basic) adapter for Apache StreamPipes: The adapter allows to connect devices supporting Siemens S7 (Basic)."
 sidebar_label: Siemens S7 (Basic)
 ---
 

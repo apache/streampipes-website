@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.enricher.jvm.processor.expression
 title: Math Expression
+description: "The Math Expression Evaluator processor allows you to perform mathematical calculations on numerical fields using the Apache Commons JEXL library."
 sidebar_label: Math Expression
 ---
 

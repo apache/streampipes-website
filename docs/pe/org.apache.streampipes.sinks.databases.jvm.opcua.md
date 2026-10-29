@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.databases.jvm.opcua
 title: OPC-UA
+description: "This data sink can be used to write values to an OPC-UA server. The sink supports both signed/encrypted and unencrypted communication."
 sidebar_label: OPC-UA
 ---
 

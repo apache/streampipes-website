@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.schema
 title: Merge stream with same schema
+description: "Merges two events by their schema. It checks two whether the schemas of two events are equal or not."
 sidebar_label: Merge stream with same schema
 ---
 

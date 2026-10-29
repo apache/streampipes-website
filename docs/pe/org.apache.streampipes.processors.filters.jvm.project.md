@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.project
 title: Projection
+description: "The Projection processor allows you to select a subset of fields from input events, creating a new event with only the specified fields."
 sidebar_label: Projection
 ---
 

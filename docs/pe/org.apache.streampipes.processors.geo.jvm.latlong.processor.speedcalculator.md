@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.geo.jvm.latlong.processor.speedcalculator
 title: Geo Speed Calculator
+description: "Calculates the speed (in km/h) based on latitude/longitude values in a data stream. Therefore, it uses the GPS and timestamps values of consecutive events."
 sidebar_label: Geo Speed Calculator
 ---
 

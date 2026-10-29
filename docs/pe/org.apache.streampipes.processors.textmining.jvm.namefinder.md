@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.textmining.jvm.namefinder
 title: Name Finder
+description: "Name Finder data processor for Apache StreamPipes: Loads a trained model which finds names like locations or organizations."
 sidebar_label: Name Finder
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.siddhi.numericalfilter
 title: Numerical Filter (Siddhi)
+description: "The Numerical Filter processor filters numerical values based on a given threshold."
 sidebar_label: Numerical Filter (Siddhi)
 ---
 

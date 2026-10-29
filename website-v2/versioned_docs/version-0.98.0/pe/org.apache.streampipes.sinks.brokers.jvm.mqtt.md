@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.brokers.jvm.mqtt
 title: MQTT Publisher
+description: "MQTT Publisher data sink for Apache StreamPipes: Publishes events to MQTT."
 sidebar_label: MQTT Publisher
 ---
 

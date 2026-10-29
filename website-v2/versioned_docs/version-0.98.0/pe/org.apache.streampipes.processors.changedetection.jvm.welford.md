@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.changedetection.jvm.welford
 title: Welford Change Detection
+description: "Performs change detection on a single dimension of the incoming data stream."
 sidebar_label: Welford Change Detection
 ---
 

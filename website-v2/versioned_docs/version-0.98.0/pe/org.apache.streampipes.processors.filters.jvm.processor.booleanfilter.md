@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.processor.booleanfilter
 title: Boolean Filter
+description: "Boolean Filter data processor for Apache StreamPipes: The Boolean Filter processor filters based on a boolean value field."
 sidebar_label: Boolean Filter
 ---
 

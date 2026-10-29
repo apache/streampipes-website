@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.geo.jvm.latlong.processor.distancecalculator.haversine
 title: Geo Distance Calculator (Haversine)
+description: "Calculates the distance between two latitude/longitude pairs in a single event with the Haversine formula."
 sidebar_label: Geo Distance Calculator (Haversine)
 ---
 
