@@ -2320,9 +2320,9 @@
 
 
 <a id="streampipes.functions.utils.data_stream_context"></a>
-  <div class="doc doc-contents first">
+    <div class="doc doc-contents first">
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2338,76 +2338,74 @@
 
 
 <h2 id="streampipes.functions.utils.data_stream_context.DataStreamContext" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">DataStreamContext</span><span class="p">(</span><span class="n">functions</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="n">broker</span><span class="p">)</span></code>
+              <code class="highlight language-python"><span class="n">DataStreamContext</span><span class="p">(</span><span class="n">functions</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="n">broker</span><span class="p">)</span></code>
 
 <a href="#streampipes.functions.utils.data_stream_context.DataStreamContext" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>Container for the context of a data stream.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>functions</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>StreamPipes Functions which require the data of this data stream.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><span title="typing.List">List</span>[<a class="autorefs autorefs-internal" title="streampipes.functions.streampipes_function.StreamPipesFunction" href="../../streampipes_function/#streampipes.functions.streampipes_function.StreamPipesFunction">StreamPipesFunction</a>]</code>
-                </span>
-            </p>
-          </td>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr>
-          <td><code>schema</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The schema of this data stream.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.model.resource.data_stream.DataStream" href="../../../model/resource/data_stream/#streampipes.model.resource.data_stream.DataStream">DataStream</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>broker</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The consumer to connect to this data stream.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.functions.broker.Consumer" href="../../broker/consumer/#streampipes.functions.broker.consumer.Consumer">Consumer</a></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>functions</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>StreamPipes Functions which require the data of this data stream.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="typing.List">List</span>[<a class="autorefs autorefs-internal" title="StreamPipesFunction (streampipes.functions.streampipes_function.StreamPipesFunction)" href="../../streampipes_function/#streampipes.functions.streampipes_function.StreamPipesFunction">StreamPipesFunction</a>]</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>schema</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The schema of this data stream.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="DataStream (streampipes.model.resource.data_stream.DataStream)" href="../../../model/resource/data_stream/#streampipes.model.resource.data_stream.DataStream">DataStream</a></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>broker</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The consumer to connect to this data stream.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="Consumer (streampipes.functions.broker.Consumer)" href="../../broker/consumer/#streampipes.functions.broker.consumer.Consumer">Consumer</a></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -2420,70 +2418,67 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="streampipes.functions.utils.data_stream_context.DataStreamContext.add_function" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">add_function</span><span class="p">(</span><span class="n">function</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">add_function</span><span class="p">(</span><span class="n">function</span><span class="p">)</span></code>
 
 <a href="#streampipes.functions.utils.data_stream_context.DataStreamContext.add_function" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Adds a new StreamPipes Function.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>PARAMETER</b></th>
-        <th><b> DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
+<table>
+      <thead>
         <tr>
-          <td><code>function</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>StreamPipesFunction which requires this data stream.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code><a class="autorefs autorefs-internal" title="streampipes.functions.streampipes_function.StreamPipesFunction" href="../../streampipes_function/#streampipes.functions.streampipes_function.StreamPipesFunction">StreamPipesFunction</a></code>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>function</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>StreamPipesFunction which requires this data stream.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="StreamPipesFunction (streampipes.functions.streampipes_function.StreamPipesFunction)" href="../../streampipes_function/#streampipes.functions.streampipes_function.StreamPipesFunction">StreamPipesFunction</a></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code>None</code>
                 </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><b>RETURNS</b></th>
-        <th><b>DESCRIPTION</b></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-              <span class="doc-returns-annotation">
-                  <code>None</code>
-              </span>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
 
@@ -2491,8 +2486,7 @@
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -2501,7 +2495,7 @@
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2510,7 +2504,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 7, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2025 02:35:20">July 26, 2025</span>
       
     
   </small>
