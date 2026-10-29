@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.brokers.jvm.tubemq
 title: TubeMQ (InLong) Publisher
+description: "TubeMQ (InLong) Publisher data sink for Apache StreamPipes: Publishes events to Apache TubeMQ (InLong)."
 sidebar_label: TubeMQ (InLong) Publisher
 ---
 

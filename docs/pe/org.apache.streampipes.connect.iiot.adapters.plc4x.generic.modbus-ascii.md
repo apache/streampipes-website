@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.plc4x.generic.modbus-ascii
 title: Modbus ASCII
+description: "Modbus ASCII adapter for Apache StreamPipes: The adapter allows to connect devices supporting Modbus ASCII."
 sidebar_label: Modbus ASCII
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.textfilter
 title: Text Filter
+description: "Text Filter data processor for Apache StreamPipes: The Text Filter processor filters text values based on a given string."
 sidebar_label: Text Filter
 ---
 

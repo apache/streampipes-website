@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.databases.jvm.parquet
 title: parquet
+description: "parquet data sink for Apache StreamPipes: Stores events in Parquet."
 sidebar_label: parquet
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.plc4x.modbus
 title: PLC4X MODBUS
+description: "PLC4X MODBUS adapter for Apache StreamPipes: The Modbus adapter allows to connect to a PLC using the Modbus specification."
 sidebar_label: PLC4X MODBUS
 ---
 

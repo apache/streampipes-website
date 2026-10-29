@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.fieldhasher
 title: Field Hasher
+description: "The Field Hasher processor is a data transformation component that applies cryptographic hash functions to string values in a data stream."
 sidebar_label: Field Hasher
 ---
 

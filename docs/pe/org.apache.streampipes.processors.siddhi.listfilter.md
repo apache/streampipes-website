@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.siddhi.listfilter
 title: List Filter
+description: "The List Filter processor filters events based on the presence of a specific value in a list field."
 sidebar_label: List Filter
 ---
 

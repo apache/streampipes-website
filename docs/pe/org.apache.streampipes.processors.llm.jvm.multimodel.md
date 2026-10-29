@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.llm.jvm.multimodel
 title: Multi-Model Prompt Processor
+description: "Choose between OpenAI, Anthropic or Ollama / Llama models and keep a stateless, windowed or full conversation when streaming events through StreamPipes."
 sidebar_label: Multi-Model Prompt Processor
 ---
 

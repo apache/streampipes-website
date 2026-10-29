@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.brokers.jvm.kafka
 title: Kafka Publisher
+description: "Kafka Publisher data sink for Apache StreamPipes: Publishes events to Apache Kafka."
 sidebar_label: Kafka Publisher
 ---
 

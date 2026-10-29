@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.enricher.jvm.processor.math.staticmathop
 title: Static Math
+description: "The Static Math Operation processor performs arithmetic calculations between a numerical field and a static value."
 sidebar_label: Static Math
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.plc4x.generic.open-protocol
 title: Open-Protocol
+description: "Open-Protocol adapter for Apache StreamPipes: The adapter allows to connect devices supporting Open-Protocol."
 sidebar_label: Open-Protocol
 ---
 

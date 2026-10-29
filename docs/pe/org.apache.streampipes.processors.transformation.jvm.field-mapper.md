@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.field-mapper
 title: Field Mapper
+description: "The Field Mapper processor combines multiple fields into a single field by computing an MD5 hash value of their combined contents."
 sidebar_label: Field Mapper
 ---
 

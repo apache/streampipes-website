@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.protocol.stream.httpserver
 title: HTTP Server
+description: "This adapter provides an HTTP endpoint for ingesting events. Data sent to this endpoint via POST requests is transformed into StreamPipes events."
 sidebar_label: HTTP Server
 ---
 

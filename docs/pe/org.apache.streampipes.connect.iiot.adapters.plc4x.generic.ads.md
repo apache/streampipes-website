@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.plc4x.generic.ads
 title: Beckhoff TwinCat ADS
+description: "Beckhoff TwinCat ADS adapter for Apache StreamPipes: The adapter allows to connect devices supporting Beckhoff TwinCat ADS."
 sidebar_label: Beckhoff TwinCat ADS
 ---
 

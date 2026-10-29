@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.split-array
 title: Split Array
+description: "The Split Array processor transforms array fields into multiple individual events, with each array element becoming a separate event."
 sidebar_label: Split Array
 ---
 

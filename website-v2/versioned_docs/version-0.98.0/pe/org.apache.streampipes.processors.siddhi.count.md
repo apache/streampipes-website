@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.siddhi.count
 title: Count Value Occurrence
+description: "Performs an aggregation based on a given field and outputs the number of occurrences. Example: Count the number of vehicle positions per vehicleId."
 sidebar_label: Count Value Occurrence
 ---
 

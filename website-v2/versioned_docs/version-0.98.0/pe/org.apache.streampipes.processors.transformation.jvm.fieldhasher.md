@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.fieldhasher
 title: Field Hasher
+description: "The Field Hasher uses an algorithm to encode values in a field. The Field Hasher can use MD5, SHA1 or SHA2 to hash field values."
 sidebar_label: Field Hasher
 ---
 

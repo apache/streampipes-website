@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.booloperator.logical
 title: Boolean Logical Operator
+description: "The Boolean Logical Operator processor performs logical operations on multiple boolean fields."
 sidebar_label: Boolean Logical Operator
 ---
 

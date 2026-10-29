@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.geo.jvm.jts.processor.epsg
 title: Geo EPSG Code
+description: "This processor adds an integer value to the event. This integer value represents an EPSG Code as an Spatial Reference System Identifier an (SRID)."
 sidebar_label: Geo EPSG Code
 ---
 

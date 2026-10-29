@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.textmining.jvm.sentencedetection
 title: Sentence Detection (English)
+description: "Detects sentences in a text and splits the text accordingly. Only works with english sentences."
 sidebar_label: Sentence Detection (English)
 ---
 

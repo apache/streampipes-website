@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.protocol.stream.pulsar
 title: Apache Pulsar
+description: "Apache Pulsar adapter for Apache StreamPipes: Consumes messages from an Apache Pulsar broker."
 sidebar_label: Apache Pulsar
 ---
 

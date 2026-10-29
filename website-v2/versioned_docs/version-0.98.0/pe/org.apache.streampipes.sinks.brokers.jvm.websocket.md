@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.brokers.jvm.websocket
 title: Websocket Server
+description: "Websocket Server data sink for Apache StreamPipes: Send a message to a connected websocket client."
 sidebar_label: Websocket Server
 ---
 

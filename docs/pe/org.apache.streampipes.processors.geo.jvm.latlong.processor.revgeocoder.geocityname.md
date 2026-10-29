@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.geo.jvm.latlong.processor.revgeocoder.geocityname
 title: Geo City Name Reverse Decoder
+description: "This processor computes city name based on given lat/lng coordinates that are transmitted as fields from an event."
 sidebar_label: Geo City Name Reverse Decoder
 ---
 

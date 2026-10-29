@@ -17,6 +17,8 @@ Node.js(at most v18) and npm are required to build the documentation.
 * Run ``npm run start`` to start the documentation for debugging purposes. The content will be served on ``http://localhost:3000``
 * Run ``npm run build`` to build the documentation This will create a folder ``website-v2/build`` that includes all required static files.
 * Run ``npm run ds-version NEW_VERSION`` to release a new docs version.
+* Python docs: the ``update-python-docs`` workflow only refreshes ``docs-python/dev``. For a release, copy the built docs to ``docs-python/NEW_VERSION``, add the version to ``docs-python/versions.json`` with the ``latest`` alias, and replace both ``docs-python/latest`` and the unversioned files in ``docs-python/`` with a copy of the new version (every page's canonical URL points to ``latest``).
+* Pipeline element docs are synced from the main repo by ``update-extensions-docs``; run ``node scripts/add-pe-descriptions.js`` in ``website-v2`` afterwards to restore the meta descriptions.
 
 ## Deploy
 

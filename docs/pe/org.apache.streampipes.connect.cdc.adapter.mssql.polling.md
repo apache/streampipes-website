@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.cdc.adapter.mssql.polling
 title: Microsoft SQL Server Table Polling
+description: "This adapter polls appended rows from one ordinary SQL Server table. It does not use Debezium and does not require Change Data Capture (CDC)."
 sidebar_label: Microsoft SQL Server Table Polling
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.merge
 title: Synchronize Two Streams
+description: "Merges two event streams by their timestamp. Two events of the different streams are merged when they occure to the same time."
 sidebar_label: Synchronize Two Streams
 ---
 

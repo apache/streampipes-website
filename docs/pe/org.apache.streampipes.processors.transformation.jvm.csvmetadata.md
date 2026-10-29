@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.csvmetadata
 title: CSV Metadata Enricher
+description: "The CSV Metadata Enricher processor adds additional fields to events by looking up values in a CSV file."
 sidebar_label: CSV Metadata Enricher
 ---
 

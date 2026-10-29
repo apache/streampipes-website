@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.movingaverage
 title: Moving Average
+description: "Moving Average data processor for Apache StreamPipes: Smooths the data stream by the mean/median of the last n values."
 sidebar_label: Moving Average
 ---
 

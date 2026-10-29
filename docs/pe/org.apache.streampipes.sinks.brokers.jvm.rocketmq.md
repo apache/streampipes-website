@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.brokers.jvm.rocketmq
 title: RocketMQ Publisher
+description: "RocketMQ Publisher data sink for Apache StreamPipes: Publishes events to Apache RocketMQ."
 sidebar_label: RocketMQ Publisher
 ---
 

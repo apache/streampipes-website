@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.opcua
 title: OPC UA
+description: "OPC UA adapter for Apache StreamPipes: Reads values from an OPC-UA server repeatedly."
 sidebar_label: OPC UA
 ---
 

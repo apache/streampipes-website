@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.databases.ditto
 title: Eclipse Ditto
+description: "Eclipse Ditto data sink for Apache StreamPipes: Forwards events to the Eclipse Ditto API."
 sidebar_label: Eclipse Ditto
 ---
 

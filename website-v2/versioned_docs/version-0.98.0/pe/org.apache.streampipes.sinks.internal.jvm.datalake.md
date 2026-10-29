@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.internal.jvm.datalake
 title: Data Lake
+description: "Stores events in the internal data lake so that data can be visualized in the live dashboard or in the data explorer."
 sidebar_label: Data Lake
 ---
 

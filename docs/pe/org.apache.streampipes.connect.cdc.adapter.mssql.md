@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.cdc.adapter.mssql
 title: Microsoft SQL Server CDC
+description: "This adapter uses the embedded Debezium Engine to capture change events from a CDC-enabled Microsoft SQL Server table."
 sidebar_label: Microsoft SQL Server CDC
 ---
 

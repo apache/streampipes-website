@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.limit
 title: Rate Limit
+description: "The Rate Limit processor controls the frequency of events in a data stream by applying various windowing strategies."
 sidebar_label: Rate Limit
 ---
 

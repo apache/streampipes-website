@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.geo.jvm.jts.processor.validation.simple
 title: Geo Geometry Validation Filter
+description: "Geo Geometry Validation Filter data processor for Apache StreamPipes: Checks the geometry event if the geometry is simple and / or empty."
 sidebar_label: Geo Geometry Validation Filter
 ---
 

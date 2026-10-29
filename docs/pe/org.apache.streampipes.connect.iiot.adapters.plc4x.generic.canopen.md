@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.plc4x.generic.canopen
 title: CANopen
+description: "CANopen adapter for Apache StreamPipes: The adapter allows to connect devices supporting CANopen."
 sidebar_label: CANopen
 ---
 

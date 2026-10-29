@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.switchoperator.boolean
 title: Switch Operator (Boolean Input)
+description: "The Switch Operator (Boolean Input) is a StreamPipes data processor that allows you to route events based on the value of a selected boolean field."
 sidebar_label: Switch Operator (Boolean Input)
 ---
 

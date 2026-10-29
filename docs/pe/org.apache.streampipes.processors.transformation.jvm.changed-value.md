@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.changed-value
 title: Value Changed
+description: "The Value Changed processor detects changes in field values and outputs events only when changes occur."
 sidebar_label: Value Changed
 ---
 

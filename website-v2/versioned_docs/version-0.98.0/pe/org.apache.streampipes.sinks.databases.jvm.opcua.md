@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.databases.jvm.opcua
 title: OPC-UA
+description: "OPC-UA data sink for Apache StreamPipes: Allows to write events to an OPC-UA server."
 sidebar_label: OPC-UA
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.fieldrename
 title: Field Renamer
+description: "Replaces the runtime name of an event property with a custom defined name. Useful for data ingestion purposes where a specific event schema is required."
 sidebar_label: Field Renamer
 ---
 

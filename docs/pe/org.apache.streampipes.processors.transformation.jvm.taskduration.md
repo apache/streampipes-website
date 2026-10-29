@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.taskduration
 title: Task Duration
+description: "The Task Duration processor calculates the time duration between state changes in a task field."
 sidebar_label: Task Duration
 ---
 

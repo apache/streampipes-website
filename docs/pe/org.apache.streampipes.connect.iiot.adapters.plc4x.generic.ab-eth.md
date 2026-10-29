@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.adapters.plc4x.generic.ab-eth
 title: Allen Bradley ETH
+description: "Allen Bradley ETH adapter for Apache StreamPipes: The adapter allows to connect devices supporting Allen Bradley ETH."
 sidebar_label: Allen Bradley ETH
 ---
 

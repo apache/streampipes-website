@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.enricher.jvm.processor.expression
 title: Math Expression
+description: "Math Expression data processor for Apache StreamPipes: A pipeline element that evaluates Math expressions using the Apache Commons JEXL library."
 sidebar_label: Math Expression
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor
 title: Timestamp Extractor
+description: "This processor extracts a timestamp into the individual time fields (e.g. day field, hour field, ....)."
 sidebar_label: Timestamp Extractor
 ---
 

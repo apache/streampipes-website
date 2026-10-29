@@ -1,5 +1,6 @@
 ---
 title: How to understand your machine data?
+description: "Introduction to analyzing machine and sensor data streams with StreamPipes: adapters, middleware, event pipelines and sinks, on a cooling system example."
 authors: [tenthe]
 image: /img/blog/2018-06-18/01_motivation.png
 tags: [tutorial]

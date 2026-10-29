@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.internal.jvm.notification
 title: Notification
+description: "Displays a notification in the UI panel of StreamPipes."
 sidebar_label: Notification
 ---
 

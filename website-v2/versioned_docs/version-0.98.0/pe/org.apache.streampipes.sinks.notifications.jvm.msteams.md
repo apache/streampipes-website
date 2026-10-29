@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.notifications.jvm.msteams
 title: MS Teams Sink
+description: "The MS Teams Sink is a StreamPipes data sink that facilitates the sending of messages to a Microsoft Teams channel through a Webhook URL."
 sidebar_label: MS Teams Sink
 ---
 

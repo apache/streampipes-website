@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.geo.jvm.latlong.processor.distancecalculator.haversinestatic
 title: Geo Distance Calculator Static (Haversine)
+description: "Calculates the distance with the Haversine formula between a fixed location (e.g., a place) and a latitude/longitude pair of an input event."
 sidebar_label: Geo Distance Calculator Static (Haversine)
 ---
 

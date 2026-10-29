@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.duration-value
 title: Calculate Duration
+description: "This processor calculates the duration for a given stream with a start timestamp and an end timestamp."
 sidebar_label: Calculate Duration
 ---
 

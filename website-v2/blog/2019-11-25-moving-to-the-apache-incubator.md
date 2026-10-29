@@ -1,5 +1,6 @@
 ---
 title: Moving to the Apache Incubator
+description: "StreamPipes moves to the Apache Incubator: project history since 2014, why it chose the Apache Software Foundation and what changes for the community."
 authors: [dominikriemer]
 image: /img/blog/2019-11-25/2019-11_StreamPipes-v0.png
 tags: [community]

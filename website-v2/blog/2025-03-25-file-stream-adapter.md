@@ -1,5 +1,6 @@
 ---
 title: Explore StreamPipes with Data Simulators!
+description: "Try Apache StreamPipes without hardware: the File Stream Adapter replays JSON, CSV or XML sensor data as a simulated live stream for experiments and PoCs."
 authors: [tenthe]
 image: /img/blog/2025-03-25/adapter_configuration.png
 tags: [tutorial]

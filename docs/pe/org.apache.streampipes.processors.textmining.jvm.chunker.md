@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.textmining.jvm.chunker
 title: Chunker (English)
+description: "Segments given tokens into chunks (e.g. noun groups, verb groups, ...) and appends the found chunks to the stream."
 sidebar_label: Chunker (English)
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processor.imageclassification.qrcode
 title: QR Code Reader
+description: "QR Code Reader data processor for Apache StreamPipes: QR Code Reader: Detects a QR Code in an image."
 sidebar_label: QR Code Reader
 ---
 

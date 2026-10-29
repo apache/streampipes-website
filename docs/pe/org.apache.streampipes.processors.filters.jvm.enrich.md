@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.enrich
 title: Merge Two Streams
+description: "The Merge By Enrich processor combines two event streams by enriching one stream with properties from the other."
 sidebar_label: Merge Two Streams
 ---
 

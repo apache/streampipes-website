@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.processor.booleanfilter
 title: Boolean Filter
+description: "The Boolean Filter processor filters events based on a boolean field value."
 sidebar_label: Boolean Filter
 ---
 

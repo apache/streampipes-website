@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.filters.jvm.compose
 title: Compose
+description: "The Compose processor merges two event streams by combining their properties."
 sidebar_label: Compose
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.adapters.image.stream
 title: Image Upload (Stream)
+description: "Image Upload (Stream) adapter for Apache StreamPipes: Upload a zip file of images and create an event per image."
 sidebar_label: Image Upload (Stream)
 ---
 

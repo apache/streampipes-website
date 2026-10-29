@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.processor.timestampextractor
 title: Timestamp Extractor
+description: "The Timestamp Extractor processor breaks down a timestamp into its individual time components."
 sidebar_label: Timestamp Extractor
 ---
 

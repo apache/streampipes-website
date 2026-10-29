@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.databases.jvm.milvus
 title: Milvus
+description: "Milvus data sink for Apache StreamPipes: Stores events in a Milvus database."
 sidebar_label: Milvus
 ---
 

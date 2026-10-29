@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.transform-to-boolean
 title: Transform to boolean
+description: "Transform to boolean data processor for Apache StreamPipes: This processors transforms numbers and strings to boolean values."
 sidebar_label: Transform to boolean
 ---
 

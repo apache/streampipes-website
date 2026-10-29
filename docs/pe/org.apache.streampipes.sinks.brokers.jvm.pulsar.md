@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.sinks.brokers.jvm.pulsar
 title: Pulsar Publisher
+description: "Pulsar Publisher data sink for Apache StreamPipes: Publishes events to Apache Pulsar."
 sidebar_label: Pulsar Publisher
 ---
 

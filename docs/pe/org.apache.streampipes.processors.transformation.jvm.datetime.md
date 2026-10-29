@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.datetime
 title: Datetime From String
+description: "The Datetime From String processor converts string timestamps into millisecond timestamps."
 sidebar_label: Datetime From String
 ---
 

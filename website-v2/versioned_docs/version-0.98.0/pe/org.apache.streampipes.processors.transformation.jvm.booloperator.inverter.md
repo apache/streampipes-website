@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.booloperator.inverter
 title: Boolean Inverter
+description: "This processor requires a boolean value in the data stream and inverts its value. (e.g. true -> flase)."
 sidebar_label: Boolean Inverter
 ---
 

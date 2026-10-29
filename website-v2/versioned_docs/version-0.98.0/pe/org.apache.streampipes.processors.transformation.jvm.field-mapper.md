@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.field-mapper
 title: Field Mapper
+description: "Field Mapper data processor for Apache StreamPipes: Replaces one or more fields with a new field and computes a hash value of these fields."
 sidebar_label: Field Mapper
 ---
 

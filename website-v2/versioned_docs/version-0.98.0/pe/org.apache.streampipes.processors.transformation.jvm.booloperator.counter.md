@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.processors.transformation.jvm.booloperator.counter
 title: Boolean Counter
+description: "This processor monitors a boolean value and counts how often the value of the boolean changes."
 sidebar_label: Boolean Counter
 ---
 

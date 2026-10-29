@@ -1,6 +1,7 @@
 ---
 id: org.apache.streampipes.connect.iiot.protocol.stream.http
 title: HTTP Stream
+description: "HTTP Stream adapter for Apache StreamPipes: Continuously fetched events from an HTTP REST endpoint."
 sidebar_label: HTTP Stream
 ---
 
