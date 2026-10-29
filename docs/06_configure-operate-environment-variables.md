@@ -198,6 +198,18 @@ These variables configure file and console logging behavior.
 | `SP_LOGGING_FILE_DIR` | Core + Extensions | `logs` | Directory used for file-based logs. |
 | `SP_LOGGING_FILE_PATTERN` | Core + Extensions | `%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n` | Logback-style pattern used for file logging. |
 
+## Audit logging
+
+These variables configure optional audit-event storage in InfluxDB. For the activation procedure and the list of recorded events, see [Audit Logging](./06_configure-operate-audit-logging.md).
+
+| Env Variable Name | Scope | Default Value | Description |
+|---|---|---|---|
+| `SP_AUDIT_ENABLED` | Core | `false` | Enables audit logging. |
+| `SP_AUDIT_INFLUX_URL` | Core | Empty | URL of the InfluxDB instance used to store audit events. |
+| `SP_AUDIT_INFLUX_DATABASE` | Core | Empty | Database used to store audit events. |
+| `SP_AUDIT_INFLUX_TOKEN` | Core | Empty | Authentication token for the audit InfluxDB instance. Treat this value as a secret. |
+| `SP_AUDIT_RETENTION_SCHEDULER_CRON` | Core | Empty | Six-field cron expression used to schedule the audit-retention job. |
+
 ## Load management and resource balancing
 
 These variables influence the optional load-management features and their weighting model.

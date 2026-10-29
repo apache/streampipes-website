@@ -71,6 +71,7 @@
         "configure-operate-deployment",
         "configure-operate-tls",
         "configure-operate-environment-variables",
+        "configure-operate-audit-logging",
         "configure-operate-general-settings",
         "configure-operate-extensions",
         "configure-operate-extension-services",
