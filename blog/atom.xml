@@ -56,7 +56,7 @@
         <id>https://streampipes.apache.org/blog/2026/07/14/streampipes-vs-node-red/</id>
         <link href="https://streampipes.apache.org/blog/2026/07/14/streampipes-vs-node-red/"/>
         <updated>2026-07-14T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Node-RED and StreamPipes both have a flow editor, and that is roughly where the similarity ends. Where each one is strong, why StreamPipes is the better fit for professional machine data integration, and when to use which.]]></summary>
+        <summary type="html"><![CDATA[Node-RED and Apache StreamPipes both offer flow editors but solve different problems. Where each fits, notably OPC UA and PLC data, and when to pick which.]]></summary>
         <content type="html"><![CDATA[<p>A question we get a lot: "We already use Node-RED, why would we need StreamPipes?" It is a fair question. Both tools have a browser-based editor where you connect boxes into a flow, and if that is all you have seen of either, they look like the same thing. They are not, and this post tries to explain where the difference is, so you can pick the right one for the job, or use both.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-node-red-is-built-for">What Node-RED is built for<a href="https://streampipes.apache.org/blog/2026/07/14/streampipes-vs-node-red/#what-node-red-is-built-for" class="hash-link" aria-label="Direct link to What Node-RED is built for" title="Direct link to What Node-RED is built for" translate="no">​</a></h2>
 <p>Node-RED is a general-purpose, flow-based programming tool. A flow runs inside a single Node.js process, and the node library covers almost everything: HTTP, MQTT, serial ports, databases, cloud services, and thousands of community nodes. It is excellent for wiring devices and services together, for prototyping, for small automations at the edge, and for home and lab setups. A single developer can build something useful in an afternoon.</p>
@@ -87,7 +87,7 @@
         <id>https://streampipes.apache.org/blog/2026/03/21/_streampipes-with-windows-and-podman/</id>
         <link href="https://streampipes.apache.org/blog/2026/03/21/_streampipes-with-windows-and-podman/"/>
         <updated>2026-03-21T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[When it comes to ease of use, Docker Desktop is the goto on windows platform, however for business use there are licensing involved.]]></summary>
+        <summary type="html"><![CDATA[Run Apache StreamPipes on Windows with Podman Desktop and WSL as a Docker Desktop alternative: install podman-compose, adjust the compose file and start up.]]></summary>
         <content type="html"><![CDATA[<p>When it comes to ease of use, Docker Desktop is the goto on windows platform, however for business use there are licensing involved.</p>
 <p>So why not use Podman Desktop, it’s Docker compatible?
 Well yes, almost, would be the answer.<br>
@@ -191,7 +191,7 @@ Here is how the docker-compose.yml should look loke</p>
         <id>https://streampipes.apache.org/blog/2026/02/23/_streampipes-functions/</id>
         <link href="https://streampipes.apache.org/blog/2026/02/23/_streampipes-functions/"/>
         <updated>2026-02-23T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[With the introduction of StreamPipes Functions, Apache StreamPipes provides a lightweight way to attach fixed runtime logic to existing streams — without creating a full pipeline element.]]></summary>
+        <summary type="html"><![CDATA[How persistent state works for StreamPipes Functions: a typed state store in the Java API lets Apache StreamPipes Functions resume after a service restart.]]></summary>
         <content type="html"><![CDATA[<p>With the introduction of <strong>StreamPipes Functions</strong>, Apache StreamPipes provides a lightweight way to attach fixed runtime logic to existing streams — without creating a full pipeline element.</p>
 <p>Functions are ideal when:</p>
 <ul>
@@ -317,7 +317,7 @@ No additional infrastructure required.</p>
         <id>https://streampipes.apache.org/blog/2025/12/15/_release-098/</id>
         <link href="https://streampipes.apache.org/blog/2025/12/15/_release-098/"/>
         <updated>2025-12-15T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Apache StreamPipes 0.98.0 is a major step forward in the evolution of the platform, delivering powerful dashboard]]></summary>
+        <summary type="html"><![CDATA[Apache StreamPipes 0.98.0 adds OPC UA X.509 authentication, dashboard cloning with kiosk mode and a Material 3 UI, and defaults to NATS. Release notes.]]></summary>
         <content type="html"><![CDATA[<p>Apache StreamPipes 0.98.0 is a major step forward in the evolution of the platform, delivering <strong>powerful dashboard
 enhancements, extended OPC UA capabilities, improved security and authentication</strong>, and a large set of <strong>UX and
 architectural refinements</strong>.</p>
@@ -507,7 +507,7 @@ or the <a href="mailto:dev@streampipes.apache.org" target="_blank" rel="noopener
         <id>https://streampipes.apache.org/blog/2025/06/11/oi4-adapter/</id>
         <link href="https://streampipes.apache.org/blog/2025/06/11/oi4-adapter/"/>
         <updated>2025-06-11T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Integrating industrial sensors into IIoT architectures often poses significant challenges—especially for IT teams unfamiliar with traditional operational technologies (OT).]]></summary>
+        <summary type="html"><![CDATA[Connect IO-Link vibration sensors to Apache StreamPipes via an IO-Link master and the OI4 MQTT adapter for condition monitoring, alerts and time series.]]></summary>
         <content type="html"><![CDATA[<p>Integrating industrial sensors into IIoT architectures often poses significant challenges—especially for IT teams unfamiliar with traditional operational technologies (OT).
 The complexity of fieldbus protocols, bespoke integrations, and vendor lock-in can create significant barriers to digital transformation on the shop floor.</p>
 <p>This blog post introduces an easy, scalable approach to bridging this IT/OT divide using <strong>IO-Link</strong>, a standardized protocol for industrial sensors, and <strong>Apache StreamPipes</strong>.
@@ -600,7 +600,7 @@ From a simple dashboard setup to complex, multi-sensor condition monitoring pipe
         <id>https://streampipes.apache.org/blog/2025/05/20/opc-ua-certificates/</id>
         <link href="https://streampipes.apache.org/blog/2025/05/20/opc-ua-certificates/"/>
         <updated>2025-05-20T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[With the release of Apache StreamPipes 0.97.0, the OPC UA adapter now supports encrypted communication using]]></summary>
+        <summary type="html"><![CDATA[Guide to secure OPC UA connections in Apache StreamPipes 0.97.0: create certificates with OpenSSL and set up an Eclipse Milo server with Sign and Encrypt.]]></summary>
         <content type="html"><![CDATA[<p>With the release of Apache StreamPipes 0.97.0, the OPC UA adapter now supports encrypted communication using
 certificates, enhancing security for Industrial IoT applications. This guide walks you through generating certificates,
 configuring them in StreamPipes, and setting up your OPC UA server for secure communication.</p>
@@ -696,7 +696,7 @@ We'll move the server certificate from the <code>rejected</code> folder to the <
         <id>https://streampipes.apache.org/blog/2025/04/30/usage-based-maintanence/</id>
         <link href="https://streampipes.apache.org/blog/2025/04/30/usage-based-maintanence/"/>
         <updated>2025-04-30T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[In many manufacturing settings, maintenance is still scheduled at fixed time intervals — often based on past experience rather than actual machine usage.]]></summary>
+        <summary type="html"><![CDATA[Usage-based maintenance with Apache StreamPipes: count machine operations from a boolean S7 signal, chart usage and send an email when service is due.]]></summary>
         <content type="html"><![CDATA[<p>In many manufacturing settings, maintenance is still scheduled at fixed time intervals — often based on past experience rather than actual machine usage.
 This approach can lead to unnecessary servicing or, worse, unexpected breakdowns.
 A common limitation is that many machines, especially older ones, offer only minimal sensor data, making advanced maintenance strategies seem out of reach.</p>
@@ -856,7 +856,7 @@ This flag is streamed using an Apache StreamPipes S7 adapter. The stream also in
         <id>https://streampipes.apache.org/blog/2025/04/28/prompt-processor/</id>
         <link href="https://streampipes.apache.org/blog/2025/04/28/prompt-processor/"/>
         <updated>2025-04-28T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Need a quick sentiment check, a rolling summary, or a safety rule that’s just a bit too fuzzy for SQL?]]></summary>
+        <summary type="html"><![CDATA[Use the Multi-Model Prompt Processor to add OpenAI, Anthropic or Ollama Llama LLMs to Apache StreamPipes pipelines for sentiment checks, summaries and rules.]]></summary>
         <content type="html"><![CDATA[<img src="https://streampipes.apache.org/img/blog/2025-04-28/prompt-processor-pipeline.png" alt="Prompt Processor in Pipeline">
 <p>Need a quick sentiment check, a rolling summary, or a safety rule that’s just a bit too fuzzy for SQL?<br>
 <!-- -->With the <strong>Multi-Model Prompt Processor</strong> you can drop the full might of OpenAI, Anthropic, or your own Llama into any
@@ -921,7 +921,7 @@ drops straight into your pipeline and starts working within minutes.</p>
         <id>https://streampipes.apache.org/blog/2025/04/09/javascript-processor/</id>
         <link href="https://streampipes.apache.org/blog/2025/04/09/javascript-processor/"/>
         <updated>2025-04-09T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Have a use case where none of the existing processors fit?]]></summary>
+        <summary type="html"><![CDATA[Learn how the JavaScript Evaluator Processor in Apache StreamPipes transforms, filters and enriches events with custom JavaScript, including stateful logic.]]></summary>
         <content type="html"><![CDATA[<p><strong>Have a use case where none of the existing processors fit?</strong><br>
 <!-- -->Don’t worry—we’ve got just the thing for you.</p>
 <p>The <strong>JavaScript Evaluator Processor</strong> in Apache StreamPipes allows you to define custom event logic with just a few lines of JavaScript. Whether you want to modify values, filter events, or even add stateful logic, this processor empowers you to do just that—without writing a full processing element in Java.</p>
@@ -985,7 +985,7 @@ Just make sure that any new properties you add to the event, like <code>count</c
         <id>https://streampipes.apache.org/blog/2025/03/25/file-stream-adapter/</id>
         <link href="https://streampipes.apache.org/blog/2025/03/25/file-stream-adapter/"/>
         <updated>2025-03-25T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Introduction]]></summary>
+        <summary type="html"><![CDATA[Try Apache StreamPipes without hardware: the File Stream Adapter replays JSON, CSV or XML sensor data as a simulated live stream for experiments and PoCs.]]></summary>
         <content type="html"><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="introduction">Introduction<a href="https://streampipes.apache.org/blog/2025/03/25/file-stream-adapter/#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction" translate="no">​</a></h3>
 <p>Are you excited to explore Apache StreamPipes but find yourself without any sensors to play with?
 Or maybe you're looking to validate StreamPipes for your use case and kick off a Proof of Concept (PoC) but the hardware is not yet available?
@@ -1066,7 +1066,7 @@ Happy streaming!</p>]]></content>
         <id>https://streampipes.apache.org/blog/2025/02/15/release-097/</id>
         <link href="https://streampipes.apache.org/blog/2025/02/15/release-097/"/>
         <updated>2025-02-15T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Introduction]]></summary>
+        <summary type="html"><![CDATA[Apache StreamPipes 0.97.0 adds Adapters and Pipelines as Code in YAML or JSON, OPC UA certificate support and Kafka SSL/SASL. Release notes and main changes.]]></summary>
         <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="introduction">Introduction<a href="https://streampipes.apache.org/blog/2025/02/15/release-097/#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction" translate="no">​</a></h2>
 <p>Apache StreamPipes 0.97.0 brings exciting new features, enhanced security, and significant UX improvements to streamline your IIoT data processing workflows.
 This release introduces <strong>Adapters &amp; Pipelines as Code</strong>, enabling users to define and deploy StreamPipes resources programmatically using YAML or JSON.
@@ -1168,7 +1168,7 @@ Feel free to share your thoughts or get involved through <strong>GitHub</strong>
         <id>https://streampipes.apache.org/blog/2024/06/13/release-095/</id>
         <link href="https://streampipes.apache.org/blog/2024/06/13/release-095/"/>
         <updated>2024-06-13T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[We're excited to share the release of StreamPipes 0.95.0, bringing with it a range of bug fixes and new features.]]></summary>
+        <summary type="html"><![CDATA[Apache StreamPipes 0.95.0 adds an Open Industry 4.0 (OI4) MQTT adapter, all PLC4X protocols as adapters and a Go client, and closes over 200 issues.]]></summary>
         <content type="html"><![CDATA[<p>We're excited to share the release of StreamPipes 0.95.0, bringing with it a range of bug fixes and new features.
 In total, the newest release closes over 200 issues.
 This release doesn't include many large feature drops, we have worked a lot on making small things smoother and improving StreamPipes under the hood.
@@ -1273,7 +1273,7 @@ your IIoT streaming data needs.</p>]]></content>
         <id>https://streampipes.apache.org/blog/2024/03/27/anomaly-detection-with-python-functions/</id>
         <link href="https://streampipes.apache.org/blog/2024/03/27/anomaly-detection-with-python-functions/"/>
         <updated>2024-03-27T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Apache StreamPipes saves the day when it comes to connecting to data sources in the IIoT world. Want to do more with]]></summary>
+        <summary type="html"><![CDATA[Tutorial: get historical data with the StreamPipes Python client, train an Isolation Forest for anomaly detection, export to ONNX and apply it to live data.]]></summary>
         <content type="html"><![CDATA[<p>Apache StreamPipes saves the day when it comes to connecting to data sources in the IIoT world. Want to do more with
 your IIoT data than just analyze it in a dashboard? If so, this blog post is for you! We'll show you how to extract
 historical data from StreamPipes, use it to train a machine learning model, bring the model back to StreamPipes using
@@ -1350,7 +1350,7 @@ If you have brought up your own model, you need to adapt line <code>10-13</code>
 <img src="https://streampipes.apache.org/img/blog/2024-03-26/tutorial-prediction-data-stream.png">
 <p></p>
 <p>From here on you can further work with the prediction events in StreamPipes, e.g., by sending notifications
-to <a href="https://streampipes.apache.org/docs/next/pe/org.apache.streampipes.sinks.notifications.jvm.msteams/" target="_blank" rel="noopener noreferrer" class="">MS Teams</a>.</p>]]></content>
+to <a href="https://streampipes.apache.org/docs/pe/org.apache.streampipes.sinks.notifications.jvm.msteams/" target="_blank" rel="noopener noreferrer" class="">MS Teams</a>.</p>]]></content>
         <author>
             <name>Tim Bossenmaier</name>
             <uri>https://github.com/bossenti</uri>
@@ -1362,7 +1362,7 @@ to <a href="https://streampipes.apache.org/docs/next/pe/org.apache.streampipes.s
         <id>https://streampipes.apache.org/blog/2023/11/28/release-093/</id>
         <link href="https://streampipes.apache.org/blog/2023/11/28/release-093/"/>
         <updated>2023-11-28T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[9 minutes to read]]></summary>
+        <summary type="html"><![CDATA[Apache StreamPipes 0.93.0 lets you edit running adapters, adds an OPC UA node browser, S7 array support and an ifm IO-Link adapter, plus Helm chart updates.]]></summary>
         <content type="html"><![CDATA[<p><strong></strong></p><div style="float:left;padding-right:40px"><strong>9 minutes to read</strong></div><p></p>
 <p>We're excited to share the release of StreamPipes 0.93.0, bringing with it a range of bug fixes and new features.
 This release places a strong emphasis on refining the technical foundations of
@@ -1418,7 +1418,7 @@ designed for transmitting sensor data via MQTT. With the introduction of this ad
 effortlessly incorporate IO-Link sensor data into StreamPipes. This experimental integration empowers users to
 effortlessly connect to data from the ifm sensor VVB001.</p>
 <p>For more details refer to
-the <a href="https://streampipes.apache.org/docs/next/pe/org.apache.streampipes.connect.iiot.adapters.iolink/" target="_blank" rel="noopener noreferrer" class="">adapter documentation</a>.</p>
+the <a href="https://streampipes.apache.org/docs/0.98.0/pe/org.apache.streampipes.connect.iiot.adapters.iolink/" target="_blank" rel="noopener noreferrer" class="">adapter documentation</a>.</p>
 <p>For the integration of additional sensors we are thinking about supporting <a href="https://en.wikipedia.org/wiki/IODD" target="_blank" rel="noopener noreferrer" class="">IODD</a>.
 Your feedback on these considerations is invaluable to us. If you find the integration of IODD
 for supporting more sensors within StreamPipes appealing or have insights to share, we welcome your input. Please let us
@@ -1428,7 +1428,7 @@ know your thoughts on this potential feature enhancement.</p>
 within an event stream. This processor enables users to select one or more numeric values from their event data,
 specifying the desired rounding precision and the rounding mode.</p>
 <p>For more details refer to
-the <a href="https://streampipes.apache.org/docs/next/pe/org.apache.streampipes.processors.transformation.jvm.round/" target="_blank" rel="noopener noreferrer" class="">processor documentation</a>.</p>
+the <a href="https://streampipes.apache.org/docs/pe/org.apache.streampipes.processors.transformation.jvm.round/" target="_blank" rel="noopener noreferrer" class="">processor documentation</a>.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ux-improvements">UX improvements<a href="https://streampipes.apache.org/blog/2023/11/28/release-093/#ux-improvements" class="hash-link" aria-label="Direct link to UX improvements" title="Direct link to UX improvements" translate="no">​</a></h3>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="ordered-measurement-units">Ordered measurement units<a href="https://streampipes.apache.org/blog/2023/11/28/release-093/#ordered-measurement-units" class="hash-link" aria-label="Direct link to Ordered measurement units" title="Direct link to Ordered measurement units" translate="no">​</a></h4>
 <p>In the adapter configuration step, when setting up a transformation rule for an event value, the available units of
@@ -1526,7 +1526,7 @@ your IIoT streaming data needs.</p>]]></content>
         <id>https://streampipes.apache.org/blog/2023/06/16/release-092/</id>
         <link href="https://streampipes.apache.org/blog/2023/06/16/release-092/"/>
         <updated>2023-06-16T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[8 minutes to read]]></summary>
+        <summary type="html"><![CDATA[Apache StreamPipes 0.92.0 improves Python support, adds the Swinging Door Trending filter processor and deprecates set adapters for the File Stream Adapter.]]></summary>
         <content type="html"><![CDATA[<p><strong></strong></p><div style="float:left;padding-right:40px"><strong>8 minutes to read</strong></div><p></p>
 <p>We are pleased to announce the release of StreamPipes 0.92.0, which includes several bug fixes, performance improvements, and new features.
 This version focuses on enhancing the technical aspects of StreamPipes.
@@ -1576,7 +1576,7 @@ StreamPipes is continually evolving, and we are dedicated to providing you with 
         <id>https://streampipes.apache.org/blog/2023/04/12/release-091/</id>
         <link href="https://streampipes.apache.org/blog/2023/04/12/release-091/"/>
         <updated>2023-04-12T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[14 minutes to read]]></summary>
+        <summary type="html"><![CDATA[Apache StreamPipes 0.91.0 launches the official StreamPipes Python library on PyPI and brings 90+ improvements and fixes. Release notes with the main changes.]]></summary>
         <content type="html"><![CDATA[<p><strong></strong></p><div style="float:left;padding-right:40px"><strong>14 minutes to read</strong></div><p></p>
 <br>
 <p>The Apache StreamPipes community is delighted to announce the release of Apache StreamPipes version 0.91.0!
@@ -1645,7 +1645,7 @@ please visit our <a href="https://github.com/apache/incubator-streampipes/blob/r
         <id>https://streampipes.apache.org/blog/2023/01/17/release-090/</id>
         <link href="https://streampipes.apache.org/blog/2023/01/17/release-090/"/>
         <updated>2023-01-17T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[5 minutes to read]]></summary>
+        <summary type="html"><![CDATA[Apache StreamPipes 0.90.0 improves the Data Explorer and pipeline monitoring, adds RocketMQ and NATS adapters and sinks, and previews standalone Functions.]]></summary>
         <content type="html"><![CDATA[<p><strong></strong></p><div style="float:left;padding-right:40px"><strong>5 minutes to read</strong></div><p></p>
 <br>
 <p>The Apache StreamPipes community is pleased to announce the immediate availability of Apache StreamPipes version 0.90.0!
