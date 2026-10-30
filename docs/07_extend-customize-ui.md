@@ -1,227 +1,209 @@
 ---
 id: extend-customize-ui
 title: UI customization
-description: "Customize the StreamPipes user interface with your own theme, logos and styles, and extend the UI with custom modules."
+description: "Brand the StreamPipes user interface with your own logos, colors, application name and module selection by building the UI with a custom deployment configuration or theme files."
 sidebar_label: UI customization
 ---
 
+## What can be customized
 
-## Custom theme
+The StreamPipes UI is an Angular application. Before every build, a small script applies a deployment configuration and a set of theme files to the source tree, and that is the hook for customization. Without touching the application code you can replace:
 
-It is possible to use a custom theme with individual styles, logos and images instead of the default StreamPipes theme.
+* **Logos.** The main logo on the login page and the smaller logo in the navigation bar.
+* **Favicon.** Shown in the browser tab and used as the loading image while the application starts.
+* **Colors.** The primary and secondary colors, the colors of the menu bar and toolbar, and separate values for dark mode. In addition, the Material 3 color palettes that Angular Material derives buttons, form fields and other components from.
+* **Application name and contact address.** The strings shown in the window title, the login page and a few dialogs.
+* **Active modules.** Which modules appear in the navigation at all, for example a build that only contains Dashboards and Charts for a display installation.
+* **Translations.** The UI ships English, German and Polish language files; you can adjust wording or add a language.
 
-In this section, we describe the necessary steps to build and deploy a custom theme.
+All of this is applied at build time. There is no runtime branding setting in the current version, so a customized UI means a customized build of the `ui` image.
 
+## Prerequisite: build the UI
 
-### Prerequisite: Learn how to run and build the UI
-
-To use a custom theme, it is required to build the UI with the custom settings.
-In general, the UI can be found in the `ui` folder of the source code.
-
-Perform the following steps to build the UI;
+The UI lives in the `ui` folder of the StreamPipes repository and needs Node.js and npm.
 
 ```bash
+cd ui
+npm install
 
-# Install all necessary packages
-npm install 
-
-# Start the UI for development purposes
+# Development server with live reload
 npm run start
 
-# Build the StreamPipes UI
-npm run build 
-
+# Production build
+npm run build
 ```
 
-## Customizable assets
+`npm run build` validates the translation files, runs the prebuild script described below, builds the two shared libraries and then runs `ng build --configuration production`. The result in `dist/streampipes/ui/browser` is what the `ui` Docker image serves.
 
-The following assets can be provided in a customized theme:
+## How the prebuild step works
 
-* **Logo** This is the main logo image, which is shown e.g., on the login page.
-* **Navigation Logo** This is the logo which appears in the top navigation bar after successful login
-* **Favicon** The favicon is shown in the browser navbar. It is also used as the loading animation in StreamPipes.
-* **String constants** Customizable strings, e.g., when you want to use another application name than **Apache StreamPipes**.
-* **Theme variables** An scss file which defines custom colors and layouts.
+`deployment/prebuild.js` runs at the start of `npm run start` and `npm run build`. It takes the name of a deployment configuration as its only argument and falls back to `dev` when none is given or the configuration does not exist:
 
-## Customize constants
-
-To customize constants, you can create a custom file `app.constants.ts` and modify the content based on the template below:
-
-```javascript
-
-import {Injectable} from '@angular/core';
-
-@Injectable()
-export class AppConstants {
-
-  public readonly APP_NAME = "Apache StreamPipes";
-  public readonly APP_TITLE = 'Apache StreamPipes';
-  public readonly EMAIL = "admin@streampipes.apache.org";
-}
-
-
+```bash
+node deployment/prebuild.js dev
 ```
 
-## Customize theme
+The script then:
 
-To customize the theme, we provide a file named `variables.scss` which can be overridden with default color and style settings.
+1. reads `deployment/<name>/config.yml` for the logo paths and the list of active modules,
+2. generates the routing, navigation and home screen from `deployment/modules.yml` for exactly those modules,
+3. copies `deployment/app-constants.ts` to `src/app/services/app.constants.ts`,
+4. copies the two theme files from `deployment/theme/` to `src/scss/custom-theme/`,
+5. copies the logos and the favicon into `src/assets/img/`,
+6. copies the translation files from `deployment/i18n/` to `src/assets/i18n/`.
 
-See the example below:
+Afterwards it checks a handful of environment variables and, where set, overwrites the file copied in the previous steps. That gives you two ways to customize: a deployment configuration of your own, or environment variables on top of the default one.
+
+## Option 1: Your own deployment configuration
+
+Create a folder next to `deployment/dev`, for example `deployment/acme`, with a `config.yml` and an `img` folder:
+
+```yaml
+login:
+    logo: 'deployment/acme/img/logo.png'
+    logo-navigation: 'deployment/acme/img/logo-navigation.png'
+    favicon: 'deployment/acme/img/favicon.png'
+modules:
+    - spHome
+    - spPipelines
+    - spDashboard
+    - spChart
+    - spAssets
+    - spConnect
+    - spDatasets
+    - spConfiguration
+```
+
+Remove modules from the list to hide them. The keys are the ones defined in `deployment/modules.yml`; the current set is `spHome`, `spConnect`, `spPipelines`, `spDatasets`, `spChart`, `spDashboard`, `spAssets` and `spConfiguration`. A module that is not listed gets no route, no navigation entry and no card on the home screen.
+
+Then build with the configuration name:
+
+```bash
+node deployment/prebuild.js acme && npm run build-libraries && ng build --configuration production
+```
+
+`npm run build` always passes `dev`, so for a named configuration call the steps yourself as shown, or add a script to `package.json`.
+
+## Option 2: Environment variables
+
+If the default module set is fine and you only want different logos, colors or strings, set one or more of these variables and run the normal build. Each one points to a file that replaces the corresponding default.
+
+| Variable | Replaces | Notes |
+| --- | --- | --- |
+| `LOGO_HEADER_LOC` | `src/assets/img/sp/logo.png` | Logo on the login page |
+| `LOGO_NAV_LOC` | `src/assets/img/sp/logo-navigation.png` | Logo in the navigation bar |
+| `FAVICON_LOC` | `src/assets/img/favicon/favicon-96x96.png` | Favicon, also used as loading image; 96 by 96 pixels |
+| `THEME_VARIABLES` | `src/scss/custom-theme/_custom-variables.scss` | Colors as CSS custom properties, see below |
+| `THEME_COLORS` | `src/scss/custom-theme/_theme-colors.scss` | Material 3 palettes, see below |
+| `CONSTANTS_FILE` | `src/app/services/app.constants.ts` | Application name, title and contact address |
+
+Example, with all custom files in one folder:
+
+```bash
+UI_LOC=/path/to/acme-branding
+THEME_VARIABLES=$UI_LOC/_custom-variables.scss \
+THEME_COLORS=$UI_LOC/_theme-colors.scss \
+LOGO_HEADER_LOC=$UI_LOC/img/logo.png \
+LOGO_NAV_LOC=$UI_LOC/img/logo-navigation.png \
+FAVICON_LOC=$UI_LOC/img/favicon.png \
+CONSTANTS_FILE=$UI_LOC/app.constants.ts \
+npm run build
+```
+
+Variables that are not set keep the defaults. `UI_LOC` is only a shell helper here; the build does not read it.
+
+## The theme files
+
+### Custom variables
+
+`deployment/theme/_custom-variables.scss` is the file meant for external customization. It defines CSS custom properties, so values can be plain colors or references to other properties. Start from the default and change what you need:
 
 ```scss
-
-/*!
- * Licensed to the Apache Software Foundation (ASF) under one or more
- * contributor license agreements.  See the NOTICE file distributed with
- * this work for additional information regarding copyright ownership.
- * The ASF licenses this file to You under the Apache License, Version 2.0
- * (the "License"); you may not use this file except in compliance with
- * the License.  You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
- */
-
-$sp-color-primary: rgb(57, 181, 74);
-$sp-color-primary-600: #06c12a;
-
-$sp-color-accent: #1b1464;
-
-$sp-color-accent-light-blue: rgb(59, 92, 149);
-$sp-color-accent-light: rgb(156, 156, 156);
-$sp-color-accent-light-transparent: rgba(156, 156, 156, 0.4);
-
-$sp-color-accent-dark: #83a3de;
-
-$sp-color-adapter: #7f007f;
-$sp-color-stream: #ffeb3b;
-$sp-color-processor: #009688;
-$sp-color-sink: #3f51b5;
-
-$sp-color-error: #b71c1c;
-
-body {
-    --color-data-view: rgb(122, 206, 227);
-    --color-dashboard: rgb(76, 115, 164);
-    --color-adapter: rgb(182, 140, 97);
-    --color-data-source: #ffeb3b;
-    --color-pipeline: rgb(102, 185, 114);
-    --color-measurement: rgb(39, 164, 155);
-    --color-file: rgb(163, 98, 190);
-
-    --button-border-radius: 5px;
-    --iconbar-width: 35px;
-    --navbar-icon-border-radius: 0;
-    --navbar-icon-padding: 0;
-}
-
 :root {
-    --color-loading-bar: #{$sp-color-accent};
+    --color-primary: #1b1464;
+    --color-primary-dark: #83a3de;
+    --color-secondary: rgb(57, 181, 74);
+    --color-secondary-dark: #7ac98a;
+    --color-loading-bar: var(--color-primary);
+    --color-primary-alt: rgb(59, 92, 149);
+
+    --color-menubar-bg: var(--color-secondary);
+    --color-menubar-bg-menu-item: var(--color-secondary);
+    --color-menubar-bg-menu-item-hover: var(--color-secondary);
+    --color-menubar-bg-menu-item-selected: var(--color-secondary);
+    --color-menubar-bg-menu-group-hover: var(--color-secondary);
+    --color-menubar-bg-menu-group-selected: var(--color-secondary);
+    --color-menubar-text-menu-item: var(--color-bg-1);
+    --color-menubar-text-menu-group: var(--color-primary);
+    --color-menubar-text-menu-item-hover: var(--color-bg-1);
+    --color-menubar-text-menu-group-hover: var(--color-primary);
+
+    --color-toolbar-bg: var(--color-bg-0);
+    --color-toolbar-text: var(--color-secondary);
+    --color-toolbar-text-hover: var(--color-secondary-dark);
+    --color-toolbar-icon: var(--color-secondary);
+    --color-toolbar-icon-hover: var(--color-secondary-dark);
+    --color-toolbar-icon-selected: var(--color-secondary-dark);
 }
 
 .dark-mode {
-    --color-primary: #{$sp-color-primary};
-    --color-accent: #{$sp-color-accent-dark};
-    --color-bg-outer: var(--color-bg-1);
-    --color-bg-page-container: var(--color-bg-0);
-    --color-bg-main-panel-header: var(--color-bg-0);
-    --color-bg-main-panel-content: var(--color-bg-0);
-    --color-bg-navbar-icon: inherit;
-    --color-bg-navbar-icon-selected: inherit;
-    --color-bg-0: #121212;
-    --color-bg-1: #282828;
-    --color-bg-2: #404040;
-    --color-bg-3: #424242;
-    --color-bg-4: #5f5f5f;
-    --color-bg-dialog: rgb(66, 66, 66);
-    --color-shadow: #c4c4c4;
-    --color-pe: #404040;
-    --color-default-text: rgba(255, 255, 255, 0.87);
-    --color-warn: #b36161;
-
-    --color-tab-border: #cccccc;
-
-    --color-navigation-bg: var(--color-primary);
-    --color-navigation-link-text: var(--color-bg-0);
-    --color-navigation-text: #121212;
-    --color-navigation-selected: #{$sp-color-primary};
-    --color-navigation-hover: #{$sp-color-primary-600};
-    --color-navigation-bg-selected: var(--color-bg-1);
-    --color-navigation-divider: #{$sp-color-primary};
-
+    --color-primary: var(--color-primary-dark);
+    --color-secondary: var(--color-secondary-dark);
+    --color-navigation-bg: #123b28;
+    --color-navigation-hover: #185236;
+    --color-navigation-selected: var(--color-secondary);
+    --color-navigation-text: rgba(255, 255, 255, 0.9);
+    --color-navigation-link-text: rgba(255, 255, 255, 0.86);
+    --color-navigation-divider: rgba(255, 255, 255, 0.12);
+    --color-menubar-bg: var(--color-navigation-bg);
+    --color-menubar-bg-menu-item: transparent;
+    --color-menubar-bg-menu-item-hover: var(--color-navigation-hover);
+    --color-menubar-text-menu-item: var(--color-navigation-link-text);
+    --color-menubar-text-menu-item-hover: var(--color-navigation-text);
     --content-box-color: #404040;
-    --canvas-color: linear-gradient(
-            90deg,
-            rgba(50, 50, 50, 0.5) 10%,
-            transparent 0%
-        ),
-        linear-gradient(rgba(50, 50, 50, 0.5) 10%, transparent 0%);
 }
 
 .light-mode {
-    --color-primary: #{$sp-color-primary};
-    --color-accent: #{$sp-color-accent};
-    --color-bg-outer: var(--color-bg-1);
-    --color-bg-page-container: var(--color-bg-0);
-    --color-bg-main-panel-header: var(--color-bg-0);
-    --color-bg-main-panel-content: var(--color-bg-0);
-    --color-bg-navbar-icon: inherit;
-    --color-bg-navbar-icon-selected: inherit;
-    --color-bg-0: #ffffff;
-    --color-bg-1: #fafafa;
-    --color-bg-2: #f1f1f1;
-    --color-bg-3: rgb(224, 224, 224);
-    --color-bg-4: rgb(212, 212, 212);
-    --color-bg-dialog: #ffffff;
-    --color-shadow: #555;
-    --color-pe: #ffffff;
-    --color-default-text: #121212;
-    --color-warn: #b71c1c;
-
-    --color-tab-border: #cccccc;
-
-    --color-navigation-bg: var(--color-primary);
-    --color-navigation-link-text: var(--color-bg-0);
     --color-navigation-text: #ffffff;
-    --color-navigation-selected: #{$sp-color-primary};
-    --color-navigation-hover: #{$sp-color-primary-600};
-    --color-navigation-bg-selected: var(--color-bg-1);
-    --color-navigation-divider: var(--color-primary);
-
     --content-box-color: rgb(156, 156, 156);
-    --canvas-color: linear-gradient(
-            90deg,
-            rgba(208, 208, 208, 0.5) 10%,
-            transparent 0%
-        ),
-        linear-gradient(rgba(208, 208, 208, 0.5) 10%, transparent 0%);
 }
-
 ```
-## Run a customized build
 
-To create a new UI build with customized themes, use the following command:
+The `:root` block applies to both modes; `.dark-mode` and `.light-mode` override values per mode. The full default file in the repository contains a few more properties for the dark navigation. The base variables in `src/scss/_variables.scss` are internal and are not replaced by the build; change colors in the custom variables file instead.
 
-````bash
+### Material 3 palettes
 
-UI_LOC=PATH_TO_FOLDER_WITH_CUSTOM_TEMPLATES \\
-THEME_LOC=$UI_LOC/_variables.scss \\
-LOGO_HEADER_LOC=$UI_LOC/img/logo.png \\
-FAVICON_LOC=$UI_LOC/img/favicon.png \\
-LOGO_NAV_LOC=$UI_LOC/img/logo-navigation.png \\
-CONSTANTS_FILE=$UI_LOC/app.constants.ts \\
-npm run build
+`deployment/theme/_theme-colors.scss` holds the tonal palettes Angular Material uses for its components. It is generated, not written by hand. To create one for your brand colors, run the Angular Material schematic from the `ui` folder and point `THEME_COLORS` at the result:
 
-````
+```bash
+ng generate @angular/material:theme-color \
+  --primary-color=#1b1464 --secondary-color=#39b54a --error-color=#b71c1c \
+  --directory=/path/to/acme-branding
+```
 
-First, we create a helper environment variable that links to a folder which includes custom logos, the theme file and constants.
-Next, we set the variables above to override default logos and stylings.
-Finally, the usual build process is executed.
+Use the same primary and secondary values as in the custom variables file, otherwise buttons and form fields take on a different hue than the navigation.
 
-Once finished, you've successfully customized an Apache StreamPipes instance!
+## Application name and contact address
+
+`CONSTANTS_FILE` must point to a file with the same shape as `deployment/app-constants.ts`:
+
+```ts
+import { Injectable } from '@angular/core';
+
+@Injectable({ providedIn: 'root' })
+export class AppConstants {
+    public readonly APP_NAME = 'Apache StreamPipes';
+    public readonly APP_TITLE = 'Apache StreamPipes';
+    public readonly EMAIL = 'dev@streampipes.apache.org';
+}
+```
+
+`APP_TITLE` is the browser window title, `APP_NAME` appears on the login page and in a few dialogs, and `EMAIL` is the contact address shown to users who need help.
+
+## Translations
+
+Most visible strings come from the translation files in `deployment/i18n/`, one JSON file per language (`en`, `de`, `pl`). Change a string there to reword it in your build, or add a file for another language. After editing, run `npm run i18n:validate` to check that all files have the same keys; `npm run build` runs the same check and fails on a mismatch.
+
+## Package the result
+
+Build the `ui` Docker image from your customized `dist/streampipes/ui/browser` and use it in place of `apachestreampipes/ui` in your Compose file or Helm values. The backend and the extension services are unaffected by UI customization and keep using the official images.
