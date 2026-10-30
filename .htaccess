@@ -35,6 +35,17 @@ RewriteRule ^docs/docs/deploy-docker\.html$ /docs/configure-operate-deployment/ 
 RewriteRule ^docs/docs/extend-cli\.html$ /docs/extend-cli/ [R=301,L]
 RewriteRule ^docs/docs/extend-sdk-functions\.html$ /docs/extend-sdk-functions/ [R=301,L]
 
+# Folders without an index page (Docusaurus generates none for /docs/ and the
+# version roots): send visitors to the first docs page instead of showing an
+# Apache directory listing, and disable listings everywhere else.
+Options -Indexes
+RewriteRule ^docs/?$ /docs/user-guide-introduction/ [R=301,L]
+RewriteRule ^docs/(0\.98\.0|0\.97\.0|0\.95\.1)/?$ /docs/$1/user-guide-introduction/ [R=301,L]
+RewriteRule ^docs/pe/?$ /docs/configure-operate-extensions/ [R=301,L]
+RewriteRule ^docs/(0\.98\.0|0\.97\.0|0\.95\.1)/pe/?$ /docs/$1/use-install-pipeline-elements/ [R=301,L]
+RewriteRule ^docs/docs/?$ /docs/docs/python/ [R=301,L]
+RewriteRule ^community/?$ /community/get-involved/ [R=301,L]
+
 # Resolve Docusaurus clean URLs in the static ASF deployment.
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
