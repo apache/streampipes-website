@@ -96,7 +96,7 @@ const modules = [
   {label: 'Pipelines', src: '/img/home/pipeline-editor-example.webp', alt: 'Visual pipeline editor routing machine data to trend detection, a Teams notification and storage', caption: 'Pipelines: filter, detect and route live data in the visual editor.', to: docs('use-pipelines')},
   {label: 'Datasets', src: '/img/home/dataset-overview.webp', alt: 'Dataset workspace with stored events, retention and export providers', caption: 'Datasets: stored history with retention rules, export and permissions.', to: docs('use-datasets')},
   {label: 'Charts', src: '/img/home/chart-timeseries.webp', alt: 'Chart editor with a time-series visualization', caption: 'Charts: query a dataset and pick the right visualization.', to: docs('use-charts')},
-  {label: 'Dashboards', src: '/img/home/dashboard-create.webp', alt: 'Dashboard with a gauge, a flow-rate chart and a machine status indicator', caption: 'Dashboards: saved charts combined into one view for the team.', to: docs('use-dashboards')},
+  {label: 'Dashboards', src: '/img/home/dashboard-water-storage.webp', alt: 'Dashboard with the latest tank level, a status lamp, level and pressure trends and an event table', caption: 'Dashboards: saved charts combined into one view for the team.', to: docs('use-dashboards')},
   {label: 'Assets', src: '/img/home/home-map.webp', alt: 'StreamPipes home screen with assets shown on a map', caption: 'Assets: plants, lines and machines on a map, with their linked data.', to: docs('use-assets')},
 ];
 

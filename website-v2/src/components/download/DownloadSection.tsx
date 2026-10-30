@@ -5,7 +5,7 @@ import styles from './download.module.css';
 
 type Props = {version: string; releaseDate: string; showMoreInfo?: boolean};
 
-/** Source release download plus the three steps to a running instance. Used on the download page and inside the quickstart docs. */
+/** Source release download plus the steps to a running instance. Used on the download page. */
 export default function DownloadSection({version, releaseDate, showMoreInfo = false}: Props) {
   const archive = `apache-streampipes-${version}-source-release.zip`;
   const mirror = `https://www.apache.org/dyn/closer.lua?action=download&filename=streampipes/${version}/${archive}`;
