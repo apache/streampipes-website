@@ -51,22 +51,34 @@ The default preset is [`docker-compose.yml`](https://github.com/apache/streampip
 
 This is the recommended starting point for new installations. It uses `NATS` as the internal event broker and the standard IIoT-focused extension package.
 
-Start it with:
+For the default nightly preset, the [download page](/download/) has curl commands for
+Linux, macOS and Windows. Each downloads the required files into `streampipes-dev` and
+starts the launcher. For subsequent starts, open that directory and run `sh start` on
+Linux or macOS, or `.\start.cmd` in Windows Command Prompt. The launcher generates credentials for a fresh installation
+using Docker Compose v2 and a temporary Python container. You do not need Python on the host.
+Sign in at [localhost](http://localhost) with `admin@streampipes.apache.org` and
+`SP_INITIAL_ADMIN_PASSWORD` from `.env`.
 
-```bash
-docker-compose up -d
-```
+You can also fill in `.env` from `.env.example` and run `docker compose up -d` directly.
+For existing installations, keep the original `.env`, data volumes and project name.
+If credentials are missing, restore them from backup. The launcher stops if it detects
+existing installer data volumes and cannot find `.env`.
+
+For a different preset, also download its Compose file (and any auth override) from the
+links above into the same directory before the first start. Set `COMPOSE_FILE` before running the launcher
+(for example, `COMPOSE_FILE=docker-compose.kafka.yml sh start` on Linux or macOS).
+The direct commands below assume a configured `.env`.
 
 Stop it with:
 
 ```bash
-docker-compose down
+docker compose down
 ```
 
 Remove the persisted volumes as well:
 
 ```bash
-docker-compose down -v
+docker compose down -v
 ```
 
 ### Kafka-based Compose setup
@@ -76,7 +88,7 @@ If your environment already standardizes on Kafka, use [`docker-compose.kafka.ym
 Start it with:
 
 ```bash
-docker-compose -f docker-compose.kafka.yml up -d
+docker compose -f docker-compose.kafka.yml up -d
 ```
 
 ### Minimal Compose setup
@@ -86,7 +98,7 @@ docker-compose -f docker-compose.kafka.yml up -d
 Start it with:
 
 ```bash
-docker-compose -f docker-compose.minimal.yml up -d
+docker compose -f docker-compose.minimal.yml up -d
 ```
 
 ### Token-based NATS authentication
@@ -94,13 +106,13 @@ docker-compose -f docker-compose.minimal.yml up -d
 If you want to protect internal NATS communication with a token, set `SP_NATS_TOKEN` and add the auth override file:
 
 ```bash
-docker-compose -f docker-compose.yml -f docker-compose.nats-auth.yml up -d
+docker compose -f docker-compose.yml -f docker-compose.nats-auth.yml up -d
 ```
 
 For the minimal setup:
 
 ```bash
-docker-compose -f docker-compose.minimal.yml -f docker-compose.minimal.nats-auth.yml up -d
+docker compose -f docker-compose.minimal.yml -f docker-compose.minimal.nats-auth.yml up -d
 ```
 
 ### When to use Compose

@@ -1,3 +1,4 @@
+import {releaseComposeCommand} from '../download/composeCommands';
 import React, {useEffect, useState} from 'react';
 import useBrokenLinks from '@docusaurus/useBrokenLinks';
 import sidebars from '../../../sidebars.json';
@@ -12,10 +13,7 @@ const pythonDocs = 'https://streampipes.apache.org/docs/docs/python/dev/';
 const githubRepo = 'https://github.com/apache/streampipes';
 const pe = (id: string) => `/img/pipeline-elements/org.apache.streampipes.${id}/icon.png`;
 
-const installCommand = `mkdir -p streampipes-${RELEASE.version} && cd streampipes-${RELEASE.version} \\
-  && curl -fsSLO https://raw.githubusercontent.com/apache/streampipes/${RELEASE.version}/installer/compose/docker-compose.yml \\
-  && curl -fsSLO https://raw.githubusercontent.com/apache/streampipes/${RELEASE.version}/installer/compose/.env \\
-  && docker compose up -d`;
+
 
 /** Count adapters, processors and sinks from the docs sidebar so the numbers track releases. */
 function countExtensions() {
@@ -277,7 +275,7 @@ function GetStarted() {
           <Lead>The command on the right downloads the Compose files for release {RELEASE.version} and starts StreamPipes with Docker. From there, the quickstart takes you from a first data source to a dashboard.</Lead>
           <Actions className={styles.ctaActions}><Button to={quickstart} size="large">Open the quickstart</Button><Button to="/download/" variant="secondary" size="large">All downloads</Button></Actions>
         </div>
-        <CodePanel title="docker compose" language="bash" code={installCommand} wrap meta={`release ${RELEASE.version}`} />
+        <CodePanel title="docker compose" language="bash" code={releaseComposeCommand(RELEASE.version)} wrap meta={`release ${RELEASE.version}`} />
       </div>
       <div className={styles.community}>
         <FeatureList items={[

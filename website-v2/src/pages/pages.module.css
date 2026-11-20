@@ -42,3 +42,24 @@
 .jumpList a:hover { border-color: var(--sp-navy); color: var(--sp-navy); text-decoration: none; }
 .shotStack { display: grid; gap: 16px; }
 .factList + .actionsRow { margin-top: 20px; }
+
+.installer { display: grid; grid-template-columns: minmax(210px, 1fr) minmax(0, 3fr); gap: clamp(24px, 5vw, 72px); align-items: start; }
+.installOptions { display: grid; gap: 24px; color: var(--sp-ink); }
+.installOptions fieldset { border: 0; margin: 0; padding: 0; }
+.installOptions legend, .platform { font-size: 16px; font-weight: 600; }
+.installOptions legend { margin-bottom: 4px; padding: 0; }
+.installOptions fieldset label { display: flex; align-items: center; gap: 10px; min-height: 40px; cursor: pointer; }
+.installOptions input { accent-color: var(--sp-green-dark); width: 17px; height: 17px; margin: 0; }
+.platform { display: grid; gap: 8px; }
+.platform select { width: 100%; padding: 10px; font: inherit; font-weight: 400; color: var(--sp-ink); border: 1px solid var(--sp-line); border-radius: 6px; background: var(--sp-surface); }
+.installResult { min-width: 0; overflow-wrap: anywhere; }
+.installResult h3 { margin-top: 24px; }
+.installResult p, .restartNote { margin-bottom: 0; color: var(--sp-text); }
+.restartNote { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--sp-line); font-size: 14px; }
+@media (max-width: 760px) {
+  .installer { grid-template-columns: minmax(0, 1fr); }
+  .installOptions { gap: 16px; }
+}
+.installResult pre { padding-inline: 16px; }
+.installResult :global(.theme-code-block) :global(.token-line) { word-break: normal; overflow-wrap: anywhere; }
+.installer + .restartNote { margin-top: 32px; }

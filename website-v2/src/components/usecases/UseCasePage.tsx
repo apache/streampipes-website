@@ -1,3 +1,4 @@
+import {releaseComposeCommand} from '../download/composeCommands';
 import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
@@ -19,10 +20,7 @@ export type UseCase = {
 };
 
 const RELEASE = '0.98.0';
-const installCommand = `mkdir -p streampipes-${RELEASE} && cd streampipes-${RELEASE} \\
-  && curl -fsSLO https://raw.githubusercontent.com/apache/streampipes/${RELEASE}/installer/compose/docker-compose.yml \\
-  && curl -fsSLO https://raw.githubusercontent.com/apache/streampipes/${RELEASE}/installer/compose/.env \\
-  && docker compose up -d`;
+
 
 export default function UseCasePage({useCase: u}: {useCase: UseCase}) {
   return <Layout title={u.title} description={u.summary}>
@@ -64,7 +62,7 @@ export default function UseCasePage({useCase: u}: {useCase: UseCase}) {
       <Container>
         <div className={styles.twoCol}>
           <div><Headline level={2}>Try it on your machine.</Headline><Lead>One command starts StreamPipes with Docker. The quickstart takes you from there to a first dashboard.</Lead><div className={styles.actions}><Button to="/docs/quick-start-guide/">Open the quickstart</Button><Button to="/download/" variant="secondary">All downloads</Button></div></div>
-          <CodePanel title="docker compose" language="bash" code={installCommand} wrap meta={`release ${RELEASE}`} />
+          <CodePanel title="docker compose" language="bash" code={releaseComposeCommand(RELEASE)} wrap meta={`release ${RELEASE}`} />
         </div>
       </Container>
     </Section>

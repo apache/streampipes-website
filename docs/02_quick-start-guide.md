@@ -77,16 +77,14 @@ The all-in-one image keeps its data inside the container and runs everything on 
 
 ## Option 2: Install with Docker Compose
 
-One command creates a folder, downloads the Compose file and its environment file for the latest release, and starts the default setup with NATS as the message broker:
+For **Next (nightly)**, run the command for your platform on the [download page](/download/).
+It uses curl and Docker Compose v2 to download the default NATS installer into a new
+`streampipes-dev` directory and start it. To start it again, open that directory and run
+`sh start` on Linux or macOS, or `.\start.cmd` in Windows Command Prompt.
 
-```bash
-mkdir -p streampipes-0.98.0 && cd streampipes-0.98.0
-curl -fsSLO https://raw.githubusercontent.com/apache/streampipes/0.98.0/installer/compose/docker-compose.yml
-curl -fsSLO https://raw.githubusercontent.com/apache/streampipes/0.98.0/installer/compose/.env
-docker compose up -d
-```
-
-Then open [http://localhost](http://localhost) and sign in with `admin@streampipes.apache.org` and the password `admin`. The first start pulls the images and takes a few minutes; the login screen appears when the core is ready.
+The first start pulls the images and generates an
+`.env` file in the installer directory. Open [http://localhost](http://localhost) and sign
+in as `admin@streampipes.apache.org` with the `SP_INITIAL_ADMIN_PASSWORD` from that file.
 
 <ScreenshotFigure
 src="/img/2026/login.png"
@@ -94,7 +92,10 @@ alt="Login screen"
 title="Login Screen"
 />
 
-Before you use the instance for real, open the `.env` file and change the secrets and the admin credentials. The [download page](/download/) has the official source release and a variant of the command for the nightly build, and the [deployment options](06_configure-operate-deployment.md) cover Kubernetes, Kafka instead of NATS and extension services next to the machines.
+Keep `.env` with the deployment backups. You can edit it directly and run
+`docker compose up -d` when the required values are set. When restarting or upgrading,
+reuse the original credentials and Compose project name. For the stable release, follow
+the [release installation instructions](/download/).
 
 :::danger If StreamPipes does not come up
 The most common reason is an underpowered Docker setup. Check that Docker has at least 4 GB of memory, that all containers are running (`docker compose ps`) and read the logs of the `backend` container (`docker compose logs backend`). If the first start failed halfway, stop the stack with `docker compose down`, remove the volumes if you do not need the data, and start again.
